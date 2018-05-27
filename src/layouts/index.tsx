@@ -1,11 +1,21 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import * as React from 'react'
 import Helmet from 'react-helmet'
 
 import Header from '../components/header'
 import './index.css'
 
-const Layout = ({ children, data }) => (
+interface WrapperProps {
+  children: () => any
+  data: {
+    site: {
+      siteMetadata: {
+        title: string
+      }
+    }
+  }
+}
+
+const Layout: React.SFC<WrapperProps> = ({ children, data }) => (
   <div>
     <Helmet
       title={data.site.siteMetadata.title}
@@ -27,10 +37,6 @@ const Layout = ({ children, data }) => (
     </div>
   </div>
 )
-
-Layout.propTypes = {
-  children: PropTypes.func,
-}
 
 export default Layout
 
