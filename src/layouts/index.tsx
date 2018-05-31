@@ -16,19 +16,38 @@ interface WrapperProps {
 }
 
 const Layout: React.SFC<WrapperProps> = ({ children, data }) => (
-  <div>
+  <div
+    style={{
+      position: 'absolute',
+      top: '50%',
+      transform: 'translateY(-50%)',
+    }}
+  >
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        {
+          content: 'Ecommerce, AWS Consultancy and tech blog',
+          name: 'description',
+        },
+        {
+          content: 'magento, node.js, aws, react, serverless',
+          name: 'keywords',
+        },
+      ]}
+      link={[
+        { rel: 'icon', type: 'image/png', href: '/favicon.ico' },
+        {
+          href: 'https://fonts.googleapis.com/css?family=Montserrat',
+          rel: 'stylesheet',
+        },
       ]}
     />
     <Header siteTitle={data.site.siteMetadata.title} />
     <div
       style={{
         margin: '0 auto',
-        maxWidth: 960,
+        maxWidth: '600px',
         padding: '0px 1.0875rem 1.45rem',
         paddingTop: 0,
       }}

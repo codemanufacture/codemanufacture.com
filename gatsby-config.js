@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     siteUrl: `https://codemanufacture.com`,
-    title: `Gatsby Default Starter`,
+    title: `Codemanufacture - AWS and Magento Consultancy`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

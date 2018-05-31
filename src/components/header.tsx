@@ -1,21 +1,17 @@
 import * as React from 'react'
 import Link from 'gatsby-link'
+const logo = require('../logo.svg')
 
 interface HeaderProps {
   siteTitle: string
 }
 
 const Header: React.SFC<HeaderProps> = ({ siteTitle }) => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
+  <div>
     <div
       style={{
         margin: '0 auto',
-        maxWidth: 960,
+        maxWidth: 600,
         padding: '1.45rem 1.0875rem',
       }}
     >
@@ -23,11 +19,11 @@ const Header: React.SFC<HeaderProps> = ({ siteTitle }) => (
         <Link
           to="/"
           style={{
-            color: 'white',
+            color: '#000',
             textDecoration: 'none',
           }}
         >
-          {siteTitle}
+          <img src={logo} alt={siteTitle} />
         </Link>
       </h1>
     </div>

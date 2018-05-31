@@ -1,26 +1,47 @@
-# gatsby-starter-default
-The default Gatsby starter.
+# Codemanufacture Website
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/).
+[![node >= 8.x](https://img.shields.io/badge/node-%3E%3D%208.x-brightgreen.svg?style=flat-square)](https://nodejs.org/)
 
-## Install
+The code base for the [Codemanufacture](https://codemanufacture.com/) website.
 
-Make sure that you have the Gatsby CLI program installed:
-```sh
-npm install --global gatsby-cli
-```
+## Features
 
-And run from your CLI:
-```sh
-gatsby new gatsby-example-site
-```
+-   [Gatsby 1.0](https://www.gatsbyjs.org/)
+    -   [React Next](https://www.gatsbyjs.org/packages/gatsby-plugin-react-next) - React 16 support
+    -   [Sitemap](https://www.gatsbyjs.org/packages/gatsby-plugin-sitemap)
+    -   [Typescript](https://www.gatsbyjs.org/packages/gatsby-plugin-typescript)
+-   Development and QA Tools
+    -   [Prettier](https://prettier.io/)
+    -   [Typescript](https://www.typescriptlang.org/) / [tslint](https://palantir.github.io/tslint/)
+-   SEO
+    -   [Helmet](https://github.com/nfl/react-helmet)
+    -   [Robots.txt](https://moz.com/learn/seo/robotstxt)
+    -   [Sitemap](https://www.sitemaps.org/protocol.html)
 
-Then you can run it by:
-```sh
-cd gatsby-example-site
-npm run develop
-```
+## Files structure
 
-## Deploy
+     .
+     ├── gatsby-config.js              // gatsby configuration
+     ├── gatsby-node.js                // gatsby node hooks
+     ├── package.json
+     ├── public                        // output folder (in .gitignore)
+     ├── README.md                     // this file     
+     ├── src                           // sources
+     │   ├── components                // all react components
+     │   ├── declarations.d.ts         // declarations for no typescript modules/files
+     │   ├── graphql-types.d.ts        // graphql types (`yarn graphql-types`)
+     │   ├── layouts                   // layouts
+     │   │   └── index.tsx             // default layout (required)
+     │   └── pages                     // pages
+     ├── static                        // static files automatically copied to output folder
+     ├── tsconfig.json                 // typescript configuration
+     ├── tslint.json                   // tslint configuration
+     └── yarn.lock                     // yarn lock file
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+## Development
+
+1. Fork this repo
+1. Clone the repo and `cd` into the repo directory
+1. Run `yarn` to install dependencies
+1. Run `yarn develop` to start a local server
+
