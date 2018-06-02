@@ -1,6 +1,7 @@
 # Codemanufacture Website
 
 [![node >= 8.x](https://img.shields.io/badge/node-%3E%3D%208.x-brightgreen.svg?style=flat-square)](https://nodejs.org/)
+[![CircleCI](https://circleci.com/gh/codemanufacture/codemanufacture.com.svg?style=svg)](https://circleci.com/gh/codemanufacture/codemanufacture.com)
 
 The code base for the [Codemanufacture](https://codemanufacture.com/) website.
 
