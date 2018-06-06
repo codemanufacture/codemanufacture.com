@@ -11,7 +11,8 @@ The code base for the [Codemanufacture](https://codemanufacture.com/) website.
     -   [React Next](https://www.gatsbyjs.org/packages/gatsby-plugin-react-next) - React 16 support
     -   [Sitemap](https://www.gatsbyjs.org/packages/gatsby-plugin-sitemap)
     -   [Typescript](https://www.gatsbyjs.org/packages/gatsby-plugin-typescript)
--   Development and QA Tools
+-   Development, QA Tools and automation
+    -   [CircleCI](https://circleci.com/)
     -   [Prettier](https://prettier.io/)
     -   [Typescript](https://www.typescriptlang.org/) / [tslint](https://palantir.github.io/tslint/)
 -   SEO
@@ -22,6 +23,7 @@ The code base for the [Codemanufacture](https://codemanufacture.com/) website.
 ## Files structure
 
      .
+     ├── .circleci                     // CircleCI automated deployment configuration
      ├── gatsby-config.js              // gatsby configuration
      ├── gatsby-node.js                // gatsby node hooks
      ├── package.json
