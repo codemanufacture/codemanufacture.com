@@ -8,6 +8,7 @@ The code base for the [Codemanufacture](https://codemanufacture.com/) website.
 ## Features
 
 -   [Gatsby 1.0](https://www.gatsbyjs.org/)
+    -   [Google Tag Manager](https://www.gatsbyjs.org/packages/gatsby-plugin-google-tagmanager)
     -   [React Next](https://www.gatsbyjs.org/packages/gatsby-plugin-react-next) - React 16 support
     -   [Sitemap](https://www.gatsbyjs.org/packages/gatsby-plugin-sitemap)
     -   [Typescript](https://www.gatsbyjs.org/packages/gatsby-plugin-typescript)
@@ -15,7 +16,8 @@ The code base for the [Codemanufacture](https://codemanufacture.com/) website.
     -   [CircleCI](https://circleci.com/)
     -   [Prettier](https://prettier.io/)
     -   [Typescript](https://www.typescriptlang.org/) / [tslint](https://palantir.github.io/tslint/)
--   SEO
+-   Marketing & SEO
+    -   [Google Tag Manager](https://support.google.com/tagmanager/answer/6102821?hl=en)
     -   [Helmet](https://github.com/nfl/react-helmet)
     -   [Robots.txt](https://moz.com/learn/seo/robotstxt)
     -   [Sitemap](https://www.sitemaps.org/protocol.html)

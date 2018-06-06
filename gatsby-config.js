@@ -7,6 +7,13 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-react-next`,
     `gatsby-plugin-sitemap`,
-    `gatsby-plugin-typescript`
+    {
+      resolve: `gatsby-plugin-google-tagmanager`,
+      options: {
+        id: `GTM-KP9TM7L`,
+        includeInDevelopment: false,
+      }
+    },
+    `gatsby-plugin-typescript`,
   ],
 }
