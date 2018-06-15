@@ -11,7 +11,7 @@ const IndexPage = () => (
     <h3>Contact</h3>
     <p>Need help in meantime or just want to say hello?</p>
     <p>
-      Email: 
+      Email:{` `}
       <a href="mailto:contact@codemanufacture.com">
         contact@codemanufacture.com
       </a>
