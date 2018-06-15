@@ -16,6 +16,9 @@ jobs:
           key: codemanufacturecom-{{ .Branch }}-{{ checksum "yarn.lock" }}
           paths:
             - node_modules
+      - run:
+          name: Check Prettier, TSLint
+          command: yarn ci-check
       - run: 
           name: Build the website
           command: yarn build
