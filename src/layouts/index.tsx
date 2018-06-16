@@ -1,10 +1,11 @@
 import * as React from 'react'
 import Helmet from 'react-helmet'
 
-import Header from '../components/header'
+import Header from '../components/Header'
 import './index.css'
 
 interface WrapperProps {
+  location: any
   children: () => any
   data: {
     site: {
@@ -15,13 +16,17 @@ interface WrapperProps {
   }
 }
 
-const Layout: React.SFC<WrapperProps> = ({ children, data }) => (
+const Layout: React.SFC<WrapperProps> = ({ children, data, location }) => (
   <div
-    style={{
-      position: 'absolute',
-      top: '50%',
-      transform: 'translateY(-50%)',
-    }}
+    style={
+      location.pathname === '/'
+        ? {
+            position: 'absolute',
+            top: '50%',
+            transform: 'translateY(-50%)',
+          }
+        : {}
+    }
   >
     <Helmet
       title={data.site.siteMetadata.title}
@@ -61,10 +66,6 @@ export default Layout
 
 export const query = graphql`
   query SiteTitleQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
+    ...siteMetadata
   }
 `

@@ -16,6 +16,8 @@
     "gatsby-plugin-robots-txt": "^1.0.2",
     "gatsby-plugin-sitemap": "^1.2.23",
     "gatsby-plugin-typescript": "^1.4.20",
+    "gatsby-source-filesystem": "^1.5.38",
+    "gatsby-transformer-remark": "^1.7.41",
     "graphql-code-generator": "^0.9.1",
     "graphql-codegen-typescript-template": "^0.9.1",
     "react": "^16.4.0",
@@ -24,17 +26,24 @@
     "ts-loader": "^3.0",
     "typescript": "^2.8.3"
   },
+  "engines": {
+    "node": "^8.4.0"
+  },
+  "homepage": "https://codemanufacture.com/",
   "keywords": [
     "gatsby"
   ],
   "license": "Apache-2.0",
+  "main": "n/a",
   "scripts": {
     "build": "gatsby build",
-    "ci-check": "yarn lint:source && yarn nit:source",
-    "develop": "gatsby develop",
+    "ci-check": "yarn lint:source && yarn nit:markdown && yarn nit:source",
+    "develop": "gatsby develop -H 0.0.0.0",
+    "format:markdown": "prettier --config .prettierrc --parser markdown --write '{./content/**/*.md,./README.md}'",
     "format:source": "prettier --config .prettierrc --parser typescript --write 'src/**/*.{ts,tsx}'",
     "graphql-types": "gql-gen --url http://localhost:8000/___graphql --template typescript --out ./src/graphql-types.d.ts",
     "lint:source": "tslint './src/**/*.{ts,tsx}'",
+    "nit:markdown": "prettier --config .prettierrc --parser markdown --list-different '{./content/**/*.md,./README.md}'",
     "nit:source": "prettier --config .prettierrc --parser typescript --list-different 'src/**/*.{ts,tsx}'",
     "serve": "gatsby serve",
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -39,6 +39,7 @@ template {
   display: none;
 }
 a {
+  color: #208bc3;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
@@ -475,4 +476,8 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+.page-content ul {
+    list-style-type: disc;
 }
