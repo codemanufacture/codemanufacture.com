@@ -19,6 +19,7 @@ The code base for the [Codemanufacture](https://codemanufacture.com/)
 -   [Gatsby 1.0](https://www.gatsbyjs.org/) - a static site generator with following plugins:
     -   [Google Tag Manager](https://www.gatsbyjs.org/packages/gatsby-plugin-google-tagmanager)
     -   [React Next](https://www.gatsbyjs.org/packages/gatsby-plugin-react-next) - React 16 support
+    -   [Robots.tx](https://www.gatsbyjs.org/packages/gatsby-plugin-robots-txt)
     -   [Sitemap](https://www.gatsbyjs.org/packages/gatsby-plugin-sitemap)
     -   [Typescript](https://www.gatsbyjs.org/packages/gatsby-plugin-typescript)
 -   Development, QA Tools and automation

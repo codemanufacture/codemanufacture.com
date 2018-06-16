@@ -14,6 +14,7 @@ module.exports = {
         includeInDevelopment: false,
       }
     },
+    `gatsby-plugin-robots-txt`,
     `gatsby-plugin-typescript`,
   ],
 }
