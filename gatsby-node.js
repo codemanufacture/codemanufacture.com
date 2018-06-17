@@ -6,7 +6,7 @@
 
 'use strict'
 
-const { resolve } = require(`path`)
+const { resolve } = require('path')
 
 exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   const { createNodeField } = boundActionCreators
@@ -26,7 +26,7 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
     createNodeField({
       node,
       name: `slug`,
-      value: slug || '',
+      value: slug || ``,
     })
   }
 }
