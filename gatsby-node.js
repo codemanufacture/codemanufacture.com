@@ -6,7 +6,7 @@
 
 'use strict'
 
-const { resolve } = require('path')
+const { resolve } = require(`path`)
 
 exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   const { createNodeField } = boundActionCreators
@@ -16,34 +16,25 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   // through `createNodeField` so that the fields still exist and GraphQL won't
   // trip up. An empty string is still required in replacement to `null`.
 
-  switch (node.internal.type) {
-    case 'MarkdownRemark': {
-      const { permalink, layout } = node.frontmatter
-      const { relativePath } = getNode(node.parent)
+  if (node.internal.type === `MarkdownRemark`) {
+    const { permalink } = node.frontmatter
+    const { relativePath } = getNode(node.parent)
 
-      let slug = permalink || `/${relativePath.replace('.md', '')}/`
+    const slug = permalink || `/${relativePath.replace(`.md`, ``)}/`
 
-      // Used to generate URL to view this content.
-      createNodeField({
-        node,
-        name: 'slug',
-        value: slug || '',
-      })
-
-      // Used to determine a page layout.
-      createNodeField({
-        node,
-        name: 'layout',
-        value: layout || '',
-      })
-    }
+    // Used to generate URL to view this content.
+    createNodeField({
+      node,
+      name: `slug`,
+      value: slug || '',
+    })
   }
 }
 
 exports.createPages = async ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators
 
-  const pageTemplate = resolve('./src/templates/PageTemplate.tsx')
+  const pageTemplate = resolve(`./src/templates/PageTemplate.tsx`)
 
   const allMarkdown = await graphql(
     `
@@ -70,14 +61,14 @@ exports.createPages = async ({ graphql, boundActionCreators }) => {
     throw Error(allMarkdown.errors)
   }
 
-  allMarkdown.data.allMarkdownRemark.edges.forEach(edge => {
+  allMarkdown.data.allMarkdownRemark.edges.forEach((edge) => {
     const slug = edge.node.fields.slug
 
     createPage({
       path: slug,
       component: pageTemplate,
       context: {
-        slug: slug,
+        slug,
       },
     })
   })
