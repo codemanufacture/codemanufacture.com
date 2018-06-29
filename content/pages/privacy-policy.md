@@ -2,173 +2,120 @@
 title: Privacy Policy
 ---
 
-Codemanufacture Limited ("we", "us", "our") provides this Privacy Policy to inform you of our polices and procedures regarding
-the collection, disclosure, use protection of information that apply to our Service.
+At Codemanufacture Ltd. we are committed to safeguard the privacy of our Website visitors and our customers.
 
-We recommend that you read this Privacy Policy in full to ensure you are fully informed.
+This policy applies where we are acting as a data controller with respect to the personal data (in accordance with Article 4 (1) GDPR) collected of our Website visitors and customers whenever and where we determine the purposes and means of the storing and/ or processing of that personal data to be collected.
 
-## Information We Collect
+In this policy "we", "us" and "our/s" refer to Codemanufacture Ltd.
 
-We collect different types of information for various purposes to provide and improve out Service.
+## 1. HOW WE USE YOUR PERSONAL DATA
 
-### Personal Data
+The storing and/ or processing of data through our website and for the purpose of providing our Services, are based on our legitimate interest (in accordance with Article 6(1)(f) GDPR) to monitor and improve both our Website itself and our customer's experience associated with it. With respect thereto, we may store and/ or process personal data following the provisions of Article. 13(1) GDPR:
 
-While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you ("Personal Data"). Personally identifiable information may include, but is not limited to:
+(1) data about your use of our website, as well as about our services provided with respect thereto ("usage data"). The usage data may include your IP address, geographical location, browser type and version, operating system, length of visit, and website navigation paths, as well as information about the timing, and frequency. The source of the usage data is our analytics tracking system provided by Google Analytics. You can find Google Analytic's [Privacy Policy](http://www.google.com/intl/en/policies/privacy/). The usage data may be stored and/ or processed for the purposes of analyzing the use of the website and its services;
 
-* Email address
-* First name and last name
-* Phone number
-* Address, State, Province, ZIP/Postal code, City
+(2) data that you provide to us for the purpose of subscribing to our email notifications and/or newsletters ("notification data"). The notification data may be stored and/ or processed for the purposes of sending you the relevant notifications and/or newsletters;
 
-We may use your Personal Data to contact you with newsletters, marketing or promotional materials and other information that may be of interest to you. You may opt out of receiving any, or all, of these communications from us by following the unsubscribe link or instructions provided in any email we send or by contacting us.
+(3) Information contained in an enquiry you submit to us regarding our services or products ("enquiry data"). The enquiry data may be stored and/ or processed for the purposes of offering products, and/ or certain Services related to these products, as well as to perform marketing;
 
-Usage Data
-We may also collect information how the Service is accessed and used ("Usage Data"). This Usage Data may include information such as browser type, browser version, your computer’s Internet Protocol address (e.g. IP address), the pages of the Site that you visit, the time and date of your visit, the time spent on those pages, unique device identifiers and other diagnostic data.
+(4) data that you provide in the course of time with respect to your purchases of our products or services ("order data"). Order data may be stored and/ or used for the purposes of completing and delivering tasks or orders and may include your name, Email address, telephone number and your full address including state, zip code and province;
 
-## Use of Personal Data
+(5) data relating to a transaction you made with respect to our products/ services ("transaction data"). Transaction data may be collected and/ or stored for the purpose of completing orders and for record keeping, as well as to guarantee a potential refund.
 
-Codemanufacture Limited uses the collected data for various purposes:
+We do not store and or process any other person's personal data and thus ask you not to provide such data unless and until we prompt you to do so.
 
-* To provide, operate, optimize, and maintain our Websites.
-* To carry out other legitimate business purposes, as well as other lawful purposes.
-* To notify you about changes to our Service.
-* To allow you to participate in interactive features of our Service when you choose to do so.
-* To provide customer support.
-* To identify any server problems or other IT or network issues.
-* To compile aggregated statistics about site usage and to better understand the preferences of our Visitors.
-* To gather analysis or valuable information so that we can improve our Service.
-* To send you information for marketing purposes, in accordance with your marketing preferences.
+## 2. PROVIDING PERSONAL DATA TO OTHERS
 
-## Legal Basis for Processing Personal Data Under General Data Protection Regulation (GDPR)
+We may disclose your personal data to external third-parties such as payment providers or other administrative service providers.
 
-If you are from the European Economic Area (EEA), Codemanufacture Limited legal basis for collecting and using the personal information described in this Privacy Policy depends on the Personal Data we collect and the specific context in which we collect it.
+We may disclose your data to MailChimp, our Mail Automation system, in order to send you newsletters if you consent to our newsletter. Please verify that you consent with Mailchimp's [Privacy Policy](https://mailchimp.com/legal/privacy/).
 
-Codemanufacture may process your Personal Data because:
+We may also disclose your personal data to our comment plug-in provider Disqus. We encourage you to verify whether you comply with their [Privacy Policy](https://help.disqus.com/terms-and-policies/disqus-privacy-policy) as well.
 
-* To comply with the law.
-* You have given us permission to do so
-* The processing is in our legitimate interests and it’s not overridden by your rights.
-* We need to perform a contract with you.
+Your personal data may also be disclosed to our Accounting Software provider FreeAgent. You can find their [Privacy Policy](https://www.freeagent.com/website/privacy/).
 
-## Data Retention
+We may further disclose any of the above-mentioned data to any member of our company in accordance with Article 13(1)(e) GDPR insofar as reasonably necessary for the purposes, and on the legal bases, set out in this policy.
 
-We will only retain your Personal Data for as long as necessary to fulfil the purposes we collected it for, including for the purposes of satisfying any legal, accounting, or reporting requirements.
+In addition to the disclosure of data set out herein, we may disclose your personal data where such disclosure is necessary for compliance with a legal obligation to which we are subject, or in order to protect your interests as a natural person or the interests of another natural person. We may also disclose your personal data where such disclosure is necessary with respect to litigation whether in court proceedings or in an administrative or out-of-court procedure.
 
-To determine the appropriate retention period for personal data, we consider the amount, nature, and sensitivity of the personal data, the potential risk of harm from unauthorised use or disclosure of your personal data, the purposes for which we process your personal data and whether we can achieve those purposes through other means, and the applicable legal requirements.
+In any event, in which personal is disclosed, we guarantee to follow all provisions made under Articles 13(1)(e) and 14(1)(e) GDPR.
 
-## Transfer of Data
+## 3. RETAINING AND DELETING OF PERSONAL DATA
 
-Your information, including Personal Data, may be transferred to — and maintained on — computers located outside of your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from your jurisdiction.
+All personal data that we store and/ or process for any purpose or purposes mentioned herein shall not be kept for longer than is necessary for that or those purposes.
 
-If you are located outside United Kingdom and choose to provide information to us, please note that we transfer the data, including Personal Data, to United Kingdom and process it there.
+With respect thereto, we will retain your customer details for a period of six (6) years for invoicing purposes following the data at which your data has been entered into our database.
 
-Your consent to this Privacy Policy followed by your submission of such information represents your agreement to that transfer.
+Your first name and email address will usually be retained for the same period – however, if you have not visited our website within one year from the date at which we stored your data in our database, we may delete your name and email address after one year.
 
-Codemanufacture Limited will take all steps reasonably necessary to ensure that your data is treated securely and in accordance with this Privacy Policy and no transfer of your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of your data and other personal information.
+Irrespectively of the period of the periods mentioned above, we recognize that in certain cases (such as in the event of i.e. disclosure due to litigation) it is not possible for us to specify in advance the periods for which your personal data will be retained.
 
-## Disclosure of Data
+## 4. INTERNATIONAL DATA TRANSFERS, STORING AND/ OR PROCESSING
 
-Under certain circumstances, Codemanufacture Limited may be required to disclose your Personal Data if required to do so by law or in response to valid requests by public authorities (e.g. a court or a government agency).
+Here at Codemanufacture Ltd. we do not share or sell your data with other countries however, it is possible that your data may spill over to another country due to our external service providers mentioned under section two (2) of this policy.
 
-## Your Data Protection Rights Under General Data Protection Regulation (GDPR)
+The European Economic Area has made a so called "adequacy decision" for data being transferred to certain countries outside of the EEA.
 
-If you are a resident of the European Economic Area (EEA), you have certain data protection rights. Codemanufacture Limited aims to take reasonable steps to allow you to correct, amend, delete, or limit the use of your Personal Data.
+Where data is transferred to the United States of America, the EU has made an adequacy decision thus that the protection standards of this/ these countries are considered to be sufficiently adequate.
 
-If you wish to be informed what Personal Data we hold about you and if you want it to be removed from our systems, please contact us.
+## 5. YOUR RIGHTS
 
-In certain circumstances, you have the following data protection rights:
+You may at any given point in time instruct us to provide you with any personal information we hold about you; provision of such information will be subject to the supply of appropriate and sufficient evidence of your identity. As sufficient and appropriate evidence, we accept a copy of your national identity card, or your passport, accompanied by a utility bill stating your current address of residence.
 
-* The right to access, update or to delete the information we have on you. Whenever made possible, you can access, update or request deletion of your Personal Data directly within your account settings section. If you are unable to perform these actions yourself, please contact us to assist you.
+We may withhold personal information that you request to the extent permitted by law.
 
-* The right of rectification. You have the right to have your information rectified if that information is inaccurate or incomplete.
+You may instruct us at any time not to process your personal information for marketing purposes. We will use your personal information for marketing purposes only if expressly agreed to our use of your personal information for marketing purposes.
 
-* The right to object. You have the right to object to our processing of your Personal Data.
+Your principal rights under data protection law shall remain unaffected by the provisions contained herein. With respect thereto, your principal rights are the following:
 
-* The right of restriction. You have the right to request that we restrict the processing of your personal information.
+(a) the right to access your personal data according to Article 15 GDPR;
 
-* The right to data portability. You have the right to be provided with a copy of the information we have on you in a structured, machine-readable and commonly used format.
+(b) the right to rectification of any inaccurate or incomplete personal data about you following Article 16 GDPR;
 
-* The right to withdraw consent. You also have the right to withdraw your consent at any time where Codemanufacture Limited relied on your consent to process your personal information.
+(c) the right to erasure without undue delay if the data stored and/ or processed is no longer required to be stored and/ or processed given that the purpose as to which the data was stored and/ or processed in the first place is omitted, unless the data to be erased is subject to exclusions of the right to erasure under Article 17 GDPR, and in accordance with Articles 13(2)(b), 14(2)(c) and 15(1)(e) GDPR;
 
-Please note that we may ask you to verify your identity before responding to such requests.
+(d) the right to restrict processing in accordance with Article 18(1) GDPR if i.e. the processing of the personal data is unlawful, but the provision of erasure does not apply, or i.e. if the purpose of storing and/ or processing ceased to apply but means of litigation require the data to be stored and/ or processed;
 
-You have the right to complain to a Data Protection Authority about our collection and use of your Personal Data. For more information, please contact your local data protection authority in the European Economic Area (EEA).
+(e) the right to object to processing personal data for marketing purposes and/ or scientific research under Article 21 GDPR read in conjunction with Articles 21(4), 13(2)(b) and 14(2)(c) of the GDPR;
 
-## Service Providers
+(f) the right to data portability if and unless this right interferes with any rights of third parties set forth in Article 20 GDPR, read in conjunction with Articles 13(2)(b), 14(2)(c);
 
-We may employ third party companies and individuals to facilitate our Service("Service Providers"), to provide the Service
-on our behalf, to perform Service-related services or to assist us in analysing how our Service is used.
+(g) the right to complain to a supervisory authority if you experience an infringement of data protection laws and you have the legal right to file a complaint with a supervisory authority following Article 77 GDPR, read in conjunction with Articles 13(2)(d), 14(2)(e) and 15(1)(f); and
 
-These third parties have access to your Personal Data only to perform these tasks on our behalf and are obligated no to
-disclose or use it for any other purpose.
+(h) the right to withdraw consent according to Article 7(3) GDPR, read in conjunction with Articles 13(2)(c), 14(2)(d) and 17(1)(b).
 
-### Analytics
+You may exercise any, or all of these rights with respect to the storing and/ or processing of your personal data by written notice to privacy@codemanufacture.com.
 
-We may use third-party Service Providers to monitor and analyse the use of our Service.
+## 6. USE OF COOKIES
 
-#### Google Analytics
+Cookies can be understood as small files that are saved to the hard drive of your computer and that track, save and store information about your interactions and usage of our Website and/ or Services. The use of cookies allows us to provide our users with individual experiences on our website, tailored to each individual's needs. If you do not wish to receive individual offers, we advise you to deny the use of and saving of cookies from our website onto your personal computers' hard drive by taking the necessary steps within your web browser's security settings. Cookies do not typically contain any information that personally identifies you, but personal information that we store about you may be linked to the information stored in and obtained from and through the use of cookies. Our website uses cookies to improve your experience when visiting our website. At certain points, our website uses a cookie control system allowing you to allow or deny the use of cookies on your computer/ mobile device when you first visit our website.
 
-Google Analytics is a web analytics service offered by Google that tracks and reports website traffic. Google uses the data collected to track and monitor the use of our Service. This data is shared with other Google services. Google may use the collected data to contextualize and personalize the ads of its own advertising network.
+We may use cookies on our website to identify you when you visit our Website and to make individual offers to you. If you do not wish to make use of our cookies system, please do not accept the use of cookies on our website. However, in order for you to make sure that cookies will not be implemented onto your web browser's interface we encourage you to install a web plug-in in the settings of your web browser which denies the use and prevents the download of cookies onto your web browser.
 
-You can opt-out of having made your activity on the Service available to Google Analytics by installing the Google Analytics opt-out browser add-on. The add-on prevents the Google Analytics JavaScript (ga.js, analytics.js, and dc.js) from sharing information with Google Analytics about visits activity.
-
-For more information on the privacy practices of Google, please visit the Google Privacy & Terms web page: [http://www.google.com/intl/en/policies/privacy/](http://www.google.com/intl/en/policies/privacy/)
-
-### Comments
-
-We use third-party Service Provider to enable discussion on this Site.
-
-#### Disqus
-
-Disqus is a feature-rich comment system complete with social network integration, advanced moderation options and web-wide community network, connecting millions of global users. Disqus uses the data collected to allow you creation of account, leaving comment on The Site.
-
-You can opt-out of targeted content and advertising that Disqus use by visiting [https://disqus.com/data-sharing-settings/](https://disqus.com/data-sharing-settings/).
-
-For more information on the privacy practices of Disqus, please visit the Disqus Privacy Polity web page: [https://help.disqus.com/terms-and-policies/disqus-privacy-policy](https://help.disqus.com/terms-and-policies/disqus-privacy-policy).
-
-### Mailing lists
-
-We use third party Service Provider to maintain our mailing lists.
-
-#### Mailchimp
-
-MailChimp is an online marketing platform operated by The Rocket Science Group LLC.
-
-For more information on the privacy practices of The Rocket Science Group LLC, please visit the Mailchimp Privacy Policy web page: [https://mailchimp.com/legal/privacy/](https://mailchimp.com/legal/privacy/)
-
-## Children's Privacy
+## 7. PRIVACY OF CHILDREN
 
 Our Service does not address anyone under the age of 18 ("Children").
 
-We do not knowingly collect personally identifiable information from anyone under the age of 18. If you are a parent
-or guardian and you are aware that your Children has provided
-us with Personal Data, please contact us. If we become aware that we have collected Personal Data from children without
-verification of parental consent, we take steps to remove that information from our servers.
+We do not knowingly collect personally identifiable information from anyone under the age of 18. If you are a parent or guardian and you are aware that your Children has provided us with Personal Data, please contact us. If we become aware that we have collected Personal Data from children without verification of parental consent, we take steps to remove that information from our servers.
 
-## Links to Other Sites
+## 8. ADVERTS AND SPONSORED LINKS
 
-Our Websites may contain links to other sites that are not operated by us. If you click on a third party link, you will
-be directed to that third party's site. We encourage you to carefully read the privacy policy of any website you visit.
+This website may contain sponsored links and adverts that will typically be served through our advertising partners. Our advertising partners may have detailed privacy policies relating directly to the adverts activated by them. By clicking on any such advert, you will be send to the advertiser's website through a referral program which may use cookies and will track the number of referrals sent from our website. It is important to note that if you click on a sponsored link, or any other external link, you do so at your own risk. In no event can we be held liable for any damages or implications caused by clicking on an external or sponsored link.
 
-We have no control over and assume no responsibility for the content, privacy policies or practices of any third party
-sites or services.
+##9. SOCIAL MEDIA PLATFORMS
 
-## Changes to Privacy Policy
+On our website, we may use social media sharing buttons which help share web content directly from web pages to a social media platform. Whenever you use a social sharing button, be advised that you do so on your own discretion and note that the social media platform may track and save your request to share a web page respectively through your social media platform account.
 
-This Privacy Policy may be updated from time to time. New Privacy Policy will be posted on this page.
+We may share web links to relevant web pages through our social media accounts. By default, some social media platforms shorten lengthy URL's (web addresses). Users are advised to take caution and good judgement before clicking any shortened URL's published on social media platforms by this website and its owners. Despite the best efforts to ensure only genuine URL's are published many social media platforms are prone to spam and hacking and therefore this website and its owners cannot be held liable for any damages or implications caused by visiting any shortened links.
 
-You should review this Privacy Policy periodically.
+## 10. CONTACT AND COMMUNICATION
 
-When we change The Privacy Policy, we will update the "last modified" date on top of this page.
+This website is powered by Codemanufacture Ltd. registered in S G House, 6 St. Cross Road, SO23 9HX, Winchester under business registration number 11110064.
 
-Changes to this Privacy Policy will become effective as soon as they are posted on this page.
+You can contact us either via Email at privacy@codemanufacture.com via Phone on +44 7951608683. If you wish to contact us, please keep in mind that you do so at your own discretion and that you provide any personal details requested at your own risk. Your personal information is kept private and stored securely until it is no longer required by law or due to ceasing of purpose. We use any information submitted to provide you with further information about the products/ services we offer or to assist you in answering any questions or queries you may have.
 
-Your continued use of the Site following the posting of any changes to this policy means you accept such changes.
+## 11. AMENDMENTS
 
-## Contact Us
+We may update this policy from time to time whenever legal alterations are coming into effect. We therefore encourage you to check this page occasionally to ensure you are happy with any changes to this policy. However, we may notify you of changes to this policy either by means of email or through the private messaging system on our website.
 
-If you have any questions about this Privacy Policy, please contact us:
-
-* By email: privacy@codemanufacture.com
-
-This Privacy Policy was last modified on **June 18, 2018**.
+This Privacy Policy was last modified on **June 29, 2018**.
