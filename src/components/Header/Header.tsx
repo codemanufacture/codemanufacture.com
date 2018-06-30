@@ -36,7 +36,10 @@ export const siteMetadataFragment = graphql`
   fragment siteMetadata on RootQueryType {
     site {
       siteMetadata {
+        description
+        keywords
         title
+        siteUrl
       }
     }
   }

@@ -1,5 +1,7 @@
 module.exports = {
   siteMetadata: {
+    description: `Ecommerce, AWS Consultancy and tech blog`,
+    keywords: `magento, node.js, aws, react, serverless`,
     siteUrl: `https://codemanufacture.com`,
     title: `Codemanufacture - AWS and Magento Consultancy`,
   },
