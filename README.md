@@ -23,6 +23,7 @@ The code base for the [Codemanufacture](https://codemanufacture.com/)
   * [React Next](https://www.gatsbyjs.org/packages/gatsby-plugin-react-next) - React 16 support
   * [Robots.tx](https://www.gatsbyjs.org/packages/gatsby-plugin-robots-txt)
   * [Sitemap](https://www.gatsbyjs.org/packages/gatsby-plugin-sitemap)
+  * [Styled Components](https://www.gatsbyjs.org/packages/gatsby-plugin-styled-components/)
   * [Typescript](https://www.gatsbyjs.org/packages/gatsby-plugin-typescript)
 * Development, QA Tools and automation
   * [CircleCI](https://circleci.com/) - a deployment pipeline

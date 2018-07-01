@@ -1,5 +1,19 @@
 import * as React from 'react'
 import Link from 'gatsby-link'
+import styled from 'styled-components'
+import { colors } from '../theme'
+
+const StyledButtonLink = styled.a`
+  background: ${colors.brand};
+  border: 1px ${colors.brand} solid;
+  border-radius: 3px;
+  color: ${colors.background};
+  display: block;
+  font-size: 16px;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+`
 
 const IndexPage = () => (
   <div>
@@ -9,23 +23,9 @@ const IndexPage = () => (
       React, Magento is almost ready.
     </p>
     <p>
-      <a
-        href="http://eepurl.com/dpY3Az"
-        style={{
-          background: '#208bc3',
-          border: '1px #208bc3 solid',
-          borderRadius: '3px',
-          color: '#fff',
-          display: 'block',
-          fontSize: '16px',
-          padding: '10px 10px',
-          textAlign: 'center',
-          textDecoration: 'none',
-          width: '100%',
-        }}
-      >
+      <StyledButtonLink href="http://eepurl.com/dpY3Az">
         Notify me when the site is finished
-      </a>
+      </StyledButtonLink>
     </p>
     <h3>Contact</h3>
     <p>Need help in meantime or just want to say hello?</p>

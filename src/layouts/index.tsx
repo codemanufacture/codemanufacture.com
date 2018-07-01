@@ -1,8 +1,14 @@
 import * as React from 'react'
 import Helmet from 'react-helmet'
-
+import styled from 'styled-components'
 import Header from '../components/Header'
-import './index.css'
+import '../theme/globalStyle'
+
+const Container = styled.div`
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 0 1.0875rem 1.45rem;
+`
 
 interface WrapperProps {
   location: any
@@ -20,17 +26,7 @@ interface WrapperProps {
 }
 
 const Layout: React.SFC<WrapperProps> = ({ children, data, location }) => (
-  <div
-    style={
-      location.pathname === '/'
-        ? {
-            position: 'absolute',
-            top: '50%',
-            transform: 'translateY(-50%)',
-          }
-        : {}
-    }
-  >
+  <div className={location.pathname === '/' ? 'coming-soon' : ''}>
     <Helmet>
       <title>{data.site.siteMetadata.title}</title>
       <meta charSet="utf-8" />
@@ -44,22 +40,9 @@ const Layout: React.SFC<WrapperProps> = ({ children, data, location }) => (
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content={data.site.siteMetadata.title} />
       <link rel="icon" type="image/png" href="/favicon.ico" />
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Montserrat"
-      />
     </Helmet>
     <Header siteTitle={data.site.siteMetadata.title} />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: '600px',
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
-      {children()}
-    </div>
+    <Container>{children()}</Container>
   </div>
 )
 

@@ -1,5 +1,12 @@
 import * as React from 'react'
 import Helmet from 'react-helmet'
+import styled from 'styled-components'
+
+const StyledPageWrapper = styled.div`
+  ul {
+    list-style-type: disc;
+  }
+`
 
 interface PageTemplateProps {
   data: {
@@ -13,11 +20,11 @@ interface PageTemplateProps {
 }
 
 const PageTemplate: React.SFC<PageTemplateProps> = ({ data }) => (
-  <div className="page-content">
+  <StyledPageWrapper>
     <Helmet title={data.page.frontmatter.title} />
     <h1>{data.page.frontmatter.title}</h1>
     <div dangerouslySetInnerHTML={{ __html: data.page.html }} />
-  </div>
+  </StyledPageWrapper>
 )
 
 export default PageTemplate
