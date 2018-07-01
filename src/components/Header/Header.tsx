@@ -1,7 +1,7 @@
 import * as React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
-const logo = require('../../logo.svg')
+import * as logo from '../../images/logo.svg'
 
 interface HeaderProps {
   siteTitle: string
@@ -11,23 +11,21 @@ const StyledHeaderWrapper = styled.div`
   margin: 0 auto;
   max-width: 600px;
   padding: 1.45rem 1.0875rem;
+
+  a {
+    color: #000;
+    text-decoration: none;
+  }
 `
 
 const Header: React.SFC<HeaderProps> = ({ siteTitle }) => (
   <div className="content">
     <StyledHeaderWrapper>
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: '#000',
-            textDecoration: 'none',
-          }}
-          title="Back to homepage"
-        >
+      <div>
+        <Link to="/" title="Back to homepage">
           <img src={logo} alt={siteTitle} />
         </Link>
-      </h1>
+      </div>
     </StyledHeaderWrapper>
   </div>
 )

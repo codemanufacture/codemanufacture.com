@@ -2,6 +2,7 @@ import * as React from 'react'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import Header from '../components/Header'
+import * as favicon from '../images/favicon.ico'
 import '../theme/globalStyle'
 
 const Container = styled.div`
@@ -39,7 +40,7 @@ const Layout: React.SFC<WrapperProps> = ({ children, data, location }) => (
       <meta property="og:locale" content="en_GB" />
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content={data.site.siteMetadata.title} />
-      <link rel="icon" type="image/png" href="/favicon.ico" />
+      <link rel="icon" type="image/ico" href={favicon} />
     </Helmet>
     <Header siteTitle={data.site.siteMetadata.title} />
     <Container>{children()}</Container>
