@@ -28,6 +28,7 @@ The code base for the [Codemanufacture](https://codemanufacture.com/)
 * Development, QA Tools and automation
   * [CircleCI](https://circleci.com/) - a deployment pipeline
   * [Prettier](https://prettier.io/) - an opinionated code formatter
+  * [Stylelint](https://stylelint.io/)
   * [Typescript](https://www.typescriptlang.org/) - a typed superset of JavaScript
   * [tslint](https://palantir.github.io/tslint/) - linter for TypeScript
 * Marketing & SEO
