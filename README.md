@@ -118,10 +118,10 @@ Runs prettier on markdown files to print differences from formatting standards
 
 #### `yarn nit:source`
 
-
 #### `yarn plop`
 
 Code generator for common tasks:
+
 * Creation of new pure component
 * Creation of new page
 

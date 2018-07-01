@@ -7,7 +7,7 @@ interface LogoProps {
   src?: string
 }
 
-const Logo: React.SFC<LogoProps> = ({alt}) => (
+const Logo: React.SFC<LogoProps> = ({ alt }) => (
   <div>
     <Link to="/" title="Back to homepage">
       <img src={logo} alt={alt} />

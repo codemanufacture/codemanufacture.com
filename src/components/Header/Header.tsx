@@ -15,7 +15,7 @@ const StyledHeaderWrapper = styled.div`
 const Header: React.SFC<HeaderProps> = ({ siteTitle }) => (
   <div className="content">
     <StyledHeaderWrapper>
-      <Logo alt={siteTitle}/>
+      <Logo alt={siteTitle} />
     </StyledHeaderWrapper>
   </div>
 )
