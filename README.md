@@ -43,9 +43,11 @@ The code base for the [Codemanufacture](https://codemanufacture.com/)
      ├── .circleci                     // CircleCI automated deployment configuration
      ├── content                       // content
      │   └── pages                     // markdown pages
+     ├── gatsby                        // gatsby node api hooks
      ├── gatsby-config.js              // gatsby configuration
      ├── gatsby-node.js                // gatsby node hooks
      ├── package.json
+     ├── plop-templates                // templates for plop generator
      ├── public                        // output folder (in .gitignore)
      ├── README.md                     // this file
      ├── src                           // sources
@@ -108,6 +110,10 @@ Reformats code
 
 Generates types for GraphQL queries
 
+#### `yarn lint:css`
+
+Runs stylelint on source files
+
 #### `yarn lint:source`
 
 Runs tslint on source files
@@ -118,14 +124,14 @@ Runs prettier on markdown files to print differences from formatting standards
 
 #### `yarn nit:source`
 
+Runs prettier on source files to print differences from formatting standards
+
 #### `yarn plop`
 
 Code generator for common tasks:
 
 * Creation of new pure component
 * Creation of new page
-
-Runs prettier on source files to print differences from formatting standards
 
 #### `yarn serve`
 
