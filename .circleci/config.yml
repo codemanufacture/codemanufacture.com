@@ -3,7 +3,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:chakracore-8
+      - image: circleci/node:chakracore-10.1
     working_directory: ~/repo
     steps:
       - checkout
