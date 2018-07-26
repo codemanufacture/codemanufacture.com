@@ -1,6 +1,8 @@
 import * as React from 'react'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
+import Layout from '../components/Layout'
+import { graphql } from 'gatsby'
 
 const StyledPageWrapper = styled.div`
   ul {
@@ -20,19 +22,20 @@ interface PageTemplateProps {
 }
 
 const PageTemplate: React.SFC<PageTemplateProps> = ({ data }) => (
-  <StyledPageWrapper>
-    <Helmet title={data.page.frontmatter.title} />
-    <h1>{data.page.frontmatter.title}</h1>
-    <div dangerouslySetInnerHTML={{ __html: data.page.html }} />
-  </StyledPageWrapper>
+  <Layout>
+    <StyledPageWrapper>
+      <Helmet title={data.page.frontmatter.title} />
+      <h1>{data.page.frontmatter.title}</h1>
+      <div dangerouslySetInnerHTML={{ __html: data.page.html }} />
+    </StyledPageWrapper>
+  </Layout>
 )
 
 export default PageTemplate
 
 export const pageQuery = graphql`
-  query PageByPath($slug: String!) {
+  query($slug: String!) {
     page: markdownRemark(fields: { slug: { eq: $slug } }) {
-      id
       html
       frontmatter {
         title

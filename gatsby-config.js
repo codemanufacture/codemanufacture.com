@@ -15,7 +15,6 @@ module.exports = {
     },
     `gatsby-transformer-remark`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-react-next`,
     `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-google-tagmanager`,

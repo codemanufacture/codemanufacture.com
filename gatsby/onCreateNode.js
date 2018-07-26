@@ -1,7 +1,7 @@
 'use strict'
 
-module.exports = exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
-  const { createNodeField } = boundActionCreators
+module.exports = exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions
 
   // Sometimes, optional fields tend to get not picked up by the GraphQL
   // interpreter if not a single content uses it. Therefore, we're putting them
@@ -18,7 +18,7 @@ module.exports = exports.onCreateNode = ({ node, boundActionCreators, getNode })
     createNodeField({
       node,
       name: `slug`,
-      value: slug || ``,
+      value: slug,
     })
   }
 }

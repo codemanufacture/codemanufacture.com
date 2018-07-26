@@ -1,7 +1,8 @@
 import * as React from 'react'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { colors } from '../theme'
+import Layout from '../components/Layout'
 
 const StyledButtonLink = styled.a`
   background: ${colors.brand};
@@ -16,29 +17,33 @@ const StyledButtonLink = styled.a`
 `
 
 const IndexPage = () => (
-  <div>
-    <h1>Oops</h1>
-    <p>
-      You caught me! My Consultancy and Tech Blog focused on AWS, Serverless,
-      React, Magento is almost ready.
-    </p>
-    <p>
-      <StyledButtonLink href="http://eepurl.com/dpY3Az">
-        Notify me when the site is finished
-      </StyledButtonLink>
-    </p>
-    <h3>Contact</h3>
-    <p>Need help in meantime or just want to say hello?</p>
-    <p>
-      Email:{` `}
-      <a href="mailto:contact@codemanufacture.com">
-        contact@codemanufacture.com
-      </a>
-      <br />Call: +44 7951608683
-    </p>
-    <p>
-      <Link to="/privacy-policy/">Privacy policy</Link>
-    </p>
+  <div className="coming-soon">
+    <Layout>
+      <div>
+        <h1>Oops</h1>
+        <p>
+          You caught me! My Consultancy and Tech Blog focused on AWS,
+          Serverless, React, Magento is almost ready.
+        </p>
+        <p>
+          <StyledButtonLink href="http://eepurl.com/dpY3Az">
+            Notify me when the site is finished
+          </StyledButtonLink>
+        </p>
+        <h3>Contact</h3>
+        <p>Need help in meantime or just want to say hello?</p>
+        <p>
+          Email:{` `}
+          <a href="mailto:contact@codemanufacture.com">
+            contact@codemanufacture.com
+          </a>
+          <br />Call: +44 7951608683
+        </p>
+        <p>
+          <Link to="/privacy-policy/">Privacy policy</Link>
+        </p>
+      </div>
+    </Layout>
   </div>
 )
 

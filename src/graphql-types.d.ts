@@ -1,4 +1,12 @@
 /* tslint:disable */
+import { GraphQLResolveInfo } from 'graphql'
+
+type Resolver<Result, Args = any> = (
+  parent: any,
+  args: Args,
+  context: any,
+  info: GraphQLResolveInfo
+) => Promise<Result> | Result
 
 /** A date string, such as 2007-12-03, compliant with the ISO 8601 standard  for representation of dates and times using the Gregorian calendar. */
 export type Date = any
@@ -48,7 +56,6 @@ export interface SitePage extends Node {
   id: string /** The id of this node. */
   parent?: Node | null /** The parent of this node. */
   children?: (Node | null)[] | null /** The children of this node. */
-  layout?: string | null
   jsonName?: string | null
   internalComponentName?: string | null
   path?: string | null
@@ -334,18 +341,15 @@ export interface internal_11 {
 
 export interface fieldOwners_2 {
   slug?: string | null
-  layout?: string | null
 }
 
 export interface frontmatter_2 {
   title?: string | null
   _PARENT?: string | null
-  parent?: string | null
 }
 
 export interface fields_2 {
   slug?: string | null
-  layout?: string | null
 }
 
 export interface MarkdownHeading {
@@ -361,8 +365,8 @@ export interface wordCount {
 
 export interface internal_10 {
   contentDigest?: string | null
-  mediaType?: string | null
   type?: string | null
+  mediaType?: string | null
   description?: string | null
   owner?: string | null
 }
@@ -425,6 +429,8 @@ export interface Site extends Node {
 }
 
 export interface siteMetadata_2 {
+  description?: string | null
+  keywords?: string | null
   siteUrl?: string | null
   title?: string | null
 }
@@ -435,13 +441,1390 @@ export interface internal_12 {
   owner?: string | null
 }
 
+export namespace RootQueryTypeResolvers {
+  export interface Resolvers {
+    allSitePage?: AllSitePageResolver /** Connection to all SitePage nodes */
+    allSitePlugin?: AllSitePluginResolver /** Connection to all SitePlugin nodes */
+    allDirectory?: AllDirectoryResolver /** Connection to all Directory nodes */
+    allFile?: AllFileResolver /** Connection to all File nodes */
+    allMarkdownRemark?: AllMarkdownRemarkResolver /** Connection to all MarkdownRemark nodes */
+    sitePage?: SitePageResolver
+    sitePlugin?: SitePluginResolver
+    site?: SiteResolver
+    directory?: DirectoryResolver
+    file?: FileResolver
+    markdownRemark?: MarkdownRemarkResolver
+  }
+
+  export type AllSitePageResolver = Resolver<
+    SitePageConnection | null,
+    AllSitePageArgs
+  >
+  export interface AllSitePageArgs {
+    skip?: number | null
+    limit?: number | null
+    sort?: sitePageConnectionSort | null
+    filter?: filterSitePage | null
+  }
+
+  export type AllSitePluginResolver = Resolver<
+    SitePluginConnection | null,
+    AllSitePluginArgs
+  >
+  export interface AllSitePluginArgs {
+    skip?: number | null
+    limit?: number | null
+    sort?: sitePluginConnectionSort | null
+    filter?: filterSitePlugin | null
+  }
+
+  export type AllDirectoryResolver = Resolver<
+    DirectoryConnection | null,
+    AllDirectoryArgs
+  >
+  export interface AllDirectoryArgs {
+    skip?: number | null
+    limit?: number | null
+    sort?: directoryConnectionSort | null
+    filter?: filterDirectory | null
+  }
+
+  export type AllFileResolver = Resolver<FileConnection | null, AllFileArgs>
+  export interface AllFileArgs {
+    skip?: number | null
+    limit?: number | null
+    sort?: fileConnectionSort | null
+    filter?: filterFile | null
+  }
+
+  export type AllMarkdownRemarkResolver = Resolver<
+    MarkdownRemarkConnection | null,
+    AllMarkdownRemarkArgs
+  >
+  export interface AllMarkdownRemarkArgs {
+    skip?: number | null
+    limit?: number | null
+    sort?: markdownRemarkConnectionSort | null
+    filter?: filterMarkdownRemark | null
+  }
+
+  export type SitePageResolver = Resolver<SitePage | null, SitePageArgs>
+  export interface SitePageArgs {
+    jsonName?: sitePageJsonNameQueryString | null
+    internalComponentName?: sitePageInternalComponentNameQueryString | null
+    path?: sitePagePathQueryString_2 | null
+    component?: sitePageComponentQueryString | null
+    componentChunkName?: sitePageComponentChunkNameQueryString | null
+    context?: sitePageContextInputObject | null
+    pluginCreator?: sitePagePluginCreatorInputObject | null
+    pluginCreatorId?: sitePagePluginCreatorIdQueryString_2 | null
+    componentPath?: sitePageComponentPathQueryString | null
+    id?: sitePageIdQueryString_2 | null
+    internal?: sitePageInternalInputObject_2 | null
+  }
+
+  export type SitePluginResolver = Resolver<SitePlugin | null, SitePluginArgs>
+  export interface SitePluginArgs {
+    resolve?: sitePluginResolveQueryString_2 | null
+    id?: sitePluginIdQueryString_2 | null
+    name?: sitePluginNameQueryString_2 | null
+    version?: sitePluginVersionQueryString_2 | null
+    pluginOptions?: sitePluginPluginOptionsInputObject_2 | null
+    nodeAPIs?: sitePluginNodeApIsQueryList_2 | null
+    ssrAPIs?: sitePluginSsrApIsQueryList_2 | null
+    pluginFilepath?: sitePluginPluginFilepathQueryString_2 | null
+    packageJson?: sitePluginPackageJsonInputObject_2 | null
+    internal?: sitePluginInternalInputObject_2 | null
+  }
+
+  export type SiteResolver = Resolver<Site | null, SiteArgs>
+  export interface SiteArgs {
+    siteMetadata?: siteSiteMetadataInputObject_2 | null
+    port?: sitePortQueryString_2 | null
+    host?: siteHostQueryString_2 | null
+    pathPrefix?: sitePathPrefixQueryString_2 | null
+    polyfill?: sitePolyfillQueryBoolean_2 | null
+    buildTime?: siteBuildTimeQueryString_2 | null
+    id?: siteIdQueryString_2 | null
+    internal?: siteInternalInputObject_2 | null
+  }
+
+  export type DirectoryResolver = Resolver<Directory | null, DirectoryArgs>
+  export interface DirectoryArgs {
+    id?: directoryIdQueryString_2 | null
+    internal?: directoryInternalInputObject_2 | null
+    sourceInstanceName?: directorySourceInstanceNameQueryString_2 | null
+    absolutePath?: directoryAbsolutePathQueryString_2 | null
+    relativePath?: directoryRelativePathQueryString_2 | null
+    extension?: directoryExtensionQueryString_2 | null
+    size?: directorySizeQueryInteger_2 | null
+    prettySize?: directoryPrettySizeQueryString_2 | null
+    modifiedTime?: directoryModifiedTimeQueryString_2 | null
+    accessTime?: directoryAccessTimeQueryString_2 | null
+    changeTime?: directoryChangeTimeQueryString_2 | null
+    birthTime?: directoryBirthTimeQueryString_2 | null
+    root?: directoryRootQueryString_2 | null
+    dir?: directoryDirQueryString_2 | null
+    base?: directoryBaseQueryString_2 | null
+    ext?: directoryExtQueryString_2 | null
+    name?: directoryNameQueryString_2 | null
+    relativeDirectory?: directoryRelativeDirectoryQueryString_2 | null
+    dev?: directoryDevQueryInteger_2 | null
+    mode?: directoryModeQueryInteger_2 | null
+    nlink?: directoryNlinkQueryInteger_2 | null
+    uid?: directoryUidQueryInteger_2 | null
+    gid?: directoryGidQueryInteger_2 | null
+    rdev?: directoryRdevQueryInteger_2 | null
+    blksize?: directoryBlksizeQueryInteger_2 | null
+    ino?: directoryInoQueryInteger_2 | null
+    blocks?: directoryBlocksQueryInteger_2 | null
+    atimeMs?: directoryAtimeMsQueryFloat_2 | null
+    mtimeMs?: directoryMtimeMsQueryFloat_2 | null
+    ctimeMs?: directoryCtimeMsQueryFloat_2 | null
+    birthtimeMs?: directoryBirthtimeMsQueryFloat_2 | null
+    atime?: directoryAtimeQueryString_2 | null
+    mtime?: directoryMtimeQueryString_2 | null
+    ctime?: directoryCtimeQueryString_2 | null
+    birthtime?: directoryBirthtimeQueryString_2 | null
+  }
+
+  export type FileResolver = Resolver<File | null, FileArgs>
+  export interface FileArgs {
+    id?: fileIdQueryString_2 | null
+    internal?: fileInternalInputObject_2 | null
+    sourceInstanceName?: fileSourceInstanceNameQueryString_2 | null
+    absolutePath?: fileAbsolutePathQueryString_2 | null
+    relativePath?: fileRelativePathQueryString_2 | null
+    extension?: fileExtensionQueryString_2 | null
+    size?: fileSizeQueryInteger_2 | null
+    prettySize?: filePrettySizeQueryString_2 | null
+    modifiedTime?: fileModifiedTimeQueryString_2 | null
+    accessTime?: fileAccessTimeQueryString_2 | null
+    changeTime?: fileChangeTimeQueryString_2 | null
+    birthTime?: fileBirthTimeQueryString_2 | null
+    root?: fileRootQueryString_2 | null
+    dir?: fileDirQueryString_2 | null
+    base?: fileBaseQueryString_2 | null
+    ext?: fileExtQueryString_2 | null
+    name?: fileNameQueryString_2 | null
+    relativeDirectory?: fileRelativeDirectoryQueryString_2 | null
+    dev?: fileDevQueryInteger_2 | null
+    mode?: fileModeQueryInteger_2 | null
+    nlink?: fileNlinkQueryInteger_2 | null
+    uid?: fileUidQueryInteger_2 | null
+    gid?: fileGidQueryInteger_2 | null
+    rdev?: fileRdevQueryInteger_2 | null
+    blksize?: fileBlksizeQueryInteger_2 | null
+    ino?: fileInoQueryInteger_2 | null
+    blocks?: fileBlocksQueryInteger_2 | null
+    atimeMs?: fileAtimeMsQueryFloat_2 | null
+    mtimeMs?: fileMtimeMsQueryFloat_2 | null
+    ctimeMs?: fileCtimeMsQueryFloat_2 | null
+    birthtimeMs?: fileBirthtimeMsQueryFloat_2 | null
+    atime?: fileAtimeQueryString_2 | null
+    mtime?: fileMtimeQueryString_2 | null
+    ctime?: fileCtimeQueryString_2 | null
+    birthtime?: fileBirthtimeQueryString_2 | null
+    publicURL?: publicUrlQueryString_3 | null
+  }
+
+  export type MarkdownRemarkResolver = Resolver<
+    MarkdownRemark | null,
+    MarkdownRemarkArgs
+  >
+  export interface MarkdownRemarkArgs {
+    id?: markdownRemarkIdQueryString_2 | null
+    internal?: markdownRemarkInternalInputObject_2 | null
+    frontmatter?: markdownRemarkFrontmatterInputObject_2 | null
+    excerpt?: excerptQueryString_3 | null
+    rawMarkdownBody?: markdownRemarkRawMarkdownBodyQueryString_2 | null
+    fileAbsolutePath?: markdownRemarkFileAbsolutePathQueryString_2 | null
+    fields?: markdownRemarkFieldsInputObject_2 | null
+    html?: htmlQueryString_3 | null
+    headings?: headingsQueryList_3 | null
+    timeToRead?: timeToReadQueryInt_3 | null
+    tableOfContents?: tableOfContentsQueryString_3 | null
+    wordCount?: wordCountTypeName_3 | null
+  }
+}
+/** A connection to a list of items. */
+export namespace SitePageConnectionResolvers {
+  export interface Resolvers {
+    pageInfo?: PageInfoResolver /** Information to aid in pagination. */
+    edges?: EdgesResolver /** A list of edges. */
+    totalCount?: TotalCountResolver
+    distinct?: DistinctResolver
+    group?: GroupResolver
+  }
+
+  export type PageInfoResolver = Resolver<PageInfo>
+  export type EdgesResolver = Resolver<(SitePageEdge | null)[] | null>
+  export type TotalCountResolver = Resolver<number | null>
+  export type DistinctResolver = Resolver<
+    (string | null)[] | null,
+    DistinctArgs
+  >
+  export interface DistinctArgs {
+    field?: sitePageDistinctEnum | null
+  }
+
+  export type GroupResolver = Resolver<
+    (sitePageGroupConnectionConnection | null)[] | null,
+    GroupArgs
+  >
+  export interface GroupArgs {
+    skip?: number | null
+    limit?: number | null
+    field?: sitePageGroupEnum | null
+  }
+}
+/** Information about pagination in a connection. */
+export namespace PageInfoResolvers {
+  export interface Resolvers {
+    hasNextPage?: HasNextPageResolver /** When paginating, are there more items? */
+  }
+
+  export type HasNextPageResolver = Resolver<boolean>
+}
+/** An edge in a connection. */
+export namespace SitePageEdgeResolvers {
+  export interface Resolvers {
+    node?: NodeResolver /** The item at the end of the edge */
+    next?: NextResolver /** The next edge in the connection */
+    previous?: PreviousResolver /** The previous edge in the connection */
+  }
+
+  export type NodeResolver = Resolver<SitePage | null>
+  export type NextResolver = Resolver<SitePage | null>
+  export type PreviousResolver = Resolver<SitePage | null>
+}
+/** Node of type SitePage */
+export namespace SitePageResolvers {
+  export interface Resolvers {
+    id?: IdResolver /** The id of this node. */
+    parent?: ParentResolver /** The parent of this node. */
+    children?: ChildrenResolver /** The children of this node. */
+    jsonName?: JsonNameResolver
+    internalComponentName?: InternalComponentNameResolver
+    path?: PathResolver
+    component?: ComponentResolver
+    componentChunkName?: ComponentChunkNameResolver
+    context?: ContextResolver
+    pluginCreator?: PluginCreatorResolver
+    pluginCreatorId?: PluginCreatorIdResolver
+    componentPath?: ComponentPathResolver
+    internal?: InternalResolver
+  }
+
+  export type IdResolver = Resolver<string>
+  export type ParentResolver = Resolver<Node | null>
+  export type ChildrenResolver = Resolver<(Node | null)[] | null>
+  export type JsonNameResolver = Resolver<string | null>
+  export type InternalComponentNameResolver = Resolver<string | null>
+  export type PathResolver = Resolver<string | null>
+  export type ComponentResolver = Resolver<string | null>
+  export type ComponentChunkNameResolver = Resolver<string | null>
+  export type ContextResolver = Resolver<context | null>
+  export type PluginCreatorResolver = Resolver<SitePlugin | null>
+  export type PluginCreatorIdResolver = Resolver<string | null>
+  export type ComponentPathResolver = Resolver<string | null>
+  export type InternalResolver = Resolver<internal_7 | null>
+}
+
+export namespace contextResolvers {
+  export interface Resolvers {
+    slug?: SlugResolver
+  }
+
+  export type SlugResolver = Resolver<string | null>
+}
+/** Node of type SitePlugin */
+export namespace SitePluginResolvers {
+  export interface Resolvers {
+    id?: IdResolver /** The id of this node. */
+    parent?: ParentResolver /** The parent of this node. */
+    children?: ChildrenResolver /** The children of this node. */
+    resolve?: ResolveResolver
+    name?: NameResolver
+    version?: VersionResolver
+    pluginOptions?: PluginOptionsResolver
+    nodeAPIs?: NodeAPIsResolver
+    ssrAPIs?: SsrAPIsResolver
+    pluginFilepath?: PluginFilepathResolver
+    packageJson?: PackageJsonResolver
+    internal?: InternalResolver
+  }
+
+  export type IdResolver = Resolver<string>
+  export type ParentResolver = Resolver<Node | null>
+  export type ChildrenResolver = Resolver<(Node | null)[] | null>
+  export type ResolveResolver = Resolver<string | null>
+  export type NameResolver = Resolver<string | null>
+  export type VersionResolver = Resolver<string | null>
+  export type PluginOptionsResolver = Resolver<pluginOptions_2 | null>
+  export type NodeAPIsResolver = Resolver<(string | null)[] | null>
+  export type SsrAPIsResolver = Resolver<(string | null)[] | null>
+  export type PluginFilepathResolver = Resolver<string | null>
+  export type PackageJsonResolver = Resolver<packageJson_2 | null>
+  export type InternalResolver = Resolver<internal_8 | null>
+}
+
+export namespace pluginOptions_2Resolvers {
+  export interface Resolvers {
+    path?: PathResolver
+    name?: NameResolver
+    id?: IdResolver
+    includeInDevelopment?: IncludeInDevelopmentResolver
+    pathCheck?: PathCheckResolver
+  }
+
+  export type PathResolver = Resolver<string | null>
+  export type NameResolver = Resolver<string | null>
+  export type IdResolver = Resolver<string | null>
+  export type IncludeInDevelopmentResolver = Resolver<boolean | null>
+  export type PathCheckResolver = Resolver<boolean | null>
+}
+
+export namespace packageJson_2Resolvers {
+  export interface Resolvers {
+    name?: NameResolver
+    description?: DescriptionResolver
+    version?: VersionResolver
+    main?: MainResolver
+    author?: AuthorResolver
+    license?: LicenseResolver
+    dependencies?: DependenciesResolver
+    devDependencies?: DevDependenciesResolver
+    peerDependencies?: PeerDependenciesResolver
+    keywords?: KeywordsResolver
+  }
+
+  export type NameResolver = Resolver<string | null>
+  export type DescriptionResolver = Resolver<string | null>
+  export type VersionResolver = Resolver<string | null>
+  export type MainResolver = Resolver<string | null>
+  export type AuthorResolver = Resolver<string | null>
+  export type LicenseResolver = Resolver<string | null>
+  export type DependenciesResolver = Resolver<(dependencies_2 | null)[] | null>
+  export type DevDependenciesResolver = Resolver<
+    (devDependencies_2 | null)[] | null
+  >
+  export type PeerDependenciesResolver = Resolver<
+    (peerDependencies_2 | null)[] | null
+  >
+  export type KeywordsResolver = Resolver<(string | null)[] | null>
+}
+
+export namespace dependencies_2Resolvers {
+  export interface Resolvers {
+    name?: NameResolver
+    version?: VersionResolver
+  }
+
+  export type NameResolver = Resolver<string | null>
+  export type VersionResolver = Resolver<string | null>
+}
+
+export namespace devDependencies_2Resolvers {
+  export interface Resolvers {
+    name?: NameResolver
+    version?: VersionResolver
+  }
+
+  export type NameResolver = Resolver<string | null>
+  export type VersionResolver = Resolver<string | null>
+}
+
+export namespace peerDependencies_2Resolvers {
+  export interface Resolvers {
+    name?: NameResolver
+    version?: VersionResolver
+  }
+
+  export type NameResolver = Resolver<string | null>
+  export type VersionResolver = Resolver<string | null>
+}
+
+export namespace internal_8Resolvers {
+  export interface Resolvers {
+    contentDigest?: ContentDigestResolver
+    type?: TypeResolver
+    owner?: OwnerResolver
+  }
+
+  export type ContentDigestResolver = Resolver<string | null>
+  export type TypeResolver = Resolver<string | null>
+  export type OwnerResolver = Resolver<string | null>
+}
+
+export namespace internal_7Resolvers {
+  export interface Resolvers {
+    type?: TypeResolver
+    contentDigest?: ContentDigestResolver
+    description?: DescriptionResolver
+    owner?: OwnerResolver
+  }
+
+  export type TypeResolver = Resolver<string | null>
+  export type ContentDigestResolver = Resolver<string | null>
+  export type DescriptionResolver = Resolver<string | null>
+  export type OwnerResolver = Resolver<string | null>
+}
+/** A connection to a list of items. */
+export namespace sitePageGroupConnectionConnectionResolvers {
+  export interface Resolvers {
+    pageInfo?: PageInfoResolver /** Information to aid in pagination. */
+    edges?: EdgesResolver /** A list of edges. */
+    field?: FieldResolver
+    fieldValue?: FieldValueResolver
+    totalCount?: TotalCountResolver
+  }
+
+  export type PageInfoResolver = Resolver<PageInfo>
+  export type EdgesResolver = Resolver<
+    (sitePageGroupConnectionEdge | null)[] | null
+  >
+  export type FieldResolver = Resolver<string | null>
+  export type FieldValueResolver = Resolver<string | null>
+  export type TotalCountResolver = Resolver<number | null>
+}
+/** An edge in a connection. */
+export namespace sitePageGroupConnectionEdgeResolvers {
+  export interface Resolvers {
+    node?: NodeResolver /** The item at the end of the edge */
+    next?: NextResolver /** The next edge in the connection */
+    previous?: PreviousResolver /** The previous edge in the connection */
+  }
+
+  export type NodeResolver = Resolver<SitePage | null>
+  export type NextResolver = Resolver<SitePage | null>
+  export type PreviousResolver = Resolver<SitePage | null>
+}
+/** A connection to a list of items. */
+export namespace SitePluginConnectionResolvers {
+  export interface Resolvers {
+    pageInfo?: PageInfoResolver /** Information to aid in pagination. */
+    edges?: EdgesResolver /** A list of edges. */
+    totalCount?: TotalCountResolver
+    distinct?: DistinctResolver
+    group?: GroupResolver
+  }
+
+  export type PageInfoResolver = Resolver<PageInfo>
+  export type EdgesResolver = Resolver<(SitePluginEdge | null)[] | null>
+  export type TotalCountResolver = Resolver<number | null>
+  export type DistinctResolver = Resolver<
+    (string | null)[] | null,
+    DistinctArgs
+  >
+  export interface DistinctArgs {
+    field?: sitePluginDistinctEnum | null
+  }
+
+  export type GroupResolver = Resolver<
+    (sitePluginGroupConnectionConnection | null)[] | null,
+    GroupArgs
+  >
+  export interface GroupArgs {
+    skip?: number | null
+    limit?: number | null
+    field?: sitePluginGroupEnum | null
+  }
+}
+/** An edge in a connection. */
+export namespace SitePluginEdgeResolvers {
+  export interface Resolvers {
+    node?: NodeResolver /** The item at the end of the edge */
+    next?: NextResolver /** The next edge in the connection */
+    previous?: PreviousResolver /** The previous edge in the connection */
+  }
+
+  export type NodeResolver = Resolver<SitePlugin | null>
+  export type NextResolver = Resolver<SitePlugin | null>
+  export type PreviousResolver = Resolver<SitePlugin | null>
+}
+/** A connection to a list of items. */
+export namespace sitePluginGroupConnectionConnectionResolvers {
+  export interface Resolvers {
+    pageInfo?: PageInfoResolver /** Information to aid in pagination. */
+    edges?: EdgesResolver /** A list of edges. */
+    field?: FieldResolver
+    fieldValue?: FieldValueResolver
+    totalCount?: TotalCountResolver
+  }
+
+  export type PageInfoResolver = Resolver<PageInfo>
+  export type EdgesResolver = Resolver<
+    (sitePluginGroupConnectionEdge | null)[] | null
+  >
+  export type FieldResolver = Resolver<string | null>
+  export type FieldValueResolver = Resolver<string | null>
+  export type TotalCountResolver = Resolver<number | null>
+}
+/** An edge in a connection. */
+export namespace sitePluginGroupConnectionEdgeResolvers {
+  export interface Resolvers {
+    node?: NodeResolver /** The item at the end of the edge */
+    next?: NextResolver /** The next edge in the connection */
+    previous?: PreviousResolver /** The previous edge in the connection */
+  }
+
+  export type NodeResolver = Resolver<SitePlugin | null>
+  export type NextResolver = Resolver<SitePlugin | null>
+  export type PreviousResolver = Resolver<SitePlugin | null>
+}
+/** A connection to a list of items. */
+export namespace DirectoryConnectionResolvers {
+  export interface Resolvers {
+    pageInfo?: PageInfoResolver /** Information to aid in pagination. */
+    edges?: EdgesResolver /** A list of edges. */
+    totalCount?: TotalCountResolver
+    distinct?: DistinctResolver
+    group?: GroupResolver
+  }
+
+  export type PageInfoResolver = Resolver<PageInfo>
+  export type EdgesResolver = Resolver<(DirectoryEdge | null)[] | null>
+  export type TotalCountResolver = Resolver<number | null>
+  export type DistinctResolver = Resolver<
+    (string | null)[] | null,
+    DistinctArgs
+  >
+  export interface DistinctArgs {
+    field?: directoryDistinctEnum | null
+  }
+
+  export type GroupResolver = Resolver<
+    (directoryGroupConnectionConnection | null)[] | null,
+    GroupArgs
+  >
+  export interface GroupArgs {
+    skip?: number | null
+    limit?: number | null
+    field?: directoryGroupEnum | null
+  }
+}
+/** An edge in a connection. */
+export namespace DirectoryEdgeResolvers {
+  export interface Resolvers {
+    node?: NodeResolver /** The item at the end of the edge */
+    next?: NextResolver /** The next edge in the connection */
+    previous?: PreviousResolver /** The previous edge in the connection */
+  }
+
+  export type NodeResolver = Resolver<Directory | null>
+  export type NextResolver = Resolver<Directory | null>
+  export type PreviousResolver = Resolver<Directory | null>
+}
+/** Node of type Directory */
+export namespace DirectoryResolvers {
+  export interface Resolvers {
+    id?: IdResolver /** The id of this node. */
+    parent?: ParentResolver /** The parent of this node. */
+    children?: ChildrenResolver /** The children of this node. */
+    internal?: InternalResolver
+    sourceInstanceName?: SourceInstanceNameResolver
+    absolutePath?: AbsolutePathResolver
+    relativePath?: RelativePathResolver
+    extension?: ExtensionResolver
+    size?: SizeResolver
+    prettySize?: PrettySizeResolver
+    modifiedTime?: ModifiedTimeResolver
+    accessTime?: AccessTimeResolver
+    changeTime?: ChangeTimeResolver
+    birthTime?: BirthTimeResolver
+    root?: RootResolver
+    dir?: DirResolver
+    base?: BaseResolver
+    ext?: ExtResolver
+    name?: NameResolver
+    relativeDirectory?: RelativeDirectoryResolver
+    dev?: DevResolver
+    mode?: ModeResolver
+    nlink?: NlinkResolver
+    uid?: UidResolver
+    gid?: GidResolver
+    rdev?: RdevResolver
+    blksize?: BlksizeResolver
+    ino?: InoResolver
+    blocks?: BlocksResolver
+    atimeMs?: AtimeMsResolver
+    mtimeMs?: MtimeMsResolver
+    ctimeMs?: CtimeMsResolver
+    birthtimeMs?: BirthtimeMsResolver
+    atime?: AtimeResolver
+    mtime?: MtimeResolver
+    ctime?: CtimeResolver
+    birthtime?: BirthtimeResolver
+  }
+
+  export type IdResolver = Resolver<string>
+  export type ParentResolver = Resolver<Node | null>
+  export type ChildrenResolver = Resolver<(Node | null)[] | null>
+  export type InternalResolver = Resolver<internal_9 | null>
+  export type SourceInstanceNameResolver = Resolver<string | null>
+  export type AbsolutePathResolver = Resolver<string | null>
+  export type RelativePathResolver = Resolver<string | null>
+  export type ExtensionResolver = Resolver<string | null>
+  export type SizeResolver = Resolver<number | null>
+  export type PrettySizeResolver = Resolver<string | null>
+  export type ModifiedTimeResolver = Resolver<Date | null, ModifiedTimeArgs>
+  export interface ModifiedTimeArgs {
+    formatString?:
+      | string
+      | null /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+    fromNow?:
+      | boolean
+      | null /** Returns a string generated with Moment.js' fromNow function */
+    difference?:
+      | string
+      | null /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+    locale?:
+      | string
+      | null /** Configures the locale Moment.js will use to format the date. */
+  }
+
+  export type AccessTimeResolver = Resolver<Date | null, AccessTimeArgs>
+  export interface AccessTimeArgs {
+    formatString?:
+      | string
+      | null /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+    fromNow?:
+      | boolean
+      | null /** Returns a string generated with Moment.js' fromNow function */
+    difference?:
+      | string
+      | null /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+    locale?:
+      | string
+      | null /** Configures the locale Moment.js will use to format the date. */
+  }
+
+  export type ChangeTimeResolver = Resolver<Date | null, ChangeTimeArgs>
+  export interface ChangeTimeArgs {
+    formatString?:
+      | string
+      | null /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+    fromNow?:
+      | boolean
+      | null /** Returns a string generated with Moment.js' fromNow function */
+    difference?:
+      | string
+      | null /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+    locale?:
+      | string
+      | null /** Configures the locale Moment.js will use to format the date. */
+  }
+
+  export type BirthTimeResolver = Resolver<Date | null, BirthTimeArgs>
+  export interface BirthTimeArgs {
+    formatString?:
+      | string
+      | null /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+    fromNow?:
+      | boolean
+      | null /** Returns a string generated with Moment.js' fromNow function */
+    difference?:
+      | string
+      | null /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+    locale?:
+      | string
+      | null /** Configures the locale Moment.js will use to format the date. */
+  }
+
+  export type RootResolver = Resolver<string | null>
+  export type DirResolver = Resolver<string | null>
+  export type BaseResolver = Resolver<string | null>
+  export type ExtResolver = Resolver<string | null>
+  export type NameResolver = Resolver<string | null>
+  export type RelativeDirectoryResolver = Resolver<string | null>
+  export type DevResolver = Resolver<number | null>
+  export type ModeResolver = Resolver<number | null>
+  export type NlinkResolver = Resolver<number | null>
+  export type UidResolver = Resolver<number | null>
+  export type GidResolver = Resolver<number | null>
+  export type RdevResolver = Resolver<number | null>
+  export type BlksizeResolver = Resolver<number | null>
+  export type InoResolver = Resolver<number | null>
+  export type BlocksResolver = Resolver<number | null>
+  export type AtimeMsResolver = Resolver<number | null>
+  export type MtimeMsResolver = Resolver<number | null>
+  export type CtimeMsResolver = Resolver<number | null>
+  export type BirthtimeMsResolver = Resolver<number | null>
+  export type AtimeResolver = Resolver<Date | null, AtimeArgs>
+  export interface AtimeArgs {
+    formatString?:
+      | string
+      | null /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+    fromNow?:
+      | boolean
+      | null /** Returns a string generated with Moment.js' fromNow function */
+    difference?:
+      | string
+      | null /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+    locale?:
+      | string
+      | null /** Configures the locale Moment.js will use to format the date. */
+  }
+
+  export type MtimeResolver = Resolver<Date | null, MtimeArgs>
+  export interface MtimeArgs {
+    formatString?:
+      | string
+      | null /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+    fromNow?:
+      | boolean
+      | null /** Returns a string generated with Moment.js' fromNow function */
+    difference?:
+      | string
+      | null /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+    locale?:
+      | string
+      | null /** Configures the locale Moment.js will use to format the date. */
+  }
+
+  export type CtimeResolver = Resolver<Date | null, CtimeArgs>
+  export interface CtimeArgs {
+    formatString?:
+      | string
+      | null /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+    fromNow?:
+      | boolean
+      | null /** Returns a string generated with Moment.js' fromNow function */
+    difference?:
+      | string
+      | null /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+    locale?:
+      | string
+      | null /** Configures the locale Moment.js will use to format the date. */
+  }
+
+  export type BirthtimeResolver = Resolver<Date | null, BirthtimeArgs>
+  export interface BirthtimeArgs {
+    formatString?:
+      | string
+      | null /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+    fromNow?:
+      | boolean
+      | null /** Returns a string generated with Moment.js' fromNow function */
+    difference?:
+      | string
+      | null /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+    locale?:
+      | string
+      | null /** Configures the locale Moment.js will use to format the date. */
+  }
+}
+
+export namespace internal_9Resolvers {
+  export interface Resolvers {
+    contentDigest?: ContentDigestResolver
+    type?: TypeResolver
+    description?: DescriptionResolver
+    owner?: OwnerResolver
+  }
+
+  export type ContentDigestResolver = Resolver<string | null>
+  export type TypeResolver = Resolver<string | null>
+  export type DescriptionResolver = Resolver<string | null>
+  export type OwnerResolver = Resolver<string | null>
+}
+/** A connection to a list of items. */
+export namespace directoryGroupConnectionConnectionResolvers {
+  export interface Resolvers {
+    pageInfo?: PageInfoResolver /** Information to aid in pagination. */
+    edges?: EdgesResolver /** A list of edges. */
+    field?: FieldResolver
+    fieldValue?: FieldValueResolver
+    totalCount?: TotalCountResolver
+  }
+
+  export type PageInfoResolver = Resolver<PageInfo>
+  export type EdgesResolver = Resolver<
+    (directoryGroupConnectionEdge | null)[] | null
+  >
+  export type FieldResolver = Resolver<string | null>
+  export type FieldValueResolver = Resolver<string | null>
+  export type TotalCountResolver = Resolver<number | null>
+}
+/** An edge in a connection. */
+export namespace directoryGroupConnectionEdgeResolvers {
+  export interface Resolvers {
+    node?: NodeResolver /** The item at the end of the edge */
+    next?: NextResolver /** The next edge in the connection */
+    previous?: PreviousResolver /** The previous edge in the connection */
+  }
+
+  export type NodeResolver = Resolver<Directory | null>
+  export type NextResolver = Resolver<Directory | null>
+  export type PreviousResolver = Resolver<Directory | null>
+}
+/** A connection to a list of items. */
+export namespace FileConnectionResolvers {
+  export interface Resolvers {
+    pageInfo?: PageInfoResolver /** Information to aid in pagination. */
+    edges?: EdgesResolver /** A list of edges. */
+    totalCount?: TotalCountResolver
+    distinct?: DistinctResolver
+    group?: GroupResolver
+  }
+
+  export type PageInfoResolver = Resolver<PageInfo>
+  export type EdgesResolver = Resolver<(FileEdge | null)[] | null>
+  export type TotalCountResolver = Resolver<number | null>
+  export type DistinctResolver = Resolver<
+    (string | null)[] | null,
+    DistinctArgs
+  >
+  export interface DistinctArgs {
+    field?: fileDistinctEnum | null
+  }
+
+  export type GroupResolver = Resolver<
+    (fileGroupConnectionConnection | null)[] | null,
+    GroupArgs
+  >
+  export interface GroupArgs {
+    skip?: number | null
+    limit?: number | null
+    field?: fileGroupEnum | null
+  }
+}
+/** An edge in a connection. */
+export namespace FileEdgeResolvers {
+  export interface Resolvers {
+    node?: NodeResolver /** The item at the end of the edge */
+    next?: NextResolver /** The next edge in the connection */
+    previous?: PreviousResolver /** The previous edge in the connection */
+  }
+
+  export type NodeResolver = Resolver<File | null>
+  export type NextResolver = Resolver<File | null>
+  export type PreviousResolver = Resolver<File | null>
+}
+/** Node of type File */
+export namespace FileResolvers {
+  export interface Resolvers {
+    id?: IdResolver /** The id of this node. */
+    parent?: ParentResolver /** The parent of this node. */
+    children?: ChildrenResolver /** The children of this node. */
+    childMarkdownRemark?: ChildMarkdownRemarkResolver /** The child of this node of type markdownRemark */
+    internal?: InternalResolver
+    sourceInstanceName?: SourceInstanceNameResolver
+    absolutePath?: AbsolutePathResolver
+    relativePath?: RelativePathResolver
+    extension?: ExtensionResolver
+    size?: SizeResolver
+    prettySize?: PrettySizeResolver
+    modifiedTime?: ModifiedTimeResolver
+    accessTime?: AccessTimeResolver
+    changeTime?: ChangeTimeResolver
+    birthTime?: BirthTimeResolver
+    root?: RootResolver
+    dir?: DirResolver
+    base?: BaseResolver
+    ext?: ExtResolver
+    name?: NameResolver
+    relativeDirectory?: RelativeDirectoryResolver
+    dev?: DevResolver
+    mode?: ModeResolver
+    nlink?: NlinkResolver
+    uid?: UidResolver
+    gid?: GidResolver
+    rdev?: RdevResolver
+    blksize?: BlksizeResolver
+    ino?: InoResolver
+    blocks?: BlocksResolver
+    atimeMs?: AtimeMsResolver
+    mtimeMs?: MtimeMsResolver
+    ctimeMs?: CtimeMsResolver
+    birthtimeMs?: BirthtimeMsResolver
+    atime?: AtimeResolver
+    mtime?: MtimeResolver
+    ctime?: CtimeResolver
+    birthtime?: BirthtimeResolver
+    publicURL?: PublicURLResolver /** Copy file to static directory and return public url to it */
+  }
+
+  export type IdResolver = Resolver<string>
+  export type ParentResolver = Resolver<Node | null>
+  export type ChildrenResolver = Resolver<(Node | null)[] | null>
+  export type ChildMarkdownRemarkResolver = Resolver<MarkdownRemark | null>
+  export type InternalResolver = Resolver<internal_10 | null>
+  export type SourceInstanceNameResolver = Resolver<string | null>
+  export type AbsolutePathResolver = Resolver<string | null>
+  export type RelativePathResolver = Resolver<string | null>
+  export type ExtensionResolver = Resolver<string | null>
+  export type SizeResolver = Resolver<number | null>
+  export type PrettySizeResolver = Resolver<string | null>
+  export type ModifiedTimeResolver = Resolver<Date | null, ModifiedTimeArgs>
+  export interface ModifiedTimeArgs {
+    formatString?:
+      | string
+      | null /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+    fromNow?:
+      | boolean
+      | null /** Returns a string generated with Moment.js' fromNow function */
+    difference?:
+      | string
+      | null /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+    locale?:
+      | string
+      | null /** Configures the locale Moment.js will use to format the date. */
+  }
+
+  export type AccessTimeResolver = Resolver<Date | null, AccessTimeArgs>
+  export interface AccessTimeArgs {
+    formatString?:
+      | string
+      | null /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+    fromNow?:
+      | boolean
+      | null /** Returns a string generated with Moment.js' fromNow function */
+    difference?:
+      | string
+      | null /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+    locale?:
+      | string
+      | null /** Configures the locale Moment.js will use to format the date. */
+  }
+
+  export type ChangeTimeResolver = Resolver<Date | null, ChangeTimeArgs>
+  export interface ChangeTimeArgs {
+    formatString?:
+      | string
+      | null /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+    fromNow?:
+      | boolean
+      | null /** Returns a string generated with Moment.js' fromNow function */
+    difference?:
+      | string
+      | null /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+    locale?:
+      | string
+      | null /** Configures the locale Moment.js will use to format the date. */
+  }
+
+  export type BirthTimeResolver = Resolver<Date | null, BirthTimeArgs>
+  export interface BirthTimeArgs {
+    formatString?:
+      | string
+      | null /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+    fromNow?:
+      | boolean
+      | null /** Returns a string generated with Moment.js' fromNow function */
+    difference?:
+      | string
+      | null /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+    locale?:
+      | string
+      | null /** Configures the locale Moment.js will use to format the date. */
+  }
+
+  export type RootResolver = Resolver<string | null>
+  export type DirResolver = Resolver<string | null>
+  export type BaseResolver = Resolver<string | null>
+  export type ExtResolver = Resolver<string | null>
+  export type NameResolver = Resolver<string | null>
+  export type RelativeDirectoryResolver = Resolver<string | null>
+  export type DevResolver = Resolver<number | null>
+  export type ModeResolver = Resolver<number | null>
+  export type NlinkResolver = Resolver<number | null>
+  export type UidResolver = Resolver<number | null>
+  export type GidResolver = Resolver<number | null>
+  export type RdevResolver = Resolver<number | null>
+  export type BlksizeResolver = Resolver<number | null>
+  export type InoResolver = Resolver<number | null>
+  export type BlocksResolver = Resolver<number | null>
+  export type AtimeMsResolver = Resolver<number | null>
+  export type MtimeMsResolver = Resolver<number | null>
+  export type CtimeMsResolver = Resolver<number | null>
+  export type BirthtimeMsResolver = Resolver<number | null>
+  export type AtimeResolver = Resolver<Date | null, AtimeArgs>
+  export interface AtimeArgs {
+    formatString?:
+      | string
+      | null /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+    fromNow?:
+      | boolean
+      | null /** Returns a string generated with Moment.js' fromNow function */
+    difference?:
+      | string
+      | null /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+    locale?:
+      | string
+      | null /** Configures the locale Moment.js will use to format the date. */
+  }
+
+  export type MtimeResolver = Resolver<Date | null, MtimeArgs>
+  export interface MtimeArgs {
+    formatString?:
+      | string
+      | null /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+    fromNow?:
+      | boolean
+      | null /** Returns a string generated with Moment.js' fromNow function */
+    difference?:
+      | string
+      | null /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+    locale?:
+      | string
+      | null /** Configures the locale Moment.js will use to format the date. */
+  }
+
+  export type CtimeResolver = Resolver<Date | null, CtimeArgs>
+  export interface CtimeArgs {
+    formatString?:
+      | string
+      | null /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+    fromNow?:
+      | boolean
+      | null /** Returns a string generated with Moment.js' fromNow function */
+    difference?:
+      | string
+      | null /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+    locale?:
+      | string
+      | null /** Configures the locale Moment.js will use to format the date. */
+  }
+
+  export type BirthtimeResolver = Resolver<Date | null, BirthtimeArgs>
+  export interface BirthtimeArgs {
+    formatString?:
+      | string
+      | null /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+    fromNow?:
+      | boolean
+      | null /** Returns a string generated with Moment.js' fromNow function */
+    difference?:
+      | string
+      | null /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+    locale?:
+      | string
+      | null /** Configures the locale Moment.js will use to format the date. */
+  }
+
+  export type PublicURLResolver = Resolver<string | null>
+}
+/** Node of type MarkdownRemark */
+export namespace MarkdownRemarkResolvers {
+  export interface Resolvers {
+    id?: IdResolver /** The id of this node. */
+    parent?: ParentResolver /** The parent of this node. */
+    children?: ChildrenResolver /** The children of this node. */
+    internal?: InternalResolver
+    frontmatter?: FrontmatterResolver
+    rawMarkdownBody?: RawMarkdownBodyResolver
+    fileAbsolutePath?: FileAbsolutePathResolver
+    fields?: FieldsResolver
+    html?: HtmlResolver
+    htmlAst?: HtmlAstResolver
+    excerpt?: ExcerptResolver
+    headings?: HeadingsResolver
+    timeToRead?: TimeToReadResolver
+    tableOfContents?: TableOfContentsResolver
+    wordCount?: WordCountResolver
+  }
+
+  export type IdResolver = Resolver<string>
+  export type ParentResolver = Resolver<Node | null>
+  export type ChildrenResolver = Resolver<(Node | null)[] | null>
+  export type InternalResolver = Resolver<internal_11 | null>
+  export type FrontmatterResolver = Resolver<frontmatter_2 | null>
+  export type RawMarkdownBodyResolver = Resolver<string | null>
+  export type FileAbsolutePathResolver = Resolver<string | null>
+  export type FieldsResolver = Resolver<fields_2 | null>
+  export type HtmlResolver = Resolver<string | null>
+  export type HtmlAstResolver = Resolver<JSON | null>
+  export type ExcerptResolver = Resolver<string | null, ExcerptArgs>
+  export interface ExcerptArgs {
+    pruneLength?: number | null
+  }
+
+  export type HeadingsResolver = Resolver<
+    (MarkdownHeading | null)[] | null,
+    HeadingsArgs
+  >
+  export interface HeadingsArgs {
+    depth?: HeadingLevels | null
+  }
+
+  export type TimeToReadResolver = Resolver<number | null>
+  export type TableOfContentsResolver = Resolver<string | null>
+  export type WordCountResolver = Resolver<wordCount | null>
+}
+
+export namespace internal_11Resolvers {
+  export interface Resolvers {
+    content?: ContentResolver
+    type?: TypeResolver
+    contentDigest?: ContentDigestResolver
+    owner?: OwnerResolver
+    fieldOwners?: FieldOwnersResolver
+  }
+
+  export type ContentResolver = Resolver<string | null>
+  export type TypeResolver = Resolver<string | null>
+  export type ContentDigestResolver = Resolver<string | null>
+  export type OwnerResolver = Resolver<string | null>
+  export type FieldOwnersResolver = Resolver<fieldOwners_2 | null>
+}
+
+export namespace fieldOwners_2Resolvers {
+  export interface Resolvers {
+    slug?: SlugResolver
+  }
+
+  export type SlugResolver = Resolver<string | null>
+}
+
+export namespace frontmatter_2Resolvers {
+  export interface Resolvers {
+    title?: TitleResolver
+    _PARENT?: _PARENTResolver
+  }
+
+  export type TitleResolver = Resolver<string | null>
+  export type _PARENTResolver = Resolver<string | null>
+}
+
+export namespace fields_2Resolvers {
+  export interface Resolvers {
+    slug?: SlugResolver
+  }
+
+  export type SlugResolver = Resolver<string | null>
+}
+
+export namespace MarkdownHeadingResolvers {
+  export interface Resolvers {
+    value?: ValueResolver
+    depth?: DepthResolver
+  }
+
+  export type ValueResolver = Resolver<string | null>
+  export type DepthResolver = Resolver<number | null>
+}
+
+export namespace wordCountResolvers {
+  export interface Resolvers {
+    paragraphs?: ParagraphsResolver
+    sentences?: SentencesResolver
+    words?: WordsResolver
+  }
+
+  export type ParagraphsResolver = Resolver<number | null>
+  export type SentencesResolver = Resolver<number | null>
+  export type WordsResolver = Resolver<number | null>
+}
+
+export namespace internal_10Resolvers {
+  export interface Resolvers {
+    contentDigest?: ContentDigestResolver
+    type?: TypeResolver
+    mediaType?: MediaTypeResolver
+    description?: DescriptionResolver
+    owner?: OwnerResolver
+  }
+
+  export type ContentDigestResolver = Resolver<string | null>
+  export type TypeResolver = Resolver<string | null>
+  export type MediaTypeResolver = Resolver<string | null>
+  export type DescriptionResolver = Resolver<string | null>
+  export type OwnerResolver = Resolver<string | null>
+}
+/** A connection to a list of items. */
+export namespace fileGroupConnectionConnectionResolvers {
+  export interface Resolvers {
+    pageInfo?: PageInfoResolver /** Information to aid in pagination. */
+    edges?: EdgesResolver /** A list of edges. */
+    field?: FieldResolver
+    fieldValue?: FieldValueResolver
+    totalCount?: TotalCountResolver
+  }
+
+  export type PageInfoResolver = Resolver<PageInfo>
+  export type EdgesResolver = Resolver<
+    (fileGroupConnectionEdge | null)[] | null
+  >
+  export type FieldResolver = Resolver<string | null>
+  export type FieldValueResolver = Resolver<string | null>
+  export type TotalCountResolver = Resolver<number | null>
+}
+/** An edge in a connection. */
+export namespace fileGroupConnectionEdgeResolvers {
+  export interface Resolvers {
+    node?: NodeResolver /** The item at the end of the edge */
+    next?: NextResolver /** The next edge in the connection */
+    previous?: PreviousResolver /** The previous edge in the connection */
+  }
+
+  export type NodeResolver = Resolver<File | null>
+  export type NextResolver = Resolver<File | null>
+  export type PreviousResolver = Resolver<File | null>
+}
+/** A connection to a list of items. */
+export namespace MarkdownRemarkConnectionResolvers {
+  export interface Resolvers {
+    pageInfo?: PageInfoResolver /** Information to aid in pagination. */
+    edges?: EdgesResolver /** A list of edges. */
+    totalCount?: TotalCountResolver
+    distinct?: DistinctResolver
+    group?: GroupResolver
+  }
+
+  export type PageInfoResolver = Resolver<PageInfo>
+  export type EdgesResolver = Resolver<(MarkdownRemarkEdge | null)[] | null>
+  export type TotalCountResolver = Resolver<number | null>
+  export type DistinctResolver = Resolver<
+    (string | null)[] | null,
+    DistinctArgs
+  >
+  export interface DistinctArgs {
+    field?: markdownRemarkDistinctEnum | null
+  }
+
+  export type GroupResolver = Resolver<
+    (markdownRemarkGroupConnectionConnection | null)[] | null,
+    GroupArgs
+  >
+  export interface GroupArgs {
+    skip?: number | null
+    limit?: number | null
+    field?: markdownRemarkGroupEnum | null
+  }
+}
+/** An edge in a connection. */
+export namespace MarkdownRemarkEdgeResolvers {
+  export interface Resolvers {
+    node?: NodeResolver /** The item at the end of the edge */
+    next?: NextResolver /** The next edge in the connection */
+    previous?: PreviousResolver /** The previous edge in the connection */
+  }
+
+  export type NodeResolver = Resolver<MarkdownRemark | null>
+  export type NextResolver = Resolver<MarkdownRemark | null>
+  export type PreviousResolver = Resolver<MarkdownRemark | null>
+}
+/** A connection to a list of items. */
+export namespace markdownRemarkGroupConnectionConnectionResolvers {
+  export interface Resolvers {
+    pageInfo?: PageInfoResolver /** Information to aid in pagination. */
+    edges?: EdgesResolver /** A list of edges. */
+    field?: FieldResolver
+    fieldValue?: FieldValueResolver
+    totalCount?: TotalCountResolver
+  }
+
+  export type PageInfoResolver = Resolver<PageInfo>
+  export type EdgesResolver = Resolver<
+    (markdownRemarkGroupConnectionEdge | null)[] | null
+  >
+  export type FieldResolver = Resolver<string | null>
+  export type FieldValueResolver = Resolver<string | null>
+  export type TotalCountResolver = Resolver<number | null>
+}
+/** An edge in a connection. */
+export namespace markdownRemarkGroupConnectionEdgeResolvers {
+  export interface Resolvers {
+    node?: NodeResolver /** The item at the end of the edge */
+    next?: NextResolver /** The next edge in the connection */
+    previous?: PreviousResolver /** The previous edge in the connection */
+  }
+
+  export type NodeResolver = Resolver<MarkdownRemark | null>
+  export type NextResolver = Resolver<MarkdownRemark | null>
+  export type PreviousResolver = Resolver<MarkdownRemark | null>
+}
+/** Node of type Site */
+export namespace SiteResolvers {
+  export interface Resolvers {
+    id?: IdResolver /** The id of this node. */
+    parent?: ParentResolver /** The parent of this node. */
+    children?: ChildrenResolver /** The children of this node. */
+    siteMetadata?: SiteMetadataResolver
+    port?: PortResolver
+    host?: HostResolver
+    pathPrefix?: PathPrefixResolver
+    polyfill?: PolyfillResolver
+    buildTime?: BuildTimeResolver
+    internal?: InternalResolver
+  }
+
+  export type IdResolver = Resolver<string>
+  export type ParentResolver = Resolver<Node | null>
+  export type ChildrenResolver = Resolver<(Node | null)[] | null>
+  export type SiteMetadataResolver = Resolver<siteMetadata_2 | null>
+  export type PortResolver = Resolver<Date | null, PortArgs>
+  export interface PortArgs {
+    formatString?:
+      | string
+      | null /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+    fromNow?:
+      | boolean
+      | null /** Returns a string generated with Moment.js' fromNow function */
+    difference?:
+      | string
+      | null /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+    locale?:
+      | string
+      | null /** Configures the locale Moment.js will use to format the date. */
+  }
+
+  export type HostResolver = Resolver<string | null>
+  export type PathPrefixResolver = Resolver<string | null>
+  export type PolyfillResolver = Resolver<boolean | null>
+  export type BuildTimeResolver = Resolver<Date | null, BuildTimeArgs>
+  export interface BuildTimeArgs {
+    formatString?:
+      | string
+      | null /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+    fromNow?:
+      | boolean
+      | null /** Returns a string generated with Moment.js' fromNow function */
+    difference?:
+      | string
+      | null /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+    locale?:
+      | string
+      | null /** Configures the locale Moment.js will use to format the date. */
+  }
+
+  export type InternalResolver = Resolver<internal_12 | null>
+}
+
+export namespace siteMetadata_2Resolvers {
+  export interface Resolvers {
+    description?: DescriptionResolver
+    keywords?: KeywordsResolver
+    siteUrl?: SiteUrlResolver
+    title?: TitleResolver
+  }
+
+  export type DescriptionResolver = Resolver<string | null>
+  export type KeywordsResolver = Resolver<string | null>
+  export type SiteUrlResolver = Resolver<string | null>
+  export type TitleResolver = Resolver<string | null>
+}
+
+export namespace internal_12Resolvers {
+  export interface Resolvers {
+    contentDigest?: ContentDigestResolver
+    type?: TypeResolver
+    owner?: OwnerResolver
+  }
+
+  export type ContentDigestResolver = Resolver<string | null>
+  export type TypeResolver = Resolver<string | null>
+  export type OwnerResolver = Resolver<string | null>
+}
+
 export interface sitePageConnectionSort {
   fields: (SitePageConnectionSortByFieldsEnum | null)[]
   order?: sitePageConnectionSortOrderValues | null
 }
 /** Filter connection on its fields */
 export interface filterSitePage {
-  layout?: sitePageConnectionLayoutQueryString | null
   jsonName?: sitePageConnectionJsonNameQueryString | null
   internalComponentName?: sitePageConnectionInternalComponentNameQueryString | null
   path?: sitePageConnectionPathQueryString_2 | null
@@ -455,18 +1838,12 @@ export interface filterSitePage {
   internal?: sitePageConnectionInternalInputObject_2 | null
 }
 
-export interface sitePageConnectionLayoutQueryString {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
-}
-
 export interface sitePageConnectionJsonNameQueryString {
   eq?: string | null
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageConnectionInternalComponentNameQueryString {
@@ -474,6 +1851,7 @@ export interface sitePageConnectionInternalComponentNameQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageConnectionPathQueryString_2 {
@@ -481,6 +1859,7 @@ export interface sitePageConnectionPathQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageConnectionComponentQueryString {
@@ -488,6 +1867,7 @@ export interface sitePageConnectionComponentQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageConnectionComponentChunkNameQueryString {
@@ -495,6 +1875,7 @@ export interface sitePageConnectionComponentChunkNameQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageConnectionContextInputObject {
@@ -506,6 +1887,7 @@ export interface sitePageConnectionContextSlugQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageConnectionPluginCreatorInputObject {
@@ -527,6 +1909,7 @@ export interface sitePageConnectionPluginCreatorResolveQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageConnectionPluginCreatorIdQueryString {
@@ -534,6 +1917,7 @@ export interface sitePageConnectionPluginCreatorIdQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageConnectionPluginCreatorNameQueryString {
@@ -541,6 +1925,7 @@ export interface sitePageConnectionPluginCreatorNameQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageConnectionPluginCreatorVersionQueryString {
@@ -548,6 +1933,7 @@ export interface sitePageConnectionPluginCreatorVersionQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageConnectionPluginCreatorPluginOptionsInputObject {
@@ -563,6 +1949,7 @@ export interface sitePageConnectionPluginCreatorPluginOptionsPathQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageConnectionPluginCreatorPluginOptionsNameQueryString {
@@ -570,6 +1957,7 @@ export interface sitePageConnectionPluginCreatorPluginOptionsNameQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageConnectionPluginCreatorPluginOptionsIdQueryString {
@@ -577,16 +1965,19 @@ export interface sitePageConnectionPluginCreatorPluginOptionsIdQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageConnectionPluginCreatorPluginOptionsIncludeInDevelopmentQueryBoolean {
   eq?: boolean | null
   ne?: boolean | null
+  in?: (boolean | null)[] | null
 }
 
 export interface sitePageConnectionPluginCreatorPluginOptionsPathCheckQueryBoolean {
   eq?: boolean | null
   ne?: boolean | null
+  in?: (boolean | null)[] | null
 }
 
 export interface sitePageConnectionPluginCreatorNodeApIsQueryList {
@@ -610,6 +2001,7 @@ export interface sitePageConnectionPluginCreatorPluginFilepathQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageConnectionPluginCreatorPackageJsonInputObject {
@@ -630,6 +2022,7 @@ export interface sitePageConnectionPluginCreatorPackageJsonNameQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageConnectionPluginCreatorPackageJsonDescriptionQueryString {
@@ -637,6 +2030,7 @@ export interface sitePageConnectionPluginCreatorPackageJsonDescriptionQueryStrin
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageConnectionPluginCreatorPackageJsonVersionQueryString {
@@ -644,6 +2038,7 @@ export interface sitePageConnectionPluginCreatorPackageJsonVersionQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageConnectionPluginCreatorPackageJsonMainQueryString {
@@ -651,6 +2046,7 @@ export interface sitePageConnectionPluginCreatorPackageJsonMainQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageConnectionPluginCreatorPackageJsonAuthorQueryString {
@@ -658,6 +2054,7 @@ export interface sitePageConnectionPluginCreatorPackageJsonAuthorQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageConnectionPluginCreatorPackageJsonLicenseQueryString {
@@ -665,12 +2062,11 @@ export interface sitePageConnectionPluginCreatorPackageJsonLicenseQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageConnectionPluginCreatorPackageJsonDependenciesQueryList {
-  in?:
-    | (sitePageConnectionPluginCreatorPackageJsonDependenciesInputObject | null)[]
-    | null
+  elemMatch?: sitePageConnectionPluginCreatorPackageJsonDependenciesInputObject | null
 }
 
 export interface sitePageConnectionPluginCreatorPackageJsonDependenciesInputObject {
@@ -683,6 +2079,7 @@ export interface sitePageConnectionPluginCreatorPackageJsonDependenciesNameQuery
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageConnectionPluginCreatorPackageJsonDependenciesVersionQueryString {
@@ -690,12 +2087,11 @@ export interface sitePageConnectionPluginCreatorPackageJsonDependenciesVersionQu
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageConnectionPluginCreatorPackageJsonDevDependenciesQueryList {
-  in?:
-    | (sitePageConnectionPluginCreatorPackageJsonDevDependenciesInputObject | null)[]
-    | null
+  elemMatch?: sitePageConnectionPluginCreatorPackageJsonDevDependenciesInputObject | null
 }
 
 export interface sitePageConnectionPluginCreatorPackageJsonDevDependenciesInputObject {
@@ -708,6 +2104,7 @@ export interface sitePageConnectionPluginCreatorPackageJsonDevDependenciesNameQu
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageConnectionPluginCreatorPackageJsonDevDependenciesVersionQueryString {
@@ -715,12 +2112,11 @@ export interface sitePageConnectionPluginCreatorPackageJsonDevDependenciesVersio
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageConnectionPluginCreatorPackageJsonPeerDependenciesQueryList {
-  in?:
-    | (sitePageConnectionPluginCreatorPackageJsonPeerDependenciesInputObject | null)[]
-    | null
+  elemMatch?: sitePageConnectionPluginCreatorPackageJsonPeerDependenciesInputObject | null
 }
 
 export interface sitePageConnectionPluginCreatorPackageJsonPeerDependenciesInputObject {
@@ -733,6 +2129,7 @@ export interface sitePageConnectionPluginCreatorPackageJsonPeerDependenciesNameQ
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageConnectionPluginCreatorPackageJsonPeerDependenciesVersionQueryString {
@@ -740,6 +2137,7 @@ export interface sitePageConnectionPluginCreatorPackageJsonPeerDependenciesVersi
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageConnectionPluginCreatorPackageJsonKeywordsQueryList {
@@ -755,6 +2153,7 @@ export interface sitePageConnectionPluginCreatorParentQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageConnectionPluginCreatorInternalInputObject {
@@ -768,6 +2167,7 @@ export interface sitePageConnectionPluginCreatorInternalContentDigestQueryString
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageConnectionPluginCreatorInternalTypeQueryString {
@@ -775,6 +2175,7 @@ export interface sitePageConnectionPluginCreatorInternalTypeQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageConnectionPluginCreatorInternalOwnerQueryString {
@@ -782,6 +2183,7 @@ export interface sitePageConnectionPluginCreatorInternalOwnerQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageConnectionPluginCreatorIdQueryString_2 {
@@ -789,6 +2191,7 @@ export interface sitePageConnectionPluginCreatorIdQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageConnectionComponentPathQueryString {
@@ -796,6 +2199,7 @@ export interface sitePageConnectionComponentPathQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageConnectionIdQueryString_2 {
@@ -803,6 +2207,7 @@ export interface sitePageConnectionIdQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageConnectionInternalInputObject_2 {
@@ -817,6 +2222,7 @@ export interface sitePageConnectionInternalTypeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageConnectionInternalContentDigestQueryString_2 {
@@ -824,6 +2230,7 @@ export interface sitePageConnectionInternalContentDigestQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageConnectionInternalDescriptionQueryString {
@@ -831,6 +2238,7 @@ export interface sitePageConnectionInternalDescriptionQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageConnectionInternalOwnerQueryString_2 {
@@ -838,6 +2246,7 @@ export interface sitePageConnectionInternalOwnerQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginConnectionSort {
@@ -863,6 +2272,7 @@ export interface sitePluginConnectionResolveQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginConnectionIdQueryString_2 {
@@ -870,6 +2280,7 @@ export interface sitePluginConnectionIdQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginConnectionNameQueryString_2 {
@@ -877,6 +2288,7 @@ export interface sitePluginConnectionNameQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginConnectionVersionQueryString_2 {
@@ -884,6 +2296,7 @@ export interface sitePluginConnectionVersionQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginConnectionPluginOptionsInputObject_2 {
@@ -899,6 +2312,7 @@ export interface sitePluginConnectionPluginOptionsPathQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginConnectionPluginOptionsNameQueryString_2 {
@@ -906,6 +2320,7 @@ export interface sitePluginConnectionPluginOptionsNameQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginConnectionPluginOptionsIdQueryString_2 {
@@ -913,16 +2328,19 @@ export interface sitePluginConnectionPluginOptionsIdQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginConnectionPluginOptionsIncludeInDevelopmentQueryBoolean_2 {
   eq?: boolean | null
   ne?: boolean | null
+  in?: (boolean | null)[] | null
 }
 
 export interface sitePluginConnectionPluginOptionsPathCheckQueryBoolean_2 {
   eq?: boolean | null
   ne?: boolean | null
+  in?: (boolean | null)[] | null
 }
 
 export interface sitePluginConnectionNodeApIsQueryList_2 {
@@ -946,6 +2364,7 @@ export interface sitePluginConnectionPluginFilepathQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginConnectionPackageJsonInputObject_2 {
@@ -966,6 +2385,7 @@ export interface sitePluginConnectionPackageJsonNameQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginConnectionPackageJsonDescriptionQueryString_2 {
@@ -973,6 +2393,7 @@ export interface sitePluginConnectionPackageJsonDescriptionQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginConnectionPackageJsonVersionQueryString_2 {
@@ -980,6 +2401,7 @@ export interface sitePluginConnectionPackageJsonVersionQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginConnectionPackageJsonMainQueryString_2 {
@@ -987,6 +2409,7 @@ export interface sitePluginConnectionPackageJsonMainQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginConnectionPackageJsonAuthorQueryString_2 {
@@ -994,6 +2417,7 @@ export interface sitePluginConnectionPackageJsonAuthorQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginConnectionPackageJsonLicenseQueryString_2 {
@@ -1001,12 +2425,11 @@ export interface sitePluginConnectionPackageJsonLicenseQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginConnectionPackageJsonDependenciesQueryList_2 {
-  in?:
-    | (sitePluginConnectionPackageJsonDependenciesInputObject_2 | null)[]
-    | null
+  elemMatch?: sitePluginConnectionPackageJsonDependenciesInputObject_2 | null
 }
 
 export interface sitePluginConnectionPackageJsonDependenciesInputObject_2 {
@@ -1019,6 +2442,7 @@ export interface sitePluginConnectionPackageJsonDependenciesNameQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginConnectionPackageJsonDependenciesVersionQueryString_2 {
@@ -1026,12 +2450,11 @@ export interface sitePluginConnectionPackageJsonDependenciesVersionQueryString_2
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginConnectionPackageJsonDevDependenciesQueryList_2 {
-  in?:
-    | (sitePluginConnectionPackageJsonDevDependenciesInputObject_2 | null)[]
-    | null
+  elemMatch?: sitePluginConnectionPackageJsonDevDependenciesInputObject_2 | null
 }
 
 export interface sitePluginConnectionPackageJsonDevDependenciesInputObject_2 {
@@ -1044,6 +2467,7 @@ export interface sitePluginConnectionPackageJsonDevDependenciesNameQueryString_2
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginConnectionPackageJsonDevDependenciesVersionQueryString_2 {
@@ -1051,12 +2475,11 @@ export interface sitePluginConnectionPackageJsonDevDependenciesVersionQueryStrin
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginConnectionPackageJsonPeerDependenciesQueryList_2 {
-  in?:
-    | (sitePluginConnectionPackageJsonPeerDependenciesInputObject_2 | null)[]
-    | null
+  elemMatch?: sitePluginConnectionPackageJsonPeerDependenciesInputObject_2 | null
 }
 
 export interface sitePluginConnectionPackageJsonPeerDependenciesInputObject_2 {
@@ -1069,6 +2492,7 @@ export interface sitePluginConnectionPackageJsonPeerDependenciesNameQueryString_
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginConnectionPackageJsonPeerDependenciesVersionQueryString_2 {
@@ -1076,6 +2500,7 @@ export interface sitePluginConnectionPackageJsonPeerDependenciesVersionQueryStri
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginConnectionPackageJsonKeywordsQueryList_2 {
@@ -1097,6 +2522,7 @@ export interface sitePluginConnectionInternalContentDigestQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginConnectionInternalTypeQueryString_2 {
@@ -1104,6 +2530,7 @@ export interface sitePluginConnectionInternalTypeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginConnectionInternalOwnerQueryString_2 {
@@ -1111,6 +2538,7 @@ export interface sitePluginConnectionInternalOwnerQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryConnectionSort {
@@ -1161,6 +2589,7 @@ export interface directoryConnectionIdQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryConnectionInternalInputObject_2 {
@@ -1175,6 +2604,7 @@ export interface directoryConnectionInternalContentDigestQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryConnectionInternalTypeQueryString_2 {
@@ -1182,6 +2612,7 @@ export interface directoryConnectionInternalTypeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryConnectionInternalDescriptionQueryString_2 {
@@ -1189,6 +2620,7 @@ export interface directoryConnectionInternalDescriptionQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryConnectionInternalOwnerQueryString_2 {
@@ -1196,6 +2628,7 @@ export interface directoryConnectionInternalOwnerQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryConnectionSourceInstanceNameQueryString_2 {
@@ -1203,6 +2636,7 @@ export interface directoryConnectionSourceInstanceNameQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryConnectionAbsolutePathQueryString_2 {
@@ -1210,6 +2644,7 @@ export interface directoryConnectionAbsolutePathQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryConnectionRelativePathQueryString_2 {
@@ -1217,6 +2652,7 @@ export interface directoryConnectionRelativePathQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryConnectionExtensionQueryString_2 {
@@ -1224,6 +2660,7 @@ export interface directoryConnectionExtensionQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryConnectionSizeQueryInteger_2 {
@@ -1233,6 +2670,7 @@ export interface directoryConnectionSizeQueryInteger_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface directoryConnectionPrettySizeQueryString_2 {
@@ -1240,6 +2678,7 @@ export interface directoryConnectionPrettySizeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryConnectionModifiedTimeQueryString_2 {
@@ -1247,6 +2686,7 @@ export interface directoryConnectionModifiedTimeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryConnectionAccessTimeQueryString_2 {
@@ -1254,6 +2694,7 @@ export interface directoryConnectionAccessTimeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryConnectionChangeTimeQueryString_2 {
@@ -1261,6 +2702,7 @@ export interface directoryConnectionChangeTimeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryConnectionBirthTimeQueryString_2 {
@@ -1268,6 +2710,7 @@ export interface directoryConnectionBirthTimeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryConnectionRootQueryString_2 {
@@ -1275,6 +2718,7 @@ export interface directoryConnectionRootQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryConnectionDirQueryString_2 {
@@ -1282,6 +2726,7 @@ export interface directoryConnectionDirQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryConnectionBaseQueryString_2 {
@@ -1289,6 +2734,7 @@ export interface directoryConnectionBaseQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryConnectionExtQueryString_2 {
@@ -1296,6 +2742,7 @@ export interface directoryConnectionExtQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryConnectionNameQueryString_2 {
@@ -1303,6 +2750,7 @@ export interface directoryConnectionNameQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryConnectionRelativeDirectoryQueryString_2 {
@@ -1310,6 +2758,7 @@ export interface directoryConnectionRelativeDirectoryQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryConnectionDevQueryInteger_2 {
@@ -1319,6 +2768,7 @@ export interface directoryConnectionDevQueryInteger_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface directoryConnectionModeQueryInteger_2 {
@@ -1328,6 +2778,7 @@ export interface directoryConnectionModeQueryInteger_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface directoryConnectionNlinkQueryInteger_2 {
@@ -1337,6 +2788,7 @@ export interface directoryConnectionNlinkQueryInteger_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface directoryConnectionUidQueryInteger_2 {
@@ -1346,6 +2798,7 @@ export interface directoryConnectionUidQueryInteger_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface directoryConnectionGidQueryInteger_2 {
@@ -1355,6 +2808,7 @@ export interface directoryConnectionGidQueryInteger_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface directoryConnectionRdevQueryInteger_2 {
@@ -1364,6 +2818,7 @@ export interface directoryConnectionRdevQueryInteger_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface directoryConnectionBlksizeQueryInteger_2 {
@@ -1373,6 +2828,7 @@ export interface directoryConnectionBlksizeQueryInteger_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface directoryConnectionInoQueryInteger_2 {
@@ -1382,6 +2838,7 @@ export interface directoryConnectionInoQueryInteger_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface directoryConnectionBlocksQueryInteger_2 {
@@ -1391,6 +2848,7 @@ export interface directoryConnectionBlocksQueryInteger_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface directoryConnectionAtimeMsQueryFloat_2 {
@@ -1400,6 +2858,7 @@ export interface directoryConnectionAtimeMsQueryFloat_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface directoryConnectionMtimeMsQueryFloat_2 {
@@ -1409,6 +2868,7 @@ export interface directoryConnectionMtimeMsQueryFloat_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface directoryConnectionCtimeMsQueryFloat_2 {
@@ -1418,6 +2878,7 @@ export interface directoryConnectionCtimeMsQueryFloat_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface directoryConnectionBirthtimeMsQueryFloat_2 {
@@ -1427,6 +2888,7 @@ export interface directoryConnectionBirthtimeMsQueryFloat_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface directoryConnectionAtimeQueryString_2 {
@@ -1434,6 +2896,7 @@ export interface directoryConnectionAtimeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryConnectionMtimeQueryString_2 {
@@ -1441,6 +2904,7 @@ export interface directoryConnectionMtimeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryConnectionCtimeQueryString_2 {
@@ -1448,6 +2912,7 @@ export interface directoryConnectionCtimeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryConnectionBirthtimeQueryString_2 {
@@ -1455,6 +2920,7 @@ export interface directoryConnectionBirthtimeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileConnectionSort {
@@ -1506,12 +2972,13 @@ export interface fileConnectionIdQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileConnectionInternalInputObject_2 {
   contentDigest?: fileConnectionInternalContentDigestQueryString_2 | null
-  mediaType?: fileConnectionInternalMediaTypeQueryString_2 | null
   type?: fileConnectionInternalTypeQueryString_2 | null
+  mediaType?: fileConnectionInternalMediaTypeQueryString_2 | null
   description?: fileConnectionInternalDescriptionQueryString_2 | null
   owner?: fileConnectionInternalOwnerQueryString_2 | null
 }
@@ -1521,13 +2988,7 @@ export interface fileConnectionInternalContentDigestQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
-}
-
-export interface fileConnectionInternalMediaTypeQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileConnectionInternalTypeQueryString_2 {
@@ -1535,6 +2996,15 @@ export interface fileConnectionInternalTypeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
+}
+
+export interface fileConnectionInternalMediaTypeQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileConnectionInternalDescriptionQueryString_2 {
@@ -1542,6 +3012,7 @@ export interface fileConnectionInternalDescriptionQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileConnectionInternalOwnerQueryString_2 {
@@ -1549,6 +3020,7 @@ export interface fileConnectionInternalOwnerQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileConnectionSourceInstanceNameQueryString_2 {
@@ -1556,6 +3028,7 @@ export interface fileConnectionSourceInstanceNameQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileConnectionAbsolutePathQueryString_2 {
@@ -1563,6 +3036,7 @@ export interface fileConnectionAbsolutePathQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileConnectionRelativePathQueryString_2 {
@@ -1570,6 +3044,7 @@ export interface fileConnectionRelativePathQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileConnectionExtensionQueryString_2 {
@@ -1577,6 +3052,7 @@ export interface fileConnectionExtensionQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileConnectionSizeQueryInteger_2 {
@@ -1586,6 +3062,7 @@ export interface fileConnectionSizeQueryInteger_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface fileConnectionPrettySizeQueryString_2 {
@@ -1593,6 +3070,7 @@ export interface fileConnectionPrettySizeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileConnectionModifiedTimeQueryString_2 {
@@ -1600,6 +3078,7 @@ export interface fileConnectionModifiedTimeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileConnectionAccessTimeQueryString_2 {
@@ -1607,6 +3086,7 @@ export interface fileConnectionAccessTimeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileConnectionChangeTimeQueryString_2 {
@@ -1614,6 +3094,7 @@ export interface fileConnectionChangeTimeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileConnectionBirthTimeQueryString_2 {
@@ -1621,6 +3102,7 @@ export interface fileConnectionBirthTimeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileConnectionRootQueryString_2 {
@@ -1628,6 +3110,7 @@ export interface fileConnectionRootQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileConnectionDirQueryString_2 {
@@ -1635,6 +3118,7 @@ export interface fileConnectionDirQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileConnectionBaseQueryString_2 {
@@ -1642,6 +3126,7 @@ export interface fileConnectionBaseQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileConnectionExtQueryString_2 {
@@ -1649,6 +3134,7 @@ export interface fileConnectionExtQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileConnectionNameQueryString_2 {
@@ -1656,6 +3142,7 @@ export interface fileConnectionNameQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileConnectionRelativeDirectoryQueryString_2 {
@@ -1663,6 +3150,7 @@ export interface fileConnectionRelativeDirectoryQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileConnectionDevQueryInteger_2 {
@@ -1672,6 +3160,7 @@ export interface fileConnectionDevQueryInteger_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface fileConnectionModeQueryInteger_2 {
@@ -1681,6 +3170,7 @@ export interface fileConnectionModeQueryInteger_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface fileConnectionNlinkQueryInteger_2 {
@@ -1690,6 +3180,7 @@ export interface fileConnectionNlinkQueryInteger_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface fileConnectionUidQueryInteger_2 {
@@ -1699,6 +3190,7 @@ export interface fileConnectionUidQueryInteger_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface fileConnectionGidQueryInteger_2 {
@@ -1708,6 +3200,7 @@ export interface fileConnectionGidQueryInteger_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface fileConnectionRdevQueryInteger_2 {
@@ -1717,6 +3210,7 @@ export interface fileConnectionRdevQueryInteger_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface fileConnectionBlksizeQueryInteger_2 {
@@ -1726,6 +3220,7 @@ export interface fileConnectionBlksizeQueryInteger_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface fileConnectionInoQueryInteger_2 {
@@ -1735,6 +3230,7 @@ export interface fileConnectionInoQueryInteger_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface fileConnectionBlocksQueryInteger_2 {
@@ -1744,6 +3240,7 @@ export interface fileConnectionBlocksQueryInteger_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface fileConnectionAtimeMsQueryFloat_2 {
@@ -1753,6 +3250,7 @@ export interface fileConnectionAtimeMsQueryFloat_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface fileConnectionMtimeMsQueryFloat_2 {
@@ -1762,6 +3260,7 @@ export interface fileConnectionMtimeMsQueryFloat_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface fileConnectionCtimeMsQueryFloat_2 {
@@ -1771,6 +3270,7 @@ export interface fileConnectionCtimeMsQueryFloat_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface fileConnectionBirthtimeMsQueryFloat_2 {
@@ -1780,6 +3280,7 @@ export interface fileConnectionBirthtimeMsQueryFloat_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface fileConnectionAtimeQueryString_2 {
@@ -1787,6 +3288,7 @@ export interface fileConnectionAtimeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileConnectionMtimeQueryString_2 {
@@ -1794,6 +3296,7 @@ export interface fileConnectionMtimeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileConnectionCtimeQueryString_2 {
@@ -1801,6 +3304,7 @@ export interface fileConnectionCtimeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileConnectionBirthtimeQueryString_2 {
@@ -1808,6 +3312,7 @@ export interface fileConnectionBirthtimeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface publicUrlQueryString_4 {
@@ -1815,6 +3320,7 @@ export interface publicUrlQueryString_4 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface markdownRemarkConnectionSort {
@@ -1842,6 +3348,7 @@ export interface markdownRemarkConnectionIdQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface markdownRemarkConnectionInternalInputObject_2 {
@@ -1857,6 +3364,7 @@ export interface markdownRemarkConnectionInternalContentQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface markdownRemarkConnectionInternalTypeQueryString_2 {
@@ -1864,6 +3372,7 @@ export interface markdownRemarkConnectionInternalTypeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface markdownRemarkConnectionInternalContentDigestQueryString_2 {
@@ -1871,6 +3380,7 @@ export interface markdownRemarkConnectionInternalContentDigestQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface markdownRemarkConnectionInternalOwnerQueryString_2 {
@@ -1878,11 +3388,11 @@ export interface markdownRemarkConnectionInternalOwnerQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface markdownRemarkConnectionInternalFieldOwnersInputObject_2 {
   slug?: markdownRemarkConnectionInternalFieldOwnersSlugQueryString_2 | null
-  layout?: markdownRemarkConnectionInternalFieldOwnersLayoutQueryString_2 | null
 }
 
 export interface markdownRemarkConnectionInternalFieldOwnersSlugQueryString_2 {
@@ -1890,19 +3400,12 @@ export interface markdownRemarkConnectionInternalFieldOwnersSlugQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
-}
-
-export interface markdownRemarkConnectionInternalFieldOwnersLayoutQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface markdownRemarkConnectionFrontmatterInputObject_2 {
   title?: markdownRemarkConnectionFrontmatterTitleQueryString_2 | null
-  _PARENT?: markdownRemarkConnectionFrontmatterParentQueryString_3 | null
-  parent?: markdownRemarkConnectionFrontmatterParentQueryString_4 | null
+  _PARENT?: markdownRemarkConnectionFrontmatterParentQueryString_2 | null
 }
 
 export interface markdownRemarkConnectionFrontmatterTitleQueryString_2 {
@@ -1910,20 +3413,15 @@ export interface markdownRemarkConnectionFrontmatterTitleQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
-export interface markdownRemarkConnectionFrontmatterParentQueryString_3 {
+export interface markdownRemarkConnectionFrontmatterParentQueryString_2 {
   eq?: string | null
   ne?: string | null
   regex?: string | null
   glob?: string | null
-}
-
-export interface markdownRemarkConnectionFrontmatterParentQueryString_4 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface excerptQueryString_4 {
@@ -1931,6 +3429,7 @@ export interface excerptQueryString_4 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface markdownRemarkConnectionRawMarkdownBodyQueryString_2 {
@@ -1938,6 +3437,7 @@ export interface markdownRemarkConnectionRawMarkdownBodyQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface markdownRemarkConnectionFileAbsolutePathQueryString_2 {
@@ -1945,11 +3445,11 @@ export interface markdownRemarkConnectionFileAbsolutePathQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface markdownRemarkConnectionFieldsInputObject_2 {
   slug?: markdownRemarkConnectionFieldsSlugQueryString_2 | null
-  layout?: markdownRemarkConnectionFieldsLayoutQueryString_2 | null
 }
 
 export interface markdownRemarkConnectionFieldsSlugQueryString_2 {
@@ -1957,13 +3457,7 @@ export interface markdownRemarkConnectionFieldsSlugQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
-}
-
-export interface markdownRemarkConnectionFieldsLayoutQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface htmlQueryString_4 {
@@ -1971,12 +3465,16 @@ export interface htmlQueryString_4 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface headingsQueryList_4 {
+  elemMatch?: headingsListElemTypeName_4 | null
+}
+
+export interface headingsListElemTypeName_4 {
   value?: headingsListElemValueQueryString_4 | null
   depth?: headingsListElemDepthQueryInt_4 | null
-  in?: (markdownHeadingInputObject_4 | null)[] | null
 }
 
 export interface headingsListElemValueQueryString_4 {
@@ -1984,6 +3482,7 @@ export interface headingsListElemValueQueryString_4 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface headingsListElemDepthQueryInt_4 {
@@ -1993,11 +3492,7 @@ export interface headingsListElemDepthQueryInt_4 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
-}
-
-export interface markdownHeadingInputObject_4 {
-  value?: string | null
-  depth?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface timeToReadQueryInt_4 {
@@ -2007,6 +3502,7 @@ export interface timeToReadQueryInt_4 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface tableOfContentsQueryString_4 {
@@ -2014,6 +3510,7 @@ export interface tableOfContentsQueryString_4 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface wordCountTypeName_4 {
@@ -2029,6 +3526,7 @@ export interface wordCountParagraphsQueryInt_4 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface wordCountSentencesQueryInt_4 {
@@ -2038,6 +3536,7 @@ export interface wordCountSentencesQueryInt_4 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface wordCountWordsQueryInt_4 {
@@ -2047,13 +3546,7 @@ export interface wordCountWordsQueryInt_4 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
-}
-
-export interface sitePageLayoutQueryString {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
+  in?: (number | null)[] | null
 }
 
 export interface sitePageJsonNameQueryString {
@@ -2061,6 +3554,7 @@ export interface sitePageJsonNameQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageInternalComponentNameQueryString {
@@ -2068,6 +3562,7 @@ export interface sitePageInternalComponentNameQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePagePathQueryString_2 {
@@ -2075,6 +3570,7 @@ export interface sitePagePathQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageComponentQueryString {
@@ -2082,6 +3578,7 @@ export interface sitePageComponentQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageComponentChunkNameQueryString {
@@ -2089,6 +3586,7 @@ export interface sitePageComponentChunkNameQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageContextInputObject {
@@ -2100,6 +3598,7 @@ export interface sitePageContextSlugQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePagePluginCreatorInputObject {
@@ -2121,6 +3620,7 @@ export interface sitePagePluginCreatorResolveQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePagePluginCreatorIdQueryString {
@@ -2128,6 +3628,7 @@ export interface sitePagePluginCreatorIdQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePagePluginCreatorNameQueryString {
@@ -2135,6 +3636,7 @@ export interface sitePagePluginCreatorNameQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePagePluginCreatorVersionQueryString {
@@ -2142,6 +3644,7 @@ export interface sitePagePluginCreatorVersionQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePagePluginCreatorPluginOptionsInputObject {
@@ -2157,6 +3660,7 @@ export interface sitePagePluginCreatorPluginOptionsPathQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePagePluginCreatorPluginOptionsNameQueryString {
@@ -2164,6 +3668,7 @@ export interface sitePagePluginCreatorPluginOptionsNameQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePagePluginCreatorPluginOptionsIdQueryString {
@@ -2171,16 +3676,19 @@ export interface sitePagePluginCreatorPluginOptionsIdQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePagePluginCreatorPluginOptionsIncludeInDevelopmentQueryBoolean {
   eq?: boolean | null
   ne?: boolean | null
+  in?: (boolean | null)[] | null
 }
 
 export interface sitePagePluginCreatorPluginOptionsPathCheckQueryBoolean {
   eq?: boolean | null
   ne?: boolean | null
+  in?: (boolean | null)[] | null
 }
 
 export interface sitePagePluginCreatorNodeApIsQueryList {
@@ -2204,6 +3712,7 @@ export interface sitePagePluginCreatorPluginFilepathQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePagePluginCreatorPackageJsonInputObject {
@@ -2224,6 +3733,7 @@ export interface sitePagePluginCreatorPackageJsonNameQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePagePluginCreatorPackageJsonDescriptionQueryString {
@@ -2231,6 +3741,7 @@ export interface sitePagePluginCreatorPackageJsonDescriptionQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePagePluginCreatorPackageJsonVersionQueryString {
@@ -2238,6 +3749,7 @@ export interface sitePagePluginCreatorPackageJsonVersionQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePagePluginCreatorPackageJsonMainQueryString {
@@ -2245,6 +3757,7 @@ export interface sitePagePluginCreatorPackageJsonMainQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePagePluginCreatorPackageJsonAuthorQueryString {
@@ -2252,6 +3765,7 @@ export interface sitePagePluginCreatorPackageJsonAuthorQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePagePluginCreatorPackageJsonLicenseQueryString {
@@ -2259,10 +3773,11 @@ export interface sitePagePluginCreatorPackageJsonLicenseQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePagePluginCreatorPackageJsonDependenciesQueryList {
-  in?: (sitePagePluginCreatorPackageJsonDependenciesInputObject | null)[] | null
+  elemMatch?: sitePagePluginCreatorPackageJsonDependenciesInputObject | null
 }
 
 export interface sitePagePluginCreatorPackageJsonDependenciesInputObject {
@@ -2275,6 +3790,7 @@ export interface sitePagePluginCreatorPackageJsonDependenciesNameQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePagePluginCreatorPackageJsonDependenciesVersionQueryString {
@@ -2282,12 +3798,11 @@ export interface sitePagePluginCreatorPackageJsonDependenciesVersionQueryString 
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePagePluginCreatorPackageJsonDevDependenciesQueryList {
-  in?:
-    | (sitePagePluginCreatorPackageJsonDevDependenciesInputObject | null)[]
-    | null
+  elemMatch?: sitePagePluginCreatorPackageJsonDevDependenciesInputObject | null
 }
 
 export interface sitePagePluginCreatorPackageJsonDevDependenciesInputObject {
@@ -2300,6 +3815,7 @@ export interface sitePagePluginCreatorPackageJsonDevDependenciesNameQueryString 
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePagePluginCreatorPackageJsonDevDependenciesVersionQueryString {
@@ -2307,12 +3823,11 @@ export interface sitePagePluginCreatorPackageJsonDevDependenciesVersionQueryStri
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePagePluginCreatorPackageJsonPeerDependenciesQueryList {
-  in?:
-    | (sitePagePluginCreatorPackageJsonPeerDependenciesInputObject | null)[]
-    | null
+  elemMatch?: sitePagePluginCreatorPackageJsonPeerDependenciesInputObject | null
 }
 
 export interface sitePagePluginCreatorPackageJsonPeerDependenciesInputObject {
@@ -2325,6 +3840,7 @@ export interface sitePagePluginCreatorPackageJsonPeerDependenciesNameQueryString
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePagePluginCreatorPackageJsonPeerDependenciesVersionQueryString {
@@ -2332,6 +3848,7 @@ export interface sitePagePluginCreatorPackageJsonPeerDependenciesVersionQueryStr
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePagePluginCreatorPackageJsonKeywordsQueryList {
@@ -2347,6 +3864,7 @@ export interface sitePagePluginCreatorParentQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePagePluginCreatorInternalInputObject {
@@ -2360,6 +3878,7 @@ export interface sitePagePluginCreatorInternalContentDigestQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePagePluginCreatorInternalTypeQueryString {
@@ -2367,6 +3886,7 @@ export interface sitePagePluginCreatorInternalTypeQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePagePluginCreatorInternalOwnerQueryString {
@@ -2374,6 +3894,7 @@ export interface sitePagePluginCreatorInternalOwnerQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePagePluginCreatorIdQueryString_2 {
@@ -2381,6 +3902,7 @@ export interface sitePagePluginCreatorIdQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageComponentPathQueryString {
@@ -2388,6 +3910,7 @@ export interface sitePageComponentPathQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageIdQueryString_2 {
@@ -2395,6 +3918,7 @@ export interface sitePageIdQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageInternalInputObject_2 {
@@ -2409,6 +3933,7 @@ export interface sitePageInternalTypeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageInternalContentDigestQueryString_2 {
@@ -2416,6 +3941,7 @@ export interface sitePageInternalContentDigestQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageInternalDescriptionQueryString {
@@ -2423,6 +3949,7 @@ export interface sitePageInternalDescriptionQueryString {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePageInternalOwnerQueryString_2 {
@@ -2430,6 +3957,7 @@ export interface sitePageInternalOwnerQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginResolveQueryString_2 {
@@ -2437,6 +3965,7 @@ export interface sitePluginResolveQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginIdQueryString_2 {
@@ -2444,6 +3973,7 @@ export interface sitePluginIdQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginNameQueryString_2 {
@@ -2451,6 +3981,7 @@ export interface sitePluginNameQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginVersionQueryString_2 {
@@ -2458,6 +3989,7 @@ export interface sitePluginVersionQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginPluginOptionsInputObject_2 {
@@ -2473,6 +4005,7 @@ export interface sitePluginPluginOptionsPathQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginPluginOptionsNameQueryString_2 {
@@ -2480,6 +4013,7 @@ export interface sitePluginPluginOptionsNameQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginPluginOptionsIdQueryString_2 {
@@ -2487,16 +4021,19 @@ export interface sitePluginPluginOptionsIdQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginPluginOptionsIncludeInDevelopmentQueryBoolean_2 {
   eq?: boolean | null
   ne?: boolean | null
+  in?: (boolean | null)[] | null
 }
 
 export interface sitePluginPluginOptionsPathCheckQueryBoolean_2 {
   eq?: boolean | null
   ne?: boolean | null
+  in?: (boolean | null)[] | null
 }
 
 export interface sitePluginNodeApIsQueryList_2 {
@@ -2520,6 +4057,7 @@ export interface sitePluginPluginFilepathQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginPackageJsonInputObject_2 {
@@ -2540,6 +4078,7 @@ export interface sitePluginPackageJsonNameQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginPackageJsonDescriptionQueryString_2 {
@@ -2547,6 +4086,7 @@ export interface sitePluginPackageJsonDescriptionQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginPackageJsonVersionQueryString_2 {
@@ -2554,6 +4094,7 @@ export interface sitePluginPackageJsonVersionQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginPackageJsonMainQueryString_2 {
@@ -2561,6 +4102,7 @@ export interface sitePluginPackageJsonMainQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginPackageJsonAuthorQueryString_2 {
@@ -2568,6 +4110,7 @@ export interface sitePluginPackageJsonAuthorQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginPackageJsonLicenseQueryString_2 {
@@ -2575,10 +4118,11 @@ export interface sitePluginPackageJsonLicenseQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginPackageJsonDependenciesQueryList_2 {
-  in?: (sitePluginPackageJsonDependenciesInputObject_2 | null)[] | null
+  elemMatch?: sitePluginPackageJsonDependenciesInputObject_2 | null
 }
 
 export interface sitePluginPackageJsonDependenciesInputObject_2 {
@@ -2591,6 +4135,7 @@ export interface sitePluginPackageJsonDependenciesNameQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginPackageJsonDependenciesVersionQueryString_2 {
@@ -2598,10 +4143,11 @@ export interface sitePluginPackageJsonDependenciesVersionQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginPackageJsonDevDependenciesQueryList_2 {
-  in?: (sitePluginPackageJsonDevDependenciesInputObject_2 | null)[] | null
+  elemMatch?: sitePluginPackageJsonDevDependenciesInputObject_2 | null
 }
 
 export interface sitePluginPackageJsonDevDependenciesInputObject_2 {
@@ -2614,6 +4160,7 @@ export interface sitePluginPackageJsonDevDependenciesNameQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginPackageJsonDevDependenciesVersionQueryString_2 {
@@ -2621,10 +4168,11 @@ export interface sitePluginPackageJsonDevDependenciesVersionQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginPackageJsonPeerDependenciesQueryList_2 {
-  in?: (sitePluginPackageJsonPeerDependenciesInputObject_2 | null)[] | null
+  elemMatch?: sitePluginPackageJsonPeerDependenciesInputObject_2 | null
 }
 
 export interface sitePluginPackageJsonPeerDependenciesInputObject_2 {
@@ -2637,6 +4185,7 @@ export interface sitePluginPackageJsonPeerDependenciesNameQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginPackageJsonPeerDependenciesVersionQueryString_2 {
@@ -2644,6 +4193,7 @@ export interface sitePluginPackageJsonPeerDependenciesVersionQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginPackageJsonKeywordsQueryList_2 {
@@ -2665,6 +4215,7 @@ export interface sitePluginInternalContentDigestQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginInternalTypeQueryString_2 {
@@ -2672,6 +4223,7 @@ export interface sitePluginInternalTypeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePluginInternalOwnerQueryString_2 {
@@ -2679,11 +4231,30 @@ export interface sitePluginInternalOwnerQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface siteSiteMetadataInputObject_2 {
+  description?: siteSiteMetadataDescriptionQueryString_2 | null
+  keywords?: siteSiteMetadataKeywordsQueryString_2 | null
   siteUrl?: siteSiteMetadataSiteUrlQueryString_2 | null
   title?: siteSiteMetadataTitleQueryString_2 | null
+}
+
+export interface siteSiteMetadataDescriptionQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+}
+
+export interface siteSiteMetadataKeywordsQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface siteSiteMetadataSiteUrlQueryString_2 {
@@ -2691,6 +4262,7 @@ export interface siteSiteMetadataSiteUrlQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface siteSiteMetadataTitleQueryString_2 {
@@ -2698,6 +4270,7 @@ export interface siteSiteMetadataTitleQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePortQueryString_2 {
@@ -2705,6 +4278,7 @@ export interface sitePortQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface siteHostQueryString_2 {
@@ -2712,6 +4286,7 @@ export interface siteHostQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePathPrefixQueryString_2 {
@@ -2719,11 +4294,13 @@ export interface sitePathPrefixQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface sitePolyfillQueryBoolean_2 {
   eq?: boolean | null
   ne?: boolean | null
+  in?: (boolean | null)[] | null
 }
 
 export interface siteBuildTimeQueryString_2 {
@@ -2731,6 +4308,7 @@ export interface siteBuildTimeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface siteIdQueryString_2 {
@@ -2738,6 +4316,7 @@ export interface siteIdQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface siteInternalInputObject_2 {
@@ -2751,6 +4330,7 @@ export interface siteInternalContentDigestQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface siteInternalTypeQueryString_2 {
@@ -2758,6 +4338,7 @@ export interface siteInternalTypeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface siteInternalOwnerQueryString_2 {
@@ -2765,6 +4346,7 @@ export interface siteInternalOwnerQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryIdQueryString_2 {
@@ -2772,6 +4354,7 @@ export interface directoryIdQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryInternalInputObject_2 {
@@ -2786,6 +4369,7 @@ export interface directoryInternalContentDigestQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryInternalTypeQueryString_2 {
@@ -2793,6 +4377,7 @@ export interface directoryInternalTypeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryInternalDescriptionQueryString_2 {
@@ -2800,6 +4385,7 @@ export interface directoryInternalDescriptionQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryInternalOwnerQueryString_2 {
@@ -2807,6 +4393,7 @@ export interface directoryInternalOwnerQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directorySourceInstanceNameQueryString_2 {
@@ -2814,6 +4401,7 @@ export interface directorySourceInstanceNameQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryAbsolutePathQueryString_2 {
@@ -2821,6 +4409,7 @@ export interface directoryAbsolutePathQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryRelativePathQueryString_2 {
@@ -2828,6 +4417,7 @@ export interface directoryRelativePathQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryExtensionQueryString_2 {
@@ -2835,6 +4425,7 @@ export interface directoryExtensionQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directorySizeQueryInteger_2 {
@@ -2844,6 +4435,7 @@ export interface directorySizeQueryInteger_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface directoryPrettySizeQueryString_2 {
@@ -2851,6 +4443,7 @@ export interface directoryPrettySizeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryModifiedTimeQueryString_2 {
@@ -2858,6 +4451,7 @@ export interface directoryModifiedTimeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryAccessTimeQueryString_2 {
@@ -2865,6 +4459,7 @@ export interface directoryAccessTimeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryChangeTimeQueryString_2 {
@@ -2872,6 +4467,7 @@ export interface directoryChangeTimeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryBirthTimeQueryString_2 {
@@ -2879,6 +4475,7 @@ export interface directoryBirthTimeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryRootQueryString_2 {
@@ -2886,6 +4483,7 @@ export interface directoryRootQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryDirQueryString_2 {
@@ -2893,6 +4491,7 @@ export interface directoryDirQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryBaseQueryString_2 {
@@ -2900,6 +4499,7 @@ export interface directoryBaseQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryExtQueryString_2 {
@@ -2907,6 +4507,7 @@ export interface directoryExtQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryNameQueryString_2 {
@@ -2914,6 +4515,7 @@ export interface directoryNameQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryRelativeDirectoryQueryString_2 {
@@ -2921,6 +4523,7 @@ export interface directoryRelativeDirectoryQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryDevQueryInteger_2 {
@@ -2930,6 +4533,7 @@ export interface directoryDevQueryInteger_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface directoryModeQueryInteger_2 {
@@ -2939,6 +4543,7 @@ export interface directoryModeQueryInteger_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface directoryNlinkQueryInteger_2 {
@@ -2948,6 +4553,7 @@ export interface directoryNlinkQueryInteger_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface directoryUidQueryInteger_2 {
@@ -2957,6 +4563,7 @@ export interface directoryUidQueryInteger_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface directoryGidQueryInteger_2 {
@@ -2966,6 +4573,7 @@ export interface directoryGidQueryInteger_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface directoryRdevQueryInteger_2 {
@@ -2975,6 +4583,7 @@ export interface directoryRdevQueryInteger_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface directoryBlksizeQueryInteger_2 {
@@ -2984,6 +4593,7 @@ export interface directoryBlksizeQueryInteger_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface directoryInoQueryInteger_2 {
@@ -2993,6 +4603,7 @@ export interface directoryInoQueryInteger_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface directoryBlocksQueryInteger_2 {
@@ -3002,6 +4613,7 @@ export interface directoryBlocksQueryInteger_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface directoryAtimeMsQueryFloat_2 {
@@ -3011,6 +4623,7 @@ export interface directoryAtimeMsQueryFloat_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface directoryMtimeMsQueryFloat_2 {
@@ -3020,6 +4633,7 @@ export interface directoryMtimeMsQueryFloat_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface directoryCtimeMsQueryFloat_2 {
@@ -3029,6 +4643,7 @@ export interface directoryCtimeMsQueryFloat_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface directoryBirthtimeMsQueryFloat_2 {
@@ -3038,6 +4653,7 @@ export interface directoryBirthtimeMsQueryFloat_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface directoryAtimeQueryString_2 {
@@ -3045,6 +4661,7 @@ export interface directoryAtimeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryMtimeQueryString_2 {
@@ -3052,6 +4669,7 @@ export interface directoryMtimeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryCtimeQueryString_2 {
@@ -3059,6 +4677,7 @@ export interface directoryCtimeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface directoryBirthtimeQueryString_2 {
@@ -3066,6 +4685,7 @@ export interface directoryBirthtimeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileIdQueryString_2 {
@@ -3073,12 +4693,13 @@ export interface fileIdQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileInternalInputObject_2 {
   contentDigest?: fileInternalContentDigestQueryString_2 | null
-  mediaType?: fileInternalMediaTypeQueryString_2 | null
   type?: fileInternalTypeQueryString_2 | null
+  mediaType?: fileInternalMediaTypeQueryString_2 | null
   description?: fileInternalDescriptionQueryString_2 | null
   owner?: fileInternalOwnerQueryString_2 | null
 }
@@ -3088,13 +4709,7 @@ export interface fileInternalContentDigestQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
-}
-
-export interface fileInternalMediaTypeQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileInternalTypeQueryString_2 {
@@ -3102,6 +4717,15 @@ export interface fileInternalTypeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
+}
+
+export interface fileInternalMediaTypeQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileInternalDescriptionQueryString_2 {
@@ -3109,6 +4733,7 @@ export interface fileInternalDescriptionQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileInternalOwnerQueryString_2 {
@@ -3116,6 +4741,7 @@ export interface fileInternalOwnerQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileSourceInstanceNameQueryString_2 {
@@ -3123,6 +4749,7 @@ export interface fileSourceInstanceNameQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileAbsolutePathQueryString_2 {
@@ -3130,6 +4757,7 @@ export interface fileAbsolutePathQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileRelativePathQueryString_2 {
@@ -3137,6 +4765,7 @@ export interface fileRelativePathQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileExtensionQueryString_2 {
@@ -3144,6 +4773,7 @@ export interface fileExtensionQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileSizeQueryInteger_2 {
@@ -3153,6 +4783,7 @@ export interface fileSizeQueryInteger_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface filePrettySizeQueryString_2 {
@@ -3160,6 +4791,7 @@ export interface filePrettySizeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileModifiedTimeQueryString_2 {
@@ -3167,6 +4799,7 @@ export interface fileModifiedTimeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileAccessTimeQueryString_2 {
@@ -3174,6 +4807,7 @@ export interface fileAccessTimeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileChangeTimeQueryString_2 {
@@ -3181,6 +4815,7 @@ export interface fileChangeTimeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileBirthTimeQueryString_2 {
@@ -3188,6 +4823,7 @@ export interface fileBirthTimeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileRootQueryString_2 {
@@ -3195,6 +4831,7 @@ export interface fileRootQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileDirQueryString_2 {
@@ -3202,6 +4839,7 @@ export interface fileDirQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileBaseQueryString_2 {
@@ -3209,6 +4847,7 @@ export interface fileBaseQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileExtQueryString_2 {
@@ -3216,6 +4855,7 @@ export interface fileExtQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileNameQueryString_2 {
@@ -3223,6 +4863,7 @@ export interface fileNameQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileRelativeDirectoryQueryString_2 {
@@ -3230,6 +4871,7 @@ export interface fileRelativeDirectoryQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileDevQueryInteger_2 {
@@ -3239,6 +4881,7 @@ export interface fileDevQueryInteger_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface fileModeQueryInteger_2 {
@@ -3248,6 +4891,7 @@ export interface fileModeQueryInteger_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface fileNlinkQueryInteger_2 {
@@ -3257,6 +4901,7 @@ export interface fileNlinkQueryInteger_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface fileUidQueryInteger_2 {
@@ -3266,6 +4911,7 @@ export interface fileUidQueryInteger_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface fileGidQueryInteger_2 {
@@ -3275,6 +4921,7 @@ export interface fileGidQueryInteger_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface fileRdevQueryInteger_2 {
@@ -3284,6 +4931,7 @@ export interface fileRdevQueryInteger_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface fileBlksizeQueryInteger_2 {
@@ -3293,6 +4941,7 @@ export interface fileBlksizeQueryInteger_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface fileInoQueryInteger_2 {
@@ -3302,6 +4951,7 @@ export interface fileInoQueryInteger_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface fileBlocksQueryInteger_2 {
@@ -3311,6 +4961,7 @@ export interface fileBlocksQueryInteger_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface fileAtimeMsQueryFloat_2 {
@@ -3320,6 +4971,7 @@ export interface fileAtimeMsQueryFloat_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface fileMtimeMsQueryFloat_2 {
@@ -3329,6 +4981,7 @@ export interface fileMtimeMsQueryFloat_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface fileCtimeMsQueryFloat_2 {
@@ -3338,6 +4991,7 @@ export interface fileCtimeMsQueryFloat_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface fileBirthtimeMsQueryFloat_2 {
@@ -3347,6 +5001,7 @@ export interface fileBirthtimeMsQueryFloat_2 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface fileAtimeQueryString_2 {
@@ -3354,6 +5009,7 @@ export interface fileAtimeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileMtimeQueryString_2 {
@@ -3361,6 +5017,7 @@ export interface fileMtimeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileCtimeQueryString_2 {
@@ -3368,6 +5025,7 @@ export interface fileCtimeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface fileBirthtimeQueryString_2 {
@@ -3375,6 +5033,7 @@ export interface fileBirthtimeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface publicUrlQueryString_3 {
@@ -3382,6 +5041,7 @@ export interface publicUrlQueryString_3 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface markdownRemarkIdQueryString_2 {
@@ -3389,6 +5049,7 @@ export interface markdownRemarkIdQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface markdownRemarkInternalInputObject_2 {
@@ -3404,6 +5065,7 @@ export interface markdownRemarkInternalContentQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface markdownRemarkInternalTypeQueryString_2 {
@@ -3411,6 +5073,7 @@ export interface markdownRemarkInternalTypeQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface markdownRemarkInternalContentDigestQueryString_2 {
@@ -3418,6 +5081,7 @@ export interface markdownRemarkInternalContentDigestQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface markdownRemarkInternalOwnerQueryString_2 {
@@ -3425,11 +5089,11 @@ export interface markdownRemarkInternalOwnerQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface markdownRemarkInternalFieldOwnersInputObject_2 {
   slug?: markdownRemarkInternalFieldOwnersSlugQueryString_2 | null
-  layout?: markdownRemarkInternalFieldOwnersLayoutQueryString_2 | null
 }
 
 export interface markdownRemarkInternalFieldOwnersSlugQueryString_2 {
@@ -3437,19 +5101,12 @@ export interface markdownRemarkInternalFieldOwnersSlugQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
-}
-
-export interface markdownRemarkInternalFieldOwnersLayoutQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface markdownRemarkFrontmatterInputObject_2 {
   title?: markdownRemarkFrontmatterTitleQueryString_2 | null
-  _PARENT?: markdownRemarkFrontmatterParentQueryString_3 | null
-  parent?: markdownRemarkFrontmatterParentQueryString_4 | null
+  _PARENT?: markdownRemarkFrontmatterParentQueryString_2 | null
 }
 
 export interface markdownRemarkFrontmatterTitleQueryString_2 {
@@ -3457,20 +5114,15 @@ export interface markdownRemarkFrontmatterTitleQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
-export interface markdownRemarkFrontmatterParentQueryString_3 {
+export interface markdownRemarkFrontmatterParentQueryString_2 {
   eq?: string | null
   ne?: string | null
   regex?: string | null
   glob?: string | null
-}
-
-export interface markdownRemarkFrontmatterParentQueryString_4 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface excerptQueryString_3 {
@@ -3478,6 +5130,7 @@ export interface excerptQueryString_3 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface markdownRemarkRawMarkdownBodyQueryString_2 {
@@ -3485,6 +5138,7 @@ export interface markdownRemarkRawMarkdownBodyQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface markdownRemarkFileAbsolutePathQueryString_2 {
@@ -3492,11 +5146,11 @@ export interface markdownRemarkFileAbsolutePathQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface markdownRemarkFieldsInputObject_2 {
   slug?: markdownRemarkFieldsSlugQueryString_2 | null
-  layout?: markdownRemarkFieldsLayoutQueryString_2 | null
 }
 
 export interface markdownRemarkFieldsSlugQueryString_2 {
@@ -3504,13 +5158,7 @@ export interface markdownRemarkFieldsSlugQueryString_2 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
-}
-
-export interface markdownRemarkFieldsLayoutQueryString_2 {
-  eq?: string | null
-  ne?: string | null
-  regex?: string | null
-  glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface htmlQueryString_3 {
@@ -3518,12 +5166,16 @@ export interface htmlQueryString_3 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface headingsQueryList_3 {
+  elemMatch?: headingsListElemTypeName_3 | null
+}
+
+export interface headingsListElemTypeName_3 {
   value?: headingsListElemValueQueryString_3 | null
   depth?: headingsListElemDepthQueryInt_3 | null
-  in?: (markdownHeadingInputObject_3 | null)[] | null
 }
 
 export interface headingsListElemValueQueryString_3 {
@@ -3531,6 +5183,7 @@ export interface headingsListElemValueQueryString_3 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface headingsListElemDepthQueryInt_3 {
@@ -3540,11 +5193,7 @@ export interface headingsListElemDepthQueryInt_3 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
-}
-
-export interface markdownHeadingInputObject_3 {
-  value?: string | null
-  depth?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface timeToReadQueryInt_3 {
@@ -3554,6 +5203,7 @@ export interface timeToReadQueryInt_3 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface tableOfContentsQueryString_3 {
@@ -3561,6 +5211,7 @@ export interface tableOfContentsQueryString_3 {
   ne?: string | null
   regex?: string | null
   glob?: string | null
+  in?: (string | null)[] | null
 }
 
 export interface wordCountTypeName_3 {
@@ -3576,6 +5227,7 @@ export interface wordCountParagraphsQueryInt_3 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface wordCountSentencesQueryInt_3 {
@@ -3585,6 +5237,7 @@ export interface wordCountSentencesQueryInt_3 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 
 export interface wordCountWordsQueryInt_3 {
@@ -3594,6 +5247,7 @@ export interface wordCountWordsQueryInt_3 {
   gte?: number | null
   lt?: number | null
   lte?: number | null
+  in?: (number | null)[] | null
 }
 export interface AllSitePageRootQueryTypeArgs {
   skip?: number | null
@@ -3626,7 +5280,6 @@ export interface AllMarkdownRemarkRootQueryTypeArgs {
   filter?: filterMarkdownRemark | null
 }
 export interface SitePageRootQueryTypeArgs {
-  layout?: sitePageLayoutQueryString | null
   jsonName?: sitePageJsonNameQueryString | null
   internalComponentName?: sitePageInternalComponentNameQueryString | null
   path?: sitePagePathQueryString_2 | null
@@ -4050,7 +5703,6 @@ export interface BuildTimeSiteArgs {
 }
 
 export enum SitePageConnectionSortByFieldsEnum {
-  layout = 'layout',
   jsonName = 'jsonName',
   internalComponentName = 'internalComponentName',
   path = 'path',
@@ -4074,7 +5726,6 @@ export enum sitePageConnectionSortOrderValues {
 }
 
 export enum sitePageDistinctEnum {
-  layout = 'layout',
   jsonName = 'jsonName',
   internalComponentName = 'internalComponentName',
   path = 'path',
@@ -4093,7 +5744,6 @@ export enum sitePageDistinctEnum {
 }
 
 export enum sitePageGroupEnum {
-  layout = 'layout',
   jsonName = 'jsonName',
   internalComponentName = 'internalComponentName',
   path = 'path',
@@ -4339,8 +5989,8 @@ export enum FileConnectionSortByFieldsEnum {
   children = 'children',
   parent = 'parent',
   internal___contentDigest = 'internal___contentDigest',
-  internal___mediaType = 'internal___mediaType',
   internal___type = 'internal___type',
+  internal___mediaType = 'internal___mediaType',
   internal___description = 'internal___description',
   internal___owner = 'internal___owner',
   sourceInstanceName = 'sourceInstanceName',
@@ -4398,8 +6048,8 @@ export enum fileDistinctEnum {
   children = 'children',
   parent = 'parent',
   internal___contentDigest = 'internal___contentDigest',
-  internal___mediaType = 'internal___mediaType',
   internal___type = 'internal___type',
+  internal___mediaType = 'internal___mediaType',
   internal___description = 'internal___description',
   internal___owner = 'internal___owner',
   sourceInstanceName = 'sourceInstanceName',
@@ -4442,8 +6092,8 @@ export enum fileGroupEnum {
   children = 'children',
   parent = 'parent',
   internal___contentDigest = 'internal___contentDigest',
-  internal___mediaType = 'internal___mediaType',
   internal___type = 'internal___type',
+  internal___mediaType = 'internal___mediaType',
   internal___description = 'internal___description',
   internal___owner = 'internal___owner',
   sourceInstanceName = 'sourceInstanceName',
@@ -4489,15 +6139,12 @@ export enum MarkdownRemarkConnectionSortByFieldsEnum {
   internal___contentDigest = 'internal___contentDigest',
   internal___owner = 'internal___owner',
   internal___fieldOwners___slug = 'internal___fieldOwners___slug',
-  internal___fieldOwners___layout = 'internal___fieldOwners___layout',
   frontmatter___title = 'frontmatter___title',
   frontmatter____PARENT = 'frontmatter____PARENT',
-  frontmatter___parent = 'frontmatter___parent',
   excerpt = 'excerpt',
   rawMarkdownBody = 'rawMarkdownBody',
   fileAbsolutePath = 'fileAbsolutePath',
   fields___slug = 'fields___slug',
-  fields___layout = 'fields___layout',
   html = 'html',
   headings = 'headings',
   timeToRead = 'timeToRead',
@@ -4520,15 +6167,12 @@ export enum markdownRemarkDistinctEnum {
   internal___contentDigest = 'internal___contentDigest',
   internal___owner = 'internal___owner',
   internal___fieldOwners___slug = 'internal___fieldOwners___slug',
-  internal___fieldOwners___layout = 'internal___fieldOwners___layout',
   frontmatter___title = 'frontmatter___title',
   frontmatter____PARENT = 'frontmatter____PARENT',
-  frontmatter___parent = 'frontmatter___parent',
   excerpt = 'excerpt',
   rawMarkdownBody = 'rawMarkdownBody',
   fileAbsolutePath = 'fileAbsolutePath',
   fields___slug = 'fields___slug',
-  fields___layout = 'fields___layout',
 }
 
 export enum markdownRemarkGroupEnum {
@@ -4539,13 +6183,10 @@ export enum markdownRemarkGroupEnum {
   internal___contentDigest = 'internal___contentDigest',
   internal___owner = 'internal___owner',
   internal___fieldOwners___slug = 'internal___fieldOwners___slug',
-  internal___fieldOwners___layout = 'internal___fieldOwners___layout',
   frontmatter___title = 'frontmatter___title',
   frontmatter____PARENT = 'frontmatter____PARENT',
-  frontmatter___parent = 'frontmatter___parent',
   excerpt = 'excerpt',
   rawMarkdownBody = 'rawMarkdownBody',
   fileAbsolutePath = 'fileAbsolutePath',
   fields___slug = 'fields___slug',
-  fields___layout = 'fields___layout',
 }
