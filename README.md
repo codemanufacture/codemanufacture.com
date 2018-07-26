@@ -18,9 +18,8 @@ The code base for the [Codemanufacture](https://codemanufacture.com/)
 
 ## Features
 
-* [Gatsby 1.0](https://www.gatsbyjs.org/) - a static site generator with following plugins:
+* [Gatsby 2.0](https://www.gatsbyjs.org/) - a static site generator with following plugins:
   * [Google Tag Manager](https://www.gatsbyjs.org/packages/gatsby-plugin-google-tagmanager)
-  * [React Next](https://www.gatsbyjs.org/packages/gatsby-plugin-react-next) - React 16 support
   * [Robots.tx](https://www.gatsbyjs.org/packages/gatsby-plugin-robots-txt)
   * [Sitemap](https://www.gatsbyjs.org/packages/gatsby-plugin-sitemap)
   * [Styled Components](https://www.gatsbyjs.org/packages/gatsby-plugin-styled-components/)
@@ -54,8 +53,6 @@ The code base for the [Codemanufacture](https://codemanufacture.com/)
      │   ├── components                // all react components
      │   ├── declarations.d.ts         // declarations for no typescript modules/files
      │   ├── graphql-types.d.ts        // graphql types (`yarn graphql-types`)
-     │   ├── layouts                   // layouts
-     │   │   └── index.tsx             // default layout (required)
      │   └── pages                     // pages
      ├── static                        // static files automatically copied to output folder
      ├── tsconfig.json                 // typescript configuration
@@ -130,8 +127,8 @@ Runs prettier on source files to print differences from formatting standards
 
 Code generator for common tasks:
 
-* Creation of new pure component
 * Creation of new page
+* Creation of new pure component
 
 #### `yarn serve`
 
