@@ -2,18 +2,17 @@
 
 const { resolve } = require('path')
 
-module.exports = exports.createPages = async ({ graphql, boundActionCreators }) => {
-  const { createPage } = boundActionCreators
+module.exports = exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
 
-  const pageTemplate = resolve(`./src/templates/PageTemplate.tsx`)
+  const pageTemplate = resolve(`src/templates/PageTemplate.tsx`)
 
   const allMarkdown = await graphql(
     `
-      {
-        allMarkdownRemark(filter: { id: { regex: "//pages//" } }, limit: 1000) {
+      query {
+        allMarkdownRemark(filter: { fileAbsolutePath: { regex: "//pages//" } }, limit: 1000) {
           edges {
             node {
-              id
               fields {
                 slug
               }
