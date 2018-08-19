@@ -24,7 +24,7 @@ const Header: React.SFC<HeaderProps> = ({ siteTitle }) => (
 export default Header
 
 export const siteMetadataFragment = graphql`
-  fragment siteMetadata on RootQueryType {
+  fragment siteMetadata on Query {
     site {
       siteMetadata {
         description
