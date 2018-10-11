@@ -5,12 +5,12 @@ import styled from 'styled-components'
 import { colors } from '../../theme'
 import Container from '../PageContainer'
 
-
 const StyledComingSoon = styled.div`
   margin: 0 auto;
   width: 100%;
 
-  ${Container} { /* stylelint-disable-line */
+  ${Container} {
+    /* stylelint-disable-line */
     max-width: 600px;
   }
 
@@ -23,7 +23,7 @@ const StyledComingSoon = styled.div`
   }
 
   h1 {
-    font-size: 2.0rem;
+    font-size: 2rem;
     text-rendering: optimizeLegibility;
     letter-spacing: 2px;
   }
@@ -49,7 +49,7 @@ const StyledComingSoon = styled.div`
 
   @media only screen and (min-width: 767px) and (min-height: 412px) {
     position: absolute;
-    top:50%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }

@@ -14,7 +14,7 @@ const StyledPageWrapper = styled.div`
   }
 
   h1 {
-    font-size: 2.0rem;
+    font-size: 2rem;
     text-rendering: optimizeLegibility;
     letter-spacing: 2px;
   }
