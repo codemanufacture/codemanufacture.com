@@ -95,6 +95,6 @@ const ComingSoon = () => (
       </div>
     </Layout>
   </StyledComingSoon>
-);
+)
 
-export default ComingSoon;
+export default ComingSoon
