@@ -3,11 +3,15 @@ import Layout from '../Layout'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { colors } from '../../theme'
+import Container from '../PageContainer'
 
 const StyledComingSoon = styled.div`
   margin: 0 auto;
   width: 100%;
-  max-width: 600px;
+
+  ${Container} {
+    max-width: 600px;
+  }
 
   img {
     max-width: 100%;
