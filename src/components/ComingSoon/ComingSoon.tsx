@@ -9,8 +9,8 @@ const StyledComingSoon = styled.div`
   margin: 0 auto;
   width: 100%;
 
+  /* stylelint-disable-next-line */
   ${Container} {
-    /* stylelint-disable-line */
     max-width: 600px;
   }
 
