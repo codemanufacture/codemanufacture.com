@@ -8,17 +8,14 @@ interface HeaderProps {
 }
 
 const StyledHeaderWrapper = styled.div`
-  margin: 0 auto;
-  max-width: 600px;
-  padding: 1.45rem 1.0875rem;
+  background: #fff;
+  width: 100%;
 `
 
 const Header: React.SFC<HeaderProps> = ({ siteTitle }) => (
-  <div className="content">
-    <StyledHeaderWrapper>
-      <Logo alt={siteTitle} />
-    </StyledHeaderWrapper>
-  </div>
+  <StyledHeaderWrapper>
+    <Logo alt={siteTitle} />
+  </StyledHeaderWrapper>
 )
 
 export default Header

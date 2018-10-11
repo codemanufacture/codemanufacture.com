@@ -12,8 +12,8 @@ injectGlobal`
   body {
     font-size: 21px;
     color: hsla(0, 0%, 0%, 0.8);
-    margin: 0 auto;
-    max-width: 600px;
+    margin: 0;
+    padding: 0;
     line-height: 1.6;
   }
   
@@ -50,13 +50,5 @@ injectGlobal`
     html {
       font-size: 18px;
     }
-  }
-
-  @media only screen and (min-width: 767px) and (min-height: 412px) {
-    .coming-soon {
-      position: absolute;
-      top:50%;
-      transform:translateY(-50%)      
-    }  
   }
 `
