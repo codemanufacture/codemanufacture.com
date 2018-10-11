@@ -5,11 +5,12 @@ import styled from 'styled-components'
 import { colors } from '../../theme'
 import Container from '../PageContainer'
 
+
 const StyledComingSoon = styled.div`
   margin: 0 auto;
   width: 100%;
 
-  ${Container} {
+  ${Container} { /* stylelint-disable-line */
     max-width: 600px;
   }
 
