@@ -6,6 +6,7 @@ import { colors } from '../../theme'
 
 const StyledComingSoon = styled.div`
   margin: 0 auto;
+  width: 100%;
   max-width: 600px;
 
   img {
@@ -68,7 +69,7 @@ const ComingSoon = () => (
         <h1>Oops</h1>
         <p>
           You caught me! My Consultancy and Tech Blog focused on AWS,
-          Serverless, React, Magento is&nbsp;almost&nbsp;ready.
+          Serverless, React, Magento is almost ready.
         </p>
         <p>
           <StyledButtonLink href="http://eepurl.com/dpY3Az">
