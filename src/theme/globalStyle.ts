@@ -1,5 +1,4 @@
 import { injectGlobal } from 'styled-components'
-import { colors } from './colors'
 
 /* tslint:disable no-unused-expression */
 injectGlobal`
