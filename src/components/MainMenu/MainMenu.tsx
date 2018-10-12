@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import menuItems, { MenuItem } from '../../enums/menuItems'
+import menuItems, { MenuItemElement } from '../../enums/menuItems'
 import { colors, transitions } from '../../theme'
 
 const StyledMainMenuWrapper = styled.menu`
@@ -33,7 +33,7 @@ const StyledMainMenuWrapper = styled.menu`
   }
 `
 
-const MenuItem = (item: MenuItem) => (
+const MenuItem = (item: MenuItemElement) => (
   <li>
     <a href={`#${item.targetElement}`} title={`#${item.name}`}>
       {item.name}

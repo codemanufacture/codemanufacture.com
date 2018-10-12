@@ -1,9 +1,9 @@
-export interface MenuItem {
+export interface MenuItemElement {
   name: string
   targetElement: string
 }
 
-const MENU_ITEMS: MenuItem[] = [
+const MENU_ITEMS: MenuItemElement[] = [
   {
     name: `Home`,
     targetElement: `123`,
