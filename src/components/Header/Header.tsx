@@ -1,7 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import Logo from '../Logo/Logo'
-import { graphql } from 'gatsby'
 
 interface HeaderProps {
   siteTitle: string
@@ -22,5 +21,3 @@ const Header: React.SFC<HeaderProps> = ({ siteTitle }) => (
 )
 
 export default Header
-
-// Import metadata later on
