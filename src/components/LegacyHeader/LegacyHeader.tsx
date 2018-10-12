@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Logo from '../Logo/Logo'
 import { graphql } from 'gatsby'
 
-interface HeaderProps {
+interface LegacyHeaderProps {
   siteTitle: string
 }
 
@@ -13,7 +13,7 @@ const StyledHeaderWrapper = styled.div`
   padding: 1.45rem 1.0875rem;
 `
 
-const Header: React.SFC<HeaderProps> = ({ siteTitle }) => (
+const LegacyHeader: React.SFC<LegacyHeaderProps> = ({ siteTitle }) => (
   <div className="content">
     <StyledHeaderWrapper>
       <Logo alt={siteTitle} />
@@ -21,6 +21,17 @@ const Header: React.SFC<HeaderProps> = ({ siteTitle }) => (
   </div>
 )
 
-export default Header
+export default LegacyHeader
 
-// Import metadata later on
+export const siteMetadataFragment = graphql`
+  fragment siteMetadata on Query {
+    site {
+      siteMetadata {
+        description
+        keywords
+        title
+        siteUrl
+      }
+    }
+  }
+`
