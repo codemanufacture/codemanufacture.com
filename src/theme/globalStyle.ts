@@ -5,7 +5,9 @@ injectGlobal`
   @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
   img {
+    display: block;
     max-width: 100%;
+    border: none;
   }
 
   html {
