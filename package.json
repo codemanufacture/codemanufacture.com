@@ -22,7 +22,7 @@
     "react-helmet": "^5.2.0",
     "styled-components": "^3.3.3",
     "ts-loader": "^3.0",
-    "typescript": "^2.8.3"
+    "typescript": "^3.1.3"
   },
   "homepage": "https://codemanufacture.com/",
   "keywords": [
@@ -32,7 +32,7 @@
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
-    "ci-check": "yarn run:parallel lint:* nit:*",
+    "ci-check": "yarn run:parallel lint:* nit:* type-check",
     "develop": "gatsby develop -H 0.0.0.0",
     "format:markdown": "prettier --config .prettierrc --parser markdown --write '{./content/**/*.md,./README.md}'",
     "format:source": "prettier --config .prettierrc --parser typescript --write 'src/**/*.{ts,tsx}'",
@@ -44,9 +44,11 @@
     "plop": "plop",
     "run:parallel": "npm-run-all --parallel",
     "serve": "gatsby serve",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "type-check": "tsc"
   },
   "devDependencies": {
+    "@types/node": "^10.11.7",
     "@types/react": "^16.4.2",
     "@types/react-dom": "^16.0.5",
     "@types/react-helmet": "^5.0.6",

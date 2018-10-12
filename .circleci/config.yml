@@ -17,9 +17,9 @@ jobs:
           paths:
             - node_modules
       - run:
-          name: Check Prettier, TSLint
+          name: Check Prettier, TSLint, Type Check
           command: yarn ci-check
-      - run: 
+      - run:
           name: Build the website
           command: yarn build
       - store_artifacts:
@@ -28,7 +28,7 @@ jobs:
       - persist_to_workspace:
           root: ~/repo
           paths:
-            - public      
+            - public
   deploy:
     docker:
       - image: circleci/python:2.7
@@ -39,7 +39,7 @@ jobs:
       - run:
           name: Install awscli
           command: sudo pip install awscli
-      - run: 
+      - run:
           name: Deploy to S3
           command: aws s3 sync repo/public s3://codemanufacture.com/ --delete
 workflows:

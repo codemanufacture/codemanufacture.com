@@ -1,9 +1,5 @@
-declare module '"*.svg' {
-  const content: string
-  export default content
-}
-
-declare module '"*.ico' {
-  const content: string
-  export default content
-}
+declare module '*.ico'
+declare module '*.svg'
+declare module '*.png'
+declare module '*.jpg'
+declare module '*.gif'
