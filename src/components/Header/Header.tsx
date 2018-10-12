@@ -1,6 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import Logo from '../Logo/Logo'
+import Logo from '../Logo'
+import MainMenu from '../MainMenu'
 import { graphql } from 'gatsby'
 
 interface HeaderProps {
@@ -8,17 +9,18 @@ interface HeaderProps {
 }
 
 const StyledHeaderWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
   margin: 0 auto;
-  max-width: 600px;
-  padding: 1.45rem 1.0875rem;
+  padding: 0 30px;
 `
 
 const Header: React.SFC<HeaderProps> = ({ siteTitle }) => (
-  <div className="content">
-    <StyledHeaderWrapper>
-      <Logo alt={siteTitle} />
-    </StyledHeaderWrapper>
-  </div>
+  <StyledHeaderWrapper>
+    <Logo alt={siteTitle} width={260} height={40} />
+    <MainMenu />
+  </StyledHeaderWrapper>
 )
 
 export default Header
