@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Layout from '../Layout'
+import LegacyLayout from '../LegacyLayout'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { colors } from '../../theme'
@@ -69,7 +69,7 @@ const StyledButtonLink = styled.a`
 
 const ComingSoon = () => (
   <StyledComingSoon>
-    <Layout>
+    <LegacyLayout>
       <div>
         <h1>Oops</h1>
         <p>
@@ -94,7 +94,7 @@ const ComingSoon = () => (
           <Link to="/privacy-policy/">Privacy policy</Link>
         </p>
       </div>
-    </Layout>
+    </LegacyLayout>
   </StyledComingSoon>
 )
 
