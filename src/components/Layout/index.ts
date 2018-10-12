@@ -1,3 +1,3 @@
-import LegacyLayout from './LegacyLayout'
+import Layout from './Layout'
 
-export default LegacyLayout
+export default Layout
