@@ -1,5 +1,6 @@
 import * as React from 'react'
+import Layout from '../components/Layout'
 
-const HomePage = () => <div>Homepage</div>
+const HomePage = () => <Layout>Test</Layout>
 
 export default HomePage
