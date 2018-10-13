@@ -46,6 +46,7 @@
     "serve": "gatsby serve",
     "test": "jest",
     "test:coverage": "jest --coverage",
+    "test:update": "jest --updateSnapshot",
     "test:watch": "jest --watch",
     "type-check": "tsc"
   },

@@ -7,3 +7,6 @@ yarn-error.log
 /public
 /dist
 .DS_Store
+
+# Tests
+/coverage
