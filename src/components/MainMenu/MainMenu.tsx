@@ -33,8 +33,8 @@ const StyledMainMenuWrapper = styled.menu`
   }
 `
 
-const MenuItem = (item: MenuItemElement) => (
-  <li>
+const MenuItem = (item: MenuItemElement, index: number) => (
+  <li key={index}>
     <a href={`#${item.targetElement}`} title={`#${item.name}`}>
       {item.name}
     </a>
@@ -43,7 +43,7 @@ const MenuItem = (item: MenuItemElement) => (
 
 const MainMenu = () => (
   <StyledMainMenuWrapper>
-    <ul>{menuItems.map(item => MenuItem(item))}</ul>
+    <ul>{menuItems.map((item, index) => MenuItem(item, index))}</ul>
   </StyledMainMenuWrapper>
 )
 
