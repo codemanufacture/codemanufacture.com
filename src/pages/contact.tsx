@@ -1,8 +1,8 @@
 import * as React from 'react'
-import Layout from '../components/Layout'
+import LegacyLayout from '../components/LegacyLayout'
 
 const Contact = () => (
-  <Layout>
+  <LegacyLayout>
     <div>
       <h1>Contact</h1>
       <p>
@@ -13,7 +13,7 @@ const Contact = () => (
         <br />Call: +44 7951608683
       </p>
     </div>
-  </Layout>
+  </LegacyLayout>
 )
 
 export default Contact

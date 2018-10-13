@@ -1,7 +1,7 @@
 import * as React from 'react'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
-import Layout from '../components/Layout'
+import LegacyLayout from '../components/LegacyLayout'
 import { graphql } from 'gatsby'
 import { colors } from '../theme'
 
@@ -55,13 +55,13 @@ interface PageTemplateProps {
 }
 
 const PageTemplate: React.SFC<PageTemplateProps> = ({ data }) => (
-  <Layout>
+  <LegacyLayout>
     <StyledPageWrapper>
       <Helmet title={data.page.frontmatter.title} />
       <h1>{data.page.frontmatter.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: data.page.html }} />
     </StyledPageWrapper>
-  </Layout>
+  </LegacyLayout>
 )
 
 export default PageTemplate
