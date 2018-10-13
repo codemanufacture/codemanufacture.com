@@ -31,7 +31,7 @@ module.exports = exports.createPages = async ({ graphql, actions }) => {
     throw Error(allMarkdown.errors)
   }
 
-  allMarkdown.data.allMarkdownRemark.edges.forEach((edge) => {
+  allMarkdown.data.allMarkdownRemark.edges.forEach(edge => {
     const slug = edge.node.fields.slug
 
     createPage({
