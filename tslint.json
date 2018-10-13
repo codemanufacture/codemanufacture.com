@@ -28,7 +28,8 @@
     "semicolon": [
       true,
       "never"
-    ]
+    ],
+    "no-implicit-dependencies": [true, "dev"]
   },
   "rulesDirectory": []
 }

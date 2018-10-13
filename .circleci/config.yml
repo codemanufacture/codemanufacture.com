@@ -20,6 +20,9 @@ jobs:
           name: Check Prettier, TSLint, Type Check
           command: yarn ci-check
       - run:
+          name: Unit tests
+          command: yarn test
+      - run:
           name: Build the website
           command: yarn build
       - store_artifacts:
