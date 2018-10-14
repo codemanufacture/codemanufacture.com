@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import * as logo from './images/logo.svg'
-import { dimensions } from '../../theme'
+import { displayDimensions } from '../../theme'
 
 interface LogoProps {
   alt?: string
@@ -14,7 +14,7 @@ interface LogoProps {
 const StyledLogoWrapper = styled(Link)`
   margin: auto auto auto 0;
 
-  @media (max-width: ${dimensions.tabletSize}) {
+  @media (max-width: ${displayDimensions.tabletSize}) {
     padding: 15px;
   }
 `

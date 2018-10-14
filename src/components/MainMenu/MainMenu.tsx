@@ -3,8 +3,9 @@ import styled from 'styled-components'
 import homepageSections, {
   HomepageSectionElement,
 } from '../../enums/homepageSections'
-import { colors, transitions, dimensions } from '../../theme'
+import { colors, transitions, displayDimensions, sizes } from '../../theme'
 import uniqid from 'uniqid'
+import classNames from 'classnames'
 
 const StyledMainMenuWrapper = styled.menu`
   margin: auto 0 auto auto;
@@ -18,34 +19,67 @@ const StyledMainMenuWrapper = styled.menu`
 
   li {
     list-style: none;
-  }
 
-  a {
-    display: block;
-    padding: 24px 22px;
-    font-size: 12px;
-    color: ${colors.link};
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    transition: color ${transitions.basicTransition};
+    a {
+      display: block;
+      padding: 24px 22px;
+      font-size: 12px;
+      color: ${colors.link};
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      transition: color ${transitions.basicTransition};
 
-    &:hover,
-    &.active {
-      color: ${colors.linkActive};
+      &:hover,
+      &.active {
+        color: ${colors.linkActive};
+      }
     }
   }
 
-  @media (max-width: ${dimensions.tabletSize}) {
+  @media (max-width: ${displayDimensions.tabletSize}) {
+    position: fixed;
+    width: 100%;
     margin: auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    will-change: transform;
+    z-index: 1;
 
     ul {
+      width: 100%;
+      top: ${sizes.headerHeight};
+      position: absolute;
+      transform: translateX(100%);
       flex-direction: column;
+      background: ${colors.background};
+      transition: transform ${transitions.basicTransition};
+
+      &.active {
+        right: 0;
+        transform: translateX(0);
+      }
 
       li {
         text-align: center;
       }
     }
+  }
+`
+
+const StyledMobileMenuTrigger = styled.a`
+  display: none;
+  padding: 24px 22px;
+  position: absolute;
+  right: 0;
+  color: ${colors.link};
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+
+  @media (max-width: ${displayDimensions.tabletSize}) {
+    display: block;
   }
 `
 
@@ -57,9 +91,21 @@ const MenuItem = (item: HomepageSectionElement) => (
   </li>
 )
 
-const MobileMenuTrigger = () => <a href="#trigger-mobile-menu">Menu</a>
+interface MobileMenuTriggerProps {
+  onClick: (e: React.MouseEvent) => void
+}
 
-class MainMenu extends React.PureComponent {
+const MobileMenuTrigger: React.SFC<MobileMenuTriggerProps> = (props) => (
+  <StyledMobileMenuTrigger href="#trigger-mobile-menu" onClick={(e) => props.onClick(e)}>
+    Menu
+  </StyledMobileMenuTrigger>
+)
+
+interface MainMenuState {
+  isMobileMenuActive: boolean
+}
+
+class MainMenu extends React.PureComponent<{}, MainMenuState> {
   constructor(props: object) {
     super(props)
     this.state = {
@@ -67,15 +113,25 @@ class MainMenu extends React.PureComponent {
     }
   }
 
+  handleTriggerClick = (e: React.MouseEvent) => {
+    e.preventDefault()
+    this.setState({isMobileMenuActive: !this.state.isMobileMenuActive})
+    console.log(this.state)
+  }
+
   render() {
+    const pagesListClassnames = classNames({
+      active: this.state.isMobileMenuActive,
+    })
+
     return (
       <StyledMainMenuWrapper>
-        <ul>
+        <ul className={pagesListClassnames}>
           {homepageSections.map((item: HomepageSectionElement) =>
             MenuItem(item)
           )}
         </ul>
-        <MobileMenuTrigger />
+        <MobileMenuTrigger onClick={(e: React.MouseEvent) => this.handleTriggerClick(e)}/>
       </StyledMainMenuWrapper>
     )
   }

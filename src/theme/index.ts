@@ -1,5 +1,6 @@
 import { colors } from './colors'
 import { transitions } from './transitions'
-import { dimensions } from './dimensions'
+import { displayDimensions } from './displayDimensions'
+import { sizes } from './sizes'
 
-export { colors, transitions, dimensions }
+export { colors, transitions, displayDimensions, sizes }
