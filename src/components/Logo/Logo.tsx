@@ -2,6 +2,7 @@ import * as React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import * as logo from './images/logo.svg'
+import { dimensions } from '../../theme'
 
 interface LogoProps {
   alt?: string
@@ -12,6 +13,10 @@ interface LogoProps {
 
 const StyledLogoWrapper = styled(Link)`
   margin: auto auto auto 0;
+
+  @media (max-width: ${dimensions.tabletSize}) {
+    padding: 15px;
+  }
 `
 
 const Logo: React.SFC<LogoProps> = ({ alt, width, height }) => (
