@@ -5,6 +5,7 @@
   "author": "Piotr Kwiecinski <piotr.kwiecinski@codemanufacure.com>",
   "private": true,
   "dependencies": {
+    "@types/classnames": "^2.2.6",
     "@types/uniqid": "^4.1.2",
     "babel-plugin-styled-components": "^1.5.1",
     "classnames": "^2.2.6",

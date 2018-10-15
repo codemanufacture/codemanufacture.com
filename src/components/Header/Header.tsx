@@ -2,7 +2,7 @@ import * as React from 'react'
 import styled from 'styled-components'
 import Logo from '../Logo'
 import MainMenu from '../MainMenu'
-import { displayDimensions, sizes } from '../../theme'
+import { colors, displayDimensions, sizes } from '../../theme'
 
 interface HeaderProps {
   siteTitle: string
@@ -10,10 +10,16 @@ interface HeaderProps {
 
 const StyledHeaderWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  width: 100%;
   height: ${sizes.headerHeight};
   margin: 0 auto;
   padding: 0 30px;
+  border-bottom: 1px solid ${colors.borderColor};
+  position: fixed;
+  top: 0;
+  left: 0;
+  justify-content: space-between;
+  background: ${colors.background};
 
   @media (max-width: ${displayDimensions.tabletSize}) {
     flex-direction: column;

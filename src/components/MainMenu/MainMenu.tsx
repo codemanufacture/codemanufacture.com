@@ -1,11 +1,13 @@
 import * as React from 'react'
 import styled from 'styled-components'
+import classNames from 'classnames'
+import uniqid from 'uniqid'
 import homepageSections, {
   HomepageSectionElement,
 } from '../../enums/homepageSections'
 import { colors, transitions, displayDimensions, sizes } from '../../theme'
-import uniqid from 'uniqid'
-import classNames from 'classnames'
+import MenuItem from './MenuItem'
+import MobileMenuTrigger from './MobileMenuTrigger'
 
 const StyledMainMenuWrapper = styled.menu`
   margin: auto 0 auto auto;
@@ -68,39 +70,6 @@ const StyledMainMenuWrapper = styled.menu`
   }
 `
 
-const StyledMobileMenuTrigger = styled.a`
-  display: none;
-  padding: 24px 22px;
-  position: absolute;
-  right: 0;
-  color: ${colors.link};
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-
-  @media (max-width: ${displayDimensions.tabletSize}) {
-    display: block;
-  }
-`
-
-const MenuItem = (item: HomepageSectionElement) => (
-  <li key={uniqid()}>
-    <a href={`#${item.sectionId}`} title={`#${item.name}`}>
-      {item.name}
-    </a>
-  </li>
-)
-
-interface MobileMenuTriggerProps {
-  onClick: (e: React.MouseEvent) => void
-}
-
-const MobileMenuTrigger: React.SFC<MobileMenuTriggerProps> = (props) => (
-  <StyledMobileMenuTrigger href="#trigger-mobile-menu" onClick={(e) => props.onClick(e)}>
-    Menu
-  </StyledMobileMenuTrigger>
-)
-
 interface MainMenuState {
   isMobileMenuActive: boolean
 }
@@ -115,8 +84,13 @@ class MainMenu extends React.PureComponent<{}, MainMenuState> {
 
   handleTriggerClick = (e: React.MouseEvent) => {
     e.preventDefault()
-    this.setState({isMobileMenuActive: !this.state.isMobileMenuActive})
-    console.log(this.state)
+    this.setState({ isMobileMenuActive: !this.state.isMobileMenuActive })
+  }
+
+  handleMenuItemClick = () => {
+    if (this.state.isMobileMenuActive) {
+      this.setState({ isMobileMenuActive: false })
+    }
   }
 
   render() {
@@ -127,11 +101,17 @@ class MainMenu extends React.PureComponent<{}, MainMenuState> {
     return (
       <StyledMainMenuWrapper>
         <ul className={pagesListClassnames}>
-          {homepageSections.map((item: HomepageSectionElement) =>
-            MenuItem(item)
-          )}
+          {homepageSections.map((item: HomepageSectionElement) => (
+            <MenuItem
+              key={uniqid()}
+              item={item}
+              onClick={() => this.handleMenuItemClick()}
+            />
+          ))}
         </ul>
-        <MobileMenuTrigger onClick={(e: React.MouseEvent) => this.handleTriggerClick(e)}/>
+        <MobileMenuTrigger
+          onClick={(e: React.MouseEvent) => this.handleTriggerClick(e)}
+        />
       </StyledMainMenuWrapper>
     )
   }
