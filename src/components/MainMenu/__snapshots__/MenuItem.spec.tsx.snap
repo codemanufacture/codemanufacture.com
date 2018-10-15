@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MenuItem component renders correctly 1`] = `
+<li>
+  <a
+    href="#qwe"
+    onClick={[Function]}
+    title="#abc"
+  >
+    abc
+  </a>
+</li>
+`;
