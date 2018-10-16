@@ -1,10 +1,17 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import menuItems, { MenuItemElement } from '../../enums/menuItems'
-import { colors, transitions } from '../../theme'
+import classNames from 'classnames'
+import uniqid from 'uniqid'
+import homepageSections, {
+  HomepageSectionElement,
+} from '../../enums/homepageSections'
+import { colors, transitions, displayDimensions, sizes } from '../../theme'
+import MenuItem from './MenuItem'
+import MobileMenuTrigger from './MobileMenuTrigger'
 
 const StyledMainMenuWrapper = styled.menu`
   margin: auto 0 auto auto;
+  padding: 0;
 
   ul {
     display: flex;
@@ -14,37 +21,100 @@ const StyledMainMenuWrapper = styled.menu`
 
   li {
     list-style: none;
+
+    a {
+      display: block;
+      padding: 24px 22px;
+      font-size: 12px;
+      color: ${colors.link};
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      transition: color ${transitions.basicTransition};
+
+      &:hover,
+      &.active {
+        color: ${colors.linkActive};
+      }
+    }
   }
 
-  a {
-    display: block;
-    padding: 24px 22px;
-    font-size: 12px;
-    color: ${colors.link};
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    transition: color ${transitions.basicTransition};
+  @media (max-width: ${displayDimensions.tabletSize}) {
+    position: fixed;
+    width: 100%;
+    margin: auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    will-change: transform;
+    z-index: 1;
 
-    &:hover,
-    &.active {
-      color: ${colors.linkActive};
+    ul {
+      width: 100%;
+      top: ${sizes.headerHeight};
+      position: absolute;
+      transform: translateX(100%);
+      flex-direction: column;
+      background: ${colors.background};
+      transition: transform ${transitions.basicTransition};
+
+      &.active {
+        right: 0;
+        transform: translateX(0);
+      }
+
+      li {
+        text-align: center;
+      }
     }
   }
 `
 
-const MenuItem = (item: MenuItemElement, index: number) => (
-  <li key={index}>
-    <a href={`#${item.targetElement}`} title={`#${item.name}`}>
-      {item.name}
-    </a>
-  </li>
-)
+interface MainMenuState {
+  isMobileMenuActive: boolean
+}
 
-const MainMenu = () => (
-  <StyledMainMenuWrapper>
-    <ul>{menuItems.map((item, index) => MenuItem(item, index))}</ul>
-  </StyledMainMenuWrapper>
-)
+class MainMenu extends React.PureComponent<{}, MainMenuState> {
+  constructor(props: object) {
+    super(props)
+    this.state = {
+      isMobileMenuActive: false,
+    }
+  }
+
+  handleTriggerClick = (e: React.MouseEvent) => {
+    e.preventDefault()
+    this.setState({ isMobileMenuActive: !this.state.isMobileMenuActive })
+  }
+
+  handleMenuItemClick = () => {
+    if (this.state.isMobileMenuActive) {
+      this.setState({ isMobileMenuActive: false })
+    }
+  }
+
+  render() {
+    const pagesListClassnames = classNames({
+      active: this.state.isMobileMenuActive,
+    })
+
+    return (
+      <StyledMainMenuWrapper>
+        <ul className={pagesListClassnames}>
+          {homepageSections.map((item: HomepageSectionElement) => (
+            <MenuItem
+              key={uniqid()}
+              item={item}
+              onClick={() => this.handleMenuItemClick()}
+            />
+          ))}
+        </ul>
+        <MobileMenuTrigger
+          onClick={(e: React.MouseEvent) => this.handleTriggerClick(e)}
+        />
+      </StyledMainMenuWrapper>
+    )
+  }
+}
 
 export default MainMenu

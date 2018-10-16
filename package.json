@@ -5,7 +5,10 @@
   "author": "Piotr Kwiecinski <piotr.kwiecinski@codemanufacure.com>",
   "private": true,
   "dependencies": {
+    "@types/classnames": "^2.2.6",
+    "@types/uniqid": "^4.1.2",
     "babel-plugin-styled-components": "^1.5.1",
+    "classnames": "^2.2.6",
     "gatsby": "^2.0.18",
     "gatsby-plugin-google-tagmanager": "^2.0.0",
     "gatsby-plugin-react-helmet": "^3.0.0",
@@ -23,7 +26,8 @@
     "react-helmet": "^5.2.0",
     "styled-components": "^3.3.3",
     "ts-loader": "^3.0",
-    "typescript": "^3.1.3"
+    "typescript": "^3.1.3",
+    "uniqid": "^5.0.3"
   },
   "homepage": "https://codemanufacture.com/",
   "keywords": [

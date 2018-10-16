@@ -4,6 +4,14 @@ import { injectGlobal } from 'styled-components'
 injectGlobal`
   @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
+  * {
+    &,
+    &:before,
+    &:after {
+      box-sizing: border-box;
+    }
+  }
+
   img {
     display: block;
     max-width: 100%;
