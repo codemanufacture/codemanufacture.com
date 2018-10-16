@@ -1,4 +1,4 @@
-module.exports = (plop) => {
+module.exports = plop => {
   plop.setGenerator(`pure-component`, {
     description: `Add pure component`,
     prompts: [
@@ -27,7 +27,7 @@ module.exports = (plop) => {
     prompts: [
       {
         type: `input`,
-        name: 'title',
+        name: `title`,
         message: `Title?`,
       },
       {
@@ -36,7 +36,7 @@ module.exports = (plop) => {
         message: `Slug?`
       }
     ],
-    actions: (data) => {
+    actions: data => {
       const kebabCase = plop.getHelper(`kebabCase`)
       const { slug, title } = data
 
