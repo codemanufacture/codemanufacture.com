@@ -6,11 +6,19 @@ module.exports = {
     title: `Codemanufacture - AWS and Magento Consultancy`,
   },
   plugins: [
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content`,
+        name: `content`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/pages/`,
-        name: `pages`
+        name: `pages`,
       },
     },
     `gatsby-transformer-remark`,
