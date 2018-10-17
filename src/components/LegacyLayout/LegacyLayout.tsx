@@ -4,6 +4,7 @@ import LegacyHeader from '../LegacyHeader'
 import * as favicon from '../../images/favicon.ico'
 import { StaticQuery, graphql } from 'gatsby'
 import Container from '../PageContainer'
+import GlobalStyle from '../../theme/globalStyle'
 
 const LegacyLayout: React.SFC = ({ children }) => (
   <StaticQuery
@@ -37,6 +38,7 @@ const LegacyLayout: React.SFC = ({ children }) => (
           />
           <link rel="icon" type="image/ico" href={favicon} />
         </Helmet>
+        <GlobalStyle />
         <LegacyHeader siteTitle={data.site.siteMetadata.title} />
         <Container>{children}</Container>
       </>

@@ -70,6 +70,7 @@
     "@types/react-dom": "^16.0.5",
     "@types/react-helmet": "^5.0.6",
     "@types/react-test-renderer": "^16.0.3",
+    "@types/styled-components": "^4.0.1",
     "babel-core": "^7.0.0-0",
     "babel-jest": "^23.6.0",
     "husky": "^1.1.2",
