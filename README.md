@@ -8,33 +8,33 @@ The code base for the [Codemanufacture](https://codemanufacture.com/)
 
 ## Table of Contents
 
-* [Features](#features)
-* [Files structure](#files-structure)
-* [Development](#development)
-  * [Prerequisites](#prerequisites)
-  * [Installation](#installation)
-  * [Running locally](#running-locally)
-  * [Available Scripts](#available-scripts)
+- [Features](#features)
+- [Files structure](#files-structure)
+- [Development](#development)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Running locally](#running-locally)
+  - [Available Scripts](#available-scripts)
 
 ## Features
 
-* [Gatsby 2.0](https://www.gatsbyjs.org/) - a static site generator with following plugins:
-  * [Google Tag Manager](https://www.gatsbyjs.org/packages/gatsby-plugin-google-tagmanager)
-  * [Robots.tx](https://www.gatsbyjs.org/packages/gatsby-plugin-robots-txt)
-  * [Sitemap](https://www.gatsbyjs.org/packages/gatsby-plugin-sitemap)
-  * [Styled Components](https://www.gatsbyjs.org/packages/gatsby-plugin-styled-components/)
-  * [Typescript](https://www.gatsbyjs.org/packages/gatsby-plugin-typescript)
-* Development, QA Tools and automation
-  * [CircleCI](https://circleci.com/) - a deployment pipeline
-  * [Prettier](https://prettier.io/) - an opinionated code formatter
-  * [Stylelint](https://stylelint.io/)
-  * [Typescript](https://www.typescriptlang.org/) - a typed superset of JavaScript
-  * [tslint](https://palantir.github.io/tslint/) - linter for TypeScript
-* Marketing & SEO
-  * [Google Tag Manager](https://support.google.com/tagmanager/answer/6102821?hl=en)
-  * [Helmet](https://github.com/nfl/react-helmet)
-  * [Robots.txt](https://moz.com/learn/seo/robotstxt)
-  * [Sitemap](https://www.sitemaps.org/protocol.html)
+- [Gatsby 2.0](https://www.gatsbyjs.org/) - a static site generator with following plugins:
+  - [Google Tag Manager](https://www.gatsbyjs.org/packages/gatsby-plugin-google-tagmanager)
+  - [Robots.tx](https://www.gatsbyjs.org/packages/gatsby-plugin-robots-txt)
+  - [Sitemap](https://www.gatsbyjs.org/packages/gatsby-plugin-sitemap)
+  - [Styled Components](https://www.gatsbyjs.org/packages/gatsby-plugin-styled-components/)
+  - [Typescript](https://www.gatsbyjs.org/packages/gatsby-plugin-typescript)
+- Development, QA Tools and automation
+  - [CircleCI](https://circleci.com/) - a deployment pipeline
+  - [Prettier](https://prettier.io/) - an opinionated code formatter
+  - [Stylelint](https://stylelint.io/)
+  - [Typescript](https://www.typescriptlang.org/) - a typed superset of JavaScript
+  - [tslint](https://palantir.github.io/tslint/) - linter for TypeScript
+- Marketing & SEO
+  - [Google Tag Manager](https://support.google.com/tagmanager/answer/6102821?hl=en)
+  - [Helmet](https://github.com/nfl/react-helmet)
+  - [Robots.txt](https://moz.com/learn/seo/robotstxt)
+  - [Sitemap](https://www.sitemaps.org/protocol.html)
 
 ## Files structure
 
@@ -127,8 +127,8 @@ Runs prettier on source files to print differences from formatting standards
 
 Code generator for common tasks:
 
-* Creation of new page
-* Creation of new pure component
+- Creation of new page
+- Creation of new pure component
 
 #### `yarn serve`
 
