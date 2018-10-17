@@ -44,7 +44,7 @@ jobs:
       - <<: *restore_cache
       - <<: *install_node_modules
       - <<: *persist_cache
-      - run: yarn lint
+      - run: yarn ci-check
 
   type_check:
     executor: node
