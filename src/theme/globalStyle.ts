@@ -1,7 +1,6 @@
-import { injectGlobal } from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 
-/* tslint:disable no-unused-expression */
-injectGlobal`
+const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
   * {
@@ -31,3 +30,5 @@ injectGlobal`
     line-height: 1.6;
   }
 `
+
+export default GlobalStyle
