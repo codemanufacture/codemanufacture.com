@@ -84,11 +84,13 @@ const ComingSoon = () => (
         <h3>Contact</h3>
         <p>Need help in meantime or just want to say hello?</p>
         <p>
-          Email:{` `}
+          Email:
+          {` `}
           <a href="mailto:contact@codemanufacture.com">
             contact@codemanufacture.com
           </a>
-          <br />Call: +44 7951608683
+          <br />
+          Call: +44 7951608683
         </p>
         <p>
           <Link to="/privacy-policy/">Privacy policy</Link>
