@@ -20,7 +20,7 @@ aliases:
     restore_cache:
       name: Restore node_modules cache
       keys:
-        - codemanufacturecom-{{ .Branch }}-{{ checksum "yarn.lock" }}
+        - yarn-codemanufacturecom-{{ checksum "yarn.lock" }}
 
   install_node_modules: &install_node_modules
     run:
@@ -30,10 +30,9 @@ aliases:
   persist_cache: &persist_cache
     save_cache:
       name: Save node modules cache
-      keys:
-        - codemanufacturecom-{{ .Branch }}-{{ checksum "yarn.lock" }}
+      key: yarn-codemanufacturecom-{{ checksum "yarn.lock" }}
       paths:
-        - node_modules
+        - ~/.cache
 
 version: 2.1
 
