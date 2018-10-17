@@ -9,7 +9,7 @@ executors:
 
   python:
     parameters:
-      images:
+      image:
         type: string
         default: "2.7"
     docker:
