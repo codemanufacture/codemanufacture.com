@@ -1,30 +1,51 @@
-version: 2
+executors:
+  node:
+    parameters:
+      image:
+        type: string
+        default: "8"
+    docker:
+    - image: circleci/node:<< parameters.image >>
+
+  python:
+    parameters:
+      images:
+        type: string
+        default: "2.7"
+    docker:
+      - image: circleci/python:<< parameters.image >>
+
+aliases:
+  restore_cache: &restore_cache
+    restore_cache:
+      name: Restore node_modules cache
+      keys:
+        - codemanufacturecom-{{ .Branch }}-{{ checksum "yarn.lock" }}
+
+  install_node_modules: &install_node_modules
+    run:
+      name: Install node.js dependencies
+      command: yarn --frozen-lockfile
+
+  persist_cache: &persist_cache
+    save_cache:
+      name: Save node modules cache
+      keys:
+        - codemanufacturecom-{{ .Branch }}-{{ checksum "yarn.lock" }}
+      paths:
+        - node_modules
+
+version: 2.1
 
 jobs:
   build:
+    executor: node
     docker:
       - image: circleci/node:8.11-jessie
-    working_directory: ~/repo
+        working_directory: ~/repo
     steps:
       - checkout
-      - restore_cache:
-          key: codemanufacturecom-{{ .Branch }}-{{ checksum "yarn.lock" }}
-      - run:
-          name: Install node.js dependencies
-          command: yarn install
-      - save_cache:
-          key: codemanufacturecom-{{ .Branch }}-{{ checksum "yarn.lock" }}
-          paths:
-            - node_modules
-      - run:
-          name: Check Prettier, TSLint, Type Check
-          command: yarn ci-check
-      - run:
-          name: Unit tests
-          command: yarn test
-      - run:
-          name: Build the website
-          command: yarn build
+      - run: yarn build
       - store_artifacts:
           path: public
           destination: codemanufacturecom-website
@@ -32,9 +53,37 @@ jobs:
           root: ~/repo
           paths:
             - public
+  lint:
+    executor: node
+    steps:
+      - checkout
+      - <<: *restore_cache
+      - <<: *install_node_modules
+      - <<: *persist_cache
+      - run: yarn lint
+
+  type_check:
+    executor: node
+    steps:
+      - checkout
+      - <<: *restore_cache
+      - <<: *install_node_modules
+      - <<: *persist_cache
+      - run: yarn type-check
+
+  unit_tests:
+    executor:
+      name: node
+      image: "8"
+    steps:
+      - checkout
+      - <<: *restore_cache
+      - <<: *install_node_modules
+      - <<: *persist_cache
+      - run: yarn test
+
   deploy:
-    docker:
-      - image: circleci/python:2.7
+    executor: python
     working_directory: ~/
     steps:
       - attach_workspace:
@@ -45,11 +94,20 @@ jobs:
       - run:
           name: Deploy to S3
           command: aws s3 sync repo/public s3://codemanufacture.com/ --delete
+
 workflows:
   version: 2
   build-test-deploy:
     jobs:
-      - build
+      - lint
+      - type_check
+      - unit_tests:
+          requires:
+            - lint
+            - type_check
+      - build:
+          requires:
+            - unit_tests
       - deploy:
           requires:
             - build

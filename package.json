@@ -37,7 +37,7 @@
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
-    "ci-check": "yarn run:parallel lint:* nit:* type-check",
+    "ci-check": "yarn run:parallel lint:* nit:*",
     "develop": "gatsby develop -H 0.0.0.0",
     "lint-staged": "lint-staged",
     "format:markdown": "prettier --config .prettierrc --parser markdown --write '{./content/**/*.md,./README.md}'",
