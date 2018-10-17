@@ -25,7 +25,7 @@
     "react-dom": "^16.4.2",
     "react-helmet": "^5.2.0",
     "styled-components": "^4.0.0",
-    "ts-loader": "^3.0",
+    "ts-loader": "^5.0.0",
     "typescript": "^3.1.3",
     "uniqid": "^5.0.3"
   },
@@ -37,7 +37,7 @@
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
-    "ci-check": "yarn run:parallel lint:* nit:* type-check",
+    "ci-check": "yarn run:parallel lint:* nit:*",
     "develop": "gatsby develop -H 0.0.0.0",
     "lint-staged": "lint-staged",
     "format:markdown": "prettier --config .prettierrc --parser markdown --write '{./content/**/*.md,./README.md}'",
