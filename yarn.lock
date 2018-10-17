@@ -6282,10 +6282,10 @@ graphql-codegen-core@0.12.6:
     ts-log "2.1.3"
     winston "3.1.0"
 
-graphql-codegen-typescript-template@^0.9.1:
-  version "0.9.4"
-  resolved "https://registry.yarnpkg.com/graphql-codegen-typescript-template/-/graphql-codegen-typescript-template-0.9.4.tgz#f6e441388a42346991e59465bb43e685c2ea8594"
-  integrity sha1-9uRBOIpCNGmR5ZRlu0PmhcLqhZQ=
+graphql-codegen-typescript-template@^0.12.0:
+  version "0.12.6"
+  resolved "https://registry.yarnpkg.com/graphql-codegen-typescript-template/-/graphql-codegen-typescript-template-0.12.6.tgz#3120089a7aea93373261377b0e0f89792c8bb5ad"
+  integrity sha512-Qn0EvuFwOmUy4drNEugczNdSmpNtFjJ3oJAdvLW1nnM54GNMlm+9LJLmZfifjG1uB4nvKORV9+v3dY2fKrxaKQ==
 
 graphql-config@^2.0.1:
   version "2.1.0"
