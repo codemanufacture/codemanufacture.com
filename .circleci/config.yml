@@ -38,21 +38,6 @@ aliases:
 version: 2.1
 
 jobs:
-  build:
-    executor: node
-    docker:
-      - image: circleci/node:8.11-jessie
-        working_directory: ~/repo
-    steps:
-      - checkout
-      - run: yarn build
-      - store_artifacts:
-          path: public
-          destination: codemanufacturecom-website
-      - persist_to_workspace:
-          root: ~/repo
-          paths:
-            - public
   lint:
     executor: node
     steps:
@@ -81,6 +66,23 @@ jobs:
       - <<: *install_node_modules
       - <<: *persist_cache
       - run: yarn test
+
+  build:
+    executor: node
+    working_directory: ~/repo
+    steps:
+    - checkout
+      - <<: *restore_cache
+      - <<: *install_node_modules
+      - <<: *persist_cache
+    - run: yarn build
+    - store_artifacts:
+        path: public
+        destination: codemanufacturecom-website
+    - persist_to_workspace:
+        root: ~/repo
+        paths:
+        - public
 
   deploy:
     executor: python
