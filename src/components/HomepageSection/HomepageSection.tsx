@@ -1,6 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import { sizes } from '../../theme'
+import ServicesSection from '../ServicesSection'
 
 interface HomepageSectionProps {
   children: object
@@ -21,6 +22,7 @@ const HomepageSection: React.SFC<HomepageSectionProps> = ({
   <StyledHomepageSection id={sectionId}>
     {children}
     {sectionId}
+    <ServicesSection />
   </StyledHomepageSection>
 )
 
