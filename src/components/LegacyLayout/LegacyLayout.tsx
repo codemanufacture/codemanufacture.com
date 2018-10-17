@@ -37,6 +37,7 @@ const LegacyLayout: React.SFC = ({ children }) => (
             content={data.site.siteMetadata.title}
           />
           <link rel="icon" type="image/ico" href={favicon} />
+          <html lang="en" />
         </Helmet>
         <GlobalStyle />
         <LegacyHeader siteTitle={data.site.siteMetadata.title} />
