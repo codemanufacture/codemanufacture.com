@@ -2,18 +2,19 @@ import * as React from 'react'
 import styled from 'styled-components'
 import services, { ServicesElement } from '../../enums/services'
 import { displayDimensions } from '../../theme'
+import ServiceIcon from './ServiceIcon'
 
 const StyledServicesSection = styled.ul`
   display: grid;
+  width: 66%;
+  margin: 0 auto;
+  padding: 0;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   justify-items: center;
   align-content: space-evenly;
   row-gap: 60px;
   list-style: none;
-  width: 66%;
-  margin: 0 auto;
-  padding: 0;
 
   @media (max-width: 960px) {
     width: 100%;
@@ -31,8 +32,8 @@ const StyledServicesSection = styled.ul`
 
     figure {
       display: flex;
-      flex-direction: column;
       margin: auto;
+      flex-direction: column;
     }
 
     img {
@@ -52,19 +53,6 @@ const StyledServicesSection = styled.ul`
     }
   }
 `
-
-interface ServiceIconInterface {
-  service: ServicesElement
-}
-
-const ServiceIcon: React.SFC<ServiceIconInterface> = ({ service }) => (
-  <li>
-    <figure>
-      <img src={`/assets/${service.iconName}.svg`} alt={service.name} />
-      <figcaption>{service.name}</figcaption>
-    </figure>
-  </li>
-)
 
 const ServicesSection = () => (
   <StyledServicesSection>
