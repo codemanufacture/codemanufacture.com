@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ServiceIcon component renders correctly 1`] = `
+<li>
+  <figure>
+    <img
+      alt="service"
+      src="/assets/icon.svg"
+    />
+    <figcaption>
+      service
+    </figcaption>
+  </figure>
+</li>
+`;

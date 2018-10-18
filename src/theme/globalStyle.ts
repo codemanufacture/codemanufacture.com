@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Montserrat');
+  @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700');
 
   * {
     &,
@@ -28,6 +28,11 @@ const GlobalStyle = createGlobalStyle`
     font-size: 21px;
     color: hsla(0, 0%, 0%, 0.8);
     line-height: 1.6;
+  }
+
+  figure {
+    margin: 0;
+    padding: 0;
   }
 `
 

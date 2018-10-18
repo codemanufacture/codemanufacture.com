@@ -8,7 +8,7 @@ interface HomepageSectionProps {
 }
 
 const StyledHomepageSection = styled.section`
-  height: 100vh;
+  min-height: 100vh;
   border-bottom: 1px solid #999;
   padding-top: ${sizes.headerHeight};
   text-align: center;
@@ -17,11 +17,6 @@ const StyledHomepageSection = styled.section`
 const HomepageSection: React.SFC<HomepageSectionProps> = ({
   children,
   sectionId,
-}) => (
-  <StyledHomepageSection id={sectionId}>
-    {children}
-    {sectionId}
-  </StyledHomepageSection>
-)
+}) => <StyledHomepageSection id={sectionId}>{children}</StyledHomepageSection>
 
 export default HomepageSection

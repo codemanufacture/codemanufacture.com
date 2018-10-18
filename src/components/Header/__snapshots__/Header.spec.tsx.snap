@@ -6,7 +6,7 @@ exports[`Header component renders correctly 1`] = `
 >
   <a
     aria-current="page"
-    className="sc-bdVaJa dNEdps"
+    className="sc-bdVaJa dBkIVO"
     href="/"
     onClick={[Function]}
     onMouseEnter={[Function]}
@@ -82,7 +82,7 @@ exports[`Header component renders correctly 1`] = `
       </li>
     </ul>
     <a
-      className="sc-bwzfXH hxTGfe"
+      className="sc-bwzfXH bvpJTi"
       href="#trigger-mobile-menu"
       onClick={[Function]}
     >
