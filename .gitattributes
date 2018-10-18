@@ -1,0 +1,9 @@
+**/*.ts.snap text eol=lf
+**/*.tsx.snap text eol=lf
+**/__tests__/fixtures/** text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.ts text eol=lf linguist-language=JavaScript
+*.tsx text eol=lf linguist-language=JavaScript
+*.md text eol=lf
+.gitattributes text eol=lf
