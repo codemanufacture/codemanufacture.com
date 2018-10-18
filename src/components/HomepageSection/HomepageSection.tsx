@@ -1,7 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import { sizes } from '../../theme'
-import ServicesSection from '../ServicesSection'
 
 interface HomepageSectionProps {
   children: object
@@ -9,7 +8,7 @@ interface HomepageSectionProps {
 }
 
 const StyledHomepageSection = styled.section`
-  height: 100vh;
+  min-height: 100vh;
   border-bottom: 1px solid #999;
   padding-top: ${sizes.headerHeight};
   text-align: center;
@@ -18,12 +17,6 @@ const StyledHomepageSection = styled.section`
 const HomepageSection: React.SFC<HomepageSectionProps> = ({
   children,
   sectionId,
-}) => (
-  <StyledHomepageSection id={sectionId}>
-    {children}
-    {sectionId}
-    <ServicesSection />
-  </StyledHomepageSection>
-)
+}) => <StyledHomepageSection id={sectionId}>{children}</StyledHomepageSection>
 
 export default HomepageSection

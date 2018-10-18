@@ -15,6 +15,7 @@ const StyledLogoWrapper = styled(Link)`
   margin: auto auto auto 0;
 
   @media (max-width: ${displayDimensions.tabletSize}) {
+    width: 210px;
     padding: 15px;
   }
 `

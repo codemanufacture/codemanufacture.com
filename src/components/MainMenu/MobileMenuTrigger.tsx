@@ -8,6 +8,7 @@ const StyledMobileMenuTrigger = styled.a`
   position: absolute;
   right: 0;
   color: ${colors.link};
+  font-size: 12px;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 3px;
