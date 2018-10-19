@@ -8,18 +8,15 @@ const HomePageContentPlaceholder = () => <p>Lorem ipsum dolor sit amet</p>
 
 const HomePage = () => (
   <Layout>
-    <HomepageSection sectionId={menuItems[0].sectionId}>
-      <HomePageContentPlaceholder />
-    </HomepageSection>
-    <HomepageSection sectionId={menuItems[1].sectionId}>
-      <HomePageContentPlaceholder />
-    </HomepageSection>
-    <HomepageSection sectionId={menuItems[2].sectionId}>
-      <ServicesSection />
-    </HomepageSection>
-    <HomepageSection sectionId={menuItems[3].sectionId}>
-      <HomePageContentPlaceholder />
-    </HomepageSection>
+    {menuItems.map(item => (
+      <HomepageSection sectionId={item.sectionId}>
+        {item.sectionId === 'services' ? (
+          <ServicesSection />
+        ) : (
+          <HomePageContentPlaceholder />
+        )}
+      </HomepageSection>
+    ))}
   </Layout>
 )
 

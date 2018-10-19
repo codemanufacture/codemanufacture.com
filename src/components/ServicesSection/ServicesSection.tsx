@@ -37,7 +37,7 @@ const StyledServicesSection = styled.ul`
     }
 
     img {
-      max-height: 60px;
+      max-height: 100px;
       margin: auto auto 30px auto;
 
       @media (max-width: ${displayDimensions.tabletSize}) {
@@ -55,11 +55,17 @@ const StyledServicesSection = styled.ul`
 `
 
 const ServicesSection = () => (
-  <StyledServicesSection>
-    {services.map((service: ServicesElement) => (
-      <ServiceIcon key={`service-icon-${service.iconName}`} service={service} />
-    ))}
-  </StyledServicesSection>
+  <React.Fragment>
+    <h2>Services</h2>
+    <StyledServicesSection>
+      {services.map((service: ServicesElement) => (
+        <ServiceIcon
+          key={`service-icon-${service.iconName}`}
+          service={service}
+        />
+      ))}
+    </StyledServicesSection>
+  </React.Fragment>
 )
 
 export default ServicesSection
