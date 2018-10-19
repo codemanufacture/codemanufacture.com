@@ -1,8 +1,12 @@
+const config = {
+  siteUrl: `https://codemanufacture.com`,
+}
+
 module.exports = {
   siteMetadata: {
     description: `Ecommerce, AWS Consultancy and tech blog`,
     keywords: `magento, node.js, aws, react, serverless`,
-    siteUrl: `https://codemanufacture.com`,
+    siteUrl: config.siteUrl,
     title: `Codemanufacture - AWS and Magento Consultancy`,
   },
   plugins: [
@@ -38,5 +42,11 @@ module.exports = {
     `gatsby-plugin-robots-txt`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-typescript`,
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: config.siteUrl,
+      },
+    },
   ],
 }
