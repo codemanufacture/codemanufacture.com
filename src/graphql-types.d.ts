@@ -47,6 +47,7 @@ export interface Query {
   allFile?: FileConnection | null /** Connection to all File nodes */
   allAuthorJson?: AuthorJsonConnection | null /** Connection to all AuthorJson nodes */
   allMarkdownRemark?: MarkdownRemarkConnection | null /** Connection to all MarkdownRemark nodes */
+  allServicesJson?: ServicesJsonConnection | null /** Connection to all ServicesJson nodes */
   sitePage?: SitePage | null
   sitePlugin?: SitePlugin | null
   site?: Site | null
@@ -54,6 +55,7 @@ export interface Query {
   file?: File | null
   authorJson?: AuthorJson | null
   markdownRemark?: MarkdownRemark | null
+  servicesJson?: ServicesJson | null
 }
 /** A connection to a list of items. */
 export interface SitePageConnection {
@@ -87,7 +89,7 @@ export interface SitePage extends Node {
   pluginCreator?: SitePlugin | null
   pluginCreatorId?: string | null
   componentPath?: string | null
-  internal?: Internal_8 | null
+  internal?: Internal_9 | null
 }
 
 export interface Context {
@@ -103,17 +105,20 @@ export interface SitePlugin extends Node {
   version?: string | null
   pluginOptions?: PluginOptions_2 | null
   nodeAPIs?: (string | null)[] | null
+  browserAPIs?: (string | null)[] | null
   ssrAPIs?: (string | null)[] | null
   pluginFilepath?: string | null
   packageJson?: PackageJson_2 | null
-  internal?: Internal_9 | null
+  internal?: Internal_10 | null
 }
 
 export interface PluginOptions_2 {
   path?: string | null
   name?: string | null
+  exclude?: (string | null)[] | null
   id?: string | null
   includeInDevelopment?: boolean | null
+  siteUrl?: string | null
   pathCheck?: boolean | null
 }
 
@@ -145,13 +150,13 @@ export interface PeerDependencies_2 {
   version?: string | null
 }
 
-export interface Internal_9 {
+export interface Internal_10 {
   contentDigest?: string | null
   type?: string | null
   owner?: string | null
 }
 
-export interface Internal_8 {
+export interface Internal_9 {
   type?: string | null
   contentDigest?: string | null
   description?: string | null
@@ -220,7 +225,7 @@ export interface Directory extends Node {
   id: string /** The id of this node. */
   parent?: Node | null /** The parent of this node. */
   children?: (Node | null)[] | null /** The children of this node. */
-  internal?: Internal_10 | null
+  internal?: Internal_11 | null
   sourceInstanceName?: string | null
   absolutePath?: string | null
   relativePath?: string | null
@@ -256,7 +261,7 @@ export interface Directory extends Node {
   birthtime?: Date | null
 }
 
-export interface Internal_10 {
+export interface Internal_11 {
   contentDigest?: string | null
   type?: string | null
   description?: string | null
@@ -297,7 +302,10 @@ export interface File extends Node {
   children?: (Node | null)[] | null /** The children of this node. */
   childAuthorJson?: AuthorJson | null /** The child of this node of type authorJson */
   childMarkdownRemark?: MarkdownRemark | null /** The child of this node of type markdownRemark */
-  internal?: Internal_11 | null
+  childrenServicesJson?:
+    | (ServicesJson | null)[]
+    | null /** The children of this node of type servicesJson */
+  internal?: Internal_12 | null
   sourceInstanceName?: string | null
   absolutePath?: string | null
   relativePath?: string | null
@@ -345,10 +353,10 @@ export interface AuthorJson extends Node {
   github?: string | null
   twitter?: string | null
   avatar?: File | null
-  internal?: Internal_12 | null
+  internal?: Internal_13 | null
 }
 
-export interface Internal_12 {
+export interface Internal_13 {
   contentDigest?: string | null
   type?: string | null
   owner?: string | null
@@ -358,7 +366,7 @@ export interface MarkdownRemark extends Node {
   id: string /** The id of this node. */
   parent?: Node | null /** The parent of this node. */
   children?: (Node | null)[] | null /** The children of this node. */
-  internal?: Internal_13 | null
+  internal?: Internal_14 | null
   frontmatter?: Frontmatter_2 | null
   rawMarkdownBody?: string | null
   fileAbsolutePath?: string | null
@@ -372,7 +380,7 @@ export interface MarkdownRemark extends Node {
   wordCount?: WordCount | null
 }
 
-export interface Internal_13 {
+export interface Internal_14 {
   content?: string | null
   type?: string | null
   contentDigest?: string | null
@@ -403,8 +411,23 @@ export interface WordCount {
   sentences?: number | null
   words?: number | null
 }
+/** Node of type ServicesJson */
+export interface ServicesJson extends Node {
+  id: string /** The id of this node. */
+  parent?: Node | null /** The parent of this node. */
+  children?: (Node | null)[] | null /** The children of this node. */
+  iconName?: string | null
+  name?: string | null
+  internal?: Internal_15 | null
+}
 
-export interface Internal_11 {
+export interface Internal_15 {
+  contentDigest?: string | null
+  type?: string | null
+  owner?: string | null
+}
+
+export interface Internal_12 {
   contentDigest?: string | null
   type?: string | null
   mediaType?: string | null
@@ -485,6 +508,36 @@ export interface MarkdownRemarkGroupConnectionEdge {
   next?: MarkdownRemark | null /** The next edge in the connection */
   previous?: MarkdownRemark | null /** The previous edge in the connection */
 }
+/** A connection to a list of items. */
+export interface ServicesJsonConnection {
+  pageInfo: PageInfo /** Information to aid in pagination. */
+  edges?: (ServicesJsonEdge | null)[] | null /** A list of edges. */
+  totalCount?: number | null
+  distinct?: (string | null)[] | null
+  group?: (ServicesJsonGroupConnectionConnection | null)[] | null
+}
+/** An edge in a connection. */
+export interface ServicesJsonEdge {
+  node?: ServicesJson | null /** The item at the end of the edge */
+  next?: ServicesJson | null /** The next edge in the connection */
+  previous?: ServicesJson | null /** The previous edge in the connection */
+}
+/** A connection to a list of items. */
+export interface ServicesJsonGroupConnectionConnection {
+  pageInfo: PageInfo /** Information to aid in pagination. */
+  edges?:
+    | (ServicesJsonGroupConnectionEdge | null)[]
+    | null /** A list of edges. */
+  field?: string | null
+  fieldValue?: string | null
+  totalCount?: number | null
+}
+/** An edge in a connection. */
+export interface ServicesJsonGroupConnectionEdge {
+  node?: ServicesJson | null /** The item at the end of the edge */
+  next?: ServicesJson | null /** The next edge in the connection */
+  previous?: ServicesJson | null /** The previous edge in the connection */
+}
 /** Node of type Site */
 export interface Site extends Node {
   id: string /** The id of this node. */
@@ -496,7 +549,7 @@ export interface Site extends Node {
   pathPrefix?: string | null
   polyfill?: boolean | null
   buildTime?: Date | null
-  internal?: Internal_14 | null
+  internal?: Internal_16 | null
 }
 
 export interface SiteMetadata_2 {
@@ -506,7 +559,7 @@ export interface SiteMetadata_2 {
   title?: string | null
 }
 
-export interface Internal_14 {
+export interface Internal_16 {
   contentDigest?: string | null
   type?: string | null
   owner?: string | null
@@ -596,6 +649,7 @@ export interface SitePageConnectionPluginCreatorInputObject {
   version?: SitePageConnectionPluginCreatorVersionQueryString | null
   pluginOptions?: SitePageConnectionPluginCreatorPluginOptionsInputObject | null
   nodeAPIs?: SitePageConnectionPluginCreatorNodeApIsQueryList | null
+  browserAPIs?: SitePageConnectionPluginCreatorBrowserApIsQueryList | null
   ssrAPIs?: SitePageConnectionPluginCreatorSsrApIsQueryList | null
   pluginFilepath?: SitePageConnectionPluginCreatorPluginFilepathQueryString | null
   packageJson?: SitePageConnectionPluginCreatorPackageJsonInputObject | null
@@ -642,8 +696,10 @@ export interface SitePageConnectionPluginCreatorVersionQueryString {
 export interface SitePageConnectionPluginCreatorPluginOptionsInputObject {
   path?: SitePageConnectionPluginCreatorPluginOptionsPathQueryString | null
   name?: SitePageConnectionPluginCreatorPluginOptionsNameQueryString | null
+  exclude?: SitePageConnectionPluginCreatorPluginOptionsExcludeQueryList | null
   id?: SitePageConnectionPluginCreatorPluginOptionsIdQueryString | null
   includeInDevelopment?: SitePageConnectionPluginCreatorPluginOptionsIncludeInDevelopmentQueryBoolean | null
+  siteUrl?: SitePageConnectionPluginCreatorPluginOptionsSiteUrlQueryString | null
   pathCheck?: SitePageConnectionPluginCreatorPluginOptionsPathCheckQueryBoolean | null
 }
 
@@ -657,6 +713,15 @@ export interface SitePageConnectionPluginCreatorPluginOptionsPathQueryString {
 }
 
 export interface SitePageConnectionPluginCreatorPluginOptionsNameQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsExcludeQueryList {
   eq?: string | null
   ne?: string | null
   regex?: string | null
@@ -681,6 +746,15 @@ export interface SitePageConnectionPluginCreatorPluginOptionsIncludeInDevelopmen
   nin?: (boolean | null)[] | null
 }
 
+export interface SitePageConnectionPluginCreatorPluginOptionsSiteUrlQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
 export interface SitePageConnectionPluginCreatorPluginOptionsPathCheckQueryBoolean {
   eq?: boolean | null
   ne?: boolean | null
@@ -689,6 +763,15 @@ export interface SitePageConnectionPluginCreatorPluginOptionsPathCheckQueryBoole
 }
 
 export interface SitePageConnectionPluginCreatorNodeApIsQueryList {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface SitePageConnectionPluginCreatorBrowserApIsQueryList {
   eq?: string | null
   ne?: string | null
   regex?: string | null
@@ -996,6 +1079,7 @@ export interface FilterSitePlugin {
   version?: SitePluginConnectionVersionQueryString_2 | null
   pluginOptions?: SitePluginConnectionPluginOptionsInputObject_2 | null
   nodeAPIs?: SitePluginConnectionNodeApIsQueryList_2 | null
+  browserAPIs?: SitePluginConnectionBrowserApIsQueryList_2 | null
   ssrAPIs?: SitePluginConnectionSsrApIsQueryList_2 | null
   pluginFilepath?: SitePluginConnectionPluginFilepathQueryString_2 | null
   packageJson?: SitePluginConnectionPackageJsonInputObject_2 | null
@@ -1041,8 +1125,10 @@ export interface SitePluginConnectionVersionQueryString_2 {
 export interface SitePluginConnectionPluginOptionsInputObject_2 {
   path?: SitePluginConnectionPluginOptionsPathQueryString_2 | null
   name?: SitePluginConnectionPluginOptionsNameQueryString_2 | null
+  exclude?: SitePluginConnectionPluginOptionsExcludeQueryList_2 | null
   id?: SitePluginConnectionPluginOptionsIdQueryString_2 | null
   includeInDevelopment?: SitePluginConnectionPluginOptionsIncludeInDevelopmentQueryBoolean_2 | null
+  siteUrl?: SitePluginConnectionPluginOptionsSiteUrlQueryString_2 | null
   pathCheck?: SitePluginConnectionPluginOptionsPathCheckQueryBoolean_2 | null
 }
 
@@ -1056,6 +1142,15 @@ export interface SitePluginConnectionPluginOptionsPathQueryString_2 {
 }
 
 export interface SitePluginConnectionPluginOptionsNameQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface SitePluginConnectionPluginOptionsExcludeQueryList_2 {
   eq?: string | null
   ne?: string | null
   regex?: string | null
@@ -1080,6 +1175,15 @@ export interface SitePluginConnectionPluginOptionsIncludeInDevelopmentQueryBoole
   nin?: (boolean | null)[] | null
 }
 
+export interface SitePluginConnectionPluginOptionsSiteUrlQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
 export interface SitePluginConnectionPluginOptionsPathCheckQueryBoolean_2 {
   eq?: boolean | null
   ne?: boolean | null
@@ -1088,6 +1192,15 @@ export interface SitePluginConnectionPluginOptionsPathCheckQueryBoolean_2 {
 }
 
 export interface SitePluginConnectionNodeApIsQueryList_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface SitePluginConnectionBrowserApIsQueryList_2 {
   eq?: string | null
   ne?: string | null
   regex?: string | null
@@ -2512,6 +2625,78 @@ export interface WordCountWordsQueryInt_4 {
   nin?: (number | null)[] | null
 }
 
+export interface ServicesJsonConnectionSort {
+  fields: (ServicesJsonConnectionSortByFieldsEnum | null)[]
+  order?: ServicesJsonConnectionSortOrderValues | null
+}
+/** Filter connection on its fields */
+export interface FilterServicesJson {
+  iconName?: ServicesJsonConnectionIconNameQueryString_2 | null
+  name?: ServicesJsonConnectionNameQueryString_2 | null
+  id?: ServicesJsonConnectionIdQueryString_2 | null
+  internal?: ServicesJsonConnectionInternalInputObject_2 | null
+}
+
+export interface ServicesJsonConnectionIconNameQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface ServicesJsonConnectionNameQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface ServicesJsonConnectionIdQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface ServicesJsonConnectionInternalInputObject_2 {
+  contentDigest?: ServicesJsonConnectionInternalContentDigestQueryString_2 | null
+  type?: ServicesJsonConnectionInternalTypeQueryString_2 | null
+  owner?: ServicesJsonConnectionInternalOwnerQueryString_2 | null
+}
+
+export interface ServicesJsonConnectionInternalContentDigestQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface ServicesJsonConnectionInternalTypeQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface ServicesJsonConnectionInternalOwnerQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
 export interface SitePageJsonNameQueryString {
   eq?: string | null
   ne?: string | null
@@ -2577,6 +2762,7 @@ export interface SitePagePluginCreatorInputObject {
   version?: SitePagePluginCreatorVersionQueryString | null
   pluginOptions?: SitePagePluginCreatorPluginOptionsInputObject | null
   nodeAPIs?: SitePagePluginCreatorNodeApIsQueryList | null
+  browserAPIs?: SitePagePluginCreatorBrowserApIsQueryList | null
   ssrAPIs?: SitePagePluginCreatorSsrApIsQueryList | null
   pluginFilepath?: SitePagePluginCreatorPluginFilepathQueryString | null
   packageJson?: SitePagePluginCreatorPackageJsonInputObject | null
@@ -2623,8 +2809,10 @@ export interface SitePagePluginCreatorVersionQueryString {
 export interface SitePagePluginCreatorPluginOptionsInputObject {
   path?: SitePagePluginCreatorPluginOptionsPathQueryString | null
   name?: SitePagePluginCreatorPluginOptionsNameQueryString | null
+  exclude?: SitePagePluginCreatorPluginOptionsExcludeQueryList | null
   id?: SitePagePluginCreatorPluginOptionsIdQueryString | null
   includeInDevelopment?: SitePagePluginCreatorPluginOptionsIncludeInDevelopmentQueryBoolean | null
+  siteUrl?: SitePagePluginCreatorPluginOptionsSiteUrlQueryString | null
   pathCheck?: SitePagePluginCreatorPluginOptionsPathCheckQueryBoolean | null
 }
 
@@ -2638,6 +2826,15 @@ export interface SitePagePluginCreatorPluginOptionsPathQueryString {
 }
 
 export interface SitePagePluginCreatorPluginOptionsNameQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface SitePagePluginCreatorPluginOptionsExcludeQueryList {
   eq?: string | null
   ne?: string | null
   regex?: string | null
@@ -2662,6 +2859,15 @@ export interface SitePagePluginCreatorPluginOptionsIncludeInDevelopmentQueryBool
   nin?: (boolean | null)[] | null
 }
 
+export interface SitePagePluginCreatorPluginOptionsSiteUrlQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
 export interface SitePagePluginCreatorPluginOptionsPathCheckQueryBoolean {
   eq?: boolean | null
   ne?: boolean | null
@@ -2670,6 +2876,15 @@ export interface SitePagePluginCreatorPluginOptionsPathCheckQueryBoolean {
 }
 
 export interface SitePagePluginCreatorNodeApIsQueryList {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface SitePagePluginCreatorBrowserApIsQueryList {
   eq?: string | null
   ne?: string | null
   regex?: string | null
@@ -3004,8 +3219,10 @@ export interface SitePluginVersionQueryString_2 {
 export interface SitePluginPluginOptionsInputObject_2 {
   path?: SitePluginPluginOptionsPathQueryString_2 | null
   name?: SitePluginPluginOptionsNameQueryString_2 | null
+  exclude?: SitePluginPluginOptionsExcludeQueryList_2 | null
   id?: SitePluginPluginOptionsIdQueryString_2 | null
   includeInDevelopment?: SitePluginPluginOptionsIncludeInDevelopmentQueryBoolean_2 | null
+  siteUrl?: SitePluginPluginOptionsSiteUrlQueryString_2 | null
   pathCheck?: SitePluginPluginOptionsPathCheckQueryBoolean_2 | null
 }
 
@@ -3019,6 +3236,15 @@ export interface SitePluginPluginOptionsPathQueryString_2 {
 }
 
 export interface SitePluginPluginOptionsNameQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface SitePluginPluginOptionsExcludeQueryList_2 {
   eq?: string | null
   ne?: string | null
   regex?: string | null
@@ -3043,6 +3269,15 @@ export interface SitePluginPluginOptionsIncludeInDevelopmentQueryBoolean_2 {
   nin?: (boolean | null)[] | null
 }
 
+export interface SitePluginPluginOptionsSiteUrlQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
 export interface SitePluginPluginOptionsPathCheckQueryBoolean_2 {
   eq?: boolean | null
   ne?: boolean | null
@@ -3051,6 +3286,15 @@ export interface SitePluginPluginOptionsPathCheckQueryBoolean_2 {
 }
 
 export interface SitePluginNodeApIsQueryList_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface SitePluginBrowserApIsQueryList_2 {
   eq?: string | null
   ne?: string | null
   regex?: string | null
@@ -4480,6 +4724,66 @@ export interface WordCountWordsQueryInt_3 {
   in?: (number | null)[] | null
   nin?: (number | null)[] | null
 }
+
+export interface ServicesJsonIconNameQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface ServicesJsonNameQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface ServicesJsonIdQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface ServicesJsonInternalInputObject_2 {
+  contentDigest?: ServicesJsonInternalContentDigestQueryString_2 | null
+  type?: ServicesJsonInternalTypeQueryString_2 | null
+  owner?: ServicesJsonInternalOwnerQueryString_2 | null
+}
+
+export interface ServicesJsonInternalContentDigestQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface ServicesJsonInternalTypeQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface ServicesJsonInternalOwnerQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
 export interface AllSitePageQueryArgs {
   skip?: number | null
   limit?: number | null
@@ -4516,6 +4820,12 @@ export interface AllMarkdownRemarkQueryArgs {
   sort?: MarkdownRemarkConnectionSort | null
   filter?: FilterMarkdownRemark | null
 }
+export interface AllServicesJsonQueryArgs {
+  skip?: number | null
+  limit?: number | null
+  sort?: ServicesJsonConnectionSort | null
+  filter?: FilterServicesJson | null
+}
 export interface SitePageQueryArgs {
   jsonName?: SitePageJsonNameQueryString | null
   internalComponentName?: SitePageInternalComponentNameQueryString | null
@@ -4536,6 +4846,7 @@ export interface SitePluginQueryArgs {
   version?: SitePluginVersionQueryString_2 | null
   pluginOptions?: SitePluginPluginOptionsInputObject_2 | null
   nodeAPIs?: SitePluginNodeApIsQueryList_2 | null
+  browserAPIs?: SitePluginBrowserApIsQueryList_2 | null
   ssrAPIs?: SitePluginSsrApIsQueryList_2 | null
   pluginFilepath?: SitePluginPluginFilepathQueryString_2 | null
   packageJson?: SitePluginPackageJsonInputObject_2 | null
@@ -4648,6 +4959,12 @@ export interface MarkdownRemarkQueryArgs {
   timeToRead?: TimeToReadQueryInt_3 | null
   tableOfContents?: TableOfContentsQueryString_3 | null
   wordCount?: WordCountTypeName_3 | null
+}
+export interface ServicesJsonQueryArgs {
+  iconName?: ServicesJsonIconNameQueryString_2 | null
+  name?: ServicesJsonNameQueryString_2 | null
+  id?: ServicesJsonIdQueryString_2 | null
+  internal?: ServicesJsonInternalInputObject_2 | null
 }
 export interface DistinctSitePageConnectionArgs {
   field?: SitePageDistinctEnum | null
@@ -4931,6 +5248,14 @@ export interface GroupMarkdownRemarkConnectionArgs {
   limit?: number | null
   field?: MarkdownRemarkGroupEnum | null
 }
+export interface DistinctServicesJsonConnectionArgs {
+  field?: ServicesJsonDistinctEnum | null
+}
+export interface GroupServicesJsonConnectionArgs {
+  skip?: number | null
+  limit?: number | null
+  field?: ServicesJsonGroupEnum | null
+}
 export interface PortSiteArgs {
   formatString?:
     | string
@@ -5026,10 +5351,13 @@ export enum SitePluginConnectionSortByFieldsEnum {
   version = 'version',
   pluginOptions___path = 'pluginOptions___path',
   pluginOptions___name = 'pluginOptions___name',
+  pluginOptions___exclude = 'pluginOptions___exclude',
   pluginOptions___id = 'pluginOptions___id',
   pluginOptions___includeInDevelopment = 'pluginOptions___includeInDevelopment',
+  pluginOptions___siteUrl = 'pluginOptions___siteUrl',
   pluginOptions___pathCheck = 'pluginOptions___pathCheck',
   nodeAPIs = 'nodeAPIs',
+  browserAPIs = 'browserAPIs',
   ssrAPIs = 'ssrAPIs',
   pluginFilepath = 'pluginFilepath',
   packageJson___name = 'packageJson___name',
@@ -5060,10 +5388,13 @@ export enum SitePluginDistinctEnum {
   version = 'version',
   pluginOptions___path = 'pluginOptions___path',
   pluginOptions___name = 'pluginOptions___name',
+  pluginOptions___exclude = 'pluginOptions___exclude',
   pluginOptions___id = 'pluginOptions___id',
   pluginOptions___includeInDevelopment = 'pluginOptions___includeInDevelopment',
+  pluginOptions___siteUrl = 'pluginOptions___siteUrl',
   pluginOptions___pathCheck = 'pluginOptions___pathCheck',
   nodeAPIs = 'nodeAPIs',
+  browserAPIs = 'browserAPIs',
   ssrAPIs = 'ssrAPIs',
   pluginFilepath = 'pluginFilepath',
   packageJson___name = 'packageJson___name',
@@ -5089,10 +5420,13 @@ export enum SitePluginGroupEnum {
   version = 'version',
   pluginOptions___path = 'pluginOptions___path',
   pluginOptions___name = 'pluginOptions___name',
+  pluginOptions___exclude = 'pluginOptions___exclude',
   pluginOptions___id = 'pluginOptions___id',
   pluginOptions___includeInDevelopment = 'pluginOptions___includeInDevelopment',
+  pluginOptions___siteUrl = 'pluginOptions___siteUrl',
   pluginOptions___pathCheck = 'pluginOptions___pathCheck',
   nodeAPIs = 'nodeAPIs',
+  browserAPIs = 'browserAPIs',
   ssrAPIs = 'ssrAPIs',
   pluginFilepath = 'pluginFilepath',
   packageJson___name = 'packageJson___name',
@@ -5493,6 +5827,41 @@ export enum MarkdownRemarkGroupEnum {
   fields___slug = 'fields___slug',
 }
 
+export enum ServicesJsonConnectionSortByFieldsEnum {
+  iconName = 'iconName',
+  name = 'name',
+  id = 'id',
+  parent = 'parent',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___type = 'internal___type',
+  internal___owner = 'internal___owner',
+}
+
+export enum ServicesJsonConnectionSortOrderValues {
+  ASC = 'ASC',
+  DESC = 'DESC',
+}
+
+export enum ServicesJsonDistinctEnum {
+  iconName = 'iconName',
+  name = 'name',
+  id = 'id',
+  parent = 'parent',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___type = 'internal___type',
+  internal___owner = 'internal___owner',
+}
+
+export enum ServicesJsonGroupEnum {
+  iconName = 'iconName',
+  name = 'name',
+  id = 'id',
+  parent = 'parent',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___type = 'internal___type',
+  internal___owner = 'internal___owner',
+}
+
 export namespace QueryResolvers {
   export interface Resolvers<Context = any> {
     allSitePage?: AllSitePageResolver<
@@ -5525,6 +5894,11 @@ export namespace QueryResolvers {
       any,
       Context
     > /** Connection to all MarkdownRemark nodes */
+    allServicesJson?: AllServicesJsonResolver<
+      ServicesJsonConnection | null,
+      any,
+      Context
+    > /** Connection to all ServicesJson nodes */
     sitePage?: SitePageResolver<SitePage | null, any, Context>
     sitePlugin?: SitePluginResolver<SitePlugin | null, any, Context>
     site?: SiteResolver<Site | null, any, Context>
@@ -5532,6 +5906,7 @@ export namespace QueryResolvers {
     file?: FileResolver<File | null, any, Context>
     authorJson?: AuthorJsonResolver<AuthorJson | null, any, Context>
     markdownRemark?: MarkdownRemarkResolver<MarkdownRemark | null, any, Context>
+    servicesJson?: ServicesJsonResolver<ServicesJson | null, any, Context>
   }
 
   export type AllSitePageResolver<
@@ -5606,6 +5981,18 @@ export namespace QueryResolvers {
     filter?: FilterMarkdownRemark | null
   }
 
+  export type AllServicesJsonResolver<
+    R = ServicesJsonConnection | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context, AllServicesJsonArgs>
+  export interface AllServicesJsonArgs {
+    skip?: number | null
+    limit?: number | null
+    sort?: ServicesJsonConnectionSort | null
+    filter?: FilterServicesJson | null
+  }
+
   export type SitePageResolver<
     R = SitePage | null,
     Parent = any,
@@ -5637,6 +6024,7 @@ export namespace QueryResolvers {
     version?: SitePluginVersionQueryString_2 | null
     pluginOptions?: SitePluginPluginOptionsInputObject_2 | null
     nodeAPIs?: SitePluginNodeApIsQueryList_2 | null
+    browserAPIs?: SitePluginBrowserApIsQueryList_2 | null
     ssrAPIs?: SitePluginSsrApIsQueryList_2 | null
     pluginFilepath?: SitePluginPluginFilepathQueryString_2 | null
     packageJson?: SitePluginPackageJsonInputObject_2 | null
@@ -5780,6 +6168,18 @@ export namespace QueryResolvers {
     tableOfContents?: TableOfContentsQueryString_3 | null
     wordCount?: WordCountTypeName_3 | null
   }
+
+  export type ServicesJsonResolver<
+    R = ServicesJson | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context, ServicesJsonArgs>
+  export interface ServicesJsonArgs {
+    iconName?: ServicesJsonIconNameQueryString_2 | null
+    name?: ServicesJsonNameQueryString_2 | null
+    id?: ServicesJsonIdQueryString_2 | null
+    internal?: ServicesJsonInternalInputObject_2 | null
+  }
 }
 /** A connection to a list of items. */
 export namespace SitePageConnectionResolvers {
@@ -5917,7 +6317,7 @@ export namespace SitePageResolvers {
     pluginCreator?: PluginCreatorResolver<SitePlugin | null, any, Context>
     pluginCreatorId?: PluginCreatorIdResolver<string | null, any, Context>
     componentPath?: ComponentPathResolver<string | null, any, Context>
-    internal?: InternalResolver<Internal_8 | null, any, Context>
+    internal?: InternalResolver<Internal_9 | null, any, Context>
   }
 
   export type IdResolver<R = string, Parent = any, Context = any> = Resolver<
@@ -5981,7 +6381,7 @@ export namespace SitePageResolvers {
     Context = any
   > = Resolver<R, Parent, Context>
   export type InternalResolver<
-    R = Internal_8 | null,
+    R = Internal_9 | null,
     Parent = any,
     Context = any
   > = Resolver<R, Parent, Context>
@@ -6017,10 +6417,11 @@ export namespace SitePluginResolvers {
     version?: VersionResolver<string | null, any, Context>
     pluginOptions?: PluginOptionsResolver<PluginOptions_2 | null, any, Context>
     nodeAPIs?: NodeApIsResolver<(string | null)[] | null, any, Context>
+    browserAPIs?: BrowserApIsResolver<(string | null)[] | null, any, Context>
     ssrAPIs?: SsrApIsResolver<(string | null)[] | null, any, Context>
     pluginFilepath?: PluginFilepathResolver<string | null, any, Context>
     packageJson?: PackageJsonResolver<PackageJson_2 | null, any, Context>
-    internal?: InternalResolver<Internal_9 | null, any, Context>
+    internal?: InternalResolver<Internal_10 | null, any, Context>
   }
 
   export type IdResolver<R = string, Parent = any, Context = any> = Resolver<
@@ -6063,6 +6464,11 @@ export namespace SitePluginResolvers {
     Parent = any,
     Context = any
   > = Resolver<R, Parent, Context>
+  export type BrowserApIsResolver<
+    R = (string | null)[] | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
   export type SsrApIsResolver<
     R = (string | null)[] | null,
     Parent = any,
@@ -6079,7 +6485,7 @@ export namespace SitePluginResolvers {
     Context = any
   > = Resolver<R, Parent, Context>
   export type InternalResolver<
-    R = Internal_9 | null,
+    R = Internal_10 | null,
     Parent = any,
     Context = any
   > = Resolver<R, Parent, Context>
@@ -6089,12 +6495,14 @@ export namespace PluginOptions_2Resolvers {
   export interface Resolvers<Context = any> {
     path?: PathResolver<string | null, any, Context>
     name?: NameResolver<string | null, any, Context>
+    exclude?: ExcludeResolver<(string | null)[] | null, any, Context>
     id?: IdResolver<string | null, any, Context>
     includeInDevelopment?: IncludeInDevelopmentResolver<
       boolean | null,
       any,
       Context
     >
+    siteUrl?: SiteUrlResolver<string | null, any, Context>
     pathCheck?: PathCheckResolver<boolean | null, any, Context>
   }
 
@@ -6108,6 +6516,11 @@ export namespace PluginOptions_2Resolvers {
     Parent = any,
     Context = any
   > = Resolver<R, Parent, Context>
+  export type ExcludeResolver<
+    R = (string | null)[] | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
   export type IdResolver<
     R = string | null,
     Parent = any,
@@ -6115,6 +6528,11 @@ export namespace PluginOptions_2Resolvers {
   > = Resolver<R, Parent, Context>
   export type IncludeInDevelopmentResolver<
     R = boolean | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type SiteUrlResolver<
+    R = string | null,
     Parent = any,
     Context = any
   > = Resolver<R, Parent, Context>
@@ -6257,7 +6675,7 @@ export namespace PeerDependencies_2Resolvers {
   > = Resolver<R, Parent, Context>
 }
 
-export namespace Internal_9Resolvers {
+export namespace Internal_10Resolvers {
   export interface Resolvers<Context = any> {
     contentDigest?: ContentDigestResolver<string | null, any, Context>
     type?: TypeResolver<string | null, any, Context>
@@ -6281,7 +6699,7 @@ export namespace Internal_9Resolvers {
   > = Resolver<R, Parent, Context>
 }
 
-export namespace Internal_8Resolvers {
+export namespace Internal_9Resolvers {
   export interface Resolvers<Context = any> {
     type?: TypeResolver<string | null, any, Context>
     contentDigest?: ContentDigestResolver<string | null, any, Context>
@@ -6670,7 +7088,7 @@ export namespace DirectoryResolvers {
       any,
       Context
     > /** The children of this node. */
-    internal?: InternalResolver<Internal_10 | null, any, Context>
+    internal?: InternalResolver<Internal_11 | null, any, Context>
     sourceInstanceName?: SourceInstanceNameResolver<string | null, any, Context>
     absolutePath?: AbsolutePathResolver<string | null, any, Context>
     relativePath?: RelativePathResolver<string | null, any, Context>
@@ -6722,7 +7140,7 @@ export namespace DirectoryResolvers {
     Context = any
   > = Resolver<R, Parent, Context>
   export type InternalResolver<
-    R = Internal_10 | null,
+    R = Internal_11 | null,
     Parent = any,
     Context = any
   > = Resolver<R, Parent, Context>
@@ -7012,7 +7430,7 @@ export namespace DirectoryResolvers {
   }
 }
 
-export namespace Internal_10Resolvers {
+export namespace Internal_11Resolvers {
   export interface Resolvers<Context = any> {
     contentDigest?: ContentDigestResolver<string | null, any, Context>
     type?: TypeResolver<string | null, any, Context>
@@ -7238,7 +7656,12 @@ export namespace FileResolvers {
       any,
       Context
     > /** The child of this node of type markdownRemark */
-    internal?: InternalResolver<Internal_11 | null, any, Context>
+    childrenServicesJson?: ChildrenServicesJsonResolver<
+      (ServicesJson | null)[] | null,
+      any,
+      Context
+    > /** The children of this node of type servicesJson */
+    internal?: InternalResolver<Internal_12 | null, any, Context>
     sourceInstanceName?: SourceInstanceNameResolver<string | null, any, Context>
     absolutePath?: AbsolutePathResolver<string | null, any, Context>
     relativePath?: RelativePathResolver<string | null, any, Context>
@@ -7304,8 +7727,13 @@ export namespace FileResolvers {
     Parent = any,
     Context = any
   > = Resolver<R, Parent, Context>
+  export type ChildrenServicesJsonResolver<
+    R = (ServicesJson | null)[] | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
   export type InternalResolver<
-    R = Internal_11 | null,
+    R = Internal_12 | null,
     Parent = any,
     Context = any
   > = Resolver<R, Parent, Context>
@@ -7619,7 +8047,7 @@ export namespace AuthorJsonResolvers {
     github?: GithubResolver<string | null, any, Context>
     twitter?: TwitterResolver<string | null, any, Context>
     avatar?: AvatarResolver<File | null, any, Context>
-    internal?: InternalResolver<Internal_12 | null, any, Context>
+    internal?: InternalResolver<Internal_13 | null, any, Context>
   }
 
   export type IdResolver<R = string, Parent = any, Context = any> = Resolver<
@@ -7663,13 +8091,13 @@ export namespace AuthorJsonResolvers {
     Context = any
   > = Resolver<R, Parent, Context>
   export type InternalResolver<
-    R = Internal_12 | null,
+    R = Internal_13 | null,
     Parent = any,
     Context = any
   > = Resolver<R, Parent, Context>
 }
 
-export namespace Internal_12Resolvers {
+export namespace Internal_13Resolvers {
   export interface Resolvers<Context = any> {
     contentDigest?: ContentDigestResolver<string | null, any, Context>
     type?: TypeResolver<string | null, any, Context>
@@ -7706,7 +8134,7 @@ export namespace MarkdownRemarkResolvers {
       any,
       Context
     > /** The children of this node. */
-    internal?: InternalResolver<Internal_13 | null, any, Context>
+    internal?: InternalResolver<Internal_14 | null, any, Context>
     frontmatter?: FrontmatterResolver<Frontmatter_2 | null, any, Context>
     rawMarkdownBody?: RawMarkdownBodyResolver<string | null, any, Context>
     fileAbsolutePath?: FileAbsolutePathResolver<string | null, any, Context>
@@ -7736,7 +8164,7 @@ export namespace MarkdownRemarkResolvers {
     Context = any
   > = Resolver<R, Parent, Context>
   export type InternalResolver<
-    R = Internal_13 | null,
+    R = Internal_14 | null,
     Parent = any,
     Context = any
   > = Resolver<R, Parent, Context>
@@ -7810,7 +8238,7 @@ export namespace MarkdownRemarkResolvers {
   > = Resolver<R, Parent, Context>
 }
 
-export namespace Internal_13Resolvers {
+export namespace Internal_14Resolvers {
   export interface Resolvers<Context = any> {
     content?: ContentResolver<string | null, any, Context>
     type?: TypeResolver<string | null, any, Context>
@@ -7929,8 +8357,82 @@ export namespace WordCountResolvers {
     Context = any
   > = Resolver<R, Parent, Context>
 }
+/** Node of type ServicesJson */
+export namespace ServicesJsonResolvers {
+  export interface Resolvers<Context = any> {
+    id?: IdResolver<string, any, Context> /** The id of this node. */
+    parent?: ParentResolver<
+      Node | null,
+      any,
+      Context
+    > /** The parent of this node. */
+    children?: ChildrenResolver<
+      (Node | null)[] | null,
+      any,
+      Context
+    > /** The children of this node. */
+    iconName?: IconNameResolver<string | null, any, Context>
+    name?: NameResolver<string | null, any, Context>
+    internal?: InternalResolver<Internal_15 | null, any, Context>
+  }
 
-export namespace Internal_11Resolvers {
+  export type IdResolver<R = string, Parent = any, Context = any> = Resolver<
+    R,
+    Parent,
+    Context
+  >
+  export type ParentResolver<
+    R = Node | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type ChildrenResolver<
+    R = (Node | null)[] | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type IconNameResolver<
+    R = string | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type NameResolver<
+    R = string | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type InternalResolver<
+    R = Internal_15 | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+}
+
+export namespace Internal_15Resolvers {
+  export interface Resolvers<Context = any> {
+    contentDigest?: ContentDigestResolver<string | null, any, Context>
+    type?: TypeResolver<string | null, any, Context>
+    owner?: OwnerResolver<string | null, any, Context>
+  }
+
+  export type ContentDigestResolver<
+    R = string | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type TypeResolver<
+    R = string | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type OwnerResolver<
+    R = string | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+}
+
+export namespace Internal_12Resolvers {
   export interface Resolvers<Context = any> {
     contentDigest?: ContentDigestResolver<string | null, any, Context>
     type?: TypeResolver<string | null, any, Context>
@@ -8391,6 +8893,179 @@ export namespace MarkdownRemarkGroupConnectionEdgeResolvers {
     Context = any
   > = Resolver<R, Parent, Context>
 }
+/** A connection to a list of items. */
+export namespace ServicesJsonConnectionResolvers {
+  export interface Resolvers<Context = any> {
+    pageInfo?: PageInfoResolver<
+      PageInfo,
+      any,
+      Context
+    > /** Information to aid in pagination. */
+    edges?: EdgesResolver<
+      (ServicesJsonEdge | null)[] | null,
+      any,
+      Context
+    > /** A list of edges. */
+    totalCount?: TotalCountResolver<number | null, any, Context>
+    distinct?: DistinctResolver<(string | null)[] | null, any, Context>
+    group?: GroupResolver<
+      (ServicesJsonGroupConnectionConnection | null)[] | null,
+      any,
+      Context
+    >
+  }
+
+  export type PageInfoResolver<
+    R = PageInfo,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type EdgesResolver<
+    R = (ServicesJsonEdge | null)[] | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type TotalCountResolver<
+    R = number | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type DistinctResolver<
+    R = (string | null)[] | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context, DistinctArgs>
+  export interface DistinctArgs {
+    field?: ServicesJsonDistinctEnum | null
+  }
+
+  export type GroupResolver<
+    R = (ServicesJsonGroupConnectionConnection | null)[] | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context, GroupArgs>
+  export interface GroupArgs {
+    skip?: number | null
+    limit?: number | null
+    field?: ServicesJsonGroupEnum | null
+  }
+}
+/** An edge in a connection. */
+export namespace ServicesJsonEdgeResolvers {
+  export interface Resolvers<Context = any> {
+    node?: NodeResolver<
+      ServicesJson | null,
+      any,
+      Context
+    > /** The item at the end of the edge */
+    next?: NextResolver<
+      ServicesJson | null,
+      any,
+      Context
+    > /** The next edge in the connection */
+    previous?: PreviousResolver<
+      ServicesJson | null,
+      any,
+      Context
+    > /** The previous edge in the connection */
+  }
+
+  export type NodeResolver<
+    R = ServicesJson | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type NextResolver<
+    R = ServicesJson | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type PreviousResolver<
+    R = ServicesJson | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+}
+/** A connection to a list of items. */
+export namespace ServicesJsonGroupConnectionConnectionResolvers {
+  export interface Resolvers<Context = any> {
+    pageInfo?: PageInfoResolver<
+      PageInfo,
+      any,
+      Context
+    > /** Information to aid in pagination. */
+    edges?: EdgesResolver<
+      (ServicesJsonGroupConnectionEdge | null)[] | null,
+      any,
+      Context
+    > /** A list of edges. */
+    field?: FieldResolver<string | null, any, Context>
+    fieldValue?: FieldValueResolver<string | null, any, Context>
+    totalCount?: TotalCountResolver<number | null, any, Context>
+  }
+
+  export type PageInfoResolver<
+    R = PageInfo,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type EdgesResolver<
+    R = (ServicesJsonGroupConnectionEdge | null)[] | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type FieldResolver<
+    R = string | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type FieldValueResolver<
+    R = string | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type TotalCountResolver<
+    R = number | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+}
+/** An edge in a connection. */
+export namespace ServicesJsonGroupConnectionEdgeResolvers {
+  export interface Resolvers<Context = any> {
+    node?: NodeResolver<
+      ServicesJson | null,
+      any,
+      Context
+    > /** The item at the end of the edge */
+    next?: NextResolver<
+      ServicesJson | null,
+      any,
+      Context
+    > /** The next edge in the connection */
+    previous?: PreviousResolver<
+      ServicesJson | null,
+      any,
+      Context
+    > /** The previous edge in the connection */
+  }
+
+  export type NodeResolver<
+    R = ServicesJson | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type NextResolver<
+    R = ServicesJson | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type PreviousResolver<
+    R = ServicesJson | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+}
 /** Node of type Site */
 export namespace SiteResolvers {
   export interface Resolvers<Context = any> {
@@ -8411,7 +9086,7 @@ export namespace SiteResolvers {
     pathPrefix?: PathPrefixResolver<string | null, any, Context>
     polyfill?: PolyfillResolver<boolean | null, any, Context>
     buildTime?: BuildTimeResolver<Date | null, any, Context>
-    internal?: InternalResolver<Internal_14 | null, any, Context>
+    internal?: InternalResolver<Internal_16 | null, any, Context>
   }
 
   export type IdResolver<R = string, Parent = any, Context = any> = Resolver<
@@ -8490,7 +9165,7 @@ export namespace SiteResolvers {
   }
 
   export type InternalResolver<
-    R = Internal_14 | null,
+    R = Internal_16 | null,
     Parent = any,
     Context = any
   > = Resolver<R, Parent, Context>
@@ -8526,7 +9201,7 @@ export namespace SiteMetadata_2Resolvers {
   > = Resolver<R, Parent, Context>
 }
 
-export namespace Internal_14Resolvers {
+export namespace Internal_16Resolvers {
   export interface Resolvers<Context = any> {
     contentDigest?: ContentDigestResolver<string | null, any, Context>
     type?: TypeResolver<string | null, any, Context>

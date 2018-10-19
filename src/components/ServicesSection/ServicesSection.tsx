@@ -1,8 +1,9 @@
 import * as React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
-import services, { ServicesElement } from '../../enums/services'
 import { displayDimensions } from '../../theme'
 import ServiceIcon from './ServiceIcon'
+import { Query, ServicesJsonEdge } from '../../graphql-types'
 
 const StyledServicesSection = styled.ul`
   display: grid;
@@ -37,7 +38,7 @@ const StyledServicesSection = styled.ul`
     }
 
     img {
-      max-height: 60px;
+      max-height: 100px;
       margin: auto auto 30px auto;
 
       @media (max-width: ${displayDimensions.tabletSize}) {
@@ -55,11 +56,33 @@ const StyledServicesSection = styled.ul`
 `
 
 const ServicesSection = () => (
-  <StyledServicesSection>
-    {services.map((service: ServicesElement) => (
-      <ServiceIcon key={`service-icon-${service.iconName}`} service={service} />
-    ))}
-  </StyledServicesSection>
+  <React.Fragment>
+    <h2>Services</h2>
+    <StyledServicesSection>
+      <StaticQuery query={serviceQuery} render={serviceIcons} />
+    </StyledServicesSection>
+  </React.Fragment>
 )
+
+const serviceIcons = ({ allServicesJson }: Query) =>
+  allServicesJson &&
+  allServicesJson.edges &&
+  allServicesJson.edges
+    .filter((x): x is ServicesJsonEdge => x !== null)
+    .map(({ node }) => node && <ServiceIcon key={node.id} service={node} />)
+
+const serviceQuery = graphql`
+  query {
+    allServicesJson {
+      edges {
+        node {
+          id
+          name
+          iconName
+        }
+      }
+    }
+  }
+`
 
 export default ServicesSection

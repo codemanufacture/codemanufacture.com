@@ -1,14 +1,14 @@
 import * as React from 'react'
-import { ServicesElement } from '../../enums/services'
+import { ServicesJson } from '../../graphql-types'
 
-interface ServiceIconInterface {
-  service: ServicesElement
+interface ServiceIconProps {
+  service: ServicesJson
 }
 
-const ServiceIcon: React.SFC<ServiceIconInterface> = ({ service }) => (
+const ServiceIcon: React.SFC<ServiceIconProps> = ({ service }) => (
   <li>
     <figure>
-      <img src={`/assets/${service.iconName}.svg`} alt={service.name} />
+      <img src={`/assets/${service.iconName}.svg`} alt={`${service.name}`} />
       <figcaption>{service.name}</figcaption>
     </figure>
   </li>

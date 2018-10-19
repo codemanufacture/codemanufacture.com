@@ -7,6 +7,7 @@ describe('ServiceIcon component', () =>
     const props = {
       service: {
         iconName: 'icon',
+        id: 'daa4b027-255f-5eeb-98d3-cf0e572859f2',
         name: 'service',
       },
     }
