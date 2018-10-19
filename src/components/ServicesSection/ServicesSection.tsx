@@ -65,9 +65,7 @@ const ServicesSection = () => (
 )
 
 const serviceIcons = ({ allServicesJson }: Query) =>
-  allServicesJson &&
-  allServicesJson.edges &&
-  allServicesJson.edges
+  ((allServicesJson && allServicesJson.edges) || [])
     .filter((x): x is ServicesJsonEdge => x !== null)
     .map(({ node }) => node && <ServiceIcon key={node.id} service={node} />)
 
