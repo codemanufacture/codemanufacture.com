@@ -5,7 +5,7 @@ exports[`ServiceIcon component renders correctly 1`] = `
   <figure>
     <img
       alt="service"
-      src="/assets/icon.svg"
+      src="/icon.svg"
     />
     <figcaption>
       service
