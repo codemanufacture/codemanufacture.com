@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { sizes } from '../../theme'
 
 interface HomepageSectionProps {
-  children: object
+  children?: React.ReactNode
   sectionId: string
 }
 

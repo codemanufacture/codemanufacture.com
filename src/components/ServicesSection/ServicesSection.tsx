@@ -1,8 +1,9 @@
 import * as React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
-import services, { ServicesElement } from '../../enums/services'
 import { displayDimensions } from '../../theme'
 import ServiceIcon from './ServiceIcon'
+import { Query, ServicesJsonEdge } from '../../graphql-types'
 
 const StyledServicesSection = styled.ul`
   display: grid;
@@ -58,14 +59,30 @@ const ServicesSection = () => (
   <React.Fragment>
     <h2>Services</h2>
     <StyledServicesSection>
-      {services.map((service: ServicesElement) => (
-        <ServiceIcon
-          key={`service-icon-${service.iconName}`}
-          service={service}
-        />
-      ))}
+      <StaticQuery query={serviceQuery} render={serviceIcons} />
     </StyledServicesSection>
   </React.Fragment>
 )
+
+const serviceIcons = ({ allServicesJson }: Query) =>
+  allServicesJson &&
+  allServicesJson.edges &&
+  allServicesJson.edges
+    .filter((x): x is ServicesJsonEdge => x !== null)
+    .map(({ node }) => node && <ServiceIcon key={node.id} service={node} />)
+
+const serviceQuery = graphql`
+  query {
+    allServicesJson {
+      edges {
+        node {
+          id
+          name
+          iconName
+        }
+      }
+    }
+  }
+`
 
 export default ServicesSection
