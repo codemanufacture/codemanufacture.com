@@ -31,7 +31,14 @@ module.exports = {
     },
     `gatsby-transformer-remark`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: [
+          `/homepage`,
+        ]
+      }
+    },
     {
       resolve: `gatsby-plugin-google-tagmanager`,
       options: {
