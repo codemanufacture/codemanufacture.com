@@ -5,11 +5,8 @@ import ServiceIcon from './ServiceIcon'
 describe('ServiceIcon component', () =>
   it('renders correctly', () => {
     const props = {
-      service: {
-        iconName: 'icon',
-        id: 'daa4b027-255f-5eeb-98d3-cf0e572859f2',
-        name: 'service',
-      },
+      icon: '/icon.svg',
+      name: 'service',
     }
 
     const tree = renderer.create(<ServiceIcon {...props} />).toJSON()
