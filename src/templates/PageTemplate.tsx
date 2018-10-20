@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import LegacyLayout from '../components/LegacyLayout'
 import { graphql } from 'gatsby'
 import { colors } from '../theme'
+import { Query } from '../graphql-types'
 
 const StyledPageWrapper = styled.div`
   margin: 0 auto;
@@ -44,31 +45,29 @@ const StyledPageWrapper = styled.div`
 `
 
 interface PageTemplateProps {
-  data: {
-    page: {
-      html: string
-      frontmatter: {
-        title: string
-      }
-    }
-  }
+  data: Query
 }
 
-const PageTemplate: React.SFC<PageTemplateProps> = ({ data }) => (
-  <LegacyLayout>
-    <StyledPageWrapper>
-      <Helmet title={data.page.frontmatter.title} />
-      <h1>{data.page.frontmatter.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: data.page.html }} />
-    </StyledPageWrapper>
-  </LegacyLayout>
-)
+const PageTemplate: React.SFC<PageTemplateProps> = ({ data }) => {
+  const frontmatter =
+    (data && data.markdownRemark && data.markdownRemark.frontmatter) || {}
+  const html = (data && data.markdownRemark && data.markdownRemark.html) || ''
+  return (
+    <LegacyLayout>
+      <StyledPageWrapper>
+        <Helmet title={`${frontmatter.title}`} />
+        <h1>{frontmatter.title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: html }} />
+      </StyledPageWrapper>
+    </LegacyLayout>
+  )
+}
 
 export default PageTemplate
 
 export const pageQuery = graphql`
   query($slug: String!) {
-    page: markdownRemark(fields: { slug: { eq: $slug } }) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
         title

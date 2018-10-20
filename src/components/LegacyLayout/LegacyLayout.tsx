@@ -5,46 +5,45 @@ import * as favicon from '../../images/favicon.ico'
 import { StaticQuery, graphql } from 'gatsby'
 import Container from '../PageContainer'
 import GlobalStyle from '../../theme/globalStyle'
+import { Query } from '../../graphql-types'
 
 const LegacyLayout: React.SFC = ({ children }) => (
   <StaticQuery
-    query={graphql`
-      query SiteTitleQuery1 {
-        ...siteMetadata
-      }
-    `}
-    render={data => (
-      <>
-        <Helmet>
-          <title>{data.site.siteMetadata.title}</title>
-          <meta charSet="utf-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta
-            name="description"
-            content={data.site.siteMetadata.description}
-          />
-          <meta name="keywords" content={data.site.siteMetadata.keywords} />
-          <meta
-            name="description"
-            content={data.site.siteMetadata.description}
-          />
-          <meta property="og:title" content={data.site.siteMetadata.title} />
-          <meta property="og:url" content={data.site.siteMetadata.siteUrl} />
-          <meta property="og:locale" content="en_GB" />
-          <meta property="og:type" content="website" />
-          <meta
-            property="og:site_name"
-            content={data.site.siteMetadata.title}
-          />
-          <link rel="icon" type="image/ico" href={favicon} />
-          <html lang="en" />
-        </Helmet>
-        <GlobalStyle />
-        <LegacyHeader siteTitle={data.site.siteMetadata.title} />
-        <Container>{children}</Container>
-      </>
-    )}
+    query={siteMetadataQuery}
+    render={data => render(data, children)}
   />
 )
+
+const render = (data: Query, children: React.ReactNode) => {
+  const metadata = (data && data.site && data.site.siteMetadata) || {}
+  return (
+    <>
+      <Helmet>
+        <title>{`${metadata.title}`}</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content={`${metadata.description}`} />
+        <meta name="keywords" content={`${metadata.keywords}`} />
+        <meta name="description" content={`${metadata.description}`} />
+        <meta property="og:title" content={`${metadata.title}`} />
+        <meta property="og:url" content={`${metadata.siteUrl}`} />
+        <meta property="og:locale" content="en_GB" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content={`${metadata.title}`} />
+        <link rel="icon" type="image/ico" href={favicon} />
+        <html lang="en" />
+      </Helmet>
+      <GlobalStyle />
+      <LegacyHeader siteTitle={`${metadata.title}`} />
+      <Container>{children}</Container>
+    </>
+  )
+}
+
+const siteMetadataQuery = graphql`
+  query {
+    ...siteMetadata
+  }
+`
 
 export default LegacyLayout
