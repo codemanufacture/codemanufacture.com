@@ -5731,6 +5731,14 @@ gatsby-plugin-canonical-urls@^2.0.6:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
+gatsby-plugin-catch-links@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-catch-links/-/gatsby-plugin-catch-links-2.0.5.tgz#d3a024a7bc4ffec9838ae241f1c71480c7cbd60d"
+  integrity sha512-wOCmkII2qkq2TaWOQYM3bNFzTi1I1+x5nO54eGtEYhvfOXJaBRdxOuwVQ5rrBhfgzHuPXoSy+vDzlSrALUG2Dg==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    escape-string-regexp "^1.0.5"
+
 gatsby-plugin-google-tagmanager@^2.0.0:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-google-tagmanager/-/gatsby-plugin-google-tagmanager-2.0.5.tgz#391eeb14b0f0445a8dc8cb9ae30a7bc25dbc70bc"

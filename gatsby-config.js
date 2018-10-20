@@ -47,6 +47,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-robots-txt`,
+    `gatsby-plugin-catch-links`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-typescript`,
     {
