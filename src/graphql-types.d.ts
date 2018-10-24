@@ -111,6 +111,7 @@ export interface SitePlugin extends Node {
 }
 
 export interface PluginOptions_2 {
+  plugins?: (Plugins_2 | null)[] | null
   path?: string | null
   name?: string | null
   exclude?: (string | null)[] | null
@@ -118,6 +119,16 @@ export interface PluginOptions_2 {
   includeInDevelopment?: boolean | null
   siteUrl?: string | null
   pathCheck?: boolean | null
+}
+
+export interface Plugins_2 {
+  resolve?: string | null
+  id?: string | null
+  name?: string | null
+  version?: string | null
+  browserAPIs?: (string | null)[] | null
+  ssrAPIs?: (string | null)[] | null
+  pluginFilepath?: string | null
 }
 
 export interface PackageJson_2 {
@@ -644,6 +655,7 @@ export interface SitePageConnectionPluginCreatorVersionQueryString {
 }
 
 export interface SitePageConnectionPluginCreatorPluginOptionsInputObject {
+  plugins?: SitePageConnectionPluginCreatorPluginOptionsPluginsQueryList | null
   path?: SitePageConnectionPluginCreatorPluginOptionsPathQueryString | null
   name?: SitePageConnectionPluginCreatorPluginOptionsNameQueryString | null
   exclude?: SitePageConnectionPluginCreatorPluginOptionsExcludeQueryList | null
@@ -651,6 +663,83 @@ export interface SitePageConnectionPluginCreatorPluginOptionsInputObject {
   includeInDevelopment?: SitePageConnectionPluginCreatorPluginOptionsIncludeInDevelopmentQueryBoolean | null
   siteUrl?: SitePageConnectionPluginCreatorPluginOptionsSiteUrlQueryString | null
   pathCheck?: SitePageConnectionPluginCreatorPluginOptionsPathCheckQueryBoolean | null
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsPluginsQueryList {
+  elemMatch?: SitePageConnectionPluginCreatorPluginOptionsPluginsInputObject | null
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsPluginsInputObject {
+  resolve?: SitePageConnectionPluginCreatorPluginOptionsPluginsResolveQueryString | null
+  id?: SitePageConnectionPluginCreatorPluginOptionsPluginsIdQueryString | null
+  name?: SitePageConnectionPluginCreatorPluginOptionsPluginsNameQueryString | null
+  version?: SitePageConnectionPluginCreatorPluginOptionsPluginsVersionQueryString | null
+  browserAPIs?: SitePageConnectionPluginCreatorPluginOptionsPluginsBrowserApIsQueryList | null
+  ssrAPIs?: SitePageConnectionPluginCreatorPluginOptionsPluginsSsrApIsQueryList | null
+  pluginFilepath?: SitePageConnectionPluginCreatorPluginOptionsPluginsPluginFilepathQueryString | null
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsPluginsResolveQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsPluginsIdQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsPluginsNameQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsPluginsVersionQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsPluginsBrowserApIsQueryList {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsPluginsSsrApIsQueryList {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsPluginsPluginFilepathQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
 }
 
 export interface SitePageConnectionPluginCreatorPluginOptionsPathQueryString {
@@ -1073,6 +1162,7 @@ export interface SitePluginConnectionVersionQueryString_2 {
 }
 
 export interface SitePluginConnectionPluginOptionsInputObject_2 {
+  plugins?: SitePluginConnectionPluginOptionsPluginsQueryList_2 | null
   path?: SitePluginConnectionPluginOptionsPathQueryString_2 | null
   name?: SitePluginConnectionPluginOptionsNameQueryString_2 | null
   exclude?: SitePluginConnectionPluginOptionsExcludeQueryList_2 | null
@@ -1080,6 +1170,83 @@ export interface SitePluginConnectionPluginOptionsInputObject_2 {
   includeInDevelopment?: SitePluginConnectionPluginOptionsIncludeInDevelopmentQueryBoolean_2 | null
   siteUrl?: SitePluginConnectionPluginOptionsSiteUrlQueryString_2 | null
   pathCheck?: SitePluginConnectionPluginOptionsPathCheckQueryBoolean_2 | null
+}
+
+export interface SitePluginConnectionPluginOptionsPluginsQueryList_2 {
+  elemMatch?: SitePluginConnectionPluginOptionsPluginsInputObject_2 | null
+}
+
+export interface SitePluginConnectionPluginOptionsPluginsInputObject_2 {
+  resolve?: SitePluginConnectionPluginOptionsPluginsResolveQueryString_2 | null
+  id?: SitePluginConnectionPluginOptionsPluginsIdQueryString_2 | null
+  name?: SitePluginConnectionPluginOptionsPluginsNameQueryString_2 | null
+  version?: SitePluginConnectionPluginOptionsPluginsVersionQueryString_2 | null
+  browserAPIs?: SitePluginConnectionPluginOptionsPluginsBrowserApIsQueryList_2 | null
+  ssrAPIs?: SitePluginConnectionPluginOptionsPluginsSsrApIsQueryList_2 | null
+  pluginFilepath?: SitePluginConnectionPluginOptionsPluginsPluginFilepathQueryString_2 | null
+}
+
+export interface SitePluginConnectionPluginOptionsPluginsResolveQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface SitePluginConnectionPluginOptionsPluginsIdQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface SitePluginConnectionPluginOptionsPluginsNameQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface SitePluginConnectionPluginOptionsPluginsVersionQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface SitePluginConnectionPluginOptionsPluginsBrowserApIsQueryList_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface SitePluginConnectionPluginOptionsPluginsSsrApIsQueryList_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface SitePluginConnectionPluginOptionsPluginsPluginFilepathQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
 }
 
 export interface SitePluginConnectionPluginOptionsPathQueryString_2 {
@@ -2685,6 +2852,7 @@ export interface SitePagePluginCreatorVersionQueryString {
 }
 
 export interface SitePagePluginCreatorPluginOptionsInputObject {
+  plugins?: SitePagePluginCreatorPluginOptionsPluginsQueryList | null
   path?: SitePagePluginCreatorPluginOptionsPathQueryString | null
   name?: SitePagePluginCreatorPluginOptionsNameQueryString | null
   exclude?: SitePagePluginCreatorPluginOptionsExcludeQueryList | null
@@ -2692,6 +2860,83 @@ export interface SitePagePluginCreatorPluginOptionsInputObject {
   includeInDevelopment?: SitePagePluginCreatorPluginOptionsIncludeInDevelopmentQueryBoolean | null
   siteUrl?: SitePagePluginCreatorPluginOptionsSiteUrlQueryString | null
   pathCheck?: SitePagePluginCreatorPluginOptionsPathCheckQueryBoolean | null
+}
+
+export interface SitePagePluginCreatorPluginOptionsPluginsQueryList {
+  elemMatch?: SitePagePluginCreatorPluginOptionsPluginsInputObject | null
+}
+
+export interface SitePagePluginCreatorPluginOptionsPluginsInputObject {
+  resolve?: SitePagePluginCreatorPluginOptionsPluginsResolveQueryString | null
+  id?: SitePagePluginCreatorPluginOptionsPluginsIdQueryString | null
+  name?: SitePagePluginCreatorPluginOptionsPluginsNameQueryString | null
+  version?: SitePagePluginCreatorPluginOptionsPluginsVersionQueryString | null
+  browserAPIs?: SitePagePluginCreatorPluginOptionsPluginsBrowserApIsQueryList | null
+  ssrAPIs?: SitePagePluginCreatorPluginOptionsPluginsSsrApIsQueryList | null
+  pluginFilepath?: SitePagePluginCreatorPluginOptionsPluginsPluginFilepathQueryString | null
+}
+
+export interface SitePagePluginCreatorPluginOptionsPluginsResolveQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface SitePagePluginCreatorPluginOptionsPluginsIdQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface SitePagePluginCreatorPluginOptionsPluginsNameQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface SitePagePluginCreatorPluginOptionsPluginsVersionQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface SitePagePluginCreatorPluginOptionsPluginsBrowserApIsQueryList {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface SitePagePluginCreatorPluginOptionsPluginsSsrApIsQueryList {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface SitePagePluginCreatorPluginOptionsPluginsPluginFilepathQueryString {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
 }
 
 export interface SitePagePluginCreatorPluginOptionsPathQueryString {
@@ -3095,6 +3340,7 @@ export interface SitePluginVersionQueryString_2 {
 }
 
 export interface SitePluginPluginOptionsInputObject_2 {
+  plugins?: SitePluginPluginOptionsPluginsQueryList_2 | null
   path?: SitePluginPluginOptionsPathQueryString_2 | null
   name?: SitePluginPluginOptionsNameQueryString_2 | null
   exclude?: SitePluginPluginOptionsExcludeQueryList_2 | null
@@ -3102,6 +3348,83 @@ export interface SitePluginPluginOptionsInputObject_2 {
   includeInDevelopment?: SitePluginPluginOptionsIncludeInDevelopmentQueryBoolean_2 | null
   siteUrl?: SitePluginPluginOptionsSiteUrlQueryString_2 | null
   pathCheck?: SitePluginPluginOptionsPathCheckQueryBoolean_2 | null
+}
+
+export interface SitePluginPluginOptionsPluginsQueryList_2 {
+  elemMatch?: SitePluginPluginOptionsPluginsInputObject_2 | null
+}
+
+export interface SitePluginPluginOptionsPluginsInputObject_2 {
+  resolve?: SitePluginPluginOptionsPluginsResolveQueryString_2 | null
+  id?: SitePluginPluginOptionsPluginsIdQueryString_2 | null
+  name?: SitePluginPluginOptionsPluginsNameQueryString_2 | null
+  version?: SitePluginPluginOptionsPluginsVersionQueryString_2 | null
+  browserAPIs?: SitePluginPluginOptionsPluginsBrowserApIsQueryList_2 | null
+  ssrAPIs?: SitePluginPluginOptionsPluginsSsrApIsQueryList_2 | null
+  pluginFilepath?: SitePluginPluginOptionsPluginsPluginFilepathQueryString_2 | null
+}
+
+export interface SitePluginPluginOptionsPluginsResolveQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface SitePluginPluginOptionsPluginsIdQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface SitePluginPluginOptionsPluginsNameQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface SitePluginPluginOptionsPluginsVersionQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface SitePluginPluginOptionsPluginsBrowserApIsQueryList_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface SitePluginPluginOptionsPluginsSsrApIsQueryList_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
+}
+
+export interface SitePluginPluginOptionsPluginsPluginFilepathQueryString_2 {
+  eq?: string | null
+  ne?: string | null
+  regex?: string | null
+  glob?: string | null
+  in?: (string | null)[] | null
+  nin?: (string | null)[] | null
 }
 
 export interface SitePluginPluginOptionsPathQueryString_2 {
@@ -5147,6 +5470,7 @@ export enum SitePluginConnectionSortByFieldsEnum {
   id = 'id',
   name = 'name',
   version = 'version',
+  pluginOptions___plugins = 'pluginOptions___plugins',
   pluginOptions___path = 'pluginOptions___path',
   pluginOptions___name = 'pluginOptions___name',
   pluginOptions___exclude = 'pluginOptions___exclude',
@@ -5184,6 +5508,7 @@ export enum SitePluginDistinctEnum {
   id = 'id',
   name = 'name',
   version = 'version',
+  pluginOptions___plugins = 'pluginOptions___plugins',
   pluginOptions___path = 'pluginOptions___path',
   pluginOptions___name = 'pluginOptions___name',
   pluginOptions___exclude = 'pluginOptions___exclude',
@@ -5216,6 +5541,7 @@ export enum SitePluginGroupEnum {
   id = 'id',
   name = 'name',
   version = 'version',
+  pluginOptions___plugins = 'pluginOptions___plugins',
   pluginOptions___path = 'pluginOptions___path',
   pluginOptions___name = 'pluginOptions___name',
   pluginOptions___exclude = 'pluginOptions___exclude',
@@ -6226,6 +6552,7 @@ export namespace SitePluginResolvers {
 
 export namespace PluginOptions_2Resolvers {
   export interface Resolvers<Context = any> {
+    plugins?: PluginsResolver<(Plugins_2 | null)[] | null, any, Context>
     path?: PathResolver<string | null, any, Context>
     name?: NameResolver<string | null, any, Context>
     exclude?: ExcludeResolver<(string | null)[] | null, any, Context>
@@ -6239,6 +6566,11 @@ export namespace PluginOptions_2Resolvers {
     pathCheck?: PathCheckResolver<boolean | null, any, Context>
   }
 
+  export type PluginsResolver<
+    R = (Plugins_2 | null)[] | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
   export type PathResolver<
     R = string | null,
     Parent = any,
@@ -6271,6 +6603,54 @@ export namespace PluginOptions_2Resolvers {
   > = Resolver<R, Parent, Context>
   export type PathCheckResolver<
     R = boolean | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+}
+
+export namespace Plugins_2Resolvers {
+  export interface Resolvers<Context = any> {
+    resolve?: ResolveResolver<string | null, any, Context>
+    id?: IdResolver<string | null, any, Context>
+    name?: NameResolver<string | null, any, Context>
+    version?: VersionResolver<string | null, any, Context>
+    browserAPIs?: BrowserApIsResolver<(string | null)[] | null, any, Context>
+    ssrAPIs?: SsrApIsResolver<(string | null)[] | null, any, Context>
+    pluginFilepath?: PluginFilepathResolver<string | null, any, Context>
+  }
+
+  export type ResolveResolver<
+    R = string | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type IdResolver<
+    R = string | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type NameResolver<
+    R = string | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type VersionResolver<
+    R = string | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type BrowserApIsResolver<
+    R = (string | null)[] | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type SsrApIsResolver<
+    R = (string | null)[] | null,
+    Parent = any,
+    Context = any
+  > = Resolver<R, Parent, Context>
+  export type PluginFilepathResolver<
+    R = string | null,
     Parent = any,
     Context = any
   > = Resolver<R, Parent, Context>
