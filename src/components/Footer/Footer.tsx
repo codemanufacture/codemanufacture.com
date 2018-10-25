@@ -10,28 +10,10 @@ const StyledFooterWrapper = styled.div`
   padding: 35px 0;
 `
 
-interface FooterState {
-  userEmail: string
-  userName: string
-}
-
-class Footer extends React.PureComponent<{}, FooterState> {
-  constructor(props: object) {
-    super(props)
-
-    this.state = {
-      userEmail: ``,
-      userName: ``,
-    }
-  }
-
-  render() {
-    return (
-      <StyledFooterWrapper>
-        <NewsletterForm />
-      </StyledFooterWrapper>
-    )
-  }
-}
+const Footer = () => (
+  <StyledFooterWrapper>
+    <NewsletterForm />
+  </StyledFooterWrapper>
+)
 
 export default Footer
