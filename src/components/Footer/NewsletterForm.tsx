@@ -104,11 +104,11 @@ class NewsletterForm extends React.PureComponent<{}, NewsletterFormState> {
     }
   }
 
-  handleEmailInputChange = (e: React.SyntheticEvent) => {
+  handleEmailInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     this.setState({ userEmail: e.target.value })
   }
 
-  handleNameInputChange = (e: React.SyntheticEvent) => {
+  handleNameInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     this.setState({ userName: e.target.value })
   }
 
