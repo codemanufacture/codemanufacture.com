@@ -139,7 +139,7 @@ class NewsletterForm extends React.PureComponent<{}, NewsletterFormState> {
       <StyledFormWrapper isMailchimpMessageVisible={isMailchimpMessageVisible}>
         <form onSubmit={e => this.handleSubmit(e)}>
           <Input
-            onChange={(e: React.SyntheticEvent) =>
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
               this.handleNameInputChange(e)
             }
             type="text"
@@ -150,7 +150,7 @@ class NewsletterForm extends React.PureComponent<{}, NewsletterFormState> {
             placeholder="Enter your name"
           />
           <Input
-            onChange={(e: React.SyntheticEvent) =>
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
               this.handleEmailInputChange(e)
             }
             type="email"
