@@ -4,57 +4,92 @@ import { colors, typography, transitions, displayDimensions } from '../../theme'
 import addToMailchimp from 'gatsby-plugin-mailchimp'
 import Input from '../Input'
 
-const StyledFormWrapper = styled.div`
+interface StyledProps {
+  isMailchimpMessageVisible: boolean
+}
+
+const StyledFormWrapper = styled<StyledProps, 'div'>('div')`
+  min-height: 40px;
   width: 50%;
   margin-left: auto;
   margin-right: 0;
+  position: relative;
 
   @media (max-width: ${displayDimensions.tabletSize}) {
     width: 100%;
   }
 
-  form {
-    display: flex;
-    padding: 30px;
-    flex-direction: column;
-    align-items: flex-start;
+  .message-wrapper {
+    opacity: ${props => (props.isMailchimpMessageVisible ? 1 : 0)};
+    width: calc(100% - 20px);
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    transition: opacity ${transitions.basicTransition};
+    font-size: ${typography.paragraphSize};
+    pointer-events: none;
+  }
 
-    @media (max-width: ${displayDimensions.tabletSize}) {
-      align-items: initial;
-    }
+  form {
+    opacity: ${props => (props.isMailchimpMessageVisible ? 0 : 1)};
+    display: flex;
+    padding: 0 15px;
+    align-items: flex-start;
+    pointer-events: ${props =>
+      props.isMailchimpMessageVisible ? 'none' : 'initial'};
 
     input {
       + input {
-        margin-top: 15px;
+        margin-left: 15px;
+      }
+    }
+
+    @media (max-width: ${displayDimensions.tabletSize}) {
+      flex-direction: column;
+      align-items: initial;
+
+      input {
+        + input {
+          margin-left: initial;
+          margin-top: 10px;
+        }
       }
     }
   }
 
   .btn-submit {
     margin-right: 0;
-    margin-left: 0;
+    padding: 0.375rem 0.75rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
     background: ${colors.backgroundSuccess};
     color: ${colors.buttonTextColor};
     font-size: ${typography.ctaSize};
     line-height: 1.5;
-    border-radius: 0.25rem;
-    border: 1px solid transparent;
-    padding: 0.375rem 0.75rem;
-    transition: background-color ${transitions.basicTransition},
-      border-color ${transitions.basicTransition};
+    transition: background-color ${transitions.basicTransition};
     cursor: pointer;
     outline: none;
 
     &:hover {
-      background-color: #218838;
-      border-color: #1e7e34;
+      background: ${colors.backgroundSuccessHover};
     }
   }
 `
 
 interface NewsletterFormState {
+  isMailchimpMessageVisible: boolean
+  mailchimpMessage: string
   userEmail: string
   userName: string
+}
+
+interface MailchimpCallData {
+  msg: string
+  result: string
 }
 
 class NewsletterForm extends React.PureComponent<{}, NewsletterFormState> {
@@ -62,6 +97,8 @@ class NewsletterForm extends React.PureComponent<{}, NewsletterFormState> {
     super(props)
 
     this.state = {
+      isMailchimpMessageVisible: false,
+      mailchimpMessage: ``,
       userEmail: ``,
       userName: ``,
     }
@@ -76,12 +113,14 @@ class NewsletterForm extends React.PureComponent<{}, NewsletterFormState> {
   }
 
   handleSubmit = (e: React.SyntheticEvent) => {
-    console.log(e)
-
     e.preventDefault()
-    addToMailchimp(this.state.userEmail, { ['FNAME']: this.state.userName }) // listFields are optional if you are only capturing the email address.
-      .then(data => {
+    addToMailchimp(this.state.userEmail, { ['FNAME']: this.state.userName })
+      .then((data: MailchimpCallData) => {
         console.log(data)
+        this.setState({
+          isMailchimpMessageVisible: true,
+          mailchimpMessage: data.msg,
+        })
       })
       .catch((error: object) => {
         console.log(error)
@@ -89,22 +128,33 @@ class NewsletterForm extends React.PureComponent<{}, NewsletterFormState> {
   }
 
   render() {
+    const {
+      isMailchimpMessageVisible,
+      mailchimpMessage,
+      userEmail,
+      userName,
+    } = this.state
+
     return (
-      <StyledFormWrapper>
+      <StyledFormWrapper isMailchimpMessageVisible={isMailchimpMessageVisible}>
         <form onSubmit={e => this.handleSubmit(e)}>
           <Input
-            onChange={e => this.handleNameInputChange(e)}
+            onChange={(e: React.SyntheticEvent) =>
+              this.handleNameInputChange(e)
+            }
             type="text"
-            value={this.state.userName}
+            value={userName}
             name="FNAME"
             className="required"
             id="mce-FNAME"
             placeholder="Enter your name"
           />
           <Input
-            onChange={e => this.handleEmailInputChange(e)}
+            onChange={(e: React.SyntheticEvent) =>
+              this.handleEmailInputChange(e)
+            }
             type="email"
-            value={this.state.userEmail}
+            value={userEmail}
             name="EMAIL"
             className="required email"
             id="mce-EMAIL"
@@ -112,6 +162,7 @@ class NewsletterForm extends React.PureComponent<{}, NewsletterFormState> {
           />
           <input type="submit" value="Subscribe" className="btn-submit" />
         </form>
+        <p className="message-wrapper">{mailchimpMessage}</p>
       </StyledFormWrapper>
     )
   }

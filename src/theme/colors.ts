@@ -6,6 +6,7 @@ export const colors = {
   backgroundDark: '#2b2b2b',
   backgroundGray: '#444',
   backgroundSuccess: '#28a745',
+  backgroundSuccessHover: '#218838',
   borderColor: '#eee',
   brand: brandBlue,
   buttonTextColor: white,
