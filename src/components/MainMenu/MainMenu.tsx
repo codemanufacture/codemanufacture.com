@@ -1,7 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import classNames from 'classnames'
-import uniqid from 'uniqid'
 import homepageSections, {
   HomepageSectionElement,
 } from '../../enums/homepageSections'
@@ -101,13 +100,15 @@ class MainMenu extends React.PureComponent<{}, MainMenuState> {
     return (
       <StyledMainMenuWrapper>
         <ul className={pagesListClassnames}>
-          {homepageSections.map((item: HomepageSectionElement) => (
-            <MenuItem
-              key={uniqid()}
-              item={item}
-              onClick={() => this.handleMenuItemClick()}
-            />
-          ))}
+          {homepageSections.map(
+            (item: HomepageSectionElement, index: number) => (
+              <MenuItem
+                key={`menu-item-${index}`}
+                item={item}
+                onClick={() => this.handleMenuItemClick()}
+              />
+            )
+          )}
         </ul>
         <MobileMenuTrigger
           onClick={(e: React.MouseEvent) => this.handleTriggerClick(e)}
