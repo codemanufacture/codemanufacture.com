@@ -30,11 +30,21 @@ interface InputProps {
   id: string
   className: string
   placeholder: string
+  required: boolean
   onChange(e: React.SyntheticEvent): void
 }
 
 const Input = (props: InputProps) => {
-  const { onChange, type, value, name, id, className, placeholder } = props
+  const {
+    onChange,
+    type,
+    value,
+    name,
+    id,
+    className,
+    placeholder,
+    required,
+  } = props
 
   return (
     <StyledInput
@@ -45,6 +55,7 @@ const Input = (props: InputProps) => {
       className={className}
       id={id}
       placeholder={placeholder}
+      required={required}
     />
   )
 }

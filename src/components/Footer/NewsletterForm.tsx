@@ -182,6 +182,7 @@ class NewsletterForm extends React.PureComponent<{}, NewsletterFormState> {
               className="required"
               id="mce-FNAME"
               placeholder="Enter your name"
+              required
             />
             <Input
               onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
@@ -193,6 +194,7 @@ class NewsletterForm extends React.PureComponent<{}, NewsletterFormState> {
               className="required email"
               id="mce-EMAIL"
               placeholder="Enter your email"
+              required
             />
             <input type="submit" value="Subscribe" className="btn-submit" />
           </form>
