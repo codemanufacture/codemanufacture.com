@@ -61,5 +61,11 @@ module.exports = {
         siteUrl: config.siteUrl,
       },
     },
+    {
+      resolve: `gatsby-plugin-mailchimp`,
+      options: {
+        endpoint: `https://codemanufacture.us16.list-manage.com/subscribe/post?u=f65f415cd77c5c7f3128774c0&id=72598455c7`,
+      },
+    }
   ],
 }
