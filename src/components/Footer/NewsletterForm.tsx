@@ -40,15 +40,15 @@ const StyledFormWrapper = styled<StyledProps, 'div'>('div')`
     transition: opacity ${transitions.basicTransition};
 
     h3 {
-      color: ${colors.white};
+      color: #ddd;
       font-size: ${typography.subtitleSize};
       font-weight: 500;
-      margin: 0 0 30px 0;
+      margin: 0 0 15px 0;
       text-transform: uppercase;
     }
 
     .disclaimer {
-      color: ${colors.white};
+      color: #ccc;
       font-size: ${typography.paragraphSize};
     }
 
