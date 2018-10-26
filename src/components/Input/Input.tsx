@@ -5,10 +5,7 @@ import styled from 'styled-components'
 const StyledInput = styled.input`
   display: block;
   width: 100%;
-  padding: 0.375rem 0.75rem;
-  font-size: ${typography.ctaSize};
-  line-height: 1.5;
-  color: ${colors.textColor};
+  padding: 10px 12px;
   background: ${colors.background};
   background-clip: padding-box;
   border: 1px solid ${colors.borderColor};
@@ -16,6 +13,10 @@ const StyledInput = styled.input`
   transition: border-color ${transitions.basicTransition},
     box-shadow ${transitions.basicTransition};
   outline: none;
+  color: ${colors.textColor};
+  font-family: 'Montserrat', sans-serif;
+  font-size: ${typography.ctaSize};
+  line-height: 1.5;
 
   &:focus {
     border-color: ${colors.brand};

@@ -10,9 +10,8 @@ interface StyledProps {
 
 const StyledFormWrapper = styled<StyledProps, 'div'>('div')`
   min-height: 40px;
-  width: 50%;
-  margin-left: auto;
-  margin-right: 0;
+  width: 66%;
+  margin: auto;
   position: relative;
 
   @media (max-width: ${displayDimensions.tabletSize}) {
@@ -28,19 +27,38 @@ const StyledFormWrapper = styled<StyledProps, 'div'>('div')`
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: #fff;
+    color: ${colors.white};
     transition: opacity ${transitions.basicTransition};
     font-size: ${typography.paragraphSize};
     pointer-events: none;
   }
 
-  form {
+  .form-wrapper {
     opacity: ${props => (props.isMailchimpMessageVisible ? 0 : 1)};
-    display: flex;
-    padding: 0 15px;
-    align-items: flex-start;
     pointer-events: ${props =>
       props.isMailchimpMessageVisible ? 'none' : 'initial'};
+
+    h3 {
+      color: ${colors.white};
+      font-size: ${typography.subtitleSize};
+      font-weight: 500;
+      margin: 0 0 30px 0;
+      text-transform: uppercase;
+    }
+
+    .disclaimer {
+      color: ${colors.white};
+      font-size: ${typography.paragraphSize};
+    }
+
+    @media (max-width: ${displayDimensions.tabletSize}) {
+      padding: 0 30px;
+    }
+  }
+
+  form {
+    display: flex;
+    align-items: flex-start;
 
     input {
       + input {
@@ -63,19 +81,21 @@ const StyledFormWrapper = styled<StyledProps, 'div'>('div')`
 
   .btn-submit {
     margin-right: 0;
-    padding: 0.375rem 0.75rem;
+    padding: 10px 30px;
     border: 1px solid transparent;
     border-radius: 0.25rem;
-    background: ${colors.backgroundSuccess};
+    background: ${colors.brand};
     color: ${colors.buttonTextColor};
     font-size: ${typography.ctaSize};
     line-height: 1.5;
-    transition: background-color ${transitions.basicTransition};
+    transition: background-color ${transitions.basicTransition},
+      color ${transitions.basicTransition};
     cursor: pointer;
     outline: none;
 
     &:hover {
-      background: ${colors.backgroundSuccessHover};
+      background: ${colors.brandDarkGreen};
+      color: ${colors.white};
     }
   }
 `
@@ -137,31 +157,38 @@ class NewsletterForm extends React.PureComponent<{}, NewsletterFormState> {
 
     return (
       <StyledFormWrapper isMailchimpMessageVisible={isMailchimpMessageVisible}>
-        <form onSubmit={e => this.handleSubmit(e)}>
-          <Input
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-              this.handleNameInputChange(e)
-            }
-            type="text"
-            value={userName}
-            name="FNAME"
-            className="required"
-            id="mce-FNAME"
-            placeholder="Enter your name"
-          />
-          <Input
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-              this.handleEmailInputChange(e)
-            }
-            type="email"
-            value={userEmail}
-            name="EMAIL"
-            className="required email"
-            id="mce-EMAIL"
-            placeholder="Enter your email"
-          />
-          <input type="submit" value="Subscribe" className="btn-submit" />
-        </form>
+        <div className="form-wrapper">
+          <h3>Subscribe to Our Newsletter</h3>
+          <form onSubmit={e => this.handleSubmit(e)}>
+            <Input
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                this.handleNameInputChange(e)
+              }
+              type="text"
+              value={userName}
+              name="FNAME"
+              className="required"
+              id="mce-FNAME"
+              placeholder="Enter your name"
+            />
+            <Input
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                this.handleEmailInputChange(e)
+              }
+              type="email"
+              value={userEmail}
+              name="EMAIL"
+              className="required email"
+              id="mce-EMAIL"
+              placeholder="Enter your email"
+            />
+            <input type="submit" value="Subscribe" className="btn-submit" />
+          </form>
+          <p className="disclaimer">
+            Get Important Offers and Deals directly to your Email Inbox.
+            <em>We never send spam!</em>
+          </p>
+        </div>
         <p className="message-wrapper">{mailchimpMessage}</p>
       </StyledFormWrapper>
     )
