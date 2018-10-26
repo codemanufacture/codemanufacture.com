@@ -7,7 +7,7 @@ const StyledFooterWrapper = styled.div`
   display: flex;
   width: 100%;
   background: ${colors.backgroundGray};
-  padding: 35px 0;
+  padding: 30px 0;
 `
 
 const Footer = () => (

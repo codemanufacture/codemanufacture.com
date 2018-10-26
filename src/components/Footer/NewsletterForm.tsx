@@ -20,7 +20,7 @@ const StyledFormWrapper = styled<StyledProps, 'div'>('div')`
 
   .message-wrapper {
     opacity: ${props => (props.isMailchimpMessageVisible ? 1 : 0)};
-    width: calc(100% - 20px);
+    width: calc(100% - 60px);
     margin: 0;
     position: absolute;
     top: 50%;
@@ -37,6 +37,7 @@ const StyledFormWrapper = styled<StyledProps, 'div'>('div')`
     opacity: ${props => (props.isMailchimpMessageVisible ? 0 : 1)};
     pointer-events: ${props =>
       props.isMailchimpMessageVisible ? 'none' : 'initial'};
+    transition: opacity ${transitions.basicTransition};
 
     h3 {
       color: ${colors.white};
@@ -73,7 +74,7 @@ const StyledFormWrapper = styled<StyledProps, 'div'>('div')`
       input {
         + input {
           margin-left: initial;
-          margin-top: 10px;
+          margin-top: 15px;
         }
       }
     }
@@ -128,6 +129,14 @@ class NewsletterForm extends React.PureComponent<{}, NewsletterFormState> {
     this.setState({ userEmail: e.target.value })
   }
 
+  resetFormStates = () => {
+    window.setTimeout(() => {
+      this.setState({
+        isMailchimpMessageVisible: false,
+      })
+    }, 2500)
+  }
+
   handleNameInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     this.setState({ userName: e.target.value })
   }
@@ -137,10 +146,13 @@ class NewsletterForm extends React.PureComponent<{}, NewsletterFormState> {
     addToMailchimp(this.state.userEmail, { ['FNAME']: this.state.userName })
       .then((data: MailchimpCallData) => {
         console.log(data)
-        this.setState({
-          isMailchimpMessageVisible: true,
-          mailchimpMessage: data.msg,
-        })
+        this.setState(
+          {
+            isMailchimpMessageVisible: true,
+            mailchimpMessage: data.msg,
+          },
+          () => this.resetFormStates()
+        )
       })
       .catch((error: object) => {
         console.log(error)
