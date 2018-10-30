@@ -9,7 +9,7 @@ export interface SocialIconProps {
 const SocialIcon: React.SFC<SocialIconProps> = ({ icon, name, url }) => (
   <li>
     <figure>
-      <a href={url} rel="noopener norefferer">
+      <a href={url} rel="noopener norefferer" target="_blank">
         <img src={icon} alt={`${name}`} />
       </a>
     </figure>
