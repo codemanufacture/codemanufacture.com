@@ -1,15 +1,19 @@
 import * as React from 'react'
-// import styled from 'styled-components'
+import styled from 'styled-components'
 // import { colors } from '../../theme'
 import { FacebookIcon, GithubIcon, LinkedinIcon } from '../SocialIcon'
 
+const StyledSocialMediaLinks = styled.ul`
+    list-style: none;
+`
+
 const SocialMediaLinks = () => {
   return (
-    <ul>
+    <StyledSocialMediaLinks>
       <FacebookIcon />
       <GithubIcon />
       <LinkedinIcon />
-    </ul>
+    </StyledSocialMediaLinks>
   )
 }
 
