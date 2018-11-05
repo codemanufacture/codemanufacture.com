@@ -2,53 +2,91 @@ import * as React from 'react'
 import styled from 'styled-components'
 import { transitions } from '../../theme'
 
-
 export interface SocialIconProps {
-    icon: string
-    name: string
-    url: string
+  backgroundColor: string
+  icon: string
+  height: number
+  name: string
+  url: string
+  width: number
 }
 
-const StyledSocialIcon = styled.figure`
-    a {
-        display: block;
-        width: 32px;
-        height: 32px;
-        position: relative;
-        overflow: hidden;
+interface StyledSocialIcon {
+  backgroundColor: string
+}
 
-        &:hover {
-            img {
-                &:first-of-type,
-                &:last-of-type {
-                    transform: translate(0, -32px);
-                }
-            }
-        }
+const StyledSocialIcon = styled<StyledSocialIcon, 'figure'>('figure')`
+  border-radius: 2px;
+  background: transparent;
+  transition: background ${transitions.basicTransition};
 
-        img {
-            position: absolute;
-            transition: ${transitions.basicTransition};
+  &:hover {
+    background: ${props => props.backgroundColor};
+  }
 
-            &:first-of-type {
-                top: 0;
-            }
-            &:last-of-type {
-                top: 32px;
-            }
-        }
+  a {
+    display: block;
+    width: 32px;
+    height: 32px;
+    position: relative;
+    overflow: hidden;
+
+    .icon-wrapper {
+      display: block;
+      width: 32px;
+      height: 32px;
+      margin: auto;
+      padding: 0;
+      position: absolute;
+      transition: ${transitions.basicTransition};
+
+      &:first-of-type {
+        top: 0;
+        opacity: 0.5;
+      }
+      &:last-of-type {
+        top: 32px;
+      }
     }
+
+    &:hover {
+      .icon-wrapper {
+        &:first-of-type,
+        &:last-of-type {
+          transform: translate(0, -32px);
+        }
+      }
+    }
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
 `
 
-const SocialIcon: React.SFC<SocialIconProps> = ({ icon, name, url }) => (
-    <li>
-        <StyledSocialIcon>
-            <a href={url} rel="noopener norefferer" target="_blank">
-                <img src={icon} alt={`${name}`} />
-                <img src={icon} alt={`${name}`} />
-            </a>
-        </StyledSocialIcon>
-    </li>
+const SocialIcon: React.SFC<SocialIconProps> = ({
+  backgroundColor,
+  icon,
+  name,
+  url,
+  width,
+  height,
+}) => (
+  <li>
+    <StyledSocialIcon backgroundColor={backgroundColor}>
+      <a href={url} rel="noopener norefferer" target="_blank">
+        <span className="icon-wrapper">
+          <img src={icon} alt={`${name}`} width={width} height={height} />
+        </span>
+        <span className="icon-wrapper">
+          <img src={icon} alt={`${name}`} width={width} height={height} />
+        </span>
+      </a>
+    </StyledSocialIcon>
+  </li>
 )
 
 export default SocialIcon

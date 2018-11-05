@@ -6,6 +6,7 @@ const brandDarkGreen = '#0d313a'
 export const colors = {
   background: white,
   backgroundDark: '#2b2b2b',
+  backgroundDarkerGray: '#333',
   backgroundGray: '#444',
   borderColor: '#eee',
   brand: brandBlue,
