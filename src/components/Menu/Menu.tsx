@@ -1,10 +1,10 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import classNames from 'classnames'
-import { colors, transitions, displayDimensions, sizes } from '../../../theme'
+import { colors, transitions, displayDimensions, sizes } from '../../theme'
 import homepageSections, {
   HomepageSectionElement,
-} from '../../../enums/homepageSections'
+} from '../../enums/homepageSections'
 import MenuItem from './MenuItem'
 
 const StyledMenu = styled.ul`

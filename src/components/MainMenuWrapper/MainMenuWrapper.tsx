@@ -2,7 +2,7 @@ import * as React from 'react'
 import styled from 'styled-components'
 import { displayDimensions } from '../../theme'
 import MobileMenuTrigger from './components/MobileMenuTrigger'
-import Menu from './components/Menu'
+import Menu from '../Menu'
 
 const StyledMainMenuWrapper = styled.menu`
   margin: auto 0 auto auto;
