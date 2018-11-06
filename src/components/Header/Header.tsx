@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import Logo from '../Logo'
-import MainMenu from '../MainMenu'
+import MainMenuWrapper from '../MainMenuWrapper'
 import { colors, displayDimensions, sizes } from '../../theme'
 
 interface HeaderProps {
@@ -30,7 +30,7 @@ const StyledHeaderWrapper = styled.div`
 const Header: React.SFC<HeaderProps> = ({ siteTitle }) => (
   <StyledHeaderWrapper>
     <Logo alt={siteTitle} width={260} height={40} />
-    <MainMenu />
+    <MainMenuWrapper />
   </StyledHeaderWrapper>
 )
 
