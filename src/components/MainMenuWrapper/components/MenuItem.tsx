@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { HomepageSectionElement } from '../../enums/homepageSections'
+import { HomepageSectionElement } from '../../../enums/homepageSections'
 
 interface MenuItemProps {
   item: HomepageSectionElement
