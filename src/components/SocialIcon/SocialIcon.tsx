@@ -42,7 +42,7 @@ const StyledSocialIcon = styled<StyledSocialIcon, 'figure'>('figure')`
 
       &:first-of-type {
         top: 0;
-        opacity: 0.5;
+        opacity: 0.25;
       }
       &:last-of-type {
         top: 32px;

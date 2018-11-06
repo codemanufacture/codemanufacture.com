@@ -1,6 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import { FacebookIcon, GithubIcon, LinkedinIcon } from '../SocialIcon'
+import { displayDimensions } from '../../theme'
 
 const StyledSocialMediaLinks = styled.ul`
   display: flex;
@@ -14,6 +15,10 @@ const StyledSocialMediaLinks = styled.ul`
       position: relative;
       display: block;
     }
+  }
+
+  @media (max-width: ${displayDimensions.tabletSize}) {
+    margin: 30px auto auto;
   }
 `
 

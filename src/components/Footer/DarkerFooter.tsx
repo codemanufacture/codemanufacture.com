@@ -20,6 +20,8 @@ const StyledDarkerFooter = styled.div`
 
     @media (max-width: ${displayDimensions.tabletSize}) {
       width: 100%;
+      flex-direction: column;
+      padding: 0 30px;
     }
   }
 `
