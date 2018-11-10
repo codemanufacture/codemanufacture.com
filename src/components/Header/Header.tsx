@@ -2,7 +2,7 @@ import * as React from 'react'
 import styled from 'styled-components'
 import Logo from '../Logo'
 import MainMenuWrapper from '../MainMenuWrapper'
-import { colors, displayDimensions, sizes } from '../../theme'
+import { colors, displayDimensions, sizes, zIndexes } from '../../theme'
 
 interface HeaderProps {
   siteTitle: string
@@ -18,6 +18,7 @@ const StyledHeaderWrapper = styled.div`
   position: fixed;
   top: 0;
   left: 0;
+  z-index: ${zIndexes.mainHeader};
   justify-content: space-between;
   background: ${colors.background};
 
