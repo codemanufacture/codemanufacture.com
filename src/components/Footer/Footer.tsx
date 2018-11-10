@@ -4,19 +4,7 @@ import { colors } from '../../theme'
 import NewsletterForm from './NewsletterForm'
 import DarkerFooter from './DarkerFooter'
 import SocialMediaLinks from '../SocialMediaLinks'
-import Menu from '../Menu'
-import MenuItemInterface from '../Menu/MenuItemInterface'
-
-const FOOTER_MENU_ITEMS: MenuItemInterface[] = [
-  {
-    name: `Home`,
-    sectionId: `home`,
-  },
-  {
-    name: `Services`,
-    sectionId: `services`,
-  },
-]
+import FooterMenu from '../FooterMenu'
 
 const StyledFooterWrapper = styled.div`
   display: flex;
@@ -30,7 +18,7 @@ const Footer = () => (
   <StyledFooterWrapper>
     <NewsletterForm />
     <DarkerFooter>
-      <Menu isCompactVersion menuItems={FOOTER_MENU_ITEMS} />
+      <FooterMenu />
       <SocialMediaLinks />
     </DarkerFooter>
   </StyledFooterWrapper>
