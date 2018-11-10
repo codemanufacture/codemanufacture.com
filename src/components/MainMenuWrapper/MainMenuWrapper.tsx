@@ -3,6 +3,18 @@ import styled from 'styled-components'
 import { displayDimensions } from '../../theme'
 import MobileMenuTrigger from './components/MobileMenuTrigger'
 import Menu from '../Menu'
+import MenuItemInterface from '../Menu/MenuItemInterface'
+
+const MAIN_MENU_ITEMS: MenuItemInterface[] = [
+  {
+    name: `Home`,
+    sectionId: `home`,
+  },
+  {
+    name: `Services`,
+    sectionId: `services`,
+  },
+]
 
 const StyledMainMenuWrapper = styled.menu`
   margin: auto 0 auto auto;
@@ -37,7 +49,7 @@ class MainMenuWrapper extends React.PureComponent<{}, MainMenuWrapperState> {
     this.setState({ isMobileMenuActive: !this.state.isMobileMenuActive })
   }
 
-  handleMenuItemClick = () => {
+  handleMenuClick = () => {
     if (this.state.isMobileMenuActive) {
       this.setState({ isMobileMenuActive: false })
     }
@@ -48,7 +60,8 @@ class MainMenuWrapper extends React.PureComponent<{}, MainMenuWrapperState> {
       <StyledMainMenuWrapper>
         <Menu
           isMobileMenuActive={this.state.isMobileMenuActive}
-          onMenuItemClick={this.handleMenuItemClick}
+          onMenuClick={this.handleMenuClick}
+          menuItems={MAIN_MENU_ITEMS}
         />
         <MobileMenuTrigger
           onClick={(e: React.MouseEvent) => this.handleTriggerClick(e)}

@@ -1,20 +1,16 @@
 import * as React from 'react'
-import { HomepageSectionElement } from '../../enums/homepageSections'
+import { Link } from 'gatsby'
+import MenuItemInterface from '../Menu/MenuItemInterface'
 
 interface MenuItemProps {
-  item: HomepageSectionElement
-  onClick: () => void
+  item: MenuItemInterface
 }
 
 const MenuItem: React.SFC<MenuItemProps> = props => (
   <li>
-    <a
-      href={`#${props.item.sectionId}`}
-      title={`#${props.item.name}`}
-      onClick={() => props.onClick()}
-    >
+    <Link to={`/homepage#${props.item.sectionId}`} title={props.item.name}>
       {props.item.name}
-    </a>
+    </Link>
   </li>
 )
 

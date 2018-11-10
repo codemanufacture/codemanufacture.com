@@ -8,10 +8,8 @@ import {
   sizes,
   typography,
 } from '../../theme'
-import homepageSections, {
-  HomepageSectionElement,
-} from '../../enums/homepageSections'
 import MenuItem from './MenuItem'
+import MenuItemInterface from '../Menu/MenuItemInterface'
 
 const StyledMenu = styled.ul`
   display: flex;
@@ -105,13 +103,15 @@ const StyledMenu = styled.ul`
 interface MenuProps {
   isCompactVersion?: boolean
   isMobileMenuActive?: boolean
-  onMenuItemClick?(): void
+  menuItems: MenuItemInterface[]
+  onMenuClick?(): void
 }
 
 const Menu: React.SFC<MenuProps> = ({
   isMobileMenuActive,
-  onMenuItemClick,
+  onMenuClick,
   isCompactVersion,
+  menuItems,
 }) => {
   const pagesListClassnames = classNames({
     active: isMobileMenuActive,
@@ -119,13 +119,12 @@ const Menu: React.SFC<MenuProps> = ({
   })
 
   return (
-    <StyledMenu className={pagesListClassnames}>
-      {homepageSections.map((item: HomepageSectionElement, index: number) => (
-        <MenuItem
-          key={`menu-item-${index}`}
-          item={item}
-          onClick={() => (onMenuItemClick ? onMenuItemClick() : null)}
-        />
+    <StyledMenu
+      className={pagesListClassnames}
+      onClick={() => (onMenuClick ? onMenuClick() : null)}
+    >
+      {menuItems.map((item: MenuItemInterface, index: number) => (
+        <MenuItem key={`menu-item-${index}`} item={item} />
       ))}
     </StyledMenu>
   )
