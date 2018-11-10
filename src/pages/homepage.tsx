@@ -20,7 +20,10 @@ const HomePageContentPlaceholder = () => <p>Lorem ipsum dolor sit amet</p>
 const HomePage = () => (
   <Layout>
     {HOMEPAGE_SECTIONS.map(item => (
-      <HomepageSection sectionId={item.sectionId}>
+      <HomepageSection
+        sectionId={item.sectionId}
+        key={`homepage-section-${item.sectionId}`}
+      >
         {item.sectionId === 'services' ? (
           <ServicesSection />
         ) : (
