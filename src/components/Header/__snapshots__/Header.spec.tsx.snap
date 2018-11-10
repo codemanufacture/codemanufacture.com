@@ -43,41 +43,26 @@ exports[`Header component renders correctly 1`] = `
   >
     <ul
       className="sc-htpNat ixpPZr"
+      onClick={[Function]}
     >
       <li>
         <a
-          href="#home"
+          href="/homepage#home"
           onClick={[Function]}
-          title="#Home"
+          onMouseEnter={[Function]}
+          title="Home"
         >
           Home
         </a>
       </li>
       <li>
         <a
-          href="#about"
+          href="/homepage#services"
           onClick={[Function]}
-          title="#About"
-        >
-          About
-        </a>
-      </li>
-      <li>
-        <a
-          href="#services"
-          onClick={[Function]}
-          title="#Services"
+          onMouseEnter={[Function]}
+          title="Services"
         >
           Services
-        </a>
-      </li>
-      <li>
-        <a
-          href="#contact"
-          onClick={[Function]}
-          title="#Contact"
-        >
-          Contact
         </a>
       </li>
     </ul>
