@@ -8,8 +8,6 @@ interface HomepageSectionProps {
 }
 
 const StyledHomepageSection = styled.section`
-  min-height: 100vh;
-  border-bottom: 1px solid #999;
   padding-top: ${sizes.headerHeight};
   text-align: center;
 `
