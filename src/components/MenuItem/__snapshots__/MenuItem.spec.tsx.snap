@@ -3,9 +3,10 @@
 exports[`MenuItem component renders correctly 1`] = `
 <li>
   <a
-    href="#qwe"
+    href="/qwe"
     onClick={[Function]}
-    title="#abc"
+    onMouseEnter={[Function]}
+    title="abc"
   >
     abc
   </a>

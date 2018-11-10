@@ -5,11 +5,8 @@ import MenuItem from './MenuItem'
 describe('MenuItem component', () =>
   it('renders correctly', () => {
     const props = {
-      item: {
-        name: 'abc',
-        sectionId: 'qwe',
-      },
-      onClick: jest.fn(),
+      name: 'abc',
+      pagePath: 'qwe',
     }
 
     const tree = renderer.create(<MenuItem {...props} />).toJSON()

@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainMenu component renders correctly 1`] = `
+<ul
+  className="sc-bdVaJa dROkLG"
+  onClick={[MockFunction]}
+>
+  <li>
+    <a
+      href="/homepage#home"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      title="Home"
+    >
+      Home
+    </a>
+  </li>
+  <li>
+    <a
+      href="/homepage#services"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      title="Services"
+    >
+      Services
+    </a>
+  </li>
+</ul>
+`;

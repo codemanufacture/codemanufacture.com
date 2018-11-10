@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FooterMenu component renders correctly 1`] = `
+<ul
+  className="sc-bdVaJa bEygpt"
+>
+  <li>
+    <a
+      href="/homepage#home"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      title="Home"
+    >
+      Home
+    </a>
+  </li>
+  <li>
+    <a
+      href="/homepage#services"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      title="Services"
+    >
+      Services
+    </a>
+  </li>
+  <li>
+    <a
+      href="/privacy-policy"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      title="Privacy Policy"
+    >
+      Privacy Policy
+    </a>
+  </li>
+</ul>
+`;

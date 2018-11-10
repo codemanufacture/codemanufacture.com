@@ -4,7 +4,7 @@ import { colors } from '../../theme'
 import NewsletterForm from './NewsletterForm'
 import DarkerFooter from './DarkerFooter'
 import SocialMediaLinks from '../SocialMediaLinks'
-import Menu from '../Menu'
+import FooterMenu from '../FooterMenu'
 
 const StyledFooterWrapper = styled.div`
   display: flex;
@@ -18,7 +18,7 @@ const Footer = () => (
   <StyledFooterWrapper>
     <NewsletterForm />
     <DarkerFooter>
-      <Menu isCompactVersion />
+      <FooterMenu />
       <SocialMediaLinks />
     </DarkerFooter>
   </StyledFooterWrapper>
