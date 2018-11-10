@@ -37,6 +37,7 @@ const StyledMenu = styled.ul`
     flex-direction: column;
     background: ${colors.background};
     transition: transform ${transitions.basicTransition};
+    border-bottom: 1px solid ${colors.borderColor};
 
     &.active {
       right: 0;

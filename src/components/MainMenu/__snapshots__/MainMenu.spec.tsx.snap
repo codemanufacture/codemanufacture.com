@@ -2,7 +2,7 @@
 
 exports[`MainMenu component renders correctly 1`] = `
 <ul
-  className="sc-bdVaJa dROkLG"
+  className="sc-bdVaJa bwLaFB"
   onClick={[MockFunction]}
 >
   <li>
