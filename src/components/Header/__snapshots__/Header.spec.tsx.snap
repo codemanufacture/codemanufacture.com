@@ -14,7 +14,7 @@ exports[`Header component renders correctly 1`] = `
     title="Back to homepage"
   >
     <img
-      alt="Codemanufacture"
+      alt="Codemanufacture - Logo"
       height={40}
       src={
         Object {

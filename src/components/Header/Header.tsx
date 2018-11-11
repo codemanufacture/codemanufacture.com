@@ -4,10 +4,6 @@ import Logo from '../Logo'
 import MainMenuWrapper from '../MainMenuWrapper'
 import { colors, displayDimensions, sizes, zIndexes } from '../../theme'
 
-interface HeaderProps {
-  siteTitle: string
-}
-
 const StyledHeaderWrapper = styled.div`
   display: flex;
   width: 100%;
@@ -28,9 +24,9 @@ const StyledHeaderWrapper = styled.div`
   }
 `
 
-const Header: React.SFC<HeaderProps> = ({ siteTitle }) => (
+const Header = () => (
   <StyledHeaderWrapper>
-    <Logo alt={siteTitle} width={260} height={40} />
+    <Logo alt="Codemanufacture - Logo" width={260} height={40} />
     <MainMenuWrapper />
   </StyledHeaderWrapper>
 )

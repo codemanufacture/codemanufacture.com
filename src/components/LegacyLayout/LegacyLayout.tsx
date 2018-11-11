@@ -13,7 +13,7 @@ const LegacyLayout: React.SFC<LegacyLayoutProps> = ({ children }) => {
     <>
       <MetaData />
       <GlobalStyle />
-      <LegacyHeader siteTitle="Codemanufacture - AWS and Magento Consultancy" />
+      <LegacyHeader />
       <Container>{children}</Container>
     </>
   )

@@ -13,7 +13,7 @@ const Layout: React.SFC<LayoutProps> = ({ children }) => {
     <>
       <MetaData />
       <GlobalStyle />
-      <Header siteTitle="Codemanufacture - AWS and Magento Consultancy" />
+      <Header />
       {children}
       <Footer />
     </>
