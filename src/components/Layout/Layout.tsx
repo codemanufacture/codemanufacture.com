@@ -6,6 +6,7 @@ import GlobalStyle from '../../theme/globalStyle'
 import { Query } from '../../graphql-types'
 import * as favicon from '../../images/favicon.ico'
 import Footer from '../Footer'
+import GoToTop from '../GoToTop'
 
 const Layout: React.SFC = ({ children }) => (
   <StaticQuery
@@ -37,6 +38,7 @@ const render = (data: Query, children: React.ReactNode) => {
       <Header siteTitle={`${metadata.title}`} />
       {children}
       <Footer />
+      <GoToTop />
     </>
   )
 }
