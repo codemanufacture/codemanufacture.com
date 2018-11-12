@@ -8,6 +8,7 @@ const StyledMenu = styled.ul`
   display: flex;
   margin: 0;
   padding: 0;
+  will-change: auto;
 
   li {
     list-style: none;

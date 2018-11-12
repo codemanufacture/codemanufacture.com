@@ -2,6 +2,7 @@ import * as React from 'react'
 import Header from '../Header'
 import GlobalStyle from '../../theme/globalStyle'
 import Footer from '../Footer'
+import GoToTop from '../GoToTop'
 import MetaData from '../MetaData'
 
 interface LayoutProps {
@@ -16,6 +17,7 @@ const Layout: React.SFC<LayoutProps> = ({ children }) => {
       <Header />
       {children}
       <Footer />
+      <GoToTop />
     </>
   )
 }
