@@ -3,20 +3,16 @@ import styled from 'styled-components'
 import Logo from '../Logo/Logo'
 import { graphql } from 'gatsby'
 
-interface LegacyHeaderProps {
-  siteTitle: string
-}
-
 const StyledHeaderWrapper = styled.div`
   margin: 0 auto;
   max-width: 600px;
   padding: 1.45rem 1.0875rem;
 `
 
-const LegacyHeader: React.SFC<LegacyHeaderProps> = ({ siteTitle }) => (
+const LegacyHeader = () => (
   <div className="content">
     <StyledHeaderWrapper>
-      <Logo alt={siteTitle} />
+      <Logo alt="Codemanufacture - Logo" />
     </StyledHeaderWrapper>
   </div>
 )

@@ -4,8 +4,6 @@ import Header from './Header'
 
 describe('Header component', () =>
   it('renders correctly', () => {
-    const tree = renderer
-      .create(<Header siteTitle="Codemanufacture" />)
-      .toJSON()
+    const tree = renderer.create(<Header />).toJSON()
     expect(tree).toMatchSnapshot()
   }))
