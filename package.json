@@ -6,6 +6,7 @@
   "private": true,
   "dependencies": {
     "@types/classnames": "^2.2.6",
+    "@types/throttle-debounce": "^1.1.0",
     "@types/uniqid": "^4.1.2",
     "babel-plugin-styled-components": "^1.5.1",
     "classnames": "^2.2.6",

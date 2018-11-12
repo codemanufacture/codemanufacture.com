@@ -1173,6 +1173,11 @@
     "@types/node" "*"
     "@types/react" "*"
 
+"@types/throttle-debounce@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@types/throttle-debounce/-/throttle-debounce-1.1.0.tgz#26ce0bacaa51e2d2944386324fd124f0090543d2"
+  integrity sha512-qi6CfPL2HEZBhDN+ElkbgFn2BON3k2IGdb8Emkf2X+ihPp7g6ykpOLvN7dYv9dSXqt7IjDFVCuUBHiKvcJxjoA==
+
 "@types/tmp@^0.0.32":
   version "0.0.32"
   resolved "https://registry.yarnpkg.com/@types/tmp/-/tmp-0.0.32.tgz#0d3cb31022f8427ea58c008af32b80da126ca4e3"
