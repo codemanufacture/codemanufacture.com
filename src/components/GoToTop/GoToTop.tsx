@@ -2,6 +2,7 @@ import * as React from 'react'
 import styled from 'styled-components'
 import * as Icon from './images/chevron.svg'
 import classNames from 'classnames'
+import throttle from 'lodash/throttle'
 import { colors, transitions, zIndexes } from '../../theme'
 
 const StyledGoToTop = styled.a`
@@ -46,7 +47,7 @@ class GoToTop extends React.PureComponent<{}, GoToTopState> {
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll)
+    window.addEventListener('scroll', throttle(this.handleScroll, 100))
   }
 
   componentWillUnmount() {
@@ -54,13 +55,13 @@ class GoToTop extends React.PureComponent<{}, GoToTopState> {
   }
 
   handleScroll = () => {
-    window.requestAnimationFrame(() => {
-      if (window.scrollY > 0) {
-        this.setState({ isButtonVisible: true })
-      } else {
-        this.setState({ isButtonVisible: false })
-      }
-    })
+    const windowPosition = window.scrollY
+
+    if (windowPosition > 0 && !this.state.isButtonVisible) {
+      this.setState({ isButtonVisible: true })
+    } else if (windowPosition === 0) {
+      this.setState({ isButtonVisible: false })
+    }
   }
 
   handleClick = (e: React.SyntheticEvent) => {
