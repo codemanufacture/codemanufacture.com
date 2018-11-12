@@ -2,7 +2,7 @@ import * as React from 'react'
 import styled from 'styled-components'
 import * as Icon from './images/chevron.svg'
 import classNames from 'classnames'
-import throttle from 'lodash/throttle'
+import { throttle } from 'throttle-debounce'
 import { colors, transitions, zIndexes } from '../../theme'
 
 const StyledGoToTop = styled.a`
@@ -47,7 +47,7 @@ class GoToTop extends React.PureComponent<{}, GoToTopState> {
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', throttle(this.handleScroll, 100))
+    window.addEventListener('scroll', throttle(100, this.handleScroll))
   }
 
   componentWillUnmount() {
