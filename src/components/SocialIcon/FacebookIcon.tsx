@@ -7,7 +7,7 @@ const FacebookIcon = () => (
     backgroundColor="#4267b2"
     icon={Icon}
     name="Facebook"
-    url="https://facebook.com"
+    url="https://facebook.com/codemanufacture/"
     width={20}
     height={20}
   />

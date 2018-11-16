@@ -7,7 +7,7 @@ const LinkedInIcon = () => (
     backgroundColor="#0077b5"
     icon={Icon}
     name="Linkedin"
-    url="https://linkedin.com"
+    url="https://linkedin.com/company/codemanufacture/"
     width={17}
     height={17}
   />
