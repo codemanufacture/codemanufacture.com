@@ -15,7 +15,7 @@ interface StyledSocialIcon {
   backgroundColor: string
 }
 
-const StyledSocialIcon = styled<StyledSocialIcon, 'figure'>('figure')`
+const StyledSocialIcon = styled('figure')<StyledSocialIcon>`
   border-radius: 2px;
   background: transparent;
   transition: background ${transitions.basicTransition};

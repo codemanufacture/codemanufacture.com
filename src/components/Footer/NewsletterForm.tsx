@@ -8,7 +8,7 @@ interface StyledProps {
   isMailchimpMessageVisible: boolean
 }
 
-const StyledFormWrapper = styled<StyledProps, 'div'>('div')`
+const StyledFormWrapper = styled('div')<StyledProps>`
   min-height: 40px;
   width: 66%;
   margin: auto;

@@ -18,7 +18,7 @@ module.exports = {
         name: `content`,
         ignore: [
           `**/\.*`,
-          `**/pages/**`
+          `**/pages/**`,
         ]
       },
     },
@@ -32,7 +32,10 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: [`gatsby-remark-autolink-headers`],
+        plugins: [
+          `gatsby-remark-prismjs`,
+          `gatsby-remark-autolink-headers`
+        ],
       },
     },
     `gatsby-plugin-react-helmet`,
@@ -41,6 +44,7 @@ module.exports = {
       options: {
         exclude: [
           `/homepage`,
+          `/blog/sample-post`
         ]
       }
     },
