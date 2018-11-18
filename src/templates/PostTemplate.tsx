@@ -47,7 +47,7 @@ interface PostTemplateProps {
   data: Query
 }
 
-const PostTemplate: React.SFC<PostTemplateProps> = ({ data }) => {
+const PostTemplate: React.FunctionComponent<PostTemplateProps> = ({ data }) => {
   const frontmatter =
     (data && data.markdownRemark && data.markdownRemark.frontmatter) || {}
   const html = (data && data.markdownRemark && data.markdownRemark.html) || ''

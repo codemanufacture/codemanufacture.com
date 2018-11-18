@@ -12,7 +12,7 @@ const StyledHomepageSection = styled.section`
   text-align: center;
 `
 
-const HomepageSection: React.SFC<HomepageSectionProps> = ({
+const HomepageSection: React.FunctionComponent<HomepageSectionProps> = ({
   children,
   sectionId,
 }) => <StyledHomepageSection id={sectionId}>{children}</StyledHomepageSection>

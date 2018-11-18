@@ -8,7 +8,9 @@ interface LegacyLayoutProps {
   children: React.ReactNode
 }
 
-const LegacyLayout: React.SFC<LegacyLayoutProps> = ({ children }) => {
+const LegacyLayout: React.FunctionComponent<LegacyLayoutProps> = ({
+  children,
+}) => {
   return (
     <>
       <MetaData />

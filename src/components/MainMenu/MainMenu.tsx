@@ -56,7 +56,7 @@ interface MainMenuProps {
   onMenuClick(): void
 }
 
-const MainMenu: React.SFC<MainMenuProps> = ({
+const MainMenu: React.FunctionComponent<MainMenuProps> = ({
   isMobileMenuActive,
   onMenuClick,
 }) => {

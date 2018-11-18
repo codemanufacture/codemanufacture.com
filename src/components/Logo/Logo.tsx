@@ -20,7 +20,7 @@ const StyledLogoWrapper = styled(Link)`
   }
 `
 
-const Logo: React.SFC<LogoProps> = ({ alt, width, height }) => (
+const Logo: React.FunctionComponent<LogoProps> = ({ alt, width, height }) => (
   <StyledLogoWrapper to="/" title="Back to homepage">
     <img src={logo} alt={alt} width={width} height={height} />
   </StyledLogoWrapper>
