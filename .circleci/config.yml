@@ -102,12 +102,11 @@ workflows:
     jobs:
       - lint
       - type_check
-      - unit_tests:
+      - unit_tests
+      - build:
           requires:
             - lint
             - type_check
-      - build:
-          requires:
             - unit_tests
       - deploy:
           requires:
