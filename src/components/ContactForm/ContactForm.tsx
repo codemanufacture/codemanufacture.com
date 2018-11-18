@@ -1,46 +1,90 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { colors } from '../../theme'
+import { colors, displayDimensions } from '../../theme'
 import InputWrapper from './InputWrapper'
+import Button from '../Button'
+import SectionContentContainer from '../SectionContentContainer'
 
-const StyledContactForm = styled.div``
+const StyledContactForm = styled.form`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-row-gap: 10px;
+
+  @media (max-width: ${displayDimensions.tabletSize}) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  button {
+    margin-top: 40px;
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+
+  fieldset {
+    &:first-of-type {
+      grid-column-start: 1;
+      grid-column-end: 4;
+    }
+
+    &:nth-of-type(2) {
+      grid-column-start: 4;
+      grid-column-end: 7;
+    }
+
+    &:nth-of-type(3) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+
+    &:nth-of-type(4) {
+      grid-column-start: 3;
+      grid-column-end: 7;
+    }
+
+    &:last-of-type {
+      grid-column-start: 1;
+      grid-column-end: 7;
+    }
+  }
+`
 
 const formFields = {
-  name: {
-    label: 'Name',
-    id: 'name',
-    placeholder: 'Name',
-    type: 'text',
-  },
   email: {
-    label: 'Email Address',
     id: 'email',
+    label: 'Email Address',
     placeholder: 'Email Address',
     type: 'email',
   },
+  message: {
+    id: 'message',
+    label: 'Your Message',
+    placeholder: 'Your Message',
+    type: 'textarea',
+  },
+  name: {
+    id: 'name',
+    label: 'Name',
+    placeholder: 'Name',
+    type: 'text',
+  },
   phone: {
-    label: 'Phone',
     id: 'phone',
+    label: 'Phone',
     placeholder: 'Phone',
     type: 'phone',
   },
   subject: {
-    label: 'Subject',
     id: 'subject',
+    label: 'Subject',
     placeholder: 'Subject',
     type: 'text',
-  },
-  message: {
-    label: 'Your Message',
-    id: 'message',
-    placeholder: 'Your Message',
-    type: 'textarea',
   },
 }
 
 interface ContactFormState {
-  values: object
   errors: object
+  values: object
 }
 
 interface ContactFormProps {
@@ -55,31 +99,36 @@ class ContactForm extends React.PureComponent<
     super(props)
 
     this.state = {
-      values: {},
       errors: {},
+      values: {},
     }
   }
 
   handleInputChange = (field: string, e: React.SyntheticEvent) => {
-    let values = this.state.values
+    const values = this.state.values
     values[field] = e.target.value
     this.setState({ values })
   }
 
-  renderFormFields = (formFields: object) => {
-    const fieldNames = Object.keys(formFields)
+  handleFormSubmit = (e: React.SyntheticEvent) => {
+    e.preventDefault()
+    console.log('submit')
+  }
+
+  renderFormFields = (fields: object) => {
+    const fieldNames = Object.keys(fields)
 
     return fieldNames.map(field => {
-      const fieldId = formFields[field].id
+      const fieldId = fields[field].id
 
       return (
         <InputWrapper
           value={this.state.values[fieldId]}
           onChange={e => this.handleInputChange(fieldId, e)}
-          placeholder={formFields[field].placeholder}
-          type={formFields[field].type}
-          id={formFields[field].id}
-          label={formFields[field].label}
+          placeholder={fields[field].placeholder}
+          type={fields[field].type}
+          id={fields[field].id}
+          label={fields[field].label}
         />
       )
     })
@@ -87,7 +136,17 @@ class ContactForm extends React.PureComponent<
 
   render() {
     return (
-      <StyledContactForm>{this.renderFormFields(formFields)}</StyledContactForm>
+      <SectionContentContainer>
+        <h2>Contact Us</h2>
+        <StyledContactForm>
+          {this.renderFormFields(formFields)}
+          <Button
+            type="submit"
+            label="Send message"
+            onClick={e => this.handleFormSubmit(e)}
+          />
+        </StyledContactForm>
+      </SectionContentContainer>
     )
   }
 }

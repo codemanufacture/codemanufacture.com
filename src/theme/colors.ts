@@ -13,6 +13,7 @@ export const colors = {
   brandDarkGreen,
   brandLightBlue,
   buttonTextColor: white,
+  errorColor: '#e42c3e',
   fadedGrayText: 'rgba(255, 255, 255, 0.25)',
   link: '#333',
   linkActive: brandBlue,

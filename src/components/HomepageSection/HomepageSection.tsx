@@ -9,6 +9,7 @@ interface HomepageSectionProps {
 
 const StyledHomepageSection = styled.section`
   padding-top: ${sizes.headerHeight};
+  padding-bottom: ${sizes.headerHeight};
   text-align: center;
 `
 
