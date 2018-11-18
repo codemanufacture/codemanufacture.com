@@ -48,7 +48,7 @@ interface PageTemplateProps {
   data: Query
 }
 
-const PageTemplate: React.SFC<PageTemplateProps> = ({ data }) => {
+const PageTemplate: React.FunctionComponent<PageTemplateProps> = ({ data }) => {
   const frontmatter =
     (data && data.markdownRemark && data.markdownRemark.frontmatter) || {}
   const html = (data && data.markdownRemark && data.markdownRemark.html) || ''

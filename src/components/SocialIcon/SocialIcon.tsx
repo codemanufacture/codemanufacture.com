@@ -67,7 +67,7 @@ const StyledSocialIcon = styled('figure')<StyledSocialIcon>`
   }
 `
 
-const SocialIcon: React.SFC<SocialIconProps> = ({
+const SocialIcon: React.FunctionComponent<SocialIconProps> = ({
   backgroundColor,
   icon,
   name,
