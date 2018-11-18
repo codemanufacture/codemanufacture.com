@@ -7,7 +7,7 @@ const GithubIcon = () => (
     backgroundColor="#24292e"
     icon={Icon}
     name="Github"
-    url="https://github.com"
+    url="https://github.com/codemanufacture"
     width={20}
     height={20}
   />
