@@ -3,22 +3,21 @@ import styled from 'styled-components'
 import { colors, typography } from '../../theme'
 import classNames from 'classnames'
 
-interface InputProps {
+interface TextAreaProps {
   hasErrors: boolean
   id: string
   isInvalid: boolean
   label: string
   placeholder: string
   required: boolean
-  type: string
   value: string
   onChange(): void
 }
 
-const StyledInput = styled.fieldset`
+const StyledTextArea = styled.fieldset`
   border: none;
 
-  input {
+  textarea {
     width: 100%;
     height: 48px;
     padding: 8px 4px;
@@ -41,7 +40,7 @@ const StyledInput = styled.fieldset`
   }
 
   &.withErrors {
-    input {
+    textarea {
       color: ${colors.errorColor};
       border-bottom-color: ${colors.errorColor};
     }
@@ -52,14 +51,13 @@ const StyledInput = styled.fieldset`
   }
 `
 
-const Input: React.SFC<InputProps> = ({
+const TextArea: React.SFC<TextAreaProps> = ({
   onChange,
   value,
   placeholder,
   required,
   hasErrors,
   label,
-  type,
   id,
 }) => {
   const wrapperClassName = classNames({
@@ -67,9 +65,8 @@ const Input: React.SFC<InputProps> = ({
   })
 
   return (
-    <StyledInput className={wrapperClassName}>
-      <input
-        type={type}
+    <StyledTextArea className={wrapperClassName}>
+      <textarea
         value={value}
         placeholder={placeholder}
         id={id}
@@ -77,7 +74,7 @@ const Input: React.SFC<InputProps> = ({
         required={required}
       />
       <label htmlFor={id}>{label}</label>
-    </StyledInput>
+    </StyledTextArea>
   )
 }
-export default Input
+export default TextArea

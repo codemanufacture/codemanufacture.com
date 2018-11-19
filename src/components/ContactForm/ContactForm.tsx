@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { displayDimensions } from '../../theme'
 import Input from '../Input'
 import Button from '../Button'
+import TextArea from '../TextArea'
 import SectionContentContainer from '../SectionContentContainer'
 import { validateText, validateEmail } from '../../helpers/validationHelper'
 
@@ -128,6 +129,7 @@ class ContactForm extends React.Component<ContactFormProps, ContactFormState> {
   validateField = (field: FormField) => {
     switch (field.type) {
       case 'text':
+      case 'textarea':
         return (field.hasErrors = validateText(field.value) ? false : true)
       case 'email':
         return (field.hasErrors = validateEmail(field.value) ? false : true)
@@ -170,10 +172,9 @@ class ContactForm extends React.Component<ContactFormProps, ContactFormState> {
   }
 
   renderFormFields = (fields: array) => {
+    fields = fields.filter((field: FormField) => field.type !== 'textarea')
     return fields.map(field => {
       const fieldId = field.id
-
-      console.log(field.hasErrors)
 
       return (
         <Input
@@ -191,12 +192,19 @@ class ContactForm extends React.Component<ContactFormProps, ContactFormState> {
   }
 
   render() {
-    console.log('rendering')
+    const textAreaProps = this.state.fields.find(
+      (field: FormField) => field.type === 'textarea'
+    )
+
     return (
       <SectionContentContainer>
         <h2>Contact Us</h2>
         <StyledContactForm>
           {this.renderFormFields(this.state.fields)}
+          <TextArea
+            onChange={e => this.handleInputChange(textAreaProps.id, e)}
+            {...textAreaProps}
+          />
           <Button
             type="submit"
             label="Send message"
