@@ -2,7 +2,7 @@ import * as React from 'react'
 import styled from 'styled-components'
 import { colors, typography, transitions, displayDimensions } from '../../theme'
 import addToMailchimp from 'gatsby-plugin-mailchimp'
-import Input from '../Input'
+import NewsletterInput from '../NewsletterInput'
 
 interface StyledProps {
   isMailchimpMessageVisible: boolean
@@ -101,7 +101,7 @@ const StyledFormWrapper = styled<StyledProps, 'div'>('div')`
   }
 `
 
-interface NewsletterFormState {
+interface NewsletterState {
   isMailchimpMessageVisible: boolean
   mailchimpMessage: string
   userEmail: string
@@ -113,7 +113,7 @@ interface MailchimpCallData {
   result: string
 }
 
-class NewsletterForm extends React.PureComponent<{}, NewsletterFormState> {
+class Newsletter extends React.PureComponent<{}, NewsletterState> {
   constructor(props: object) {
     super(props)
 
@@ -172,7 +172,7 @@ class NewsletterForm extends React.PureComponent<{}, NewsletterFormState> {
         <div className="form-wrapper">
           <h3>Subscribe to Our Newsletter</h3>
           <form onSubmit={e => this.handleSubmit(e)}>
-            <Input
+            <NewsletterInput
               onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                 this.handleNameInputChange(e)
               }
@@ -184,7 +184,7 @@ class NewsletterForm extends React.PureComponent<{}, NewsletterFormState> {
               placeholder="Enter your name"
               required
             />
-            <Input
+            <NewsletterInput
               onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                 this.handleEmailInputChange(e)
               }
@@ -209,4 +209,4 @@ class NewsletterForm extends React.PureComponent<{}, NewsletterFormState> {
   }
 }
 
-export default NewsletterForm
+export default Newsletter

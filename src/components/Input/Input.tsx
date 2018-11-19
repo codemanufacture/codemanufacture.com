@@ -1,63 +1,79 @@
 import * as React from 'react'
-import { colors, transitions, typography } from '../../theme'
 import styled from 'styled-components'
+import { colors, typography } from '../../theme'
+import classNames from 'classnames'
 
-const StyledInput = styled.input`
-  display: block;
-  width: 100%;
-  padding: 10px 12px;
-  background: ${colors.background};
-  background-clip: padding-box;
-  border: 1px solid ${colors.borderColor};
-  border-radius: 0.25rem;
-  transition: border-color ${transitions.basicTransition},
-    box-shadow ${transitions.basicTransition};
-  outline: none;
-  color: ${colors.textColor};
-  font-family: 'Montserrat', sans-serif;
-  font-size: ${typography.ctaSize};
-  line-height: 1.5;
+interface InputProps {
+  id: string
+  isInvalid: boolean
+  label: string
+  placeholder: string
+  type: string
+  value: string
+  onChange(): void
+}
 
-  &:focus {
-    border-color: ${colors.brand};
+const StyledInput = styled.fieldset`
+  border: none;
+
+  input {
+    width: 100%;
+    height: 48px;
+    padding: 8px 4px;
+    border: none;
+    border-bottom: 1px solid ${colors.borderColor};
+    outline: none;
+    font-family: ${typography.basicFontFamily};
+    font-size: ${typography.paragraphSize};
+    color: ${colors.textColor};
+
+    ::-webkit-input-placeholder {
+      font-family: ${typography.basicFontFamily};
+    }
+    ::-moz-placeholder {
+      font-family: ${typography.basicFontFamily};
+    }
+    :-ms-input-placeholder {
+      font-family: ${typography.basicFontFamily};
+    }
+  }
+
+  &.withErrors {
+    input {
+      color: ${colors.errorColor};
+      border-bottom-color: ${colors.errorColor};
+    }
+  }
+
+  label {
+    display: none;
   }
 `
 
-interface InputProps {
-  type: string
-  value: string
-  name: string
-  id: string
-  className: string
-  placeholder: string
-  required: boolean
-  onChange(e: React.SyntheticEvent): void
-}
-
-const Input = (props: InputProps) => {
-  const {
-    onChange,
-    type,
-    value,
-    name,
-    id,
-    className,
-    placeholder,
-    required,
-  } = props
+const Input: React.SFC<InputProps> = ({
+  onChange,
+  value,
+  placeholder,
+  isInvalid,
+  label,
+  type,
+  id,
+}) => {
+  const wrapperClassName = classNames({
+    withErrors: isInvalid,
+  })
 
   return (
-    <StyledInput
-      onChange={e => onChange(e)}
-      type={type}
-      value={value}
-      name={name}
-      className={className}
-      id={id}
-      placeholder={placeholder}
-      required={required}
-    />
+    <StyledInput className={wrapperClassName}>
+      <input
+        type={type}
+        value={value}
+        placeholder={placeholder}
+        id={id}
+        onChange={onChange}
+      />
+      <label htmlFor={id}>{label}</label>
+    </StyledInput>
   )
 }
-
 export default Input

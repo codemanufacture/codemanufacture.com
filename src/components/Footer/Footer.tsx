@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import { colors } from '../../theme'
-import NewsletterForm from './NewsletterForm'
+import Newsletter from './Newsletter'
 import DarkerFooter from './DarkerFooter'
 import SocialMediaLinks from '../SocialMediaLinks'
 import FooterMenu from '../FooterMenu'
@@ -16,7 +16,7 @@ const StyledFooterWrapper = styled.div`
 
 const Footer = () => (
   <StyledFooterWrapper>
-    <NewsletterForm />
+    <Newsletter />
     <DarkerFooter>
       <FooterMenu />
       <SocialMediaLinks />

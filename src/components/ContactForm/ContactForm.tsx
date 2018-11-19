@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { colors, displayDimensions } from '../../theme'
-import InputWrapper from './InputWrapper'
+import { displayDimensions } from '../../theme'
+import Input from '../Input'
 import Button from '../Button'
 import SectionContentContainer from '../SectionContentContainer'
 
@@ -54,30 +54,35 @@ const formFields = {
     id: 'email',
     label: 'Email Address',
     placeholder: 'Email Address',
+    required: true,
     type: 'email',
   },
   message: {
     id: 'message',
     label: 'Your Message',
     placeholder: 'Your Message',
+    required: true,
     type: 'textarea',
   },
   name: {
     id: 'name',
     label: 'Name',
     placeholder: 'Name',
+    required: true,
     type: 'text',
   },
   phone: {
     id: 'phone',
     label: 'Phone',
     placeholder: 'Phone',
+    required: false,
     type: 'phone',
   },
   subject: {
     id: 'subject',
     label: 'Subject',
     placeholder: 'Subject',
+    required: true,
     type: 'text',
   },
 }
@@ -122,7 +127,7 @@ class ContactForm extends React.PureComponent<
       const fieldId = fields[field].id
 
       return (
-        <InputWrapper
+        <Input
           value={this.state.values[fieldId]}
           onChange={e => this.handleInputChange(fieldId, e)}
           placeholder={fields[field].placeholder}
