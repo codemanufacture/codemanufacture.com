@@ -4,6 +4,7 @@ import { displayDimensions } from '../../theme'
 import Input from '../Input'
 import Button from '../Button'
 import SectionContentContainer from '../SectionContentContainer'
+import { validateText, validateEmail } from '../../helpers/validationHelper'
 
 const StyledContactForm = styled.form`
   display: grid;
@@ -52,29 +53,20 @@ const StyledContactForm = styled.form`
 const formFields = [
   {
     hasErrors: false,
-    id: 'email',
-    label: 'Email Address',
-    placeholder: 'Email Address',
-    required: true,
-    type: 'email',
-    value: '',
-  },
-  {
-    hasErrors: false,
-    id: 'message',
-    label: 'Your Message',
-    placeholder: 'Your Message',
-    required: true,
-    type: 'textarea',
-    value: '',
-  },
-  {
-    hasErrors: false,
     id: 'name',
     label: 'Name',
     placeholder: 'Name',
     required: true,
     type: 'text',
+    value: '',
+  },
+  {
+    hasErrors: false,
+    id: 'email',
+    label: 'Email Address',
+    placeholder: 'Email Address',
+    required: true,
+    type: 'email',
     value: '',
   },
   {
@@ -93,6 +85,15 @@ const formFields = [
     placeholder: 'Subject',
     required: true,
     type: 'text',
+    value: '',
+  },
+  {
+    hasErrors: false,
+    id: 'message',
+    label: 'Your Message',
+    placeholder: 'Your Message',
+    required: true,
+    type: 'textarea',
     value: '',
   },
 ]
@@ -124,9 +125,26 @@ class ContactForm extends React.Component<ContactFormProps, ContactFormState> {
     }
   }
 
+  validateField = (field: FormField) => {
+    switch (field.type) {
+      case 'text':
+        return (field.hasErrors = validateText(field.value) ? false : true)
+      case 'email':
+        return (field.hasErrors = validateEmail(field.value) ? false : true)
+      default:
+        break
+    }
+  }
+
   handleInputChange = (fieldId: string, e: React.SyntheticEvent) => {
     const { fields } = this.state
     const indexOfFieldToUpdate = fields.findIndex(field => field.id === fieldId)
+
+    if (fields[indexOfFieldToUpdate].hasErrors) {
+      fields[indexOfFieldToUpdate].hasErrors = this.validateField(
+        fields[indexOfFieldToUpdate]
+      )
+    }
 
     fields[indexOfFieldToUpdate].value = e.target.value
     this.setState({ fields })
@@ -136,20 +154,19 @@ class ContactForm extends React.Component<ContactFormProps, ContactFormState> {
     e.preventDefault()
     const { fields } = this.state
     const requiredFields = fieldsToValidate.filter(
-      (field: object) => field.required
+      (field: FormField) => field.required
     )
-    requiredFields.map((requiredField, index) => {
+    requiredFields.map((requiredField: FormField) => {
       const indexOfFieldToUpdate = fields.findIndex(
         field => field.id === requiredField.id
       )
-      if (!requiredField.value) {
-        fields[indexOfFieldToUpdate].hasErrors = true
-      }
+
+      fields[indexOfFieldToUpdate].hasErrors = this.validateField(
+        fields[indexOfFieldToUpdate]
+      )
     })
 
     this.setState({ fields })
-
-    console.log(this.state)
   }
 
   renderFormFields = (fields: array) => {
