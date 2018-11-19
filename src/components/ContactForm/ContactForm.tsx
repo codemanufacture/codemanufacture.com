@@ -49,106 +49,141 @@ const StyledContactForm = styled.form`
   }
 `
 
-const formFields = {
-  email: {
+const formFields = [
+  {
+    hasErrors: false,
     id: 'email',
     label: 'Email Address',
     placeholder: 'Email Address',
     required: true,
     type: 'email',
+    value: '',
   },
-  message: {
+  {
+    hasErrors: false,
     id: 'message',
     label: 'Your Message',
     placeholder: 'Your Message',
     required: true,
     type: 'textarea',
+    value: '',
   },
-  name: {
+  {
+    hasErrors: false,
     id: 'name',
     label: 'Name',
     placeholder: 'Name',
     required: true,
     type: 'text',
+    value: '',
   },
-  phone: {
+  {
+    hasErrors: false,
     id: 'phone',
     label: 'Phone',
     placeholder: 'Phone',
     required: false,
     type: 'phone',
+    value: '',
   },
-  subject: {
+  {
+    hasErrors: false,
     id: 'subject',
     label: 'Subject',
     placeholder: 'Subject',
     required: true,
     type: 'text',
+    value: '',
   },
+]
+
+interface FormField {
+  hasErrors: boolean
+  id: string
+  label: string
+  placeholder: string
+  required: boolean
+  type: string
+  value: string
 }
 
 interface ContactFormState {
-  errors: object
-  values: object
+  fields: FormField
 }
 
 interface ContactFormProps {
   props: object
 }
 
-class ContactForm extends React.PureComponent<
-  ContactFormProps,
-  ContactFormState
-> {
+class ContactForm extends React.Component<ContactFormProps, ContactFormState> {
   constructor(props: object) {
     super(props)
 
     this.state = {
-      errors: {},
-      values: {},
+      fields: formFields,
     }
   }
 
-  handleInputChange = (field: string, e: React.SyntheticEvent) => {
-    const values = this.state.values
-    values[field] = e.target.value
-    this.setState({ values })
+  handleInputChange = (fieldId: string, e: React.SyntheticEvent) => {
+    const { fields } = this.state
+    const indexOfFieldToUpdate = fields.findIndex(field => field.id === fieldId)
+
+    fields[indexOfFieldToUpdate].value = e.target.value
+    this.setState({ fields })
   }
 
-  handleFormSubmit = (e: React.SyntheticEvent) => {
+  handleFormSubmit = (e: React.SyntheticEvent, fieldsToValidate: array) => {
     e.preventDefault()
-    console.log('submit')
+    const { fields } = this.state
+    const requiredFields = fieldsToValidate.filter(
+      (field: object) => field.required
+    )
+    requiredFields.map((requiredField, index) => {
+      const indexOfFieldToUpdate = fields.findIndex(
+        field => field.id === requiredField.id
+      )
+      if (!requiredField.value) {
+        fields[indexOfFieldToUpdate].hasErrors = true
+      }
+    })
+
+    this.setState({ fields })
+
+    console.log(this.state)
   }
 
-  renderFormFields = (fields: object) => {
-    const fieldNames = Object.keys(fields)
+  renderFormFields = (fields: array) => {
+    return fields.map(field => {
+      const fieldId = field.id
 
-    return fieldNames.map(field => {
-      const fieldId = fields[field].id
+      console.log(field.hasErrors)
 
       return (
         <Input
-          value={this.state.values[fieldId]}
+          value={field.value}
           onChange={e => this.handleInputChange(fieldId, e)}
-          placeholder={fields[field].placeholder}
-          type={fields[field].type}
-          id={fields[field].id}
-          label={fields[field].label}
+          placeholder={field.placeholder}
+          type={field.type}
+          id={field.id}
+          label={field.label}
+          required={field.required}
+          hasErrors={field.hasErrors}
         />
       )
     })
   }
 
   render() {
+    console.log('rendering')
     return (
       <SectionContentContainer>
         <h2>Contact Us</h2>
         <StyledContactForm>
-          {this.renderFormFields(formFields)}
+          {this.renderFormFields(this.state.fields)}
           <Button
             type="submit"
             label="Send message"
-            onClick={e => this.handleFormSubmit(e)}
+            onClick={e => this.handleFormSubmit(e, formFields)}
           />
         </StyledContactForm>
       </SectionContentContainer>

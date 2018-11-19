@@ -8,6 +8,7 @@ interface InputProps {
   isInvalid: boolean
   label: string
   placeholder: string
+  required: boolean
   type: string
   value: string
   onChange(): void
@@ -54,13 +55,14 @@ const Input: React.SFC<InputProps> = ({
   onChange,
   value,
   placeholder,
-  isInvalid,
+  required,
+  hasErrors,
   label,
   type,
   id,
 }) => {
   const wrapperClassName = classNames({
-    withErrors: isInvalid,
+    withErrors: hasErrors,
   })
 
   return (
@@ -71,6 +73,7 @@ const Input: React.SFC<InputProps> = ({
         placeholder={placeholder}
         id={id}
         onChange={onChange}
+        required={required}
       />
       <label htmlFor={id}>{label}</label>
     </StyledInput>

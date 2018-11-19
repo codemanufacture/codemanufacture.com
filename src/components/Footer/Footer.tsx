@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import { colors } from '../../theme'
-import Newsletter from './Newsletter'
+import Newsletter from '../Newsletter'
 import DarkerFooter from './DarkerFooter'
 import SocialMediaLinks from '../SocialMediaLinks'
 import FooterMenu from '../FooterMenu'
