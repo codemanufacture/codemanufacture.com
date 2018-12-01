@@ -110,14 +110,10 @@ interface FormField {
 }
 
 interface ContactFormState {
-  fields: FormField
+  fields: FormField[]
 }
 
-interface ContactFormProps {
-  props: object
-}
-
-class ContactForm extends React.Component<ContactFormProps, ContactFormState> {
+class ContactForm extends React.Component<{}, ContactFormState> {
   constructor(props: object) {
     super(props)
 
@@ -138,9 +134,14 @@ class ContactForm extends React.Component<ContactFormProps, ContactFormState> {
     }
   }
 
-  handleInputChange = (fieldId: string, e: React.SyntheticEvent) => {
+  handleInputChange = (
+    fieldId: string,
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
     const { fields } = this.state
-    const indexOfFieldToUpdate = fields.findIndex(field => field.id === fieldId)
+    const indexOfFieldToUpdate: keyof FormField = fields.findIndex(
+      field => field.id === fieldId
+    )
 
     if (fields[indexOfFieldToUpdate].hasErrors) {
       fields[indexOfFieldToUpdate].hasErrors = this.validateField(
@@ -152,7 +153,10 @@ class ContactForm extends React.Component<ContactFormProps, ContactFormState> {
     this.setState({ fields })
   }
 
-  handleFormSubmit = (e: React.SyntheticEvent, fieldsToValidate: array) => {
+  handleFormSubmit = (
+    e: React.SyntheticEvent,
+    fieldsToValidate: FormField[]
+  ) => {
     e.preventDefault()
     const { fields } = this.state
     const requiredFields = fieldsToValidate.filter(
@@ -171,15 +175,17 @@ class ContactForm extends React.Component<ContactFormProps, ContactFormState> {
     this.setState({ fields })
   }
 
-  renderFormFields = (fields: array) => {
+  renderFormFields = (fields: FormField[]) => {
     fields = fields.filter((field: FormField) => field.type !== 'textarea')
-    return fields.map(field => {
+    return fields.map((field: FormField) => {
       const fieldId = field.id
 
       return (
         <Input
           value={field.value}
-          onChange={e => this.handleInputChange(fieldId, e)}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            this.handleInputChange(fieldId, e)
+          }
           placeholder={field.placeholder}
           type={field.type}
           id={field.id}
@@ -202,7 +208,9 @@ class ContactForm extends React.Component<ContactFormProps, ContactFormState> {
         <StyledContactForm>
           {this.renderFormFields(this.state.fields)}
           <TextArea
-            onChange={e => this.handleInputChange(textAreaProps.id, e)}
+            onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
+              this.handleInputChange(textAreaProps.id, e)
+            }
             {...textAreaProps}
           />
           <Button

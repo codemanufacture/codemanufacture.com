@@ -3,18 +3,6 @@ import styled from 'styled-components'
 import { colors, typography } from '../../theme'
 import classNames from 'classnames'
 
-interface InputProps {
-  hasErrors: boolean
-  id: string
-  isInvalid: boolean
-  label: string
-  placeholder: string
-  required: boolean
-  type: string
-  value: string
-  onChange(): void
-}
-
 const StyledInput = styled.fieldset`
   border: none;
 
@@ -52,16 +40,30 @@ const StyledInput = styled.fieldset`
   }
 `
 
-const Input: React.SFC<InputProps> = ({
-  onChange,
-  value,
-  placeholder,
-  required,
-  hasErrors,
-  label,
-  type,
-  id,
-}) => {
+interface InputProps {
+  hasErrors: boolean
+  id: string
+  isInvalid: boolean
+  label: string
+  placeholder: string
+  required: boolean
+  type: string
+  value: string
+  onChange(e: React.ChangeEvent<HTMLInputElement>): void
+}
+
+const Input: React.SFC<InputProps> = props => {
+  const {
+    hasErrors,
+    type,
+    value,
+    placeholder,
+    id,
+    onChange,
+    required,
+    label,
+  } = props
+
   const wrapperClassName = classNames({
     withErrors: hasErrors,
   })

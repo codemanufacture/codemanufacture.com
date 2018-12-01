@@ -11,7 +11,7 @@ interface TextAreaProps {
   placeholder: string
   required: boolean
   value: string
-  onChange(): void
+  onChange(e: React.ChangeEvent<HTMLTextAreaElement>): void
 }
 
 const StyledTextArea = styled.fieldset`
@@ -51,15 +51,9 @@ const StyledTextArea = styled.fieldset`
   }
 `
 
-const TextArea: React.SFC<TextAreaProps> = ({
-  onChange,
-  value,
-  placeholder,
-  required,
-  hasErrors,
-  label,
-  id,
-}) => {
+const TextArea: React.SFC<TextAreaProps> = props => {
+  const { hasErrors, id, label, onChange, placeholder, required, value } = props
+
   const wrapperClassName = classNames({
     withErrors: hasErrors,
   })
