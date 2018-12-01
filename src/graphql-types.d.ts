@@ -1,3 +1,5 @@
+/* tslint:disable */
+
 export interface SitePageConnectionSort {
   fields: (SitePageConnectionSortByFieldsEnum | null)[]
 
@@ -7123,572 +7125,577 @@ export interface WordCountWordsQueryInt_3 {
 }
 
 export enum SitePageConnectionSortByFieldsEnum {
-  jsonName = 'jsonName',
-  internalComponentName = 'internalComponentName',
-  path = 'path',
-  component = 'component',
-  componentChunkName = 'componentChunkName',
-  context___slug = 'context___slug',
-  pluginCreator___NODE = 'pluginCreator___NODE',
-  pluginCreatorId = 'pluginCreatorId',
-  componentPath = 'componentPath',
-  id = 'id',
-  parent = 'parent',
-  internal___type = 'internal___type',
-  internal___contentDigest = 'internal___contentDigest',
-  internal___description = 'internal___description',
-  internal___owner = 'internal___owner',
+  JsonName = 'jsonName',
+  InternalComponentName = 'internalComponentName',
+  Path = 'path',
+  Component = 'component',
+  ComponentChunkName = 'componentChunkName',
+  ContextSlug = 'context___slug',
+  PluginCreatorNode = 'pluginCreator___NODE',
+  PluginCreatorId = 'pluginCreatorId',
+  ComponentPath = 'componentPath',
+  Id = 'id',
+  Parent = 'parent',
+  InternalType = 'internal___type',
+  InternalContentDigest = 'internal___contentDigest',
+  InternalDescription = 'internal___description',
+  InternalOwner = 'internal___owner',
 }
 
 export enum SitePageConnectionSortOrderValues {
-  ASC = 'ASC',
-  DESC = 'DESC',
+  Asc = 'ASC',
+  Desc = 'DESC',
 }
 
 export enum SitePageDistinctEnum {
-  jsonName = 'jsonName',
-  internalComponentName = 'internalComponentName',
-  path = 'path',
-  component = 'component',
-  componentChunkName = 'componentChunkName',
-  context___slug = 'context___slug',
-  pluginCreator___NODE = 'pluginCreator___NODE',
-  pluginCreatorId = 'pluginCreatorId',
-  componentPath = 'componentPath',
-  id = 'id',
-  parent = 'parent',
-  internal___type = 'internal___type',
-  internal___contentDigest = 'internal___contentDigest',
-  internal___description = 'internal___description',
-  internal___owner = 'internal___owner',
+  JsonName = 'jsonName',
+  InternalComponentName = 'internalComponentName',
+  Path = 'path',
+  Component = 'component',
+  ComponentChunkName = 'componentChunkName',
+  ContextSlug = 'context___slug',
+  PluginCreatorNode = 'pluginCreator___NODE',
+  PluginCreatorId = 'pluginCreatorId',
+  ComponentPath = 'componentPath',
+  Id = 'id',
+  Parent = 'parent',
+  InternalType = 'internal___type',
+  InternalContentDigest = 'internal___contentDigest',
+  InternalDescription = 'internal___description',
+  InternalOwner = 'internal___owner',
 }
 
 export enum SitePageGroupEnum {
-  jsonName = 'jsonName',
-  internalComponentName = 'internalComponentName',
-  path = 'path',
-  component = 'component',
-  componentChunkName = 'componentChunkName',
-  context___slug = 'context___slug',
-  pluginCreator___NODE = 'pluginCreator___NODE',
-  pluginCreatorId = 'pluginCreatorId',
-  componentPath = 'componentPath',
-  id = 'id',
-  parent = 'parent',
-  internal___type = 'internal___type',
-  internal___contentDigest = 'internal___contentDigest',
-  internal___description = 'internal___description',
-  internal___owner = 'internal___owner',
+  JsonName = 'jsonName',
+  InternalComponentName = 'internalComponentName',
+  Path = 'path',
+  Component = 'component',
+  ComponentChunkName = 'componentChunkName',
+  ContextSlug = 'context___slug',
+  PluginCreatorNode = 'pluginCreator___NODE',
+  PluginCreatorId = 'pluginCreatorId',
+  ComponentPath = 'componentPath',
+  Id = 'id',
+  Parent = 'parent',
+  InternalType = 'internal___type',
+  InternalContentDigest = 'internal___contentDigest',
+  InternalDescription = 'internal___description',
+  InternalOwner = 'internal___owner',
 }
 
 export enum SitePluginConnectionSortByFieldsEnum {
-  resolve = 'resolve',
-  id = 'id',
-  name = 'name',
-  version = 'version',
-  pluginOptions___plugins = 'pluginOptions___plugins',
-  pluginOptions___path = 'pluginOptions___path',
-  pluginOptions___name = 'pluginOptions___name',
-  pluginOptions___ignore = 'pluginOptions___ignore',
-  pluginOptions___exclude = 'pluginOptions___exclude',
-  pluginOptions___id = 'pluginOptions___id',
-  pluginOptions___includeInDevelopment = 'pluginOptions___includeInDevelopment',
-  pluginOptions___siteUrl = 'pluginOptions___siteUrl',
-  pluginOptions___endpoint = 'pluginOptions___endpoint',
-  pluginOptions___pathCheck = 'pluginOptions___pathCheck',
-  nodeAPIs = 'nodeAPIs',
-  browserAPIs = 'browserAPIs',
-  ssrAPIs = 'ssrAPIs',
-  pluginFilepath = 'pluginFilepath',
-  packageJson___name = 'packageJson___name',
-  packageJson___description = 'packageJson___description',
-  packageJson___version = 'packageJson___version',
-  packageJson___main = 'packageJson___main',
-  packageJson___author = 'packageJson___author',
-  packageJson___license = 'packageJson___license',
-  packageJson___dependencies = 'packageJson___dependencies',
-  packageJson___devDependencies = 'packageJson___devDependencies',
-  packageJson___peerDependencies = 'packageJson___peerDependencies',
-  packageJson___keywords = 'packageJson___keywords',
-  parent = 'parent',
-  internal___contentDigest = 'internal___contentDigest',
-  internal___type = 'internal___type',
-  internal___owner = 'internal___owner',
+  Resolve = 'resolve',
+  Id = 'id',
+  Name = 'name',
+  Version = 'version',
+  PluginOptionsPlugins = 'pluginOptions___plugins',
+  PluginOptionsPath = 'pluginOptions___path',
+  PluginOptionsName = 'pluginOptions___name',
+  PluginOptionsIgnore = 'pluginOptions___ignore',
+  PluginOptionsExclude = 'pluginOptions___exclude',
+  PluginOptionsId = 'pluginOptions___id',
+  PluginOptionsIncludeInDevelopment = 'pluginOptions___includeInDevelopment',
+  PluginOptionsSiteUrl = 'pluginOptions___siteUrl',
+  PluginOptionsEndpoint = 'pluginOptions___endpoint',
+  PluginOptionsPathCheck = 'pluginOptions___pathCheck',
+  NodeApIs = 'nodeAPIs',
+  BrowserApIs = 'browserAPIs',
+  SsrApIs = 'ssrAPIs',
+  PluginFilepath = 'pluginFilepath',
+  PackageJsonName = 'packageJson___name',
+  PackageJsonDescription = 'packageJson___description',
+  PackageJsonVersion = 'packageJson___version',
+  PackageJsonMain = 'packageJson___main',
+  PackageJsonAuthor = 'packageJson___author',
+  PackageJsonLicense = 'packageJson___license',
+  PackageJsonDependencies = 'packageJson___dependencies',
+  PackageJsonDevDependencies = 'packageJson___devDependencies',
+  PackageJsonPeerDependencies = 'packageJson___peerDependencies',
+  PackageJsonKeywords = 'packageJson___keywords',
+  Parent = 'parent',
+  InternalContentDigest = 'internal___contentDigest',
+  InternalType = 'internal___type',
+  InternalOwner = 'internal___owner',
 }
 
 export enum SitePluginConnectionSortOrderValues {
-  ASC = 'ASC',
-  DESC = 'DESC',
+  Asc = 'ASC',
+  Desc = 'DESC',
 }
 
 export enum SitePluginDistinctEnum {
-  resolve = 'resolve',
-  id = 'id',
-  name = 'name',
-  version = 'version',
-  pluginOptions___plugins = 'pluginOptions___plugins',
-  pluginOptions___path = 'pluginOptions___path',
-  pluginOptions___name = 'pluginOptions___name',
-  pluginOptions___ignore = 'pluginOptions___ignore',
-  pluginOptions___exclude = 'pluginOptions___exclude',
-  pluginOptions___id = 'pluginOptions___id',
-  pluginOptions___includeInDevelopment = 'pluginOptions___includeInDevelopment',
-  pluginOptions___siteUrl = 'pluginOptions___siteUrl',
-  pluginOptions___endpoint = 'pluginOptions___endpoint',
-  pluginOptions___pathCheck = 'pluginOptions___pathCheck',
-  nodeAPIs = 'nodeAPIs',
-  browserAPIs = 'browserAPIs',
-  ssrAPIs = 'ssrAPIs',
-  pluginFilepath = 'pluginFilepath',
-  packageJson___name = 'packageJson___name',
-  packageJson___description = 'packageJson___description',
-  packageJson___version = 'packageJson___version',
-  packageJson___main = 'packageJson___main',
-  packageJson___author = 'packageJson___author',
-  packageJson___license = 'packageJson___license',
-  packageJson___dependencies = 'packageJson___dependencies',
-  packageJson___devDependencies = 'packageJson___devDependencies',
-  packageJson___peerDependencies = 'packageJson___peerDependencies',
-  packageJson___keywords = 'packageJson___keywords',
-  parent = 'parent',
-  internal___contentDigest = 'internal___contentDigest',
-  internal___type = 'internal___type',
-  internal___owner = 'internal___owner',
+  Resolve = 'resolve',
+  Id = 'id',
+  Name = 'name',
+  Version = 'version',
+  PluginOptionsPlugins = 'pluginOptions___plugins',
+  PluginOptionsPath = 'pluginOptions___path',
+  PluginOptionsName = 'pluginOptions___name',
+  PluginOptionsIgnore = 'pluginOptions___ignore',
+  PluginOptionsExclude = 'pluginOptions___exclude',
+  PluginOptionsId = 'pluginOptions___id',
+  PluginOptionsIncludeInDevelopment = 'pluginOptions___includeInDevelopment',
+  PluginOptionsSiteUrl = 'pluginOptions___siteUrl',
+  PluginOptionsEndpoint = 'pluginOptions___endpoint',
+  PluginOptionsPathCheck = 'pluginOptions___pathCheck',
+  NodeApIs = 'nodeAPIs',
+  BrowserApIs = 'browserAPIs',
+  SsrApIs = 'ssrAPIs',
+  PluginFilepath = 'pluginFilepath',
+  PackageJsonName = 'packageJson___name',
+  PackageJsonDescription = 'packageJson___description',
+  PackageJsonVersion = 'packageJson___version',
+  PackageJsonMain = 'packageJson___main',
+  PackageJsonAuthor = 'packageJson___author',
+  PackageJsonLicense = 'packageJson___license',
+  PackageJsonDependencies = 'packageJson___dependencies',
+  PackageJsonDevDependencies = 'packageJson___devDependencies',
+  PackageJsonPeerDependencies = 'packageJson___peerDependencies',
+  PackageJsonKeywords = 'packageJson___keywords',
+  Parent = 'parent',
+  InternalContentDigest = 'internal___contentDigest',
+  InternalType = 'internal___type',
+  InternalOwner = 'internal___owner',
 }
 
 export enum SitePluginGroupEnum {
-  resolve = 'resolve',
-  id = 'id',
-  name = 'name',
-  version = 'version',
-  pluginOptions___plugins = 'pluginOptions___plugins',
-  pluginOptions___path = 'pluginOptions___path',
-  pluginOptions___name = 'pluginOptions___name',
-  pluginOptions___ignore = 'pluginOptions___ignore',
-  pluginOptions___exclude = 'pluginOptions___exclude',
-  pluginOptions___id = 'pluginOptions___id',
-  pluginOptions___includeInDevelopment = 'pluginOptions___includeInDevelopment',
-  pluginOptions___siteUrl = 'pluginOptions___siteUrl',
-  pluginOptions___endpoint = 'pluginOptions___endpoint',
-  pluginOptions___pathCheck = 'pluginOptions___pathCheck',
-  nodeAPIs = 'nodeAPIs',
-  browserAPIs = 'browserAPIs',
-  ssrAPIs = 'ssrAPIs',
-  pluginFilepath = 'pluginFilepath',
-  packageJson___name = 'packageJson___name',
-  packageJson___description = 'packageJson___description',
-  packageJson___version = 'packageJson___version',
-  packageJson___main = 'packageJson___main',
-  packageJson___author = 'packageJson___author',
-  packageJson___license = 'packageJson___license',
-  packageJson___dependencies = 'packageJson___dependencies',
-  packageJson___devDependencies = 'packageJson___devDependencies',
-  packageJson___peerDependencies = 'packageJson___peerDependencies',
-  packageJson___keywords = 'packageJson___keywords',
-  parent = 'parent',
-  internal___contentDigest = 'internal___contentDigest',
-  internal___type = 'internal___type',
-  internal___owner = 'internal___owner',
+  Resolve = 'resolve',
+  Id = 'id',
+  Name = 'name',
+  Version = 'version',
+  PluginOptionsPlugins = 'pluginOptions___plugins',
+  PluginOptionsPath = 'pluginOptions___path',
+  PluginOptionsName = 'pluginOptions___name',
+  PluginOptionsIgnore = 'pluginOptions___ignore',
+  PluginOptionsExclude = 'pluginOptions___exclude',
+  PluginOptionsId = 'pluginOptions___id',
+  PluginOptionsIncludeInDevelopment = 'pluginOptions___includeInDevelopment',
+  PluginOptionsSiteUrl = 'pluginOptions___siteUrl',
+  PluginOptionsEndpoint = 'pluginOptions___endpoint',
+  PluginOptionsPathCheck = 'pluginOptions___pathCheck',
+  NodeApIs = 'nodeAPIs',
+  BrowserApIs = 'browserAPIs',
+  SsrApIs = 'ssrAPIs',
+  PluginFilepath = 'pluginFilepath',
+  PackageJsonName = 'packageJson___name',
+  PackageJsonDescription = 'packageJson___description',
+  PackageJsonVersion = 'packageJson___version',
+  PackageJsonMain = 'packageJson___main',
+  PackageJsonAuthor = 'packageJson___author',
+  PackageJsonLicense = 'packageJson___license',
+  PackageJsonDependencies = 'packageJson___dependencies',
+  PackageJsonDevDependencies = 'packageJson___devDependencies',
+  PackageJsonPeerDependencies = 'packageJson___peerDependencies',
+  PackageJsonKeywords = 'packageJson___keywords',
+  Parent = 'parent',
+  InternalContentDigest = 'internal___contentDigest',
+  InternalType = 'internal___type',
+  InternalOwner = 'internal___owner',
 }
 
 export enum DirectoryConnectionSortByFieldsEnum {
-  id = 'id',
-  parent = 'parent',
-  internal___contentDigest = 'internal___contentDigest',
-  internal___type = 'internal___type',
-  internal___description = 'internal___description',
-  internal___owner = 'internal___owner',
-  sourceInstanceName = 'sourceInstanceName',
-  absolutePath = 'absolutePath',
-  relativePath = 'relativePath',
-  extension = 'extension',
-  size = 'size',
-  prettySize = 'prettySize',
-  modifiedTime = 'modifiedTime',
-  accessTime = 'accessTime',
-  changeTime = 'changeTime',
-  birthTime = 'birthTime',
-  root = 'root',
-  dir = 'dir',
-  base = 'base',
-  ext = 'ext',
-  name = 'name',
-  relativeDirectory = 'relativeDirectory',
-  dev = 'dev',
-  mode = 'mode',
-  nlink = 'nlink',
-  uid = 'uid',
-  gid = 'gid',
-  rdev = 'rdev',
-  blksize = 'blksize',
-  ino = 'ino',
-  blocks = 'blocks',
-  atimeMs = 'atimeMs',
-  mtimeMs = 'mtimeMs',
-  ctimeMs = 'ctimeMs',
-  birthtimeMs = 'birthtimeMs',
-  atime = 'atime',
-  mtime = 'mtime',
-  ctime = 'ctime',
-  birthtime = 'birthtime',
+  Id = 'id',
+  Parent = 'parent',
+  InternalContentDigest = 'internal___contentDigest',
+  InternalType = 'internal___type',
+  InternalDescription = 'internal___description',
+  InternalOwner = 'internal___owner',
+  SourceInstanceName = 'sourceInstanceName',
+  AbsolutePath = 'absolutePath',
+  RelativePath = 'relativePath',
+  Extension = 'extension',
+  Size = 'size',
+  PrettySize = 'prettySize',
+  ModifiedTime = 'modifiedTime',
+  AccessTime = 'accessTime',
+  ChangeTime = 'changeTime',
+  BirthTime = 'birthTime',
+  Root = 'root',
+  Dir = 'dir',
+  Base = 'base',
+  Ext = 'ext',
+  Name = 'name',
+  RelativeDirectory = 'relativeDirectory',
+  Dev = 'dev',
+  Mode = 'mode',
+  Nlink = 'nlink',
+  Uid = 'uid',
+  Gid = 'gid',
+  Rdev = 'rdev',
+  Blksize = 'blksize',
+  Ino = 'ino',
+  Blocks = 'blocks',
+  AtimeMs = 'atimeMs',
+  MtimeMs = 'mtimeMs',
+  CtimeMs = 'ctimeMs',
+  BirthtimeMs = 'birthtimeMs',
+  Atime = 'atime',
+  Mtime = 'mtime',
+  Ctime = 'ctime',
+  Birthtime = 'birthtime',
 }
 
 export enum DirectoryConnectionSortOrderValues {
-  ASC = 'ASC',
-  DESC = 'DESC',
+  Asc = 'ASC',
+  Desc = 'DESC',
 }
 
 export enum DirectoryDistinctEnum {
-  id = 'id',
-  parent = 'parent',
-  internal___contentDigest = 'internal___contentDigest',
-  internal___type = 'internal___type',
-  internal___description = 'internal___description',
-  internal___owner = 'internal___owner',
-  sourceInstanceName = 'sourceInstanceName',
-  absolutePath = 'absolutePath',
-  relativePath = 'relativePath',
-  extension = 'extension',
-  size = 'size',
-  prettySize = 'prettySize',
-  modifiedTime = 'modifiedTime',
-  accessTime = 'accessTime',
-  changeTime = 'changeTime',
-  birthTime = 'birthTime',
-  root = 'root',
-  dir = 'dir',
-  base = 'base',
-  ext = 'ext',
-  name = 'name',
-  relativeDirectory = 'relativeDirectory',
-  dev = 'dev',
-  mode = 'mode',
-  nlink = 'nlink',
-  uid = 'uid',
-  gid = 'gid',
-  rdev = 'rdev',
-  blksize = 'blksize',
-  ino = 'ino',
-  blocks = 'blocks',
-  atimeMs = 'atimeMs',
-  mtimeMs = 'mtimeMs',
-  ctimeMs = 'ctimeMs',
-  birthtimeMs = 'birthtimeMs',
-  atime = 'atime',
-  mtime = 'mtime',
-  ctime = 'ctime',
-  birthtime = 'birthtime',
+  Id = 'id',
+  Parent = 'parent',
+  InternalContentDigest = 'internal___contentDigest',
+  InternalType = 'internal___type',
+  InternalDescription = 'internal___description',
+  InternalOwner = 'internal___owner',
+  SourceInstanceName = 'sourceInstanceName',
+  AbsolutePath = 'absolutePath',
+  RelativePath = 'relativePath',
+  Extension = 'extension',
+  Size = 'size',
+  PrettySize = 'prettySize',
+  ModifiedTime = 'modifiedTime',
+  AccessTime = 'accessTime',
+  ChangeTime = 'changeTime',
+  BirthTime = 'birthTime',
+  Root = 'root',
+  Dir = 'dir',
+  Base = 'base',
+  Ext = 'ext',
+  Name = 'name',
+  RelativeDirectory = 'relativeDirectory',
+  Dev = 'dev',
+  Mode = 'mode',
+  Nlink = 'nlink',
+  Uid = 'uid',
+  Gid = 'gid',
+  Rdev = 'rdev',
+  Blksize = 'blksize',
+  Ino = 'ino',
+  Blocks = 'blocks',
+  AtimeMs = 'atimeMs',
+  MtimeMs = 'mtimeMs',
+  CtimeMs = 'ctimeMs',
+  BirthtimeMs = 'birthtimeMs',
+  Atime = 'atime',
+  Mtime = 'mtime',
+  Ctime = 'ctime',
+  Birthtime = 'birthtime',
 }
 
 export enum DirectoryGroupEnum {
-  id = 'id',
-  parent = 'parent',
-  internal___contentDigest = 'internal___contentDigest',
-  internal___type = 'internal___type',
-  internal___description = 'internal___description',
-  internal___owner = 'internal___owner',
-  sourceInstanceName = 'sourceInstanceName',
-  absolutePath = 'absolutePath',
-  relativePath = 'relativePath',
-  extension = 'extension',
-  size = 'size',
-  prettySize = 'prettySize',
-  modifiedTime = 'modifiedTime',
-  accessTime = 'accessTime',
-  changeTime = 'changeTime',
-  birthTime = 'birthTime',
-  root = 'root',
-  dir = 'dir',
-  base = 'base',
-  ext = 'ext',
-  name = 'name',
-  relativeDirectory = 'relativeDirectory',
-  dev = 'dev',
-  mode = 'mode',
-  nlink = 'nlink',
-  uid = 'uid',
-  gid = 'gid',
-  rdev = 'rdev',
-  blksize = 'blksize',
-  ino = 'ino',
-  blocks = 'blocks',
-  atimeMs = 'atimeMs',
-  mtimeMs = 'mtimeMs',
-  ctimeMs = 'ctimeMs',
-  birthtimeMs = 'birthtimeMs',
-  atime = 'atime',
-  mtime = 'mtime',
-  ctime = 'ctime',
-  birthtime = 'birthtime',
+  Id = 'id',
+  Parent = 'parent',
+  InternalContentDigest = 'internal___contentDigest',
+  InternalType = 'internal___type',
+  InternalDescription = 'internal___description',
+  InternalOwner = 'internal___owner',
+  SourceInstanceName = 'sourceInstanceName',
+  AbsolutePath = 'absolutePath',
+  RelativePath = 'relativePath',
+  Extension = 'extension',
+  Size = 'size',
+  PrettySize = 'prettySize',
+  ModifiedTime = 'modifiedTime',
+  AccessTime = 'accessTime',
+  ChangeTime = 'changeTime',
+  BirthTime = 'birthTime',
+  Root = 'root',
+  Dir = 'dir',
+  Base = 'base',
+  Ext = 'ext',
+  Name = 'name',
+  RelativeDirectory = 'relativeDirectory',
+  Dev = 'dev',
+  Mode = 'mode',
+  Nlink = 'nlink',
+  Uid = 'uid',
+  Gid = 'gid',
+  Rdev = 'rdev',
+  Blksize = 'blksize',
+  Ino = 'ino',
+  Blocks = 'blocks',
+  AtimeMs = 'atimeMs',
+  MtimeMs = 'mtimeMs',
+  CtimeMs = 'ctimeMs',
+  BirthtimeMs = 'birthtimeMs',
+  Atime = 'atime',
+  Mtime = 'mtime',
+  Ctime = 'ctime',
+  Birthtime = 'birthtime',
 }
 
 export enum FileConnectionSortByFieldsEnum {
-  id = 'id',
-  children = 'children',
-  parent = 'parent',
-  internal___contentDigest = 'internal___contentDigest',
-  internal___type = 'internal___type',
-  internal___mediaType = 'internal___mediaType',
-  internal___description = 'internal___description',
-  internal___owner = 'internal___owner',
-  sourceInstanceName = 'sourceInstanceName',
-  absolutePath = 'absolutePath',
-  relativePath = 'relativePath',
-  extension = 'extension',
-  size = 'size',
-  prettySize = 'prettySize',
-  modifiedTime = 'modifiedTime',
-  accessTime = 'accessTime',
-  changeTime = 'changeTime',
-  birthTime = 'birthTime',
-  root = 'root',
-  dir = 'dir',
-  base = 'base',
-  ext = 'ext',
-  name = 'name',
-  relativeDirectory = 'relativeDirectory',
-  dev = 'dev',
-  mode = 'mode',
-  nlink = 'nlink',
-  uid = 'uid',
-  gid = 'gid',
-  rdev = 'rdev',
-  blksize = 'blksize',
-  ino = 'ino',
-  blocks = 'blocks',
-  atimeMs = 'atimeMs',
-  mtimeMs = 'mtimeMs',
-  ctimeMs = 'ctimeMs',
-  birthtimeMs = 'birthtimeMs',
-  atime = 'atime',
-  mtime = 'mtime',
-  ctime = 'ctime',
-  birthtime = 'birthtime',
-  publicURL = 'publicURL',
+  Id = 'id',
+  Children = 'children',
+  Parent = 'parent',
+  InternalContentDigest = 'internal___contentDigest',
+  InternalType = 'internal___type',
+  InternalMediaType = 'internal___mediaType',
+  InternalDescription = 'internal___description',
+  InternalOwner = 'internal___owner',
+  SourceInstanceName = 'sourceInstanceName',
+  AbsolutePath = 'absolutePath',
+  RelativePath = 'relativePath',
+  Extension = 'extension',
+  Size = 'size',
+  PrettySize = 'prettySize',
+  ModifiedTime = 'modifiedTime',
+  AccessTime = 'accessTime',
+  ChangeTime = 'changeTime',
+  BirthTime = 'birthTime',
+  Root = 'root',
+  Dir = 'dir',
+  Base = 'base',
+  Ext = 'ext',
+  Name = 'name',
+  RelativeDirectory = 'relativeDirectory',
+  Dev = 'dev',
+  Mode = 'mode',
+  Nlink = 'nlink',
+  Uid = 'uid',
+  Gid = 'gid',
+  Rdev = 'rdev',
+  Blksize = 'blksize',
+  Ino = 'ino',
+  Blocks = 'blocks',
+  AtimeMs = 'atimeMs',
+  MtimeMs = 'mtimeMs',
+  CtimeMs = 'ctimeMs',
+  BirthtimeMs = 'birthtimeMs',
+  Atime = 'atime',
+  Mtime = 'mtime',
+  Ctime = 'ctime',
+  Birthtime = 'birthtime',
+  PublicUrl = 'publicURL',
 }
 
 export enum FileConnectionSortOrderValues {
-  ASC = 'ASC',
-  DESC = 'DESC',
+  Asc = 'ASC',
+  Desc = 'DESC',
+}
+
+export enum ExcerptFormats {
+  Plain = 'PLAIN',
+  Html = 'HTML',
 }
 
 export enum HeadingLevels {
-  h1 = 'h1',
-  h2 = 'h2',
-  h3 = 'h3',
-  h4 = 'h4',
-  h5 = 'h5',
-  h6 = 'h6',
+  H1 = 'h1',
+  H2 = 'h2',
+  H3 = 'h3',
+  H4 = 'h4',
+  H5 = 'h5',
+  H6 = 'h6',
 }
 
 export enum FileDistinctEnum {
-  id = 'id',
-  children = 'children',
-  parent = 'parent',
-  internal___contentDigest = 'internal___contentDigest',
-  internal___type = 'internal___type',
-  internal___mediaType = 'internal___mediaType',
-  internal___description = 'internal___description',
-  internal___owner = 'internal___owner',
-  sourceInstanceName = 'sourceInstanceName',
-  absolutePath = 'absolutePath',
-  relativePath = 'relativePath',
-  extension = 'extension',
-  size = 'size',
-  prettySize = 'prettySize',
-  modifiedTime = 'modifiedTime',
-  accessTime = 'accessTime',
-  changeTime = 'changeTime',
-  birthTime = 'birthTime',
-  root = 'root',
-  dir = 'dir',
-  base = 'base',
-  ext = 'ext',
-  name = 'name',
-  relativeDirectory = 'relativeDirectory',
-  dev = 'dev',
-  mode = 'mode',
-  nlink = 'nlink',
-  uid = 'uid',
-  gid = 'gid',
-  rdev = 'rdev',
-  blksize = 'blksize',
-  ino = 'ino',
-  blocks = 'blocks',
-  atimeMs = 'atimeMs',
-  mtimeMs = 'mtimeMs',
-  ctimeMs = 'ctimeMs',
-  birthtimeMs = 'birthtimeMs',
-  atime = 'atime',
-  mtime = 'mtime',
-  ctime = 'ctime',
-  birthtime = 'birthtime',
+  Id = 'id',
+  Children = 'children',
+  Parent = 'parent',
+  InternalContentDigest = 'internal___contentDigest',
+  InternalType = 'internal___type',
+  InternalMediaType = 'internal___mediaType',
+  InternalDescription = 'internal___description',
+  InternalOwner = 'internal___owner',
+  SourceInstanceName = 'sourceInstanceName',
+  AbsolutePath = 'absolutePath',
+  RelativePath = 'relativePath',
+  Extension = 'extension',
+  Size = 'size',
+  PrettySize = 'prettySize',
+  ModifiedTime = 'modifiedTime',
+  AccessTime = 'accessTime',
+  ChangeTime = 'changeTime',
+  BirthTime = 'birthTime',
+  Root = 'root',
+  Dir = 'dir',
+  Base = 'base',
+  Ext = 'ext',
+  Name = 'name',
+  RelativeDirectory = 'relativeDirectory',
+  Dev = 'dev',
+  Mode = 'mode',
+  Nlink = 'nlink',
+  Uid = 'uid',
+  Gid = 'gid',
+  Rdev = 'rdev',
+  Blksize = 'blksize',
+  Ino = 'ino',
+  Blocks = 'blocks',
+  AtimeMs = 'atimeMs',
+  MtimeMs = 'mtimeMs',
+  CtimeMs = 'ctimeMs',
+  BirthtimeMs = 'birthtimeMs',
+  Atime = 'atime',
+  Mtime = 'mtime',
+  Ctime = 'ctime',
+  Birthtime = 'birthtime',
 }
 
 export enum FileGroupEnum {
-  id = 'id',
-  children = 'children',
-  parent = 'parent',
-  internal___contentDigest = 'internal___contentDigest',
-  internal___type = 'internal___type',
-  internal___mediaType = 'internal___mediaType',
-  internal___description = 'internal___description',
-  internal___owner = 'internal___owner',
-  sourceInstanceName = 'sourceInstanceName',
-  absolutePath = 'absolutePath',
-  relativePath = 'relativePath',
-  extension = 'extension',
-  size = 'size',
-  prettySize = 'prettySize',
-  modifiedTime = 'modifiedTime',
-  accessTime = 'accessTime',
-  changeTime = 'changeTime',
-  birthTime = 'birthTime',
-  root = 'root',
-  dir = 'dir',
-  base = 'base',
-  ext = 'ext',
-  name = 'name',
-  relativeDirectory = 'relativeDirectory',
-  dev = 'dev',
-  mode = 'mode',
-  nlink = 'nlink',
-  uid = 'uid',
-  gid = 'gid',
-  rdev = 'rdev',
-  blksize = 'blksize',
-  ino = 'ino',
-  blocks = 'blocks',
-  atimeMs = 'atimeMs',
-  mtimeMs = 'mtimeMs',
-  ctimeMs = 'ctimeMs',
-  birthtimeMs = 'birthtimeMs',
-  atime = 'atime',
-  mtime = 'mtime',
-  ctime = 'ctime',
-  birthtime = 'birthtime',
+  Id = 'id',
+  Children = 'children',
+  Parent = 'parent',
+  InternalContentDigest = 'internal___contentDigest',
+  InternalType = 'internal___type',
+  InternalMediaType = 'internal___mediaType',
+  InternalDescription = 'internal___description',
+  InternalOwner = 'internal___owner',
+  SourceInstanceName = 'sourceInstanceName',
+  AbsolutePath = 'absolutePath',
+  RelativePath = 'relativePath',
+  Extension = 'extension',
+  Size = 'size',
+  PrettySize = 'prettySize',
+  ModifiedTime = 'modifiedTime',
+  AccessTime = 'accessTime',
+  ChangeTime = 'changeTime',
+  BirthTime = 'birthTime',
+  Root = 'root',
+  Dir = 'dir',
+  Base = 'base',
+  Ext = 'ext',
+  Name = 'name',
+  RelativeDirectory = 'relativeDirectory',
+  Dev = 'dev',
+  Mode = 'mode',
+  Nlink = 'nlink',
+  Uid = 'uid',
+  Gid = 'gid',
+  Rdev = 'rdev',
+  Blksize = 'blksize',
+  Ino = 'ino',
+  Blocks = 'blocks',
+  AtimeMs = 'atimeMs',
+  MtimeMs = 'mtimeMs',
+  CtimeMs = 'ctimeMs',
+  BirthtimeMs = 'birthtimeMs',
+  Atime = 'atime',
+  Mtime = 'mtime',
+  Ctime = 'ctime',
+  Birthtime = 'birthtime',
 }
 
 export enum AuthorJsonConnectionSortByFieldsEnum {
-  id = 'id',
-  name = 'name',
-  bio = 'bio',
-  github = 'github',
-  twitter = 'twitter',
-  avatar = 'avatar',
-  parent = 'parent',
-  internal___contentDigest = 'internal___contentDigest',
-  internal___type = 'internal___type',
-  internal___owner = 'internal___owner',
+  Id = 'id',
+  Name = 'name',
+  Bio = 'bio',
+  Github = 'github',
+  Twitter = 'twitter',
+  Avatar = 'avatar',
+  Parent = 'parent',
+  InternalContentDigest = 'internal___contentDigest',
+  InternalType = 'internal___type',
+  InternalOwner = 'internal___owner',
 }
 
 export enum AuthorJsonConnectionSortOrderValues {
-  ASC = 'ASC',
-  DESC = 'DESC',
+  Asc = 'ASC',
+  Desc = 'DESC',
 }
 
 export enum AuthorJsonDistinctEnum {
-  id = 'id',
-  name = 'name',
-  bio = 'bio',
-  github = 'github',
-  twitter = 'twitter',
-  avatar = 'avatar',
-  parent = 'parent',
-  internal___contentDigest = 'internal___contentDigest',
-  internal___type = 'internal___type',
-  internal___owner = 'internal___owner',
+  Id = 'id',
+  Name = 'name',
+  Bio = 'bio',
+  Github = 'github',
+  Twitter = 'twitter',
+  Avatar = 'avatar',
+  Parent = 'parent',
+  InternalContentDigest = 'internal___contentDigest',
+  InternalType = 'internal___type',
+  InternalOwner = 'internal___owner',
 }
 
 export enum AuthorJsonGroupEnum {
-  id = 'id',
-  name = 'name',
-  bio = 'bio',
-  github = 'github',
-  twitter = 'twitter',
-  avatar = 'avatar',
-  parent = 'parent',
-  internal___contentDigest = 'internal___contentDigest',
-  internal___type = 'internal___type',
-  internal___owner = 'internal___owner',
+  Id = 'id',
+  Name = 'name',
+  Bio = 'bio',
+  Github = 'github',
+  Twitter = 'twitter',
+  Avatar = 'avatar',
+  Parent = 'parent',
+  InternalContentDigest = 'internal___contentDigest',
+  InternalType = 'internal___type',
+  InternalOwner = 'internal___owner',
 }
 
 export enum MarkdownRemarkConnectionSortByFieldsEnum {
-  id = 'id',
-  parent = 'parent',
-  internal___content = 'internal___content',
-  internal___type = 'internal___type',
-  internal___contentDigest = 'internal___contentDigest',
-  internal___owner = 'internal___owner',
-  internal___fieldOwners___slug = 'internal___fieldOwners___slug',
-  internal___fieldOwners___pageType = 'internal___fieldOwners___pageType',
-  frontmatter___title = 'frontmatter___title',
-  frontmatter___date = 'frontmatter___date',
-  frontmatter___authors = 'frontmatter___authors',
-  frontmatter___tags = 'frontmatter___tags',
-  frontmatter____PARENT = 'frontmatter____PARENT',
-  excerpt = 'excerpt',
-  rawMarkdownBody = 'rawMarkdownBody',
-  fileAbsolutePath = 'fileAbsolutePath',
-  fields___slug = 'fields___slug',
-  fields___pageType = 'fields___pageType',
-  html = 'html',
-  headings = 'headings',
-  timeToRead = 'timeToRead',
-  tableOfContents = 'tableOfContents',
-  wordCount___paragraphs = 'wordCount___paragraphs',
-  wordCount___sentences = 'wordCount___sentences',
-  wordCount___words = 'wordCount___words',
+  Id = 'id',
+  Parent = 'parent',
+  InternalContent = 'internal___content',
+  InternalType = 'internal___type',
+  InternalContentDigest = 'internal___contentDigest',
+  InternalOwner = 'internal___owner',
+  InternalFieldOwnersSlug = 'internal___fieldOwners___slug',
+  InternalFieldOwnersPageType = 'internal___fieldOwners___pageType',
+  FrontmatterTitle = 'frontmatter___title',
+  FrontmatterDate = 'frontmatter___date',
+  FrontmatterAuthors = 'frontmatter___authors',
+  FrontmatterTags = 'frontmatter___tags',
+  FrontmatterParent = 'frontmatter____PARENT',
+  Excerpt = 'excerpt',
+  RawMarkdownBody = 'rawMarkdownBody',
+  FileAbsolutePath = 'fileAbsolutePath',
+  FieldsSlug = 'fields___slug',
+  FieldsPageType = 'fields___pageType',
+  Html = 'html',
+  Headings = 'headings',
+  TimeToRead = 'timeToRead',
+  TableOfContents = 'tableOfContents',
+  WordCountParagraphs = 'wordCount___paragraphs',
+  WordCountSentences = 'wordCount___sentences',
+  WordCountWords = 'wordCount___words',
 }
 
 export enum MarkdownRemarkConnectionSortOrderValues {
-  ASC = 'ASC',
-  DESC = 'DESC',
+  Asc = 'ASC',
+  Desc = 'DESC',
 }
 
 export enum MarkdownRemarkDistinctEnum {
-  id = 'id',
-  parent = 'parent',
-  internal___content = 'internal___content',
-  internal___type = 'internal___type',
-  internal___contentDigest = 'internal___contentDigest',
-  internal___owner = 'internal___owner',
-  internal___fieldOwners___slug = 'internal___fieldOwners___slug',
-  internal___fieldOwners___pageType = 'internal___fieldOwners___pageType',
-  frontmatter___title = 'frontmatter___title',
-  frontmatter___date = 'frontmatter___date',
-  frontmatter___authors = 'frontmatter___authors',
-  frontmatter___tags = 'frontmatter___tags',
-  frontmatter____PARENT = 'frontmatter____PARENT',
-  excerpt = 'excerpt',
-  rawMarkdownBody = 'rawMarkdownBody',
-  fileAbsolutePath = 'fileAbsolutePath',
-  fields___slug = 'fields___slug',
-  fields___pageType = 'fields___pageType',
+  Id = 'id',
+  Parent = 'parent',
+  InternalContent = 'internal___content',
+  InternalType = 'internal___type',
+  InternalContentDigest = 'internal___contentDigest',
+  InternalOwner = 'internal___owner',
+  InternalFieldOwnersSlug = 'internal___fieldOwners___slug',
+  InternalFieldOwnersPageType = 'internal___fieldOwners___pageType',
+  FrontmatterTitle = 'frontmatter___title',
+  FrontmatterDate = 'frontmatter___date',
+  FrontmatterAuthors = 'frontmatter___authors',
+  FrontmatterTags = 'frontmatter___tags',
+  FrontmatterParent = 'frontmatter____PARENT',
+  Excerpt = 'excerpt',
+  RawMarkdownBody = 'rawMarkdownBody',
+  FileAbsolutePath = 'fileAbsolutePath',
+  FieldsSlug = 'fields___slug',
+  FieldsPageType = 'fields___pageType',
 }
 
 export enum MarkdownRemarkGroupEnum {
-  id = 'id',
-  parent = 'parent',
-  internal___content = 'internal___content',
-  internal___type = 'internal___type',
-  internal___contentDigest = 'internal___contentDigest',
-  internal___owner = 'internal___owner',
-  internal___fieldOwners___slug = 'internal___fieldOwners___slug',
-  internal___fieldOwners___pageType = 'internal___fieldOwners___pageType',
-  frontmatter___title = 'frontmatter___title',
-  frontmatter___date = 'frontmatter___date',
-  frontmatter___authors = 'frontmatter___authors',
-  frontmatter___tags = 'frontmatter___tags',
-  frontmatter____PARENT = 'frontmatter____PARENT',
-  excerpt = 'excerpt',
-  rawMarkdownBody = 'rawMarkdownBody',
-  fileAbsolutePath = 'fileAbsolutePath',
-  fields___slug = 'fields___slug',
-  fields___pageType = 'fields___pageType',
+  Id = 'id',
+  Parent = 'parent',
+  InternalContent = 'internal___content',
+  InternalType = 'internal___type',
+  InternalContentDigest = 'internal___contentDigest',
+  InternalOwner = 'internal___owner',
+  InternalFieldOwnersSlug = 'internal___fieldOwners___slug',
+  InternalFieldOwnersPageType = 'internal___fieldOwners___pageType',
+  FrontmatterTitle = 'frontmatter___title',
+  FrontmatterDate = 'frontmatter___date',
+  FrontmatterAuthors = 'frontmatter___authors',
+  FrontmatterTags = 'frontmatter___tags',
+  FrontmatterParent = 'frontmatter____PARENT',
+  Excerpt = 'excerpt',
+  RawMarkdownBody = 'rawMarkdownBody',
+  FileAbsolutePath = 'fileAbsolutePath',
+  FieldsSlug = 'fields___slug',
+  FieldsPageType = 'fields___pageType',
 }
 
-/** A date string, such as 2007-12-03, compliant with the ISO 8601 standard  for representation of dates and times using the Gregorian calendar. */
+/** A date string, such as 2007-12-03, compliant with the ISO 8601 standard  forrepresentation of dates and times using the Gregorian calendar. */
 export type Date = any
 
 /** The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf). */
@@ -8875,81 +8882,81 @@ export interface GroupDirectoryConnectionArgs {
   field?: DirectoryGroupEnum | null
 }
 export interface ModifiedTimeDirectoryArgs {
-  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYYMMMM DD)" See https://momentjs.com/docs/#/displaying/format/ fordocumentation for different tokens */
   formatString?: string | null
   /** Returns a string generated with Moment.js' fromNow function */
   fromNow?: boolean | null
-  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  /** Returns the difference between this date and the current time. Defaults tomiliseconds but you can also pass in as the measurement years, months,weeks, days, hours, minutes, and seconds. */
   difference?: string | null
   /** Configures the locale Moment.js will use to format the date. */
   locale?: string | null
 }
 export interface AccessTimeDirectoryArgs {
-  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYYMMMM DD)" See https://momentjs.com/docs/#/displaying/format/ fordocumentation for different tokens */
   formatString?: string | null
   /** Returns a string generated with Moment.js' fromNow function */
   fromNow?: boolean | null
-  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  /** Returns the difference between this date and the current time. Defaults tomiliseconds but you can also pass in as the measurement years, months,weeks, days, hours, minutes, and seconds. */
   difference?: string | null
   /** Configures the locale Moment.js will use to format the date. */
   locale?: string | null
 }
 export interface ChangeTimeDirectoryArgs {
-  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYYMMMM DD)" See https://momentjs.com/docs/#/displaying/format/ fordocumentation for different tokens */
   formatString?: string | null
   /** Returns a string generated with Moment.js' fromNow function */
   fromNow?: boolean | null
-  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  /** Returns the difference between this date and the current time. Defaults tomiliseconds but you can also pass in as the measurement years, months,weeks, days, hours, minutes, and seconds. */
   difference?: string | null
   /** Configures the locale Moment.js will use to format the date. */
   locale?: string | null
 }
 export interface BirthTimeDirectoryArgs {
-  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYYMMMM DD)" See https://momentjs.com/docs/#/displaying/format/ fordocumentation for different tokens */
   formatString?: string | null
   /** Returns a string generated with Moment.js' fromNow function */
   fromNow?: boolean | null
-  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  /** Returns the difference between this date and the current time. Defaults tomiliseconds but you can also pass in as the measurement years, months,weeks, days, hours, minutes, and seconds. */
   difference?: string | null
   /** Configures the locale Moment.js will use to format the date. */
   locale?: string | null
 }
 export interface AtimeDirectoryArgs {
-  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYYMMMM DD)" See https://momentjs.com/docs/#/displaying/format/ fordocumentation for different tokens */
   formatString?: string | null
   /** Returns a string generated with Moment.js' fromNow function */
   fromNow?: boolean | null
-  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  /** Returns the difference between this date and the current time. Defaults tomiliseconds but you can also pass in as the measurement years, months,weeks, days, hours, minutes, and seconds. */
   difference?: string | null
   /** Configures the locale Moment.js will use to format the date. */
   locale?: string | null
 }
 export interface MtimeDirectoryArgs {
-  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYYMMMM DD)" See https://momentjs.com/docs/#/displaying/format/ fordocumentation for different tokens */
   formatString?: string | null
   /** Returns a string generated with Moment.js' fromNow function */
   fromNow?: boolean | null
-  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  /** Returns the difference between this date and the current time. Defaults tomiliseconds but you can also pass in as the measurement years, months,weeks, days, hours, minutes, and seconds. */
   difference?: string | null
   /** Configures the locale Moment.js will use to format the date. */
   locale?: string | null
 }
 export interface CtimeDirectoryArgs {
-  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYYMMMM DD)" See https://momentjs.com/docs/#/displaying/format/ fordocumentation for different tokens */
   formatString?: string | null
   /** Returns a string generated with Moment.js' fromNow function */
   fromNow?: boolean | null
-  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  /** Returns the difference between this date and the current time. Defaults tomiliseconds but you can also pass in as the measurement years, months,weeks, days, hours, minutes, and seconds. */
   difference?: string | null
   /** Configures the locale Moment.js will use to format the date. */
   locale?: string | null
 }
 export interface BirthtimeDirectoryArgs {
-  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYYMMMM DD)" See https://momentjs.com/docs/#/displaying/format/ fordocumentation for different tokens */
   formatString?: string | null
   /** Returns a string generated with Moment.js' fromNow function */
   fromNow?: boolean | null
-  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  /** Returns the difference between this date and the current time. Defaults tomiliseconds but you can also pass in as the measurement years, months,weeks, days, hours, minutes, and seconds. */
   difference?: string | null
   /** Configures the locale Moment.js will use to format the date. */
   locale?: string | null
@@ -8965,81 +8972,81 @@ export interface GroupFileConnectionArgs {
   field?: FileGroupEnum | null
 }
 export interface ModifiedTimeFileArgs {
-  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYYMMMM DD)" See https://momentjs.com/docs/#/displaying/format/ fordocumentation for different tokens */
   formatString?: string | null
   /** Returns a string generated with Moment.js' fromNow function */
   fromNow?: boolean | null
-  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  /** Returns the difference between this date and the current time. Defaults tomiliseconds but you can also pass in as the measurement years, months,weeks, days, hours, minutes, and seconds. */
   difference?: string | null
   /** Configures the locale Moment.js will use to format the date. */
   locale?: string | null
 }
 export interface AccessTimeFileArgs {
-  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYYMMMM DD)" See https://momentjs.com/docs/#/displaying/format/ fordocumentation for different tokens */
   formatString?: string | null
   /** Returns a string generated with Moment.js' fromNow function */
   fromNow?: boolean | null
-  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  /** Returns the difference between this date and the current time. Defaults tomiliseconds but you can also pass in as the measurement years, months,weeks, days, hours, minutes, and seconds. */
   difference?: string | null
   /** Configures the locale Moment.js will use to format the date. */
   locale?: string | null
 }
 export interface ChangeTimeFileArgs {
-  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYYMMMM DD)" See https://momentjs.com/docs/#/displaying/format/ fordocumentation for different tokens */
   formatString?: string | null
   /** Returns a string generated with Moment.js' fromNow function */
   fromNow?: boolean | null
-  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  /** Returns the difference between this date and the current time. Defaults tomiliseconds but you can also pass in as the measurement years, months,weeks, days, hours, minutes, and seconds. */
   difference?: string | null
   /** Configures the locale Moment.js will use to format the date. */
   locale?: string | null
 }
 export interface BirthTimeFileArgs {
-  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYYMMMM DD)" See https://momentjs.com/docs/#/displaying/format/ fordocumentation for different tokens */
   formatString?: string | null
   /** Returns a string generated with Moment.js' fromNow function */
   fromNow?: boolean | null
-  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  /** Returns the difference between this date and the current time. Defaults tomiliseconds but you can also pass in as the measurement years, months,weeks, days, hours, minutes, and seconds. */
   difference?: string | null
   /** Configures the locale Moment.js will use to format the date. */
   locale?: string | null
 }
 export interface AtimeFileArgs {
-  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYYMMMM DD)" See https://momentjs.com/docs/#/displaying/format/ fordocumentation for different tokens */
   formatString?: string | null
   /** Returns a string generated with Moment.js' fromNow function */
   fromNow?: boolean | null
-  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  /** Returns the difference between this date and the current time. Defaults tomiliseconds but you can also pass in as the measurement years, months,weeks, days, hours, minutes, and seconds. */
   difference?: string | null
   /** Configures the locale Moment.js will use to format the date. */
   locale?: string | null
 }
 export interface MtimeFileArgs {
-  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYYMMMM DD)" See https://momentjs.com/docs/#/displaying/format/ fordocumentation for different tokens */
   formatString?: string | null
   /** Returns a string generated with Moment.js' fromNow function */
   fromNow?: boolean | null
-  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  /** Returns the difference between this date and the current time. Defaults tomiliseconds but you can also pass in as the measurement years, months,weeks, days, hours, minutes, and seconds. */
   difference?: string | null
   /** Configures the locale Moment.js will use to format the date. */
   locale?: string | null
 }
 export interface CtimeFileArgs {
-  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYYMMMM DD)" See https://momentjs.com/docs/#/displaying/format/ fordocumentation for different tokens */
   formatString?: string | null
   /** Returns a string generated with Moment.js' fromNow function */
   fromNow?: boolean | null
-  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  /** Returns the difference between this date and the current time. Defaults tomiliseconds but you can also pass in as the measurement years, months,weeks, days, hours, minutes, and seconds. */
   difference?: string | null
   /** Configures the locale Moment.js will use to format the date. */
   locale?: string | null
 }
 export interface BirthtimeFileArgs {
-  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYYMMMM DD)" See https://momentjs.com/docs/#/displaying/format/ fordocumentation for different tokens */
   formatString?: string | null
   /** Returns a string generated with Moment.js' fromNow function */
   fromNow?: boolean | null
-  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  /** Returns the difference between this date and the current time. Defaults tomiliseconds but you can also pass in as the measurement years, months,weeks, days, hours, minutes, and seconds. */
   difference?: string | null
   /** Configures the locale Moment.js will use to format the date. */
   locale?: string | null
@@ -9048,6 +9055,8 @@ export interface ExcerptMarkdownRemarkArgs {
   pruneLength?: number | null
 
   truncate?: boolean | null
+
+  format?: ExcerptFormats | null
 }
 export interface HeadingsMarkdownRemarkArgs {
   depth?: HeadingLevels | null
@@ -9056,11 +9065,11 @@ export interface TableOfContentsMarkdownRemarkArgs {
   pathToSlugField?: string | null
 }
 export interface DateFrontmatter_2Args {
-  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYYMMMM DD)" See https://momentjs.com/docs/#/displaying/format/ fordocumentation for different tokens */
   formatString?: string | null
   /** Returns a string generated with Moment.js' fromNow function */
   fromNow?: boolean | null
-  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  /** Returns the difference between this date and the current time. Defaults tomiliseconds but you can also pass in as the measurement years, months,weeks, days, hours, minutes, and seconds. */
   difference?: string | null
   /** Configures the locale Moment.js will use to format the date. */
   locale?: string | null
@@ -9086,21 +9095,21 @@ export interface GroupMarkdownRemarkConnectionArgs {
   field?: MarkdownRemarkGroupEnum | null
 }
 export interface PortSiteArgs {
-  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYYMMMM DD)" See https://momentjs.com/docs/#/displaying/format/ fordocumentation for different tokens */
   formatString?: string | null
   /** Returns a string generated with Moment.js' fromNow function */
   fromNow?: boolean | null
-  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  /** Returns the difference between this date and the current time. Defaults tomiliseconds but you can also pass in as the measurement years, months,weeks, days, hours, minutes, and seconds. */
   difference?: string | null
   /** Configures the locale Moment.js will use to format the date. */
   locale?: string | null
 }
 export interface BuildTimeSiteArgs {
-  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYYMMMM DD)" See https://momentjs.com/docs/#/displaying/format/ fordocumentation for different tokens */
   formatString?: string | null
   /** Returns a string generated with Moment.js' fromNow function */
   fromNow?: boolean | null
-  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  /** Returns the difference between this date and the current time. Defaults tomiliseconds but you can also pass in as the measurement years, months,weeks, days, hours, minutes, and seconds. */
   difference?: string | null
   /** Configures the locale Moment.js will use to format the date. */
   locale?: string | null
