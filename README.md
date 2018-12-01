@@ -21,17 +21,24 @@ The code base for the [Codemanufacture](https://codemanufacture.com/)
 - [Gatsby 2.0](https://www.gatsbyjs.org/) - a static site generator with following plugins:
   - [Canonical urls](https://www.gatsbyjs.org/packages/gatsby-plugin-canonical-urls)
   - [Google Tag Manager](https://www.gatsbyjs.org/packages/gatsby-plugin-google-tagmanager)
-  - [Robots.tx](https://www.gatsbyjs.org/packages/gatsby-plugin-robots-txt)
+  - [Robots.txt](https://www.gatsbyjs.org/packages/gatsby-plugin-robots-txt)
   - [Sitemap](https://www.gatsbyjs.org/packages/gatsby-plugin-sitemap)
   - [Styled Components](https://www.gatsbyjs.org/packages/gatsby-plugin-styled-components/)
   - [Typescript](https://www.gatsbyjs.org/packages/gatsby-plugin-typescript)
 - Development, QA Tools and automation
   - [CircleCI](https://circleci.com/) - a deployment pipeline
+  - [Commitlint](https://marionebl.github.io/commitlint) - commit message linter
+  - [GraphQL Code Generator](https://graphql-code-generator.com/)
+  - [Husky](https://github.com/typicode/husky) - git hook management
+  - [Jest](https://jestjs.io/) - Jest testing framework
+  - [Lint staged](https://github.com/okonet/lint-staged) - lint runner against staged git files
   - [Prettier](https://prettier.io/) - an opinionated code formatter
-  - [Stylelint](https://stylelint.io/)
+  - [Renovate](https://renovatebot.com/) - automated dependency updates
+  - [Stylelint](https://stylelint.io/) - a modern linter for styles
   - [Typescript](https://www.typescriptlang.org/) - a typed superset of JavaScript
   - [tslint](https://palantir.github.io/tslint/) - linter for TypeScript
 - Marketing & SEO
+  - [Canonical urls](https://support.google.com/webmasters/answer/139066?hl=en)
   - [Google Tag Manager](https://support.google.com/tagmanager/answer/6102821?hl=en)
   - [Helmet](https://github.com/nfl/react-helmet)
   - [Robots.txt](https://moz.com/learn/seo/robotstxt)
@@ -41,12 +48,20 @@ The code base for the [Codemanufacture](https://codemanufacture.com/)
 
      .
      ├── .circleci                     // CircleCI automated deployment configuration
+     ├── .huskyrc                      // husky configuration
+     ├── .lintstagedrc                 // lint-staged configuration
+     ├── .prettierignore               // prettier ignored files configuration
+     ├── .prettierrc                   // prettier configuration
+     ├── .stylelintrc                  // stylelint configuration
+     ├── codegen.yml                   // GraphQL code generator configuration
      ├── content                       // content
+     │   ├── blog                      // markdown blog posts
      │   └── pages                     // markdown pages
      ├── gatsby                        // gatsby node api hooks
      ├── gatsby-config.js              // gatsby configuration
      ├── gatsby-node.js                // gatsby node hooks
-     ├── package.json
+     ├── gatsby-ssr.js                 // gatsby server-side rendering api
+     ├── package.json                  // node.js application manifest
      ├── plop-templates                // templates for plop generator
      ├── public                        // output folder (in .gitignore)
      ├── README.md                     // this file
@@ -56,6 +71,7 @@ The code base for the [Codemanufacture](https://codemanufacture.com/)
      │   ├── graphql-types.d.ts        // graphql types (`yarn graphql-types`)
      │   └── pages                     // pages
      ├── static                        // static files automatically copied to output folder
+     ├── renovate.json                 // renovate configuration
      ├── tsconfig.json                 // typescript configuration
      ├── tslint.json                   // tslint configuration
      └── yarn.lock                     // yarn lock file
@@ -108,6 +124,10 @@ Reformats code
 
 Generates types for GraphQL queries
 
+#### `yarn lint-staged`
+
+Runs linters against staged files
+
 #### `yarn lint:css`
 
 Runs stylelint on source files
@@ -134,3 +154,23 @@ Code generator for common tasks:
 #### `yarn serve`
 
 Runs previously [built](#yarn-build) site in the production mode.
+
+#### `yarn test`
+
+Runs tests
+
+#### `yarn test:coverage`
+
+Shows tests coverage
+
+#### `yarn test:update`
+
+Update test snapshots
+
+#### `yarn test:watch`
+
+Watch files for changes and rerun tests related to changed files
+
+#### `yarn type-check`
+
+Runs type check agains source files

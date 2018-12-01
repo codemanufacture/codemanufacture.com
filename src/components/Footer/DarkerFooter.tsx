@@ -26,7 +26,9 @@ const StyledDarkerFooter = styled.div`
   }
 `
 
-const DarkerFooter: React.SFC<DarkerFooterProps> = ({ children }) => (
+const DarkerFooter: React.FunctionComponent<DarkerFooterProps> = ({
+  children,
+}) => (
   <StyledDarkerFooter>
     <div className="container">{children}</div>
   </StyledDarkerFooter>

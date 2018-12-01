@@ -1,14 +1,13 @@
 import * as React from 'react'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
-import LegacyLayout from '../components/LegacyLayout'
+import Layout from '../components/Layout'
 import { graphql } from 'gatsby'
 import { colors } from '../theme'
 import { Query } from '../graphql-types'
 
 const StyledPageWrapper = styled.div`
   margin: 0 auto;
-  max-width: 600px;
 
   a {
     color: ${colors.brand};
@@ -44,28 +43,28 @@ const StyledPageWrapper = styled.div`
   }
 `
 
-interface PageTemplateProps {
+interface PostTemplateProps {
   data: Query
 }
 
-const PageTemplate: React.FunctionComponent<PageTemplateProps> = ({ data }) => {
+const PostTemplate: React.FunctionComponent<PostTemplateProps> = ({ data }) => {
   const frontmatter =
     (data && data.markdownRemark && data.markdownRemark.frontmatter) || {}
   const html = (data && data.markdownRemark && data.markdownRemark.html) || ''
   return (
-    <LegacyLayout>
+    <Layout>
       <StyledPageWrapper>
         <Helmet title={`${frontmatter.title}`} />
         <h1>{frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </StyledPageWrapper>
-    </LegacyLayout>
+    </Layout>
   )
 }
 
-export default PageTemplate
+export default PostTemplate
 
-export const pageQuery = graphql`
+export const postQuery = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html

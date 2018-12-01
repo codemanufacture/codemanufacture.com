@@ -13,12 +13,19 @@ module.exports = exports.onCreateNode = ({ node, actions, getNode }) => {
     const { relativePath } = getNode(node.parent)
 
     const slug = permalink || `/${relativePath.replace(`.md`, ``)}/`
+    const pageType = slug.startsWith(`/blog`) ? `post` : `page`
 
     // Used to generate URL to view this content.
     createNodeField({
       node,
       name: `slug`,
       value: slug,
+    })
+
+    createNodeField({
+      node,
+      name: `pageType`,
+      value: pageType
     })
   }
 }

@@ -9,7 +9,7 @@ interface LayoutProps {
   children: React.ReactNode
 }
 
-const Layout: React.SFC<LayoutProps> = ({ children }) => {
+const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
   return (
     <>
       <MetaData />

@@ -6,7 +6,10 @@ interface MenuItemProps {
   pagePath: string
 }
 
-const MenuItem: React.SFC<MenuItemProps> = ({ pagePath, name }) => (
+const MenuItem: React.FunctionComponent<MenuItemProps> = ({
+  pagePath,
+  name,
+}) => (
   <li>
     <Link to={pagePath} title={name}>
       {name}

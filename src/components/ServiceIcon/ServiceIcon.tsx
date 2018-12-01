@@ -5,7 +5,10 @@ export interface ServiceIconProps {
   name: string
 }
 
-const ServiceIcon: React.SFC<ServiceIconProps> = ({ icon, name }) => (
+const ServiceIcon: React.FunctionComponent<ServiceIconProps> = ({
+  icon,
+  name,
+}) => (
   <li>
     <figure>
       <img src={icon} alt={`${name}`} />

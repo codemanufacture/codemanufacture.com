@@ -10,7 +10,7 @@ const siteMetadataQuery = graphql`
   }
 `
 
-const MetaData: React.SFC = () => (
+const MetaData: React.FunctionComponent = () => (
   <StaticQuery
     query={siteMetadataQuery}
     render={data => MetaDataStructure(data)}
