@@ -51,17 +51,8 @@ interface InputProps {
   onChange(e: React.ChangeEvent<HTMLInputElement>): void
 }
 
-const Input: React.SFC<InputProps> = props => {
-  const {
-    hasErrors,
-    type,
-    value,
-    placeholder,
-    id,
-    onChange,
-    required,
-    label,
-  } = props
+const Input: React.FunctionComponent<InputProps> = props => {
+  const { hasErrors, id, label, onChange, ...rest } = props
 
   const wrapperClassName = classNames({
     withErrors: hasErrors,
@@ -69,14 +60,7 @@ const Input: React.SFC<InputProps> = props => {
 
   return (
     <StyledInput className={wrapperClassName}>
-      <input
-        type={type}
-        value={value}
-        placeholder={placeholder}
-        id={id}
-        onChange={onChange}
-        required={required}
-      />
+      <input id={id} onChange={onChange} {...rest} />
       <label htmlFor={id}>{label}</label>
     </StyledInput>
   )

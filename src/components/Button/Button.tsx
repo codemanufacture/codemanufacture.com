@@ -33,7 +33,11 @@ const StyledButton = styled.button`
   }
 `
 
-const ButtonWrapper: React.SFC<ButtonProps> = ({ onClick, label, type }) => {
+const ButtonWrapper: React.FunctionComponent<ButtonProps> = ({
+  onClick,
+  label,
+  type,
+}) => {
   return (
     <StyledButton type={type} onClick={e => onClick(e)}>
       {label}

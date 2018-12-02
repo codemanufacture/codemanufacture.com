@@ -35,29 +35,9 @@ interface NewsletterInputProps {
 }
 
 const NewsletterInput = (props: NewsletterInputProps) => {
-  const {
-    onChange,
-    type,
-    value,
-    name,
-    id,
-    className,
-    placeholder,
-    required,
-  } = props
+  const { onChange, ...rest } = props
 
-  return (
-    <StyledNewsletterInput
-      onChange={e => onChange(e)}
-      type={type}
-      value={value}
-      name={name}
-      className={className}
-      id={id}
-      placeholder={placeholder}
-      required={required}
-    />
-  )
+  return <StyledNewsletterInput onChange={e => onChange(e)} {...rest} />
 }
 
 export default NewsletterInput

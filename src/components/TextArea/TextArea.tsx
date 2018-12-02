@@ -50,8 +50,8 @@ interface TextAreaProps {
   onChange(e: React.ChangeEvent<HTMLTextAreaElement>): void
 }
 
-const TextArea: React.SFC<TextAreaProps> = props => {
-  const { hasErrors, id, label, onChange, placeholder, required, value } = props
+const TextArea: React.FunctionComponent<TextAreaProps> = props => {
+  const { id, label, hasErrors, ...rest } = props
 
   const wrapperClassName = classNames({
     withErrors: hasErrors,
@@ -59,13 +59,7 @@ const TextArea: React.SFC<TextAreaProps> = props => {
 
   return (
     <StyledTextArea className={wrapperClassName}>
-      <textarea
-        value={value}
-        placeholder={placeholder}
-        id={id}
-        onChange={onChange}
-        required={required}
-      />
+      <textarea id={id} {...rest} />
       <label htmlFor={id}>{label}</label>
     </StyledTextArea>
   )
