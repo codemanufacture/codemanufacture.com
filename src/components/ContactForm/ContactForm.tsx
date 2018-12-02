@@ -184,6 +184,7 @@ class ContactForm extends React.Component<{}, ContactFormState> {
 
       return (
         <Input
+          key={`contact-form-input-${field.id}`}
           value={field.value}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
             this.handleInputChange(fieldId, e)

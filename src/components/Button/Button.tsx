@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { colors, transitions, typography } from '../../theme'
 
 interface ButtonProps {
+  className?: string
   label: string
   type: string
   onClick(e: React.SyntheticEvent): void
@@ -11,35 +12,32 @@ interface ButtonProps {
 const StyledButton = styled.button`
   display: block;
   margin: 0 auto;
-  padding: 0 22px;
-  border: 2px solid ${colors.backgroundGray};
-  border-radius: 20px;
-  font-size: ${typography.paragraphSize};
-  font-family: ${typography.basicFontFamily};
+  padding: 10px 30px;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  background: ${colors.brand};
+  color: ${colors.buttonTextColor};
+  font-size: ${typography.ctaSize};
+  line-height: 1.5;
+  transition: background-color ${transitions.basicTransition},
+    color ${transitions.basicTransition};
   cursor: pointer;
-  line-height: 36px;
-  text-transform: uppercase;
-  color: ${colors.backgroundGray};
-  white-space: nowrap;
-  transition: border ${transitions.basicTransition},
-    color ${transitions.basicTransition},
-    background ${transitions.basicTransition};
   outline: none;
 
   &:hover {
-    background-color: ${colors.backgroundGray};
+    background: ${colors.brandDarkGreen};
     color: ${colors.white};
-    border-color: transparent !important;
   }
 `
 
 const ButtonWrapper: React.FunctionComponent<ButtonProps> = ({
+  className,
   onClick,
   label,
   type,
 }) => {
   return (
-    <StyledButton type={type} onClick={e => onClick(e)}>
+    <StyledButton type={type} onClick={e => onClick(e)} className={className}>
       {label}
     </StyledButton>
   )
