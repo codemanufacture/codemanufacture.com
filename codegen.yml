@@ -1,11 +1,14 @@
 schema:
   - "http://localhost:8000/___graphql"
 documents: []
-config: {}
+config:
+  add: "/* tslint:disable */"
+overwrite: true
 generates:
   ./src/graphql-types.d.ts:
     config: {}
     plugins:
+      - "add"
       - "typescript-common"
       - "typescript-client"
       - "typescript-server"
