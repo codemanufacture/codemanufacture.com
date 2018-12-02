@@ -100,7 +100,7 @@ const formFields = [
 ]
 
 interface FormField {
-  hasErrors: boolean
+  hasErrors: boolean | undefined
   id: string
   label: string
   placeholder: string
@@ -136,10 +136,12 @@ class ContactForm extends React.Component<{}, ContactFormState> {
 
   handleInputChange = (
     fieldId: string,
-    e: React.ChangeEvent<HTMLInputElement>
+    e:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLTextAreaElement>
   ) => {
     const { fields } = this.state
-    const indexOfFieldToUpdate: keyof FormField = fields.findIndex(
+    const indexOfFieldToUpdate: number = fields.findIndex(
       field => field.id === fieldId
     )
 
@@ -198,7 +200,7 @@ class ContactForm extends React.Component<{}, ContactFormState> {
   }
 
   render() {
-    const textAreaProps = this.state.fields.find(
+    const textAreaProps: FormField | undefined = this.state.fields.find(
       (field: FormField) => field.type === 'textarea'
     )
 
@@ -207,12 +209,14 @@ class ContactForm extends React.Component<{}, ContactFormState> {
         <h2>Contact Us</h2>
         <StyledContactForm>
           {this.renderFormFields(this.state.fields)}
-          <TextArea
-            onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
-              this.handleInputChange(textAreaProps.id, e)
-            }
-            {...textAreaProps}
-          />
+          {textAreaProps && (
+            <TextArea
+              onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
+                this.handleInputChange(textAreaProps.id, e)
+              }
+              {...textAreaProps}
+            />
+          )}
           <Button
             type="submit"
             label="Send message"

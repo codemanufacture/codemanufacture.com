@@ -3,17 +3,6 @@ import styled from 'styled-components'
 import { colors, typography } from '../../theme'
 import classNames from 'classnames'
 
-interface TextAreaProps {
-  hasErrors: boolean
-  id: string
-  isInvalid: boolean
-  label: string
-  placeholder: string
-  required: boolean
-  value: string
-  onChange(e: React.ChangeEvent<HTMLTextAreaElement>): void
-}
-
 const StyledTextArea = styled.fieldset`
   border: none;
 
@@ -50,6 +39,16 @@ const StyledTextArea = styled.fieldset`
     display: none;
   }
 `
+
+interface TextAreaProps {
+  hasErrors: boolean | undefined
+  id: string | undefined
+  label: string
+  placeholder: string
+  required: boolean
+  value: string
+  onChange(e: React.ChangeEvent<HTMLTextAreaElement>): void
+}
 
 const TextArea: React.SFC<TextAreaProps> = props => {
   const { hasErrors, id, label, onChange, placeholder, required, value } = props

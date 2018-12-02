@@ -41,9 +41,8 @@ const StyledInput = styled.fieldset`
 `
 
 interface InputProps {
-  hasErrors: boolean
+  hasErrors: boolean | undefined
   id: string
-  isInvalid: boolean
   label: string
   placeholder: string
   required: boolean
