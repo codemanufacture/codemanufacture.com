@@ -25,5 +25,15 @@ exports[`MainMenu component renders correctly 1`] = `
       Services
     </a>
   </li>
+  <li>
+    <a
+      href="/homepage/#contact"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      title="Contact"
+    >
+      Contact
+    </a>
+  </li>
 </ul>
 `;

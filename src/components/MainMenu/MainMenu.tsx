@@ -68,6 +68,7 @@ const MainMenu: React.FunctionComponent<MainMenuProps> = ({
     <StyledMenu onClick={onMenuClick} className={menuClassName}>
       <MenuItem pagePath="/homepage#home" name="Home" />
       <MenuItem pagePath="/homepage#services" name="Services" />
+      <MenuItem pagePath="/homepage/#contact" name="Contact" />
     </StyledMenu>
   )
 }
