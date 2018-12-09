@@ -6,12 +6,18 @@
 
 const React = require('react')
 
-exports.onRenderBody = ({ setHeadComponents }) => {
+exports.onRenderBody = ({ setHeadComponents, setPreBodyComponents }) => {
   setHeadComponents([
     <link
       rel="dns-prefetch"
       key="dns-prefetch-s3-app-directory"
       href="https://app-directory.s3.amazonaws.com"
     />,
+  ])
+
+  setPreBodyComponents([
+    <noscript
+      key="noscript"
+    >Your browser does not support JavaScript!</noscript>,
   ])
 }
