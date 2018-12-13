@@ -84,7 +84,7 @@
     "graphql-codegen-add": "^0.15.0",
     "graphql-codegen-typescript-client": "^0.15.0",
     "graphql-codegen-typescript-common": "^0.15.0",
-    "graphql-codegen-typescript-server": "^0.14.5",
+    "graphql-codegen-typescript-server": "^0.15.0",
     "husky": "^1.1.2",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^23.6.0",
