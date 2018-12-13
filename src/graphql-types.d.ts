@@ -1,7127 +1,7226 @@
 /* tslint:disable */
+export type Maybe<T> = T | null
 
 export interface SitePageConnectionSort {
-  fields: (SitePageConnectionSortByFieldsEnum | null)[]
+  fields: (Maybe<SitePageConnectionSortByFieldsEnum>)[]
 
-  order?: SitePageConnectionSortOrderValues | null
+  order?: Maybe<SitePageConnectionSortOrderValues>
 }
 /** Filter connection on its fields */
 export interface FilterSitePage {
-  jsonName?: SitePageConnectionJsonNameQueryString | null
+  jsonName?: Maybe<SitePageConnectionJsonNameQueryString>
 
-  internalComponentName?: SitePageConnectionInternalComponentNameQueryString | null
+  internalComponentName?: Maybe<
+    SitePageConnectionInternalComponentNameQueryString
+  >
 
-  path?: SitePageConnectionPathQueryString_2 | null
+  path?: Maybe<SitePageConnectionPathQueryString_2>
 
-  component?: SitePageConnectionComponentQueryString | null
+  component?: Maybe<SitePageConnectionComponentQueryString>
 
-  componentChunkName?: SitePageConnectionComponentChunkNameQueryString | null
+  componentChunkName?: Maybe<SitePageConnectionComponentChunkNameQueryString>
 
-  context?: SitePageConnectionContextInputObject | null
+  context?: Maybe<SitePageConnectionContextInputObject>
 
-  pluginCreator?: SitePageConnectionPluginCreatorInputObject | null
+  pluginCreator?: Maybe<SitePageConnectionPluginCreatorInputObject>
 
-  pluginCreatorId?: SitePageConnectionPluginCreatorIdQueryString_2 | null
+  pluginCreatorId?: Maybe<SitePageConnectionPluginCreatorIdQueryString_2>
 
-  componentPath?: SitePageConnectionComponentPathQueryString | null
+  componentPath?: Maybe<SitePageConnectionComponentPathQueryString>
 
-  id?: SitePageConnectionIdQueryString_2 | null
+  id?: Maybe<SitePageConnectionIdQueryString_2>
 
-  internal?: SitePageConnectionInternalInputObject_2 | null
+  internal?: Maybe<SitePageConnectionInternalInputObject_2>
 }
 
 export interface SitePageConnectionJsonNameQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionInternalComponentNameQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionPathQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionComponentQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionComponentChunkNameQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionContextInputObject {
-  slug?: SitePageConnectionContextSlugQueryString | null
+  slug?: Maybe<SitePageConnectionContextSlugQueryString>
 }
 
 export interface SitePageConnectionContextSlugQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionPluginCreatorInputObject {
-  resolve?: SitePageConnectionPluginCreatorResolveQueryString | null
+  resolve?: Maybe<SitePageConnectionPluginCreatorResolveQueryString>
 
-  id?: SitePageConnectionPluginCreatorIdQueryString | null
+  id?: Maybe<SitePageConnectionPluginCreatorIdQueryString>
 
-  name?: SitePageConnectionPluginCreatorNameQueryString | null
+  name?: Maybe<SitePageConnectionPluginCreatorNameQueryString>
 
-  version?: SitePageConnectionPluginCreatorVersionQueryString | null
+  version?: Maybe<SitePageConnectionPluginCreatorVersionQueryString>
 
-  pluginOptions?: SitePageConnectionPluginCreatorPluginOptionsInputObject | null
+  pluginOptions?: Maybe<SitePageConnectionPluginCreatorPluginOptionsInputObject>
 
-  nodeAPIs?: SitePageConnectionPluginCreatorNodeApIsQueryList | null
+  nodeAPIs?: Maybe<SitePageConnectionPluginCreatorNodeApIsQueryList>
 
-  browserAPIs?: SitePageConnectionPluginCreatorBrowserApIsQueryList | null
+  browserAPIs?: Maybe<SitePageConnectionPluginCreatorBrowserApIsQueryList>
 
-  ssrAPIs?: SitePageConnectionPluginCreatorSsrApIsQueryList | null
+  ssrAPIs?: Maybe<SitePageConnectionPluginCreatorSsrApIsQueryList>
 
-  pluginFilepath?: SitePageConnectionPluginCreatorPluginFilepathQueryString | null
+  pluginFilepath?: Maybe<
+    SitePageConnectionPluginCreatorPluginFilepathQueryString
+  >
 
-  packageJson?: SitePageConnectionPluginCreatorPackageJsonInputObject | null
+  packageJson?: Maybe<SitePageConnectionPluginCreatorPackageJsonInputObject>
 
-  parent?: SitePageConnectionPluginCreatorParentQueryString | null
+  parent?: Maybe<SitePageConnectionPluginCreatorParentQueryString>
 
-  internal?: SitePageConnectionPluginCreatorInternalInputObject | null
+  internal?: Maybe<SitePageConnectionPluginCreatorInternalInputObject>
 }
 
 export interface SitePageConnectionPluginCreatorResolveQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionPluginCreatorIdQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionPluginCreatorNameQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionPluginCreatorVersionQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionPluginCreatorPluginOptionsInputObject {
-  plugins?: SitePageConnectionPluginCreatorPluginOptionsPluginsQueryList | null
+  plugins?: Maybe<SitePageConnectionPluginCreatorPluginOptionsPluginsQueryList>
 
-  path?: SitePageConnectionPluginCreatorPluginOptionsPathQueryString | null
+  path?: Maybe<SitePageConnectionPluginCreatorPluginOptionsPathQueryString>
 
-  name?: SitePageConnectionPluginCreatorPluginOptionsNameQueryString | null
+  name?: Maybe<SitePageConnectionPluginCreatorPluginOptionsNameQueryString>
 
-  ignore?: SitePageConnectionPluginCreatorPluginOptionsIgnoreQueryList | null
+  ignore?: Maybe<SitePageConnectionPluginCreatorPluginOptionsIgnoreQueryList>
 
-  exclude?: SitePageConnectionPluginCreatorPluginOptionsExcludeQueryList | null
+  exclude?: Maybe<SitePageConnectionPluginCreatorPluginOptionsExcludeQueryList>
 
-  id?: SitePageConnectionPluginCreatorPluginOptionsIdQueryString | null
+  id?: Maybe<SitePageConnectionPluginCreatorPluginOptionsIdQueryString>
 
-  includeInDevelopment?: SitePageConnectionPluginCreatorPluginOptionsIncludeInDevelopmentQueryBoolean | null
+  includeInDevelopment?: Maybe<
+    SitePageConnectionPluginCreatorPluginOptionsIncludeInDevelopmentQueryBoolean
+  >
 
-  siteUrl?: SitePageConnectionPluginCreatorPluginOptionsSiteUrlQueryString | null
+  siteUrl?: Maybe<
+    SitePageConnectionPluginCreatorPluginOptionsSiteUrlQueryString
+  >
 
-  endpoint?: SitePageConnectionPluginCreatorPluginOptionsEndpointQueryString | null
+  endpoint?: Maybe<
+    SitePageConnectionPluginCreatorPluginOptionsEndpointQueryString
+  >
 
-  pathCheck?: SitePageConnectionPluginCreatorPluginOptionsPathCheckQueryBoolean | null
+  pathCheck?: Maybe<
+    SitePageConnectionPluginCreatorPluginOptionsPathCheckQueryBoolean
+  >
 }
 
 export interface SitePageConnectionPluginCreatorPluginOptionsPluginsQueryList {
-  elemMatch?: SitePageConnectionPluginCreatorPluginOptionsPluginsInputObject | null
+  elemMatch?: Maybe<
+    SitePageConnectionPluginCreatorPluginOptionsPluginsInputObject
+  >
 }
 
 export interface SitePageConnectionPluginCreatorPluginOptionsPluginsInputObject {
-  resolve?: SitePageConnectionPluginCreatorPluginOptionsPluginsResolveQueryString | null
+  resolve?: Maybe<
+    SitePageConnectionPluginCreatorPluginOptionsPluginsResolveQueryString
+  >
 
-  id?: SitePageConnectionPluginCreatorPluginOptionsPluginsIdQueryString | null
+  id?: Maybe<SitePageConnectionPluginCreatorPluginOptionsPluginsIdQueryString>
 
-  name?: SitePageConnectionPluginCreatorPluginOptionsPluginsNameQueryString | null
+  name?: Maybe<
+    SitePageConnectionPluginCreatorPluginOptionsPluginsNameQueryString
+  >
 
-  version?: SitePageConnectionPluginCreatorPluginOptionsPluginsVersionQueryString | null
+  version?: Maybe<
+    SitePageConnectionPluginCreatorPluginOptionsPluginsVersionQueryString
+  >
 
-  browserAPIs?: SitePageConnectionPluginCreatorPluginOptionsPluginsBrowserApIsQueryList | null
+  browserAPIs?: Maybe<
+    SitePageConnectionPluginCreatorPluginOptionsPluginsBrowserApIsQueryList
+  >
 
-  ssrAPIs?: SitePageConnectionPluginCreatorPluginOptionsPluginsSsrApIsQueryList | null
+  ssrAPIs?: Maybe<
+    SitePageConnectionPluginCreatorPluginOptionsPluginsSsrApIsQueryList
+  >
 
-  pluginFilepath?: SitePageConnectionPluginCreatorPluginOptionsPluginsPluginFilepathQueryString | null
+  pluginFilepath?: Maybe<
+    SitePageConnectionPluginCreatorPluginOptionsPluginsPluginFilepathQueryString
+  >
 }
 
 export interface SitePageConnectionPluginCreatorPluginOptionsPluginsResolveQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionPluginCreatorPluginOptionsPluginsIdQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionPluginCreatorPluginOptionsPluginsNameQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionPluginCreatorPluginOptionsPluginsVersionQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionPluginCreatorPluginOptionsPluginsBrowserApIsQueryList {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionPluginCreatorPluginOptionsPluginsSsrApIsQueryList {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionPluginCreatorPluginOptionsPluginsPluginFilepathQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionPluginCreatorPluginOptionsPathQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionPluginCreatorPluginOptionsNameQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionPluginCreatorPluginOptionsIgnoreQueryList {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionPluginCreatorPluginOptionsExcludeQueryList {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionPluginCreatorPluginOptionsIdQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionPluginCreatorPluginOptionsIncludeInDevelopmentQueryBoolean {
-  eq?: boolean | null
+  eq?: Maybe<boolean>
 
-  ne?: boolean | null
+  ne?: Maybe<boolean>
 
-  in?: (boolean | null)[] | null
+  in?: Maybe<(Maybe<boolean>)[]>
 
-  nin?: (boolean | null)[] | null
+  nin?: Maybe<(Maybe<boolean>)[]>
 }
 
 export interface SitePageConnectionPluginCreatorPluginOptionsSiteUrlQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionPluginCreatorPluginOptionsEndpointQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionPluginCreatorPluginOptionsPathCheckQueryBoolean {
-  eq?: boolean | null
+  eq?: Maybe<boolean>
 
-  ne?: boolean | null
+  ne?: Maybe<boolean>
 
-  in?: (boolean | null)[] | null
+  in?: Maybe<(Maybe<boolean>)[]>
 
-  nin?: (boolean | null)[] | null
+  nin?: Maybe<(Maybe<boolean>)[]>
 }
 
 export interface SitePageConnectionPluginCreatorNodeApIsQueryList {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionPluginCreatorBrowserApIsQueryList {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionPluginCreatorSsrApIsQueryList {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionPluginCreatorPluginFilepathQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionPluginCreatorPackageJsonInputObject {
-  name?: SitePageConnectionPluginCreatorPackageJsonNameQueryString | null
+  name?: Maybe<SitePageConnectionPluginCreatorPackageJsonNameQueryString>
 
-  description?: SitePageConnectionPluginCreatorPackageJsonDescriptionQueryString | null
+  description?: Maybe<
+    SitePageConnectionPluginCreatorPackageJsonDescriptionQueryString
+  >
 
-  version?: SitePageConnectionPluginCreatorPackageJsonVersionQueryString | null
+  version?: Maybe<SitePageConnectionPluginCreatorPackageJsonVersionQueryString>
 
-  main?: SitePageConnectionPluginCreatorPackageJsonMainQueryString | null
+  main?: Maybe<SitePageConnectionPluginCreatorPackageJsonMainQueryString>
 
-  author?: SitePageConnectionPluginCreatorPackageJsonAuthorQueryString | null
+  author?: Maybe<SitePageConnectionPluginCreatorPackageJsonAuthorQueryString>
 
-  license?: SitePageConnectionPluginCreatorPackageJsonLicenseQueryString | null
+  license?: Maybe<SitePageConnectionPluginCreatorPackageJsonLicenseQueryString>
 
-  dependencies?: SitePageConnectionPluginCreatorPackageJsonDependenciesQueryList | null
+  dependencies?: Maybe<
+    SitePageConnectionPluginCreatorPackageJsonDependenciesQueryList
+  >
 
-  devDependencies?: SitePageConnectionPluginCreatorPackageJsonDevDependenciesQueryList | null
+  devDependencies?: Maybe<
+    SitePageConnectionPluginCreatorPackageJsonDevDependenciesQueryList
+  >
 
-  peerDependencies?: SitePageConnectionPluginCreatorPackageJsonPeerDependenciesQueryList | null
+  peerDependencies?: Maybe<
+    SitePageConnectionPluginCreatorPackageJsonPeerDependenciesQueryList
+  >
 
-  keywords?: SitePageConnectionPluginCreatorPackageJsonKeywordsQueryList | null
+  keywords?: Maybe<SitePageConnectionPluginCreatorPackageJsonKeywordsQueryList>
 }
 
 export interface SitePageConnectionPluginCreatorPackageJsonNameQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionPluginCreatorPackageJsonDescriptionQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionPluginCreatorPackageJsonVersionQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionPluginCreatorPackageJsonMainQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionPluginCreatorPackageJsonAuthorQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionPluginCreatorPackageJsonLicenseQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionPluginCreatorPackageJsonDependenciesQueryList {
-  elemMatch?: SitePageConnectionPluginCreatorPackageJsonDependenciesInputObject | null
+  elemMatch?: Maybe<
+    SitePageConnectionPluginCreatorPackageJsonDependenciesInputObject
+  >
 }
 
 export interface SitePageConnectionPluginCreatorPackageJsonDependenciesInputObject {
-  name?: SitePageConnectionPluginCreatorPackageJsonDependenciesNameQueryString | null
+  name?: Maybe<
+    SitePageConnectionPluginCreatorPackageJsonDependenciesNameQueryString
+  >
 
-  version?: SitePageConnectionPluginCreatorPackageJsonDependenciesVersionQueryString | null
+  version?: Maybe<
+    SitePageConnectionPluginCreatorPackageJsonDependenciesVersionQueryString
+  >
 }
 
 export interface SitePageConnectionPluginCreatorPackageJsonDependenciesNameQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionPluginCreatorPackageJsonDependenciesVersionQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionPluginCreatorPackageJsonDevDependenciesQueryList {
-  elemMatch?: SitePageConnectionPluginCreatorPackageJsonDevDependenciesInputObject | null
+  elemMatch?: Maybe<
+    SitePageConnectionPluginCreatorPackageJsonDevDependenciesInputObject
+  >
 }
 
 export interface SitePageConnectionPluginCreatorPackageJsonDevDependenciesInputObject {
-  name?: SitePageConnectionPluginCreatorPackageJsonDevDependenciesNameQueryString | null
+  name?: Maybe<
+    SitePageConnectionPluginCreatorPackageJsonDevDependenciesNameQueryString
+  >
 
-  version?: SitePageConnectionPluginCreatorPackageJsonDevDependenciesVersionQueryString | null
+  version?: Maybe<
+    SitePageConnectionPluginCreatorPackageJsonDevDependenciesVersionQueryString
+  >
 }
 
 export interface SitePageConnectionPluginCreatorPackageJsonDevDependenciesNameQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionPluginCreatorPackageJsonDevDependenciesVersionQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionPluginCreatorPackageJsonPeerDependenciesQueryList {
-  elemMatch?: SitePageConnectionPluginCreatorPackageJsonPeerDependenciesInputObject | null
+  elemMatch?: Maybe<
+    SitePageConnectionPluginCreatorPackageJsonPeerDependenciesInputObject
+  >
 }
 
 export interface SitePageConnectionPluginCreatorPackageJsonPeerDependenciesInputObject {
-  name?: SitePageConnectionPluginCreatorPackageJsonPeerDependenciesNameQueryString | null
+  name?: Maybe<
+    SitePageConnectionPluginCreatorPackageJsonPeerDependenciesNameQueryString
+  >
 
-  version?: SitePageConnectionPluginCreatorPackageJsonPeerDependenciesVersionQueryString | null
+  version?: Maybe<
+    SitePageConnectionPluginCreatorPackageJsonPeerDependenciesVersionQueryString
+  >
 }
 
 export interface SitePageConnectionPluginCreatorPackageJsonPeerDependenciesNameQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionPluginCreatorPackageJsonPeerDependenciesVersionQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionPluginCreatorPackageJsonKeywordsQueryList {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionPluginCreatorParentQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionPluginCreatorInternalInputObject {
-  contentDigest?: SitePageConnectionPluginCreatorInternalContentDigestQueryString | null
+  contentDigest?: Maybe<
+    SitePageConnectionPluginCreatorInternalContentDigestQueryString
+  >
 
-  type?: SitePageConnectionPluginCreatorInternalTypeQueryString | null
+  type?: Maybe<SitePageConnectionPluginCreatorInternalTypeQueryString>
 
-  owner?: SitePageConnectionPluginCreatorInternalOwnerQueryString | null
+  owner?: Maybe<SitePageConnectionPluginCreatorInternalOwnerQueryString>
 }
 
 export interface SitePageConnectionPluginCreatorInternalContentDigestQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionPluginCreatorInternalTypeQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionPluginCreatorInternalOwnerQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionPluginCreatorIdQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionComponentPathQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionIdQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionInternalInputObject_2 {
-  type?: SitePageConnectionInternalTypeQueryString_2 | null
+  type?: Maybe<SitePageConnectionInternalTypeQueryString_2>
 
-  contentDigest?: SitePageConnectionInternalContentDigestQueryString_2 | null
+  contentDigest?: Maybe<SitePageConnectionInternalContentDigestQueryString_2>
 
-  description?: SitePageConnectionInternalDescriptionQueryString | null
+  description?: Maybe<SitePageConnectionInternalDescriptionQueryString>
 
-  owner?: SitePageConnectionInternalOwnerQueryString_2 | null
+  owner?: Maybe<SitePageConnectionInternalOwnerQueryString_2>
 }
 
 export interface SitePageConnectionInternalTypeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionInternalContentDigestQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionInternalDescriptionQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageConnectionInternalOwnerQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginConnectionSort {
-  fields: (SitePluginConnectionSortByFieldsEnum | null)[]
+  fields: (Maybe<SitePluginConnectionSortByFieldsEnum>)[]
 
-  order?: SitePluginConnectionSortOrderValues | null
+  order?: Maybe<SitePluginConnectionSortOrderValues>
 }
 /** Filter connection on its fields */
 export interface FilterSitePlugin {
-  resolve?: SitePluginConnectionResolveQueryString_2 | null
+  resolve?: Maybe<SitePluginConnectionResolveQueryString_2>
 
-  id?: SitePluginConnectionIdQueryString_2 | null
+  id?: Maybe<SitePluginConnectionIdQueryString_2>
 
-  name?: SitePluginConnectionNameQueryString_2 | null
+  name?: Maybe<SitePluginConnectionNameQueryString_2>
 
-  version?: SitePluginConnectionVersionQueryString_2 | null
+  version?: Maybe<SitePluginConnectionVersionQueryString_2>
 
-  pluginOptions?: SitePluginConnectionPluginOptionsInputObject_2 | null
+  pluginOptions?: Maybe<SitePluginConnectionPluginOptionsInputObject_2>
 
-  nodeAPIs?: SitePluginConnectionNodeApIsQueryList_2 | null
+  nodeAPIs?: Maybe<SitePluginConnectionNodeApIsQueryList_2>
 
-  browserAPIs?: SitePluginConnectionBrowserApIsQueryList_2 | null
+  browserAPIs?: Maybe<SitePluginConnectionBrowserApIsQueryList_2>
 
-  ssrAPIs?: SitePluginConnectionSsrApIsQueryList_2 | null
+  ssrAPIs?: Maybe<SitePluginConnectionSsrApIsQueryList_2>
 
-  pluginFilepath?: SitePluginConnectionPluginFilepathQueryString_2 | null
+  pluginFilepath?: Maybe<SitePluginConnectionPluginFilepathQueryString_2>
 
-  packageJson?: SitePluginConnectionPackageJsonInputObject_2 | null
+  packageJson?: Maybe<SitePluginConnectionPackageJsonInputObject_2>
 
-  internal?: SitePluginConnectionInternalInputObject_2 | null
+  internal?: Maybe<SitePluginConnectionInternalInputObject_2>
 }
 
 export interface SitePluginConnectionResolveQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginConnectionIdQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginConnectionNameQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginConnectionVersionQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginConnectionPluginOptionsInputObject_2 {
-  plugins?: SitePluginConnectionPluginOptionsPluginsQueryList_2 | null
+  plugins?: Maybe<SitePluginConnectionPluginOptionsPluginsQueryList_2>
 
-  path?: SitePluginConnectionPluginOptionsPathQueryString_2 | null
+  path?: Maybe<SitePluginConnectionPluginOptionsPathQueryString_2>
 
-  name?: SitePluginConnectionPluginOptionsNameQueryString_2 | null
+  name?: Maybe<SitePluginConnectionPluginOptionsNameQueryString_2>
 
-  ignore?: SitePluginConnectionPluginOptionsIgnoreQueryList_2 | null
+  ignore?: Maybe<SitePluginConnectionPluginOptionsIgnoreQueryList_2>
 
-  exclude?: SitePluginConnectionPluginOptionsExcludeQueryList_2 | null
+  exclude?: Maybe<SitePluginConnectionPluginOptionsExcludeQueryList_2>
 
-  id?: SitePluginConnectionPluginOptionsIdQueryString_2 | null
+  id?: Maybe<SitePluginConnectionPluginOptionsIdQueryString_2>
 
-  includeInDevelopment?: SitePluginConnectionPluginOptionsIncludeInDevelopmentQueryBoolean_2 | null
+  includeInDevelopment?: Maybe<
+    SitePluginConnectionPluginOptionsIncludeInDevelopmentQueryBoolean_2
+  >
 
-  siteUrl?: SitePluginConnectionPluginOptionsSiteUrlQueryString_2 | null
+  siteUrl?: Maybe<SitePluginConnectionPluginOptionsSiteUrlQueryString_2>
 
-  endpoint?: SitePluginConnectionPluginOptionsEndpointQueryString_2 | null
+  endpoint?: Maybe<SitePluginConnectionPluginOptionsEndpointQueryString_2>
 
-  pathCheck?: SitePluginConnectionPluginOptionsPathCheckQueryBoolean_2 | null
+  pathCheck?: Maybe<SitePluginConnectionPluginOptionsPathCheckQueryBoolean_2>
 }
 
 export interface SitePluginConnectionPluginOptionsPluginsQueryList_2 {
-  elemMatch?: SitePluginConnectionPluginOptionsPluginsInputObject_2 | null
+  elemMatch?: Maybe<SitePluginConnectionPluginOptionsPluginsInputObject_2>
 }
 
 export interface SitePluginConnectionPluginOptionsPluginsInputObject_2 {
-  resolve?: SitePluginConnectionPluginOptionsPluginsResolveQueryString_2 | null
+  resolve?: Maybe<SitePluginConnectionPluginOptionsPluginsResolveQueryString_2>
 
-  id?: SitePluginConnectionPluginOptionsPluginsIdQueryString_2 | null
+  id?: Maybe<SitePluginConnectionPluginOptionsPluginsIdQueryString_2>
 
-  name?: SitePluginConnectionPluginOptionsPluginsNameQueryString_2 | null
+  name?: Maybe<SitePluginConnectionPluginOptionsPluginsNameQueryString_2>
 
-  version?: SitePluginConnectionPluginOptionsPluginsVersionQueryString_2 | null
+  version?: Maybe<SitePluginConnectionPluginOptionsPluginsVersionQueryString_2>
 
-  browserAPIs?: SitePluginConnectionPluginOptionsPluginsBrowserApIsQueryList_2 | null
+  browserAPIs?: Maybe<
+    SitePluginConnectionPluginOptionsPluginsBrowserApIsQueryList_2
+  >
 
-  ssrAPIs?: SitePluginConnectionPluginOptionsPluginsSsrApIsQueryList_2 | null
+  ssrAPIs?: Maybe<SitePluginConnectionPluginOptionsPluginsSsrApIsQueryList_2>
 
-  pluginFilepath?: SitePluginConnectionPluginOptionsPluginsPluginFilepathQueryString_2 | null
+  pluginFilepath?: Maybe<
+    SitePluginConnectionPluginOptionsPluginsPluginFilepathQueryString_2
+  >
 }
 
 export interface SitePluginConnectionPluginOptionsPluginsResolveQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginConnectionPluginOptionsPluginsIdQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginConnectionPluginOptionsPluginsNameQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginConnectionPluginOptionsPluginsVersionQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginConnectionPluginOptionsPluginsBrowserApIsQueryList_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginConnectionPluginOptionsPluginsSsrApIsQueryList_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginConnectionPluginOptionsPluginsPluginFilepathQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginConnectionPluginOptionsPathQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginConnectionPluginOptionsNameQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginConnectionPluginOptionsIgnoreQueryList_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginConnectionPluginOptionsExcludeQueryList_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginConnectionPluginOptionsIdQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginConnectionPluginOptionsIncludeInDevelopmentQueryBoolean_2 {
-  eq?: boolean | null
+  eq?: Maybe<boolean>
 
-  ne?: boolean | null
+  ne?: Maybe<boolean>
 
-  in?: (boolean | null)[] | null
+  in?: Maybe<(Maybe<boolean>)[]>
 
-  nin?: (boolean | null)[] | null
+  nin?: Maybe<(Maybe<boolean>)[]>
 }
 
 export interface SitePluginConnectionPluginOptionsSiteUrlQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginConnectionPluginOptionsEndpointQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginConnectionPluginOptionsPathCheckQueryBoolean_2 {
-  eq?: boolean | null
+  eq?: Maybe<boolean>
 
-  ne?: boolean | null
+  ne?: Maybe<boolean>
 
-  in?: (boolean | null)[] | null
+  in?: Maybe<(Maybe<boolean>)[]>
 
-  nin?: (boolean | null)[] | null
+  nin?: Maybe<(Maybe<boolean>)[]>
 }
 
 export interface SitePluginConnectionNodeApIsQueryList_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginConnectionBrowserApIsQueryList_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginConnectionSsrApIsQueryList_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginConnectionPluginFilepathQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginConnectionPackageJsonInputObject_2 {
-  name?: SitePluginConnectionPackageJsonNameQueryString_2 | null
+  name?: Maybe<SitePluginConnectionPackageJsonNameQueryString_2>
 
-  description?: SitePluginConnectionPackageJsonDescriptionQueryString_2 | null
+  description?: Maybe<SitePluginConnectionPackageJsonDescriptionQueryString_2>
 
-  version?: SitePluginConnectionPackageJsonVersionQueryString_2 | null
+  version?: Maybe<SitePluginConnectionPackageJsonVersionQueryString_2>
 
-  main?: SitePluginConnectionPackageJsonMainQueryString_2 | null
+  main?: Maybe<SitePluginConnectionPackageJsonMainQueryString_2>
 
-  author?: SitePluginConnectionPackageJsonAuthorQueryString_2 | null
+  author?: Maybe<SitePluginConnectionPackageJsonAuthorQueryString_2>
 
-  license?: SitePluginConnectionPackageJsonLicenseQueryString_2 | null
+  license?: Maybe<SitePluginConnectionPackageJsonLicenseQueryString_2>
 
-  dependencies?: SitePluginConnectionPackageJsonDependenciesQueryList_2 | null
+  dependencies?: Maybe<SitePluginConnectionPackageJsonDependenciesQueryList_2>
 
-  devDependencies?: SitePluginConnectionPackageJsonDevDependenciesQueryList_2 | null
+  devDependencies?: Maybe<
+    SitePluginConnectionPackageJsonDevDependenciesQueryList_2
+  >
 
-  peerDependencies?: SitePluginConnectionPackageJsonPeerDependenciesQueryList_2 | null
+  peerDependencies?: Maybe<
+    SitePluginConnectionPackageJsonPeerDependenciesQueryList_2
+  >
 
-  keywords?: SitePluginConnectionPackageJsonKeywordsQueryList_2 | null
+  keywords?: Maybe<SitePluginConnectionPackageJsonKeywordsQueryList_2>
 }
 
 export interface SitePluginConnectionPackageJsonNameQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginConnectionPackageJsonDescriptionQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginConnectionPackageJsonVersionQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginConnectionPackageJsonMainQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginConnectionPackageJsonAuthorQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginConnectionPackageJsonLicenseQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginConnectionPackageJsonDependenciesQueryList_2 {
-  elemMatch?: SitePluginConnectionPackageJsonDependenciesInputObject_2 | null
+  elemMatch?: Maybe<SitePluginConnectionPackageJsonDependenciesInputObject_2>
 }
 
 export interface SitePluginConnectionPackageJsonDependenciesInputObject_2 {
-  name?: SitePluginConnectionPackageJsonDependenciesNameQueryString_2 | null
+  name?: Maybe<SitePluginConnectionPackageJsonDependenciesNameQueryString_2>
 
-  version?: SitePluginConnectionPackageJsonDependenciesVersionQueryString_2 | null
+  version?: Maybe<
+    SitePluginConnectionPackageJsonDependenciesVersionQueryString_2
+  >
 }
 
 export interface SitePluginConnectionPackageJsonDependenciesNameQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginConnectionPackageJsonDependenciesVersionQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginConnectionPackageJsonDevDependenciesQueryList_2 {
-  elemMatch?: SitePluginConnectionPackageJsonDevDependenciesInputObject_2 | null
+  elemMatch?: Maybe<SitePluginConnectionPackageJsonDevDependenciesInputObject_2>
 }
 
 export interface SitePluginConnectionPackageJsonDevDependenciesInputObject_2 {
-  name?: SitePluginConnectionPackageJsonDevDependenciesNameQueryString_2 | null
+  name?: Maybe<SitePluginConnectionPackageJsonDevDependenciesNameQueryString_2>
 
-  version?: SitePluginConnectionPackageJsonDevDependenciesVersionQueryString_2 | null
+  version?: Maybe<
+    SitePluginConnectionPackageJsonDevDependenciesVersionQueryString_2
+  >
 }
 
 export interface SitePluginConnectionPackageJsonDevDependenciesNameQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginConnectionPackageJsonDevDependenciesVersionQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginConnectionPackageJsonPeerDependenciesQueryList_2 {
-  elemMatch?: SitePluginConnectionPackageJsonPeerDependenciesInputObject_2 | null
+  elemMatch?: Maybe<
+    SitePluginConnectionPackageJsonPeerDependenciesInputObject_2
+  >
 }
 
 export interface SitePluginConnectionPackageJsonPeerDependenciesInputObject_2 {
-  name?: SitePluginConnectionPackageJsonPeerDependenciesNameQueryString_2 | null
+  name?: Maybe<SitePluginConnectionPackageJsonPeerDependenciesNameQueryString_2>
 
-  version?: SitePluginConnectionPackageJsonPeerDependenciesVersionQueryString_2 | null
+  version?: Maybe<
+    SitePluginConnectionPackageJsonPeerDependenciesVersionQueryString_2
+  >
 }
 
 export interface SitePluginConnectionPackageJsonPeerDependenciesNameQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginConnectionPackageJsonPeerDependenciesVersionQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginConnectionPackageJsonKeywordsQueryList_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginConnectionInternalInputObject_2 {
-  contentDigest?: SitePluginConnectionInternalContentDigestQueryString_2 | null
+  contentDigest?: Maybe<SitePluginConnectionInternalContentDigestQueryString_2>
 
-  type?: SitePluginConnectionInternalTypeQueryString_2 | null
+  type?: Maybe<SitePluginConnectionInternalTypeQueryString_2>
 
-  owner?: SitePluginConnectionInternalOwnerQueryString_2 | null
+  owner?: Maybe<SitePluginConnectionInternalOwnerQueryString_2>
 }
 
 export interface SitePluginConnectionInternalContentDigestQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginConnectionInternalTypeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginConnectionInternalOwnerQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryConnectionSort {
-  fields: (DirectoryConnectionSortByFieldsEnum | null)[]
+  fields: (Maybe<DirectoryConnectionSortByFieldsEnum>)[]
 
-  order?: DirectoryConnectionSortOrderValues | null
+  order?: Maybe<DirectoryConnectionSortOrderValues>
 }
 /** Filter connection on its fields */
 export interface FilterDirectory {
-  id?: DirectoryConnectionIdQueryString_2 | null
+  id?: Maybe<DirectoryConnectionIdQueryString_2>
 
-  internal?: DirectoryConnectionInternalInputObject_2 | null
+  internal?: Maybe<DirectoryConnectionInternalInputObject_2>
 
-  sourceInstanceName?: DirectoryConnectionSourceInstanceNameQueryString_2 | null
+  sourceInstanceName?: Maybe<DirectoryConnectionSourceInstanceNameQueryString_2>
 
-  absolutePath?: DirectoryConnectionAbsolutePathQueryString_2 | null
+  absolutePath?: Maybe<DirectoryConnectionAbsolutePathQueryString_2>
 
-  relativePath?: DirectoryConnectionRelativePathQueryString_2 | null
+  relativePath?: Maybe<DirectoryConnectionRelativePathQueryString_2>
 
-  extension?: DirectoryConnectionExtensionQueryString_2 | null
+  extension?: Maybe<DirectoryConnectionExtensionQueryString_2>
 
-  size?: DirectoryConnectionSizeQueryInteger_2 | null
+  size?: Maybe<DirectoryConnectionSizeQueryInteger_2>
 
-  prettySize?: DirectoryConnectionPrettySizeQueryString_2 | null
+  prettySize?: Maybe<DirectoryConnectionPrettySizeQueryString_2>
 
-  modifiedTime?: DirectoryConnectionModifiedTimeQueryString_2 | null
+  modifiedTime?: Maybe<DirectoryConnectionModifiedTimeQueryString_2>
 
-  accessTime?: DirectoryConnectionAccessTimeQueryString_2 | null
+  accessTime?: Maybe<DirectoryConnectionAccessTimeQueryString_2>
 
-  changeTime?: DirectoryConnectionChangeTimeQueryString_2 | null
+  changeTime?: Maybe<DirectoryConnectionChangeTimeQueryString_2>
 
-  birthTime?: DirectoryConnectionBirthTimeQueryString_2 | null
+  birthTime?: Maybe<DirectoryConnectionBirthTimeQueryString_2>
 
-  root?: DirectoryConnectionRootQueryString_2 | null
+  root?: Maybe<DirectoryConnectionRootQueryString_2>
 
-  dir?: DirectoryConnectionDirQueryString_2 | null
+  dir?: Maybe<DirectoryConnectionDirQueryString_2>
 
-  base?: DirectoryConnectionBaseQueryString_2 | null
+  base?: Maybe<DirectoryConnectionBaseQueryString_2>
 
-  ext?: DirectoryConnectionExtQueryString_2 | null
+  ext?: Maybe<DirectoryConnectionExtQueryString_2>
 
-  name?: DirectoryConnectionNameQueryString_2 | null
+  name?: Maybe<DirectoryConnectionNameQueryString_2>
 
-  relativeDirectory?: DirectoryConnectionRelativeDirectoryQueryString_2 | null
+  relativeDirectory?: Maybe<DirectoryConnectionRelativeDirectoryQueryString_2>
 
-  dev?: DirectoryConnectionDevQueryInteger_2 | null
+  dev?: Maybe<DirectoryConnectionDevQueryInteger_2>
 
-  mode?: DirectoryConnectionModeQueryInteger_2 | null
+  mode?: Maybe<DirectoryConnectionModeQueryInteger_2>
 
-  nlink?: DirectoryConnectionNlinkQueryInteger_2 | null
+  nlink?: Maybe<DirectoryConnectionNlinkQueryInteger_2>
 
-  uid?: DirectoryConnectionUidQueryInteger_2 | null
+  uid?: Maybe<DirectoryConnectionUidQueryInteger_2>
 
-  gid?: DirectoryConnectionGidQueryInteger_2 | null
+  gid?: Maybe<DirectoryConnectionGidQueryInteger_2>
 
-  rdev?: DirectoryConnectionRdevQueryInteger_2 | null
+  rdev?: Maybe<DirectoryConnectionRdevQueryInteger_2>
 
-  blksize?: DirectoryConnectionBlksizeQueryInteger_2 | null
+  blksize?: Maybe<DirectoryConnectionBlksizeQueryInteger_2>
 
-  ino?: DirectoryConnectionInoQueryInteger_2 | null
+  ino?: Maybe<DirectoryConnectionInoQueryInteger_2>
 
-  blocks?: DirectoryConnectionBlocksQueryInteger_2 | null
+  blocks?: Maybe<DirectoryConnectionBlocksQueryInteger_2>
 
-  atimeMs?: DirectoryConnectionAtimeMsQueryFloat_2 | null
+  atimeMs?: Maybe<DirectoryConnectionAtimeMsQueryFloat_2>
 
-  mtimeMs?: DirectoryConnectionMtimeMsQueryFloat_2 | null
+  mtimeMs?: Maybe<DirectoryConnectionMtimeMsQueryFloat_2>
 
-  ctimeMs?: DirectoryConnectionCtimeMsQueryFloat_2 | null
+  ctimeMs?: Maybe<DirectoryConnectionCtimeMsQueryFloat_2>
 
-  birthtimeMs?: DirectoryConnectionBirthtimeMsQueryFloat_2 | null
+  birthtimeMs?: Maybe<DirectoryConnectionBirthtimeMsQueryFloat_2>
 
-  atime?: DirectoryConnectionAtimeQueryString_2 | null
+  atime?: Maybe<DirectoryConnectionAtimeQueryString_2>
 
-  mtime?: DirectoryConnectionMtimeQueryString_2 | null
+  mtime?: Maybe<DirectoryConnectionMtimeQueryString_2>
 
-  ctime?: DirectoryConnectionCtimeQueryString_2 | null
+  ctime?: Maybe<DirectoryConnectionCtimeQueryString_2>
 
-  birthtime?: DirectoryConnectionBirthtimeQueryString_2 | null
+  birthtime?: Maybe<DirectoryConnectionBirthtimeQueryString_2>
 }
 
 export interface DirectoryConnectionIdQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryConnectionInternalInputObject_2 {
-  contentDigest?: DirectoryConnectionInternalContentDigestQueryString_2 | null
+  contentDigest?: Maybe<DirectoryConnectionInternalContentDigestQueryString_2>
 
-  type?: DirectoryConnectionInternalTypeQueryString_2 | null
+  type?: Maybe<DirectoryConnectionInternalTypeQueryString_2>
 
-  description?: DirectoryConnectionInternalDescriptionQueryString_2 | null
+  description?: Maybe<DirectoryConnectionInternalDescriptionQueryString_2>
 
-  owner?: DirectoryConnectionInternalOwnerQueryString_2 | null
+  owner?: Maybe<DirectoryConnectionInternalOwnerQueryString_2>
 }
 
 export interface DirectoryConnectionInternalContentDigestQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryConnectionInternalTypeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryConnectionInternalDescriptionQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryConnectionInternalOwnerQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryConnectionSourceInstanceNameQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryConnectionAbsolutePathQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryConnectionRelativePathQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryConnectionExtensionQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryConnectionSizeQueryInteger_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface DirectoryConnectionPrettySizeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryConnectionModifiedTimeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryConnectionAccessTimeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryConnectionChangeTimeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryConnectionBirthTimeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryConnectionRootQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryConnectionDirQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryConnectionBaseQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryConnectionExtQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryConnectionNameQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryConnectionRelativeDirectoryQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryConnectionDevQueryInteger_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface DirectoryConnectionModeQueryInteger_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface DirectoryConnectionNlinkQueryInteger_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface DirectoryConnectionUidQueryInteger_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface DirectoryConnectionGidQueryInteger_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface DirectoryConnectionRdevQueryInteger_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface DirectoryConnectionBlksizeQueryInteger_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface DirectoryConnectionInoQueryInteger_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface DirectoryConnectionBlocksQueryInteger_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface DirectoryConnectionAtimeMsQueryFloat_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface DirectoryConnectionMtimeMsQueryFloat_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface DirectoryConnectionCtimeMsQueryFloat_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface DirectoryConnectionBirthtimeMsQueryFloat_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface DirectoryConnectionAtimeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryConnectionMtimeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryConnectionCtimeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryConnectionBirthtimeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileConnectionSort {
-  fields: (FileConnectionSortByFieldsEnum | null)[]
+  fields: (Maybe<FileConnectionSortByFieldsEnum>)[]
 
-  order?: FileConnectionSortOrderValues | null
+  order?: Maybe<FileConnectionSortOrderValues>
 }
 /** Filter connection on its fields */
 export interface FilterFile {
-  id?: FileConnectionIdQueryString_2 | null
+  id?: Maybe<FileConnectionIdQueryString_2>
 
-  internal?: FileConnectionInternalInputObject_2 | null
+  internal?: Maybe<FileConnectionInternalInputObject_2>
 
-  sourceInstanceName?: FileConnectionSourceInstanceNameQueryString_2 | null
+  sourceInstanceName?: Maybe<FileConnectionSourceInstanceNameQueryString_2>
 
-  absolutePath?: FileConnectionAbsolutePathQueryString_2 | null
+  absolutePath?: Maybe<FileConnectionAbsolutePathQueryString_2>
 
-  relativePath?: FileConnectionRelativePathQueryString_2 | null
+  relativePath?: Maybe<FileConnectionRelativePathQueryString_2>
 
-  extension?: FileConnectionExtensionQueryString_2 | null
+  extension?: Maybe<FileConnectionExtensionQueryString_2>
 
-  size?: FileConnectionSizeQueryInteger_2 | null
+  size?: Maybe<FileConnectionSizeQueryInteger_2>
 
-  prettySize?: FileConnectionPrettySizeQueryString_2 | null
+  prettySize?: Maybe<FileConnectionPrettySizeQueryString_2>
 
-  modifiedTime?: FileConnectionModifiedTimeQueryString_2 | null
+  modifiedTime?: Maybe<FileConnectionModifiedTimeQueryString_2>
 
-  accessTime?: FileConnectionAccessTimeQueryString_2 | null
+  accessTime?: Maybe<FileConnectionAccessTimeQueryString_2>
 
-  changeTime?: FileConnectionChangeTimeQueryString_2 | null
+  changeTime?: Maybe<FileConnectionChangeTimeQueryString_2>
 
-  birthTime?: FileConnectionBirthTimeQueryString_2 | null
+  birthTime?: Maybe<FileConnectionBirthTimeQueryString_2>
 
-  root?: FileConnectionRootQueryString_2 | null
+  root?: Maybe<FileConnectionRootQueryString_2>
 
-  dir?: FileConnectionDirQueryString_2 | null
+  dir?: Maybe<FileConnectionDirQueryString_2>
 
-  base?: FileConnectionBaseQueryString_2 | null
+  base?: Maybe<FileConnectionBaseQueryString_2>
 
-  ext?: FileConnectionExtQueryString_2 | null
+  ext?: Maybe<FileConnectionExtQueryString_2>
 
-  name?: FileConnectionNameQueryString_2 | null
+  name?: Maybe<FileConnectionNameQueryString_2>
 
-  relativeDirectory?: FileConnectionRelativeDirectoryQueryString_2 | null
+  relativeDirectory?: Maybe<FileConnectionRelativeDirectoryQueryString_2>
 
-  dev?: FileConnectionDevQueryInteger_2 | null
+  dev?: Maybe<FileConnectionDevQueryInteger_2>
 
-  mode?: FileConnectionModeQueryInteger_2 | null
+  mode?: Maybe<FileConnectionModeQueryInteger_2>
 
-  nlink?: FileConnectionNlinkQueryInteger_2 | null
+  nlink?: Maybe<FileConnectionNlinkQueryInteger_2>
 
-  uid?: FileConnectionUidQueryInteger_2 | null
+  uid?: Maybe<FileConnectionUidQueryInteger_2>
 
-  gid?: FileConnectionGidQueryInteger_2 | null
+  gid?: Maybe<FileConnectionGidQueryInteger_2>
 
-  rdev?: FileConnectionRdevQueryInteger_2 | null
+  rdev?: Maybe<FileConnectionRdevQueryInteger_2>
 
-  blksize?: FileConnectionBlksizeQueryInteger_2 | null
+  blksize?: Maybe<FileConnectionBlksizeQueryInteger_2>
 
-  ino?: FileConnectionInoQueryInteger_2 | null
+  ino?: Maybe<FileConnectionInoQueryInteger_2>
 
-  blocks?: FileConnectionBlocksQueryInteger_2 | null
+  blocks?: Maybe<FileConnectionBlocksQueryInteger_2>
 
-  atimeMs?: FileConnectionAtimeMsQueryFloat_2 | null
+  atimeMs?: Maybe<FileConnectionAtimeMsQueryFloat_2>
 
-  mtimeMs?: FileConnectionMtimeMsQueryFloat_2 | null
+  mtimeMs?: Maybe<FileConnectionMtimeMsQueryFloat_2>
 
-  ctimeMs?: FileConnectionCtimeMsQueryFloat_2 | null
+  ctimeMs?: Maybe<FileConnectionCtimeMsQueryFloat_2>
 
-  birthtimeMs?: FileConnectionBirthtimeMsQueryFloat_2 | null
+  birthtimeMs?: Maybe<FileConnectionBirthtimeMsQueryFloat_2>
 
-  atime?: FileConnectionAtimeQueryString_2 | null
+  atime?: Maybe<FileConnectionAtimeQueryString_2>
 
-  mtime?: FileConnectionMtimeQueryString_2 | null
+  mtime?: Maybe<FileConnectionMtimeQueryString_2>
 
-  ctime?: FileConnectionCtimeQueryString_2 | null
+  ctime?: Maybe<FileConnectionCtimeQueryString_2>
 
-  birthtime?: FileConnectionBirthtimeQueryString_2 | null
+  birthtime?: Maybe<FileConnectionBirthtimeQueryString_2>
 
-  publicURL?: PublicUrlQueryString_4 | null
+  publicURL?: Maybe<PublicUrlQueryString_4>
 }
 
 export interface FileConnectionIdQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileConnectionInternalInputObject_2 {
-  contentDigest?: FileConnectionInternalContentDigestQueryString_2 | null
+  contentDigest?: Maybe<FileConnectionInternalContentDigestQueryString_2>
 
-  type?: FileConnectionInternalTypeQueryString_2 | null
+  type?: Maybe<FileConnectionInternalTypeQueryString_2>
 
-  mediaType?: FileConnectionInternalMediaTypeQueryString_2 | null
+  mediaType?: Maybe<FileConnectionInternalMediaTypeQueryString_2>
 
-  description?: FileConnectionInternalDescriptionQueryString_2 | null
+  description?: Maybe<FileConnectionInternalDescriptionQueryString_2>
 
-  owner?: FileConnectionInternalOwnerQueryString_2 | null
+  owner?: Maybe<FileConnectionInternalOwnerQueryString_2>
 }
 
 export interface FileConnectionInternalContentDigestQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileConnectionInternalTypeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileConnectionInternalMediaTypeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileConnectionInternalDescriptionQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileConnectionInternalOwnerQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileConnectionSourceInstanceNameQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileConnectionAbsolutePathQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileConnectionRelativePathQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileConnectionExtensionQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileConnectionSizeQueryInteger_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface FileConnectionPrettySizeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileConnectionModifiedTimeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileConnectionAccessTimeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileConnectionChangeTimeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileConnectionBirthTimeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileConnectionRootQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileConnectionDirQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileConnectionBaseQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileConnectionExtQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileConnectionNameQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileConnectionRelativeDirectoryQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileConnectionDevQueryInteger_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface FileConnectionModeQueryInteger_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface FileConnectionNlinkQueryInteger_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface FileConnectionUidQueryInteger_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface FileConnectionGidQueryInteger_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface FileConnectionRdevQueryInteger_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface FileConnectionBlksizeQueryInteger_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface FileConnectionInoQueryInteger_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface FileConnectionBlocksQueryInteger_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface FileConnectionAtimeMsQueryFloat_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface FileConnectionMtimeMsQueryFloat_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface FileConnectionCtimeMsQueryFloat_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface FileConnectionBirthtimeMsQueryFloat_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface FileConnectionAtimeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileConnectionMtimeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileConnectionCtimeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileConnectionBirthtimeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface PublicUrlQueryString_4 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface AuthorJsonConnectionSort {
-  fields: (AuthorJsonConnectionSortByFieldsEnum | null)[]
+  fields: (Maybe<AuthorJsonConnectionSortByFieldsEnum>)[]
 
-  order?: AuthorJsonConnectionSortOrderValues | null
+  order?: Maybe<AuthorJsonConnectionSortOrderValues>
 }
 /** Filter connection on its fields */
 export interface FilterAuthorJson {
-  id?: AuthorJsonConnectionIdQueryString_2 | null
+  id?: Maybe<AuthorJsonConnectionIdQueryString_2>
 
-  name?: AuthorJsonConnectionNameQueryString_2 | null
+  name?: Maybe<AuthorJsonConnectionNameQueryString_2>
 
-  bio?: AuthorJsonConnectionBioQueryString_2 | null
+  bio?: Maybe<AuthorJsonConnectionBioQueryString_2>
 
-  github?: AuthorJsonConnectionGithubQueryString_2 | null
+  github?: Maybe<AuthorJsonConnectionGithubQueryString_2>
 
-  twitter?: AuthorJsonConnectionTwitterQueryString_2 | null
+  twitter?: Maybe<AuthorJsonConnectionTwitterQueryString_2>
 
-  avatar?: AuthorJsonConnectionAvatarQueryString_2 | null
+  avatar?: Maybe<AuthorJsonConnectionAvatarQueryString_2>
 
-  internal?: AuthorJsonConnectionInternalInputObject_2 | null
+  internal?: Maybe<AuthorJsonConnectionInternalInputObject_2>
 }
 
 export interface AuthorJsonConnectionIdQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface AuthorJsonConnectionNameQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface AuthorJsonConnectionBioQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface AuthorJsonConnectionGithubQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface AuthorJsonConnectionTwitterQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface AuthorJsonConnectionAvatarQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface AuthorJsonConnectionInternalInputObject_2 {
-  contentDigest?: AuthorJsonConnectionInternalContentDigestQueryString_2 | null
+  contentDigest?: Maybe<AuthorJsonConnectionInternalContentDigestQueryString_2>
 
-  type?: AuthorJsonConnectionInternalTypeQueryString_2 | null
+  type?: Maybe<AuthorJsonConnectionInternalTypeQueryString_2>
 
-  owner?: AuthorJsonConnectionInternalOwnerQueryString_2 | null
+  owner?: Maybe<AuthorJsonConnectionInternalOwnerQueryString_2>
 }
 
 export interface AuthorJsonConnectionInternalContentDigestQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface AuthorJsonConnectionInternalTypeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface AuthorJsonConnectionInternalOwnerQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface MarkdownRemarkConnectionSort {
-  fields: (MarkdownRemarkConnectionSortByFieldsEnum | null)[]
+  fields: (Maybe<MarkdownRemarkConnectionSortByFieldsEnum>)[]
 
-  order?: MarkdownRemarkConnectionSortOrderValues | null
+  order?: Maybe<MarkdownRemarkConnectionSortOrderValues>
 }
 /** Filter connection on its fields */
 export interface FilterMarkdownRemark {
-  id?: MarkdownRemarkConnectionIdQueryString_2 | null
+  id?: Maybe<MarkdownRemarkConnectionIdQueryString_2>
 
-  internal?: MarkdownRemarkConnectionInternalInputObject_2 | null
+  internal?: Maybe<MarkdownRemarkConnectionInternalInputObject_2>
 
-  frontmatter?: MarkdownRemarkConnectionFrontmatterInputObject_2 | null
+  frontmatter?: Maybe<MarkdownRemarkConnectionFrontmatterInputObject_2>
 
-  excerpt?: ExcerptQueryString_4 | null
+  excerpt?: Maybe<ExcerptQueryString_4>
 
-  rawMarkdownBody?: MarkdownRemarkConnectionRawMarkdownBodyQueryString_2 | null
+  rawMarkdownBody?: Maybe<MarkdownRemarkConnectionRawMarkdownBodyQueryString_2>
 
-  fileAbsolutePath?: MarkdownRemarkConnectionFileAbsolutePathQueryString_2 | null
+  fileAbsolutePath?: Maybe<
+    MarkdownRemarkConnectionFileAbsolutePathQueryString_2
+  >
 
-  fields?: MarkdownRemarkConnectionFieldsInputObject_2 | null
+  fields?: Maybe<MarkdownRemarkConnectionFieldsInputObject_2>
 
-  html?: HtmlQueryString_4 | null
+  html?: Maybe<HtmlQueryString_4>
 
-  headings?: HeadingsQueryList_4 | null
+  headings?: Maybe<HeadingsQueryList_4>
 
-  timeToRead?: TimeToReadQueryInt_4 | null
+  timeToRead?: Maybe<TimeToReadQueryInt_4>
 
-  tableOfContents?: TableOfContentsQueryString_4 | null
+  tableOfContents?: Maybe<TableOfContentsQueryString_4>
 
-  wordCount?: WordCountTypeName_4 | null
+  wordCount?: Maybe<WordCountTypeName_4>
 }
 
 export interface MarkdownRemarkConnectionIdQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface MarkdownRemarkConnectionInternalInputObject_2 {
-  content?: MarkdownRemarkConnectionInternalContentQueryString_2 | null
+  content?: Maybe<MarkdownRemarkConnectionInternalContentQueryString_2>
 
-  type?: MarkdownRemarkConnectionInternalTypeQueryString_2 | null
+  type?: Maybe<MarkdownRemarkConnectionInternalTypeQueryString_2>
 
-  contentDigest?: MarkdownRemarkConnectionInternalContentDigestQueryString_2 | null
+  contentDigest?: Maybe<
+    MarkdownRemarkConnectionInternalContentDigestQueryString_2
+  >
 
-  owner?: MarkdownRemarkConnectionInternalOwnerQueryString_2 | null
+  owner?: Maybe<MarkdownRemarkConnectionInternalOwnerQueryString_2>
 
-  fieldOwners?: MarkdownRemarkConnectionInternalFieldOwnersInputObject_2 | null
+  fieldOwners?: Maybe<MarkdownRemarkConnectionInternalFieldOwnersInputObject_2>
 }
 
 export interface MarkdownRemarkConnectionInternalContentQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface MarkdownRemarkConnectionInternalTypeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface MarkdownRemarkConnectionInternalContentDigestQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface MarkdownRemarkConnectionInternalOwnerQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface MarkdownRemarkConnectionInternalFieldOwnersInputObject_2 {
-  slug?: MarkdownRemarkConnectionInternalFieldOwnersSlugQueryString_2 | null
+  slug?: Maybe<MarkdownRemarkConnectionInternalFieldOwnersSlugQueryString_2>
 
-  pageType?: MarkdownRemarkConnectionInternalFieldOwnersPageTypeQueryString_2 | null
+  pageType?: Maybe<
+    MarkdownRemarkConnectionInternalFieldOwnersPageTypeQueryString_2
+  >
 }
 
 export interface MarkdownRemarkConnectionInternalFieldOwnersSlugQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface MarkdownRemarkConnectionInternalFieldOwnersPageTypeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface MarkdownRemarkConnectionFrontmatterInputObject_2 {
-  title?: MarkdownRemarkConnectionFrontmatterTitleQueryString_2 | null
+  title?: Maybe<MarkdownRemarkConnectionFrontmatterTitleQueryString_2>
 
-  date?: MarkdownRemarkConnectionFrontmatterDateQueryString_2 | null
+  date?: Maybe<MarkdownRemarkConnectionFrontmatterDateQueryString_2>
 
-  authors?: MarkdownRemarkConnectionFrontmatterAuthorsQueryList_2 | null
+  authors?: Maybe<MarkdownRemarkConnectionFrontmatterAuthorsQueryList_2>
 
-  tags?: MarkdownRemarkConnectionFrontmatterTagsQueryList_2 | null
+  tags?: Maybe<MarkdownRemarkConnectionFrontmatterTagsQueryList_2>
 
-  _PARENT?: MarkdownRemarkConnectionFrontmatterParentQueryString_2 | null
+  _PARENT?: Maybe<MarkdownRemarkConnectionFrontmatterParentQueryString_2>
 }
 
 export interface MarkdownRemarkConnectionFrontmatterTitleQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface MarkdownRemarkConnectionFrontmatterDateQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface MarkdownRemarkConnectionFrontmatterAuthorsQueryList_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface MarkdownRemarkConnectionFrontmatterTagsQueryList_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface MarkdownRemarkConnectionFrontmatterParentQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface ExcerptQueryString_4 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface MarkdownRemarkConnectionRawMarkdownBodyQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface MarkdownRemarkConnectionFileAbsolutePathQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface MarkdownRemarkConnectionFieldsInputObject_2 {
-  slug?: MarkdownRemarkConnectionFieldsSlugQueryString_2 | null
+  slug?: Maybe<MarkdownRemarkConnectionFieldsSlugQueryString_2>
 
-  pageType?: MarkdownRemarkConnectionFieldsPageTypeQueryString_2 | null
+  pageType?: Maybe<MarkdownRemarkConnectionFieldsPageTypeQueryString_2>
 }
 
 export interface MarkdownRemarkConnectionFieldsSlugQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface MarkdownRemarkConnectionFieldsPageTypeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface HtmlQueryString_4 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface HeadingsQueryList_4 {
-  elemMatch?: HeadingsListElemTypeName_4 | null
+  elemMatch?: Maybe<HeadingsListElemTypeName_4>
 }
 
 export interface HeadingsListElemTypeName_4 {
-  value?: HeadingsListElemValueQueryString_4 | null
+  value?: Maybe<HeadingsListElemValueQueryString_4>
 
-  depth?: HeadingsListElemDepthQueryInt_4 | null
+  depth?: Maybe<HeadingsListElemDepthQueryInt_4>
 }
 
 export interface HeadingsListElemValueQueryString_4 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface HeadingsListElemDepthQueryInt_4 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface TimeToReadQueryInt_4 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface TableOfContentsQueryString_4 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface WordCountTypeName_4 {
-  paragraphs?: WordCountParagraphsQueryInt_4 | null
+  paragraphs?: Maybe<WordCountParagraphsQueryInt_4>
 
-  sentences?: WordCountSentencesQueryInt_4 | null
+  sentences?: Maybe<WordCountSentencesQueryInt_4>
 
-  words?: WordCountWordsQueryInt_4 | null
+  words?: Maybe<WordCountWordsQueryInt_4>
 }
 
 export interface WordCountParagraphsQueryInt_4 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface WordCountSentencesQueryInt_4 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface WordCountWordsQueryInt_4 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface SitePageJsonNameQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageInternalComponentNameQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePagePathQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageComponentQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageComponentChunkNameQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageContextInputObject {
-  slug?: SitePageContextSlugQueryString | null
+  slug?: Maybe<SitePageContextSlugQueryString>
 }
 
 export interface SitePageContextSlugQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePagePluginCreatorInputObject {
-  resolve?: SitePagePluginCreatorResolveQueryString | null
+  resolve?: Maybe<SitePagePluginCreatorResolveQueryString>
 
-  id?: SitePagePluginCreatorIdQueryString | null
+  id?: Maybe<SitePagePluginCreatorIdQueryString>
 
-  name?: SitePagePluginCreatorNameQueryString | null
+  name?: Maybe<SitePagePluginCreatorNameQueryString>
 
-  version?: SitePagePluginCreatorVersionQueryString | null
+  version?: Maybe<SitePagePluginCreatorVersionQueryString>
 
-  pluginOptions?: SitePagePluginCreatorPluginOptionsInputObject | null
+  pluginOptions?: Maybe<SitePagePluginCreatorPluginOptionsInputObject>
 
-  nodeAPIs?: SitePagePluginCreatorNodeApIsQueryList | null
+  nodeAPIs?: Maybe<SitePagePluginCreatorNodeApIsQueryList>
 
-  browserAPIs?: SitePagePluginCreatorBrowserApIsQueryList | null
+  browserAPIs?: Maybe<SitePagePluginCreatorBrowserApIsQueryList>
 
-  ssrAPIs?: SitePagePluginCreatorSsrApIsQueryList | null
+  ssrAPIs?: Maybe<SitePagePluginCreatorSsrApIsQueryList>
 
-  pluginFilepath?: SitePagePluginCreatorPluginFilepathQueryString | null
+  pluginFilepath?: Maybe<SitePagePluginCreatorPluginFilepathQueryString>
 
-  packageJson?: SitePagePluginCreatorPackageJsonInputObject | null
+  packageJson?: Maybe<SitePagePluginCreatorPackageJsonInputObject>
 
-  parent?: SitePagePluginCreatorParentQueryString | null
+  parent?: Maybe<SitePagePluginCreatorParentQueryString>
 
-  internal?: SitePagePluginCreatorInternalInputObject | null
+  internal?: Maybe<SitePagePluginCreatorInternalInputObject>
 }
 
 export interface SitePagePluginCreatorResolveQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePagePluginCreatorIdQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePagePluginCreatorNameQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePagePluginCreatorVersionQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePagePluginCreatorPluginOptionsInputObject {
-  plugins?: SitePagePluginCreatorPluginOptionsPluginsQueryList | null
+  plugins?: Maybe<SitePagePluginCreatorPluginOptionsPluginsQueryList>
 
-  path?: SitePagePluginCreatorPluginOptionsPathQueryString | null
+  path?: Maybe<SitePagePluginCreatorPluginOptionsPathQueryString>
 
-  name?: SitePagePluginCreatorPluginOptionsNameQueryString | null
+  name?: Maybe<SitePagePluginCreatorPluginOptionsNameQueryString>
 
-  ignore?: SitePagePluginCreatorPluginOptionsIgnoreQueryList | null
+  ignore?: Maybe<SitePagePluginCreatorPluginOptionsIgnoreQueryList>
 
-  exclude?: SitePagePluginCreatorPluginOptionsExcludeQueryList | null
+  exclude?: Maybe<SitePagePluginCreatorPluginOptionsExcludeQueryList>
 
-  id?: SitePagePluginCreatorPluginOptionsIdQueryString | null
+  id?: Maybe<SitePagePluginCreatorPluginOptionsIdQueryString>
 
-  includeInDevelopment?: SitePagePluginCreatorPluginOptionsIncludeInDevelopmentQueryBoolean | null
+  includeInDevelopment?: Maybe<
+    SitePagePluginCreatorPluginOptionsIncludeInDevelopmentQueryBoolean
+  >
 
-  siteUrl?: SitePagePluginCreatorPluginOptionsSiteUrlQueryString | null
+  siteUrl?: Maybe<SitePagePluginCreatorPluginOptionsSiteUrlQueryString>
 
-  endpoint?: SitePagePluginCreatorPluginOptionsEndpointQueryString | null
+  endpoint?: Maybe<SitePagePluginCreatorPluginOptionsEndpointQueryString>
 
-  pathCheck?: SitePagePluginCreatorPluginOptionsPathCheckQueryBoolean | null
+  pathCheck?: Maybe<SitePagePluginCreatorPluginOptionsPathCheckQueryBoolean>
 }
 
 export interface SitePagePluginCreatorPluginOptionsPluginsQueryList {
-  elemMatch?: SitePagePluginCreatorPluginOptionsPluginsInputObject | null
+  elemMatch?: Maybe<SitePagePluginCreatorPluginOptionsPluginsInputObject>
 }
 
 export interface SitePagePluginCreatorPluginOptionsPluginsInputObject {
-  resolve?: SitePagePluginCreatorPluginOptionsPluginsResolveQueryString | null
+  resolve?: Maybe<SitePagePluginCreatorPluginOptionsPluginsResolveQueryString>
 
-  id?: SitePagePluginCreatorPluginOptionsPluginsIdQueryString | null
+  id?: Maybe<SitePagePluginCreatorPluginOptionsPluginsIdQueryString>
 
-  name?: SitePagePluginCreatorPluginOptionsPluginsNameQueryString | null
+  name?: Maybe<SitePagePluginCreatorPluginOptionsPluginsNameQueryString>
 
-  version?: SitePagePluginCreatorPluginOptionsPluginsVersionQueryString | null
+  version?: Maybe<SitePagePluginCreatorPluginOptionsPluginsVersionQueryString>
 
-  browserAPIs?: SitePagePluginCreatorPluginOptionsPluginsBrowserApIsQueryList | null
+  browserAPIs?: Maybe<
+    SitePagePluginCreatorPluginOptionsPluginsBrowserApIsQueryList
+  >
 
-  ssrAPIs?: SitePagePluginCreatorPluginOptionsPluginsSsrApIsQueryList | null
+  ssrAPIs?: Maybe<SitePagePluginCreatorPluginOptionsPluginsSsrApIsQueryList>
 
-  pluginFilepath?: SitePagePluginCreatorPluginOptionsPluginsPluginFilepathQueryString | null
+  pluginFilepath?: Maybe<
+    SitePagePluginCreatorPluginOptionsPluginsPluginFilepathQueryString
+  >
 }
 
 export interface SitePagePluginCreatorPluginOptionsPluginsResolveQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePagePluginCreatorPluginOptionsPluginsIdQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePagePluginCreatorPluginOptionsPluginsNameQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePagePluginCreatorPluginOptionsPluginsVersionQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePagePluginCreatorPluginOptionsPluginsBrowserApIsQueryList {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePagePluginCreatorPluginOptionsPluginsSsrApIsQueryList {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePagePluginCreatorPluginOptionsPluginsPluginFilepathQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePagePluginCreatorPluginOptionsPathQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePagePluginCreatorPluginOptionsNameQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePagePluginCreatorPluginOptionsIgnoreQueryList {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePagePluginCreatorPluginOptionsExcludeQueryList {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePagePluginCreatorPluginOptionsIdQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePagePluginCreatorPluginOptionsIncludeInDevelopmentQueryBoolean {
-  eq?: boolean | null
+  eq?: Maybe<boolean>
 
-  ne?: boolean | null
+  ne?: Maybe<boolean>
 
-  in?: (boolean | null)[] | null
+  in?: Maybe<(Maybe<boolean>)[]>
 
-  nin?: (boolean | null)[] | null
+  nin?: Maybe<(Maybe<boolean>)[]>
 }
 
 export interface SitePagePluginCreatorPluginOptionsSiteUrlQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePagePluginCreatorPluginOptionsEndpointQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePagePluginCreatorPluginOptionsPathCheckQueryBoolean {
-  eq?: boolean | null
+  eq?: Maybe<boolean>
 
-  ne?: boolean | null
+  ne?: Maybe<boolean>
 
-  in?: (boolean | null)[] | null
+  in?: Maybe<(Maybe<boolean>)[]>
 
-  nin?: (boolean | null)[] | null
+  nin?: Maybe<(Maybe<boolean>)[]>
 }
 
 export interface SitePagePluginCreatorNodeApIsQueryList {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePagePluginCreatorBrowserApIsQueryList {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePagePluginCreatorSsrApIsQueryList {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePagePluginCreatorPluginFilepathQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePagePluginCreatorPackageJsonInputObject {
-  name?: SitePagePluginCreatorPackageJsonNameQueryString | null
+  name?: Maybe<SitePagePluginCreatorPackageJsonNameQueryString>
 
-  description?: SitePagePluginCreatorPackageJsonDescriptionQueryString | null
+  description?: Maybe<SitePagePluginCreatorPackageJsonDescriptionQueryString>
 
-  version?: SitePagePluginCreatorPackageJsonVersionQueryString | null
+  version?: Maybe<SitePagePluginCreatorPackageJsonVersionQueryString>
 
-  main?: SitePagePluginCreatorPackageJsonMainQueryString | null
+  main?: Maybe<SitePagePluginCreatorPackageJsonMainQueryString>
 
-  author?: SitePagePluginCreatorPackageJsonAuthorQueryString | null
+  author?: Maybe<SitePagePluginCreatorPackageJsonAuthorQueryString>
 
-  license?: SitePagePluginCreatorPackageJsonLicenseQueryString | null
+  license?: Maybe<SitePagePluginCreatorPackageJsonLicenseQueryString>
 
-  dependencies?: SitePagePluginCreatorPackageJsonDependenciesQueryList | null
+  dependencies?: Maybe<SitePagePluginCreatorPackageJsonDependenciesQueryList>
 
-  devDependencies?: SitePagePluginCreatorPackageJsonDevDependenciesQueryList | null
+  devDependencies?: Maybe<
+    SitePagePluginCreatorPackageJsonDevDependenciesQueryList
+  >
 
-  peerDependencies?: SitePagePluginCreatorPackageJsonPeerDependenciesQueryList | null
+  peerDependencies?: Maybe<
+    SitePagePluginCreatorPackageJsonPeerDependenciesQueryList
+  >
 
-  keywords?: SitePagePluginCreatorPackageJsonKeywordsQueryList | null
+  keywords?: Maybe<SitePagePluginCreatorPackageJsonKeywordsQueryList>
 }
 
 export interface SitePagePluginCreatorPackageJsonNameQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePagePluginCreatorPackageJsonDescriptionQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePagePluginCreatorPackageJsonVersionQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePagePluginCreatorPackageJsonMainQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePagePluginCreatorPackageJsonAuthorQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePagePluginCreatorPackageJsonLicenseQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePagePluginCreatorPackageJsonDependenciesQueryList {
-  elemMatch?: SitePagePluginCreatorPackageJsonDependenciesInputObject | null
+  elemMatch?: Maybe<SitePagePluginCreatorPackageJsonDependenciesInputObject>
 }
 
 export interface SitePagePluginCreatorPackageJsonDependenciesInputObject {
-  name?: SitePagePluginCreatorPackageJsonDependenciesNameQueryString | null
+  name?: Maybe<SitePagePluginCreatorPackageJsonDependenciesNameQueryString>
 
-  version?: SitePagePluginCreatorPackageJsonDependenciesVersionQueryString | null
+  version?: Maybe<
+    SitePagePluginCreatorPackageJsonDependenciesVersionQueryString
+  >
 }
 
 export interface SitePagePluginCreatorPackageJsonDependenciesNameQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePagePluginCreatorPackageJsonDependenciesVersionQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePagePluginCreatorPackageJsonDevDependenciesQueryList {
-  elemMatch?: SitePagePluginCreatorPackageJsonDevDependenciesInputObject | null
+  elemMatch?: Maybe<SitePagePluginCreatorPackageJsonDevDependenciesInputObject>
 }
 
 export interface SitePagePluginCreatorPackageJsonDevDependenciesInputObject {
-  name?: SitePagePluginCreatorPackageJsonDevDependenciesNameQueryString | null
+  name?: Maybe<SitePagePluginCreatorPackageJsonDevDependenciesNameQueryString>
 
-  version?: SitePagePluginCreatorPackageJsonDevDependenciesVersionQueryString | null
+  version?: Maybe<
+    SitePagePluginCreatorPackageJsonDevDependenciesVersionQueryString
+  >
 }
 
 export interface SitePagePluginCreatorPackageJsonDevDependenciesNameQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePagePluginCreatorPackageJsonDevDependenciesVersionQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePagePluginCreatorPackageJsonPeerDependenciesQueryList {
-  elemMatch?: SitePagePluginCreatorPackageJsonPeerDependenciesInputObject | null
+  elemMatch?: Maybe<SitePagePluginCreatorPackageJsonPeerDependenciesInputObject>
 }
 
 export interface SitePagePluginCreatorPackageJsonPeerDependenciesInputObject {
-  name?: SitePagePluginCreatorPackageJsonPeerDependenciesNameQueryString | null
+  name?: Maybe<SitePagePluginCreatorPackageJsonPeerDependenciesNameQueryString>
 
-  version?: SitePagePluginCreatorPackageJsonPeerDependenciesVersionQueryString | null
+  version?: Maybe<
+    SitePagePluginCreatorPackageJsonPeerDependenciesVersionQueryString
+  >
 }
 
 export interface SitePagePluginCreatorPackageJsonPeerDependenciesNameQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePagePluginCreatorPackageJsonPeerDependenciesVersionQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePagePluginCreatorPackageJsonKeywordsQueryList {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePagePluginCreatorParentQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePagePluginCreatorInternalInputObject {
-  contentDigest?: SitePagePluginCreatorInternalContentDigestQueryString | null
+  contentDigest?: Maybe<SitePagePluginCreatorInternalContentDigestQueryString>
 
-  type?: SitePagePluginCreatorInternalTypeQueryString | null
+  type?: Maybe<SitePagePluginCreatorInternalTypeQueryString>
 
-  owner?: SitePagePluginCreatorInternalOwnerQueryString | null
+  owner?: Maybe<SitePagePluginCreatorInternalOwnerQueryString>
 }
 
 export interface SitePagePluginCreatorInternalContentDigestQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePagePluginCreatorInternalTypeQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePagePluginCreatorInternalOwnerQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePagePluginCreatorIdQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageComponentPathQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageIdQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageInternalInputObject_2 {
-  type?: SitePageInternalTypeQueryString_2 | null
+  type?: Maybe<SitePageInternalTypeQueryString_2>
 
-  contentDigest?: SitePageInternalContentDigestQueryString_2 | null
+  contentDigest?: Maybe<SitePageInternalContentDigestQueryString_2>
 
-  description?: SitePageInternalDescriptionQueryString | null
+  description?: Maybe<SitePageInternalDescriptionQueryString>
 
-  owner?: SitePageInternalOwnerQueryString_2 | null
+  owner?: Maybe<SitePageInternalOwnerQueryString_2>
 }
 
 export interface SitePageInternalTypeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageInternalContentDigestQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageInternalDescriptionQueryString {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePageInternalOwnerQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginResolveQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginIdQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginNameQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginVersionQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginPluginOptionsInputObject_2 {
-  plugins?: SitePluginPluginOptionsPluginsQueryList_2 | null
+  plugins?: Maybe<SitePluginPluginOptionsPluginsQueryList_2>
 
-  path?: SitePluginPluginOptionsPathQueryString_2 | null
+  path?: Maybe<SitePluginPluginOptionsPathQueryString_2>
 
-  name?: SitePluginPluginOptionsNameQueryString_2 | null
+  name?: Maybe<SitePluginPluginOptionsNameQueryString_2>
 
-  ignore?: SitePluginPluginOptionsIgnoreQueryList_2 | null
+  ignore?: Maybe<SitePluginPluginOptionsIgnoreQueryList_2>
 
-  exclude?: SitePluginPluginOptionsExcludeQueryList_2 | null
+  exclude?: Maybe<SitePluginPluginOptionsExcludeQueryList_2>
 
-  id?: SitePluginPluginOptionsIdQueryString_2 | null
+  id?: Maybe<SitePluginPluginOptionsIdQueryString_2>
 
-  includeInDevelopment?: SitePluginPluginOptionsIncludeInDevelopmentQueryBoolean_2 | null
+  includeInDevelopment?: Maybe<
+    SitePluginPluginOptionsIncludeInDevelopmentQueryBoolean_2
+  >
 
-  siteUrl?: SitePluginPluginOptionsSiteUrlQueryString_2 | null
+  siteUrl?: Maybe<SitePluginPluginOptionsSiteUrlQueryString_2>
 
-  endpoint?: SitePluginPluginOptionsEndpointQueryString_2 | null
+  endpoint?: Maybe<SitePluginPluginOptionsEndpointQueryString_2>
 
-  pathCheck?: SitePluginPluginOptionsPathCheckQueryBoolean_2 | null
+  pathCheck?: Maybe<SitePluginPluginOptionsPathCheckQueryBoolean_2>
 }
 
 export interface SitePluginPluginOptionsPluginsQueryList_2 {
-  elemMatch?: SitePluginPluginOptionsPluginsInputObject_2 | null
+  elemMatch?: Maybe<SitePluginPluginOptionsPluginsInputObject_2>
 }
 
 export interface SitePluginPluginOptionsPluginsInputObject_2 {
-  resolve?: SitePluginPluginOptionsPluginsResolveQueryString_2 | null
+  resolve?: Maybe<SitePluginPluginOptionsPluginsResolveQueryString_2>
 
-  id?: SitePluginPluginOptionsPluginsIdQueryString_2 | null
+  id?: Maybe<SitePluginPluginOptionsPluginsIdQueryString_2>
 
-  name?: SitePluginPluginOptionsPluginsNameQueryString_2 | null
+  name?: Maybe<SitePluginPluginOptionsPluginsNameQueryString_2>
 
-  version?: SitePluginPluginOptionsPluginsVersionQueryString_2 | null
+  version?: Maybe<SitePluginPluginOptionsPluginsVersionQueryString_2>
 
-  browserAPIs?: SitePluginPluginOptionsPluginsBrowserApIsQueryList_2 | null
+  browserAPIs?: Maybe<SitePluginPluginOptionsPluginsBrowserApIsQueryList_2>
 
-  ssrAPIs?: SitePluginPluginOptionsPluginsSsrApIsQueryList_2 | null
+  ssrAPIs?: Maybe<SitePluginPluginOptionsPluginsSsrApIsQueryList_2>
 
-  pluginFilepath?: SitePluginPluginOptionsPluginsPluginFilepathQueryString_2 | null
+  pluginFilepath?: Maybe<
+    SitePluginPluginOptionsPluginsPluginFilepathQueryString_2
+  >
 }
 
 export interface SitePluginPluginOptionsPluginsResolveQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginPluginOptionsPluginsIdQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginPluginOptionsPluginsNameQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginPluginOptionsPluginsVersionQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginPluginOptionsPluginsBrowserApIsQueryList_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginPluginOptionsPluginsSsrApIsQueryList_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginPluginOptionsPluginsPluginFilepathQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginPluginOptionsPathQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginPluginOptionsNameQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginPluginOptionsIgnoreQueryList_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginPluginOptionsExcludeQueryList_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginPluginOptionsIdQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginPluginOptionsIncludeInDevelopmentQueryBoolean_2 {
-  eq?: boolean | null
+  eq?: Maybe<boolean>
 
-  ne?: boolean | null
+  ne?: Maybe<boolean>
 
-  in?: (boolean | null)[] | null
+  in?: Maybe<(Maybe<boolean>)[]>
 
-  nin?: (boolean | null)[] | null
+  nin?: Maybe<(Maybe<boolean>)[]>
 }
 
 export interface SitePluginPluginOptionsSiteUrlQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginPluginOptionsEndpointQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginPluginOptionsPathCheckQueryBoolean_2 {
-  eq?: boolean | null
+  eq?: Maybe<boolean>
 
-  ne?: boolean | null
+  ne?: Maybe<boolean>
 
-  in?: (boolean | null)[] | null
+  in?: Maybe<(Maybe<boolean>)[]>
 
-  nin?: (boolean | null)[] | null
+  nin?: Maybe<(Maybe<boolean>)[]>
 }
 
 export interface SitePluginNodeApIsQueryList_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginBrowserApIsQueryList_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginSsrApIsQueryList_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginPluginFilepathQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginPackageJsonInputObject_2 {
-  name?: SitePluginPackageJsonNameQueryString_2 | null
+  name?: Maybe<SitePluginPackageJsonNameQueryString_2>
 
-  description?: SitePluginPackageJsonDescriptionQueryString_2 | null
+  description?: Maybe<SitePluginPackageJsonDescriptionQueryString_2>
 
-  version?: SitePluginPackageJsonVersionQueryString_2 | null
+  version?: Maybe<SitePluginPackageJsonVersionQueryString_2>
 
-  main?: SitePluginPackageJsonMainQueryString_2 | null
+  main?: Maybe<SitePluginPackageJsonMainQueryString_2>
 
-  author?: SitePluginPackageJsonAuthorQueryString_2 | null
+  author?: Maybe<SitePluginPackageJsonAuthorQueryString_2>
 
-  license?: SitePluginPackageJsonLicenseQueryString_2 | null
+  license?: Maybe<SitePluginPackageJsonLicenseQueryString_2>
 
-  dependencies?: SitePluginPackageJsonDependenciesQueryList_2 | null
+  dependencies?: Maybe<SitePluginPackageJsonDependenciesQueryList_2>
 
-  devDependencies?: SitePluginPackageJsonDevDependenciesQueryList_2 | null
+  devDependencies?: Maybe<SitePluginPackageJsonDevDependenciesQueryList_2>
 
-  peerDependencies?: SitePluginPackageJsonPeerDependenciesQueryList_2 | null
+  peerDependencies?: Maybe<SitePluginPackageJsonPeerDependenciesQueryList_2>
 
-  keywords?: SitePluginPackageJsonKeywordsQueryList_2 | null
+  keywords?: Maybe<SitePluginPackageJsonKeywordsQueryList_2>
 }
 
 export interface SitePluginPackageJsonNameQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginPackageJsonDescriptionQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginPackageJsonVersionQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginPackageJsonMainQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginPackageJsonAuthorQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginPackageJsonLicenseQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginPackageJsonDependenciesQueryList_2 {
-  elemMatch?: SitePluginPackageJsonDependenciesInputObject_2 | null
+  elemMatch?: Maybe<SitePluginPackageJsonDependenciesInputObject_2>
 }
 
 export interface SitePluginPackageJsonDependenciesInputObject_2 {
-  name?: SitePluginPackageJsonDependenciesNameQueryString_2 | null
+  name?: Maybe<SitePluginPackageJsonDependenciesNameQueryString_2>
 
-  version?: SitePluginPackageJsonDependenciesVersionQueryString_2 | null
+  version?: Maybe<SitePluginPackageJsonDependenciesVersionQueryString_2>
 }
 
 export interface SitePluginPackageJsonDependenciesNameQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginPackageJsonDependenciesVersionQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginPackageJsonDevDependenciesQueryList_2 {
-  elemMatch?: SitePluginPackageJsonDevDependenciesInputObject_2 | null
+  elemMatch?: Maybe<SitePluginPackageJsonDevDependenciesInputObject_2>
 }
 
 export interface SitePluginPackageJsonDevDependenciesInputObject_2 {
-  name?: SitePluginPackageJsonDevDependenciesNameQueryString_2 | null
+  name?: Maybe<SitePluginPackageJsonDevDependenciesNameQueryString_2>
 
-  version?: SitePluginPackageJsonDevDependenciesVersionQueryString_2 | null
+  version?: Maybe<SitePluginPackageJsonDevDependenciesVersionQueryString_2>
 }
 
 export interface SitePluginPackageJsonDevDependenciesNameQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginPackageJsonDevDependenciesVersionQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginPackageJsonPeerDependenciesQueryList_2 {
-  elemMatch?: SitePluginPackageJsonPeerDependenciesInputObject_2 | null
+  elemMatch?: Maybe<SitePluginPackageJsonPeerDependenciesInputObject_2>
 }
 
 export interface SitePluginPackageJsonPeerDependenciesInputObject_2 {
-  name?: SitePluginPackageJsonPeerDependenciesNameQueryString_2 | null
+  name?: Maybe<SitePluginPackageJsonPeerDependenciesNameQueryString_2>
 
-  version?: SitePluginPackageJsonPeerDependenciesVersionQueryString_2 | null
+  version?: Maybe<SitePluginPackageJsonPeerDependenciesVersionQueryString_2>
 }
 
 export interface SitePluginPackageJsonPeerDependenciesNameQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginPackageJsonPeerDependenciesVersionQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginPackageJsonKeywordsQueryList_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginInternalInputObject_2 {
-  contentDigest?: SitePluginInternalContentDigestQueryString_2 | null
+  contentDigest?: Maybe<SitePluginInternalContentDigestQueryString_2>
 
-  type?: SitePluginInternalTypeQueryString_2 | null
+  type?: Maybe<SitePluginInternalTypeQueryString_2>
 
-  owner?: SitePluginInternalOwnerQueryString_2 | null
+  owner?: Maybe<SitePluginInternalOwnerQueryString_2>
 }
 
 export interface SitePluginInternalContentDigestQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginInternalTypeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePluginInternalOwnerQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SiteSiteMetadataInputObject_2 {
-  description?: SiteSiteMetadataDescriptionQueryString_2 | null
+  description?: Maybe<SiteSiteMetadataDescriptionQueryString_2>
 
-  keywords?: SiteSiteMetadataKeywordsQueryString_2 | null
+  keywords?: Maybe<SiteSiteMetadataKeywordsQueryString_2>
 
-  siteUrl?: SiteSiteMetadataSiteUrlQueryString_2 | null
+  siteUrl?: Maybe<SiteSiteMetadataSiteUrlQueryString_2>
 
-  title?: SiteSiteMetadataTitleQueryString_2 | null
+  title?: Maybe<SiteSiteMetadataTitleQueryString_2>
 }
 
 export interface SiteSiteMetadataDescriptionQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SiteSiteMetadataKeywordsQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SiteSiteMetadataSiteUrlQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SiteSiteMetadataTitleQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePortQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SiteHostQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePathPrefixQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SitePolyfillQueryBoolean_2 {
-  eq?: boolean | null
+  eq?: Maybe<boolean>
 
-  ne?: boolean | null
+  ne?: Maybe<boolean>
 
-  in?: (boolean | null)[] | null
+  in?: Maybe<(Maybe<boolean>)[]>
 
-  nin?: (boolean | null)[] | null
+  nin?: Maybe<(Maybe<boolean>)[]>
 }
 
 export interface SiteBuildTimeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SiteIdQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SiteInternalInputObject_2 {
-  contentDigest?: SiteInternalContentDigestQueryString_2 | null
+  contentDigest?: Maybe<SiteInternalContentDigestQueryString_2>
 
-  type?: SiteInternalTypeQueryString_2 | null
+  type?: Maybe<SiteInternalTypeQueryString_2>
 
-  owner?: SiteInternalOwnerQueryString_2 | null
+  owner?: Maybe<SiteInternalOwnerQueryString_2>
 }
 
 export interface SiteInternalContentDigestQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SiteInternalTypeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface SiteInternalOwnerQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryIdQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryInternalInputObject_2 {
-  contentDigest?: DirectoryInternalContentDigestQueryString_2 | null
+  contentDigest?: Maybe<DirectoryInternalContentDigestQueryString_2>
 
-  type?: DirectoryInternalTypeQueryString_2 | null
+  type?: Maybe<DirectoryInternalTypeQueryString_2>
 
-  description?: DirectoryInternalDescriptionQueryString_2 | null
+  description?: Maybe<DirectoryInternalDescriptionQueryString_2>
 
-  owner?: DirectoryInternalOwnerQueryString_2 | null
+  owner?: Maybe<DirectoryInternalOwnerQueryString_2>
 }
 
 export interface DirectoryInternalContentDigestQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryInternalTypeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryInternalDescriptionQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryInternalOwnerQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectorySourceInstanceNameQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryAbsolutePathQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryRelativePathQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryExtensionQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectorySizeQueryInteger_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface DirectoryPrettySizeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryModifiedTimeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryAccessTimeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryChangeTimeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryBirthTimeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryRootQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryDirQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryBaseQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryExtQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryNameQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryRelativeDirectoryQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryDevQueryInteger_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface DirectoryModeQueryInteger_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface DirectoryNlinkQueryInteger_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface DirectoryUidQueryInteger_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface DirectoryGidQueryInteger_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface DirectoryRdevQueryInteger_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface DirectoryBlksizeQueryInteger_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface DirectoryInoQueryInteger_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface DirectoryBlocksQueryInteger_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface DirectoryAtimeMsQueryFloat_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface DirectoryMtimeMsQueryFloat_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface DirectoryCtimeMsQueryFloat_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface DirectoryBirthtimeMsQueryFloat_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface DirectoryAtimeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryMtimeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryCtimeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface DirectoryBirthtimeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileIdQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileInternalInputObject_2 {
-  contentDigest?: FileInternalContentDigestQueryString_2 | null
+  contentDigest?: Maybe<FileInternalContentDigestQueryString_2>
 
-  type?: FileInternalTypeQueryString_2 | null
+  type?: Maybe<FileInternalTypeQueryString_2>
 
-  mediaType?: FileInternalMediaTypeQueryString_2 | null
+  mediaType?: Maybe<FileInternalMediaTypeQueryString_2>
 
-  description?: FileInternalDescriptionQueryString_2 | null
+  description?: Maybe<FileInternalDescriptionQueryString_2>
 
-  owner?: FileInternalOwnerQueryString_2 | null
+  owner?: Maybe<FileInternalOwnerQueryString_2>
 }
 
 export interface FileInternalContentDigestQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileInternalTypeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileInternalMediaTypeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileInternalDescriptionQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileInternalOwnerQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileSourceInstanceNameQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileAbsolutePathQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileRelativePathQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileExtensionQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileSizeQueryInteger_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface FilePrettySizeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileModifiedTimeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileAccessTimeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileChangeTimeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileBirthTimeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileRootQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileDirQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileBaseQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileExtQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileNameQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileRelativeDirectoryQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileDevQueryInteger_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface FileModeQueryInteger_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface FileNlinkQueryInteger_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface FileUidQueryInteger_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface FileGidQueryInteger_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface FileRdevQueryInteger_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface FileBlksizeQueryInteger_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface FileInoQueryInteger_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface FileBlocksQueryInteger_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface FileAtimeMsQueryFloat_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface FileMtimeMsQueryFloat_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface FileCtimeMsQueryFloat_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface FileBirthtimeMsQueryFloat_2 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface FileAtimeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileMtimeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileCtimeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface FileBirthtimeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface PublicUrlQueryString_3 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface AuthorJsonIdQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface AuthorJsonNameQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface AuthorJsonBioQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface AuthorJsonGithubQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface AuthorJsonTwitterQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface AuthorJsonAvatarQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface AuthorJsonInternalInputObject_2 {
-  contentDigest?: AuthorJsonInternalContentDigestQueryString_2 | null
+  contentDigest?: Maybe<AuthorJsonInternalContentDigestQueryString_2>
 
-  type?: AuthorJsonInternalTypeQueryString_2 | null
+  type?: Maybe<AuthorJsonInternalTypeQueryString_2>
 
-  owner?: AuthorJsonInternalOwnerQueryString_2 | null
+  owner?: Maybe<AuthorJsonInternalOwnerQueryString_2>
 }
 
 export interface AuthorJsonInternalContentDigestQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface AuthorJsonInternalTypeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface AuthorJsonInternalOwnerQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface MarkdownRemarkIdQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface MarkdownRemarkInternalInputObject_2 {
-  content?: MarkdownRemarkInternalContentQueryString_2 | null
+  content?: Maybe<MarkdownRemarkInternalContentQueryString_2>
 
-  type?: MarkdownRemarkInternalTypeQueryString_2 | null
+  type?: Maybe<MarkdownRemarkInternalTypeQueryString_2>
 
-  contentDigest?: MarkdownRemarkInternalContentDigestQueryString_2 | null
+  contentDigest?: Maybe<MarkdownRemarkInternalContentDigestQueryString_2>
 
-  owner?: MarkdownRemarkInternalOwnerQueryString_2 | null
+  owner?: Maybe<MarkdownRemarkInternalOwnerQueryString_2>
 
-  fieldOwners?: MarkdownRemarkInternalFieldOwnersInputObject_2 | null
+  fieldOwners?: Maybe<MarkdownRemarkInternalFieldOwnersInputObject_2>
 }
 
 export interface MarkdownRemarkInternalContentQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface MarkdownRemarkInternalTypeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface MarkdownRemarkInternalContentDigestQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface MarkdownRemarkInternalOwnerQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface MarkdownRemarkInternalFieldOwnersInputObject_2 {
-  slug?: MarkdownRemarkInternalFieldOwnersSlugQueryString_2 | null
+  slug?: Maybe<MarkdownRemarkInternalFieldOwnersSlugQueryString_2>
 
-  pageType?: MarkdownRemarkInternalFieldOwnersPageTypeQueryString_2 | null
+  pageType?: Maybe<MarkdownRemarkInternalFieldOwnersPageTypeQueryString_2>
 }
 
 export interface MarkdownRemarkInternalFieldOwnersSlugQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface MarkdownRemarkInternalFieldOwnersPageTypeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface MarkdownRemarkFrontmatterInputObject_2 {
-  title?: MarkdownRemarkFrontmatterTitleQueryString_2 | null
+  title?: Maybe<MarkdownRemarkFrontmatterTitleQueryString_2>
 
-  date?: MarkdownRemarkFrontmatterDateQueryString_2 | null
+  date?: Maybe<MarkdownRemarkFrontmatterDateQueryString_2>
 
-  authors?: MarkdownRemarkFrontmatterAuthorsQueryList_2 | null
+  authors?: Maybe<MarkdownRemarkFrontmatterAuthorsQueryList_2>
 
-  tags?: MarkdownRemarkFrontmatterTagsQueryList_2 | null
+  tags?: Maybe<MarkdownRemarkFrontmatterTagsQueryList_2>
 
-  _PARENT?: MarkdownRemarkFrontmatterParentQueryString_2 | null
+  _PARENT?: Maybe<MarkdownRemarkFrontmatterParentQueryString_2>
 }
 
 export interface MarkdownRemarkFrontmatterTitleQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface MarkdownRemarkFrontmatterDateQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface MarkdownRemarkFrontmatterAuthorsQueryList_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface MarkdownRemarkFrontmatterTagsQueryList_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface MarkdownRemarkFrontmatterParentQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface ExcerptQueryString_3 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface MarkdownRemarkRawMarkdownBodyQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface MarkdownRemarkFileAbsolutePathQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface MarkdownRemarkFieldsInputObject_2 {
-  slug?: MarkdownRemarkFieldsSlugQueryString_2 | null
+  slug?: Maybe<MarkdownRemarkFieldsSlugQueryString_2>
 
-  pageType?: MarkdownRemarkFieldsPageTypeQueryString_2 | null
+  pageType?: Maybe<MarkdownRemarkFieldsPageTypeQueryString_2>
 }
 
 export interface MarkdownRemarkFieldsSlugQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface MarkdownRemarkFieldsPageTypeQueryString_2 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface HtmlQueryString_3 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface HeadingsQueryList_3 {
-  elemMatch?: HeadingsListElemTypeName_3 | null
+  elemMatch?: Maybe<HeadingsListElemTypeName_3>
 }
 
 export interface HeadingsListElemTypeName_3 {
-  value?: HeadingsListElemValueQueryString_3 | null
+  value?: Maybe<HeadingsListElemValueQueryString_3>
 
-  depth?: HeadingsListElemDepthQueryInt_3 | null
+  depth?: Maybe<HeadingsListElemDepthQueryInt_3>
 }
 
 export interface HeadingsListElemValueQueryString_3 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface HeadingsListElemDepthQueryInt_3 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface TimeToReadQueryInt_3 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface TableOfContentsQueryString_3 {
-  eq?: string | null
+  eq?: Maybe<string>
 
-  ne?: string | null
+  ne?: Maybe<string>
 
-  regex?: string | null
+  regex?: Maybe<string>
 
-  glob?: string | null
+  glob?: Maybe<string>
 
-  in?: (string | null)[] | null
+  in?: Maybe<(Maybe<string>)[]>
 
-  nin?: (string | null)[] | null
+  nin?: Maybe<(Maybe<string>)[]>
 }
 
 export interface WordCountTypeName_3 {
-  paragraphs?: WordCountParagraphsQueryInt_3 | null
+  paragraphs?: Maybe<WordCountParagraphsQueryInt_3>
 
-  sentences?: WordCountSentencesQueryInt_3 | null
+  sentences?: Maybe<WordCountSentencesQueryInt_3>
 
-  words?: WordCountWordsQueryInt_3 | null
+  words?: Maybe<WordCountWordsQueryInt_3>
 }
 
 export interface WordCountParagraphsQueryInt_3 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface WordCountSentencesQueryInt_3 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export interface WordCountWordsQueryInt_3 {
-  eq?: number | null
+  eq?: Maybe<number>
 
-  ne?: number | null
+  ne?: Maybe<number>
 
-  gt?: number | null
+  gt?: Maybe<number>
 
-  gte?: number | null
+  gte?: Maybe<number>
 
-  lt?: number | null
+  lt?: Maybe<number>
 
-  lte?: number | null
+  lte?: Maybe<number>
 
-  in?: (number | null)[] | null
+  in?: Maybe<(Maybe<number>)[]>
 
-  nin?: (number | null)[] | null
+  nin?: Maybe<(Maybe<number>)[]>
 }
 
 export enum SitePageConnectionSortByFieldsEnum {
@@ -7695,7 +7794,7 @@ export enum MarkdownRemarkGroupEnum {
   FieldsPageType = 'fields___pageType',
 }
 
-/** A date string, such as 2007-12-03, compliant with the ISO 8601 standard  forrepresentation of dates and times using the Gregorian calendar. */
+/** A date string, such as 2007-12-03, compliant with the ISO 8601 standard  for representation of dates and times using the Gregorian calendar. */
 export type Date = any
 
 /** The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf). */
@@ -7714,9 +7813,9 @@ export interface Node {
   /** The id of the node. */
   id: string
   /** The parent of this node. */
-  parent?: Node | null
+  parent?: Maybe<Node>
   /** The children of this node. */
-  children?: (Node | null)[] | null
+  children?: Maybe<(Maybe<Node>)[]>
 }
 
 // ====================================================
@@ -7725,31 +7824,31 @@ export interface Node {
 
 export interface Query {
   /** Connection to all SitePage nodes */
-  allSitePage?: SitePageConnection | null
+  allSitePage?: Maybe<SitePageConnection>
   /** Connection to all SitePlugin nodes */
-  allSitePlugin?: SitePluginConnection | null
+  allSitePlugin?: Maybe<SitePluginConnection>
   /** Connection to all Directory nodes */
-  allDirectory?: DirectoryConnection | null
+  allDirectory?: Maybe<DirectoryConnection>
   /** Connection to all File nodes */
-  allFile?: FileConnection | null
+  allFile?: Maybe<FileConnection>
   /** Connection to all AuthorJson nodes */
-  allAuthorJson?: AuthorJsonConnection | null
+  allAuthorJson?: Maybe<AuthorJsonConnection>
   /** Connection to all MarkdownRemark nodes */
-  allMarkdownRemark?: MarkdownRemarkConnection | null
+  allMarkdownRemark?: Maybe<MarkdownRemarkConnection>
 
-  sitePage?: SitePage | null
+  sitePage?: Maybe<SitePage>
 
-  sitePlugin?: SitePlugin | null
+  sitePlugin?: Maybe<SitePlugin>
 
-  site?: Site | null
+  site?: Maybe<Site>
 
-  directory?: Directory | null
+  directory?: Maybe<Directory>
 
-  file?: File | null
+  file?: Maybe<File>
 
-  authorJson?: AuthorJson | null
+  authorJson?: Maybe<AuthorJson>
 
-  markdownRemark?: MarkdownRemark | null
+  markdownRemark?: Maybe<MarkdownRemark>
 }
 
 /** A connection to a list of items. */
@@ -7757,13 +7856,13 @@ export interface SitePageConnection {
   /** Information to aid in pagination. */
   pageInfo: PageInfo
   /** A list of edges. */
-  edges?: (SitePageEdge | null)[] | null
+  edges?: Maybe<(Maybe<SitePageEdge>)[]>
 
-  totalCount?: number | null
+  totalCount?: Maybe<number>
 
-  distinct?: (string | null)[] | null
+  distinct?: Maybe<(Maybe<string>)[]>
 
-  group?: (SitePageGroupConnectionConnection | null)[] | null
+  group?: Maybe<(Maybe<SitePageGroupConnectionConnection>)[]>
 }
 
 /** Information about pagination in a connection. */
@@ -7775,11 +7874,11 @@ export interface PageInfo {
 /** An edge in a connection. */
 export interface SitePageEdge {
   /** The item at the end of the edge */
-  node?: SitePage | null
+  node?: Maybe<SitePage>
   /** The next edge in the connection */
-  next?: SitePage | null
+  next?: Maybe<SitePage>
   /** The previous edge in the connection */
-  previous?: SitePage | null
+  previous?: Maybe<SitePage>
 }
 
 /** Node of type SitePage */
@@ -7787,33 +7886,33 @@ export interface SitePage extends Node {
   /** The id of this node. */
   id: string
   /** The parent of this node. */
-  parent?: Node | null
+  parent?: Maybe<Node>
   /** The children of this node. */
-  children?: (Node | null)[] | null
+  children?: Maybe<(Maybe<Node>)[]>
 
-  jsonName?: string | null
+  jsonName?: Maybe<string>
 
-  internalComponentName?: string | null
+  internalComponentName?: Maybe<string>
 
-  path?: string | null
+  path?: Maybe<string>
 
-  component?: string | null
+  component?: Maybe<string>
 
-  componentChunkName?: string | null
+  componentChunkName?: Maybe<string>
 
-  context?: Context | null
+  context?: Maybe<Context>
 
-  pluginCreator?: SitePlugin | null
+  pluginCreator?: Maybe<SitePlugin>
 
-  pluginCreatorId?: string | null
+  pluginCreatorId?: Maybe<string>
 
-  componentPath?: string | null
+  componentPath?: Maybe<string>
 
-  internal?: Internal_8 | null
+  internal?: Maybe<Internal_8>
 }
 
 export interface Context {
-  slug?: string | null
+  slug?: Maybe<string>
 }
 
 /** Node of type SitePlugin */
@@ -7821,125 +7920,125 @@ export interface SitePlugin extends Node {
   /** The id of this node. */
   id: string
   /** The parent of this node. */
-  parent?: Node | null
+  parent?: Maybe<Node>
   /** The children of this node. */
-  children?: (Node | null)[] | null
+  children?: Maybe<(Maybe<Node>)[]>
 
-  resolve?: string | null
+  resolve?: Maybe<string>
 
-  name?: string | null
+  name?: Maybe<string>
 
-  version?: string | null
+  version?: Maybe<string>
 
-  pluginOptions?: PluginOptions_2 | null
+  pluginOptions?: Maybe<PluginOptions_2>
 
-  nodeAPIs?: (string | null)[] | null
+  nodeAPIs?: Maybe<(Maybe<string>)[]>
 
-  browserAPIs?: (string | null)[] | null
+  browserAPIs?: Maybe<(Maybe<string>)[]>
 
-  ssrAPIs?: (string | null)[] | null
+  ssrAPIs?: Maybe<(Maybe<string>)[]>
 
-  pluginFilepath?: string | null
+  pluginFilepath?: Maybe<string>
 
-  packageJson?: PackageJson_2 | null
+  packageJson?: Maybe<PackageJson_2>
 
-  internal?: Internal_9 | null
+  internal?: Maybe<Internal_9>
 }
 
 export interface PluginOptions_2 {
-  plugins?: (Plugins_2 | null)[] | null
+  plugins?: Maybe<(Maybe<Plugins_2>)[]>
 
-  path?: string | null
+  path?: Maybe<string>
 
-  name?: string | null
+  name?: Maybe<string>
 
-  ignore?: (string | null)[] | null
+  ignore?: Maybe<(Maybe<string>)[]>
 
-  exclude?: (string | null)[] | null
+  exclude?: Maybe<(Maybe<string>)[]>
 
-  id?: string | null
+  id?: Maybe<string>
 
-  includeInDevelopment?: boolean | null
+  includeInDevelopment?: Maybe<boolean>
 
-  siteUrl?: string | null
+  siteUrl?: Maybe<string>
 
-  endpoint?: string | null
+  endpoint?: Maybe<string>
 
-  pathCheck?: boolean | null
+  pathCheck?: Maybe<boolean>
 }
 
 export interface Plugins_2 {
-  resolve?: string | null
+  resolve?: Maybe<string>
 
-  id?: string | null
+  id?: Maybe<string>
 
-  name?: string | null
+  name?: Maybe<string>
 
-  version?: string | null
+  version?: Maybe<string>
 
-  browserAPIs?: (string | null)[] | null
+  browserAPIs?: Maybe<(Maybe<string>)[]>
 
-  ssrAPIs?: (string | null)[] | null
+  ssrAPIs?: Maybe<(Maybe<string>)[]>
 
-  pluginFilepath?: string | null
+  pluginFilepath?: Maybe<string>
 }
 
 export interface PackageJson_2 {
-  name?: string | null
+  name?: Maybe<string>
 
-  description?: string | null
+  description?: Maybe<string>
 
-  version?: string | null
+  version?: Maybe<string>
 
-  main?: string | null
+  main?: Maybe<string>
 
-  author?: string | null
+  author?: Maybe<string>
 
-  license?: string | null
+  license?: Maybe<string>
 
-  dependencies?: (Dependencies_2 | null)[] | null
+  dependencies?: Maybe<(Maybe<Dependencies_2>)[]>
 
-  devDependencies?: (DevDependencies_2 | null)[] | null
+  devDependencies?: Maybe<(Maybe<DevDependencies_2>)[]>
 
-  peerDependencies?: (PeerDependencies_2 | null)[] | null
+  peerDependencies?: Maybe<(Maybe<PeerDependencies_2>)[]>
 
-  keywords?: (string | null)[] | null
+  keywords?: Maybe<(Maybe<string>)[]>
 }
 
 export interface Dependencies_2 {
-  name?: string | null
+  name?: Maybe<string>
 
-  version?: string | null
+  version?: Maybe<string>
 }
 
 export interface DevDependencies_2 {
-  name?: string | null
+  name?: Maybe<string>
 
-  version?: string | null
+  version?: Maybe<string>
 }
 
 export interface PeerDependencies_2 {
-  name?: string | null
+  name?: Maybe<string>
 
-  version?: string | null
+  version?: Maybe<string>
 }
 
 export interface Internal_9 {
-  contentDigest?: string | null
+  contentDigest?: Maybe<string>
 
-  type?: string | null
+  type?: Maybe<string>
 
-  owner?: string | null
+  owner?: Maybe<string>
 }
 
 export interface Internal_8 {
-  type?: string | null
+  type?: Maybe<string>
 
-  contentDigest?: string | null
+  contentDigest?: Maybe<string>
 
-  description?: string | null
+  description?: Maybe<string>
 
-  owner?: string | null
+  owner?: Maybe<string>
 }
 
 /** A connection to a list of items. */
@@ -7947,23 +8046,23 @@ export interface SitePageGroupConnectionConnection {
   /** Information to aid in pagination. */
   pageInfo: PageInfo
   /** A list of edges. */
-  edges?: (SitePageGroupConnectionEdge | null)[] | null
+  edges?: Maybe<(Maybe<SitePageGroupConnectionEdge>)[]>
 
-  field?: string | null
+  field?: Maybe<string>
 
-  fieldValue?: string | null
+  fieldValue?: Maybe<string>
 
-  totalCount?: number | null
+  totalCount?: Maybe<number>
 }
 
 /** An edge in a connection. */
 export interface SitePageGroupConnectionEdge {
   /** The item at the end of the edge */
-  node?: SitePage | null
+  node?: Maybe<SitePage>
   /** The next edge in the connection */
-  next?: SitePage | null
+  next?: Maybe<SitePage>
   /** The previous edge in the connection */
-  previous?: SitePage | null
+  previous?: Maybe<SitePage>
 }
 
 /** A connection to a list of items. */
@@ -7971,23 +8070,23 @@ export interface SitePluginConnection {
   /** Information to aid in pagination. */
   pageInfo: PageInfo
   /** A list of edges. */
-  edges?: (SitePluginEdge | null)[] | null
+  edges?: Maybe<(Maybe<SitePluginEdge>)[]>
 
-  totalCount?: number | null
+  totalCount?: Maybe<number>
 
-  distinct?: (string | null)[] | null
+  distinct?: Maybe<(Maybe<string>)[]>
 
-  group?: (SitePluginGroupConnectionConnection | null)[] | null
+  group?: Maybe<(Maybe<SitePluginGroupConnectionConnection>)[]>
 }
 
 /** An edge in a connection. */
 export interface SitePluginEdge {
   /** The item at the end of the edge */
-  node?: SitePlugin | null
+  node?: Maybe<SitePlugin>
   /** The next edge in the connection */
-  next?: SitePlugin | null
+  next?: Maybe<SitePlugin>
   /** The previous edge in the connection */
-  previous?: SitePlugin | null
+  previous?: Maybe<SitePlugin>
 }
 
 /** A connection to a list of items. */
@@ -7995,23 +8094,23 @@ export interface SitePluginGroupConnectionConnection {
   /** Information to aid in pagination. */
   pageInfo: PageInfo
   /** A list of edges. */
-  edges?: (SitePluginGroupConnectionEdge | null)[] | null
+  edges?: Maybe<(Maybe<SitePluginGroupConnectionEdge>)[]>
 
-  field?: string | null
+  field?: Maybe<string>
 
-  fieldValue?: string | null
+  fieldValue?: Maybe<string>
 
-  totalCount?: number | null
+  totalCount?: Maybe<number>
 }
 
 /** An edge in a connection. */
 export interface SitePluginGroupConnectionEdge {
   /** The item at the end of the edge */
-  node?: SitePlugin | null
+  node?: Maybe<SitePlugin>
   /** The next edge in the connection */
-  next?: SitePlugin | null
+  next?: Maybe<SitePlugin>
   /** The previous edge in the connection */
-  previous?: SitePlugin | null
+  previous?: Maybe<SitePlugin>
 }
 
 /** A connection to a list of items. */
@@ -8019,23 +8118,23 @@ export interface DirectoryConnection {
   /** Information to aid in pagination. */
   pageInfo: PageInfo
   /** A list of edges. */
-  edges?: (DirectoryEdge | null)[] | null
+  edges?: Maybe<(Maybe<DirectoryEdge>)[]>
 
-  totalCount?: number | null
+  totalCount?: Maybe<number>
 
-  distinct?: (string | null)[] | null
+  distinct?: Maybe<(Maybe<string>)[]>
 
-  group?: (DirectoryGroupConnectionConnection | null)[] | null
+  group?: Maybe<(Maybe<DirectoryGroupConnectionConnection>)[]>
 }
 
 /** An edge in a connection. */
 export interface DirectoryEdge {
   /** The item at the end of the edge */
-  node?: Directory | null
+  node?: Maybe<Directory>
   /** The next edge in the connection */
-  next?: Directory | null
+  next?: Maybe<Directory>
   /** The previous edge in the connection */
-  previous?: Directory | null
+  previous?: Maybe<Directory>
 }
 
 /** Node of type Directory */
@@ -8043,87 +8142,87 @@ export interface Directory extends Node {
   /** The id of this node. */
   id: string
   /** The parent of this node. */
-  parent?: Node | null
+  parent?: Maybe<Node>
   /** The children of this node. */
-  children?: (Node | null)[] | null
+  children?: Maybe<(Maybe<Node>)[]>
 
-  internal?: Internal_10 | null
+  internal?: Maybe<Internal_10>
 
-  sourceInstanceName?: string | null
+  sourceInstanceName?: Maybe<string>
 
-  absolutePath?: string | null
+  absolutePath?: Maybe<string>
 
-  relativePath?: string | null
+  relativePath?: Maybe<string>
 
-  extension?: string | null
+  extension?: Maybe<string>
 
-  size?: number | null
+  size?: Maybe<number>
 
-  prettySize?: string | null
+  prettySize?: Maybe<string>
 
-  modifiedTime?: Date | null
+  modifiedTime?: Maybe<Date>
 
-  accessTime?: Date | null
+  accessTime?: Maybe<Date>
 
-  changeTime?: Date | null
+  changeTime?: Maybe<Date>
 
-  birthTime?: Date | null
+  birthTime?: Maybe<Date>
 
-  root?: string | null
+  root?: Maybe<string>
 
-  dir?: string | null
+  dir?: Maybe<string>
 
-  base?: string | null
+  base?: Maybe<string>
 
-  ext?: string | null
+  ext?: Maybe<string>
 
-  name?: string | null
+  name?: Maybe<string>
 
-  relativeDirectory?: string | null
+  relativeDirectory?: Maybe<string>
 
-  dev?: number | null
+  dev?: Maybe<number>
 
-  mode?: number | null
+  mode?: Maybe<number>
 
-  nlink?: number | null
+  nlink?: Maybe<number>
 
-  uid?: number | null
+  uid?: Maybe<number>
 
-  gid?: number | null
+  gid?: Maybe<number>
 
-  rdev?: number | null
+  rdev?: Maybe<number>
 
-  blksize?: number | null
+  blksize?: Maybe<number>
 
-  ino?: number | null
+  ino?: Maybe<number>
 
-  blocks?: number | null
+  blocks?: Maybe<number>
 
-  atimeMs?: number | null
+  atimeMs?: Maybe<number>
 
-  mtimeMs?: number | null
+  mtimeMs?: Maybe<number>
 
-  ctimeMs?: number | null
+  ctimeMs?: Maybe<number>
 
-  birthtimeMs?: number | null
+  birthtimeMs?: Maybe<number>
 
-  atime?: Date | null
+  atime?: Maybe<Date>
 
-  mtime?: Date | null
+  mtime?: Maybe<Date>
 
-  ctime?: Date | null
+  ctime?: Maybe<Date>
 
-  birthtime?: Date | null
+  birthtime?: Maybe<Date>
 }
 
 export interface Internal_10 {
-  contentDigest?: string | null
+  contentDigest?: Maybe<string>
 
-  type?: string | null
+  type?: Maybe<string>
 
-  description?: string | null
+  description?: Maybe<string>
 
-  owner?: string | null
+  owner?: Maybe<string>
 }
 
 /** A connection to a list of items. */
@@ -8131,23 +8230,23 @@ export interface DirectoryGroupConnectionConnection {
   /** Information to aid in pagination. */
   pageInfo: PageInfo
   /** A list of edges. */
-  edges?: (DirectoryGroupConnectionEdge | null)[] | null
+  edges?: Maybe<(Maybe<DirectoryGroupConnectionEdge>)[]>
 
-  field?: string | null
+  field?: Maybe<string>
 
-  fieldValue?: string | null
+  fieldValue?: Maybe<string>
 
-  totalCount?: number | null
+  totalCount?: Maybe<number>
 }
 
 /** An edge in a connection. */
 export interface DirectoryGroupConnectionEdge {
   /** The item at the end of the edge */
-  node?: Directory | null
+  node?: Maybe<Directory>
   /** The next edge in the connection */
-  next?: Directory | null
+  next?: Maybe<Directory>
   /** The previous edge in the connection */
-  previous?: Directory | null
+  previous?: Maybe<Directory>
 }
 
 /** A connection to a list of items. */
@@ -8155,23 +8254,23 @@ export interface FileConnection {
   /** Information to aid in pagination. */
   pageInfo: PageInfo
   /** A list of edges. */
-  edges?: (FileEdge | null)[] | null
+  edges?: Maybe<(Maybe<FileEdge>)[]>
 
-  totalCount?: number | null
+  totalCount?: Maybe<number>
 
-  distinct?: (string | null)[] | null
+  distinct?: Maybe<(Maybe<string>)[]>
 
-  group?: (FileGroupConnectionConnection | null)[] | null
+  group?: Maybe<(Maybe<FileGroupConnectionConnection>)[]>
 }
 
 /** An edge in a connection. */
 export interface FileEdge {
   /** The item at the end of the edge */
-  node?: File | null
+  node?: Maybe<File>
   /** The next edge in the connection */
-  next?: File | null
+  next?: Maybe<File>
   /** The previous edge in the connection */
-  previous?: File | null
+  previous?: Maybe<File>
 }
 
 /** Node of type File */
@@ -8179,83 +8278,83 @@ export interface File extends Node {
   /** The id of this node. */
   id: string
   /** The parent of this node. */
-  parent?: Node | null
+  parent?: Maybe<Node>
   /** The children of this node. */
-  children?: (Node | null)[] | null
+  children?: Maybe<(Maybe<Node>)[]>
   /** The child of this node of type authorJson */
-  childAuthorJson?: AuthorJson | null
+  childAuthorJson?: Maybe<AuthorJson>
   /** The child of this node of type markdownRemark */
-  childMarkdownRemark?: MarkdownRemark | null
+  childMarkdownRemark?: Maybe<MarkdownRemark>
 
-  internal?: Internal_11 | null
+  internal?: Maybe<Internal_11>
 
-  sourceInstanceName?: string | null
+  sourceInstanceName?: Maybe<string>
 
-  absolutePath?: string | null
+  absolutePath?: Maybe<string>
 
-  relativePath?: string | null
+  relativePath?: Maybe<string>
 
-  extension?: string | null
+  extension?: Maybe<string>
 
-  size?: number | null
+  size?: Maybe<number>
 
-  prettySize?: string | null
+  prettySize?: Maybe<string>
 
-  modifiedTime?: Date | null
+  modifiedTime?: Maybe<Date>
 
-  accessTime?: Date | null
+  accessTime?: Maybe<Date>
 
-  changeTime?: Date | null
+  changeTime?: Maybe<Date>
 
-  birthTime?: Date | null
+  birthTime?: Maybe<Date>
 
-  root?: string | null
+  root?: Maybe<string>
 
-  dir?: string | null
+  dir?: Maybe<string>
 
-  base?: string | null
+  base?: Maybe<string>
 
-  ext?: string | null
+  ext?: Maybe<string>
 
-  name?: string | null
+  name?: Maybe<string>
 
-  relativeDirectory?: string | null
+  relativeDirectory?: Maybe<string>
 
-  dev?: number | null
+  dev?: Maybe<number>
 
-  mode?: number | null
+  mode?: Maybe<number>
 
-  nlink?: number | null
+  nlink?: Maybe<number>
 
-  uid?: number | null
+  uid?: Maybe<number>
 
-  gid?: number | null
+  gid?: Maybe<number>
 
-  rdev?: number | null
+  rdev?: Maybe<number>
 
-  blksize?: number | null
+  blksize?: Maybe<number>
 
-  ino?: number | null
+  ino?: Maybe<number>
 
-  blocks?: number | null
+  blocks?: Maybe<number>
 
-  atimeMs?: number | null
+  atimeMs?: Maybe<number>
 
-  mtimeMs?: number | null
+  mtimeMs?: Maybe<number>
 
-  ctimeMs?: number | null
+  ctimeMs?: Maybe<number>
 
-  birthtimeMs?: number | null
+  birthtimeMs?: Maybe<number>
 
-  atime?: Date | null
+  atime?: Maybe<Date>
 
-  mtime?: Date | null
+  mtime?: Maybe<Date>
 
-  ctime?: Date | null
+  ctime?: Maybe<Date>
 
-  birthtime?: Date | null
+  birthtime?: Maybe<Date>
   /** Copy file to static directory and return public url to it */
-  publicURL?: string | null
+  publicURL?: Maybe<string>
 }
 
 /** Node of type AuthorJson */
@@ -8263,29 +8362,29 @@ export interface AuthorJson extends Node {
   /** The id of this node. */
   id: string
   /** The parent of this node. */
-  parent?: Node | null
+  parent?: Maybe<Node>
   /** The children of this node. */
-  children?: (Node | null)[] | null
+  children?: Maybe<(Maybe<Node>)[]>
 
-  name?: string | null
+  name?: Maybe<string>
 
-  bio?: string | null
+  bio?: Maybe<string>
 
-  github?: string | null
+  github?: Maybe<string>
 
-  twitter?: string | null
+  twitter?: Maybe<string>
 
-  avatar?: File | null
+  avatar?: Maybe<File>
 
-  internal?: Internal_12 | null
+  internal?: Maybe<Internal_12>
 }
 
 export interface Internal_12 {
-  contentDigest?: string | null
+  contentDigest?: Maybe<string>
 
-  type?: string | null
+  type?: Maybe<string>
 
-  owner?: string | null
+  owner?: Maybe<string>
 }
 
 /** Node of type MarkdownRemark */
@@ -8293,95 +8392,95 @@ export interface MarkdownRemark extends Node {
   /** The id of this node. */
   id: string
   /** The parent of this node. */
-  parent?: Node | null
+  parent?: Maybe<Node>
   /** The children of this node. */
-  children?: (Node | null)[] | null
+  children?: Maybe<(Maybe<Node>)[]>
 
-  internal?: Internal_13 | null
+  internal?: Maybe<Internal_13>
 
-  frontmatter?: Frontmatter_2 | null
+  frontmatter?: Maybe<Frontmatter_2>
 
-  rawMarkdownBody?: string | null
+  rawMarkdownBody?: Maybe<string>
 
-  fileAbsolutePath?: string | null
+  fileAbsolutePath?: Maybe<string>
 
-  fields?: Fields_2 | null
+  fields?: Maybe<Fields_2>
 
-  html?: string | null
+  html?: Maybe<string>
 
-  htmlAst?: Json | null
+  htmlAst?: Maybe<Json>
 
-  excerpt?: string | null
+  excerpt?: Maybe<string>
 
-  headings?: (MarkdownHeading | null)[] | null
+  headings?: Maybe<(Maybe<MarkdownHeading>)[]>
 
-  timeToRead?: number | null
+  timeToRead?: Maybe<number>
 
-  tableOfContents?: string | null
+  tableOfContents?: Maybe<string>
 
-  wordCount?: WordCount | null
+  wordCount?: Maybe<WordCount>
 }
 
 export interface Internal_13 {
-  content?: string | null
+  content?: Maybe<string>
 
-  type?: string | null
+  type?: Maybe<string>
 
-  contentDigest?: string | null
+  contentDigest?: Maybe<string>
 
-  owner?: string | null
+  owner?: Maybe<string>
 
-  fieldOwners?: FieldOwners_2 | null
+  fieldOwners?: Maybe<FieldOwners_2>
 }
 
 export interface FieldOwners_2 {
-  slug?: string | null
+  slug?: Maybe<string>
 
-  pageType?: string | null
+  pageType?: Maybe<string>
 }
 
 export interface Frontmatter_2 {
-  title?: string | null
+  title?: Maybe<string>
 
-  date?: Date | null
+  date?: Maybe<Date>
 
-  authors?: (string | null)[] | null
+  authors?: Maybe<(Maybe<string>)[]>
 
-  tags?: (string | null)[] | null
+  tags?: Maybe<(Maybe<string>)[]>
 
-  _PARENT?: string | null
+  _PARENT?: Maybe<string>
 }
 
 export interface Fields_2 {
-  slug?: string | null
+  slug?: Maybe<string>
 
-  pageType?: string | null
+  pageType?: Maybe<string>
 }
 
 export interface MarkdownHeading {
-  value?: string | null
+  value?: Maybe<string>
 
-  depth?: number | null
+  depth?: Maybe<number>
 }
 
 export interface WordCount {
-  paragraphs?: number | null
+  paragraphs?: Maybe<number>
 
-  sentences?: number | null
+  sentences?: Maybe<number>
 
-  words?: number | null
+  words?: Maybe<number>
 }
 
 export interface Internal_11 {
-  contentDigest?: string | null
+  contentDigest?: Maybe<string>
 
-  type?: string | null
+  type?: Maybe<string>
 
-  mediaType?: string | null
+  mediaType?: Maybe<string>
 
-  description?: string | null
+  description?: Maybe<string>
 
-  owner?: string | null
+  owner?: Maybe<string>
 }
 
 /** A connection to a list of items. */
@@ -8389,23 +8488,23 @@ export interface FileGroupConnectionConnection {
   /** Information to aid in pagination. */
   pageInfo: PageInfo
   /** A list of edges. */
-  edges?: (FileGroupConnectionEdge | null)[] | null
+  edges?: Maybe<(Maybe<FileGroupConnectionEdge>)[]>
 
-  field?: string | null
+  field?: Maybe<string>
 
-  fieldValue?: string | null
+  fieldValue?: Maybe<string>
 
-  totalCount?: number | null
+  totalCount?: Maybe<number>
 }
 
 /** An edge in a connection. */
 export interface FileGroupConnectionEdge {
   /** The item at the end of the edge */
-  node?: File | null
+  node?: Maybe<File>
   /** The next edge in the connection */
-  next?: File | null
+  next?: Maybe<File>
   /** The previous edge in the connection */
-  previous?: File | null
+  previous?: Maybe<File>
 }
 
 /** A connection to a list of items. */
@@ -8413,23 +8512,23 @@ export interface AuthorJsonConnection {
   /** Information to aid in pagination. */
   pageInfo: PageInfo
   /** A list of edges. */
-  edges?: (AuthorJsonEdge | null)[] | null
+  edges?: Maybe<(Maybe<AuthorJsonEdge>)[]>
 
-  totalCount?: number | null
+  totalCount?: Maybe<number>
 
-  distinct?: (string | null)[] | null
+  distinct?: Maybe<(Maybe<string>)[]>
 
-  group?: (AuthorJsonGroupConnectionConnection | null)[] | null
+  group?: Maybe<(Maybe<AuthorJsonGroupConnectionConnection>)[]>
 }
 
 /** An edge in a connection. */
 export interface AuthorJsonEdge {
   /** The item at the end of the edge */
-  node?: AuthorJson | null
+  node?: Maybe<AuthorJson>
   /** The next edge in the connection */
-  next?: AuthorJson | null
+  next?: Maybe<AuthorJson>
   /** The previous edge in the connection */
-  previous?: AuthorJson | null
+  previous?: Maybe<AuthorJson>
 }
 
 /** A connection to a list of items. */
@@ -8437,23 +8536,23 @@ export interface AuthorJsonGroupConnectionConnection {
   /** Information to aid in pagination. */
   pageInfo: PageInfo
   /** A list of edges. */
-  edges?: (AuthorJsonGroupConnectionEdge | null)[] | null
+  edges?: Maybe<(Maybe<AuthorJsonGroupConnectionEdge>)[]>
 
-  field?: string | null
+  field?: Maybe<string>
 
-  fieldValue?: string | null
+  fieldValue?: Maybe<string>
 
-  totalCount?: number | null
+  totalCount?: Maybe<number>
 }
 
 /** An edge in a connection. */
 export interface AuthorJsonGroupConnectionEdge {
   /** The item at the end of the edge */
-  node?: AuthorJson | null
+  node?: Maybe<AuthorJson>
   /** The next edge in the connection */
-  next?: AuthorJson | null
+  next?: Maybe<AuthorJson>
   /** The previous edge in the connection */
-  previous?: AuthorJson | null
+  previous?: Maybe<AuthorJson>
 }
 
 /** A connection to a list of items. */
@@ -8461,23 +8560,23 @@ export interface MarkdownRemarkConnection {
   /** Information to aid in pagination. */
   pageInfo: PageInfo
   /** A list of edges. */
-  edges?: (MarkdownRemarkEdge | null)[] | null
+  edges?: Maybe<(Maybe<MarkdownRemarkEdge>)[]>
 
-  totalCount?: number | null
+  totalCount?: Maybe<number>
 
-  distinct?: (string | null)[] | null
+  distinct?: Maybe<(Maybe<string>)[]>
 
-  group?: (MarkdownRemarkGroupConnectionConnection | null)[] | null
+  group?: Maybe<(Maybe<MarkdownRemarkGroupConnectionConnection>)[]>
 }
 
 /** An edge in a connection. */
 export interface MarkdownRemarkEdge {
   /** The item at the end of the edge */
-  node?: MarkdownRemark | null
+  node?: Maybe<MarkdownRemark>
   /** The next edge in the connection */
-  next?: MarkdownRemark | null
+  next?: Maybe<MarkdownRemark>
   /** The previous edge in the connection */
-  previous?: MarkdownRemark | null
+  previous?: Maybe<MarkdownRemark>
 }
 
 /** A connection to a list of items. */
@@ -8485,23 +8584,23 @@ export interface MarkdownRemarkGroupConnectionConnection {
   /** Information to aid in pagination. */
   pageInfo: PageInfo
   /** A list of edges. */
-  edges?: (MarkdownRemarkGroupConnectionEdge | null)[] | null
+  edges?: Maybe<(Maybe<MarkdownRemarkGroupConnectionEdge>)[]>
 
-  field?: string | null
+  field?: Maybe<string>
 
-  fieldValue?: string | null
+  fieldValue?: Maybe<string>
 
-  totalCount?: number | null
+  totalCount?: Maybe<number>
 }
 
 /** An edge in a connection. */
 export interface MarkdownRemarkGroupConnectionEdge {
   /** The item at the end of the edge */
-  node?: MarkdownRemark | null
+  node?: Maybe<MarkdownRemark>
   /** The next edge in the connection */
-  next?: MarkdownRemark | null
+  next?: Maybe<MarkdownRemark>
   /** The previous edge in the connection */
-  previous?: MarkdownRemark | null
+  previous?: Maybe<MarkdownRemark>
 }
 
 /** Node of type Site */
@@ -8509,41 +8608,41 @@ export interface Site extends Node {
   /** The id of this node. */
   id: string
   /** The parent of this node. */
-  parent?: Node | null
+  parent?: Maybe<Node>
   /** The children of this node. */
-  children?: (Node | null)[] | null
+  children?: Maybe<(Maybe<Node>)[]>
 
-  siteMetadata?: SiteMetadata_2 | null
+  siteMetadata?: Maybe<SiteMetadata_2>
 
-  port?: Date | null
+  port?: Maybe<Date>
 
-  host?: string | null
+  host?: Maybe<string>
 
-  pathPrefix?: string | null
+  pathPrefix?: Maybe<string>
 
-  polyfill?: boolean | null
+  polyfill?: Maybe<boolean>
 
-  buildTime?: Date | null
+  buildTime?: Maybe<Date>
 
-  internal?: Internal_14 | null
+  internal?: Maybe<Internal_14>
 }
 
 export interface SiteMetadata_2 {
-  description?: string | null
+  description?: Maybe<string>
 
-  keywords?: string | null
+  keywords?: Maybe<string>
 
-  siteUrl?: string | null
+  siteUrl?: Maybe<string>
 
-  title?: string | null
+  title?: Maybe<string>
 }
 
 export interface Internal_14 {
-  contentDigest?: string | null
+  contentDigest?: Maybe<string>
 
-  type?: string | null
+  type?: Maybe<string>
 
-  owner?: string | null
+  owner?: Maybe<string>
 }
 
 // ====================================================
@@ -8551,566 +8650,566 @@ export interface Internal_14 {
 // ====================================================
 
 export interface AllSitePageQueryArgs {
-  skip?: number | null
+  skip?: Maybe<number>
 
-  limit?: number | null
+  limit?: Maybe<number>
 
-  sort?: SitePageConnectionSort | null
+  sort?: Maybe<SitePageConnectionSort>
 
-  filter?: FilterSitePage | null
+  filter?: Maybe<FilterSitePage>
 }
 export interface AllSitePluginQueryArgs {
-  skip?: number | null
+  skip?: Maybe<number>
 
-  limit?: number | null
+  limit?: Maybe<number>
 
-  sort?: SitePluginConnectionSort | null
+  sort?: Maybe<SitePluginConnectionSort>
 
-  filter?: FilterSitePlugin | null
+  filter?: Maybe<FilterSitePlugin>
 }
 export interface AllDirectoryQueryArgs {
-  skip?: number | null
+  skip?: Maybe<number>
 
-  limit?: number | null
+  limit?: Maybe<number>
 
-  sort?: DirectoryConnectionSort | null
+  sort?: Maybe<DirectoryConnectionSort>
 
-  filter?: FilterDirectory | null
+  filter?: Maybe<FilterDirectory>
 }
 export interface AllFileQueryArgs {
-  skip?: number | null
+  skip?: Maybe<number>
 
-  limit?: number | null
+  limit?: Maybe<number>
 
-  sort?: FileConnectionSort | null
+  sort?: Maybe<FileConnectionSort>
 
-  filter?: FilterFile | null
+  filter?: Maybe<FilterFile>
 }
 export interface AllAuthorJsonQueryArgs {
-  skip?: number | null
+  skip?: Maybe<number>
 
-  limit?: number | null
+  limit?: Maybe<number>
 
-  sort?: AuthorJsonConnectionSort | null
+  sort?: Maybe<AuthorJsonConnectionSort>
 
-  filter?: FilterAuthorJson | null
+  filter?: Maybe<FilterAuthorJson>
 }
 export interface AllMarkdownRemarkQueryArgs {
-  skip?: number | null
+  skip?: Maybe<number>
 
-  limit?: number | null
+  limit?: Maybe<number>
 
-  sort?: MarkdownRemarkConnectionSort | null
+  sort?: Maybe<MarkdownRemarkConnectionSort>
 
-  filter?: FilterMarkdownRemark | null
+  filter?: Maybe<FilterMarkdownRemark>
 }
 export interface SitePageQueryArgs {
-  jsonName?: SitePageJsonNameQueryString | null
+  jsonName?: Maybe<SitePageJsonNameQueryString>
 
-  internalComponentName?: SitePageInternalComponentNameQueryString | null
+  internalComponentName?: Maybe<SitePageInternalComponentNameQueryString>
 
-  path?: SitePagePathQueryString_2 | null
+  path?: Maybe<SitePagePathQueryString_2>
 
-  component?: SitePageComponentQueryString | null
+  component?: Maybe<SitePageComponentQueryString>
 
-  componentChunkName?: SitePageComponentChunkNameQueryString | null
+  componentChunkName?: Maybe<SitePageComponentChunkNameQueryString>
 
-  context?: SitePageContextInputObject | null
+  context?: Maybe<SitePageContextInputObject>
 
-  pluginCreator?: SitePagePluginCreatorInputObject | null
+  pluginCreator?: Maybe<SitePagePluginCreatorInputObject>
 
-  pluginCreatorId?: SitePagePluginCreatorIdQueryString_2 | null
+  pluginCreatorId?: Maybe<SitePagePluginCreatorIdQueryString_2>
 
-  componentPath?: SitePageComponentPathQueryString | null
+  componentPath?: Maybe<SitePageComponentPathQueryString>
 
-  id?: SitePageIdQueryString_2 | null
+  id?: Maybe<SitePageIdQueryString_2>
 
-  internal?: SitePageInternalInputObject_2 | null
+  internal?: Maybe<SitePageInternalInputObject_2>
 }
 export interface SitePluginQueryArgs {
-  resolve?: SitePluginResolveQueryString_2 | null
+  resolve?: Maybe<SitePluginResolveQueryString_2>
 
-  id?: SitePluginIdQueryString_2 | null
+  id?: Maybe<SitePluginIdQueryString_2>
 
-  name?: SitePluginNameQueryString_2 | null
+  name?: Maybe<SitePluginNameQueryString_2>
 
-  version?: SitePluginVersionQueryString_2 | null
+  version?: Maybe<SitePluginVersionQueryString_2>
 
-  pluginOptions?: SitePluginPluginOptionsInputObject_2 | null
+  pluginOptions?: Maybe<SitePluginPluginOptionsInputObject_2>
 
-  nodeAPIs?: SitePluginNodeApIsQueryList_2 | null
+  nodeAPIs?: Maybe<SitePluginNodeApIsQueryList_2>
 
-  browserAPIs?: SitePluginBrowserApIsQueryList_2 | null
+  browserAPIs?: Maybe<SitePluginBrowserApIsQueryList_2>
 
-  ssrAPIs?: SitePluginSsrApIsQueryList_2 | null
+  ssrAPIs?: Maybe<SitePluginSsrApIsQueryList_2>
 
-  pluginFilepath?: SitePluginPluginFilepathQueryString_2 | null
+  pluginFilepath?: Maybe<SitePluginPluginFilepathQueryString_2>
 
-  packageJson?: SitePluginPackageJsonInputObject_2 | null
+  packageJson?: Maybe<SitePluginPackageJsonInputObject_2>
 
-  internal?: SitePluginInternalInputObject_2 | null
+  internal?: Maybe<SitePluginInternalInputObject_2>
 }
 export interface SiteQueryArgs {
-  siteMetadata?: SiteSiteMetadataInputObject_2 | null
+  siteMetadata?: Maybe<SiteSiteMetadataInputObject_2>
 
-  port?: SitePortQueryString_2 | null
+  port?: Maybe<SitePortQueryString_2>
 
-  host?: SiteHostQueryString_2 | null
+  host?: Maybe<SiteHostQueryString_2>
 
-  pathPrefix?: SitePathPrefixQueryString_2 | null
+  pathPrefix?: Maybe<SitePathPrefixQueryString_2>
 
-  polyfill?: SitePolyfillQueryBoolean_2 | null
+  polyfill?: Maybe<SitePolyfillQueryBoolean_2>
 
-  buildTime?: SiteBuildTimeQueryString_2 | null
+  buildTime?: Maybe<SiteBuildTimeQueryString_2>
 
-  id?: SiteIdQueryString_2 | null
+  id?: Maybe<SiteIdQueryString_2>
 
-  internal?: SiteInternalInputObject_2 | null
+  internal?: Maybe<SiteInternalInputObject_2>
 }
 export interface DirectoryQueryArgs {
-  id?: DirectoryIdQueryString_2 | null
+  id?: Maybe<DirectoryIdQueryString_2>
 
-  internal?: DirectoryInternalInputObject_2 | null
+  internal?: Maybe<DirectoryInternalInputObject_2>
 
-  sourceInstanceName?: DirectorySourceInstanceNameQueryString_2 | null
+  sourceInstanceName?: Maybe<DirectorySourceInstanceNameQueryString_2>
 
-  absolutePath?: DirectoryAbsolutePathQueryString_2 | null
+  absolutePath?: Maybe<DirectoryAbsolutePathQueryString_2>
 
-  relativePath?: DirectoryRelativePathQueryString_2 | null
+  relativePath?: Maybe<DirectoryRelativePathQueryString_2>
 
-  extension?: DirectoryExtensionQueryString_2 | null
+  extension?: Maybe<DirectoryExtensionQueryString_2>
 
-  size?: DirectorySizeQueryInteger_2 | null
+  size?: Maybe<DirectorySizeQueryInteger_2>
 
-  prettySize?: DirectoryPrettySizeQueryString_2 | null
+  prettySize?: Maybe<DirectoryPrettySizeQueryString_2>
 
-  modifiedTime?: DirectoryModifiedTimeQueryString_2 | null
+  modifiedTime?: Maybe<DirectoryModifiedTimeQueryString_2>
 
-  accessTime?: DirectoryAccessTimeQueryString_2 | null
+  accessTime?: Maybe<DirectoryAccessTimeQueryString_2>
 
-  changeTime?: DirectoryChangeTimeQueryString_2 | null
+  changeTime?: Maybe<DirectoryChangeTimeQueryString_2>
 
-  birthTime?: DirectoryBirthTimeQueryString_2 | null
+  birthTime?: Maybe<DirectoryBirthTimeQueryString_2>
 
-  root?: DirectoryRootQueryString_2 | null
+  root?: Maybe<DirectoryRootQueryString_2>
 
-  dir?: DirectoryDirQueryString_2 | null
+  dir?: Maybe<DirectoryDirQueryString_2>
 
-  base?: DirectoryBaseQueryString_2 | null
+  base?: Maybe<DirectoryBaseQueryString_2>
 
-  ext?: DirectoryExtQueryString_2 | null
+  ext?: Maybe<DirectoryExtQueryString_2>
 
-  name?: DirectoryNameQueryString_2 | null
+  name?: Maybe<DirectoryNameQueryString_2>
 
-  relativeDirectory?: DirectoryRelativeDirectoryQueryString_2 | null
+  relativeDirectory?: Maybe<DirectoryRelativeDirectoryQueryString_2>
 
-  dev?: DirectoryDevQueryInteger_2 | null
+  dev?: Maybe<DirectoryDevQueryInteger_2>
 
-  mode?: DirectoryModeQueryInteger_2 | null
+  mode?: Maybe<DirectoryModeQueryInteger_2>
 
-  nlink?: DirectoryNlinkQueryInteger_2 | null
+  nlink?: Maybe<DirectoryNlinkQueryInteger_2>
 
-  uid?: DirectoryUidQueryInteger_2 | null
+  uid?: Maybe<DirectoryUidQueryInteger_2>
 
-  gid?: DirectoryGidQueryInteger_2 | null
+  gid?: Maybe<DirectoryGidQueryInteger_2>
 
-  rdev?: DirectoryRdevQueryInteger_2 | null
+  rdev?: Maybe<DirectoryRdevQueryInteger_2>
 
-  blksize?: DirectoryBlksizeQueryInteger_2 | null
+  blksize?: Maybe<DirectoryBlksizeQueryInteger_2>
 
-  ino?: DirectoryInoQueryInteger_2 | null
+  ino?: Maybe<DirectoryInoQueryInteger_2>
 
-  blocks?: DirectoryBlocksQueryInteger_2 | null
+  blocks?: Maybe<DirectoryBlocksQueryInteger_2>
 
-  atimeMs?: DirectoryAtimeMsQueryFloat_2 | null
+  atimeMs?: Maybe<DirectoryAtimeMsQueryFloat_2>
 
-  mtimeMs?: DirectoryMtimeMsQueryFloat_2 | null
+  mtimeMs?: Maybe<DirectoryMtimeMsQueryFloat_2>
 
-  ctimeMs?: DirectoryCtimeMsQueryFloat_2 | null
+  ctimeMs?: Maybe<DirectoryCtimeMsQueryFloat_2>
 
-  birthtimeMs?: DirectoryBirthtimeMsQueryFloat_2 | null
+  birthtimeMs?: Maybe<DirectoryBirthtimeMsQueryFloat_2>
 
-  atime?: DirectoryAtimeQueryString_2 | null
+  atime?: Maybe<DirectoryAtimeQueryString_2>
 
-  mtime?: DirectoryMtimeQueryString_2 | null
+  mtime?: Maybe<DirectoryMtimeQueryString_2>
 
-  ctime?: DirectoryCtimeQueryString_2 | null
+  ctime?: Maybe<DirectoryCtimeQueryString_2>
 
-  birthtime?: DirectoryBirthtimeQueryString_2 | null
+  birthtime?: Maybe<DirectoryBirthtimeQueryString_2>
 }
 export interface FileQueryArgs {
-  id?: FileIdQueryString_2 | null
+  id?: Maybe<FileIdQueryString_2>
 
-  internal?: FileInternalInputObject_2 | null
+  internal?: Maybe<FileInternalInputObject_2>
 
-  sourceInstanceName?: FileSourceInstanceNameQueryString_2 | null
+  sourceInstanceName?: Maybe<FileSourceInstanceNameQueryString_2>
 
-  absolutePath?: FileAbsolutePathQueryString_2 | null
+  absolutePath?: Maybe<FileAbsolutePathQueryString_2>
 
-  relativePath?: FileRelativePathQueryString_2 | null
+  relativePath?: Maybe<FileRelativePathQueryString_2>
 
-  extension?: FileExtensionQueryString_2 | null
+  extension?: Maybe<FileExtensionQueryString_2>
 
-  size?: FileSizeQueryInteger_2 | null
+  size?: Maybe<FileSizeQueryInteger_2>
 
-  prettySize?: FilePrettySizeQueryString_2 | null
+  prettySize?: Maybe<FilePrettySizeQueryString_2>
 
-  modifiedTime?: FileModifiedTimeQueryString_2 | null
+  modifiedTime?: Maybe<FileModifiedTimeQueryString_2>
 
-  accessTime?: FileAccessTimeQueryString_2 | null
+  accessTime?: Maybe<FileAccessTimeQueryString_2>
 
-  changeTime?: FileChangeTimeQueryString_2 | null
+  changeTime?: Maybe<FileChangeTimeQueryString_2>
 
-  birthTime?: FileBirthTimeQueryString_2 | null
+  birthTime?: Maybe<FileBirthTimeQueryString_2>
 
-  root?: FileRootQueryString_2 | null
+  root?: Maybe<FileRootQueryString_2>
 
-  dir?: FileDirQueryString_2 | null
+  dir?: Maybe<FileDirQueryString_2>
 
-  base?: FileBaseQueryString_2 | null
+  base?: Maybe<FileBaseQueryString_2>
 
-  ext?: FileExtQueryString_2 | null
+  ext?: Maybe<FileExtQueryString_2>
 
-  name?: FileNameQueryString_2 | null
+  name?: Maybe<FileNameQueryString_2>
 
-  relativeDirectory?: FileRelativeDirectoryQueryString_2 | null
+  relativeDirectory?: Maybe<FileRelativeDirectoryQueryString_2>
 
-  dev?: FileDevQueryInteger_2 | null
+  dev?: Maybe<FileDevQueryInteger_2>
 
-  mode?: FileModeQueryInteger_2 | null
+  mode?: Maybe<FileModeQueryInteger_2>
 
-  nlink?: FileNlinkQueryInteger_2 | null
+  nlink?: Maybe<FileNlinkQueryInteger_2>
 
-  uid?: FileUidQueryInteger_2 | null
+  uid?: Maybe<FileUidQueryInteger_2>
 
-  gid?: FileGidQueryInteger_2 | null
+  gid?: Maybe<FileGidQueryInteger_2>
 
-  rdev?: FileRdevQueryInteger_2 | null
+  rdev?: Maybe<FileRdevQueryInteger_2>
 
-  blksize?: FileBlksizeQueryInteger_2 | null
+  blksize?: Maybe<FileBlksizeQueryInteger_2>
 
-  ino?: FileInoQueryInteger_2 | null
+  ino?: Maybe<FileInoQueryInteger_2>
 
-  blocks?: FileBlocksQueryInteger_2 | null
+  blocks?: Maybe<FileBlocksQueryInteger_2>
 
-  atimeMs?: FileAtimeMsQueryFloat_2 | null
+  atimeMs?: Maybe<FileAtimeMsQueryFloat_2>
 
-  mtimeMs?: FileMtimeMsQueryFloat_2 | null
+  mtimeMs?: Maybe<FileMtimeMsQueryFloat_2>
 
-  ctimeMs?: FileCtimeMsQueryFloat_2 | null
+  ctimeMs?: Maybe<FileCtimeMsQueryFloat_2>
 
-  birthtimeMs?: FileBirthtimeMsQueryFloat_2 | null
+  birthtimeMs?: Maybe<FileBirthtimeMsQueryFloat_2>
 
-  atime?: FileAtimeQueryString_2 | null
+  atime?: Maybe<FileAtimeQueryString_2>
 
-  mtime?: FileMtimeQueryString_2 | null
+  mtime?: Maybe<FileMtimeQueryString_2>
 
-  ctime?: FileCtimeQueryString_2 | null
+  ctime?: Maybe<FileCtimeQueryString_2>
 
-  birthtime?: FileBirthtimeQueryString_2 | null
+  birthtime?: Maybe<FileBirthtimeQueryString_2>
 
-  publicURL?: PublicUrlQueryString_3 | null
+  publicURL?: Maybe<PublicUrlQueryString_3>
 }
 export interface AuthorJsonQueryArgs {
-  id?: AuthorJsonIdQueryString_2 | null
+  id?: Maybe<AuthorJsonIdQueryString_2>
 
-  name?: AuthorJsonNameQueryString_2 | null
+  name?: Maybe<AuthorJsonNameQueryString_2>
 
-  bio?: AuthorJsonBioQueryString_2 | null
+  bio?: Maybe<AuthorJsonBioQueryString_2>
 
-  github?: AuthorJsonGithubQueryString_2 | null
+  github?: Maybe<AuthorJsonGithubQueryString_2>
 
-  twitter?: AuthorJsonTwitterQueryString_2 | null
+  twitter?: Maybe<AuthorJsonTwitterQueryString_2>
 
-  avatar?: AuthorJsonAvatarQueryString_2 | null
+  avatar?: Maybe<AuthorJsonAvatarQueryString_2>
 
-  internal?: AuthorJsonInternalInputObject_2 | null
+  internal?: Maybe<AuthorJsonInternalInputObject_2>
 }
 export interface MarkdownRemarkQueryArgs {
-  id?: MarkdownRemarkIdQueryString_2 | null
+  id?: Maybe<MarkdownRemarkIdQueryString_2>
 
-  internal?: MarkdownRemarkInternalInputObject_2 | null
+  internal?: Maybe<MarkdownRemarkInternalInputObject_2>
 
-  frontmatter?: MarkdownRemarkFrontmatterInputObject_2 | null
+  frontmatter?: Maybe<MarkdownRemarkFrontmatterInputObject_2>
 
-  excerpt?: ExcerptQueryString_3 | null
+  excerpt?: Maybe<ExcerptQueryString_3>
 
-  rawMarkdownBody?: MarkdownRemarkRawMarkdownBodyQueryString_2 | null
+  rawMarkdownBody?: Maybe<MarkdownRemarkRawMarkdownBodyQueryString_2>
 
-  fileAbsolutePath?: MarkdownRemarkFileAbsolutePathQueryString_2 | null
+  fileAbsolutePath?: Maybe<MarkdownRemarkFileAbsolutePathQueryString_2>
 
-  fields?: MarkdownRemarkFieldsInputObject_2 | null
+  fields?: Maybe<MarkdownRemarkFieldsInputObject_2>
 
-  html?: HtmlQueryString_3 | null
+  html?: Maybe<HtmlQueryString_3>
 
-  headings?: HeadingsQueryList_3 | null
+  headings?: Maybe<HeadingsQueryList_3>
 
-  timeToRead?: TimeToReadQueryInt_3 | null
+  timeToRead?: Maybe<TimeToReadQueryInt_3>
 
-  tableOfContents?: TableOfContentsQueryString_3 | null
+  tableOfContents?: Maybe<TableOfContentsQueryString_3>
 
-  wordCount?: WordCountTypeName_3 | null
+  wordCount?: Maybe<WordCountTypeName_3>
 }
 export interface DistinctSitePageConnectionArgs {
-  field?: SitePageDistinctEnum | null
+  field?: Maybe<SitePageDistinctEnum>
 }
 export interface GroupSitePageConnectionArgs {
-  skip?: number | null
+  skip?: Maybe<number>
 
-  limit?: number | null
+  limit?: Maybe<number>
 
-  field?: SitePageGroupEnum | null
+  field?: Maybe<SitePageGroupEnum>
 }
 export interface DistinctSitePluginConnectionArgs {
-  field?: SitePluginDistinctEnum | null
+  field?: Maybe<SitePluginDistinctEnum>
 }
 export interface GroupSitePluginConnectionArgs {
-  skip?: number | null
+  skip?: Maybe<number>
 
-  limit?: number | null
+  limit?: Maybe<number>
 
-  field?: SitePluginGroupEnum | null
+  field?: Maybe<SitePluginGroupEnum>
 }
 export interface DistinctDirectoryConnectionArgs {
-  field?: DirectoryDistinctEnum | null
+  field?: Maybe<DirectoryDistinctEnum>
 }
 export interface GroupDirectoryConnectionArgs {
-  skip?: number | null
+  skip?: Maybe<number>
 
-  limit?: number | null
+  limit?: Maybe<number>
 
-  field?: DirectoryGroupEnum | null
+  field?: Maybe<DirectoryGroupEnum>
 }
 export interface ModifiedTimeDirectoryArgs {
-  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYYMMMM DD)" See https://momentjs.com/docs/#/displaying/format/ fordocumentation for different tokens */
-  formatString?: string | null
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  formatString?: Maybe<string>
   /** Returns a string generated with Moment.js' fromNow function */
-  fromNow?: boolean | null
-  /** Returns the difference between this date and the current time. Defaults tomiliseconds but you can also pass in as the measurement years, months,weeks, days, hours, minutes, and seconds. */
-  difference?: string | null
+  fromNow?: Maybe<boolean>
+  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  difference?: Maybe<string>
   /** Configures the locale Moment.js will use to format the date. */
-  locale?: string | null
+  locale?: Maybe<string>
 }
 export interface AccessTimeDirectoryArgs {
-  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYYMMMM DD)" See https://momentjs.com/docs/#/displaying/format/ fordocumentation for different tokens */
-  formatString?: string | null
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  formatString?: Maybe<string>
   /** Returns a string generated with Moment.js' fromNow function */
-  fromNow?: boolean | null
-  /** Returns the difference between this date and the current time. Defaults tomiliseconds but you can also pass in as the measurement years, months,weeks, days, hours, minutes, and seconds. */
-  difference?: string | null
+  fromNow?: Maybe<boolean>
+  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  difference?: Maybe<string>
   /** Configures the locale Moment.js will use to format the date. */
-  locale?: string | null
+  locale?: Maybe<string>
 }
 export interface ChangeTimeDirectoryArgs {
-  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYYMMMM DD)" See https://momentjs.com/docs/#/displaying/format/ fordocumentation for different tokens */
-  formatString?: string | null
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  formatString?: Maybe<string>
   /** Returns a string generated with Moment.js' fromNow function */
-  fromNow?: boolean | null
-  /** Returns the difference between this date and the current time. Defaults tomiliseconds but you can also pass in as the measurement years, months,weeks, days, hours, minutes, and seconds. */
-  difference?: string | null
+  fromNow?: Maybe<boolean>
+  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  difference?: Maybe<string>
   /** Configures the locale Moment.js will use to format the date. */
-  locale?: string | null
+  locale?: Maybe<string>
 }
 export interface BirthTimeDirectoryArgs {
-  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYYMMMM DD)" See https://momentjs.com/docs/#/displaying/format/ fordocumentation for different tokens */
-  formatString?: string | null
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  formatString?: Maybe<string>
   /** Returns a string generated with Moment.js' fromNow function */
-  fromNow?: boolean | null
-  /** Returns the difference between this date and the current time. Defaults tomiliseconds but you can also pass in as the measurement years, months,weeks, days, hours, minutes, and seconds. */
-  difference?: string | null
+  fromNow?: Maybe<boolean>
+  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  difference?: Maybe<string>
   /** Configures the locale Moment.js will use to format the date. */
-  locale?: string | null
+  locale?: Maybe<string>
 }
 export interface AtimeDirectoryArgs {
-  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYYMMMM DD)" See https://momentjs.com/docs/#/displaying/format/ fordocumentation for different tokens */
-  formatString?: string | null
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  formatString?: Maybe<string>
   /** Returns a string generated with Moment.js' fromNow function */
-  fromNow?: boolean | null
-  /** Returns the difference between this date and the current time. Defaults tomiliseconds but you can also pass in as the measurement years, months,weeks, days, hours, minutes, and seconds. */
-  difference?: string | null
+  fromNow?: Maybe<boolean>
+  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  difference?: Maybe<string>
   /** Configures the locale Moment.js will use to format the date. */
-  locale?: string | null
+  locale?: Maybe<string>
 }
 export interface MtimeDirectoryArgs {
-  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYYMMMM DD)" See https://momentjs.com/docs/#/displaying/format/ fordocumentation for different tokens */
-  formatString?: string | null
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  formatString?: Maybe<string>
   /** Returns a string generated with Moment.js' fromNow function */
-  fromNow?: boolean | null
-  /** Returns the difference between this date and the current time. Defaults tomiliseconds but you can also pass in as the measurement years, months,weeks, days, hours, minutes, and seconds. */
-  difference?: string | null
+  fromNow?: Maybe<boolean>
+  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  difference?: Maybe<string>
   /** Configures the locale Moment.js will use to format the date. */
-  locale?: string | null
+  locale?: Maybe<string>
 }
 export interface CtimeDirectoryArgs {
-  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYYMMMM DD)" See https://momentjs.com/docs/#/displaying/format/ fordocumentation for different tokens */
-  formatString?: string | null
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  formatString?: Maybe<string>
   /** Returns a string generated with Moment.js' fromNow function */
-  fromNow?: boolean | null
-  /** Returns the difference between this date and the current time. Defaults tomiliseconds but you can also pass in as the measurement years, months,weeks, days, hours, minutes, and seconds. */
-  difference?: string | null
+  fromNow?: Maybe<boolean>
+  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  difference?: Maybe<string>
   /** Configures the locale Moment.js will use to format the date. */
-  locale?: string | null
+  locale?: Maybe<string>
 }
 export interface BirthtimeDirectoryArgs {
-  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYYMMMM DD)" See https://momentjs.com/docs/#/displaying/format/ fordocumentation for different tokens */
-  formatString?: string | null
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  formatString?: Maybe<string>
   /** Returns a string generated with Moment.js' fromNow function */
-  fromNow?: boolean | null
-  /** Returns the difference between this date and the current time. Defaults tomiliseconds but you can also pass in as the measurement years, months,weeks, days, hours, minutes, and seconds. */
-  difference?: string | null
+  fromNow?: Maybe<boolean>
+  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  difference?: Maybe<string>
   /** Configures the locale Moment.js will use to format the date. */
-  locale?: string | null
+  locale?: Maybe<string>
 }
 export interface DistinctFileConnectionArgs {
-  field?: FileDistinctEnum | null
+  field?: Maybe<FileDistinctEnum>
 }
 export interface GroupFileConnectionArgs {
-  skip?: number | null
+  skip?: Maybe<number>
 
-  limit?: number | null
+  limit?: Maybe<number>
 
-  field?: FileGroupEnum | null
+  field?: Maybe<FileGroupEnum>
 }
 export interface ModifiedTimeFileArgs {
-  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYYMMMM DD)" See https://momentjs.com/docs/#/displaying/format/ fordocumentation for different tokens */
-  formatString?: string | null
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  formatString?: Maybe<string>
   /** Returns a string generated with Moment.js' fromNow function */
-  fromNow?: boolean | null
-  /** Returns the difference between this date and the current time. Defaults tomiliseconds but you can also pass in as the measurement years, months,weeks, days, hours, minutes, and seconds. */
-  difference?: string | null
+  fromNow?: Maybe<boolean>
+  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  difference?: Maybe<string>
   /** Configures the locale Moment.js will use to format the date. */
-  locale?: string | null
+  locale?: Maybe<string>
 }
 export interface AccessTimeFileArgs {
-  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYYMMMM DD)" See https://momentjs.com/docs/#/displaying/format/ fordocumentation for different tokens */
-  formatString?: string | null
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  formatString?: Maybe<string>
   /** Returns a string generated with Moment.js' fromNow function */
-  fromNow?: boolean | null
-  /** Returns the difference between this date and the current time. Defaults tomiliseconds but you can also pass in as the measurement years, months,weeks, days, hours, minutes, and seconds. */
-  difference?: string | null
+  fromNow?: Maybe<boolean>
+  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  difference?: Maybe<string>
   /** Configures the locale Moment.js will use to format the date. */
-  locale?: string | null
+  locale?: Maybe<string>
 }
 export interface ChangeTimeFileArgs {
-  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYYMMMM DD)" See https://momentjs.com/docs/#/displaying/format/ fordocumentation for different tokens */
-  formatString?: string | null
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  formatString?: Maybe<string>
   /** Returns a string generated with Moment.js' fromNow function */
-  fromNow?: boolean | null
-  /** Returns the difference between this date and the current time. Defaults tomiliseconds but you can also pass in as the measurement years, months,weeks, days, hours, minutes, and seconds. */
-  difference?: string | null
+  fromNow?: Maybe<boolean>
+  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  difference?: Maybe<string>
   /** Configures the locale Moment.js will use to format the date. */
-  locale?: string | null
+  locale?: Maybe<string>
 }
 export interface BirthTimeFileArgs {
-  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYYMMMM DD)" See https://momentjs.com/docs/#/displaying/format/ fordocumentation for different tokens */
-  formatString?: string | null
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  formatString?: Maybe<string>
   /** Returns a string generated with Moment.js' fromNow function */
-  fromNow?: boolean | null
-  /** Returns the difference between this date and the current time. Defaults tomiliseconds but you can also pass in as the measurement years, months,weeks, days, hours, minutes, and seconds. */
-  difference?: string | null
+  fromNow?: Maybe<boolean>
+  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  difference?: Maybe<string>
   /** Configures the locale Moment.js will use to format the date. */
-  locale?: string | null
+  locale?: Maybe<string>
 }
 export interface AtimeFileArgs {
-  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYYMMMM DD)" See https://momentjs.com/docs/#/displaying/format/ fordocumentation for different tokens */
-  formatString?: string | null
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  formatString?: Maybe<string>
   /** Returns a string generated with Moment.js' fromNow function */
-  fromNow?: boolean | null
-  /** Returns the difference between this date and the current time. Defaults tomiliseconds but you can also pass in as the measurement years, months,weeks, days, hours, minutes, and seconds. */
-  difference?: string | null
+  fromNow?: Maybe<boolean>
+  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  difference?: Maybe<string>
   /** Configures the locale Moment.js will use to format the date. */
-  locale?: string | null
+  locale?: Maybe<string>
 }
 export interface MtimeFileArgs {
-  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYYMMMM DD)" See https://momentjs.com/docs/#/displaying/format/ fordocumentation for different tokens */
-  formatString?: string | null
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  formatString?: Maybe<string>
   /** Returns a string generated with Moment.js' fromNow function */
-  fromNow?: boolean | null
-  /** Returns the difference between this date and the current time. Defaults tomiliseconds but you can also pass in as the measurement years, months,weeks, days, hours, minutes, and seconds. */
-  difference?: string | null
+  fromNow?: Maybe<boolean>
+  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  difference?: Maybe<string>
   /** Configures the locale Moment.js will use to format the date. */
-  locale?: string | null
+  locale?: Maybe<string>
 }
 export interface CtimeFileArgs {
-  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYYMMMM DD)" See https://momentjs.com/docs/#/displaying/format/ fordocumentation for different tokens */
-  formatString?: string | null
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  formatString?: Maybe<string>
   /** Returns a string generated with Moment.js' fromNow function */
-  fromNow?: boolean | null
-  /** Returns the difference between this date and the current time. Defaults tomiliseconds but you can also pass in as the measurement years, months,weeks, days, hours, minutes, and seconds. */
-  difference?: string | null
+  fromNow?: Maybe<boolean>
+  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  difference?: Maybe<string>
   /** Configures the locale Moment.js will use to format the date. */
-  locale?: string | null
+  locale?: Maybe<string>
 }
 export interface BirthtimeFileArgs {
-  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYYMMMM DD)" See https://momentjs.com/docs/#/displaying/format/ fordocumentation for different tokens */
-  formatString?: string | null
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  formatString?: Maybe<string>
   /** Returns a string generated with Moment.js' fromNow function */
-  fromNow?: boolean | null
-  /** Returns the difference between this date and the current time. Defaults tomiliseconds but you can also pass in as the measurement years, months,weeks, days, hours, minutes, and seconds. */
-  difference?: string | null
+  fromNow?: Maybe<boolean>
+  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  difference?: Maybe<string>
   /** Configures the locale Moment.js will use to format the date. */
-  locale?: string | null
+  locale?: Maybe<string>
 }
 export interface ExcerptMarkdownRemarkArgs {
-  pruneLength?: number | null
+  pruneLength?: Maybe<number>
 
-  truncate?: boolean | null
+  truncate?: Maybe<boolean>
 
-  format?: ExcerptFormats | null
+  format?: Maybe<ExcerptFormats>
 }
 export interface HeadingsMarkdownRemarkArgs {
-  depth?: HeadingLevels | null
+  depth?: Maybe<HeadingLevels>
 }
 export interface TableOfContentsMarkdownRemarkArgs {
-  pathToSlugField?: string | null
+  pathToSlugField?: Maybe<string>
 }
 export interface DateFrontmatter_2Args {
-  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYYMMMM DD)" See https://momentjs.com/docs/#/displaying/format/ fordocumentation for different tokens */
-  formatString?: string | null
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  formatString?: Maybe<string>
   /** Returns a string generated with Moment.js' fromNow function */
-  fromNow?: boolean | null
-  /** Returns the difference between this date and the current time. Defaults tomiliseconds but you can also pass in as the measurement years, months,weeks, days, hours, minutes, and seconds. */
-  difference?: string | null
+  fromNow?: Maybe<boolean>
+  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  difference?: Maybe<string>
   /** Configures the locale Moment.js will use to format the date. */
-  locale?: string | null
+  locale?: Maybe<string>
 }
 export interface DistinctAuthorJsonConnectionArgs {
-  field?: AuthorJsonDistinctEnum | null
+  field?: Maybe<AuthorJsonDistinctEnum>
 }
 export interface GroupAuthorJsonConnectionArgs {
-  skip?: number | null
+  skip?: Maybe<number>
 
-  limit?: number | null
+  limit?: Maybe<number>
 
-  field?: AuthorJsonGroupEnum | null
+  field?: Maybe<AuthorJsonGroupEnum>
 }
 export interface DistinctMarkdownRemarkConnectionArgs {
-  field?: MarkdownRemarkDistinctEnum | null
+  field?: Maybe<MarkdownRemarkDistinctEnum>
 }
 export interface GroupMarkdownRemarkConnectionArgs {
-  skip?: number | null
+  skip?: Maybe<number>
 
-  limit?: number | null
+  limit?: Maybe<number>
 
-  field?: MarkdownRemarkGroupEnum | null
+  field?: Maybe<MarkdownRemarkGroupEnum>
 }
 export interface PortSiteArgs {
-  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYYMMMM DD)" See https://momentjs.com/docs/#/displaying/format/ fordocumentation for different tokens */
-  formatString?: string | null
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  formatString?: Maybe<string>
   /** Returns a string generated with Moment.js' fromNow function */
-  fromNow?: boolean | null
-  /** Returns the difference between this date and the current time. Defaults tomiliseconds but you can also pass in as the measurement years, months,weeks, days, hours, minutes, and seconds. */
-  difference?: string | null
+  fromNow?: Maybe<boolean>
+  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  difference?: Maybe<string>
   /** Configures the locale Moment.js will use to format the date. */
-  locale?: string | null
+  locale?: Maybe<string>
 }
 export interface BuildTimeSiteArgs {
-  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYYMMMM DD)" See https://momentjs.com/docs/#/displaying/format/ fordocumentation for different tokens */
-  formatString?: string | null
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  formatString?: Maybe<string>
   /** Returns a string generated with Moment.js' fromNow function */
-  fromNow?: boolean | null
-  /** Returns the difference between this date and the current time. Defaults tomiliseconds but you can also pass in as the measurement years, months,weeks, days, hours, minutes, and seconds. */
-  difference?: string | null
+  fromNow?: Maybe<boolean>
+  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  difference?: Maybe<string>
   /** Configures the locale Moment.js will use to format the date. */
-  locale?: string | null
+  locale?: Maybe<string>
 }
