@@ -20,6 +20,7 @@ The code base for the [Codemanufacture](https://codemanufacture.com/)
 
 - [Gatsby 2.0](https://www.gatsbyjs.org/) - a static site generator with following plugins:
   - [Canonical urls](https://www.gatsbyjs.org/packages/gatsby-plugin-canonical-urls)
+  - [Copy linked files](https://www.gatsbyjs.org/packages/gatsby-remark-copy-linked-files/)
   - [Google Tag Manager](https://www.gatsbyjs.org/packages/gatsby-plugin-google-tagmanager)
   - [Robots.txt](https://www.gatsbyjs.org/packages/gatsby-plugin-robots-txt)
   - [Sitemap](https://www.gatsbyjs.org/packages/gatsby-plugin-sitemap)

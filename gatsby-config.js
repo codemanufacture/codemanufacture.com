@@ -35,6 +35,7 @@ module.exports = {
         plugins: [
           `gatsby-remark-autolink-headers`,
           `gatsby-remark-prismjs`,
+          `gatsby-remark-copy-linked-files`,
         ],
       },
     },
