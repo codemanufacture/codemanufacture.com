@@ -78,7 +78,7 @@
     "@types/styled-components": "^4.0.1",
     "@types/throttle-debounce": "^1.1.0",
     "@types/uniqid": "^4.1.2",
-    "@types/validator": "^9.4.3",
+    "@types/validator": "^10.0.0",
     "babel-core": "^7.0.0-0",
     "babel-jest": "^23.6.0",
     "graphql-code-generator": "^0.15.0",
