@@ -40,17 +40,54 @@ const StyledPageWrapper = styled.div`
     font-size: 18px;
   }
 `
+interface FrontmatterInterface {
+  author?: string
+  date?: string
+  title?: string
+  tags?: string[]
+}
 
 interface BlogPostProps {
   title: string
   html: string
+  frontmatter: FrontmatterInterface
 }
 
-const BlogPost: React.FunctionComponent<BlogPostProps> = ({ title, html }) => {
+interface BlogPostHelmetProps {
+  frontmatter: FrontmatterInterface
+}
+
+const BlogPostHelmet: React.FunctionComponent<BlogPostHelmetProps> = props => {
+  const data = props.frontmatter
+
+  return (
+    <Helmet title={data.title}>
+      <script type="application/ld+json">
+        {`
+        {
+          "@context: "http://schema.org/",
+          "@type": "BlogPosting",
+          "name": "${data.title}",
+          "author": "${data.author}",
+          "date": "${data.date}",
+          "keywords": "${data.tags}",
+          "content"
+        }
+        `}
+      </script>
+    </Helmet>
+  )
+}
+
+const BlogPost: React.FunctionComponent<BlogPostProps> = ({
+  frontmatter,
+  title,
+  html,
+}) => {
   return (
     <Layout>
       <StyledPageWrapper>
-        <Helmet title={title} />
+        <BlogPostHelmet frontmatter={frontmatter} />
         <h1>{title}</h1>
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </StyledPageWrapper>

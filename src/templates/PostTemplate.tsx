@@ -10,9 +10,9 @@ interface PostTemplateProps {
 const PostTemplate: React.FunctionComponent<PostTemplateProps> = ({ data }) => {
   const frontmatter =
     (data && data.markdownRemark && data.markdownRemark.frontmatter) || {}
-  const title = frontmatter.title || ''
+  const title = frontmatter.title ? frontmatter.title : ''
   const html = (data && data.markdownRemark && data.markdownRemark.html) || ''
-  return <BlogPost html={html} title={title} />
+  return <BlogPost html={html} title={title} frontmatter={frontmatter} />
 }
 
 export default PostTemplate
@@ -23,6 +23,9 @@ export const postQuery = graphql`
       html
       frontmatter {
         title
+        date(formatString: "YYYY-MM-DD")
+        author
+        tags
       }
     }
   }
