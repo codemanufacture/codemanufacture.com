@@ -8444,7 +8444,7 @@ export interface Frontmatter_2 {
 
   date?: Maybe<Date>
 
-  authors?: Maybe<(Maybe<string>)[]>
+  authors?: Maybe<AuthorJson[]>
 
   tags?: Maybe<(Maybe<string>)[]>
 

@@ -9,6 +9,9 @@ module.exports = {
     siteUrl: config.siteUrl,
     title: `Codemanufacture - AWS and Magento Consultancy`,
   },
+  mapping: {
+    'MarkdownRemark.frontmatter.authors': 'AuthorJson',
+  },
   plugins: [
     `gatsby-transformer-json`,
     {

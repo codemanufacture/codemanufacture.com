@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import Layout from '../Layout'
 import { colors } from '../../theme'
+import { Frontmatter_2, AuthorJson } from '../../graphql-types'
 
 const StyledPageWrapper = styled.div`
   margin: 0 auto;
@@ -42,15 +43,78 @@ const StyledPageWrapper = styled.div`
 `
 
 interface BlogPostProps {
+  excerpt: string
   title: string
+  html: string
+  frontmatter: Frontmatter_2
+}
+
+interface BlogPostHelmetProps {
+  excerpt: string
+  frontmatter: Frontmatter_2
   html: string
 }
 
-const BlogPost: React.FunctionComponent<BlogPostProps> = ({ title, html }) => {
+const createAuthorData = (authors?: AuthorJson[]) => {
+  if (!authors || !authors.length) {
+    return false
+  }
+
+  return authors.map((author: AuthorJson) => {
+    const githubNick = author.github || ''
+    const twitterNick = author.github || ''
+
+    return `{
+      "@type": "Person",
+      "image": "${author.avatar ? author.avatar.relativePath : ''}",
+      "name": "${author.name}",
+      "description": "${author.bio}",
+      "sameAs": [
+        "http://github.com/${githubNick.substring(1)}",
+        "http://twitter.com/${twitterNick.substring(1)}",
+      ]
+     },`
+  })
+}
+
+const BlogPostHelmet: React.FunctionComponent<BlogPostHelmetProps> = props => {
+  const data = props.frontmatter
+  const authors = data.authors ? data.authors : []
+
+  return (
+    <Helmet title={data.title || ''}>
+      <script type="application/ld+json">
+        {`
+        {
+          "@context: "http://schema.org/",
+          "@type": "BlogPosting",
+          "name": "${data.title}",
+          "author": [${createAuthorData(authors)}],
+          "date": "${data.date}",
+          "keywords": "${data.tags}",
+          "text": "${props.excerpt}",
+          "articleBody": "${props.html}",
+        }
+        `}
+      </script>
+    </Helmet>
+  )
+}
+
+const BlogPost: React.FunctionComponent<BlogPostProps> = ({
+  excerpt,
+  frontmatter,
+  title,
+  html,
+}) => {
   return (
     <Layout>
       <StyledPageWrapper>
-        <Helmet title={title} />
+        <BlogPostHelmet
+          frontmatter={frontmatter}
+          excerpt={excerpt}
+          html={html}
+        />
         <h1>{title}</h1>
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </StyledPageWrapper>
