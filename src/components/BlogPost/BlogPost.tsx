@@ -56,7 +56,7 @@ interface BlogPostHelmetProps {
 }
 
 const createAuthorData = (authors?: AuthorJson[]) => {
-  if (!authors) {
+  if (!authors || !authors.length) {
     return false
   }
 
