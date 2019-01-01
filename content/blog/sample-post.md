@@ -1,7 +1,7 @@
 ---
 title: Sample post
 date: 2018-11-17
-author: Piotr Kwiecinski
+authors: [piotr-kwiecinski]
 tags: [sample]
 ---
 

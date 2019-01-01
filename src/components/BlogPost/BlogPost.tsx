@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import Layout from '../Layout'
 import { colors } from '../../theme'
+import { Frontmatter_2 } from '../../graphql-types'
 
 const StyledPageWrapper = styled.div`
   margin: 0 auto;
@@ -40,38 +41,38 @@ const StyledPageWrapper = styled.div`
     font-size: 18px;
   }
 `
-interface FrontmatterInterface {
-  author?: string
-  date?: string
-  title?: string
-  tags?: string[]
-}
 
 interface BlogPostProps {
+  excerpt: string
   title: string
   html: string
-  frontmatter: FrontmatterInterface
+  frontmatter: Frontmatter_2
 }
 
 interface BlogPostHelmetProps {
-  frontmatter: FrontmatterInterface
+  excerpt: string
+  frontmatter: Frontmatter_2
+  html: string
 }
 
 const BlogPostHelmet: React.FunctionComponent<BlogPostHelmetProps> = props => {
   const data = props.frontmatter
 
+  // TODO - add proper handling of multiple authors
+
   return (
-    <Helmet title={data.title}>
+    <Helmet title={data.title || ''}>
       <script type="application/ld+json">
         {`
         {
           "@context: "http://schema.org/",
           "@type": "BlogPosting",
           "name": "${data.title}",
-          "author": "${data.author}",
+          "author": "${data.authors}",
           "date": "${data.date}",
           "keywords": "${data.tags}",
-          "content"
+          "text": "${props.excerpt}",
+          "articleBody": "${props.html}",
         }
         `}
       </script>
@@ -80,6 +81,7 @@ const BlogPostHelmet: React.FunctionComponent<BlogPostHelmetProps> = props => {
 }
 
 const BlogPost: React.FunctionComponent<BlogPostProps> = ({
+  excerpt,
   frontmatter,
   title,
   html,
@@ -87,7 +89,11 @@ const BlogPost: React.FunctionComponent<BlogPostProps> = ({
   return (
     <Layout>
       <StyledPageWrapper>
-        <BlogPostHelmet frontmatter={frontmatter} />
+        <BlogPostHelmet
+          frontmatter={frontmatter}
+          excerpt={excerpt}
+          html={html}
+        />
         <h1>{title}</h1>
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </StyledPageWrapper>
