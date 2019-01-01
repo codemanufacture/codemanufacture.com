@@ -37,7 +37,10 @@ export const postQuery = graphql`
         authors {
           id
           name
-          avatar
+          avatar {
+            id
+            relativePath
+          }
           bio
           twitter
           github
