@@ -66,7 +66,7 @@ const createAuthorData = (authors?: AuthorJson[]) => {
 
     return `{
       "@type": "Person",
-      "image": "${author.avatar}",
+      "image": "${author.avatar ? author.avatar.relativePath : ''}",
       "name": "${author.name}",
       "description": "${author.bio}",
       "sameAs": [
