@@ -34,7 +34,14 @@ export const postQuery = graphql`
       frontmatter {
         title
         date(formatString: "YYYY-MM-DD")
-        authors
+        authors {
+          id
+          name
+          avatar
+          bio
+          twitter
+          github
+        }
         tags
       }
     }
