@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import Layout from '../Layout'
 import { colors } from '../../theme'
-import { Frontmatter_2 } from '../../graphql-types'
+import { Frontmatter_2, AuthorJson } from '../../graphql-types'
 
 const StyledPageWrapper = styled.div`
   margin: 0 auto;
@@ -55,10 +55,31 @@ interface BlogPostHelmetProps {
   html: string
 }
 
+const createAuthorData = (authors?: AuthorJson[]) => {
+  if (!authors) {
+    return false
+  }
+
+  return authors.map((author: AuthorJson) => {
+    const githubNick = author.github || ''
+    const twitterNick = author.github || ''
+
+    return `{
+      "@type": "Person",
+      "image": "${author.avatar}",
+      "name": "${author.name}",
+      "description": "${author.bio}",
+      "sameAs": [
+        "http://github.com/${githubNick.substring(1)}",
+        "http://twitter.com/${twitterNick.substring(1)}",
+      ]
+     },`
+  })
+}
+
 const BlogPostHelmet: React.FunctionComponent<BlogPostHelmetProps> = props => {
   const data = props.frontmatter
-
-  // TODO - add proper handling of multiple authors
+  const authors = data.authors ? data.authors : []
 
   return (
     <Helmet title={data.title || ''}>
@@ -68,7 +89,7 @@ const BlogPostHelmet: React.FunctionComponent<BlogPostHelmetProps> = props => {
           "@context: "http://schema.org/",
           "@type": "BlogPosting",
           "name": "${data.title}",
-          "author": "${data.authors}",
+          "author": [${createAuthorData(authors)}],
           "date": "${data.date}",
           "keywords": "${data.tags}",
           "text": "${props.excerpt}",
