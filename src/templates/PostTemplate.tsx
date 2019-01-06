@@ -37,7 +37,7 @@ export const postQuery = graphql`
           publicURL
         }
         title
-        date(formatString: "YYYY-MM-DD")
+        date(formatString: "MMMM DD, YYYY")
         authors {
           id
           name

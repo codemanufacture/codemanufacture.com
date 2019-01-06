@@ -62,10 +62,11 @@ const StyledBlogHero = styled.div`
   }
 
   .meta-data-wrapper {
+    display: flex;
+    margin: 0 auto;
     color: rgba(255, 255, 255, 0.7);
     font-size: ${typography.subtitleSize};
-    margin: 0 auto;
-    display: flex;
+    text-transform: uppercase;
   }
 `
 
