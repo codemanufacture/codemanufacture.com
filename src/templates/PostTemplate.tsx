@@ -32,6 +32,10 @@ export const postQuery = graphql`
       html
       excerpt
       frontmatter {
+        backgroundColor
+        backgroundImage {
+          publicURL
+        }
         title
         date(formatString: "YYYY-MM-DD")
         authors {
@@ -39,7 +43,7 @@ export const postQuery = graphql`
           name
           avatar {
             id
-            relativePath
+            publicURL
           }
           bio
           twitter
