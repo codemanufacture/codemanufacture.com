@@ -8447,6 +8447,8 @@ export interface Frontmatter_2 {
   authors?: Maybe<AuthorJson[]>
 
   tags?: Maybe<(Maybe<string>)[]>
+  backgroundColor?: string
+  backgroundImage?: Maybe<File>
 
   _PARENT?: Maybe<string>
 }

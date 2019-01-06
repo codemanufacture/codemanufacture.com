@@ -2,6 +2,7 @@ import * as React from 'react'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import Layout from '../Layout'
+import BlogHero from '../BlogHero'
 import { colors } from '../../theme'
 import { Frontmatter_2, AuthorJson } from '../../graphql-types'
 
@@ -66,7 +67,7 @@ const createAuthorData = (authors?: AuthorJson[]) => {
 
     return `{
       "@type": "Person",
-      "image": "${author.avatar ? author.avatar.relativePath : ''}",
+      "image": "${author.avatar ? author.avatar.publicURL : ''}",
       "name": "${author.name}",
       "description": "${author.bio}",
       "sameAs": [
@@ -115,6 +116,7 @@ const BlogPost: React.FunctionComponent<BlogPostProps> = ({
           excerpt={excerpt}
           html={html}
         />
+        <BlogHero frontmatter={frontmatter} />
         <h1>{title}</h1>
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </StyledPageWrapper>

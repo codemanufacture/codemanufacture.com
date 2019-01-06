@@ -3,6 +3,8 @@ title: Sample post
 date: 2018-11-17
 authors: [piotr-kwiecinski]
 tags: [sample]
+backgroundImage: '../posts/post-background.jpg'
+backgroundColor: '#000'
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consectetur ut orci ut auctor. Fusce in odio efficitur, pretium augue ac, semper justo. Sed lacinia vel tellus quis posuere. Nulla at mi et ex imperdiet sollicitudin eu at lectus. Aenean eget orci sem. Suspendisse in lectus nisl. Curabitur mattis facilisis velit quis eleifend. Quisque in orci et dolor aliquam tempor in ac orci. Quisque ex enim, aliquet in ultrices non, ultrices nec felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
