@@ -42,10 +42,12 @@ const StyledBlogLayout = styled.article`
     display: none;
   }
 
-  .inner-wrapper {
+  .content-wrapper {
     width: 90%;
     margin: 0 auto;
     padding: 0 20px;
+    padding-top: ${articlePadding};
+    padding-bottom: ${articlePadding};
     background: #fff;
     font-size: ${typography.paragraphSize};
 
@@ -69,11 +71,6 @@ const StyledBlogLayout = styled.article`
         }
       }
     }
-  }
-
-  .content-wrapper {
-    padding-top: ${articlePadding};
-    padding-bottom: ${articlePadding};
   }
 
   .sidebar {
@@ -103,12 +100,10 @@ interface BlogLayoutProps {
 const BlogLayout: React.FunctionComponent<BlogLayoutProps> = ({ html }) => {
   return (
     <StyledBlogLayout>
-      <div className="inner-wrapper">
-        <section
-          className="content-wrapper"
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
-      </div>
+      <section
+        className="content-wrapper"
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
       <aside className="sidebar" role="sidebar">
         Lorem ipsum dolor sit amet
       </aside>
