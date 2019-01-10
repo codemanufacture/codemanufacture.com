@@ -106,7 +106,6 @@ const BlogPostHelmet: React.FunctionComponent<BlogPostHelmetProps> = props => {
 const BlogPost: React.FunctionComponent<BlogPostProps> = ({
   excerpt,
   frontmatter,
-  title,
   html,
 }) => {
   return (

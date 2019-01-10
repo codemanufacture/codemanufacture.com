@@ -1,7 +1,5 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import classnames from 'classnames'
-import { throttle } from 'throttle-debounce'
 import { colors, displayDimensions, typography } from '../../theme'
 
 const articlePadding = `100px`
