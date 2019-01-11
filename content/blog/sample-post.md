@@ -7,9 +7,39 @@ backgroundImage: '../posts/post-background.jpg'
 backgroundColor: '#000'
 ---
 
+## Main title
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consectetur ut orci ut auctor. Fusce in odio efficitur, pretium augue ac, semper justo. Sed lacinia vel tellus quis posuere. Nulla at mi et ex imperdiet sollicitudin eu at lectus. Aenean eget orci sem. Suspendisse in lectus nisl. Curabitur mattis facilisis velit quis eleifend. Quisque in orci et dolor aliquam tempor in ac orci. Quisque ex enim, aliquet in ultrices non, ultrices nec felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
 
+### Smaller title
+
 Praesent vehicula erat arcu, et porttitor turpis vehicula nec. Mauris tempus erat nulla, sed efficitur justo bibendum nec. Proin quis lacus dapibus, tincidunt nunc ac, convallis magna. Vestibulum quis condimentum nunc, quis consectetur libero. In sagittis, orci eu aliquam tempus, leo risus pellentesque ligula, non faucibus est purus quis lectus. Sed fringilla accumsan fermentum. Sed vitae tincidunt enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at ex vitae sapien viverra hendrerit id id diam.
+
+### Some list
+
+- first item
+- second item
+- third item
+
+Etiam lacus nisl, tempor ac nisl vitae, tristique fermentum turpis. Vivamus purus libero, pulvinar at malesuada sit amet, pharetra vitae velit. Phasellus volutpat mauris et varius pharetra. Cras eu ultrices est. Vestibulum tincidunt ultrices erat, sed hendrerit arcu consequat vitae. Integer erat nisl, sagittis suscipit elementum eget, cursus eget leo. Duis hendrerit ultrices arcu, et fringilla nunc.
+
+### Some ordered list
+
+1. first item
+2. second item
+3. third item
+
+Etiam lacus nisl, tempor ac nisl vitae, tristique fermentum turpis. Vivamus purus libero, pulvinar at malesuada sit amet, pharetra vitae velit. Phasellus volutpat mauris et varius pharetra. Cras eu ultrices est. Vestibulum tincidunt ultrices erat, sed hendrerit arcu consequat vitae. Integer erat nisl, sagittis suscipit elementum eget, cursus eget leo. Duis hendrerit ultrices arcu, et fringilla nunc.
+
+### Lets try some quotes
+
+> Quoted text.
+>
+> > Quoted quote.
+
+Etiam lacus nisl, tempor ac nisl vitae, tristique fermentum turpis. Vivamus purus libero, pulvinar at malesuada sit amet, pharetra vitae velit. Phasellus volutpat
+
+#### Even smaller title
 
 Etiam lacus nisl, tempor ac nisl vitae, tristique fermentum turpis. Vivamus purus libero, pulvinar at malesuada sit amet, pharetra vitae velit. Phasellus volutpat mauris et varius pharetra. Cras eu ultrices est. Vestibulum tincidunt ultrices erat, sed hendrerit arcu consequat vitae. Integer erat nisl, sagittis suscipit elementum eget, cursus eget leo. Duis hendrerit ultrices arcu, et fringilla nunc.
 

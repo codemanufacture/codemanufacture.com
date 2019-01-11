@@ -80,7 +80,7 @@ const createAuthorData = (authors?: AuthorJson[]) => {
       author.avatar && author.avatar.publicURL ? author.avatar.publicURL : ''
 
     return (
-      <figure className="author-wrapper">
+      <figure key={`author-${author.id}`} className="author-wrapper">
         <img src={imageUrl} />
         <figcaption>{author.name}</figcaption>
       </figure>
@@ -105,6 +105,7 @@ const BlogHero: React.FunctionComponent<BlogHeroProps> = ({ frontmatter }) => {
     <StyledBlogHero
       backgroundColor={backgroundColor}
       backgroundImage={backgroundImage}
+      id="blog-hero-section"
     >
       <h1 className="post-title">{frontmatter.title}</h1>
       <div className="meta-data-wrapper">

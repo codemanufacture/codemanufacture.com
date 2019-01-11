@@ -5,6 +5,7 @@ import Layout from '../Layout'
 import BlogHero from '../BlogHero'
 import { colors } from '../../theme'
 import { Frontmatter_2, AuthorJson } from '../../graphql-types'
+import BlogLayout from '../BlogLayout'
 
 const StyledPageWrapper = styled.div`
   margin: 0 auto;
@@ -105,7 +106,6 @@ const BlogPostHelmet: React.FunctionComponent<BlogPostHelmetProps> = props => {
 const BlogPost: React.FunctionComponent<BlogPostProps> = ({
   excerpt,
   frontmatter,
-  title,
   html,
 }) => {
   return (
@@ -117,8 +117,7 @@ const BlogPost: React.FunctionComponent<BlogPostProps> = ({
           html={html}
         />
         <BlogHero frontmatter={frontmatter} />
-        <h1>{title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+        <BlogLayout html={html} />
       </StyledPageWrapper>
     </Layout>
   )
