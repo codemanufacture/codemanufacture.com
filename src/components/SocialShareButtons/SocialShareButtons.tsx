@@ -31,7 +31,10 @@ const StyledSocialShareButtons = styled.div`
 `
 
 const SocialShareButtons: React.FunctionComponent = () => {
-  const currentUrl = window.location.href
+  const currentUrl =
+    typeof window !== 'undefined' && window.location.href
+      ? window.location.href
+      : ''
 
   return (
     <StyledSocialShareButtons>
