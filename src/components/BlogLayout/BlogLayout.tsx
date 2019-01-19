@@ -1,8 +1,10 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import { colors, displayDimensions, typography } from '../../theme'
+import SocialShareButtons from '../SocialShareButtons'
 
-const articlePadding = `100px`
+const articlePaddingBase = 50
+const articlePadding = `${articlePaddingBase * 2}px`
 const sidebarWidth = `300px`
 const sidebarMobileWidth = `200px`
 
@@ -45,6 +47,10 @@ const StyledBlogLayout = styled.article`
     padding-bottom: ${articlePadding};
     background: #fff;
     font-size: ${typography.paragraphSize};
+
+    .blog-post-content {
+      margin-bottom: ${articlePaddingBase}px;
+    }
 
     blockquote {
       margin: 0;
@@ -104,10 +110,13 @@ interface BlogLayoutProps {
 const BlogLayout: React.FunctionComponent<BlogLayoutProps> = ({ html }) => {
   return (
     <StyledBlogLayout>
-      <section
-        className="content-wrapper"
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
+      <div className="content-wrapper">
+        <section
+          className="blog-post-content"
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
+        <SocialShareButtons />
+      </div>
       <aside className="sidebar" role="sidebar">
         Lorem ipsum dolor sit amet
       </aside>
