@@ -39,11 +39,6 @@ const StyledBlogLayout = styled.article`
     }
   }
 
-  /* temporary */
-  .gatsby-highlight {
-    display: none;
-  }
-
   .content-wrapper {
     width: 90%;
     margin: 0 auto;
@@ -77,6 +72,15 @@ const StyledBlogLayout = styled.article`
         }
       }
     }
+  }
+
+  .gatsby-highlight {
+    margin-bottom: 1.45rem;
+  }
+
+  pre[class*='language-'] {
+    border-radius: 0;
+    padding: 2em;
   }
 
   .sidebar {
