@@ -5,6 +5,7 @@
   "author": "Piotr Kwiecinski <piotr.kwiecinski@codemanufacure.com>",
   "private": true,
   "dependencies": {
+    "@types/react-share": "^2.1.1",
     "babel-plugin-styled-components": "^1.5.1",
     "classnames": "^2.2.6",
     "gatsby": "^2.0.18",
@@ -27,6 +28,7 @@
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-helmet": "^5.2.0",
+    "react-share": "^2.4.0",
     "styled-components": "^4.0.0",
     "throttle-debounce": "^2.0.1",
     "ts-loader": "^5.0.0",
