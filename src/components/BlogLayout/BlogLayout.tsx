@@ -1,6 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import { colors, displayDimensions, typography } from '../../theme'
+import DisqusThread from '../DisqusThread'
 
 const articlePadding = `100px`
 const sidebarWidth = `300px`
@@ -51,6 +52,10 @@ const StyledBlogLayout = styled.article`
     background: #fff;
     font-size: ${typography.paragraphSize};
 
+    .blog-post-content {
+      margin-bottom: ${articlePadding};
+    }
+
     blockquote {
       margin: 0;
       padding: 30px;
@@ -100,10 +105,13 @@ interface BlogLayoutProps {
 const BlogLayout: React.FunctionComponent<BlogLayoutProps> = ({ html }) => {
   return (
     <StyledBlogLayout>
-      <section
-        className="content-wrapper"
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
+      <div className="content-wrapper">
+        <section
+          className="blog-post-content"
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
+        <DisqusThread />
+      </div>
       <aside className="sidebar" role="sidebar">
         Lorem ipsum dolor sit amet
       </aside>
