@@ -4,6 +4,10 @@
     "config:base",
     "docker:disable"
   ],
+  "automerge": true,
+  "major": {
+    "automerge": false
+  },
   "pinVersions": false,
   "rebaseStalePrs": true,
   "lockFileMaintenance": {
