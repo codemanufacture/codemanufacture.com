@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { Frontmatter_2, AuthorJson, File } from '../../graphql-types'
+import { Frontmatter_2, AuthorJson, File, Maybe } from '../../graphql-types'
 import { colors, displayDimensions, sizes, typography } from '../../theme'
 
 interface StyledBlogHeroProps {
@@ -70,22 +70,25 @@ const StyledBlogHero = styled.div`
   }
 `
 
-const createAuthorData = (authors?: AuthorJson[]) => {
-  if (!authors || !authors.length) {
-    return false
-  }
+const createAuthorData = (authors?: Array<Maybe<AuthorJson>>) => {
+  return (
+    authors &&
+    authors
+      .filter((e): e is AuthorJson => !!e)
+      .map((author: AuthorJson) => {
+        const imageUrl =
+          author.avatar && author.avatar.publicURL
+            ? author.avatar.publicURL
+            : ''
 
-  return authors.map((author: AuthorJson) => {
-    const imageUrl =
-      author.avatar && author.avatar.publicURL ? author.avatar.publicURL : ''
-
-    return (
-      <figure key={`author-${author.id}`} className="author-wrapper">
-        <img src={imageUrl} />
-        <figcaption>{author.name}</figcaption>
-      </figure>
-    )
-  })
+        return (
+          <figure key={`author-${author.id}`} className="author-wrapper">
+            <img src={imageUrl} />
+            <figcaption>{author.name}</figcaption>
+          </figure>
+        )
+      })
+  )
 }
 
 interface BlogHeroProps {

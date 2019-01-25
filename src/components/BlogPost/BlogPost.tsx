@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Layout from '../Layout'
 import BlogHero from '../BlogHero'
 import { colors } from '../../theme'
-import { Frontmatter_2, AuthorJson } from '../../graphql-types'
+import { Frontmatter_2, AuthorJson, Maybe } from '../../graphql-types'
 import BlogLayout from '../BlogLayout'
 
 const StyledPageWrapper = styled.div`
@@ -57,16 +57,16 @@ interface BlogPostHelmetProps {
   html: string
 }
 
-const createAuthorData = (authors?: AuthorJson[]) => {
-  if (!authors || !authors.length) {
-    return false
-  }
+const createAuthorData = (authors?: Array<Maybe<AuthorJson>>) => {
+  return (
+    authors &&
+    authors
+      .filter((e): e is AuthorJson => !!e)
+      .map((author: AuthorJson) => {
+        const githubNick = author.github || ''
+        const twitterNick = author.github || ''
 
-  return authors.map((author: AuthorJson) => {
-    const githubNick = author.github || ''
-    const twitterNick = author.github || ''
-
-    return `{
+        return `{
       "@type": "Person",
       "image": "${author.avatar ? author.avatar.publicURL : ''}",
       "name": "${author.name}",
@@ -76,7 +76,8 @@ const createAuthorData = (authors?: AuthorJson[]) => {
         "http://twitter.com/${twitterNick.substring(1)}",
       ]
      },`
-  })
+      })
+  )
 }
 
 const BlogPostHelmet: React.FunctionComponent<BlogPostHelmetProps> = props => {
