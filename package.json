@@ -62,6 +62,9 @@
     "test:watch": "jest --watch",
     "type-check": "tsc"
   },
+  "resolutions": {
+    "terser": "3.14.*"
+  },
   "devDependencies": {
     "@babel/core": "^7.1.2",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
