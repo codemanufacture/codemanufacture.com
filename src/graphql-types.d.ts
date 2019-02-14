@@ -4,7 +4,7 @@ export type Maybe<T> = T | null
 export interface SitePageConnectionSort {
   fields: (Maybe<SitePageConnectionSortByFieldsEnum>)[]
 
-  order?: Maybe<SitePageConnectionSortOrderValues>
+  order?: SitePageConnectionSortOrderValues
 }
 /** Filter connection on its fields */
 export interface FilterSitePage {
@@ -144,8 +144,6 @@ export interface SitePageConnectionPluginCreatorInputObject {
 
   packageJson?: Maybe<SitePageConnectionPluginCreatorPackageJsonInputObject>
 
-  parent?: Maybe<SitePageConnectionPluginCreatorParentQueryString>
-
   internal?: Maybe<SitePageConnectionPluginCreatorInternalInputObject>
 }
 
@@ -214,6 +212,10 @@ export interface SitePageConnectionPluginCreatorPluginOptionsInputObject {
 
   ignore?: Maybe<SitePageConnectionPluginCreatorPluginOptionsIgnoreQueryList>
 
+  ignoreFileExtensions?: Maybe<
+    SitePageConnectionPluginCreatorPluginOptionsIgnoreFileExtensionsQueryList
+  >
+
   exclude?: Maybe<SitePageConnectionPluginCreatorPluginOptionsExcludeQueryList>
 
   id?: Maybe<SitePageConnectionPluginCreatorPluginOptionsIdQueryString>
@@ -254,6 +256,10 @@ export interface SitePageConnectionPluginCreatorPluginOptionsPluginsInputObject 
 
   version?: Maybe<
     SitePageConnectionPluginCreatorPluginOptionsPluginsVersionQueryString
+  >
+
+  pluginOptions?: Maybe<
+    SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsInputObject
   >
 
   browserAPIs?: Maybe<
@@ -312,6 +318,26 @@ export interface SitePageConnectionPluginCreatorPluginOptionsPluginsNameQueryStr
 }
 
 export interface SitePageConnectionPluginCreatorPluginOptionsPluginsVersionQueryString {
+  eq?: Maybe<string>
+
+  ne?: Maybe<string>
+
+  regex?: Maybe<string>
+
+  glob?: Maybe<string>
+
+  in?: Maybe<(Maybe<string>)[]>
+
+  nin?: Maybe<(Maybe<string>)[]>
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsInputObject {
+  ignoreFileExtensions?: Maybe<
+    SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList
+  >
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList {
   eq?: Maybe<string>
 
   ne?: Maybe<string>
@@ -396,6 +422,20 @@ export interface SitePageConnectionPluginCreatorPluginOptionsNameQueryString {
 }
 
 export interface SitePageConnectionPluginCreatorPluginOptionsIgnoreQueryList {
+  eq?: Maybe<string>
+
+  ne?: Maybe<string>
+
+  regex?: Maybe<string>
+
+  glob?: Maybe<string>
+
+  in?: Maybe<(Maybe<string>)[]>
+
+  nin?: Maybe<(Maybe<string>)[]>
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsIgnoreFileExtensionsQueryList {
   eq?: Maybe<string>
 
   ne?: Maybe<string>
@@ -801,20 +841,6 @@ export interface SitePageConnectionPluginCreatorPackageJsonKeywordsQueryList {
   nin?: Maybe<(Maybe<string>)[]>
 }
 
-export interface SitePageConnectionPluginCreatorParentQueryString {
-  eq?: Maybe<string>
-
-  ne?: Maybe<string>
-
-  regex?: Maybe<string>
-
-  glob?: Maybe<string>
-
-  in?: Maybe<(Maybe<string>)[]>
-
-  nin?: Maybe<(Maybe<string>)[]>
-}
-
 export interface SitePageConnectionPluginCreatorInternalInputObject {
   contentDigest?: Maybe<
     SitePageConnectionPluginCreatorInternalContentDigestQueryString
@@ -978,7 +1004,7 @@ export interface SitePageConnectionInternalOwnerQueryString_2 {
 export interface SitePluginConnectionSort {
   fields: (Maybe<SitePluginConnectionSortByFieldsEnum>)[]
 
-  order?: Maybe<SitePluginConnectionSortOrderValues>
+  order?: SitePluginConnectionSortOrderValues
 }
 /** Filter connection on its fields */
 export interface FilterSitePlugin {
@@ -1070,6 +1096,10 @@ export interface SitePluginConnectionPluginOptionsInputObject_2 {
 
   ignore?: Maybe<SitePluginConnectionPluginOptionsIgnoreQueryList_2>
 
+  ignoreFileExtensions?: Maybe<
+    SitePluginConnectionPluginOptionsIgnoreFileExtensionsQueryList_2
+  >
+
   exclude?: Maybe<SitePluginConnectionPluginOptionsExcludeQueryList_2>
 
   id?: Maybe<SitePluginConnectionPluginOptionsIdQueryString_2>
@@ -1097,6 +1127,10 @@ export interface SitePluginConnectionPluginOptionsPluginsInputObject_2 {
   name?: Maybe<SitePluginConnectionPluginOptionsPluginsNameQueryString_2>
 
   version?: Maybe<SitePluginConnectionPluginOptionsPluginsVersionQueryString_2>
+
+  pluginOptions?: Maybe<
+    SitePluginConnectionPluginOptionsPluginsPluginOptionsInputObject_2
+  >
 
   browserAPIs?: Maybe<
     SitePluginConnectionPluginOptionsPluginsBrowserApIsQueryList_2
@@ -1152,6 +1186,26 @@ export interface SitePluginConnectionPluginOptionsPluginsNameQueryString_2 {
 }
 
 export interface SitePluginConnectionPluginOptionsPluginsVersionQueryString_2 {
+  eq?: Maybe<string>
+
+  ne?: Maybe<string>
+
+  regex?: Maybe<string>
+
+  glob?: Maybe<string>
+
+  in?: Maybe<(Maybe<string>)[]>
+
+  nin?: Maybe<(Maybe<string>)[]>
+}
+
+export interface SitePluginConnectionPluginOptionsPluginsPluginOptionsInputObject_2 {
+  ignoreFileExtensions?: Maybe<
+    SitePluginConnectionPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList_2
+  >
+}
+
+export interface SitePluginConnectionPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList_2 {
   eq?: Maybe<string>
 
   ne?: Maybe<string>
@@ -1236,6 +1290,20 @@ export interface SitePluginConnectionPluginOptionsNameQueryString_2 {
 }
 
 export interface SitePluginConnectionPluginOptionsIgnoreQueryList_2 {
+  eq?: Maybe<string>
+
+  ne?: Maybe<string>
+
+  regex?: Maybe<string>
+
+  glob?: Maybe<string>
+
+  in?: Maybe<(Maybe<string>)[]>
+
+  nin?: Maybe<(Maybe<string>)[]>
+}
+
+export interface SitePluginConnectionPluginOptionsIgnoreFileExtensionsQueryList_2 {
   eq?: Maybe<string>
 
   ne?: Maybe<string>
@@ -1680,7 +1748,7 @@ export interface SitePluginConnectionInternalOwnerQueryString_2 {
 export interface DirectoryConnectionSort {
   fields: (Maybe<DirectoryConnectionSortByFieldsEnum>)[]
 
-  order?: Maybe<DirectoryConnectionSortOrderValues>
+  order?: DirectoryConnectionSortOrderValues
 }
 /** Filter connection on its fields */
 export interface FilterDirectory {
@@ -2356,7 +2424,7 @@ export interface DirectoryConnectionBirthtimeQueryString_2 {
 export interface FileConnectionSort {
   fields: (Maybe<FileConnectionSortByFieldsEnum>)[]
 
-  order?: Maybe<FileConnectionSortOrderValues>
+  order?: FileConnectionSortOrderValues
 }
 /** Filter connection on its fields */
 export interface FilterFile {
@@ -3064,7 +3132,7 @@ export interface PublicUrlQueryString_4 {
 export interface AuthorJsonConnectionSort {
   fields: (Maybe<AuthorJsonConnectionSortByFieldsEnum>)[]
 
-  order?: Maybe<AuthorJsonConnectionSortOrderValues>
+  order?: AuthorJsonConnectionSortOrderValues
 }
 /** Filter connection on its fields */
 export interface FilterAuthorJson {
@@ -3220,7 +3288,7 @@ export interface AuthorJsonConnectionInternalOwnerQueryString_2 {
 export interface MarkdownRemarkConnectionSort {
   fields: (Maybe<MarkdownRemarkConnectionSortByFieldsEnum>)[]
 
-  order?: Maybe<MarkdownRemarkConnectionSortOrderValues>
+  order?: MarkdownRemarkConnectionSortOrderValues
 }
 /** Filter connection on its fields */
 export interface FilterMarkdownRemark {
@@ -3229,8 +3297,6 @@ export interface FilterMarkdownRemark {
   internal?: Maybe<MarkdownRemarkConnectionInternalInputObject_2>
 
   frontmatter?: Maybe<MarkdownRemarkConnectionFrontmatterInputObject_2>
-
-  excerpt?: Maybe<ExcerptQueryString_4>
 
   rawMarkdownBody?: Maybe<MarkdownRemarkConnectionRawMarkdownBodyQueryString_2>
 
@@ -3241,6 +3307,8 @@ export interface FilterMarkdownRemark {
   fields?: Maybe<MarkdownRemarkConnectionFieldsInputObject_2>
 
   html?: Maybe<HtmlQueryString_4>
+
+  excerpt?: Maybe<ExcerptQueryString_4>
 
   headings?: Maybe<HeadingsQueryList_4>
 
@@ -3380,7 +3448,13 @@ export interface MarkdownRemarkConnectionFrontmatterInputObject_2 {
 
   tags?: Maybe<MarkdownRemarkConnectionFrontmatterTagsQueryList_2>
 
-  _PARENT?: Maybe<MarkdownRemarkConnectionFrontmatterParentQueryString_2>
+  backgroundImage?: Maybe<
+    MarkdownRemarkConnectionFrontmatterBackgroundImageQueryString_2
+  >
+
+  backgroundColor?: Maybe<
+    MarkdownRemarkConnectionFrontmatterBackgroundColorQueryString_2
+  >
 }
 
 export interface MarkdownRemarkConnectionFrontmatterTitleQueryString_2 {
@@ -3439,7 +3513,7 @@ export interface MarkdownRemarkConnectionFrontmatterTagsQueryList_2 {
   nin?: Maybe<(Maybe<string>)[]>
 }
 
-export interface MarkdownRemarkConnectionFrontmatterParentQueryString_2 {
+export interface MarkdownRemarkConnectionFrontmatterBackgroundImageQueryString_2 {
   eq?: Maybe<string>
 
   ne?: Maybe<string>
@@ -3453,7 +3527,7 @@ export interface MarkdownRemarkConnectionFrontmatterParentQueryString_2 {
   nin?: Maybe<(Maybe<string>)[]>
 }
 
-export interface ExcerptQueryString_4 {
+export interface MarkdownRemarkConnectionFrontmatterBackgroundColorQueryString_2 {
   eq?: Maybe<string>
 
   ne?: Maybe<string>
@@ -3530,6 +3604,20 @@ export interface MarkdownRemarkConnectionFieldsPageTypeQueryString_2 {
 }
 
 export interface HtmlQueryString_4 {
+  eq?: Maybe<string>
+
+  ne?: Maybe<string>
+
+  regex?: Maybe<string>
+
+  glob?: Maybe<string>
+
+  in?: Maybe<(Maybe<string>)[]>
+
+  nin?: Maybe<(Maybe<string>)[]>
+}
+
+export interface ExcerptQueryString_4 {
   eq?: Maybe<string>
 
   ne?: Maybe<string>
@@ -3788,8 +3876,6 @@ export interface SitePagePluginCreatorInputObject {
 
   packageJson?: Maybe<SitePagePluginCreatorPackageJsonInputObject>
 
-  parent?: Maybe<SitePagePluginCreatorParentQueryString>
-
   internal?: Maybe<SitePagePluginCreatorInternalInputObject>
 }
 
@@ -3858,6 +3944,10 @@ export interface SitePagePluginCreatorPluginOptionsInputObject {
 
   ignore?: Maybe<SitePagePluginCreatorPluginOptionsIgnoreQueryList>
 
+  ignoreFileExtensions?: Maybe<
+    SitePagePluginCreatorPluginOptionsIgnoreFileExtensionsQueryList
+  >
+
   exclude?: Maybe<SitePagePluginCreatorPluginOptionsExcludeQueryList>
 
   id?: Maybe<SitePagePluginCreatorPluginOptionsIdQueryString>
@@ -3885,6 +3975,10 @@ export interface SitePagePluginCreatorPluginOptionsPluginsInputObject {
   name?: Maybe<SitePagePluginCreatorPluginOptionsPluginsNameQueryString>
 
   version?: Maybe<SitePagePluginCreatorPluginOptionsPluginsVersionQueryString>
+
+  pluginOptions?: Maybe<
+    SitePagePluginCreatorPluginOptionsPluginsPluginOptionsInputObject
+  >
 
   browserAPIs?: Maybe<
     SitePagePluginCreatorPluginOptionsPluginsBrowserApIsQueryList
@@ -3940,6 +4034,26 @@ export interface SitePagePluginCreatorPluginOptionsPluginsNameQueryString {
 }
 
 export interface SitePagePluginCreatorPluginOptionsPluginsVersionQueryString {
+  eq?: Maybe<string>
+
+  ne?: Maybe<string>
+
+  regex?: Maybe<string>
+
+  glob?: Maybe<string>
+
+  in?: Maybe<(Maybe<string>)[]>
+
+  nin?: Maybe<(Maybe<string>)[]>
+}
+
+export interface SitePagePluginCreatorPluginOptionsPluginsPluginOptionsInputObject {
+  ignoreFileExtensions?: Maybe<
+    SitePagePluginCreatorPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList
+  >
+}
+
+export interface SitePagePluginCreatorPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList {
   eq?: Maybe<string>
 
   ne?: Maybe<string>
@@ -4024,6 +4138,20 @@ export interface SitePagePluginCreatorPluginOptionsNameQueryString {
 }
 
 export interface SitePagePluginCreatorPluginOptionsIgnoreQueryList {
+  eq?: Maybe<string>
+
+  ne?: Maybe<string>
+
+  regex?: Maybe<string>
+
+  glob?: Maybe<string>
+
+  in?: Maybe<(Maybe<string>)[]>
+
+  nin?: Maybe<(Maybe<string>)[]>
+}
+
+export interface SitePagePluginCreatorPluginOptionsIgnoreFileExtensionsQueryList {
   eq?: Maybe<string>
 
   ne?: Maybe<string>
@@ -4413,20 +4541,6 @@ export interface SitePagePluginCreatorPackageJsonKeywordsQueryList {
   nin?: Maybe<(Maybe<string>)[]>
 }
 
-export interface SitePagePluginCreatorParentQueryString {
-  eq?: Maybe<string>
-
-  ne?: Maybe<string>
-
-  regex?: Maybe<string>
-
-  glob?: Maybe<string>
-
-  in?: Maybe<(Maybe<string>)[]>
-
-  nin?: Maybe<(Maybe<string>)[]>
-}
-
 export interface SitePagePluginCreatorInternalInputObject {
   contentDigest?: Maybe<SitePagePluginCreatorInternalContentDigestQueryString>
 
@@ -4650,6 +4764,10 @@ export interface SitePluginPluginOptionsInputObject_2 {
 
   ignore?: Maybe<SitePluginPluginOptionsIgnoreQueryList_2>
 
+  ignoreFileExtensions?: Maybe<
+    SitePluginPluginOptionsIgnoreFileExtensionsQueryList_2
+  >
+
   exclude?: Maybe<SitePluginPluginOptionsExcludeQueryList_2>
 
   id?: Maybe<SitePluginPluginOptionsIdQueryString_2>
@@ -4677,6 +4795,10 @@ export interface SitePluginPluginOptionsPluginsInputObject_2 {
   name?: Maybe<SitePluginPluginOptionsPluginsNameQueryString_2>
 
   version?: Maybe<SitePluginPluginOptionsPluginsVersionQueryString_2>
+
+  pluginOptions?: Maybe<
+    SitePluginPluginOptionsPluginsPluginOptionsInputObject_2
+  >
 
   browserAPIs?: Maybe<SitePluginPluginOptionsPluginsBrowserApIsQueryList_2>
 
@@ -4730,6 +4852,26 @@ export interface SitePluginPluginOptionsPluginsNameQueryString_2 {
 }
 
 export interface SitePluginPluginOptionsPluginsVersionQueryString_2 {
+  eq?: Maybe<string>
+
+  ne?: Maybe<string>
+
+  regex?: Maybe<string>
+
+  glob?: Maybe<string>
+
+  in?: Maybe<(Maybe<string>)[]>
+
+  nin?: Maybe<(Maybe<string>)[]>
+}
+
+export interface SitePluginPluginOptionsPluginsPluginOptionsInputObject_2 {
+  ignoreFileExtensions?: Maybe<
+    SitePluginPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList_2
+  >
+}
+
+export interface SitePluginPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList_2 {
   eq?: Maybe<string>
 
   ne?: Maybe<string>
@@ -4814,6 +4956,20 @@ export interface SitePluginPluginOptionsNameQueryString_2 {
 }
 
 export interface SitePluginPluginOptionsIgnoreQueryList_2 {
+  eq?: Maybe<string>
+
+  ne?: Maybe<string>
+
+  regex?: Maybe<string>
+
+  glob?: Maybe<string>
+
+  in?: Maybe<(Maybe<string>)[]>
+
+  nin?: Maybe<(Maybe<string>)[]>
+}
+
+export interface SitePluginPluginOptionsIgnoreFileExtensionsQueryList_2 {
   eq?: Maybe<string>
 
   ne?: Maybe<string>
@@ -5324,6 +5480,26 @@ export interface SitePortQueryString_2 {
 }
 
 export interface SiteHostQueryString_2 {
+  eq?: Maybe<string>
+
+  ne?: Maybe<string>
+
+  regex?: Maybe<string>
+
+  glob?: Maybe<string>
+
+  in?: Maybe<(Maybe<string>)[]>
+
+  nin?: Maybe<(Maybe<string>)[]>
+}
+
+export interface SiteMappingInputObject_2 {
+  MarkdownRemark_frontmatter_authors?: Maybe<
+    SiteMappingMarkdownRemarkFrontmatterAuthorsQueryString_2
+  >
+}
+
+export interface SiteMappingMarkdownRemarkFrontmatterAuthorsQueryString_2 {
   eq?: Maybe<string>
 
   ne?: Maybe<string>
@@ -6924,7 +7100,9 @@ export interface MarkdownRemarkFrontmatterInputObject_2 {
 
   tags?: Maybe<MarkdownRemarkFrontmatterTagsQueryList_2>
 
-  _PARENT?: Maybe<MarkdownRemarkFrontmatterParentQueryString_2>
+  backgroundImage?: Maybe<MarkdownRemarkFrontmatterBackgroundImageQueryString_2>
+
+  backgroundColor?: Maybe<MarkdownRemarkFrontmatterBackgroundColorQueryString_2>
 }
 
 export interface MarkdownRemarkFrontmatterTitleQueryString_2 {
@@ -6983,7 +7161,7 @@ export interface MarkdownRemarkFrontmatterTagsQueryList_2 {
   nin?: Maybe<(Maybe<string>)[]>
 }
 
-export interface MarkdownRemarkFrontmatterParentQueryString_2 {
+export interface MarkdownRemarkFrontmatterBackgroundImageQueryString_2 {
   eq?: Maybe<string>
 
   ne?: Maybe<string>
@@ -6997,7 +7175,7 @@ export interface MarkdownRemarkFrontmatterParentQueryString_2 {
   nin?: Maybe<(Maybe<string>)[]>
 }
 
-export interface ExcerptQueryString_3 {
+export interface MarkdownRemarkFrontmatterBackgroundColorQueryString_2 {
   eq?: Maybe<string>
 
   ne?: Maybe<string>
@@ -7074,6 +7252,20 @@ export interface MarkdownRemarkFieldsPageTypeQueryString_2 {
 }
 
 export interface HtmlQueryString_3 {
+  eq?: Maybe<string>
+
+  ne?: Maybe<string>
+
+  regex?: Maybe<string>
+
+  glob?: Maybe<string>
+
+  in?: Maybe<(Maybe<string>)[]>
+
+  nin?: Maybe<(Maybe<string>)[]>
+}
+
+export interface ExcerptQueryString_3 {
   eq?: Maybe<string>
 
   ne?: Maybe<string>
@@ -7234,19 +7426,18 @@ export enum SitePageConnectionSortByFieldsEnum {
   PluginCreatorId = 'pluginCreatorId',
   ComponentPath = 'componentPath',
   Id = 'id',
-  Parent = 'parent',
   InternalType = 'internal___type',
   InternalContentDigest = 'internal___contentDigest',
   InternalDescription = 'internal___description',
   InternalOwner = 'internal___owner',
 }
 
-export enum SitePageConnectionSortOrderValues {
+export enum sitePageConnectionSortOrderValues {
   Asc = 'ASC',
   Desc = 'DESC',
 }
 
-export enum SitePageDistinctEnum {
+export enum sitePageDistinctEnum {
   JsonName = 'jsonName',
   InternalComponentName = 'internalComponentName',
   Path = 'path',
@@ -7257,14 +7448,13 @@ export enum SitePageDistinctEnum {
   PluginCreatorId = 'pluginCreatorId',
   ComponentPath = 'componentPath',
   Id = 'id',
-  Parent = 'parent',
   InternalType = 'internal___type',
   InternalContentDigest = 'internal___contentDigest',
   InternalDescription = 'internal___description',
   InternalOwner = 'internal___owner',
 }
 
-export enum SitePageGroupEnum {
+export enum sitePageGroupEnum {
   JsonName = 'jsonName',
   InternalComponentName = 'internalComponentName',
   Path = 'path',
@@ -7275,7 +7465,6 @@ export enum SitePageGroupEnum {
   PluginCreatorId = 'pluginCreatorId',
   ComponentPath = 'componentPath',
   Id = 'id',
-  Parent = 'parent',
   InternalType = 'internal___type',
   InternalContentDigest = 'internal___contentDigest',
   InternalDescription = 'internal___description',
@@ -7291,6 +7480,7 @@ export enum SitePluginConnectionSortByFieldsEnum {
   PluginOptionsPath = 'pluginOptions___path',
   PluginOptionsName = 'pluginOptions___name',
   PluginOptionsIgnore = 'pluginOptions___ignore',
+  PluginOptionsIgnoreFileExtensions = 'pluginOptions___ignoreFileExtensions',
   PluginOptionsExclude = 'pluginOptions___exclude',
   PluginOptionsId = 'pluginOptions___id',
   PluginOptionsIncludeInDevelopment = 'pluginOptions___includeInDevelopment',
@@ -7311,18 +7501,17 @@ export enum SitePluginConnectionSortByFieldsEnum {
   PackageJsonDevDependencies = 'packageJson___devDependencies',
   PackageJsonPeerDependencies = 'packageJson___peerDependencies',
   PackageJsonKeywords = 'packageJson___keywords',
-  Parent = 'parent',
   InternalContentDigest = 'internal___contentDigest',
   InternalType = 'internal___type',
   InternalOwner = 'internal___owner',
 }
 
-export enum SitePluginConnectionSortOrderValues {
+export enum sitePluginConnectionSortOrderValues {
   Asc = 'ASC',
   Desc = 'DESC',
 }
 
-export enum SitePluginDistinctEnum {
+export enum sitePluginDistinctEnum {
   Resolve = 'resolve',
   Id = 'id',
   Name = 'name',
@@ -7331,6 +7520,7 @@ export enum SitePluginDistinctEnum {
   PluginOptionsPath = 'pluginOptions___path',
   PluginOptionsName = 'pluginOptions___name',
   PluginOptionsIgnore = 'pluginOptions___ignore',
+  PluginOptionsIgnoreFileExtensions = 'pluginOptions___ignoreFileExtensions',
   PluginOptionsExclude = 'pluginOptions___exclude',
   PluginOptionsId = 'pluginOptions___id',
   PluginOptionsIncludeInDevelopment = 'pluginOptions___includeInDevelopment',
@@ -7351,13 +7541,12 @@ export enum SitePluginDistinctEnum {
   PackageJsonDevDependencies = 'packageJson___devDependencies',
   PackageJsonPeerDependencies = 'packageJson___peerDependencies',
   PackageJsonKeywords = 'packageJson___keywords',
-  Parent = 'parent',
   InternalContentDigest = 'internal___contentDigest',
   InternalType = 'internal___type',
   InternalOwner = 'internal___owner',
 }
 
-export enum SitePluginGroupEnum {
+export enum sitePluginGroupEnum {
   Resolve = 'resolve',
   Id = 'id',
   Name = 'name',
@@ -7366,6 +7555,7 @@ export enum SitePluginGroupEnum {
   PluginOptionsPath = 'pluginOptions___path',
   PluginOptionsName = 'pluginOptions___name',
   PluginOptionsIgnore = 'pluginOptions___ignore',
+  PluginOptionsIgnoreFileExtensions = 'pluginOptions___ignoreFileExtensions',
   PluginOptionsExclude = 'pluginOptions___exclude',
   PluginOptionsId = 'pluginOptions___id',
   PluginOptionsIncludeInDevelopment = 'pluginOptions___includeInDevelopment',
@@ -7386,7 +7576,6 @@ export enum SitePluginGroupEnum {
   PackageJsonDevDependencies = 'packageJson___devDependencies',
   PackageJsonPeerDependencies = 'packageJson___peerDependencies',
   PackageJsonKeywords = 'packageJson___keywords',
-  Parent = 'parent',
   InternalContentDigest = 'internal___contentDigest',
   InternalType = 'internal___type',
   InternalOwner = 'internal___owner',
@@ -7394,7 +7583,6 @@ export enum SitePluginGroupEnum {
 
 export enum DirectoryConnectionSortByFieldsEnum {
   Id = 'id',
-  Parent = 'parent',
   InternalContentDigest = 'internal___contentDigest',
   InternalType = 'internal___type',
   InternalDescription = 'internal___description',
@@ -7434,14 +7622,13 @@ export enum DirectoryConnectionSortByFieldsEnum {
   Birthtime = 'birthtime',
 }
 
-export enum DirectoryConnectionSortOrderValues {
+export enum directoryConnectionSortOrderValues {
   Asc = 'ASC',
   Desc = 'DESC',
 }
 
-export enum DirectoryDistinctEnum {
+export enum directoryDistinctEnum {
   Id = 'id',
-  Parent = 'parent',
   InternalContentDigest = 'internal___contentDigest',
   InternalType = 'internal___type',
   InternalDescription = 'internal___description',
@@ -7481,9 +7668,8 @@ export enum DirectoryDistinctEnum {
   Birthtime = 'birthtime',
 }
 
-export enum DirectoryGroupEnum {
+export enum directoryGroupEnum {
   Id = 'id',
-  Parent = 'parent',
   InternalContentDigest = 'internal___contentDigest',
   InternalType = 'internal___type',
   InternalDescription = 'internal___description',
@@ -7526,7 +7712,6 @@ export enum DirectoryGroupEnum {
 export enum FileConnectionSortByFieldsEnum {
   Id = 'id',
   Children = 'children',
-  Parent = 'parent',
   InternalContentDigest = 'internal___contentDigest',
   InternalType = 'internal___type',
   InternalMediaType = 'internal___mediaType',
@@ -7568,7 +7753,7 @@ export enum FileConnectionSortByFieldsEnum {
   PublicUrl = 'publicURL',
 }
 
-export enum FileConnectionSortOrderValues {
+export enum fileConnectionSortOrderValues {
   Asc = 'ASC',
   Desc = 'DESC',
 }
@@ -7587,10 +7772,9 @@ export enum HeadingLevels {
   H6 = 'h6',
 }
 
-export enum FileDistinctEnum {
+export enum fileDistinctEnum {
   Id = 'id',
   Children = 'children',
-  Parent = 'parent',
   InternalContentDigest = 'internal___contentDigest',
   InternalType = 'internal___type',
   InternalMediaType = 'internal___mediaType',
@@ -7631,10 +7815,9 @@ export enum FileDistinctEnum {
   Birthtime = 'birthtime',
 }
 
-export enum FileGroupEnum {
+export enum fileGroupEnum {
   Id = 'id',
   Children = 'children',
-  Parent = 'parent',
   InternalContentDigest = 'internal___contentDigest',
   InternalType = 'internal___type',
   InternalMediaType = 'internal___mediaType',
@@ -7688,12 +7871,12 @@ export enum AuthorJsonConnectionSortByFieldsEnum {
   InternalOwner = 'internal___owner',
 }
 
-export enum AuthorJsonConnectionSortOrderValues {
+export enum authorJsonConnectionSortOrderValues {
   Asc = 'ASC',
   Desc = 'DESC',
 }
 
-export enum AuthorJsonDistinctEnum {
+export enum authorJsonDistinctEnum {
   Id = 'id',
   Name = 'name',
   Bio = 'bio',
@@ -7706,7 +7889,7 @@ export enum AuthorJsonDistinctEnum {
   InternalOwner = 'internal___owner',
 }
 
-export enum AuthorJsonGroupEnum {
+export enum authorJsonGroupEnum {
   Id = 'id',
   Name = 'name',
   Bio = 'bio',
@@ -7732,13 +7915,14 @@ export enum MarkdownRemarkConnectionSortByFieldsEnum {
   FrontmatterDate = 'frontmatter___date',
   FrontmatterAuthors = 'frontmatter___authors',
   FrontmatterTags = 'frontmatter___tags',
-  FrontmatterParent = 'frontmatter____PARENT',
-  Excerpt = 'excerpt',
+  FrontmatterBackgroundImage = 'frontmatter___backgroundImage',
+  FrontmatterBackgroundColor = 'frontmatter___backgroundColor',
   RawMarkdownBody = 'rawMarkdownBody',
   FileAbsolutePath = 'fileAbsolutePath',
   FieldsSlug = 'fields___slug',
   FieldsPageType = 'fields___pageType',
   Html = 'html',
+  Excerpt = 'excerpt',
   Headings = 'headings',
   TimeToRead = 'timeToRead',
   TableOfContents = 'tableOfContents',
@@ -7747,12 +7931,12 @@ export enum MarkdownRemarkConnectionSortByFieldsEnum {
   WordCountWords = 'wordCount___words',
 }
 
-export enum MarkdownRemarkConnectionSortOrderValues {
+export enum markdownRemarkConnectionSortOrderValues {
   Asc = 'ASC',
   Desc = 'DESC',
 }
 
-export enum MarkdownRemarkDistinctEnum {
+export enum markdownRemarkDistinctEnum {
   Id = 'id',
   Parent = 'parent',
   InternalContent = 'internal___content',
@@ -7765,15 +7949,15 @@ export enum MarkdownRemarkDistinctEnum {
   FrontmatterDate = 'frontmatter___date',
   FrontmatterAuthors = 'frontmatter___authors',
   FrontmatterTags = 'frontmatter___tags',
-  FrontmatterParent = 'frontmatter____PARENT',
-  Excerpt = 'excerpt',
+  FrontmatterBackgroundImage = 'frontmatter___backgroundImage',
+  FrontmatterBackgroundColor = 'frontmatter___backgroundColor',
   RawMarkdownBody = 'rawMarkdownBody',
   FileAbsolutePath = 'fileAbsolutePath',
   FieldsSlug = 'fields___slug',
   FieldsPageType = 'fields___pageType',
 }
 
-export enum MarkdownRemarkGroupEnum {
+export enum markdownRemarkGroupEnum {
   Id = 'id',
   Parent = 'parent',
   InternalContent = 'internal___content',
@@ -7786,8 +7970,8 @@ export enum MarkdownRemarkGroupEnum {
   FrontmatterDate = 'frontmatter___date',
   FrontmatterAuthors = 'frontmatter___authors',
   FrontmatterTags = 'frontmatter___tags',
-  FrontmatterParent = 'frontmatter____PARENT',
-  Excerpt = 'excerpt',
+  FrontmatterBackgroundImage = 'frontmatter___backgroundImage',
+  FrontmatterBackgroundColor = 'frontmatter___backgroundColor',
   RawMarkdownBody = 'rawMarkdownBody',
   FileAbsolutePath = 'fileAbsolutePath',
   FieldsSlug = 'fields___slug',
@@ -7930,7 +8114,7 @@ export interface SitePlugin extends Node {
 
   version?: Maybe<string>
 
-  pluginOptions?: Maybe<PluginOptions_2>
+  pluginOptions?: Maybe<PluginOptions_3>
 
   nodeAPIs?: Maybe<(Maybe<string>)[]>
 
@@ -7945,7 +8129,7 @@ export interface SitePlugin extends Node {
   internal?: Maybe<Internal_9>
 }
 
-export interface PluginOptions_2 {
+export interface PluginOptions_3 {
   plugins?: Maybe<(Maybe<Plugins_2>)[]>
 
   path?: Maybe<string>
@@ -7953,6 +8137,8 @@ export interface PluginOptions_2 {
   name?: Maybe<string>
 
   ignore?: Maybe<(Maybe<string>)[]>
+
+  ignoreFileExtensions?: Maybe<(Maybe<string>)[]>
 
   exclude?: Maybe<(Maybe<string>)[]>
 
@@ -7976,11 +8162,17 @@ export interface Plugins_2 {
 
   version?: Maybe<string>
 
+  pluginOptions?: Maybe<PluginOptions_4>
+
   browserAPIs?: Maybe<(Maybe<string>)[]>
 
   ssrAPIs?: Maybe<(Maybe<string>)[]>
 
   pluginFilepath?: Maybe<string>
+}
+
+export interface PluginOptions_4 {
+  ignoreFileExtensions?: Maybe<(Maybe<string>)[]>
 }
 
 export interface PackageJson_2 {
@@ -8444,13 +8636,13 @@ export interface Frontmatter_2 {
 
   date?: Maybe<Date>
 
-  authors?: Maybe<AuthorJson[]>
+  authors?: Maybe<(Maybe<AuthorJson>)[]>
 
   tags?: Maybe<(Maybe<string>)[]>
-  backgroundColor?: string
+
   backgroundImage?: Maybe<File>
 
-  _PARENT?: Maybe<string>
+  backgroundColor?: Maybe<string>
 }
 
 export interface Fields_2 {
@@ -8620,6 +8812,8 @@ export interface Site extends Node {
 
   host?: Maybe<string>
 
+  mapping?: Maybe<Mapping_2>
+
   pathPrefix?: Maybe<string>
 
   polyfill?: Maybe<boolean>
@@ -8637,6 +8831,10 @@ export interface SiteMetadata_2 {
   siteUrl?: Maybe<string>
 
   title?: Maybe<string>
+}
+
+export interface Mapping_2 {
+  MarkdownRemark_frontmatter_authors?: Maybe<string>
 }
 
 export interface Internal_14 {
@@ -8757,6 +8955,8 @@ export interface SiteQueryArgs {
   port?: Maybe<SitePortQueryString_2>
 
   host?: Maybe<SiteHostQueryString_2>
+
+  mapping?: Maybe<SiteMappingInputObject_2>
 
   pathPrefix?: Maybe<SitePathPrefixQueryString_2>
 
@@ -8934,8 +9134,6 @@ export interface MarkdownRemarkQueryArgs {
 
   frontmatter?: Maybe<MarkdownRemarkFrontmatterInputObject_2>
 
-  excerpt?: Maybe<ExcerptQueryString_3>
-
   rawMarkdownBody?: Maybe<MarkdownRemarkRawMarkdownBodyQueryString_2>
 
   fileAbsolutePath?: Maybe<MarkdownRemarkFileAbsolutePathQueryString_2>
@@ -8943,6 +9141,8 @@ export interface MarkdownRemarkQueryArgs {
   fields?: Maybe<MarkdownRemarkFieldsInputObject_2>
 
   html?: Maybe<HtmlQueryString_3>
+
+  excerpt?: Maybe<ExcerptQueryString_3>
 
   headings?: Maybe<HeadingsQueryList_3>
 
@@ -9153,7 +9353,7 @@ export interface BirthtimeFileArgs {
   locale?: Maybe<string>
 }
 export interface ExcerptMarkdownRemarkArgs {
-  pruneLength?: Maybe<number>
+  pruneLength?: number
 
   truncate?: Maybe<boolean>
 
@@ -9163,7 +9363,7 @@ export interface HeadingsMarkdownRemarkArgs {
   depth?: Maybe<HeadingLevels>
 }
 export interface TableOfContentsMarkdownRemarkArgs {
-  pathToSlugField?: Maybe<string>
+  pathToSlugField?: string
 }
 export interface DateFrontmatter_2Args {
   /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
