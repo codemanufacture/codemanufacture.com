@@ -6,7 +6,7 @@ describe('MenuItem component', () =>
   it('renders correctly', () => {
     const props = {
       name: 'abc',
-      pagePath: 'qwe',
+      pagePath: '/qwe',
     }
 
     const tree = renderer.create(<MenuItem {...props} />).toJSON()
