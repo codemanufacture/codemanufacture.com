@@ -78,6 +78,10 @@ const StyledFormWrapper = styled('div')<StyledProps>`
           margin-left: initial;
           margin-top: 15px;
         }
+
+        + button {
+          margin: 15px 0 0;
+        }
       }
     }
   }
