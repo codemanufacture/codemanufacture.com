@@ -4,4 +4,5 @@ export const typography = {
   headingSize: '21px',
   paragraphSize: '15px',
   subtitleSize: '15px',
+  blogContentSize: '18px',
 }

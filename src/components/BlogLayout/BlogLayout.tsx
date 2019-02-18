@@ -5,8 +5,8 @@ import SocialShareButtons from '../SocialShareButtons'
 
 const articlePaddingBase = 50
 const articlePadding = `${articlePaddingBase * 2}px`
-const sidebarWidth = `300px`
-const sidebarMobileWidth = `200px`
+const sidebarWidth = `400px`
+const sidebarMobileWidth = `250px`
 
 const StyledBlogLayout = styled.article`
   display: grid;
@@ -40,16 +40,40 @@ const StyledBlogLayout = styled.article`
   }
 
   .content-wrapper {
-    width: 90%;
+    width: 880px;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 0 20px;
-    padding-top: ${articlePadding};
-    padding-bottom: ${articlePadding};
+    padding: ${articlePadding} 20px;
     background: #fff;
-    font-size: ${typography.paragraphSize};
+    font-size: ${typography.blogContentSize};
+
+    @media (max-width: ${displayDimensions.tabletSize}) {
+      padding-right: 30px;
+      padding-left: 30px;
+    }
 
     .blog-post-content {
       margin-bottom: ${articlePaddingBase}px;
+
+      h2 {
+        font-size: 2em;
+      }
+
+      h3 {
+        font-size: 1.66em;
+      }
+
+      h4 {
+        font-size: 1.4em;
+      }
+
+      h5 {
+        font-size: 1.2em;
+      }
+
+      h6 {
+        font-size: 1em;
+      }
     }
 
     blockquote {
