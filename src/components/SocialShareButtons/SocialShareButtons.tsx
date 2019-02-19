@@ -11,6 +11,9 @@ import {
 } from 'react-share'
 
 const StyledSocialShareButtons = styled.div`
+  margin-bottom: 50px;
+  padding-bottom: 20px;
+
   .icons-wrapper {
     display: flex;
 

@@ -1,6 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import { colors, displayDimensions, typography } from '../../theme'
+import DisqusThread from '../DisqusThread'
 import SocialShareButtons from '../SocialShareButtons'
 
 const articlePaddingBase = 50
@@ -140,6 +141,7 @@ const BlogLayout: React.FunctionComponent<BlogLayoutProps> = ({ html }) => {
           dangerouslySetInnerHTML={{ __html: html }}
         />
         <SocialShareButtons />
+        <DisqusThread />
       </div>
       <aside className="sidebar" role="sidebar">
         Lorem ipsum dolor sit amet
