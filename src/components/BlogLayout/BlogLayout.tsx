@@ -116,8 +116,8 @@ const BlogLayout: React.FunctionComponent<BlogLayoutProps> = ({ html }) => {
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
         />
-        <DisqusThread />
         <SocialShareButtons />
+        <DisqusThread />
       </div>
       <aside className="sidebar" role="sidebar">
         Lorem ipsum dolor sit amet
