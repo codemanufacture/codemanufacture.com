@@ -54,7 +54,7 @@ const FooterMenu = () => {
     <StyledMenu>
       <MenuItem pagePath="/homepage#home" name="Home" />
       <MenuItem pagePath="/homepage#services" name="Services" />
-      <MenuItem pagePath="privacy-policy" name="Privacy Policy" />
+      <MenuItem pagePath="/privacy-policy" name="Privacy Policy" />
     </StyledMenu>
   )
 }
