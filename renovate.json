@@ -17,5 +17,23 @@
     "enabled": true,
     "recreateClosed": true
   },
+  "packageRules": [
+    {
+      "extends": "monorepo:gatsby",
+      "groupName": "gatsby monorepo"
+    },
+    {
+      "extends": "monorepo:graphqlcodegenerator",
+      "groupName": "graphqlcodegenerator monorepo"
+    },
+    {
+      "extends": "monorepo:jest",
+      "groupName": "jest monorepo"
+    },
+    {
+      "extends": "monorepo:react",
+      "groupName": "react monorepo"
+    }
+  ],
   "gitAuthor": null
 }
