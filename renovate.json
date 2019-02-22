@@ -1,7 +1,10 @@
-
 {
   "extends": [
     "config:base",
+    "group:gatsbyMonorepo",
+    "group:reactMonorepo",
+    "group:graphqlcodegeneratorMonorepo",
+    "group:jestMonorepo",
     "docker:disable"
   ],
   "automerge": true,
