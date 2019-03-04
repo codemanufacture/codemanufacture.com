@@ -4,7 +4,7 @@ export type Maybe<T> = T | null
 export interface SitePageConnectionSort {
   fields: (Maybe<SitePageConnectionSortByFieldsEnum>)[]
 
-  order?: SitePageConnectionSortOrderValues
+  order?: (Maybe<SitePageConnectionSortOrderValues>)[]
 }
 /** Filter connection on its fields */
 export interface FilterSitePage {
@@ -212,10 +212,6 @@ export interface SitePageConnectionPluginCreatorPluginOptionsInputObject {
 
   ignore?: Maybe<SitePageConnectionPluginCreatorPluginOptionsIgnoreQueryList>
 
-  ignoreFileExtensions?: Maybe<
-    SitePageConnectionPluginCreatorPluginOptionsIgnoreFileExtensionsQueryList
-  >
-
   exclude?: Maybe<SitePageConnectionPluginCreatorPluginOptionsExcludeQueryList>
 
   id?: Maybe<SitePageConnectionPluginCreatorPluginOptionsIdQueryString>
@@ -231,6 +227,10 @@ export interface SitePageConnectionPluginCreatorPluginOptionsInputObject {
   endpoint?: Maybe<
     SitePageConnectionPluginCreatorPluginOptionsEndpointQueryString
   >
+
+  query?: Maybe<SitePageConnectionPluginCreatorPluginOptionsQueryQueryString>
+
+  feeds?: Maybe<SitePageConnectionPluginCreatorPluginOptionsFeedsQueryList>
 
   pathCheck?: Maybe<
     SitePageConnectionPluginCreatorPluginOptionsPathCheckQueryBoolean
@@ -256,10 +256,6 @@ export interface SitePageConnectionPluginCreatorPluginOptionsPluginsInputObject 
 
   version?: Maybe<
     SitePageConnectionPluginCreatorPluginOptionsPluginsVersionQueryString
-  >
-
-  pluginOptions?: Maybe<
-    SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsInputObject
   >
 
   browserAPIs?: Maybe<
@@ -318,26 +314,6 @@ export interface SitePageConnectionPluginCreatorPluginOptionsPluginsNameQueryStr
 }
 
 export interface SitePageConnectionPluginCreatorPluginOptionsPluginsVersionQueryString {
-  eq?: Maybe<string>
-
-  ne?: Maybe<string>
-
-  regex?: Maybe<string>
-
-  glob?: Maybe<string>
-
-  in?: Maybe<(Maybe<string>)[]>
-
-  nin?: Maybe<(Maybe<string>)[]>
-}
-
-export interface SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsInputObject {
-  ignoreFileExtensions?: Maybe<
-    SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList
-  >
-}
-
-export interface SitePageConnectionPluginCreatorPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList {
   eq?: Maybe<string>
 
   ne?: Maybe<string>
@@ -435,20 +411,6 @@ export interface SitePageConnectionPluginCreatorPluginOptionsIgnoreQueryList {
   nin?: Maybe<(Maybe<string>)[]>
 }
 
-export interface SitePageConnectionPluginCreatorPluginOptionsIgnoreFileExtensionsQueryList {
-  eq?: Maybe<string>
-
-  ne?: Maybe<string>
-
-  regex?: Maybe<string>
-
-  glob?: Maybe<string>
-
-  in?: Maybe<(Maybe<string>)[]>
-
-  nin?: Maybe<(Maybe<string>)[]>
-}
-
 export interface SitePageConnectionPluginCreatorPluginOptionsExcludeQueryList {
   eq?: Maybe<string>
 
@@ -502,6 +464,82 @@ export interface SitePageConnectionPluginCreatorPluginOptionsSiteUrlQueryString 
 }
 
 export interface SitePageConnectionPluginCreatorPluginOptionsEndpointQueryString {
+  eq?: Maybe<string>
+
+  ne?: Maybe<string>
+
+  regex?: Maybe<string>
+
+  glob?: Maybe<string>
+
+  in?: Maybe<(Maybe<string>)[]>
+
+  nin?: Maybe<(Maybe<string>)[]>
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsQueryQueryString {
+  eq?: Maybe<string>
+
+  ne?: Maybe<string>
+
+  regex?: Maybe<string>
+
+  glob?: Maybe<string>
+
+  in?: Maybe<(Maybe<string>)[]>
+
+  nin?: Maybe<(Maybe<string>)[]>
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsFeedsQueryList {
+  elemMatch?: Maybe<
+    SitePageConnectionPluginCreatorPluginOptionsFeedsInputObject
+  >
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsFeedsInputObject {
+  query?: Maybe<
+    SitePageConnectionPluginCreatorPluginOptionsFeedsQueryQueryString
+  >
+
+  output?: Maybe<
+    SitePageConnectionPluginCreatorPluginOptionsFeedsOutputQueryString
+  >
+
+  title?: Maybe<
+    SitePageConnectionPluginCreatorPluginOptionsFeedsTitleQueryString
+  >
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsFeedsQueryQueryString {
+  eq?: Maybe<string>
+
+  ne?: Maybe<string>
+
+  regex?: Maybe<string>
+
+  glob?: Maybe<string>
+
+  in?: Maybe<(Maybe<string>)[]>
+
+  nin?: Maybe<(Maybe<string>)[]>
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsFeedsOutputQueryString {
+  eq?: Maybe<string>
+
+  ne?: Maybe<string>
+
+  regex?: Maybe<string>
+
+  glob?: Maybe<string>
+
+  in?: Maybe<(Maybe<string>)[]>
+
+  nin?: Maybe<(Maybe<string>)[]>
+}
+
+export interface SitePageConnectionPluginCreatorPluginOptionsFeedsTitleQueryString {
   eq?: Maybe<string>
 
   ne?: Maybe<string>
@@ -1004,7 +1042,7 @@ export interface SitePageConnectionInternalOwnerQueryString_2 {
 export interface SitePluginConnectionSort {
   fields: (Maybe<SitePluginConnectionSortByFieldsEnum>)[]
 
-  order?: SitePluginConnectionSortOrderValues
+  order?: (Maybe<SitePluginConnectionSortOrderValues>)[]
 }
 /** Filter connection on its fields */
 export interface FilterSitePlugin {
@@ -1096,10 +1134,6 @@ export interface SitePluginConnectionPluginOptionsInputObject_2 {
 
   ignore?: Maybe<SitePluginConnectionPluginOptionsIgnoreQueryList_2>
 
-  ignoreFileExtensions?: Maybe<
-    SitePluginConnectionPluginOptionsIgnoreFileExtensionsQueryList_2
-  >
-
   exclude?: Maybe<SitePluginConnectionPluginOptionsExcludeQueryList_2>
 
   id?: Maybe<SitePluginConnectionPluginOptionsIdQueryString_2>
@@ -1111,6 +1145,10 @@ export interface SitePluginConnectionPluginOptionsInputObject_2 {
   siteUrl?: Maybe<SitePluginConnectionPluginOptionsSiteUrlQueryString_2>
 
   endpoint?: Maybe<SitePluginConnectionPluginOptionsEndpointQueryString_2>
+
+  query?: Maybe<SitePluginConnectionPluginOptionsQueryQueryString_2>
+
+  feeds?: Maybe<SitePluginConnectionPluginOptionsFeedsQueryList_2>
 
   pathCheck?: Maybe<SitePluginConnectionPluginOptionsPathCheckQueryBoolean_2>
 }
@@ -1127,10 +1165,6 @@ export interface SitePluginConnectionPluginOptionsPluginsInputObject_2 {
   name?: Maybe<SitePluginConnectionPluginOptionsPluginsNameQueryString_2>
 
   version?: Maybe<SitePluginConnectionPluginOptionsPluginsVersionQueryString_2>
-
-  pluginOptions?: Maybe<
-    SitePluginConnectionPluginOptionsPluginsPluginOptionsInputObject_2
-  >
 
   browserAPIs?: Maybe<
     SitePluginConnectionPluginOptionsPluginsBrowserApIsQueryList_2
@@ -1186,26 +1220,6 @@ export interface SitePluginConnectionPluginOptionsPluginsNameQueryString_2 {
 }
 
 export interface SitePluginConnectionPluginOptionsPluginsVersionQueryString_2 {
-  eq?: Maybe<string>
-
-  ne?: Maybe<string>
-
-  regex?: Maybe<string>
-
-  glob?: Maybe<string>
-
-  in?: Maybe<(Maybe<string>)[]>
-
-  nin?: Maybe<(Maybe<string>)[]>
-}
-
-export interface SitePluginConnectionPluginOptionsPluginsPluginOptionsInputObject_2 {
-  ignoreFileExtensions?: Maybe<
-    SitePluginConnectionPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList_2
-  >
-}
-
-export interface SitePluginConnectionPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList_2 {
   eq?: Maybe<string>
 
   ne?: Maybe<string>
@@ -1303,20 +1317,6 @@ export interface SitePluginConnectionPluginOptionsIgnoreQueryList_2 {
   nin?: Maybe<(Maybe<string>)[]>
 }
 
-export interface SitePluginConnectionPluginOptionsIgnoreFileExtensionsQueryList_2 {
-  eq?: Maybe<string>
-
-  ne?: Maybe<string>
-
-  regex?: Maybe<string>
-
-  glob?: Maybe<string>
-
-  in?: Maybe<(Maybe<string>)[]>
-
-  nin?: Maybe<(Maybe<string>)[]>
-}
-
 export interface SitePluginConnectionPluginOptionsExcludeQueryList_2 {
   eq?: Maybe<string>
 
@@ -1370,6 +1370,74 @@ export interface SitePluginConnectionPluginOptionsSiteUrlQueryString_2 {
 }
 
 export interface SitePluginConnectionPluginOptionsEndpointQueryString_2 {
+  eq?: Maybe<string>
+
+  ne?: Maybe<string>
+
+  regex?: Maybe<string>
+
+  glob?: Maybe<string>
+
+  in?: Maybe<(Maybe<string>)[]>
+
+  nin?: Maybe<(Maybe<string>)[]>
+}
+
+export interface SitePluginConnectionPluginOptionsQueryQueryString_2 {
+  eq?: Maybe<string>
+
+  ne?: Maybe<string>
+
+  regex?: Maybe<string>
+
+  glob?: Maybe<string>
+
+  in?: Maybe<(Maybe<string>)[]>
+
+  nin?: Maybe<(Maybe<string>)[]>
+}
+
+export interface SitePluginConnectionPluginOptionsFeedsQueryList_2 {
+  elemMatch?: Maybe<SitePluginConnectionPluginOptionsFeedsInputObject_2>
+}
+
+export interface SitePluginConnectionPluginOptionsFeedsInputObject_2 {
+  query?: Maybe<SitePluginConnectionPluginOptionsFeedsQueryQueryString_2>
+
+  output?: Maybe<SitePluginConnectionPluginOptionsFeedsOutputQueryString_2>
+
+  title?: Maybe<SitePluginConnectionPluginOptionsFeedsTitleQueryString_2>
+}
+
+export interface SitePluginConnectionPluginOptionsFeedsQueryQueryString_2 {
+  eq?: Maybe<string>
+
+  ne?: Maybe<string>
+
+  regex?: Maybe<string>
+
+  glob?: Maybe<string>
+
+  in?: Maybe<(Maybe<string>)[]>
+
+  nin?: Maybe<(Maybe<string>)[]>
+}
+
+export interface SitePluginConnectionPluginOptionsFeedsOutputQueryString_2 {
+  eq?: Maybe<string>
+
+  ne?: Maybe<string>
+
+  regex?: Maybe<string>
+
+  glob?: Maybe<string>
+
+  in?: Maybe<(Maybe<string>)[]>
+
+  nin?: Maybe<(Maybe<string>)[]>
+}
+
+export interface SitePluginConnectionPluginOptionsFeedsTitleQueryString_2 {
   eq?: Maybe<string>
 
   ne?: Maybe<string>
@@ -1748,7 +1816,7 @@ export interface SitePluginConnectionInternalOwnerQueryString_2 {
 export interface DirectoryConnectionSort {
   fields: (Maybe<DirectoryConnectionSortByFieldsEnum>)[]
 
-  order?: DirectoryConnectionSortOrderValues
+  order?: (Maybe<DirectoryConnectionSortOrderValues>)[]
 }
 /** Filter connection on its fields */
 export interface FilterDirectory {
@@ -2424,7 +2492,7 @@ export interface DirectoryConnectionBirthtimeQueryString_2 {
 export interface FileConnectionSort {
   fields: (Maybe<FileConnectionSortByFieldsEnum>)[]
 
-  order?: FileConnectionSortOrderValues
+  order?: (Maybe<FileConnectionSortOrderValues>)[]
 }
 /** Filter connection on its fields */
 export interface FilterFile {
@@ -3132,7 +3200,7 @@ export interface PublicUrlQueryString_4 {
 export interface AuthorJsonConnectionSort {
   fields: (Maybe<AuthorJsonConnectionSortByFieldsEnum>)[]
 
-  order?: AuthorJsonConnectionSortOrderValues
+  order?: (Maybe<AuthorJsonConnectionSortOrderValues>)[]
 }
 /** Filter connection on its fields */
 export interface FilterAuthorJson {
@@ -3288,7 +3356,7 @@ export interface AuthorJsonConnectionInternalOwnerQueryString_2 {
 export interface MarkdownRemarkConnectionSort {
   fields: (Maybe<MarkdownRemarkConnectionSortByFieldsEnum>)[]
 
-  order?: MarkdownRemarkConnectionSortOrderValues
+  order?: (Maybe<MarkdownRemarkConnectionSortOrderValues>)[]
 }
 /** Filter connection on its fields */
 export interface FilterMarkdownRemark {
@@ -3944,10 +4012,6 @@ export interface SitePagePluginCreatorPluginOptionsInputObject {
 
   ignore?: Maybe<SitePagePluginCreatorPluginOptionsIgnoreQueryList>
 
-  ignoreFileExtensions?: Maybe<
-    SitePagePluginCreatorPluginOptionsIgnoreFileExtensionsQueryList
-  >
-
   exclude?: Maybe<SitePagePluginCreatorPluginOptionsExcludeQueryList>
 
   id?: Maybe<SitePagePluginCreatorPluginOptionsIdQueryString>
@@ -3959,6 +4023,10 @@ export interface SitePagePluginCreatorPluginOptionsInputObject {
   siteUrl?: Maybe<SitePagePluginCreatorPluginOptionsSiteUrlQueryString>
 
   endpoint?: Maybe<SitePagePluginCreatorPluginOptionsEndpointQueryString>
+
+  query?: Maybe<SitePagePluginCreatorPluginOptionsQueryQueryString>
+
+  feeds?: Maybe<SitePagePluginCreatorPluginOptionsFeedsQueryList>
 
   pathCheck?: Maybe<SitePagePluginCreatorPluginOptionsPathCheckQueryBoolean>
 }
@@ -3975,10 +4043,6 @@ export interface SitePagePluginCreatorPluginOptionsPluginsInputObject {
   name?: Maybe<SitePagePluginCreatorPluginOptionsPluginsNameQueryString>
 
   version?: Maybe<SitePagePluginCreatorPluginOptionsPluginsVersionQueryString>
-
-  pluginOptions?: Maybe<
-    SitePagePluginCreatorPluginOptionsPluginsPluginOptionsInputObject
-  >
 
   browserAPIs?: Maybe<
     SitePagePluginCreatorPluginOptionsPluginsBrowserApIsQueryList
@@ -4034,26 +4098,6 @@ export interface SitePagePluginCreatorPluginOptionsPluginsNameQueryString {
 }
 
 export interface SitePagePluginCreatorPluginOptionsPluginsVersionQueryString {
-  eq?: Maybe<string>
-
-  ne?: Maybe<string>
-
-  regex?: Maybe<string>
-
-  glob?: Maybe<string>
-
-  in?: Maybe<(Maybe<string>)[]>
-
-  nin?: Maybe<(Maybe<string>)[]>
-}
-
-export interface SitePagePluginCreatorPluginOptionsPluginsPluginOptionsInputObject {
-  ignoreFileExtensions?: Maybe<
-    SitePagePluginCreatorPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList
-  >
-}
-
-export interface SitePagePluginCreatorPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList {
   eq?: Maybe<string>
 
   ne?: Maybe<string>
@@ -4151,20 +4195,6 @@ export interface SitePagePluginCreatorPluginOptionsIgnoreQueryList {
   nin?: Maybe<(Maybe<string>)[]>
 }
 
-export interface SitePagePluginCreatorPluginOptionsIgnoreFileExtensionsQueryList {
-  eq?: Maybe<string>
-
-  ne?: Maybe<string>
-
-  regex?: Maybe<string>
-
-  glob?: Maybe<string>
-
-  in?: Maybe<(Maybe<string>)[]>
-
-  nin?: Maybe<(Maybe<string>)[]>
-}
-
 export interface SitePagePluginCreatorPluginOptionsExcludeQueryList {
   eq?: Maybe<string>
 
@@ -4218,6 +4248,74 @@ export interface SitePagePluginCreatorPluginOptionsSiteUrlQueryString {
 }
 
 export interface SitePagePluginCreatorPluginOptionsEndpointQueryString {
+  eq?: Maybe<string>
+
+  ne?: Maybe<string>
+
+  regex?: Maybe<string>
+
+  glob?: Maybe<string>
+
+  in?: Maybe<(Maybe<string>)[]>
+
+  nin?: Maybe<(Maybe<string>)[]>
+}
+
+export interface SitePagePluginCreatorPluginOptionsQueryQueryString {
+  eq?: Maybe<string>
+
+  ne?: Maybe<string>
+
+  regex?: Maybe<string>
+
+  glob?: Maybe<string>
+
+  in?: Maybe<(Maybe<string>)[]>
+
+  nin?: Maybe<(Maybe<string>)[]>
+}
+
+export interface SitePagePluginCreatorPluginOptionsFeedsQueryList {
+  elemMatch?: Maybe<SitePagePluginCreatorPluginOptionsFeedsInputObject>
+}
+
+export interface SitePagePluginCreatorPluginOptionsFeedsInputObject {
+  query?: Maybe<SitePagePluginCreatorPluginOptionsFeedsQueryQueryString>
+
+  output?: Maybe<SitePagePluginCreatorPluginOptionsFeedsOutputQueryString>
+
+  title?: Maybe<SitePagePluginCreatorPluginOptionsFeedsTitleQueryString>
+}
+
+export interface SitePagePluginCreatorPluginOptionsFeedsQueryQueryString {
+  eq?: Maybe<string>
+
+  ne?: Maybe<string>
+
+  regex?: Maybe<string>
+
+  glob?: Maybe<string>
+
+  in?: Maybe<(Maybe<string>)[]>
+
+  nin?: Maybe<(Maybe<string>)[]>
+}
+
+export interface SitePagePluginCreatorPluginOptionsFeedsOutputQueryString {
+  eq?: Maybe<string>
+
+  ne?: Maybe<string>
+
+  regex?: Maybe<string>
+
+  glob?: Maybe<string>
+
+  in?: Maybe<(Maybe<string>)[]>
+
+  nin?: Maybe<(Maybe<string>)[]>
+}
+
+export interface SitePagePluginCreatorPluginOptionsFeedsTitleQueryString {
   eq?: Maybe<string>
 
   ne?: Maybe<string>
@@ -4764,10 +4862,6 @@ export interface SitePluginPluginOptionsInputObject_2 {
 
   ignore?: Maybe<SitePluginPluginOptionsIgnoreQueryList_2>
 
-  ignoreFileExtensions?: Maybe<
-    SitePluginPluginOptionsIgnoreFileExtensionsQueryList_2
-  >
-
   exclude?: Maybe<SitePluginPluginOptionsExcludeQueryList_2>
 
   id?: Maybe<SitePluginPluginOptionsIdQueryString_2>
@@ -4779,6 +4873,10 @@ export interface SitePluginPluginOptionsInputObject_2 {
   siteUrl?: Maybe<SitePluginPluginOptionsSiteUrlQueryString_2>
 
   endpoint?: Maybe<SitePluginPluginOptionsEndpointQueryString_2>
+
+  query?: Maybe<SitePluginPluginOptionsQueryQueryString_2>
+
+  feeds?: Maybe<SitePluginPluginOptionsFeedsQueryList_2>
 
   pathCheck?: Maybe<SitePluginPluginOptionsPathCheckQueryBoolean_2>
 }
@@ -4795,10 +4893,6 @@ export interface SitePluginPluginOptionsPluginsInputObject_2 {
   name?: Maybe<SitePluginPluginOptionsPluginsNameQueryString_2>
 
   version?: Maybe<SitePluginPluginOptionsPluginsVersionQueryString_2>
-
-  pluginOptions?: Maybe<
-    SitePluginPluginOptionsPluginsPluginOptionsInputObject_2
-  >
 
   browserAPIs?: Maybe<SitePluginPluginOptionsPluginsBrowserApIsQueryList_2>
 
@@ -4852,26 +4946,6 @@ export interface SitePluginPluginOptionsPluginsNameQueryString_2 {
 }
 
 export interface SitePluginPluginOptionsPluginsVersionQueryString_2 {
-  eq?: Maybe<string>
-
-  ne?: Maybe<string>
-
-  regex?: Maybe<string>
-
-  glob?: Maybe<string>
-
-  in?: Maybe<(Maybe<string>)[]>
-
-  nin?: Maybe<(Maybe<string>)[]>
-}
-
-export interface SitePluginPluginOptionsPluginsPluginOptionsInputObject_2 {
-  ignoreFileExtensions?: Maybe<
-    SitePluginPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList_2
-  >
-}
-
-export interface SitePluginPluginOptionsPluginsPluginOptionsIgnoreFileExtensionsQueryList_2 {
   eq?: Maybe<string>
 
   ne?: Maybe<string>
@@ -4969,20 +5043,6 @@ export interface SitePluginPluginOptionsIgnoreQueryList_2 {
   nin?: Maybe<(Maybe<string>)[]>
 }
 
-export interface SitePluginPluginOptionsIgnoreFileExtensionsQueryList_2 {
-  eq?: Maybe<string>
-
-  ne?: Maybe<string>
-
-  regex?: Maybe<string>
-
-  glob?: Maybe<string>
-
-  in?: Maybe<(Maybe<string>)[]>
-
-  nin?: Maybe<(Maybe<string>)[]>
-}
-
 export interface SitePluginPluginOptionsExcludeQueryList_2 {
   eq?: Maybe<string>
 
@@ -5036,6 +5096,74 @@ export interface SitePluginPluginOptionsSiteUrlQueryString_2 {
 }
 
 export interface SitePluginPluginOptionsEndpointQueryString_2 {
+  eq?: Maybe<string>
+
+  ne?: Maybe<string>
+
+  regex?: Maybe<string>
+
+  glob?: Maybe<string>
+
+  in?: Maybe<(Maybe<string>)[]>
+
+  nin?: Maybe<(Maybe<string>)[]>
+}
+
+export interface SitePluginPluginOptionsQueryQueryString_2 {
+  eq?: Maybe<string>
+
+  ne?: Maybe<string>
+
+  regex?: Maybe<string>
+
+  glob?: Maybe<string>
+
+  in?: Maybe<(Maybe<string>)[]>
+
+  nin?: Maybe<(Maybe<string>)[]>
+}
+
+export interface SitePluginPluginOptionsFeedsQueryList_2 {
+  elemMatch?: Maybe<SitePluginPluginOptionsFeedsInputObject_2>
+}
+
+export interface SitePluginPluginOptionsFeedsInputObject_2 {
+  query?: Maybe<SitePluginPluginOptionsFeedsQueryQueryString_2>
+
+  output?: Maybe<SitePluginPluginOptionsFeedsOutputQueryString_2>
+
+  title?: Maybe<SitePluginPluginOptionsFeedsTitleQueryString_2>
+}
+
+export interface SitePluginPluginOptionsFeedsQueryQueryString_2 {
+  eq?: Maybe<string>
+
+  ne?: Maybe<string>
+
+  regex?: Maybe<string>
+
+  glob?: Maybe<string>
+
+  in?: Maybe<(Maybe<string>)[]>
+
+  nin?: Maybe<(Maybe<string>)[]>
+}
+
+export interface SitePluginPluginOptionsFeedsOutputQueryString_2 {
+  eq?: Maybe<string>
+
+  ne?: Maybe<string>
+
+  regex?: Maybe<string>
+
+  glob?: Maybe<string>
+
+  in?: Maybe<(Maybe<string>)[]>
+
+  nin?: Maybe<(Maybe<string>)[]>
+}
+
+export interface SitePluginPluginOptionsFeedsTitleQueryString_2 {
   eq?: Maybe<string>
 
   ne?: Maybe<string>
@@ -7432,12 +7560,12 @@ export enum SitePageConnectionSortByFieldsEnum {
   InternalOwner = 'internal___owner',
 }
 
-export enum sitePageConnectionSortOrderValues {
+export enum SitePageConnectionSortOrderValues {
   Asc = 'ASC',
   Desc = 'DESC',
 }
 
-export enum sitePageDistinctEnum {
+export enum SitePageDistinctEnum {
   JsonName = 'jsonName',
   InternalComponentName = 'internalComponentName',
   Path = 'path',
@@ -7454,7 +7582,7 @@ export enum sitePageDistinctEnum {
   InternalOwner = 'internal___owner',
 }
 
-export enum sitePageGroupEnum {
+export enum SitePageGroupEnum {
   JsonName = 'jsonName',
   InternalComponentName = 'internalComponentName',
   Path = 'path',
@@ -7480,12 +7608,13 @@ export enum SitePluginConnectionSortByFieldsEnum {
   PluginOptionsPath = 'pluginOptions___path',
   PluginOptionsName = 'pluginOptions___name',
   PluginOptionsIgnore = 'pluginOptions___ignore',
-  PluginOptionsIgnoreFileExtensions = 'pluginOptions___ignoreFileExtensions',
   PluginOptionsExclude = 'pluginOptions___exclude',
   PluginOptionsId = 'pluginOptions___id',
   PluginOptionsIncludeInDevelopment = 'pluginOptions___includeInDevelopment',
   PluginOptionsSiteUrl = 'pluginOptions___siteUrl',
   PluginOptionsEndpoint = 'pluginOptions___endpoint',
+  PluginOptionsQuery = 'pluginOptions___query',
+  PluginOptionsFeeds = 'pluginOptions___feeds',
   PluginOptionsPathCheck = 'pluginOptions___pathCheck',
   NodeApIs = 'nodeAPIs',
   BrowserApIs = 'browserAPIs',
@@ -7506,12 +7635,12 @@ export enum SitePluginConnectionSortByFieldsEnum {
   InternalOwner = 'internal___owner',
 }
 
-export enum sitePluginConnectionSortOrderValues {
+export enum SitePluginConnectionSortOrderValues {
   Asc = 'ASC',
   Desc = 'DESC',
 }
 
-export enum sitePluginDistinctEnum {
+export enum SitePluginDistinctEnum {
   Resolve = 'resolve',
   Id = 'id',
   Name = 'name',
@@ -7520,12 +7649,13 @@ export enum sitePluginDistinctEnum {
   PluginOptionsPath = 'pluginOptions___path',
   PluginOptionsName = 'pluginOptions___name',
   PluginOptionsIgnore = 'pluginOptions___ignore',
-  PluginOptionsIgnoreFileExtensions = 'pluginOptions___ignoreFileExtensions',
   PluginOptionsExclude = 'pluginOptions___exclude',
   PluginOptionsId = 'pluginOptions___id',
   PluginOptionsIncludeInDevelopment = 'pluginOptions___includeInDevelopment',
   PluginOptionsSiteUrl = 'pluginOptions___siteUrl',
   PluginOptionsEndpoint = 'pluginOptions___endpoint',
+  PluginOptionsQuery = 'pluginOptions___query',
+  PluginOptionsFeeds = 'pluginOptions___feeds',
   PluginOptionsPathCheck = 'pluginOptions___pathCheck',
   NodeApIs = 'nodeAPIs',
   BrowserApIs = 'browserAPIs',
@@ -7546,7 +7676,7 @@ export enum sitePluginDistinctEnum {
   InternalOwner = 'internal___owner',
 }
 
-export enum sitePluginGroupEnum {
+export enum SitePluginGroupEnum {
   Resolve = 'resolve',
   Id = 'id',
   Name = 'name',
@@ -7555,12 +7685,13 @@ export enum sitePluginGroupEnum {
   PluginOptionsPath = 'pluginOptions___path',
   PluginOptionsName = 'pluginOptions___name',
   PluginOptionsIgnore = 'pluginOptions___ignore',
-  PluginOptionsIgnoreFileExtensions = 'pluginOptions___ignoreFileExtensions',
   PluginOptionsExclude = 'pluginOptions___exclude',
   PluginOptionsId = 'pluginOptions___id',
   PluginOptionsIncludeInDevelopment = 'pluginOptions___includeInDevelopment',
   PluginOptionsSiteUrl = 'pluginOptions___siteUrl',
   PluginOptionsEndpoint = 'pluginOptions___endpoint',
+  PluginOptionsQuery = 'pluginOptions___query',
+  PluginOptionsFeeds = 'pluginOptions___feeds',
   PluginOptionsPathCheck = 'pluginOptions___pathCheck',
   NodeApIs = 'nodeAPIs',
   BrowserApIs = 'browserAPIs',
@@ -7622,12 +7753,12 @@ export enum DirectoryConnectionSortByFieldsEnum {
   Birthtime = 'birthtime',
 }
 
-export enum directoryConnectionSortOrderValues {
+export enum DirectoryConnectionSortOrderValues {
   Asc = 'ASC',
   Desc = 'DESC',
 }
 
-export enum directoryDistinctEnum {
+export enum DirectoryDistinctEnum {
   Id = 'id',
   InternalContentDigest = 'internal___contentDigest',
   InternalType = 'internal___type',
@@ -7668,7 +7799,7 @@ export enum directoryDistinctEnum {
   Birthtime = 'birthtime',
 }
 
-export enum directoryGroupEnum {
+export enum DirectoryGroupEnum {
   Id = 'id',
   InternalContentDigest = 'internal___contentDigest',
   InternalType = 'internal___type',
@@ -7753,7 +7884,7 @@ export enum FileConnectionSortByFieldsEnum {
   PublicUrl = 'publicURL',
 }
 
-export enum fileConnectionSortOrderValues {
+export enum FileConnectionSortOrderValues {
   Asc = 'ASC',
   Desc = 'DESC',
 }
@@ -7772,7 +7903,7 @@ export enum HeadingLevels {
   H6 = 'h6',
 }
 
-export enum fileDistinctEnum {
+export enum FileDistinctEnum {
   Id = 'id',
   Children = 'children',
   InternalContentDigest = 'internal___contentDigest',
@@ -7815,7 +7946,7 @@ export enum fileDistinctEnum {
   Birthtime = 'birthtime',
 }
 
-export enum fileGroupEnum {
+export enum FileGroupEnum {
   Id = 'id',
   Children = 'children',
   InternalContentDigest = 'internal___contentDigest',
@@ -7871,12 +8002,12 @@ export enum AuthorJsonConnectionSortByFieldsEnum {
   InternalOwner = 'internal___owner',
 }
 
-export enum authorJsonConnectionSortOrderValues {
+export enum AuthorJsonConnectionSortOrderValues {
   Asc = 'ASC',
   Desc = 'DESC',
 }
 
-export enum authorJsonDistinctEnum {
+export enum AuthorJsonDistinctEnum {
   Id = 'id',
   Name = 'name',
   Bio = 'bio',
@@ -7889,7 +8020,7 @@ export enum authorJsonDistinctEnum {
   InternalOwner = 'internal___owner',
 }
 
-export enum authorJsonGroupEnum {
+export enum AuthorJsonGroupEnum {
   Id = 'id',
   Name = 'name',
   Bio = 'bio',
@@ -7931,12 +8062,12 @@ export enum MarkdownRemarkConnectionSortByFieldsEnum {
   WordCountWords = 'wordCount___words',
 }
 
-export enum markdownRemarkConnectionSortOrderValues {
+export enum MarkdownRemarkConnectionSortOrderValues {
   Asc = 'ASC',
   Desc = 'DESC',
 }
 
-export enum markdownRemarkDistinctEnum {
+export enum MarkdownRemarkDistinctEnum {
   Id = 'id',
   Parent = 'parent',
   InternalContent = 'internal___content',
@@ -7957,7 +8088,7 @@ export enum markdownRemarkDistinctEnum {
   FieldsPageType = 'fields___pageType',
 }
 
-export enum markdownRemarkGroupEnum {
+export enum MarkdownRemarkGroupEnum {
   Id = 'id',
   Parent = 'parent',
   InternalContent = 'internal___content',
@@ -8114,7 +8245,7 @@ export interface SitePlugin extends Node {
 
   version?: Maybe<string>
 
-  pluginOptions?: Maybe<PluginOptions_3>
+  pluginOptions?: Maybe<PluginOptions_2>
 
   nodeAPIs?: Maybe<(Maybe<string>)[]>
 
@@ -8129,7 +8260,7 @@ export interface SitePlugin extends Node {
   internal?: Maybe<Internal_9>
 }
 
-export interface PluginOptions_3 {
+export interface PluginOptions_2 {
   plugins?: Maybe<(Maybe<Plugins_2>)[]>
 
   path?: Maybe<string>
@@ -8137,8 +8268,6 @@ export interface PluginOptions_3 {
   name?: Maybe<string>
 
   ignore?: Maybe<(Maybe<string>)[]>
-
-  ignoreFileExtensions?: Maybe<(Maybe<string>)[]>
 
   exclude?: Maybe<(Maybe<string>)[]>
 
@@ -8149,6 +8278,10 @@ export interface PluginOptions_3 {
   siteUrl?: Maybe<string>
 
   endpoint?: Maybe<string>
+
+  query?: Maybe<string>
+
+  feeds?: Maybe<(Maybe<Feeds_2>)[]>
 
   pathCheck?: Maybe<boolean>
 }
@@ -8162,8 +8295,6 @@ export interface Plugins_2 {
 
   version?: Maybe<string>
 
-  pluginOptions?: Maybe<PluginOptions_4>
-
   browserAPIs?: Maybe<(Maybe<string>)[]>
 
   ssrAPIs?: Maybe<(Maybe<string>)[]>
@@ -8171,8 +8302,12 @@ export interface Plugins_2 {
   pluginFilepath?: Maybe<string>
 }
 
-export interface PluginOptions_4 {
-  ignoreFileExtensions?: Maybe<(Maybe<string>)[]>
+export interface Feeds_2 {
+  query?: Maybe<string>
+
+  output?: Maybe<string>
+
+  title?: Maybe<string>
 }
 
 export interface PackageJson_2 {
@@ -9355,7 +9490,7 @@ export interface BirthtimeFileArgs {
 export interface ExcerptMarkdownRemarkArgs {
   pruneLength?: number
 
-  truncate?: Maybe<boolean>
+  truncate?: boolean
 
   format?: Maybe<ExcerptFormats>
 }
@@ -9364,6 +9499,10 @@ export interface HeadingsMarkdownRemarkArgs {
 }
 export interface TableOfContentsMarkdownRemarkArgs {
   pathToSlugField?: string
+
+  maxDepth?: Maybe<number>
+
+  heading?: Maybe<string>
 }
 export interface DateFrontmatter_2Args {
   /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
