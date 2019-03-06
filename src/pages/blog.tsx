@@ -1,15 +1,33 @@
 import * as React from 'react'
-import Layout from '../components/Layout'
-import { Link } from 'gatsby'
+import { StaticQuery, graphql } from 'gatsby'
+import BlogTemplate from '../templates/BlogTemplate'
 
-const NotFoundPage = () => (
-  <Layout>
-    <div>
-      <h1>NOT BLOG HERE</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-      <Link to="/">Go back to homepage</Link>
-    </div>
-  </Layout>
+
+const BlogPage = () => (
+    <StaticQuery query={
+        graphql`
+            query {
+            allMarkdownRemark(filter: {fileAbsolutePath: {regex: "//blog//"}}, limit: 1000) {
+                edges {
+                node {
+                    id
+                    fields {
+                    slug
+                    }
+                    frontmatter {
+                    title
+                    date
+                    tags
+                    backgroundImage {
+                        publicURL
+                    }
+                    }
+                }
+                }
+            }
+            }`
+    }
+    render={data => ( <BlogTemplate data={data}/> )} />
 )
 
-export default NotFoundPage
+export default BlogPage

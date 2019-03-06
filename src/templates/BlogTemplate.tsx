@@ -2,51 +2,25 @@ import * as React from 'react'
 import BlogPost from '../components/BlogPost'
 import { graphql } from 'gatsby'
 import { Query } from '../graphql-types'
+import BlogPostList from '../components/BlogPostsList'
 
 interface BlogTemplateProps {
   data: Query
 }
 
+// TODO - create a BlogPostList component which will get the data from the query
+// TODO - create a BlogPostListItem compoentn that displays the image, link etc.
+// TODO - create a HeroImage component that will be displayed
+
+
 const BlogTemplate: React.FunctionComponent<BlogTemplateProps> = ({ data }) => {
-  const frontmatter =
-    (data && data.markdownRemark && data.markdownRemark.frontmatter) || {}
-  const title = frontmatter.title ? frontmatter.title : ''
-  const html = (data && data.markdownRemark && data.markdownRemark.html) || ''
-  const excerpt =
-    (data && data.markdownRemark && data.markdownRemark.excerpt) || ''
+  const elements = (data && data.allMarkdownRemark && data.allMarkdownRemark.edges) || []
   return (
-    <BlogPost
-      html={html}
-      title={title}
-      excerpt={excerpt}
-      frontmatter={frontmatter}
+    <BlogPostList
+      elements={elements}
     />
   )
 }
 
 export default BlogTemplate
 
-export const postQuery = graphql`
-  query($slug: String!) {
-    {
-  allMarkdownRemark(filter: {fileAbsolutePath: {regex: "//blog//"}}, limit: 1000) {
-    edges {
-      node {
-        fields {
-          slug
-        }
-        frontmatter {
-          title
-          date
-          tags
-          backgroundImage {
-            publicURL
-          }
-        }
-      }
-    }
-  }
-}
-
-  }
-`
