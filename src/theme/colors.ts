@@ -8,6 +8,7 @@ export const colors = {
   backgroundDark: '#2b2b2b',
   backgroundDarkerGray: '#333',
   backgroundGray: '#444',
+  backgroundLightGray: '#dcdcdc',
   borderColor: '#eee',
   brand: brandBlue,
   brandDarkGreen,
