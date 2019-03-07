@@ -1,29 +1,35 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { colors, typography } from '../../theme'
-import { SitePageEdge } from '../../graphql-types'
+import { colors, transitions, typography } from '../../theme'
+import { MarkdownRemark } from '../../graphql-types'
 
 const StyledBlogPost = styled.li`
-    position: relative;
     padding: 0;
     margin: 0;
     background: ${colors.backgroundLightGray};
     border-radius: 4px;
     overflow: hidden;
     text-align: center;
+    transition: box-shadow ${transitions.basicTransition};
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.33);
 
-    &:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
+    &:hover {
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.33);
+
+        img {
+            filter: grayscale(0.7);
+        }
     }
 
     a {
         text-decoration: none;
         color: ${colors.textColor};
+        cursor: pointer;
+        position: relative;
+
+        img {
+            transition: filter ${transitions.basicTransition};
+        }
     }
 
     h3 {
@@ -40,6 +46,12 @@ const StyledBlogPost = styled.li`
         list-style: none;
         opacity: 0.5;
         font-size: ${typography.subtitleSize};
+
+        li {
+            + li {
+                margin-left: 7px;
+            }
+        }
     }
 
     .content-wrapper {
@@ -48,10 +60,14 @@ const StyledBlogPost = styled.li`
 `
 
 interface BlogPostProps {
-    element: SitePageEdge
+    item: MarkdownRemark
 }
 
-const createTagsList = (tags: []) => {
+const createTagsList = (tags?: string[]) => {
+    if (!tags || !tags.length) {
+        return null
+    }
+
     return(
         <ul className="tags-list">
             {tags.map((tag: string) => <li>{tag}</li>)}
@@ -60,18 +76,21 @@ const createTagsList = (tags: []) => {
 }
 
 
-const BlogPost: React.FunctionComponent<BlogPostProps> = ({ element }) => {
-    console.log(element);
-    const node = element.node;
+const BlogPostListItem: React.FunctionComponent<BlogPostProps> = ({ item }) => {
+    const slug = (item && item.fields && item.fields.slug) || ''
+    const frontmatter = item && item.frontmatter || {}
+    const publicURL = (frontmatter && frontmatter.backgroundImage && frontmatter.backgroundImage.publicURL) || ''
+    const tags = (frontmatter && frontmatter.tags) || []
+    const title = (frontmatter && frontmatter.title) || []
 
     return (
         <StyledBlogPost>
-            <a href={node.fields.slug}>
+            <a href={slug}>
                 <figure>
-                    <img src={node.frontmatter.backgroundImage.publicURL} />
+                    <img src={publicURL} />
                     <figcaption className="content-wrapper">
-                        {createTagsList(node.frontmatter.tags)}
-                        <h3>{node.frontmatter.title}</h3>
+                        {createTagsList(tags)}
+                        <h3>{title}</h3>
                     </figcaption>
                 </figure>
             </a>
@@ -79,4 +98,4 @@ const BlogPost: React.FunctionComponent<BlogPostProps> = ({ element }) => {
     )
 }
 
-export default BlogPost
+export default BlogPostListItem
