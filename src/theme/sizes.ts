@@ -1,4 +1,4 @@
 export const sizes = {
-  headerHeight: `70px`,
   defaultSpacing: 30,
+  headerHeight: `70px`,
 }
