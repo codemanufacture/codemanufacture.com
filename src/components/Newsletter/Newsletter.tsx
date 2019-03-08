@@ -1,6 +1,12 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { colors, typography, transitions, displayDimensions } from '../../theme'
+import {
+  colors,
+  sizes,
+  typography,
+  transitions,
+  displayDimensions,
+} from '../../theme'
 import addToMailchimp from 'gatsby-plugin-mailchimp'
 import NewsletterInput from '../NewsletterInput'
 import Button from '../Button'
@@ -54,7 +60,7 @@ const StyledFormWrapper = styled('div')<StyledProps>`
     }
 
     @media (max-width: ${displayDimensions.tabletSize}) {
-      padding: 0 30px;
+      padding: 0 ${sizes.defaultSpacing}px;
     }
   }
 
