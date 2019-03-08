@@ -1,6 +1,13 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { colors, transitions, typography } from '../../theme'
+import uniqid from 'uniqid'
+import {
+  colors,
+  displayDimensions,
+  sizes,
+  transitions,
+  typography,
+} from '../../theme'
 import { MarkdownRemark } from '../../graphql-types'
 
 const StyledBlogPost = styled.li`
@@ -12,6 +19,12 @@ const StyledBlogPost = styled.li`
   text-align: center;
   transition: box-shadow ${transitions.basicTransition};
   box-shadow: 0 0 0 rgba(0, 0, 0, 0.33);
+
+  @media (max-width: ${displayDimensions.tabletSize}) {
+    + li {
+      margin-top: ${sizes.defaultSpacing}px;
+    }
+  }
 
   a {
     text-decoration: none;
@@ -72,7 +85,7 @@ const createTagsList = (tags: string[] | any) => {
   return (
     <ul className="tags-list">
       {tags.map((tag: string) => (
-        <li>{tag}</li>
+        <li key={`tag-${uniqid()}`}>{tag}</li>
       ))}
     </ul>
   )
@@ -90,7 +103,7 @@ const BlogPostListItem: React.FunctionComponent<BlogPostProps> = ({ item }) => {
   const title = (frontmatter && frontmatter.title) || []
 
   return (
-    <StyledBlogPost>
+    <StyledBlogPost key={`blog-post-${uniqid()}`}>
       <a href={slug}>
         <figure>
           <img src={publicURL} />

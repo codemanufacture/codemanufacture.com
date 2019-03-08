@@ -14,7 +14,7 @@ const StyledBlogLayout = styled.article`
   grid-template-columns: calc(100% - ${sidebarWidth}) 200px;
   position: relative;
 
-  @media (max-width: 1024px) {
+  @media (max-width: ${displayDimensions.smallScreenSize}) {
     grid-template-columns: calc(100% - ${sidebarMobileWidth}) 200px;
   }
 
@@ -31,7 +31,7 @@ const StyledBlogLayout = styled.article`
     bottom: 0;
     background: ${colors.borderColor};
 
-    @media (max-width: 1024px) {
+    @media (max-width: ${displayDimensions.smallScreenSize}) {
       width: ${sidebarMobileWidth};
     }
 
@@ -118,7 +118,7 @@ const StyledBlogLayout = styled.article`
     align-self: flex-start;
     z-index: 1;
 
-    @media (max-width: 1024px) {
+    @media (max-width: ${displayDimensions.smallScreenSize}) {
       width: ${sidebarMobileWidth};
     }
 

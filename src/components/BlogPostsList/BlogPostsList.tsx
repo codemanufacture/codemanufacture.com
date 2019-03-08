@@ -2,7 +2,7 @@ import * as React from 'react'
 import styled from 'styled-components'
 import uniqid from 'uniqid'
 import Layout from '../Layout'
-import { sizes } from '../../theme'
+import { displayDimensions, sizes } from '../../theme'
 import { MarkdownRemarkEdge } from '../../graphql-types'
 import BlogPostsListItem from '../BlogPostsListItem'
 
@@ -16,6 +16,15 @@ const StyledBlogPostsList = styled.ul`
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 30px;
   grid-row-gap: 30px;
+
+  @media (max-width: ${displayDimensions.smallScreenSize}) {
+    width: calc(100% - ${sizes.defaultSpacing * 2}px);
+  }
+
+  @media (max-width: ${displayDimensions.tabletSize}) {
+    display: flex;
+    flex-direction: column;
+  }
 `
 
 interface BlogPostListProps {
