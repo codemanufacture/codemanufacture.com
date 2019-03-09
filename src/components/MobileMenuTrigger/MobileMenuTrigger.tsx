@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { colors, displayDimensions } from '../../../theme'
+import { colors, displayDimensions } from '../../theme'
 
 const StyledMobileMenuTrigger = styled.a`
   display: none;

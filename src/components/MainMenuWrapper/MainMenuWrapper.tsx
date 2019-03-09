@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import { displayDimensions } from '../../theme'
-import MobileMenuTrigger from './components/MobileMenuTrigger'
+import MobileMenuTrigger from '../MobileMenuTrigger'
 import MainMenu from '../MainMenu'
 
 const StyledMainMenuWrapper = styled.menu`
