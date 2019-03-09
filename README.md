@@ -109,6 +109,10 @@ Generates HTML, JavaScript and other static files used for the site in productio
 
 Runs linters and formatters to verify make sure code follows standards.
 
+#### `yarn clean`
+
+Wipes the local environment including built assets and cache
+
 #### `yarn develop`
 
 Runs the site in the development mode.

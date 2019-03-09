@@ -47,6 +47,7 @@
   "scripts": {
     "build": "gatsby build",
     "ci-check": "yarn run:parallel lint:* nit:*",
+    "clean": "gatsby clean",
     "develop": "gatsby develop -H 0.0.0.0",
     "format:markdown": "prettier --config .prettierrc --parser markdown --write '{./content/**/*.md,./README.md}'",
     "format:source": "prettier --config .prettierrc --parser typescript --write 'src/**/*.{ts,tsx}'",
