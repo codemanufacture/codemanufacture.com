@@ -3523,6 +3523,8 @@ export interface MarkdownRemarkConnectionFrontmatterInputObject_2 {
   backgroundColor?: Maybe<
     MarkdownRemarkConnectionFrontmatterBackgroundColorQueryString_2
   >
+
+  permalink?: Maybe<MarkdownRemarkConnectionFrontmatterPermalinkQueryString_2>
 }
 
 export interface MarkdownRemarkConnectionFrontmatterTitleQueryString_2 {
@@ -3596,6 +3598,20 @@ export interface MarkdownRemarkConnectionFrontmatterBackgroundImageQueryString_2
 }
 
 export interface MarkdownRemarkConnectionFrontmatterBackgroundColorQueryString_2 {
+  eq?: Maybe<string>
+
+  ne?: Maybe<string>
+
+  regex?: Maybe<string>
+
+  glob?: Maybe<string>
+
+  in?: Maybe<(Maybe<string>)[]>
+
+  nin?: Maybe<(Maybe<string>)[]>
+}
+
+export interface MarkdownRemarkConnectionFrontmatterPermalinkQueryString_2 {
   eq?: Maybe<string>
 
   ne?: Maybe<string>
@@ -7231,6 +7247,8 @@ export interface MarkdownRemarkFrontmatterInputObject_2 {
   backgroundImage?: Maybe<MarkdownRemarkFrontmatterBackgroundImageQueryString_2>
 
   backgroundColor?: Maybe<MarkdownRemarkFrontmatterBackgroundColorQueryString_2>
+
+  permalink?: Maybe<MarkdownRemarkFrontmatterPermalinkQueryString_2>
 }
 
 export interface MarkdownRemarkFrontmatterTitleQueryString_2 {
@@ -7304,6 +7322,20 @@ export interface MarkdownRemarkFrontmatterBackgroundImageQueryString_2 {
 }
 
 export interface MarkdownRemarkFrontmatterBackgroundColorQueryString_2 {
+  eq?: Maybe<string>
+
+  ne?: Maybe<string>
+
+  regex?: Maybe<string>
+
+  glob?: Maybe<string>
+
+  in?: Maybe<(Maybe<string>)[]>
+
+  nin?: Maybe<(Maybe<string>)[]>
+}
+
+export interface MarkdownRemarkFrontmatterPermalinkQueryString_2 {
   eq?: Maybe<string>
 
   ne?: Maybe<string>
@@ -8048,6 +8080,7 @@ export enum MarkdownRemarkConnectionSortByFieldsEnum {
   FrontmatterTags = 'frontmatter___tags',
   FrontmatterBackgroundImage = 'frontmatter___backgroundImage',
   FrontmatterBackgroundColor = 'frontmatter___backgroundColor',
+  FrontmatterPermalink = 'frontmatter___permalink',
   RawMarkdownBody = 'rawMarkdownBody',
   FileAbsolutePath = 'fileAbsolutePath',
   FieldsSlug = 'fields___slug',
@@ -8082,6 +8115,7 @@ export enum MarkdownRemarkDistinctEnum {
   FrontmatterTags = 'frontmatter___tags',
   FrontmatterBackgroundImage = 'frontmatter___backgroundImage',
   FrontmatterBackgroundColor = 'frontmatter___backgroundColor',
+  FrontmatterPermalink = 'frontmatter___permalink',
   RawMarkdownBody = 'rawMarkdownBody',
   FileAbsolutePath = 'fileAbsolutePath',
   FieldsSlug = 'fields___slug',
@@ -8103,6 +8137,7 @@ export enum MarkdownRemarkGroupEnum {
   FrontmatterTags = 'frontmatter___tags',
   FrontmatterBackgroundImage = 'frontmatter___backgroundImage',
   FrontmatterBackgroundColor = 'frontmatter___backgroundColor',
+  FrontmatterPermalink = 'frontmatter___permalink',
   RawMarkdownBody = 'rawMarkdownBody',
   FileAbsolutePath = 'fileAbsolutePath',
   FieldsSlug = 'fields___slug',
@@ -8739,6 +8774,8 @@ export interface MarkdownRemark extends Node {
 
   excerpt?: Maybe<string>
 
+  excerptAst?: Maybe<Json>
+
   headings?: Maybe<(Maybe<MarkdownHeading>)[]>
 
   timeToRead?: Maybe<number>
@@ -8778,6 +8815,8 @@ export interface Frontmatter_2 {
   backgroundImage?: Maybe<File>
 
   backgroundColor?: Maybe<string>
+
+  permalink?: Maybe<string>
 }
 
 export interface Fields_2 {
@@ -9493,6 +9532,11 @@ export interface ExcerptMarkdownRemarkArgs {
   truncate?: boolean
 
   format?: Maybe<ExcerptFormats>
+}
+export interface ExcerptAstMarkdownRemarkArgs {
+  pruneLength?: number
+
+  truncate?: boolean
 }
 export interface HeadingsMarkdownRemarkArgs {
   depth?: Maybe<HeadingLevels>
