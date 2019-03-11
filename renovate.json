@@ -11,7 +11,7 @@
   "major": {
     "automerge": false
   },
-  "pinVersions": false,
+  "rangeStrategy": "bump",
   "rebaseStalePrs": true,
   "lockFileMaintenance": {
     "enabled": true,
