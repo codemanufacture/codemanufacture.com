@@ -5572,7 +5572,7 @@ gatsby-plugin-react-helmet@^3.0.9:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
-gatsby-plugin-robots-txt@^1.3.0:
+gatsby-plugin-robots-txt@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-robots-txt/-/gatsby-plugin-robots-txt-1.4.0.tgz#2da3fb60a307f83b34a9fbdd85fdb4e6a53e431a"
   integrity sha512-9wFH7bl90jpBEUo2rkXeXHtQy3CqZD/85F9rW6JeyJhbtTFOdnjdx9/Up3zJkxeLblwR1I5+VxHAzp/3jEyb7g==
