@@ -51,6 +51,7 @@ The code base for the [Codemanufacture](https://codemanufacture.com/)
      ├── .circleci                     // CircleCI automated deployment configuration
      ├── .huskyrc                      // husky configuration
      ├── .lintstagedrc                 // lint-staged configuration
+     ├── .nvmrc                        // Node Version Manager configuration
      ├── .prettierignore               // prettier ignored files configuration
      ├── .prettierrc                   // prettier configuration
      ├── .stylelintrc                  // stylelint configuration
