@@ -83,7 +83,7 @@ The code base for the [Codemanufacture](https://codemanufacture.com/)
 ### Prerequisites
 
 1.  [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-1.  [Node.js](https://nodejs.org/en/download/package-manager/) 8.x
+1.  [Node.js](https://nodejs.org/en/download/package-manager/) 10.x
 1.  [Yarn](https://yarnpkg.com/en/docs/install)
 1.  A fork this repo (for any contributions)
 
@@ -179,4 +179,4 @@ Watch files for changes and rerun tests related to changed files
 
 #### `yarn type-check`
 
-Runs type check agains source files
+Runs type check against source files
