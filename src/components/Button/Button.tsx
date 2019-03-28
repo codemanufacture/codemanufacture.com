@@ -5,7 +5,7 @@ import { colors, transitions, typography } from '../../theme'
 interface ButtonProps {
   className?: string
   label: string
-  type: string
+  type: 'button' | 'reset' | 'submit' | undefined
   onClick(e: React.SyntheticEvent): void
 }
 
