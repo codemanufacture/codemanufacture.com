@@ -5,7 +5,8 @@
     "group:reactMonorepo",
     "group:graphqlcodegeneratorMonorepo",
     "group:jestMonorepo",
-    "docker:disable"
+    "docker:disable",
+    "schedule:weekly"
   ],
   "automerge": true,
   "major": {
