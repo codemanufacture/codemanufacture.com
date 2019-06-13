@@ -1,9 +1,12 @@
-**/*.ts.snap text eol=lf
-**/*.tsx.snap text eol=lf
-**/__tests__/fixtures/** text eol=lf
-*.js text eol=lf
-*.json text eol=lf
-*.ts text eol=lf linguist-language=JavaScript
-*.tsx text eol=lf linguist-language=JavaScript
-*.md text eol=lf
-.gitattributes text eol=lf
+* text=auto eol=lf
+
+# These files are binary and should be left untouched
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.tar.gz binary
+*.zip binary
+*.7z binary
