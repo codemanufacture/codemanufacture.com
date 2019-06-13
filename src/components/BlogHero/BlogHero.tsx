@@ -1,6 +1,11 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { Frontmatter_2, AuthorJson, File, Maybe } from '../../graphql-types'
+import {
+  MarkdownRemarkFrontmatter,
+  AuthorJson,
+  File,
+  Maybe,
+} from '../../graphql-types'
 import { colors, displayDimensions, sizes, typography } from '../../theme'
 
 interface StyledBlogHeroProps {
@@ -92,7 +97,7 @@ const createAuthorData = (authors?: Array<Maybe<AuthorJson>>) => {
 }
 
 interface BlogHeroProps {
-  frontmatter: Frontmatter_2
+  frontmatter: MarkdownRemarkFrontmatter
 }
 
 const BlogHero: React.FunctionComponent<BlogHeroProps> = ({ frontmatter }) => {

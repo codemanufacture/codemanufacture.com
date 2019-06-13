@@ -4,7 +4,11 @@ import styled from 'styled-components'
 import Layout from '../Layout'
 import BlogHero from '../BlogHero'
 import { colors } from '../../theme'
-import { Frontmatter_2, AuthorJson, Maybe } from '../../graphql-types'
+import {
+  MarkdownRemarkFrontmatter,
+  AuthorJson,
+  Maybe,
+} from '../../graphql-types'
 import BlogLayout from '../BlogLayout'
 
 const StyledPageWrapper = styled.div`
@@ -48,12 +52,12 @@ interface BlogPostProps {
   excerpt: string
   title: string
   html: string
-  frontmatter: Frontmatter_2
+  frontmatter: MarkdownRemarkFrontmatter
 }
 
 interface BlogPostHelmetProps {
   excerpt: string
-  frontmatter: Frontmatter_2
+  frontmatter: MarkdownRemarkFrontmatter
   html: string
 }
 

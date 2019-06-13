@@ -1,15 +1,10 @@
-schema:
-  - "http://localhost:8000/___graphql"
-documents: []
-config:
-  add: "/* tslint:disable */"
-overwrite: true
+schema: http://localhost:8000/___graphql
+documents:
+  - ./src/**/*.{ts,tsx}
+  - ./node_modules/gatsby-*/!(examples)/**/*.js
 generates:
   ./src/graphql-types.d.ts:
-    config: {}
     plugins:
-      - "add"
-      - "typescript-common"
-      - "typescript-client"
-      - "typescript-server"
-require: []
+      - add: '/* tslint:disable */'
+      - typescript
+      - typescript-operations
