@@ -573,6 +573,7 @@ export type DirectorySortInput = {
 export enum ExcerptFormats {
   Plain = 'PLAIN',
   Html = 'HTML',
+  Markdown = 'MARKDOWN',
 }
 
 export type File = Node & {
@@ -981,14 +982,14 @@ export type MarkdownRemark = Node & {
 }
 
 export type MarkdownRemarkExcerptArgs = {
-  pruneLength: Scalars['Int']
-  truncate: Scalars['Boolean']
-  format: ExcerptFormats
+  pruneLength?: Maybe<Scalars['Int']>
+  truncate?: Maybe<Scalars['Boolean']>
+  format?: Maybe<ExcerptFormats>
 }
 
 export type MarkdownRemarkExcerptAstArgs = {
-  pruneLength: Scalars['Int']
-  truncate: Scalars['Boolean']
+  pruneLength?: Maybe<Scalars['Int']>
+  truncate?: Maybe<Scalars['Boolean']>
 }
 
 export type MarkdownRemarkHeadingsArgs = {
@@ -996,7 +997,7 @@ export type MarkdownRemarkHeadingsArgs = {
 }
 
 export type MarkdownRemarkTableOfContentsArgs = {
-  pathToSlugField: Scalars['String']
+  pathToSlugField?: Maybe<Scalars['String']>
   maxDepth?: Maybe<Scalars['Int']>
   heading?: Maybe<Scalars['String']>
 }
@@ -1313,7 +1314,6 @@ export type MarkdownRemarkSortInput = {
 
 /** Node Interface */
 export type Node = {
-  __typename?: 'Node'
   id: Scalars['ID']
   parent?: Maybe<Node>
   children: Array<Node>
@@ -1413,7 +1413,6 @@ export type QuerySitePageArgs = {
   children?: Maybe<NodeFilterListInput>
   internal?: Maybe<InternalFilterInput>
   path?: Maybe<StringQueryOperatorInput>
-  jsonName?: Maybe<StringQueryOperatorInput>
   internalComponentName?: Maybe<StringQueryOperatorInput>
   component?: Maybe<StringQueryOperatorInput>
   componentChunkName?: Maybe<StringQueryOperatorInput>
@@ -1755,7 +1754,6 @@ export type SitePage = Node & {
   children: Array<Node>
   internal: Internal
   path?: Maybe<Scalars['String']>
-  jsonName?: Maybe<Scalars['String']>
   internalComponentName?: Maybe<Scalars['String']>
   component?: Maybe<Scalars['String']>
   componentChunkName?: Maybe<Scalars['String']>
@@ -1890,7 +1888,6 @@ export enum SitePageFieldsEnum {
   InternalOwner = 'internal___owner',
   InternalType = 'internal___type',
   Path = 'path',
-  JsonName = 'jsonName',
   InternalComponentName = 'internalComponentName',
   Component = 'component',
   ComponentChunkName = 'componentChunkName',
@@ -1989,7 +1986,6 @@ export type SitePageFilterInput = {
   children?: Maybe<NodeFilterListInput>
   internal?: Maybe<InternalFilterInput>
   path?: Maybe<StringQueryOperatorInput>
-  jsonName?: Maybe<StringQueryOperatorInput>
   internalComponentName?: Maybe<StringQueryOperatorInput>
   component?: Maybe<StringQueryOperatorInput>
   componentChunkName?: Maybe<StringQueryOperatorInput>
