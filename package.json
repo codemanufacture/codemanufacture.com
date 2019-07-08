@@ -5,7 +5,7 @@
   "author": "Piotr Kwiecinski <piotr.kwiecinski@codemanufacure.com>",
   "private": true,
   "dependencies": {
-    "babel-plugin-styled-components": "^1.10.0",
+    "babel-plugin-styled-components": "^1.10.6",
     "classnames": "^2.2.6",
     "gatsby": "^2.4.3",
     "gatsby-plugin-canonical-urls": "^2.0.12",
