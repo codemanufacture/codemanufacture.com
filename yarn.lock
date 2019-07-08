@@ -1178,7 +1178,7 @@
     signedsource "^1.0.0"
     yargs "^9.0.0"
 
-"@graphql-codegen/add@^1.2.1":
+"@graphql-codegen/add@^1.3.1":
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/@graphql-codegen/add/-/add-1.3.1.tgz#728005ee15dc1561d315aeed9e99bac63d43150e"
   integrity sha512-W1L9HaR+bkZxg5D4POAMSm6/NGGXj61OGfZ9kjeme/0oprAn9QN9g8bfaJOMHtPAqRPBKV8trZ3ZieqIog9jAw==
@@ -1186,7 +1186,7 @@
     "@graphql-codegen/plugin-helpers" "1.3.1"
     tslib "1.10.0"
 
-"@graphql-codegen/cli@^1.2.1":
+"@graphql-codegen/cli@^1.3.1":
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/@graphql-codegen/cli/-/cli-1.3.1.tgz#0de52d2ec6f652f573bce1fb3d5c8c9785ead0e5"
   integrity sha512-hKDPTPPbqPDIPzGY/ROQQuxejl1EwaTYobQ/z3T3GbQyTZu7xb5cVpcEElIHsA3mtaab/dcP3TlKdE1xOFHE3w==
@@ -1248,7 +1248,7 @@
     import-from "3.0.0"
     tslib "1.10.0"
 
-"@graphql-codegen/typescript-operations@^1.2.1":
+"@graphql-codegen/typescript-operations@^1.3.1":
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/@graphql-codegen/typescript-operations/-/typescript-operations-1.3.1.tgz#ac81caa7fe1921d32be919eb185d2e073371daaf"
   integrity sha512-xj5d/ulPDXryVJECxGuMjP/iV0TrAX202XU5hQ1/8qTM3VxDnn9W0vw3zMJH2xnAA0gALCs1+McbeTqm5AoH3Q==
@@ -1258,7 +1258,7 @@
     "@graphql-codegen/visitor-plugin-common" "1.3.1"
     tslib "1.10.0"
 
-"@graphql-codegen/typescript@1.3.1", "@graphql-codegen/typescript@^1.2.1":
+"@graphql-codegen/typescript@1.3.1", "@graphql-codegen/typescript@^1.3.1":
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/@graphql-codegen/typescript/-/typescript-1.3.1.tgz#2b0231c8427ee35d93b3f3c89f4ce5a0ed4813f3"
   integrity sha512-9hm8Xr2Pt0N0gM54me9V318VfmFz/mDEo1BqbWjQ5uHCVirB115+M/osqH/AeS3QnLtCzgn3pLdO/1v6BhlQnQ==
