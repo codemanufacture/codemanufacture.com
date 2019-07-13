@@ -1,6 +1,6 @@
 # Codemanufacture Website
 
-[![node >= 8.x](https://img.shields.io/badge/node-%3E%3D%208.x-brightgreen.svg?style=flat-square)](https://nodejs.org/)
+[![node >= 12.x](https://img.shields.io/badge/node-%3E%3D%2012.x-brightgreen.svg?style=flat-square)](https://nodejs.org/)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/c767699be8c84f3291e3cecb526a92d1)](https://www.codacy.com/app/Codemanufacture/codemanufacture.com?utm_source=github.com&utm_medium=referral&utm_content=codemanufacture/codemanufacture.com&utm_campaign=Badge_Grade)
 [![CircleCI](https://circleci.com/gh/codemanufacture/codemanufacture.com.svg?style=svg)](https://circleci.com/gh/codemanufacture/codemanufacture.com)
 
