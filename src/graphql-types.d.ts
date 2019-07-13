@@ -146,6 +146,40 @@ export enum AuthorJsonFieldsEnum {
   Bio = 'bio',
   Github = 'github',
   Twitter = 'twitter',
+  AvatarBirthtime = 'avatar___birthtime',
+  AvatarBirthtimeMs = 'avatar___birthtimeMs',
+  AvatarSourceInstanceName = 'avatar___sourceInstanceName',
+  AvatarAbsolutePath = 'avatar___absolutePath',
+  AvatarRelativePath = 'avatar___relativePath',
+  AvatarExtension = 'avatar___extension',
+  AvatarSize = 'avatar___size',
+  AvatarPrettySize = 'avatar___prettySize',
+  AvatarModifiedTime = 'avatar___modifiedTime',
+  AvatarAccessTime = 'avatar___accessTime',
+  AvatarChangeTime = 'avatar___changeTime',
+  AvatarBirthTime = 'avatar___birthTime',
+  AvatarRoot = 'avatar___root',
+  AvatarDir = 'avatar___dir',
+  AvatarBase = 'avatar___base',
+  AvatarExt = 'avatar___ext',
+  AvatarName = 'avatar___name',
+  AvatarRelativeDirectory = 'avatar___relativeDirectory',
+  AvatarDev = 'avatar___dev',
+  AvatarMode = 'avatar___mode',
+  AvatarNlink = 'avatar___nlink',
+  AvatarUid = 'avatar___uid',
+  AvatarGid = 'avatar___gid',
+  AvatarRdev = 'avatar___rdev',
+  AvatarBlksize = 'avatar___blksize',
+  AvatarIno = 'avatar___ino',
+  AvatarBlocks = 'avatar___blocks',
+  AvatarAtimeMs = 'avatar___atimeMs',
+  AvatarMtimeMs = 'avatar___mtimeMs',
+  AvatarCtimeMs = 'avatar___ctimeMs',
+  AvatarAtime = 'avatar___atime',
+  AvatarMtime = 'avatar___mtime',
+  AvatarCtime = 'avatar___ctime',
+  AvatarPublicUrl = 'avatar___publicURL',
   AvatarId = 'avatar___id',
   AvatarParentId = 'avatar___parent___id',
   AvatarParentParentId = 'avatar___parent___parent___id',
@@ -184,40 +218,6 @@ export enum AuthorJsonFieldsEnum {
   AvatarInternalMediaType = 'avatar___internal___mediaType',
   AvatarInternalOwner = 'avatar___internal___owner',
   AvatarInternalType = 'avatar___internal___type',
-  AvatarSourceInstanceName = 'avatar___sourceInstanceName',
-  AvatarAbsolutePath = 'avatar___absolutePath',
-  AvatarRelativePath = 'avatar___relativePath',
-  AvatarExtension = 'avatar___extension',
-  AvatarSize = 'avatar___size',
-  AvatarPrettySize = 'avatar___prettySize',
-  AvatarModifiedTime = 'avatar___modifiedTime',
-  AvatarAccessTime = 'avatar___accessTime',
-  AvatarChangeTime = 'avatar___changeTime',
-  AvatarBirthTime = 'avatar___birthTime',
-  AvatarRoot = 'avatar___root',
-  AvatarDir = 'avatar___dir',
-  AvatarBase = 'avatar___base',
-  AvatarExt = 'avatar___ext',
-  AvatarName = 'avatar___name',
-  AvatarRelativeDirectory = 'avatar___relativeDirectory',
-  AvatarDev = 'avatar___dev',
-  AvatarMode = 'avatar___mode',
-  AvatarNlink = 'avatar___nlink',
-  AvatarUid = 'avatar___uid',
-  AvatarGid = 'avatar___gid',
-  AvatarRdev = 'avatar___rdev',
-  AvatarBlksize = 'avatar___blksize',
-  AvatarIno = 'avatar___ino',
-  AvatarBlocks = 'avatar___blocks',
-  AvatarAtimeMs = 'avatar___atimeMs',
-  AvatarMtimeMs = 'avatar___mtimeMs',
-  AvatarCtimeMs = 'avatar___ctimeMs',
-  AvatarBirthtimeMs = 'avatar___birthtimeMs',
-  AvatarAtime = 'avatar___atime',
-  AvatarMtime = 'avatar___mtime',
-  AvatarCtime = 'avatar___ctime',
-  AvatarBirthtime = 'avatar___birthtime',
-  AvatarPublicUrl = 'avatar___publicURL',
 }
 
 export type AuthorJsonFilterInput = {
@@ -578,10 +578,8 @@ export enum ExcerptFormats {
 
 export type File = Node & {
   __typename?: 'File'
-  id: Scalars['ID']
-  parent?: Maybe<Node>
-  children: Array<Node>
-  internal: Internal
+  birthtime?: Maybe<Scalars['Date']>
+  birthtimeMs?: Maybe<Scalars['Float']>
   sourceInstanceName?: Maybe<Scalars['String']>
   absolutePath?: Maybe<Scalars['String']>
   relativePath?: Maybe<Scalars['String']>
@@ -610,13 +608,15 @@ export type File = Node & {
   atimeMs?: Maybe<Scalars['Float']>
   mtimeMs?: Maybe<Scalars['Float']>
   ctimeMs?: Maybe<Scalars['Float']>
-  birthtimeMs?: Maybe<Scalars['Float']>
   atime?: Maybe<Scalars['Date']>
   mtime?: Maybe<Scalars['Date']>
   ctime?: Maybe<Scalars['Date']>
-  birthtime?: Maybe<Scalars['Date']>
   /** Copy file to static directory and return public url to it */
   publicURL?: Maybe<Scalars['String']>
+  id: Scalars['ID']
+  parent?: Maybe<Node>
+  children: Array<Node>
+  internal: Internal
   childAuthorJson?: Maybe<AuthorJson>
   childMarkdownRemark?: Maybe<MarkdownRemark>
 }
@@ -670,13 +670,6 @@ export type FileCtimeArgs = {
   locale?: Maybe<Scalars['String']>
 }
 
-export type FileBirthtimeArgs = {
-  formatString?: Maybe<Scalars['String']>
-  fromNow?: Maybe<Scalars['Boolean']>
-  difference?: Maybe<Scalars['String']>
-  locale?: Maybe<Scalars['String']>
-}
-
 export type FileConnection = {
   __typename?: 'FileConnection'
   totalCount: Scalars['Int']
@@ -705,6 +698,40 @@ export type FileEdge = {
 }
 
 export enum FileFieldsEnum {
+  Birthtime = 'birthtime',
+  BirthtimeMs = 'birthtimeMs',
+  SourceInstanceName = 'sourceInstanceName',
+  AbsolutePath = 'absolutePath',
+  RelativePath = 'relativePath',
+  Extension = 'extension',
+  Size = 'size',
+  PrettySize = 'prettySize',
+  ModifiedTime = 'modifiedTime',
+  AccessTime = 'accessTime',
+  ChangeTime = 'changeTime',
+  BirthTime = 'birthTime',
+  Root = 'root',
+  Dir = 'dir',
+  Base = 'base',
+  Ext = 'ext',
+  Name = 'name',
+  RelativeDirectory = 'relativeDirectory',
+  Dev = 'dev',
+  Mode = 'mode',
+  Nlink = 'nlink',
+  Uid = 'uid',
+  Gid = 'gid',
+  Rdev = 'rdev',
+  Blksize = 'blksize',
+  Ino = 'ino',
+  Blocks = 'blocks',
+  AtimeMs = 'atimeMs',
+  MtimeMs = 'mtimeMs',
+  CtimeMs = 'ctimeMs',
+  Atime = 'atime',
+  Mtime = 'mtime',
+  Ctime = 'ctime',
+  PublicUrl = 'publicURL',
   Id = 'id',
   ParentId = 'parent___id',
   ParentParentId = 'parent___parent___id',
@@ -791,47 +818,11 @@ export enum FileFieldsEnum {
   InternalMediaType = 'internal___mediaType',
   InternalOwner = 'internal___owner',
   InternalType = 'internal___type',
-  SourceInstanceName = 'sourceInstanceName',
-  AbsolutePath = 'absolutePath',
-  RelativePath = 'relativePath',
-  Extension = 'extension',
-  Size = 'size',
-  PrettySize = 'prettySize',
-  ModifiedTime = 'modifiedTime',
-  AccessTime = 'accessTime',
-  ChangeTime = 'changeTime',
-  BirthTime = 'birthTime',
-  Root = 'root',
-  Dir = 'dir',
-  Base = 'base',
-  Ext = 'ext',
-  Name = 'name',
-  RelativeDirectory = 'relativeDirectory',
-  Dev = 'dev',
-  Mode = 'mode',
-  Nlink = 'nlink',
-  Uid = 'uid',
-  Gid = 'gid',
-  Rdev = 'rdev',
-  Blksize = 'blksize',
-  Ino = 'ino',
-  Blocks = 'blocks',
-  AtimeMs = 'atimeMs',
-  MtimeMs = 'mtimeMs',
-  CtimeMs = 'ctimeMs',
-  BirthtimeMs = 'birthtimeMs',
-  Atime = 'atime',
-  Mtime = 'mtime',
-  Ctime = 'ctime',
-  Birthtime = 'birthtime',
-  PublicUrl = 'publicURL',
 }
 
 export type FileFilterInput = {
-  id?: Maybe<StringQueryOperatorInput>
-  parent?: Maybe<NodeFilterInput>
-  children?: Maybe<NodeFilterListInput>
-  internal?: Maybe<InternalFilterInput>
+  birthtime?: Maybe<DateQueryOperatorInput>
+  birthtimeMs?: Maybe<FloatQueryOperatorInput>
   sourceInstanceName?: Maybe<StringQueryOperatorInput>
   absolutePath?: Maybe<StringQueryOperatorInput>
   relativePath?: Maybe<StringQueryOperatorInput>
@@ -860,12 +851,14 @@ export type FileFilterInput = {
   atimeMs?: Maybe<FloatQueryOperatorInput>
   mtimeMs?: Maybe<FloatQueryOperatorInput>
   ctimeMs?: Maybe<FloatQueryOperatorInput>
-  birthtimeMs?: Maybe<FloatQueryOperatorInput>
   atime?: Maybe<DateQueryOperatorInput>
   mtime?: Maybe<DateQueryOperatorInput>
   ctime?: Maybe<DateQueryOperatorInput>
-  birthtime?: Maybe<DateQueryOperatorInput>
   publicURL?: Maybe<StringQueryOperatorInput>
+  id?: Maybe<StringQueryOperatorInput>
+  parent?: Maybe<NodeFilterInput>
+  children?: Maybe<NodeFilterListInput>
+  internal?: Maybe<InternalFilterInput>
 }
 
 export type FileGroupConnection = {
@@ -1143,8 +1136,8 @@ export enum MarkdownRemarkFieldsEnum {
   FrontmatterAuthorsBio = 'frontmatter___authors___bio',
   FrontmatterAuthorsGithub = 'frontmatter___authors___github',
   FrontmatterAuthorsTwitter = 'frontmatter___authors___twitter',
-  FrontmatterAuthorsAvatarId = 'frontmatter___authors___avatar___id',
-  FrontmatterAuthorsAvatarChildren = 'frontmatter___authors___avatar___children',
+  FrontmatterAuthorsAvatarBirthtime = 'frontmatter___authors___avatar___birthtime',
+  FrontmatterAuthorsAvatarBirthtimeMs = 'frontmatter___authors___avatar___birthtimeMs',
   FrontmatterAuthorsAvatarSourceInstanceName = 'frontmatter___authors___avatar___sourceInstanceName',
   FrontmatterAuthorsAvatarAbsolutePath = 'frontmatter___authors___avatar___absolutePath',
   FrontmatterAuthorsAvatarRelativePath = 'frontmatter___authors___avatar___relativePath',
@@ -1173,27 +1166,15 @@ export enum MarkdownRemarkFieldsEnum {
   FrontmatterAuthorsAvatarAtimeMs = 'frontmatter___authors___avatar___atimeMs',
   FrontmatterAuthorsAvatarMtimeMs = 'frontmatter___authors___avatar___mtimeMs',
   FrontmatterAuthorsAvatarCtimeMs = 'frontmatter___authors___avatar___ctimeMs',
-  FrontmatterAuthorsAvatarBirthtimeMs = 'frontmatter___authors___avatar___birthtimeMs',
   FrontmatterAuthorsAvatarAtime = 'frontmatter___authors___avatar___atime',
   FrontmatterAuthorsAvatarMtime = 'frontmatter___authors___avatar___mtime',
   FrontmatterAuthorsAvatarCtime = 'frontmatter___authors___avatar___ctime',
-  FrontmatterAuthorsAvatarBirthtime = 'frontmatter___authors___avatar___birthtime',
   FrontmatterAuthorsAvatarPublicUrl = 'frontmatter___authors___avatar___publicURL',
+  FrontmatterAuthorsAvatarId = 'frontmatter___authors___avatar___id',
+  FrontmatterAuthorsAvatarChildren = 'frontmatter___authors___avatar___children',
   FrontmatterTags = 'frontmatter___tags',
-  FrontmatterBackgroundImageId = 'frontmatter___backgroundImage___id',
-  FrontmatterBackgroundImageParentId = 'frontmatter___backgroundImage___parent___id',
-  FrontmatterBackgroundImageParentChildren = 'frontmatter___backgroundImage___parent___children',
-  FrontmatterBackgroundImageChildren = 'frontmatter___backgroundImage___children',
-  FrontmatterBackgroundImageChildrenId = 'frontmatter___backgroundImage___children___id',
-  FrontmatterBackgroundImageChildrenChildren = 'frontmatter___backgroundImage___children___children',
-  FrontmatterBackgroundImageInternalContent = 'frontmatter___backgroundImage___internal___content',
-  FrontmatterBackgroundImageInternalContentDigest = 'frontmatter___backgroundImage___internal___contentDigest',
-  FrontmatterBackgroundImageInternalDescription = 'frontmatter___backgroundImage___internal___description',
-  FrontmatterBackgroundImageInternalFieldOwners = 'frontmatter___backgroundImage___internal___fieldOwners',
-  FrontmatterBackgroundImageInternalIgnoreType = 'frontmatter___backgroundImage___internal___ignoreType',
-  FrontmatterBackgroundImageInternalMediaType = 'frontmatter___backgroundImage___internal___mediaType',
-  FrontmatterBackgroundImageInternalOwner = 'frontmatter___backgroundImage___internal___owner',
-  FrontmatterBackgroundImageInternalType = 'frontmatter___backgroundImage___internal___type',
+  FrontmatterBackgroundImageBirthtime = 'frontmatter___backgroundImage___birthtime',
+  FrontmatterBackgroundImageBirthtimeMs = 'frontmatter___backgroundImage___birthtimeMs',
   FrontmatterBackgroundImageSourceInstanceName = 'frontmatter___backgroundImage___sourceInstanceName',
   FrontmatterBackgroundImageAbsolutePath = 'frontmatter___backgroundImage___absolutePath',
   FrontmatterBackgroundImageRelativePath = 'frontmatter___backgroundImage___relativePath',
@@ -1222,12 +1203,24 @@ export enum MarkdownRemarkFieldsEnum {
   FrontmatterBackgroundImageAtimeMs = 'frontmatter___backgroundImage___atimeMs',
   FrontmatterBackgroundImageMtimeMs = 'frontmatter___backgroundImage___mtimeMs',
   FrontmatterBackgroundImageCtimeMs = 'frontmatter___backgroundImage___ctimeMs',
-  FrontmatterBackgroundImageBirthtimeMs = 'frontmatter___backgroundImage___birthtimeMs',
   FrontmatterBackgroundImageAtime = 'frontmatter___backgroundImage___atime',
   FrontmatterBackgroundImageMtime = 'frontmatter___backgroundImage___mtime',
   FrontmatterBackgroundImageCtime = 'frontmatter___backgroundImage___ctime',
-  FrontmatterBackgroundImageBirthtime = 'frontmatter___backgroundImage___birthtime',
   FrontmatterBackgroundImagePublicUrl = 'frontmatter___backgroundImage___publicURL',
+  FrontmatterBackgroundImageId = 'frontmatter___backgroundImage___id',
+  FrontmatterBackgroundImageParentId = 'frontmatter___backgroundImage___parent___id',
+  FrontmatterBackgroundImageParentChildren = 'frontmatter___backgroundImage___parent___children',
+  FrontmatterBackgroundImageChildren = 'frontmatter___backgroundImage___children',
+  FrontmatterBackgroundImageChildrenId = 'frontmatter___backgroundImage___children___id',
+  FrontmatterBackgroundImageChildrenChildren = 'frontmatter___backgroundImage___children___children',
+  FrontmatterBackgroundImageInternalContent = 'frontmatter___backgroundImage___internal___content',
+  FrontmatterBackgroundImageInternalContentDigest = 'frontmatter___backgroundImage___internal___contentDigest',
+  FrontmatterBackgroundImageInternalDescription = 'frontmatter___backgroundImage___internal___description',
+  FrontmatterBackgroundImageInternalFieldOwners = 'frontmatter___backgroundImage___internal___fieldOwners',
+  FrontmatterBackgroundImageInternalIgnoreType = 'frontmatter___backgroundImage___internal___ignoreType',
+  FrontmatterBackgroundImageInternalMediaType = 'frontmatter___backgroundImage___internal___mediaType',
+  FrontmatterBackgroundImageInternalOwner = 'frontmatter___backgroundImage___internal___owner',
+  FrontmatterBackgroundImageInternalType = 'frontmatter___backgroundImage___internal___type',
   FrontmatterBackgroundColor = 'frontmatter___backgroundColor',
   Excerpt = 'excerpt',
   RawMarkdownBody = 'rawMarkdownBody',
@@ -1360,10 +1353,8 @@ export type Query = {
 }
 
 export type QueryFileArgs = {
-  id?: Maybe<StringQueryOperatorInput>
-  parent?: Maybe<NodeFilterInput>
-  children?: Maybe<NodeFilterListInput>
-  internal?: Maybe<InternalFilterInput>
+  birthtime?: Maybe<DateQueryOperatorInput>
+  birthtimeMs?: Maybe<FloatQueryOperatorInput>
   sourceInstanceName?: Maybe<StringQueryOperatorInput>
   absolutePath?: Maybe<StringQueryOperatorInput>
   relativePath?: Maybe<StringQueryOperatorInput>
@@ -1392,12 +1383,14 @@ export type QueryFileArgs = {
   atimeMs?: Maybe<FloatQueryOperatorInput>
   mtimeMs?: Maybe<FloatQueryOperatorInput>
   ctimeMs?: Maybe<FloatQueryOperatorInput>
-  birthtimeMs?: Maybe<FloatQueryOperatorInput>
   atime?: Maybe<DateQueryOperatorInput>
   mtime?: Maybe<DateQueryOperatorInput>
   ctime?: Maybe<DateQueryOperatorInput>
-  birthtime?: Maybe<DateQueryOperatorInput>
   publicURL?: Maybe<StringQueryOperatorInput>
+  id?: Maybe<StringQueryOperatorInput>
+  parent?: Maybe<NodeFilterInput>
+  children?: Maybe<NodeFilterListInput>
+  internal?: Maybe<InternalFilterInput>
 }
 
 export type QueryAllFileArgs = {
