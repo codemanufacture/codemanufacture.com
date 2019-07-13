@@ -3,7 +3,7 @@ executors:
     parameters:
       image:
         type: string
-        default: "10"
+        default: "12"
     docker:
     - image: circleci/node:<< parameters.image >>
 
@@ -58,7 +58,7 @@ jobs:
   unit_tests:
     executor:
       name: node
-      image: "10"
+      image: "12"
     steps:
       - checkout
       - <<: *restore_cache
