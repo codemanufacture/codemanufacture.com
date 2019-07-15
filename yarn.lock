@@ -5729,7 +5729,7 @@ gatsby-plugin-google-tagmanager@^2.0.13:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
-gatsby-plugin-mailchimp@^5.1.0:
+gatsby-plugin-mailchimp@^5.1.2:
   version "5.1.2"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-mailchimp/-/gatsby-plugin-mailchimp-5.1.2.tgz#c006369728e33cc8c212dc12a2e25e9e21f791a9"
   integrity sha512-x3tOj4cl1QMBJUHKd7/ZxFhUU8BW0yt1NkgtCfT9kyywFNS4TCPjW/niQLhl1ze4HUVOu+MGbGgDbA+OMmqL8g==
