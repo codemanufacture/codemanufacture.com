@@ -980,7 +980,7 @@
     signedsource "^1.0.0"
     yargs "^9.0.0"
 
-"@graphql-codegen/add@^1.6.1":
+"@graphql-codegen/add@^1.7.0":
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/@graphql-codegen/add/-/add-1.7.0.tgz#8969e51913c4013e2ab098205184f38ca517cf7e"
   integrity sha512-sk561sxOurcPTUS864pXDEh0sh/E5t0BRWPEdbSIcQ80Ia6WrwA6tuZfs59rkMlw99fpDTOGwjOHzqprZ9DzwQ==
@@ -988,7 +988,7 @@
     "@graphql-codegen/plugin-helpers" "1.7.0"
     tslib "1.10.0"
 
-"@graphql-codegen/cli@^1.6.1":
+"@graphql-codegen/cli@^1.7.0":
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/@graphql-codegen/cli/-/cli-1.7.0.tgz#aade52f5c265450258e8fe0e45dc91268e8939a8"
   integrity sha512-glrk7A7vzazF8mfR3fUL7baorjxL9w3hFqPmLMp9uEMXyIP3Z0MrRacbDkFzeYXcGsm7K4k+ZK5Og2g8shVCuA==
@@ -1050,7 +1050,7 @@
     import-from "3.0.0"
     tslib "1.10.0"
 
-"@graphql-codegen/typescript-operations@^1.6.1":
+"@graphql-codegen/typescript-operations@^1.7.0":
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/@graphql-codegen/typescript-operations/-/typescript-operations-1.7.0.tgz#e57c6f7bc4ce34d47432a1cbb67348d7690bda1c"
   integrity sha512-x6WjtTKoVQmR2sAupmDZHQj3TDE1WRrMWhrQiMQwfJmsTuTdzmbUF5DtAN1Lubs4tGoUCBx0+tzlUIzn6WfGZw==
@@ -1060,7 +1060,7 @@
     "@graphql-codegen/visitor-plugin-common" "1.7.0"
     tslib "1.10.0"
 
-"@graphql-codegen/typescript@1.7.0", "@graphql-codegen/typescript@^1.6.1":
+"@graphql-codegen/typescript@1.7.0", "@graphql-codegen/typescript@^1.7.0":
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/@graphql-codegen/typescript/-/typescript-1.7.0.tgz#8c8830f4e6ac9cb001ac26427ff7efeb122949d7"
   integrity sha512-SxRSUfcuBG1HW2mEyjDZ7mKBITj/DGa1zjTnZIG8yAPpaIZ3+3toXOLqo2hh+pniMWnDzk19BFB2PImTUenDQQ==
