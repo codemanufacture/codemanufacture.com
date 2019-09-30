@@ -1,0 +1,11 @@
+{
+  "./src/**/*.{ts,tsx}": [
+    "prettier --write",
+    "stylelint",
+    "git add"
+  ],
+  "{./content/**/*.md,./README.md}": [
+    "prettier --write ",
+    "git add"
+  ]
+}
