@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import styled from 'styled-components'
 import LegacyLayout from '../components/LegacyLayout'
 import { graphql } from 'gatsby'
