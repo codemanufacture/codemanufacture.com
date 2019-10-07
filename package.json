@@ -83,7 +83,7 @@
     "@types/node": "^10.14.20",
     "@types/react": "^16.9.3",
     "@types/react-dom": "^16.9.1",
-    "@types/react-helmet": "^5.0.10",
+    "@types/react-helmet": "^5.0.11",
     "@types/react-share": "^2.1.1",
     "@types/react-test-renderer": "^16.9.0",
     "@types/styled-components": "^4.1.19",
