@@ -10888,7 +10888,7 @@ please-upgrade-node@^3.1.1, please-upgrade-node@^3.2.0:
   dependencies:
     semver-compare "^1.0.0"
 
-plop@^2.4.0:
+plop@^2.5.2:
   version "2.5.2"
   resolved "https://registry.yarnpkg.com/plop/-/plop-2.5.2.tgz#52433ce18abe859f4b4f97a2ea9b2125c4129d98"
   integrity sha512-EYgz6Dfv1EImwY3tFqgaHWnnBauOgLBIDJEBifQJeulixbnA+KMvYUGz6ThpC3QWRKzMglwMDGCqe1tyqywRng==
