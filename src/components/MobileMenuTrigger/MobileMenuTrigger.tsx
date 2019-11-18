@@ -22,9 +22,7 @@ interface MobileMenuTriggerProps {
   onClick: (e: React.MouseEvent) => void
 }
 
-const MobileMenuTrigger: React.FunctionComponent<
-  MobileMenuTriggerProps
-> = props => (
+const MobileMenuTrigger: React.FunctionComponent<MobileMenuTriggerProps> = props => (
   <StyledMobileMenuTrigger
     href="#trigger-mobile-menu"
     onClick={e => props.onClick(e)}
