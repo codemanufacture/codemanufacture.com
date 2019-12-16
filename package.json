@@ -35,7 +35,7 @@
     "ts-loader": "^6.2.1",
     "typeface-montserrat": "^0.0.75",
     "typescript": "^3.7.3",
-    "uniqid": "^5.0.3",
+    "uniqid": "^5.2.0",
     "validator": "^10.11.0"
   },
   "homepage": "https://codemanufacture.com/",
