@@ -84,7 +84,7 @@
     "@types/react": "^16.9.17",
     "@types/react-dom": "^16.9.4",
     "@types/react-helmet": "^5.0.15",
-    "@types/react-share": "^2.1.1",
+    "@types/react-share": "^3.0.3",
     "@types/react-test-renderer": "^16.9.1",
     "@types/styled-components": "^4.4.1",
     "@types/throttle-debounce": "^2.1.0",
