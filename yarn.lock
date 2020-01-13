@@ -1121,7 +1121,7 @@
     ts-node "^8"
     tslib "^1"
 
-"@graphql-codegen/add@^1.10.0":
+"@graphql-codegen/add@^1.11.2":
   version "1.11.2"
   resolved "https://registry.yarnpkg.com/@graphql-codegen/add/-/add-1.11.2.tgz#6aff0ed579dbadc58491304d12d7fce1b5c39287"
   integrity sha512-JNgAiVGJ8fWbiQngOt7htojCbhrm8LW6t0EwuXNgWaJNxoonj9EAnhsSS2mIMy9k5CSsvGGxkMkOCNCky7dHKg==
@@ -1129,7 +1129,7 @@
     "@graphql-codegen/plugin-helpers" "1.11.2"
     tslib "1.10.0"
 
-"@graphql-codegen/cli@^1.10.0":
+"@graphql-codegen/cli@^1.11.2":
   version "1.11.2"
   resolved "https://registry.yarnpkg.com/@graphql-codegen/cli/-/cli-1.11.2.tgz#a1d4ef8d06b692c37c5efc686976ec2eedefa4fe"
   integrity sha512-ox0vqUq+BWngD+UBCpzXuLrOBTPQZza7IGPxKSF3Z7lOPim+NX75HL5sO/58xU8I/5lEjaZpHx3hvSZdiGu4kg==
@@ -1209,7 +1209,7 @@
     tslib "1.10.0"
     upper-case "2.0.1"
 
-"@graphql-codegen/typescript-operations@^1.10.0":
+"@graphql-codegen/typescript-operations@^1.11.2":
   version "1.11.2"
   resolved "https://registry.yarnpkg.com/@graphql-codegen/typescript-operations/-/typescript-operations-1.11.2.tgz#87a1a114c513f59d9fa73c502ae51848dfce5473"
   integrity sha512-VE24wxcv3FOPDYdmT7EA20o/oJri9bdzdT/I3O5/B5NeauxSElvW1Dv1mYPo5EsBwhxWd5ROloJf/TqBJ2FhgQ==
@@ -1219,7 +1219,7 @@
     "@graphql-codegen/visitor-plugin-common" "1.11.2"
     tslib "1.10.0"
 
-"@graphql-codegen/typescript@1.11.2", "@graphql-codegen/typescript@^1.10.0":
+"@graphql-codegen/typescript@1.11.2", "@graphql-codegen/typescript@^1.11.2":
   version "1.11.2"
   resolved "https://registry.yarnpkg.com/@graphql-codegen/typescript/-/typescript-1.11.2.tgz#983fd24f71a991838347b7fcdc42249d1366d642"
   integrity sha512-kOEVCqFnoHnMzjlHfquy8J226nUw9u7zS0ugTIJaYcmfOLuCGN4tysZgwGgp8HXh1kNb9ARTxewQV4VfZr6uBA==
