@@ -24,7 +24,7 @@
     "gatsby-source-filesystem": "^2.1.46",
     "gatsby-transformer-json": "^2.2.25",
     "gatsby-transformer-remark": "^2.6.48",
-    "prismjs": "^1.18.0",
+    "prismjs": "^1.19.0",
     "react": "^16.12.0",
     "react-disqus-comments": "^1.4.0",
     "react-dom": "^16.12.0",
