@@ -19,7 +19,8 @@ module.exports = {
   ],
   globals: {
     "__LINK_PREFIX__": ``,
-    "__PATH_PREFIX__": ``
+    "__PATH_PREFIX__": ``,
+    "__BASE_PATH__": ``,
   },
   setupFiles: [
     `<rootDir>/loadershim.js`
