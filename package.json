@@ -14,7 +14,7 @@
     "gatsby-plugin-google-tagmanager": "^2.3.1",
     "gatsby-plugin-mailchimp": "^5.2.2",
     "gatsby-plugin-react-helmet": "^3.3.1",
-    "gatsby-plugin-robots-txt": "^1.5.0",
+    "gatsby-plugin-robots-txt": "^1.5.1",
     "gatsby-plugin-sitemap": "^2.4.2",
     "gatsby-plugin-styled-components": "^3.3.1",
     "gatsby-plugin-typescript": "^2.4.2",
