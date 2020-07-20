@@ -34,7 +34,7 @@
     "throttle-debounce": "^2.2.1",
     "ts-loader": "^6.2.2",
     "typeface-montserrat": "^0.0.75",
-    "typescript": "^3.9.6",
+    "typescript": "^3.9.7",
     "uniqid": "^5.2.0",
     "validator": "^10.11.0"
   },
