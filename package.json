@@ -76,7 +76,7 @@
     "@commitlint/config-conventional": "^9.1.2",
     "@graphql-codegen/add": "^1.17.7",
     "@graphql-codegen/cli": "^1.17.8",
-    "@graphql-codegen/typescript": "^1.17.8",
+    "@graphql-codegen/typescript": "^1.17.9",
     "@graphql-codegen/typescript-operations": "^1.17.8",
     "@types/classnames": "^2.2.10",
     "@types/jest": "^26.0.10",
