@@ -61,7 +61,7 @@ interface BlogPostHelmetProps {
   html: string
 }
 
-const createAuthorData = (authors?: Array<Maybe<AuthorJson>>) => {
+const createAuthorData = (authors?: Maybe<AuthorJson>[]) => {
   return (
     authors &&
     authors
