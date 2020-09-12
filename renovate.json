@@ -6,7 +6,7 @@
     "group:graphqlcodegeneratorMonorepo",
     "group:jestMonorepo",
     "docker:disable",
-    "schedule:weekly"
+    "schedule:nonOfficeHours"
   ],
   "automerge": true,
   "major": {
