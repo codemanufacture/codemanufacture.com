@@ -3,7 +3,7 @@ executors:
     parameters:
       image:
         type: string
-        default: "12"
+        default: "12.18"
     docker:
     - image: circleci/node:<< parameters.image >>
 
@@ -56,9 +56,7 @@ jobs:
       - run: yarn type-check
 
   unit_tests:
-    executor:
-      name: node
-      image: "12"
+    executor: node
     steps:
       - checkout
       - <<: *restore_cache
