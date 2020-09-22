@@ -2,7 +2,7 @@
 
 exports[`MobileMenuTrigger component renders correctly 1`] = `
 <a
-  className="sc-bdnylx iUaVzb"
+  className="sc-bdVaJa jdAqut"
   href="#trigger-mobile-menu"
   onClick={[Function]}
 >

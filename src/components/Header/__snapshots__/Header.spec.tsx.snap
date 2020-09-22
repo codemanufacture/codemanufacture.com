@@ -2,11 +2,11 @@
 
 exports[`Header component renders correctly 1`] = `
 <div
-  className="sc-eCApGN jdRMdh"
+  className="sc-ifAKCX cNOviL"
 >
   <a
     aria-current="page"
-    className="sc-bdnylx dXMTfW"
+    className="sc-bdVaJa dBkIVO"
     href="/"
     onClick={[Function]}
     onMouseEnter={[Function]}
@@ -39,10 +39,10 @@ exports[`Header component renders correctly 1`] = `
     />
   </a>
   <menu
-    className="sc-hKFyIo jIHqKm"
+    className="sc-bxivhb ktNeoN"
   >
     <ul
-      className="sc-dlnjPT irYrbY"
+      className="sc-htpNat cTJrVM"
       onClick={[Function]}
     >
       <li>
@@ -77,7 +77,7 @@ exports[`Header component renders correctly 1`] = `
       </li>
     </ul>
     <a
-      className="sc-gtssRu deMTiK"
+      className="sc-bwzfXH bvpJTi"
       href="#trigger-mobile-menu"
       onClick={[Function]}
     >
