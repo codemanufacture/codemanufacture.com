@@ -7,7 +7,7 @@
   "dependencies": {
     "babel-plugin-styled-components": "^1.11.1",
     "classnames": "^2.2.6",
-    "gatsby": "^2.24.68",
+    "gatsby": "^2.24.69",
     "gatsby-plugin-canonical-urls": "^2.3.13",
     "gatsby-plugin-catch-links": "^2.3.15",
     "gatsby-plugin-feed": "^2.5.14",
