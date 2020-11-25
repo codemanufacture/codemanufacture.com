@@ -55,34 +55,20 @@ const StyledComingSoon = styled.div`
   }
 `
 
-const StyledButtonLink = styled.a`
-  background: ${colors.brand};
-  border: 1px ${colors.brand} solid;
-  border-radius: 3px;
-  color: ${colors.background} !important;
-  display: block;
-  font-size: 16px;
-  padding: 10px 10px;
-  text-align: center;
-  text-decoration: none;
-`
-
 const ComingSoon = () => (
   <StyledComingSoon>
     <LegacyLayout>
       <div>
-        <h1>Oops</h1>
+        <h2>Services</h2>
         <p>
-          You caught me! My Consultancy and Tech Blog focused on AWS,
-          Serverless, React, Magento is almost ready.
-        </p>
-        <p>
-          <StyledButtonLink href="http://eepurl.com/dpY3Az">
-            Notify me when the site is finished
-          </StyledButtonLink>
+          <ul>
+            <li>Magento store development</li>
+            <li>Magento extension development</li>
+            <li>Code review</li>
+            <li>Team augmentation</li>
+          </ul>
         </p>
         <h3>Contact</h3>
-        <p>Need help in meantime or just want to say hello?</p>
         <p>
           Email:
           {` `}
@@ -90,7 +76,7 @@ const ComingSoon = () => (
             contact@codemanufacture.com
           </a>
           <br />
-          Call: +44 7951608683
+          Call: <a href="tel:+44 7951608683">+44 7951 608 683</a>
         </p>
         <p>
           <Link to="/privacy-policy/">Privacy policy</Link>
