@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { FunctionComponent, useState, useEffect } from 'react'
 import styled from 'styled-components'
 import * as Icon from './images/chevron.svg'
 import classNames from 'classnames'
@@ -34,57 +34,40 @@ const StyledGoToTop = styled.a`
   }
 `
 
-interface GoToTopState {
-  isButtonVisible: boolean
-}
-
-class GoToTop extends React.PureComponent<{}, GoToTopState> {
-  constructor(props: object) {
-    super(props)
-    this.state = {
-      isButtonVisible: false,
-    }
-  }
-
-  componentDidMount() {
-    window.addEventListener('scroll', throttle(100, this.handleScroll))
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll)
-  }
-
-  handleScroll = () => {
-    const windowPosition = window.scrollY
-
-    if (windowPosition > 0 && !this.state.isButtonVisible) {
-      this.setState({ isButtonVisible: true })
-    } else if (windowPosition === 0) {
-      this.setState({ isButtonVisible: false })
-    }
-  }
-
-  handleClick = (e: React.SyntheticEvent) => {
+const GoToTop: FunctionComponent = () => {
+  const [buttonVisibility, setButtonVisibility] = useState(false)
+  const handleClick = (e: React.SyntheticEvent) => {
     e.preventDefault()
     window.scroll(0, 0)
   }
 
-  render() {
-    const buttonClassName = classNames({
-      active: this.state.isButtonVisible,
-    })
+  const handler = throttle(100, () => {
+    if (window.scrollY > 0 && !buttonVisibility) {
+      setButtonVisibility(true)
+    } else if (window.scrollY === 0) {
+      setButtonVisibility(false)
+    }
+  })
 
-    return (
-      <StyledGoToTop
-        className={buttonClassName}
-        title="Go to top"
-        href="#go-to-top"
-        onClick={e => this.handleClick(e)}
-      >
-        <img src={Icon} alt="Go to top" width={12} />
-      </StyledGoToTop>
-    )
-  }
+  useEffect(() => {
+    window.addEventListener('scroll', handler)
+    return () => window.removeEventListener('scroll', handler)
+  })
+
+  const buttonClassName = classNames({
+    active: buttonVisibility,
+  })
+
+  return (
+    <StyledGoToTop
+      className={buttonClassName}
+      title="Go to top"
+      href="#go-to-top"
+      onClick={e => handleClick(e)}
+    >
+      <img src={Icon} alt="Go to top" width={12} />
+    </StyledGoToTop>
+  )
 }
 
 export default GoToTop
