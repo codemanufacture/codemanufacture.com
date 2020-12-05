@@ -34,6 +34,13 @@ aliases:
       paths:
         - ~/.cache
 
+  update_git: &update_git
+    run:
+      name: Update git
+      command: |
+        sudo apt update
+        sudo apt upgrade git
+
 version: 2.1
 
 jobs:
