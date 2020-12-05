@@ -3,7 +3,7 @@ executors:
     parameters:
       image:
         type: string
-        default: "12.20"
+        default: "14"
     docker:
     - image: circleci/node:<< parameters.image >>
 
@@ -34,13 +34,6 @@ aliases:
       paths:
         - ~/.cache
 
-  update_git: &update_git
-    run:
-      name: Update git
-      command: |
-        sudo apt update
-        sudo apt upgrade git
-
 version: 2.1
 
 jobs:
@@ -48,7 +41,6 @@ jobs:
     executor: node
     steps:
       - checkout
-      - <<: *update_git
       - <<: *restore_cache
       - <<: *install_node_modules
       - <<: *persist_cache
@@ -58,7 +50,6 @@ jobs:
     executor: node
     steps:
       - checkout
-      - <<: *update_git
       - <<: *restore_cache
       - <<: *install_node_modules
       - <<: *persist_cache
@@ -68,7 +59,6 @@ jobs:
     executor: node
     steps:
       - checkout
-      - <<: *update_git
       - <<: *restore_cache
       - <<: *install_node_modules
       - <<: *persist_cache
