@@ -6748,10 +6748,10 @@ follow-redirects@^1.0.0, follow-redirects@^1.10.0:
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.13.1.tgz#5f69b813376cee4fd0474a3aba835df04ab763b7"
   integrity sha512-SSG5xmZh1mkPGyKzjZP8zLjltIfpW32Y5QpdNJyjcfGxK3qo3NDDkZOZSFiGn1A6SclQxY9GzEwAHQ3dmYRWpg==
 
-fontsource-montserrat@^3.1.5:
-  version "3.1.5"
-  resolved "https://registry.yarnpkg.com/fontsource-montserrat/-/fontsource-montserrat-3.1.5.tgz#766d71f9255a4abe9abb628e47e95a8912b45897"
-  integrity sha512-wLmozvb4j/yDbPEBrzHmkAM2PDHp+GV7l6T/GzrmiM8rHeLDIQuUfWJ3b05pAu7q5xRhuG2cDqr+bCagaKws0w==
+fontsource-montserrat@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/fontsource-montserrat/-/fontsource-montserrat-4.0.0.tgz#3af39e31e2f77d3b131288ad4fdc4968c4b34975"
+  integrity sha512-0mpa23YJBLxE5fEVVBgcHbuhjiH98EA4XjRVocP/sCJAGoODvXCRqLTSVLmoVFBas4X8WnHU4rv5QOxB1e4TZw==
 
 for-in@^1.0.1, for-in@^1.0.2:
   version "1.0.2"
