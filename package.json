@@ -79,7 +79,7 @@
     "@graphql-codegen/typescript": "^1.20.0",
     "@graphql-codegen/typescript-operations": "^1.17.13",
     "@types/classnames": "^2.2.11",
-    "@types/jest": "^26.0.19",
+    "@types/jest": "^26.0.20",
     "@types/node": "^10.17.50",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
