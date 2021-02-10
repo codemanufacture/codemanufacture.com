@@ -1167,10 +1167,10 @@
     ts-node "^9"
     tslib "^2"
 
-"@fontsource/montserrat@^4.2.0":
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/@fontsource/montserrat/-/montserrat-4.2.0.tgz#ec904735c78dc3ea0b02d38496ab10b8bc348fb1"
-  integrity sha512-lNSTo0rJs5dLRS4mcxbqjefgdhAe+cxgX3MwTQI3XLdAEQqvisM90v/a63jz5IoZNLqPhdD6NtERKSLtYSuK4g==
+"@fontsource/montserrat@^4.2.1":
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/@fontsource/montserrat/-/montserrat-4.2.1.tgz#7c3aa481593427beb0be732a49da39689c4b5c16"
+  integrity sha512-9uEUTj1ANylbaaQbGTBZESv56D5XuV2Jk8XwpjI/gAXqs2Ig/HX9cB8EnCa67cKIY+ybqWL/bY8rEeBcFlXjGA==
 
 "@graphql-codegen/add@^2.0.2":
   version "2.0.2"
