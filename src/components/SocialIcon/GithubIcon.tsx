@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as Icon from './images/github.svg'
+import Icon from './images/github.svg'
 import SocialIcon from './SocialIcon'
 
 const GithubIcon = () => (

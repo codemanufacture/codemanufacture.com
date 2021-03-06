@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import * as logo from './images/logo.svg'
+import logo from './images/logo.svg'
 import { displayDimensions } from '../../theme'
 
 interface LogoProps {

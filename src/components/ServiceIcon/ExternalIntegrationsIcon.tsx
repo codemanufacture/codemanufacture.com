@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as Icon from './images/external-integrations.svg'
+import Icon from './images/external-integrations.svg'
 import ServiceIcon from './ServiceIcon'
 
 const ExternalIntegrationsIcon = () => (

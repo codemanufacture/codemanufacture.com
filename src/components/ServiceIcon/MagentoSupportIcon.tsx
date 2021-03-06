@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as Icon from './images/magento-support.svg'
+import Icon from './images/magento-support.svg'
 import ServiceIcon from './ServiceIcon'
 
 const MagentoSupportIcon = () => (

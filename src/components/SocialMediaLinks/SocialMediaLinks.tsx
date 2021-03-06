@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { FacebookIcon, GithubIcon, LinkedinIcon } from '../SocialIcon'
+import { GithubIcon, LinkedinIcon } from '../SocialIcon'
 import { displayDimensions } from '../../theme'
 
 const StyledSocialMediaLinks = styled.ul`
@@ -25,7 +25,6 @@ const StyledSocialMediaLinks = styled.ul`
 const SocialMediaLinks = () => {
   return (
     <StyledSocialMediaLinks>
-      <FacebookIcon />
       <GithubIcon />
       <LinkedinIcon />
     </StyledSocialMediaLinks>
