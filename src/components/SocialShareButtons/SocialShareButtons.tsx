@@ -22,7 +22,7 @@ const StyledSocialShareButtons = styled.div`
       transition: filter ${transitions.basicTransition};
       outline: none;
       margin-right: 5px;
-      opacity: .9;
+      opacity: 0.9;
 
       &:hover {
         opacity: 1;
