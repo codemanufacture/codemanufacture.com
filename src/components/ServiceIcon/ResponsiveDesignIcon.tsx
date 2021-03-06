@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as Icon from './images/responsive-design.svg'
+import Icon from './images/responsive-design.svg'
 import ServiceIcon from './ServiceIcon'
 
 const ResponsiveDesignIcon = () => (

@@ -17,17 +17,15 @@ const StyledSocialShareButtons = styled.div`
   .icons-wrapper {
     display: flex;
 
-    .SocialMediaShareButton {
+    .react-share__ShareButton {
       cursor: pointer;
       transition: filter ${transitions.basicTransition};
       outline: none;
-
-      + .SocialMediaShareButton {
-        margin-left: 15px;
-      }
+      margin-right: 5px;
+      opacity: .9;
 
       &:hover {
-        filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.7));
+        opacity: 1;
       }
     }
   }

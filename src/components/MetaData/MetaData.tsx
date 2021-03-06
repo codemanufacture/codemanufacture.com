@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Helmet } from 'react-helmet'
-import * as favicon from '../../images/favicon.ico'
+import favicon from '../../images/favicon.ico'
 import useSiteMetadata from '../../hooks/UseSiteMetadata'
 
 const MetaData: React.FunctionComponent = () => {

@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useState, useEffect } from 'react'
 import styled from 'styled-components'
-import * as Icon from './images/chevron.svg'
+import Icon from './images/chevron.svg'
 import classNames from 'classnames'
 import { throttle } from 'throttle-debounce'
 import { colors, transitions, zIndexes } from '../../theme'
