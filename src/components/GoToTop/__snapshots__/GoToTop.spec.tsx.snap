@@ -2,7 +2,7 @@
 
 exports[`GoToTop component renders correctly 1`] = `
 <a
-  className="sc-bdfBwQ bztYKW"
+  className="sc-bdvvaa dSOdhe"
   href="#go-to-top"
   onClick={[Function]}
   title="Go to top"
