@@ -27,7 +27,7 @@ const PostTemplate: React.FunctionComponent<PostTemplateProps> = ({ data }) => {
 export default PostTemplate
 
 export const postQuery = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       excerpt

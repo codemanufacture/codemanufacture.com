@@ -152,12 +152,8 @@ class Newsletter extends React.PureComponent<{}, NewsletterState> {
   }
 
   render() {
-    const {
-      isMailchimpMessageVisible,
-      mailchimpMessage,
-      userEmail,
-      userName,
-    } = this.state
+    const { isMailchimpMessageVisible, mailchimpMessage, userEmail, userName } =
+      this.state
 
     return (
       <StyledFormWrapper isMailchimpMessageVisible={isMailchimpMessageVisible}>
