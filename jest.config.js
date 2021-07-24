@@ -36,6 +36,7 @@ module.exports = {
     `tsx`,
     `js`
   ],
+  testEnvironment: "jsdom",
   coverageThreshold: {
     global: {
       lines: 45,
