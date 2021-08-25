@@ -1,8 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SocialShareButtons component renders correctly 1`] = `
+.c0 {
+  margin-bottom: 50px;
+  padding-bottom: 20px;
+}
+
+.c0 .icons-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 .icons-wrapper .react-share__ShareButton {
+  cursor: pointer;
+  -webkit-transition: filter 0.25s ease-out;
+  transition: filter 0.25s ease-out;
+  outline: none;
+  margin-right: 5px;
+  opacity: 0.9;
+}
+
+.c0 .icons-wrapper .react-share__ShareButton:hover {
+  opacity: 1;
+}
+
 <div
-  className="sc-bdnxRM kLbagt"
+  className="c0"
 >
   <h3>
     Enjoyed this content? Spread the word!
