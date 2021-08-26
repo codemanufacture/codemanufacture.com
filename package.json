@@ -86,7 +86,7 @@
     "@types/react-helmet": "^6.1.2",
     "@types/react-share": "^3.0.3",
     "@types/react-test-renderer": "^17.0.1",
-    "@types/styled-components": "^5.1.12",
+    "@types/styled-components": "^5.1.13",
     "@types/throttle-debounce": "^2.1.0",
     "@types/uniqid": "^5.3.1",
     "@types/validator": "^13.6.3",
