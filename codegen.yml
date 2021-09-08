@@ -1,10 +1,16 @@
 schema: http://localhost:8000/___graphql
 documents:
   - ./src/**/*.{ts,tsx}
-  - ./node_modules/gatsby-*/!(examples)/**/*.js
+  - ./node_modules/gatsby*/!(examples|node_modules)/**/*.js
 generates:
   ./src/graphql-types.d.ts:
     plugins:
-      - add: '/* tslint:disable */'
+      - add:
+          content:
+            - '/* tslint:disable */'
       - typescript
       - typescript-operations
+hooks:
+  afterAllFileWrite:
+    - prettier --write
+    - tslint --fix
