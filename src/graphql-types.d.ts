@@ -30,6 +30,7 @@ export type AuthorJson = Node & {
   github?: Maybe<Scalars['String']>
   id: Scalars['ID']
   internal: Internal
+  jsonId?: Maybe<Scalars['String']>
   name?: Maybe<Scalars['String']>
   parent?: Maybe<Node>
   twitter?: Maybe<Scalars['String']>
@@ -141,6 +142,7 @@ export enum AuthorJsonFieldsEnum {
   AvatarChildAuthorJsonInternalMediaType = 'avatar___childAuthorJson___internal___mediaType',
   AvatarChildAuthorJsonInternalOwner = 'avatar___childAuthorJson___internal___owner',
   AvatarChildAuthorJsonInternalType = 'avatar___childAuthorJson___internal___type',
+  AvatarChildAuthorJsonJsonId = 'avatar___childAuthorJson___jsonId',
   AvatarChildAuthorJsonName = 'avatar___childAuthorJson___name',
   AvatarChildAuthorJsonParentChildren = 'avatar___childAuthorJson___parent___children',
   AvatarChildAuthorJsonParentId = 'avatar___childAuthorJson___parent___id',
@@ -235,6 +237,7 @@ export enum AuthorJsonFieldsEnum {
   AvatarChildrenAuthorJsonInternalMediaType = 'avatar___childrenAuthorJson___internal___mediaType',
   AvatarChildrenAuthorJsonInternalOwner = 'avatar___childrenAuthorJson___internal___owner',
   AvatarChildrenAuthorJsonInternalType = 'avatar___childrenAuthorJson___internal___type',
+  AvatarChildrenAuthorJsonJsonId = 'avatar___childrenAuthorJson___jsonId',
   AvatarChildrenAuthorJsonName = 'avatar___childrenAuthorJson___name',
   AvatarChildrenAuthorJsonParentChildren = 'avatar___childrenAuthorJson___parent___children',
   AvatarChildrenAuthorJsonParentId = 'avatar___childrenAuthorJson___parent___id',
@@ -386,6 +389,7 @@ export enum AuthorJsonFieldsEnum {
   InternalMediaType = 'internal___mediaType',
   InternalOwner = 'internal___owner',
   InternalType = 'internal___type',
+  JsonId = 'jsonId',
   Name = 'name',
   ParentChildren = 'parent___children',
   ParentChildrenChildren = 'parent___children___children',
@@ -435,6 +439,7 @@ export type AuthorJsonFilterInput = {
   github?: Maybe<StringQueryOperatorInput>
   id?: Maybe<StringQueryOperatorInput>
   internal?: Maybe<InternalFilterInput>
+  jsonId?: Maybe<StringQueryOperatorInput>
   name?: Maybe<StringQueryOperatorInput>
   parent?: Maybe<NodeFilterInput>
   twitter?: Maybe<StringQueryOperatorInput>
@@ -446,12 +451,39 @@ export type AuthorJsonFilterListInput = {
 
 export type AuthorJsonGroupConnection = {
   __typename?: 'AuthorJsonGroupConnection'
+  distinct: Array<Scalars['String']>
   edges: Array<AuthorJsonEdge>
   field: Scalars['String']
   fieldValue?: Maybe<Scalars['String']>
+  group: Array<AuthorJsonGroupConnection>
+  max?: Maybe<Scalars['Float']>
+  min?: Maybe<Scalars['Float']>
   nodes: Array<AuthorJson>
   pageInfo: PageInfo
+  sum?: Maybe<Scalars['Float']>
   totalCount: Scalars['Int']
+}
+
+export type AuthorJsonGroupConnectionDistinctArgs = {
+  field: AuthorJsonFieldsEnum
+}
+
+export type AuthorJsonGroupConnectionGroupArgs = {
+  field: AuthorJsonFieldsEnum
+  limit?: Maybe<Scalars['Int']>
+  skip?: Maybe<Scalars['Int']>
+}
+
+export type AuthorJsonGroupConnectionMaxArgs = {
+  field: AuthorJsonFieldsEnum
+}
+
+export type AuthorJsonGroupConnectionMinArgs = {
+  field: AuthorJsonFieldsEnum
+}
+
+export type AuthorJsonGroupConnectionSumArgs = {
+  field: AuthorJsonFieldsEnum
 }
 
 export type AuthorJsonSortInput = {
@@ -489,8 +521,6 @@ export type Directory = Node & {
   birthtime?: Maybe<Scalars['Date']>
   /** @deprecated Use `birthTime` instead */
   birthtimeMs?: Maybe<Scalars['Float']>
-  blksize?: Maybe<Scalars['Int']>
-  blocks?: Maybe<Scalars['Int']>
   changeTime: Scalars['Date']
   children: Array<Node>
   ctime: Scalars['Date']
@@ -620,8 +650,6 @@ export enum DirectoryFieldsEnum {
   BirthTime = 'birthTime',
   Birthtime = 'birthtime',
   BirthtimeMs = 'birthtimeMs',
-  Blksize = 'blksize',
-  Blocks = 'blocks',
   ChangeTime = 'changeTime',
   Children = 'children',
   ChildrenChildren = 'children___children',
@@ -742,8 +770,6 @@ export type DirectoryFilterInput = {
   birthTime?: Maybe<DateQueryOperatorInput>
   birthtime?: Maybe<DateQueryOperatorInput>
   birthtimeMs?: Maybe<FloatQueryOperatorInput>
-  blksize?: Maybe<IntQueryOperatorInput>
-  blocks?: Maybe<IntQueryOperatorInput>
   changeTime?: Maybe<DateQueryOperatorInput>
   children?: Maybe<NodeFilterListInput>
   ctime?: Maybe<DateQueryOperatorInput>
@@ -775,12 +801,39 @@ export type DirectoryFilterInput = {
 
 export type DirectoryGroupConnection = {
   __typename?: 'DirectoryGroupConnection'
+  distinct: Array<Scalars['String']>
   edges: Array<DirectoryEdge>
   field: Scalars['String']
   fieldValue?: Maybe<Scalars['String']>
+  group: Array<DirectoryGroupConnection>
+  max?: Maybe<Scalars['Float']>
+  min?: Maybe<Scalars['Float']>
   nodes: Array<Directory>
   pageInfo: PageInfo
+  sum?: Maybe<Scalars['Float']>
   totalCount: Scalars['Int']
+}
+
+export type DirectoryGroupConnectionDistinctArgs = {
+  field: DirectoryFieldsEnum
+}
+
+export type DirectoryGroupConnectionGroupArgs = {
+  field: DirectoryFieldsEnum
+  limit?: Maybe<Scalars['Int']>
+  skip?: Maybe<Scalars['Int']>
+}
+
+export type DirectoryGroupConnectionMaxArgs = {
+  field: DirectoryFieldsEnum
+}
+
+export type DirectoryGroupConnectionMinArgs = {
+  field: DirectoryFieldsEnum
+}
+
+export type DirectoryGroupConnectionSumArgs = {
+  field: DirectoryFieldsEnum
 }
 
 export type DirectorySortInput = {
@@ -959,6 +1012,7 @@ export enum FileFieldsEnum {
   ChildAuthorJsonAvatarChildAuthorJsonChildren = 'childAuthorJson___avatar___childAuthorJson___children',
   ChildAuthorJsonAvatarChildAuthorJsonGithub = 'childAuthorJson___avatar___childAuthorJson___github',
   ChildAuthorJsonAvatarChildAuthorJsonId = 'childAuthorJson___avatar___childAuthorJson___id',
+  ChildAuthorJsonAvatarChildAuthorJsonJsonId = 'childAuthorJson___avatar___childAuthorJson___jsonId',
   ChildAuthorJsonAvatarChildAuthorJsonName = 'childAuthorJson___avatar___childAuthorJson___name',
   ChildAuthorJsonAvatarChildAuthorJsonTwitter = 'childAuthorJson___avatar___childAuthorJson___twitter',
   ChildAuthorJsonAvatarChildMarkdownRemarkChildren = 'childAuthorJson___avatar___childMarkdownRemark___children',
@@ -978,6 +1032,7 @@ export enum FileFieldsEnum {
   ChildAuthorJsonAvatarChildrenAuthorJsonChildren = 'childAuthorJson___avatar___childrenAuthorJson___children',
   ChildAuthorJsonAvatarChildrenAuthorJsonGithub = 'childAuthorJson___avatar___childrenAuthorJson___github',
   ChildAuthorJsonAvatarChildrenAuthorJsonId = 'childAuthorJson___avatar___childrenAuthorJson___id',
+  ChildAuthorJsonAvatarChildrenAuthorJsonJsonId = 'childAuthorJson___avatar___childrenAuthorJson___jsonId',
   ChildAuthorJsonAvatarChildrenAuthorJsonName = 'childAuthorJson___avatar___childrenAuthorJson___name',
   ChildAuthorJsonAvatarChildrenAuthorJsonTwitter = 'childAuthorJson___avatar___childrenAuthorJson___twitter',
   ChildAuthorJsonAvatarChildrenMarkdownRemark = 'childAuthorJson___avatar___childrenMarkdownRemark',
@@ -1054,6 +1109,7 @@ export enum FileFieldsEnum {
   ChildAuthorJsonInternalMediaType = 'childAuthorJson___internal___mediaType',
   ChildAuthorJsonInternalOwner = 'childAuthorJson___internal___owner',
   ChildAuthorJsonInternalType = 'childAuthorJson___internal___type',
+  ChildAuthorJsonJsonId = 'childAuthorJson___jsonId',
   ChildAuthorJsonName = 'childAuthorJson___name',
   ChildAuthorJsonParentChildren = 'childAuthorJson___parent___children',
   ChildAuthorJsonParentChildrenChildren = 'childAuthorJson___parent___children___children',
@@ -1095,6 +1151,7 @@ export enum FileFieldsEnum {
   ChildMarkdownRemarkFrontmatterAuthorsChildren = 'childMarkdownRemark___frontmatter___authors___children',
   ChildMarkdownRemarkFrontmatterAuthorsGithub = 'childMarkdownRemark___frontmatter___authors___github',
   ChildMarkdownRemarkFrontmatterAuthorsId = 'childMarkdownRemark___frontmatter___authors___id',
+  ChildMarkdownRemarkFrontmatterAuthorsJsonId = 'childMarkdownRemark___frontmatter___authors___jsonId',
   ChildMarkdownRemarkFrontmatterAuthorsName = 'childMarkdownRemark___frontmatter___authors___name',
   ChildMarkdownRemarkFrontmatterAuthorsTwitter = 'childMarkdownRemark___frontmatter___authors___twitter',
   ChildMarkdownRemarkFrontmatterBackgroundColor = 'childMarkdownRemark___frontmatter___backgroundColor',
@@ -1191,6 +1248,7 @@ export enum FileFieldsEnum {
   ChildrenAuthorJsonAvatarChildAuthorJsonChildren = 'childrenAuthorJson___avatar___childAuthorJson___children',
   ChildrenAuthorJsonAvatarChildAuthorJsonGithub = 'childrenAuthorJson___avatar___childAuthorJson___github',
   ChildrenAuthorJsonAvatarChildAuthorJsonId = 'childrenAuthorJson___avatar___childAuthorJson___id',
+  ChildrenAuthorJsonAvatarChildAuthorJsonJsonId = 'childrenAuthorJson___avatar___childAuthorJson___jsonId',
   ChildrenAuthorJsonAvatarChildAuthorJsonName = 'childrenAuthorJson___avatar___childAuthorJson___name',
   ChildrenAuthorJsonAvatarChildAuthorJsonTwitter = 'childrenAuthorJson___avatar___childAuthorJson___twitter',
   ChildrenAuthorJsonAvatarChildMarkdownRemarkChildren = 'childrenAuthorJson___avatar___childMarkdownRemark___children',
@@ -1210,6 +1268,7 @@ export enum FileFieldsEnum {
   ChildrenAuthorJsonAvatarChildrenAuthorJsonChildren = 'childrenAuthorJson___avatar___childrenAuthorJson___children',
   ChildrenAuthorJsonAvatarChildrenAuthorJsonGithub = 'childrenAuthorJson___avatar___childrenAuthorJson___github',
   ChildrenAuthorJsonAvatarChildrenAuthorJsonId = 'childrenAuthorJson___avatar___childrenAuthorJson___id',
+  ChildrenAuthorJsonAvatarChildrenAuthorJsonJsonId = 'childrenAuthorJson___avatar___childrenAuthorJson___jsonId',
   ChildrenAuthorJsonAvatarChildrenAuthorJsonName = 'childrenAuthorJson___avatar___childrenAuthorJson___name',
   ChildrenAuthorJsonAvatarChildrenAuthorJsonTwitter = 'childrenAuthorJson___avatar___childrenAuthorJson___twitter',
   ChildrenAuthorJsonAvatarChildrenMarkdownRemark = 'childrenAuthorJson___avatar___childrenMarkdownRemark',
@@ -1286,6 +1345,7 @@ export enum FileFieldsEnum {
   ChildrenAuthorJsonInternalMediaType = 'childrenAuthorJson___internal___mediaType',
   ChildrenAuthorJsonInternalOwner = 'childrenAuthorJson___internal___owner',
   ChildrenAuthorJsonInternalType = 'childrenAuthorJson___internal___type',
+  ChildrenAuthorJsonJsonId = 'childrenAuthorJson___jsonId',
   ChildrenAuthorJsonName = 'childrenAuthorJson___name',
   ChildrenAuthorJsonParentChildren = 'childrenAuthorJson___parent___children',
   ChildrenAuthorJsonParentChildrenChildren = 'childrenAuthorJson___parent___children___children',
@@ -1328,6 +1388,7 @@ export enum FileFieldsEnum {
   ChildrenMarkdownRemarkFrontmatterAuthorsChildren = 'childrenMarkdownRemark___frontmatter___authors___children',
   ChildrenMarkdownRemarkFrontmatterAuthorsGithub = 'childrenMarkdownRemark___frontmatter___authors___github',
   ChildrenMarkdownRemarkFrontmatterAuthorsId = 'childrenMarkdownRemark___frontmatter___authors___id',
+  ChildrenMarkdownRemarkFrontmatterAuthorsJsonId = 'childrenMarkdownRemark___frontmatter___authors___jsonId',
   ChildrenMarkdownRemarkFrontmatterAuthorsName = 'childrenMarkdownRemark___frontmatter___authors___name',
   ChildrenMarkdownRemarkFrontmatterAuthorsTwitter = 'childrenMarkdownRemark___frontmatter___authors___twitter',
   ChildrenMarkdownRemarkFrontmatterBackgroundColor = 'childrenMarkdownRemark___frontmatter___backgroundColor',
@@ -1564,12 +1625,39 @@ export type FileFilterInput = {
 
 export type FileGroupConnection = {
   __typename?: 'FileGroupConnection'
+  distinct: Array<Scalars['String']>
   edges: Array<FileEdge>
   field: Scalars['String']
   fieldValue?: Maybe<Scalars['String']>
+  group: Array<FileGroupConnection>
+  max?: Maybe<Scalars['Float']>
+  min?: Maybe<Scalars['Float']>
   nodes: Array<File>
   pageInfo: PageInfo
+  sum?: Maybe<Scalars['Float']>
   totalCount: Scalars['Int']
+}
+
+export type FileGroupConnectionDistinctArgs = {
+  field: FileFieldsEnum
+}
+
+export type FileGroupConnectionGroupArgs = {
+  field: FileFieldsEnum
+  limit?: Maybe<Scalars['Int']>
+  skip?: Maybe<Scalars['Int']>
+}
+
+export type FileGroupConnectionMaxArgs = {
+  field: FileFieldsEnum
+}
+
+export type FileGroupConnectionMinArgs = {
+  field: FileFieldsEnum
+}
+
+export type FileGroupConnectionSumArgs = {
+  field: FileFieldsEnum
 }
 
 export type FileSortInput = {
@@ -1851,6 +1939,7 @@ export enum MarkdownRemarkFieldsEnum {
   FrontmatterAuthorsInternalMediaType = 'frontmatter___authors___internal___mediaType',
   FrontmatterAuthorsInternalOwner = 'frontmatter___authors___internal___owner',
   FrontmatterAuthorsInternalType = 'frontmatter___authors___internal___type',
+  FrontmatterAuthorsJsonId = 'frontmatter___authors___jsonId',
   FrontmatterAuthorsName = 'frontmatter___authors___name',
   FrontmatterAuthorsParentChildren = 'frontmatter___authors___parent___children',
   FrontmatterAuthorsParentId = 'frontmatter___authors___parent___id',
@@ -1871,6 +1960,7 @@ export enum MarkdownRemarkFieldsEnum {
   FrontmatterBackgroundImageChildAuthorJsonChildren = 'frontmatter___backgroundImage___childAuthorJson___children',
   FrontmatterBackgroundImageChildAuthorJsonGithub = 'frontmatter___backgroundImage___childAuthorJson___github',
   FrontmatterBackgroundImageChildAuthorJsonId = 'frontmatter___backgroundImage___childAuthorJson___id',
+  FrontmatterBackgroundImageChildAuthorJsonJsonId = 'frontmatter___backgroundImage___childAuthorJson___jsonId',
   FrontmatterBackgroundImageChildAuthorJsonName = 'frontmatter___backgroundImage___childAuthorJson___name',
   FrontmatterBackgroundImageChildAuthorJsonTwitter = 'frontmatter___backgroundImage___childAuthorJson___twitter',
   FrontmatterBackgroundImageChildMarkdownRemarkChildren = 'frontmatter___backgroundImage___childMarkdownRemark___children',
@@ -1890,6 +1980,7 @@ export enum MarkdownRemarkFieldsEnum {
   FrontmatterBackgroundImageChildrenAuthorJsonChildren = 'frontmatter___backgroundImage___childrenAuthorJson___children',
   FrontmatterBackgroundImageChildrenAuthorJsonGithub = 'frontmatter___backgroundImage___childrenAuthorJson___github',
   FrontmatterBackgroundImageChildrenAuthorJsonId = 'frontmatter___backgroundImage___childrenAuthorJson___id',
+  FrontmatterBackgroundImageChildrenAuthorJsonJsonId = 'frontmatter___backgroundImage___childrenAuthorJson___jsonId',
   FrontmatterBackgroundImageChildrenAuthorJsonName = 'frontmatter___backgroundImage___childrenAuthorJson___name',
   FrontmatterBackgroundImageChildrenAuthorJsonTwitter = 'frontmatter___backgroundImage___childrenAuthorJson___twitter',
   FrontmatterBackgroundImageChildrenMarkdownRemark = 'frontmatter___backgroundImage___childrenMarkdownRemark',
@@ -2060,12 +2151,39 @@ export type MarkdownRemarkFrontmatterFilterInput = {
 
 export type MarkdownRemarkGroupConnection = {
   __typename?: 'MarkdownRemarkGroupConnection'
+  distinct: Array<Scalars['String']>
   edges: Array<MarkdownRemarkEdge>
   field: Scalars['String']
   fieldValue?: Maybe<Scalars['String']>
+  group: Array<MarkdownRemarkGroupConnection>
+  max?: Maybe<Scalars['Float']>
+  min?: Maybe<Scalars['Float']>
   nodes: Array<MarkdownRemark>
   pageInfo: PageInfo
+  sum?: Maybe<Scalars['Float']>
   totalCount: Scalars['Int']
+}
+
+export type MarkdownRemarkGroupConnectionDistinctArgs = {
+  field: MarkdownRemarkFieldsEnum
+}
+
+export type MarkdownRemarkGroupConnectionGroupArgs = {
+  field: MarkdownRemarkFieldsEnum
+  limit?: Maybe<Scalars['Int']>
+  skip?: Maybe<Scalars['Int']>
+}
+
+export type MarkdownRemarkGroupConnectionMaxArgs = {
+  field: MarkdownRemarkFieldsEnum
+}
+
+export type MarkdownRemarkGroupConnectionMinArgs = {
+  field: MarkdownRemarkFieldsEnum
+}
+
+export type MarkdownRemarkGroupConnectionSumArgs = {
+  field: MarkdownRemarkFieldsEnum
 }
 
 export type MarkdownRemarkSortInput = {
@@ -2208,6 +2326,7 @@ export type QueryAuthorJsonArgs = {
   github?: Maybe<StringQueryOperatorInput>
   id?: Maybe<StringQueryOperatorInput>
   internal?: Maybe<InternalFilterInput>
+  jsonId?: Maybe<StringQueryOperatorInput>
   name?: Maybe<StringQueryOperatorInput>
   parent?: Maybe<NodeFilterInput>
   twitter?: Maybe<StringQueryOperatorInput>
@@ -2222,8 +2341,6 @@ export type QueryDirectoryArgs = {
   birthTime?: Maybe<DateQueryOperatorInput>
   birthtime?: Maybe<DateQueryOperatorInput>
   birthtimeMs?: Maybe<FloatQueryOperatorInput>
-  blksize?: Maybe<IntQueryOperatorInput>
-  blocks?: Maybe<IntQueryOperatorInput>
   changeTime?: Maybe<DateQueryOperatorInput>
   children?: Maybe<NodeFilterListInput>
   ctime?: Maybe<DateQueryOperatorInput>
@@ -2357,16 +2474,14 @@ export type QuerySitePageArgs = {
   children?: Maybe<NodeFilterListInput>
   component?: Maybe<StringQueryOperatorInput>
   componentChunkName?: Maybe<StringQueryOperatorInput>
-  context?: Maybe<SitePageContextFilterInput>
   id?: Maybe<StringQueryOperatorInput>
   internal?: Maybe<InternalFilterInput>
   internalComponentName?: Maybe<StringQueryOperatorInput>
-  isCreatedByStatefulCreatePages?: Maybe<BooleanQueryOperatorInput>
   matchPath?: Maybe<StringQueryOperatorInput>
+  pageContext?: Maybe<JsonQueryOperatorInput>
   parent?: Maybe<NodeFilterInput>
   path?: Maybe<StringQueryOperatorInput>
   pluginCreator?: Maybe<SitePluginFilterInput>
-  pluginCreatorId?: Maybe<StringQueryOperatorInput>
 }
 
 export type QuerySitePluginArgs = {
@@ -2376,10 +2491,10 @@ export type QuerySitePluginArgs = {
   internal?: Maybe<InternalFilterInput>
   name?: Maybe<StringQueryOperatorInput>
   nodeAPIs?: Maybe<StringQueryOperatorInput>
-  packageJson?: Maybe<SitePluginPackageJsonFilterInput>
+  packageJson?: Maybe<JsonQueryOperatorInput>
   parent?: Maybe<NodeFilterInput>
   pluginFilepath?: Maybe<StringQueryOperatorInput>
-  pluginOptions?: Maybe<SitePluginPluginOptionsFilterInput>
+  pluginOptions?: Maybe<JsonQueryOperatorInput>
   resolve?: Maybe<StringQueryOperatorInput>
   ssrAPIs?: Maybe<StringQueryOperatorInput>
   version?: Maybe<StringQueryOperatorInput>
@@ -2565,12 +2680,39 @@ export type SiteBuildMetadataFilterInput = {
 
 export type SiteBuildMetadataGroupConnection = {
   __typename?: 'SiteBuildMetadataGroupConnection'
+  distinct: Array<Scalars['String']>
   edges: Array<SiteBuildMetadataEdge>
   field: Scalars['String']
   fieldValue?: Maybe<Scalars['String']>
+  group: Array<SiteBuildMetadataGroupConnection>
+  max?: Maybe<Scalars['Float']>
+  min?: Maybe<Scalars['Float']>
   nodes: Array<SiteBuildMetadata>
   pageInfo: PageInfo
+  sum?: Maybe<Scalars['Float']>
   totalCount: Scalars['Int']
+}
+
+export type SiteBuildMetadataGroupConnectionDistinctArgs = {
+  field: SiteBuildMetadataFieldsEnum
+}
+
+export type SiteBuildMetadataGroupConnectionGroupArgs = {
+  field: SiteBuildMetadataFieldsEnum
+  limit?: Maybe<Scalars['Int']>
+  skip?: Maybe<Scalars['Int']>
+}
+
+export type SiteBuildMetadataGroupConnectionMaxArgs = {
+  field: SiteBuildMetadataFieldsEnum
+}
+
+export type SiteBuildMetadataGroupConnectionMinArgs = {
+  field: SiteBuildMetadataFieldsEnum
+}
+
+export type SiteBuildMetadataGroupConnectionSumArgs = {
+  field: SiteBuildMetadataFieldsEnum
 }
 
 export type SiteBuildMetadataSortInput = {
@@ -2902,12 +3044,39 @@ export type SiteFunctionFilterInput = {
 
 export type SiteFunctionGroupConnection = {
   __typename?: 'SiteFunctionGroupConnection'
+  distinct: Array<Scalars['String']>
   edges: Array<SiteFunctionEdge>
   field: Scalars['String']
   fieldValue?: Maybe<Scalars['String']>
+  group: Array<SiteFunctionGroupConnection>
+  max?: Maybe<Scalars['Float']>
+  min?: Maybe<Scalars['Float']>
   nodes: Array<SiteFunction>
   pageInfo: PageInfo
+  sum?: Maybe<Scalars['Float']>
   totalCount: Scalars['Int']
+}
+
+export type SiteFunctionGroupConnectionDistinctArgs = {
+  field: SiteFunctionFieldsEnum
+}
+
+export type SiteFunctionGroupConnectionGroupArgs = {
+  field: SiteFunctionFieldsEnum
+  limit?: Maybe<Scalars['Int']>
+  skip?: Maybe<Scalars['Int']>
+}
+
+export type SiteFunctionGroupConnectionMaxArgs = {
+  field: SiteFunctionFieldsEnum
+}
+
+export type SiteFunctionGroupConnectionMinArgs = {
+  field: SiteFunctionFieldsEnum
+}
+
+export type SiteFunctionGroupConnectionSumArgs = {
+  field: SiteFunctionFieldsEnum
 }
 
 export type SiteFunctionSortInput = {
@@ -2917,12 +3086,39 @@ export type SiteFunctionSortInput = {
 
 export type SiteGroupConnection = {
   __typename?: 'SiteGroupConnection'
+  distinct: Array<Scalars['String']>
   edges: Array<SiteEdge>
   field: Scalars['String']
   fieldValue?: Maybe<Scalars['String']>
+  group: Array<SiteGroupConnection>
+  max?: Maybe<Scalars['Float']>
+  min?: Maybe<Scalars['Float']>
   nodes: Array<Site>
   pageInfo: PageInfo
+  sum?: Maybe<Scalars['Float']>
   totalCount: Scalars['Int']
+}
+
+export type SiteGroupConnectionDistinctArgs = {
+  field: SiteFieldsEnum
+}
+
+export type SiteGroupConnectionGroupArgs = {
+  field: SiteFieldsEnum
+  limit?: Maybe<Scalars['Int']>
+  skip?: Maybe<Scalars['Int']>
+}
+
+export type SiteGroupConnectionMaxArgs = {
+  field: SiteFieldsEnum
+}
+
+export type SiteGroupConnectionMinArgs = {
+  field: SiteFieldsEnum
+}
+
+export type SiteGroupConnectionSumArgs = {
+  field: SiteFieldsEnum
 }
 
 export type SiteMapping = {
@@ -2939,16 +3135,14 @@ export type SitePage = Node & {
   children: Array<Node>
   component: Scalars['String']
   componentChunkName: Scalars['String']
-  context?: Maybe<SitePageContext>
   id: Scalars['ID']
   internal: Internal
   internalComponentName: Scalars['String']
-  isCreatedByStatefulCreatePages?: Maybe<Scalars['Boolean']>
   matchPath?: Maybe<Scalars['String']>
+  pageContext?: Maybe<Scalars['JSON']>
   parent?: Maybe<Node>
   path: Scalars['String']
   pluginCreator?: Maybe<SitePlugin>
-  pluginCreatorId?: Maybe<Scalars['String']>
 }
 
 export type SitePageConnection = {
@@ -2984,15 +3178,6 @@ export type SitePageConnectionMinArgs = {
 
 export type SitePageConnectionSumArgs = {
   field: SitePageFieldsEnum
-}
-
-export type SitePageContext = {
-  __typename?: 'SitePageContext'
-  slug?: Maybe<Scalars['String']>
-}
-
-export type SitePageContextFilterInput = {
-  slug?: Maybe<StringQueryOperatorInput>
 }
 
 export type SitePageEdge = {
@@ -3044,7 +3229,6 @@ export enum SitePageFieldsEnum {
   ChildrenParentParentId = 'children___parent___parent___id',
   Component = 'component',
   ComponentChunkName = 'componentChunkName',
-  ContextSlug = 'context___slug',
   Id = 'id',
   InternalComponentName = 'internalComponentName',
   InternalContent = 'internal___content',
@@ -3055,8 +3239,8 @@ export enum SitePageFieldsEnum {
   InternalMediaType = 'internal___mediaType',
   InternalOwner = 'internal___owner',
   InternalType = 'internal___type',
-  IsCreatedByStatefulCreatePages = 'isCreatedByStatefulCreatePages',
   MatchPath = 'matchPath',
+  PageContext = 'pageContext',
   ParentChildren = 'parent___children',
   ParentChildrenChildren = 'parent___children___children',
   ParentChildrenChildrenChildren = 'parent___children___children___children',
@@ -3096,7 +3280,6 @@ export enum SitePageFieldsEnum {
   ParentParentParentChildren = 'parent___parent___parent___children',
   ParentParentParentId = 'parent___parent___parent___id',
   Path = 'path',
-  PluginCreatorId = 'pluginCreatorId',
   PluginCreatorBrowserApIs = 'pluginCreator___browserAPIs',
   PluginCreatorChildren = 'pluginCreator___children',
   PluginCreatorChildrenChildren = 'pluginCreator___children___children',
@@ -3124,22 +3307,7 @@ export enum SitePageFieldsEnum {
   PluginCreatorInternalType = 'pluginCreator___internal___type',
   PluginCreatorName = 'pluginCreator___name',
   PluginCreatorNodeApIs = 'pluginCreator___nodeAPIs',
-  PluginCreatorPackageJsonAuthor = 'pluginCreator___packageJson___author',
-  PluginCreatorPackageJsonDependencies = 'pluginCreator___packageJson___dependencies',
-  PluginCreatorPackageJsonDependenciesName = 'pluginCreator___packageJson___dependencies___name',
-  PluginCreatorPackageJsonDependenciesVersion = 'pluginCreator___packageJson___dependencies___version',
-  PluginCreatorPackageJsonDescription = 'pluginCreator___packageJson___description',
-  PluginCreatorPackageJsonDevDependencies = 'pluginCreator___packageJson___devDependencies',
-  PluginCreatorPackageJsonDevDependenciesName = 'pluginCreator___packageJson___devDependencies___name',
-  PluginCreatorPackageJsonDevDependenciesVersion = 'pluginCreator___packageJson___devDependencies___version',
-  PluginCreatorPackageJsonKeywords = 'pluginCreator___packageJson___keywords',
-  PluginCreatorPackageJsonLicense = 'pluginCreator___packageJson___license',
-  PluginCreatorPackageJsonMain = 'pluginCreator___packageJson___main',
-  PluginCreatorPackageJsonName = 'pluginCreator___packageJson___name',
-  PluginCreatorPackageJsonPeerDependencies = 'pluginCreator___packageJson___peerDependencies',
-  PluginCreatorPackageJsonPeerDependenciesName = 'pluginCreator___packageJson___peerDependencies___name',
-  PluginCreatorPackageJsonPeerDependenciesVersion = 'pluginCreator___packageJson___peerDependencies___version',
-  PluginCreatorPackageJsonVersion = 'pluginCreator___packageJson___version',
+  PluginCreatorPackageJson = 'pluginCreator___packageJson',
   PluginCreatorParentChildren = 'pluginCreator___parent___children',
   PluginCreatorParentChildrenChildren = 'pluginCreator___parent___children___children',
   PluginCreatorParentChildrenId = 'pluginCreator___parent___children___id',
@@ -3155,45 +3323,7 @@ export enum SitePageFieldsEnum {
   PluginCreatorParentParentChildren = 'pluginCreator___parent___parent___children',
   PluginCreatorParentParentId = 'pluginCreator___parent___parent___id',
   PluginCreatorPluginFilepath = 'pluginCreator___pluginFilepath',
-  PluginCreatorPluginOptionsAllExtensions = 'pluginCreator___pluginOptions___allExtensions',
-  PluginCreatorPluginOptionsClassName = 'pluginCreator___pluginOptions___className',
-  PluginCreatorPluginOptionsCreateLinkInHead = 'pluginCreator___pluginOptions___createLinkInHead',
-  PluginCreatorPluginOptionsDisplayName = 'pluginCreator___pluginOptions___displayName',
-  PluginCreatorPluginOptionsEnableWebVitalsTracking = 'pluginCreator___pluginOptions___enableWebVitalsTracking',
-  PluginCreatorPluginOptionsEndpoint = 'pluginCreator___pluginOptions___endpoint',
-  PluginCreatorPluginOptionsEntryLimit = 'pluginCreator___pluginOptions___entryLimit',
-  PluginCreatorPluginOptionsExcludes = 'pluginCreator___pluginOptions___excludes',
-  PluginCreatorPluginOptionsFeeds = 'pluginCreator___pluginOptions___feeds',
-  PluginCreatorPluginOptionsFeedsOutput = 'pluginCreator___pluginOptions___feeds___output',
-  PluginCreatorPluginOptionsFeedsQuery = 'pluginCreator___pluginOptions___feeds___query',
-  PluginCreatorPluginOptionsFeedsTitle = 'pluginCreator___pluginOptions___feeds___title',
-  PluginCreatorPluginOptionsFileName = 'pluginCreator___pluginOptions___fileName',
-  PluginCreatorPluginOptionsId = 'pluginCreator___pluginOptions___id',
-  PluginCreatorPluginOptionsIgnore = 'pluginCreator___pluginOptions___ignore',
-  PluginCreatorPluginOptionsIncludeInDevelopment = 'pluginCreator___pluginOptions___includeInDevelopment',
-  PluginCreatorPluginOptionsIsTsx = 'pluginCreator___pluginOptions___isTSX',
-  PluginCreatorPluginOptionsJsxPragma = 'pluginCreator___pluginOptions___jsxPragma',
-  PluginCreatorPluginOptionsMinify = 'pluginCreator___pluginOptions___minify',
-  PluginCreatorPluginOptionsName = 'pluginCreator___pluginOptions___name',
-  PluginCreatorPluginOptionsNamespace = 'pluginCreator___pluginOptions___namespace',
-  PluginCreatorPluginOptionsOffsetY = 'pluginCreator___pluginOptions___offsetY',
-  PluginCreatorPluginOptionsOutput = 'pluginCreator___pluginOptions___output',
-  PluginCreatorPluginOptionsPath = 'pluginCreator___pluginOptions___path',
-  PluginCreatorPluginOptionsPathCheck = 'pluginCreator___pluginOptions___pathCheck',
-  PluginCreatorPluginOptionsPlugins = 'pluginCreator___pluginOptions___plugins',
-  PluginCreatorPluginOptionsPluginsBrowserApIs = 'pluginCreator___pluginOptions___plugins___browserAPIs',
-  PluginCreatorPluginOptionsPluginsId = 'pluginCreator___pluginOptions___plugins___id',
-  PluginCreatorPluginOptionsPluginsName = 'pluginCreator___pluginOptions___plugins___name',
-  PluginCreatorPluginOptionsPluginsNodeApIs = 'pluginCreator___pluginOptions___plugins___nodeAPIs',
-  PluginCreatorPluginOptionsPluginsPluginFilepath = 'pluginCreator___pluginOptions___plugins___pluginFilepath',
-  PluginCreatorPluginOptionsPluginsResolve = 'pluginCreator___pluginOptions___plugins___resolve',
-  PluginCreatorPluginOptionsPluginsSsrApIs = 'pluginCreator___pluginOptions___plugins___ssrAPIs',
-  PluginCreatorPluginOptionsPluginsVersion = 'pluginCreator___pluginOptions___plugins___version',
-  PluginCreatorPluginOptionsPure = 'pluginCreator___pluginOptions___pure',
-  PluginCreatorPluginOptionsQuery = 'pluginCreator___pluginOptions___query',
-  PluginCreatorPluginOptionsRouteChangeEventName = 'pluginCreator___pluginOptions___routeChangeEventName',
-  PluginCreatorPluginOptionsSiteUrl = 'pluginCreator___pluginOptions___siteUrl',
-  PluginCreatorPluginOptionsTranspileTemplateLiterals = 'pluginCreator___pluginOptions___transpileTemplateLiterals',
+  PluginCreatorPluginOptions = 'pluginCreator___pluginOptions',
   PluginCreatorResolve = 'pluginCreator___resolve',
   PluginCreatorSsrApIs = 'pluginCreator___ssrAPIs',
   PluginCreatorVersion = 'pluginCreator___version',
@@ -3203,26 +3333,51 @@ export type SitePageFilterInput = {
   children?: Maybe<NodeFilterListInput>
   component?: Maybe<StringQueryOperatorInput>
   componentChunkName?: Maybe<StringQueryOperatorInput>
-  context?: Maybe<SitePageContextFilterInput>
   id?: Maybe<StringQueryOperatorInput>
   internal?: Maybe<InternalFilterInput>
   internalComponentName?: Maybe<StringQueryOperatorInput>
-  isCreatedByStatefulCreatePages?: Maybe<BooleanQueryOperatorInput>
   matchPath?: Maybe<StringQueryOperatorInput>
+  pageContext?: Maybe<JsonQueryOperatorInput>
   parent?: Maybe<NodeFilterInput>
   path?: Maybe<StringQueryOperatorInput>
   pluginCreator?: Maybe<SitePluginFilterInput>
-  pluginCreatorId?: Maybe<StringQueryOperatorInput>
 }
 
 export type SitePageGroupConnection = {
   __typename?: 'SitePageGroupConnection'
+  distinct: Array<Scalars['String']>
   edges: Array<SitePageEdge>
   field: Scalars['String']
   fieldValue?: Maybe<Scalars['String']>
+  group: Array<SitePageGroupConnection>
+  max?: Maybe<Scalars['Float']>
+  min?: Maybe<Scalars['Float']>
   nodes: Array<SitePage>
   pageInfo: PageInfo
+  sum?: Maybe<Scalars['Float']>
   totalCount: Scalars['Int']
+}
+
+export type SitePageGroupConnectionDistinctArgs = {
+  field: SitePageFieldsEnum
+}
+
+export type SitePageGroupConnectionGroupArgs = {
+  field: SitePageFieldsEnum
+  limit?: Maybe<Scalars['Int']>
+  skip?: Maybe<Scalars['Int']>
+}
+
+export type SitePageGroupConnectionMaxArgs = {
+  field: SitePageFieldsEnum
+}
+
+export type SitePageGroupConnectionMinArgs = {
+  field: SitePageFieldsEnum
+}
+
+export type SitePageGroupConnectionSumArgs = {
+  field: SitePageFieldsEnum
 }
 
 export type SitePageSortInput = {
@@ -3238,10 +3393,10 @@ export type SitePlugin = Node & {
   internal: Internal
   name?: Maybe<Scalars['String']>
   nodeAPIs?: Maybe<Array<Maybe<Scalars['String']>>>
-  packageJson?: Maybe<SitePluginPackageJson>
+  packageJson?: Maybe<Scalars['JSON']>
   parent?: Maybe<Node>
   pluginFilepath?: Maybe<Scalars['String']>
-  pluginOptions?: Maybe<SitePluginPluginOptions>
+  pluginOptions?: Maybe<Scalars['JSON']>
   resolve?: Maybe<Scalars['String']>
   ssrAPIs?: Maybe<Array<Maybe<Scalars['String']>>>
   version?: Maybe<Scalars['String']>
@@ -3341,22 +3496,7 @@ export enum SitePluginFieldsEnum {
   InternalType = 'internal___type',
   Name = 'name',
   NodeApIs = 'nodeAPIs',
-  PackageJsonAuthor = 'packageJson___author',
-  PackageJsonDependencies = 'packageJson___dependencies',
-  PackageJsonDependenciesName = 'packageJson___dependencies___name',
-  PackageJsonDependenciesVersion = 'packageJson___dependencies___version',
-  PackageJsonDescription = 'packageJson___description',
-  PackageJsonDevDependencies = 'packageJson___devDependencies',
-  PackageJsonDevDependenciesName = 'packageJson___devDependencies___name',
-  PackageJsonDevDependenciesVersion = 'packageJson___devDependencies___version',
-  PackageJsonKeywords = 'packageJson___keywords',
-  PackageJsonLicense = 'packageJson___license',
-  PackageJsonMain = 'packageJson___main',
-  PackageJsonName = 'packageJson___name',
-  PackageJsonPeerDependencies = 'packageJson___peerDependencies',
-  PackageJsonPeerDependenciesName = 'packageJson___peerDependencies___name',
-  PackageJsonPeerDependenciesVersion = 'packageJson___peerDependencies___version',
-  PackageJsonVersion = 'packageJson___version',
+  PackageJson = 'packageJson',
   ParentChildren = 'parent___children',
   ParentChildrenChildren = 'parent___children___children',
   ParentChildrenChildrenChildren = 'parent___children___children___children',
@@ -3396,47 +3536,7 @@ export enum SitePluginFieldsEnum {
   ParentParentParentChildren = 'parent___parent___parent___children',
   ParentParentParentId = 'parent___parent___parent___id',
   PluginFilepath = 'pluginFilepath',
-  PluginOptionsAllExtensions = 'pluginOptions___allExtensions',
-  PluginOptionsClassName = 'pluginOptions___className',
-  PluginOptionsCreateLinkInHead = 'pluginOptions___createLinkInHead',
-  PluginOptionsDisplayName = 'pluginOptions___displayName',
-  PluginOptionsEnableWebVitalsTracking = 'pluginOptions___enableWebVitalsTracking',
-  PluginOptionsEndpoint = 'pluginOptions___endpoint',
-  PluginOptionsEntryLimit = 'pluginOptions___entryLimit',
-  PluginOptionsExcludes = 'pluginOptions___excludes',
-  PluginOptionsFeeds = 'pluginOptions___feeds',
-  PluginOptionsFeedsOutput = 'pluginOptions___feeds___output',
-  PluginOptionsFeedsQuery = 'pluginOptions___feeds___query',
-  PluginOptionsFeedsTitle = 'pluginOptions___feeds___title',
-  PluginOptionsFileName = 'pluginOptions___fileName',
-  PluginOptionsId = 'pluginOptions___id',
-  PluginOptionsIgnore = 'pluginOptions___ignore',
-  PluginOptionsIncludeInDevelopment = 'pluginOptions___includeInDevelopment',
-  PluginOptionsIsTsx = 'pluginOptions___isTSX',
-  PluginOptionsJsxPragma = 'pluginOptions___jsxPragma',
-  PluginOptionsMinify = 'pluginOptions___minify',
-  PluginOptionsName = 'pluginOptions___name',
-  PluginOptionsNamespace = 'pluginOptions___namespace',
-  PluginOptionsOffsetY = 'pluginOptions___offsetY',
-  PluginOptionsOutput = 'pluginOptions___output',
-  PluginOptionsPath = 'pluginOptions___path',
-  PluginOptionsPathCheck = 'pluginOptions___pathCheck',
-  PluginOptionsPlugins = 'pluginOptions___plugins',
-  PluginOptionsPluginsBrowserApIs = 'pluginOptions___plugins___browserAPIs',
-  PluginOptionsPluginsId = 'pluginOptions___plugins___id',
-  PluginOptionsPluginsName = 'pluginOptions___plugins___name',
-  PluginOptionsPluginsNodeApIs = 'pluginOptions___plugins___nodeAPIs',
-  PluginOptionsPluginsPluginFilepath = 'pluginOptions___plugins___pluginFilepath',
-  PluginOptionsPluginsPluginOptionsClassName = 'pluginOptions___plugins___pluginOptions___className',
-  PluginOptionsPluginsPluginOptionsOffsetY = 'pluginOptions___plugins___pluginOptions___offsetY',
-  PluginOptionsPluginsResolve = 'pluginOptions___plugins___resolve',
-  PluginOptionsPluginsSsrApIs = 'pluginOptions___plugins___ssrAPIs',
-  PluginOptionsPluginsVersion = 'pluginOptions___plugins___version',
-  PluginOptionsPure = 'pluginOptions___pure',
-  PluginOptionsQuery = 'pluginOptions___query',
-  PluginOptionsRouteChangeEventName = 'pluginOptions___routeChangeEventName',
-  PluginOptionsSiteUrl = 'pluginOptions___siteUrl',
-  PluginOptionsTranspileTemplateLiterals = 'pluginOptions___transpileTemplateLiterals',
+  PluginOptions = 'pluginOptions',
   Resolve = 'resolve',
   SsrApIs = 'ssrAPIs',
   Version = 'version',
@@ -3449,10 +3549,10 @@ export type SitePluginFilterInput = {
   internal?: Maybe<InternalFilterInput>
   name?: Maybe<StringQueryOperatorInput>
   nodeAPIs?: Maybe<StringQueryOperatorInput>
-  packageJson?: Maybe<SitePluginPackageJsonFilterInput>
+  packageJson?: Maybe<JsonQueryOperatorInput>
   parent?: Maybe<NodeFilterInput>
   pluginFilepath?: Maybe<StringQueryOperatorInput>
-  pluginOptions?: Maybe<SitePluginPluginOptionsFilterInput>
+  pluginOptions?: Maybe<JsonQueryOperatorInput>
   resolve?: Maybe<StringQueryOperatorInput>
   ssrAPIs?: Maybe<StringQueryOperatorInput>
   version?: Maybe<StringQueryOperatorInput>
@@ -3460,204 +3560,39 @@ export type SitePluginFilterInput = {
 
 export type SitePluginGroupConnection = {
   __typename?: 'SitePluginGroupConnection'
+  distinct: Array<Scalars['String']>
   edges: Array<SitePluginEdge>
   field: Scalars['String']
   fieldValue?: Maybe<Scalars['String']>
+  group: Array<SitePluginGroupConnection>
+  max?: Maybe<Scalars['Float']>
+  min?: Maybe<Scalars['Float']>
   nodes: Array<SitePlugin>
   pageInfo: PageInfo
+  sum?: Maybe<Scalars['Float']>
   totalCount: Scalars['Int']
 }
 
-export type SitePluginPackageJson = {
-  __typename?: 'SitePluginPackageJson'
-  author?: Maybe<Scalars['String']>
-  dependencies?: Maybe<Array<Maybe<SitePluginPackageJsonDependencies>>>
-  description?: Maybe<Scalars['String']>
-  devDependencies?: Maybe<Array<Maybe<SitePluginPackageJsonDevDependencies>>>
-  keywords?: Maybe<Array<Maybe<Scalars['String']>>>
-  license?: Maybe<Scalars['String']>
-  main?: Maybe<Scalars['String']>
-  name?: Maybe<Scalars['String']>
-  peerDependencies?: Maybe<Array<Maybe<SitePluginPackageJsonPeerDependencies>>>
-  version?: Maybe<Scalars['String']>
+export type SitePluginGroupConnectionDistinctArgs = {
+  field: SitePluginFieldsEnum
 }
 
-export type SitePluginPackageJsonDependencies = {
-  __typename?: 'SitePluginPackageJsonDependencies'
-  name?: Maybe<Scalars['String']>
-  version?: Maybe<Scalars['String']>
+export type SitePluginGroupConnectionGroupArgs = {
+  field: SitePluginFieldsEnum
+  limit?: Maybe<Scalars['Int']>
+  skip?: Maybe<Scalars['Int']>
 }
 
-export type SitePluginPackageJsonDependenciesFilterInput = {
-  name?: Maybe<StringQueryOperatorInput>
-  version?: Maybe<StringQueryOperatorInput>
+export type SitePluginGroupConnectionMaxArgs = {
+  field: SitePluginFieldsEnum
 }
 
-export type SitePluginPackageJsonDependenciesFilterListInput = {
-  elemMatch?: Maybe<SitePluginPackageJsonDependenciesFilterInput>
+export type SitePluginGroupConnectionMinArgs = {
+  field: SitePluginFieldsEnum
 }
 
-export type SitePluginPackageJsonDevDependencies = {
-  __typename?: 'SitePluginPackageJsonDevDependencies'
-  name?: Maybe<Scalars['String']>
-  version?: Maybe<Scalars['String']>
-}
-
-export type SitePluginPackageJsonDevDependenciesFilterInput = {
-  name?: Maybe<StringQueryOperatorInput>
-  version?: Maybe<StringQueryOperatorInput>
-}
-
-export type SitePluginPackageJsonDevDependenciesFilterListInput = {
-  elemMatch?: Maybe<SitePluginPackageJsonDevDependenciesFilterInput>
-}
-
-export type SitePluginPackageJsonFilterInput = {
-  author?: Maybe<StringQueryOperatorInput>
-  dependencies?: Maybe<SitePluginPackageJsonDependenciesFilterListInput>
-  description?: Maybe<StringQueryOperatorInput>
-  devDependencies?: Maybe<SitePluginPackageJsonDevDependenciesFilterListInput>
-  keywords?: Maybe<StringQueryOperatorInput>
-  license?: Maybe<StringQueryOperatorInput>
-  main?: Maybe<StringQueryOperatorInput>
-  name?: Maybe<StringQueryOperatorInput>
-  peerDependencies?: Maybe<SitePluginPackageJsonPeerDependenciesFilterListInput>
-  version?: Maybe<StringQueryOperatorInput>
-}
-
-export type SitePluginPackageJsonPeerDependencies = {
-  __typename?: 'SitePluginPackageJsonPeerDependencies'
-  name?: Maybe<Scalars['String']>
-  version?: Maybe<Scalars['String']>
-}
-
-export type SitePluginPackageJsonPeerDependenciesFilterInput = {
-  name?: Maybe<StringQueryOperatorInput>
-  version?: Maybe<StringQueryOperatorInput>
-}
-
-export type SitePluginPackageJsonPeerDependenciesFilterListInput = {
-  elemMatch?: Maybe<SitePluginPackageJsonPeerDependenciesFilterInput>
-}
-
-export type SitePluginPluginOptions = {
-  __typename?: 'SitePluginPluginOptions'
-  allExtensions?: Maybe<Scalars['Boolean']>
-  className?: Maybe<Scalars['String']>
-  createLinkInHead?: Maybe<Scalars['Boolean']>
-  displayName?: Maybe<Scalars['Boolean']>
-  enableWebVitalsTracking?: Maybe<Scalars['Boolean']>
-  endpoint?: Maybe<Scalars['String']>
-  entryLimit?: Maybe<Scalars['Int']>
-  excludes?: Maybe<Array<Maybe<Scalars['String']>>>
-  feeds?: Maybe<Array<Maybe<SitePluginPluginOptionsFeeds>>>
-  fileName?: Maybe<Scalars['Boolean']>
-  id?: Maybe<Scalars['String']>
-  ignore?: Maybe<Array<Maybe<Scalars['String']>>>
-  includeInDevelopment?: Maybe<Scalars['Boolean']>
-  isTSX?: Maybe<Scalars['Boolean']>
-  jsxPragma?: Maybe<Scalars['String']>
-  minify?: Maybe<Scalars['Boolean']>
-  name?: Maybe<Scalars['String']>
-  namespace?: Maybe<Scalars['String']>
-  offsetY?: Maybe<Scalars['Int']>
-  output?: Maybe<Scalars['String']>
-  path?: Maybe<Scalars['String']>
-  pathCheck?: Maybe<Scalars['Boolean']>
-  plugins?: Maybe<Array<Maybe<SitePluginPluginOptionsPlugins>>>
-  pure?: Maybe<Scalars['Boolean']>
-  query?: Maybe<Scalars['String']>
-  routeChangeEventName?: Maybe<Scalars['String']>
-  siteUrl?: Maybe<Scalars['String']>
-  transpileTemplateLiterals?: Maybe<Scalars['Boolean']>
-}
-
-export type SitePluginPluginOptionsFeeds = {
-  __typename?: 'SitePluginPluginOptionsFeeds'
-  output?: Maybe<Scalars['String']>
-  query?: Maybe<Scalars['String']>
-  title?: Maybe<Scalars['String']>
-}
-
-export type SitePluginPluginOptionsFeedsFilterInput = {
-  output?: Maybe<StringQueryOperatorInput>
-  query?: Maybe<StringQueryOperatorInput>
-  title?: Maybe<StringQueryOperatorInput>
-}
-
-export type SitePluginPluginOptionsFeedsFilterListInput = {
-  elemMatch?: Maybe<SitePluginPluginOptionsFeedsFilterInput>
-}
-
-export type SitePluginPluginOptionsFilterInput = {
-  allExtensions?: Maybe<BooleanQueryOperatorInput>
-  className?: Maybe<StringQueryOperatorInput>
-  createLinkInHead?: Maybe<BooleanQueryOperatorInput>
-  displayName?: Maybe<BooleanQueryOperatorInput>
-  enableWebVitalsTracking?: Maybe<BooleanQueryOperatorInput>
-  endpoint?: Maybe<StringQueryOperatorInput>
-  entryLimit?: Maybe<IntQueryOperatorInput>
-  excludes?: Maybe<StringQueryOperatorInput>
-  feeds?: Maybe<SitePluginPluginOptionsFeedsFilterListInput>
-  fileName?: Maybe<BooleanQueryOperatorInput>
-  id?: Maybe<StringQueryOperatorInput>
-  ignore?: Maybe<StringQueryOperatorInput>
-  includeInDevelopment?: Maybe<BooleanQueryOperatorInput>
-  isTSX?: Maybe<BooleanQueryOperatorInput>
-  jsxPragma?: Maybe<StringQueryOperatorInput>
-  minify?: Maybe<BooleanQueryOperatorInput>
-  name?: Maybe<StringQueryOperatorInput>
-  namespace?: Maybe<StringQueryOperatorInput>
-  offsetY?: Maybe<IntQueryOperatorInput>
-  output?: Maybe<StringQueryOperatorInput>
-  path?: Maybe<StringQueryOperatorInput>
-  pathCheck?: Maybe<BooleanQueryOperatorInput>
-  plugins?: Maybe<SitePluginPluginOptionsPluginsFilterListInput>
-  pure?: Maybe<BooleanQueryOperatorInput>
-  query?: Maybe<StringQueryOperatorInput>
-  routeChangeEventName?: Maybe<StringQueryOperatorInput>
-  siteUrl?: Maybe<StringQueryOperatorInput>
-  transpileTemplateLiterals?: Maybe<BooleanQueryOperatorInput>
-}
-
-export type SitePluginPluginOptionsPlugins = {
-  __typename?: 'SitePluginPluginOptionsPlugins'
-  browserAPIs?: Maybe<Array<Maybe<Scalars['String']>>>
-  id?: Maybe<Scalars['String']>
-  name?: Maybe<Scalars['String']>
-  nodeAPIs?: Maybe<Array<Maybe<Scalars['String']>>>
-  pluginFilepath?: Maybe<Scalars['String']>
-  pluginOptions?: Maybe<SitePluginPluginOptionsPluginsPluginOptions>
-  resolve?: Maybe<Scalars['String']>
-  ssrAPIs?: Maybe<Array<Maybe<Scalars['String']>>>
-  version?: Maybe<Scalars['String']>
-}
-
-export type SitePluginPluginOptionsPluginsFilterInput = {
-  browserAPIs?: Maybe<StringQueryOperatorInput>
-  id?: Maybe<StringQueryOperatorInput>
-  name?: Maybe<StringQueryOperatorInput>
-  nodeAPIs?: Maybe<StringQueryOperatorInput>
-  pluginFilepath?: Maybe<StringQueryOperatorInput>
-  pluginOptions?: Maybe<SitePluginPluginOptionsPluginsPluginOptionsFilterInput>
-  resolve?: Maybe<StringQueryOperatorInput>
-  ssrAPIs?: Maybe<StringQueryOperatorInput>
-  version?: Maybe<StringQueryOperatorInput>
-}
-
-export type SitePluginPluginOptionsPluginsFilterListInput = {
-  elemMatch?: Maybe<SitePluginPluginOptionsPluginsFilterInput>
-}
-
-export type SitePluginPluginOptionsPluginsPluginOptions = {
-  __typename?: 'SitePluginPluginOptionsPluginsPluginOptions'
-  className?: Maybe<Scalars['String']>
-  offsetY?: Maybe<Scalars['Int']>
-}
-
-export type SitePluginPluginOptionsPluginsPluginOptionsFilterInput = {
-  className?: Maybe<StringQueryOperatorInput>
-  offsetY?: Maybe<IntQueryOperatorInput>
+export type SitePluginGroupConnectionSumArgs = {
+  field: SitePluginFieldsEnum
 }
 
 export type SitePluginSortInput = {
@@ -3715,32 +3650,44 @@ export type PagesQueryQuery = {
 
 export type SiteMetadataFragment = {
   __typename?: 'Query'
-  site?: Maybe<{
-    __typename?: 'Site'
-    siteMetadata?: Maybe<{
-      __typename?: 'SiteSiteMetadata'
-      description?: Maybe<string>
-      keywords?: Maybe<string>
-      title?: Maybe<string>
-      siteUrl?: Maybe<string>
-    }>
-  }>
+  site?:
+    | {
+        __typename?: 'Site'
+        siteMetadata?:
+          | {
+              __typename?: 'SiteSiteMetadata'
+              description?: string | null | undefined
+              keywords?: string | null | undefined
+              title?: string | null | undefined
+              siteUrl?: string | null | undefined
+            }
+          | null
+          | undefined
+      }
+    | null
+    | undefined
 }
 
 export type Unnamed_1_QueryVariables = Exact<{ [key: string]: never }>
 
 export type Unnamed_1_Query = {
   __typename?: 'Query'
-  site?: Maybe<{
-    __typename?: 'Site'
-    siteMetadata?: Maybe<{
-      __typename?: 'SiteSiteMetadata'
-      description?: Maybe<string>
-      keywords?: Maybe<string>
-      title?: Maybe<string>
-      siteUrl?: Maybe<string>
-    }>
-  }>
+  site?:
+    | {
+        __typename?: 'Site'
+        siteMetadata?:
+          | {
+              __typename?: 'SiteSiteMetadata'
+              description?: string | null | undefined
+              keywords?: string | null | undefined
+              title?: string | null | undefined
+              siteUrl?: string | null | undefined
+            }
+          | null
+          | undefined
+      }
+    | null
+    | undefined
 }
 
 export type Unnamed_2_QueryVariables = Exact<{ [key: string]: never }>
@@ -3754,20 +3701,26 @@ export type Unnamed_2_Query = {
       node: {
         __typename?: 'MarkdownRemark'
         id: string
-        fields?: Maybe<{
-          __typename?: 'MarkdownRemarkFields'
-          slug?: Maybe<string>
-        }>
-        frontmatter?: Maybe<{
-          __typename?: 'MarkdownRemarkFrontmatter'
-          title?: Maybe<string>
-          date?: Maybe<any>
-          tags?: Maybe<Array<Maybe<string>>>
-          backgroundImage?: Maybe<{
-            __typename?: 'File'
-            publicURL?: Maybe<string>
-          }>
-        }>
+        fields?:
+          | {
+              __typename?: 'MarkdownRemarkFields'
+              slug?: string | null | undefined
+            }
+          | null
+          | undefined
+        frontmatter?:
+          | {
+              __typename?: 'MarkdownRemarkFrontmatter'
+              title?: string | null | undefined
+              date?: any | null | undefined
+              tags?: Array<string | null | undefined> | null | undefined
+              backgroundImage?:
+                | { __typename?: 'File'; publicURL?: string | null | undefined }
+                | null
+                | undefined
+            }
+          | null
+          | undefined
       }
     }>
   }
@@ -3779,14 +3732,20 @@ export type Unnamed_3_QueryVariables = Exact<{
 
 export type Unnamed_3_Query = {
   __typename?: 'Query'
-  markdownRemark?: Maybe<{
-    __typename?: 'MarkdownRemark'
-    html?: Maybe<string>
-    frontmatter?: Maybe<{
-      __typename?: 'MarkdownRemarkFrontmatter'
-      title?: Maybe<string>
-    }>
-  }>
+  markdownRemark?:
+    | {
+        __typename?: 'MarkdownRemark'
+        html?: string | null | undefined
+        frontmatter?:
+          | {
+              __typename?: 'MarkdownRemarkFrontmatter'
+              title?: string | null | undefined
+            }
+          | null
+          | undefined
+      }
+    | null
+    | undefined
 }
 
 export type Unnamed_4_QueryVariables = Exact<{
@@ -3795,37 +3754,49 @@ export type Unnamed_4_QueryVariables = Exact<{
 
 export type Unnamed_4_Query = {
   __typename?: 'Query'
-  markdownRemark?: Maybe<{
-    __typename?: 'MarkdownRemark'
-    html?: Maybe<string>
-    excerpt?: Maybe<string>
-    frontmatter?: Maybe<{
-      __typename?: 'MarkdownRemarkFrontmatter'
-      backgroundColor?: Maybe<string>
-      title?: Maybe<string>
-      date?: Maybe<any>
-      tags?: Maybe<Array<Maybe<string>>>
-      backgroundImage?: Maybe<{
-        __typename?: 'File'
-        publicURL?: Maybe<string>
-      }>
-      authors?: Maybe<
-        Array<
-          Maybe<{
-            __typename?: 'AuthorJson'
-            id: string
-            name?: Maybe<string>
-            bio?: Maybe<string>
-            twitter?: Maybe<string>
-            github?: Maybe<string>
-            avatar?: Maybe<{
-              __typename?: 'File'
-              id: string
-              publicURL?: Maybe<string>
-            }>
-          }>
-        >
-      >
-    }>
-  }>
+  markdownRemark?:
+    | {
+        __typename?: 'MarkdownRemark'
+        html?: string | null | undefined
+        excerpt?: string | null | undefined
+        frontmatter?:
+          | {
+              __typename?: 'MarkdownRemarkFrontmatter'
+              backgroundColor?: string | null | undefined
+              title?: string | null | undefined
+              date?: any | null | undefined
+              tags?: Array<string | null | undefined> | null | undefined
+              backgroundImage?:
+                | { __typename?: 'File'; publicURL?: string | null | undefined }
+                | null
+                | undefined
+              authors?:
+                | Array<
+                    | {
+                        __typename?: 'AuthorJson'
+                        id: string
+                        name?: string | null | undefined
+                        bio?: string | null | undefined
+                        twitter?: string | null | undefined
+                        github?: string | null | undefined
+                        avatar?:
+                          | {
+                              __typename?: 'File'
+                              id: string
+                              publicURL?: string | null | undefined
+                            }
+                          | null
+                          | undefined
+                      }
+                    | null
+                    | undefined
+                  >
+                | null
+                | undefined
+            }
+          | null
+          | undefined
+      }
+    | null
+    | undefined
 }
