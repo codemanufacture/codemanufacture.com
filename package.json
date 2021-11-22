@@ -6,7 +6,7 @@
   "private": true,
   "dependencies": {
     "@fontsource/montserrat": "^4.5.1",
-    "babel-plugin-styled-components": "^1.13.3",
+    "babel-plugin-styled-components": "^2.0.1",
     "classnames": "^2.3.1",
     "gatsby": "^4.2.0",
     "gatsby-plugin-canonical-urls": "^4.2.0",
