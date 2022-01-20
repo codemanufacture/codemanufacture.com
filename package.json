@@ -8,7 +8,7 @@
     "@fontsource/montserrat": "^4.5.2",
     "babel-plugin-styled-components": "^2.0.2",
     "classnames": "^2.3.1",
-    "gatsby": "^4.5.3",
+    "gatsby": "^4.5.4",
     "gatsby-plugin-canonical-urls": "^4.5.0",
     "gatsby-plugin-catch-links": "^4.5.0",
     "gatsby-plugin-feed": "^4.5.0",
