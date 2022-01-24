@@ -4603,9 +4603,9 @@ cross-undici-fetch@^0.0.20:
     undici "^4.9.3"
 
 cross-undici-fetch@^0.1.4:
-  version "0.1.17"
-  resolved "https://registry.yarnpkg.com/cross-undici-fetch/-/cross-undici-fetch-0.1.17.tgz#bcde7237543edc4fae138261a2f3454c23029565"
-  integrity sha512-h0kQ+i0DAK/xYIWKtfNCO3zVjBGjCUAQ2YQ1vzgjRxpB6siTUVMvaL8cZ8Kniia9WIRnZHeBtBGnplGzbvDxMA==
+  version "0.1.19"
+  resolved "https://registry.yarnpkg.com/cross-undici-fetch/-/cross-undici-fetch-0.1.19.tgz#1bef41652c33ec812b51cd3b4e1295114cd62d4c"
+  integrity sha512-bNBuesVn09Iy15mAM/hpt97fLWSexblVYpUYa5FjbtLHA7om9w3g1uRGGwrEnmVxy3wouNvZyJwQzAPHXgOrxQ==
   dependencies:
     abort-controller "^3.0.0"
     form-data-encoder "^1.7.1"
