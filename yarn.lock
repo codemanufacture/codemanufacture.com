@@ -1259,10 +1259,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@fontsource/montserrat@^4.5.2":
-  version "4.5.2"
-  resolved "https://registry.yarnpkg.com/@fontsource/montserrat/-/montserrat-4.5.2.tgz#95c38172b134db4ed7d2d728513c0abbef54fdb1"
-  integrity sha512-RRrXoTlHYLg5CA+RaxVVnosU2RDO4NiZgRmgD1o1d6lm07Dvuzsr0JPALcm5I4VqZw5bzx4nIz2u+T5LOR7W7w==
+"@fontsource/montserrat@^4.5.3":
+  version "4.5.3"
+  resolved "https://registry.yarnpkg.com/@fontsource/montserrat/-/montserrat-4.5.3.tgz#30e8943df4f9904b7379a27304073837193b53b3"
+  integrity sha512-VT+wPK/PHWwqm7r6UbTjI+oj31obzj9+V9HSUl8tcuKtv4deYuH+OAbMf5RG62uVDT8wiZ8QyCbr5gmfHQ3ykg==
 
 "@gatsbyjs/reach-router@^1.3.6":
   version "1.3.6"
