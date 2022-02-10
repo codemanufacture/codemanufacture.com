@@ -7,12 +7,15 @@ module.exports = {
   },
   testRegex: `\\.spec\\.(ts|tsx|js)$`,
   moduleNameMapper: {
-    '.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': `<rootDir>/__mocks__/fileMock.js`
+    ".+\\.(css|styl|less|sass|scss)$": `identity-obj-proxy`,
+    ".+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": `<rootDir>/__mocks__/fileMock.js`,
+    "^gatsby-page-utils/(.*)$": `gatsby-page-utils/dist/$1`
   },
   testPathIgnorePatterns: [
     `node_modules`,
     `/templates/`,
-    `.cache`
+    `<rootDir>.*/public`,
+    `\\.cache`
   ],
   transformIgnorePatterns: [
     `node_modules/(?!(gatsby)/)`
