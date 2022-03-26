@@ -104,7 +104,7 @@
     "plop": "^3.0.5",
     "postcss": "^8.4.12",
     "postcss-syntax": "^0.36.2",
-    "prettier": "2.6.0",
+    "prettier": "2.6.1",
     "react-test-renderer": "^17.0.2",
     "stylelint": "^14.6.0",
     "stylelint-config-recommended": "^7.0.0",
