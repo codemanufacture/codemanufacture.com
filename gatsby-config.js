@@ -46,6 +46,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
+        output: `/`,
         excludes: [
           `/homepage`,
           `/blog/sample-post`
