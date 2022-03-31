@@ -49,7 +49,8 @@ module.exports = {
         output: `/`,
         excludes: [
           `/homepage`,
-          `/blog/sample-post`
+          `/blog/sample-post*`,
+          `/blog/`
         ]
       }
     },
