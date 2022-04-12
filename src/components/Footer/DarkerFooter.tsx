@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { colors, displayDimensions } from '../../theme'
 
 interface DarkerFooterProps {
-  children: object
+  children?: React.ReactNode
 }
 
 const StyledDarkerFooter = styled.div`

@@ -5,7 +5,7 @@ import GlobalStyle from '../../theme/globalStyle'
 import MetaData from '../MetaData'
 
 interface LegacyLayoutProps {
-  children: React.ReactNode
+  children?: React.ReactNode
 }
 
 const LegacyLayout: React.FunctionComponent<LegacyLayoutProps> = ({
