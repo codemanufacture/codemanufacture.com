@@ -5,7 +5,11 @@ import Footer from '../Footer'
 import GoToTop from '../GoToTop'
 import MetaData from '../MetaData'
 
-const Layout: React.FunctionComponent = ({ children }) => {
+interface LayoutProps {
+  children?: React.ReactNode
+}
+
+const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
   return (
     <>
       <MetaData />
