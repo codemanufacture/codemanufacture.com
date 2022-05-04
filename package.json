@@ -78,7 +78,7 @@
     "@graphql-codegen/cli": "^2.6.2",
     "@graphql-codegen/typescript": "^2.4.8",
     "@graphql-codegen/typescript-operations": "^2.3.5",
-    "@stylelint/postcss-css-in-js": "^0.37.3",
+    "@stylelint/postcss-css-in-js": "^0.38.0",
     "@types/classnames": "^2.3.0",
     "@types/jest": "^27.5.0",
     "@types/node": "^17.0.23",
