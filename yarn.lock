@@ -3447,10 +3447,10 @@
   resolved "https://registry.yarnpkg.com/@types/unist/-/unist-2.0.6.tgz#250a7b16c3b91f672a24552ec64678eeb1d3a08d"
   integrity sha512-PBjIUxZHOuj0R15/xuwJYjFi+KZdNFrehocChv4g5hu6aFroHue8m0lBP0POdK2nKzbw0cgV1mws8+V/JAcEkQ==
 
-"@types/validator@^13.7.2":
-  version "13.7.2"
-  resolved "https://registry.yarnpkg.com/@types/validator/-/validator-13.7.2.tgz#a2114225d9be743fb154b06c29b8257aaca42922"
-  integrity sha512-KFcchQ3h0OPQgFirBRPZr5F/sVjxZsOrQHedj3zi8AH3Zv/hOLx2OLR4hxR5HcfoU+33n69ZuOfzthKVdMoTiw==
+"@types/validator@^13.7.3":
+  version "13.7.3"
+  resolved "https://registry.yarnpkg.com/@types/validator/-/validator-13.7.3.tgz#3193c0a3c03a7d1189016c62b4fba4b149ef5e33"
+  integrity sha512-DNviAE5OUcZ5s+XEQHRhERLg8fOp8gSgvyJ4aaFASx5wwaObm+PBwTIMXiOFm1QrSee5oYwEAYb7LMzX2O88gA==
 
 "@types/websocket@1.0.2":
   version "1.0.2"
