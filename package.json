@@ -90,7 +90,7 @@
     "@types/styled-components": "^5.1.25",
     "@types/throttle-debounce": "^5.0.0",
     "@types/uniqid": "^5.3.2",
-    "@types/validator": "^13.7.3",
+    "@types/validator": "^13.7.4",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": ">=24.0.0 <29.0.0",
     "identity-obj-proxy": "^3.0.0",
