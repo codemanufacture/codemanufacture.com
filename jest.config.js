@@ -17,7 +17,7 @@ module.exports = {
     `\\.cache`
   ],
   transformIgnorePatterns: [
-    `node_modules/(?!(gatsby|gatsby-script)/)`
+    `node_modules/(?!(gatsby|gatsby-script|gatsby-link)/)`
   ],
   globals: {
     "__LINK_PREFIX__": ``,
