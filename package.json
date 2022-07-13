@@ -75,7 +75,7 @@
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
     "@graphql-codegen/add": "^3.2.0",
-    "@graphql-codegen/cli": "^2.8.0",
+    "@graphql-codegen/cli": "^2.8.1",
     "@graphql-codegen/typescript": "^2.7.1",
     "@graphql-codegen/typescript-operations": "^2.5.1",
     "@stylelint/postcss-css-in-js": "^0.38.0",
