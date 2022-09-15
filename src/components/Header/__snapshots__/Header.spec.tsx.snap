@@ -156,7 +156,7 @@ exports[`Header component renders correctly 1`] = `
     href="/"
     onClick={[Function]}
     onMouseEnter={[Function]}
-    style={Object {}}
+    style={{}}
     title="Back to homepage"
   >
     <img
