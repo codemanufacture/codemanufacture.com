@@ -1,8 +1,73 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MainMenu component renders correctly 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  will-change: auto;
+}
+
+.c0 li {
+  list-style: none;
+}
+
+.c0 a {
+  display: block;
+  padding: 24px 22px;
+  font-size: 12px;
+  color: #333;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-letter-spacing: 3px;
+  -moz-letter-spacing: 3px;
+  -ms-letter-spacing: 3px;
+  letter-spacing: 3px;
+  -webkit-transition: color 0.25s ease-out;
+  transition: color 0.25s ease-out;
+}
+
+.c0:hover,
+.c0.active {
+  color: #208bc3;
+}
+
+@media (max-width:768px) {
+  .c0 {
+    width: 100%;
+    top: 70px;
+    position: absolute;
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background: #fff;
+    -webkit-transition: -webkit-transform 0.25s ease-out;
+    -webkit-transition: transform 0.25s ease-out;
+    transition: transform 0.25s ease-out;
+    border-bottom: 1px solid #eee;
+  }
+
+  .c0.active {
+    right: 0;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  .c0 li {
+    text-align: center;
+  }
+}
+
 <ul
-  className="sc-bczRLJ bVvvMn"
+  className="c0"
   onClick={[MockFunction]}
 >
   <li>
