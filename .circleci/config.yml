@@ -90,7 +90,7 @@ jobs:
           at: ~/repo
       - run:
           name: Install awscli
-          command: sudo pip install awscli
+          command: sudo pip3 install awscli
       - run:
           name: Deploy to S3
           command: aws s3 sync repo/public s3://codemanufacture.com/ --delete
