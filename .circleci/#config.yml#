@@ -54,7 +54,7 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/project
-      - run: yarn ci-check
+      - run: yarn c:Yi-check
 
   type_check:
     executor: node
@@ -64,23 +64,23 @@ jobs:
       - run: yarn type-check
 
   unit_tests:
-    parallelism: 2
     executor: node
     steps:
       - attach_workspace:
           at: ~/project
       - run:
           name: Run tests
-          command: yarn jest --ci --runInBand --reporters=default --reporters=jest-junit
+          command: yarn jest --ci --runInBand  $(yarn -s jest --listTests | sed 's/\/home\/circleci\/project\///g' | circleci tests split)
           environment:
             NODE_OPTIONS: --max-old-space-size=2048
+            GENERATE_JEST_REPORT: "true"
             JEST_JUNIT_OUTPUT_DIR: ./test-results/jest-node/
+            JEST_JUNIT_OUTPUT_NAME: results.xml
             JEST_JUNIT_REPORT_TEST_SUITE_ERRORS: "true"
       - store_test_results:
           path: ./test-results/jest-node/
 
   build:
-    parallelism: 2
     executor: node
     steps:
       - attach_workspace:

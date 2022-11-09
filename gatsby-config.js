@@ -108,27 +108,28 @@ module.exports = {
               })
             },
             query: `
-              {
-                allMarkdownRemark(
-                  limit: 1000,
-                  sort: { order: DESC, fields: [frontmatter___date] },
-                  filter: { fileAbsolutePath: { regex: "//blog//"}, frontmatter: { title: { ne: "Sample post" }}}
-                  
-                ) {
-                  edges {
-                    node {
-                      excerpt
-                      html
-                      fields { slug }
-                      frontmatter {
-                        title
-                        date
-                        tags
-                      }
+            {
+              allMarkdownRemark(
+                limit: 1000
+                sort: {frontmatter: {date: DESC}}
+                filter: {fileAbsolutePath: {regex: "//blog//"}, frontmatter: {title: {ne: "Sample post"}}}
+              ) {
+                edges {
+                  node {
+                    excerpt
+                    html
+                    fields {
+                      slug
+                    }
+                    frontmatter {
+                      title
+                      date
+                      tags
                     }
                   }
                 }
               }
+            }
             `,
             output: "/rss.xml",
             title: "Gatsby RSS Feed",
