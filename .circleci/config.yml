@@ -7,13 +7,13 @@ executors:
     docker:
     - image: cimg/node:<< parameters.image >>
 
-  python:
+  aws:
     parameters:
       image:
         type: string
-        default: "3.6"
+        default: "2022.11"
     docker:
-      - image: cimg/python:<< parameters.image >>
+      - image: cimg/aws:<< parameters.image >>
 
 
 aliases:
@@ -83,14 +83,11 @@ jobs:
             - public
 
   deploy:
-    executor: python
+    executor: aws
     working_directory: ~/
     steps:
       - attach_workspace:
           at: ~/repo
-      - run:
-          name: Install awscli
-          command: sudo pip3 install awscli
       - run:
           name: Deploy to S3
           command: aws s3 sync repo/public s3://codemanufacture.com/ --delete
