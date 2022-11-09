@@ -3,17 +3,18 @@ executors:
     parameters:
       image:
         type: string
-        default: "14.16"
+        default: "18.0.0"
     docker:
-    - image: circleci/node:<< parameters.image >>
+    - image: cimg/node:<< parameters.image >>
 
   python:
     parameters:
       image:
         type: string
-        default: "2.7"
+        default: "3.6"
     docker:
-      - image: circleci/python:<< parameters.image >>
+      - image: cimg/python:<< parameters.image >>
+
 
 aliases:
   restore_cache: &restore_cache
