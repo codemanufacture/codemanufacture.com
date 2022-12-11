@@ -101,9 +101,6 @@ jobs:
       - attach_workspace:
           at: ~/project
       - run:
-          name: ls
-          command: ls ~/
-      - run:
           name: Deploy to S3
           command: aws s3 sync project/public s3://codemanufacture.com/ --delete
 

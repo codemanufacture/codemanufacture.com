@@ -60,14 +60,12 @@ const ComingSoon = () => (
     <LegacyLayout>
       <div>
         <h2>Services</h2>
-        <p>
-          <ul>
-            <li>Magento store development</li>
-            <li>Magento extension development</li>
-            <li>Code review</li>
-            <li>Team augmentation</li>
-          </ul>
-        </p>
+        <ul>
+          <li>Magento store development</li>
+          <li>Magento extension development</li>
+          <li>Code review</li>
+          <li>Team augmentation</li>
+        </ul>
         <h3>Contact</h3>
         <p>
           Email:

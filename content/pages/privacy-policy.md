@@ -54,7 +54,7 @@ Irrespectively of the period of the periods mentioned above, we recognize that i
 
 Here at Codemanufacture Ltd. we do not share or sell your data with other countries however, it is possible that your data may spill over to another country due to our external service providers mentioned under section two (2) of this policy.
 
-The European Economic Area has made a so called "adequacy decision" for data being transferred to certain countries outside of the EEA.
+The European Economic Area has made a so-called "adequacy decision" for data being transferred to certain countries outside of the EEA.
 
 Where data is transferred to the United States of America, the EU has made an adequacy decision thus that the protection standards of this/ these countries are considered to be sufficiently adequate.
 
@@ -102,7 +102,7 @@ We do not knowingly collect personally identifiable information from anyone unde
 
 This website may contain sponsored links and adverts that will typically be served through our advertising partners. Our advertising partners may have detailed privacy policies relating directly to the adverts activated by them. By clicking on any such advert, you will be send to the advertiser's website through a referral program which may use cookies and will track the number of referrals sent from our website. It is important to note that if you click on a sponsored link, or any other external link, you do so at your own risk. In no event can we be held liable for any damages or implications caused by clicking on an external or sponsored link.
 
-##9. SOCIAL MEDIA PLATFORMS
+## 9. SOCIAL MEDIA PLATFORMS
 
 On our website, we may use social media sharing buttons which help share web content directly from web pages to a social media platform. Whenever you use a social sharing button, be advised that you do so on your own discretion and note that the social media platform may track and save your request to share a web page respectively through your social media platform account.
 
@@ -110,7 +110,7 @@ We may share web links to relevant web pages through our social media accounts. 
 
 ## 10. CONTACT AND COMMUNICATION
 
-This website is powered by Codemanufacture Ltd. registered in S G House, 6 St. Cross Road, SO23 9HX, Winchester under business registration number 11110064.
+This website is powered by Codemanufacture Ltd. registered in 1 Cedar Office Park, Cobham Road, Wimborne BH21 7SB under business registration number 11110064.
 
 You can contact us either via Email at privacy@codemanufacture.com via Phone on +44 7951608683. If you wish to contact us, please keep in mind that you do so at your own discretion and that you provide any personal details requested at your own risk. Your personal information is kept private and stored securely until it is no longer required by law or due to ceasing of purpose. We use any information submitted to provide you with further information about the products/ services we offer or to assist you in answering any questions or queries you may have.
 
@@ -118,4 +118,4 @@ You can contact us either via Email at privacy@codemanufacture.com via Phone on 
 
 We may update this policy from time to time whenever legal alterations are coming into effect. We therefore encourage you to check this page occasionally to ensure you are happy with any changes to this policy. However, we may notify you of changes to this policy either by means of email or through the private messaging system on our website.
 
-This Privacy Policy was last modified on **June 29, 2018**.
+This Privacy Policy was last modified on **December 12, 2022**.
