@@ -101,8 +101,11 @@ jobs:
       - attach_workspace:
           at: ~/project
       - run:
+          name: ls
+          command: ls ~/
+      - run:
           name: Deploy to S3
-          command: aws s3 sync repo/public s3://codemanufacture.com/ --delete
+          command: aws s3 sync project/public s3://codemanufacture.com/ --delete
 
 workflows:
   version: 2
@@ -129,4 +132,3 @@ workflows:
           filters:
             branches:
               only: master
-
