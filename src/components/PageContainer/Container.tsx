@@ -1,9 +1,5 @@
-import styled from 'styled-components'
+import tw from 'twin.macro'
 
-const Container = styled.div`
-  margin: 0 auto;
-  max-width: 600px;
-  padding: 0 1.0875rem 1.45rem;
-`
+const Container = tw.div`max-w-xl mx-auto flex`
 
 export default Container

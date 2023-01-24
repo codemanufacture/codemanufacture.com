@@ -1,23 +1,32 @@
 import * as React from 'react'
 import Header from '../Header'
-import GlobalStyle from '../../theme/globalStyle'
+import { globalStyles } from 'twin.macro'
 import Footer from '../Footer'
-import GoToTop from '../GoToTop'
 import MetaData from '../MetaData'
+import { createGlobalStyle } from 'styled-components'
+import Newsletter from '../Newsletter'
 
-interface LayoutProps {
-  children?: React.ReactNode
-}
+// https://github.com/ben-rogerson/twin.macro/issues/773
+const filteredGlobalStyles = Object.fromEntries(
+  Object.entries(globalStyles).filter(
+    k => k[0] !== `button, [type='button'], [type='reset'], [type='submit']`
+  )
+)
 
-const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
+// @ts-ignore
+const GlobalStyles = createGlobalStyle(filteredGlobalStyles)
+
+const Layout: React.FunctionComponent<React.PropsWithChildren> = ({
+  children,
+}) => {
   return (
     <>
       <MetaData />
-      <GlobalStyle />
+      <GlobalStyles />
       <Header />
       {children}
+      <Newsletter />
       <Footer />
-      <GoToTop />
     </>
   )
 }

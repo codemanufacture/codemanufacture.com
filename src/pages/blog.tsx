@@ -1,35 +1,58 @@
 import * as React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
-import BlogTemplate from '../templates/BlogTemplate'
+import { graphql, PageProps } from 'gatsby'
+import Layout from '../components/Layout'
+import BlogPostList from '../components/BlogPostsList'
 
-const BlogPage = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "//blog//" } }
-        limit: 1000
-      ) {
-        edges {
-          node {
-            id
-            fields {
-              slug
-            }
-            frontmatter {
-              title
-              date
-              tags
-              backgroundImage {
-                publicURL
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
-
-  return <BlogTemplate data={data} />
+const BlogPage = ({ data }: PageProps<Queries.BlogPostListQuery>) => {
+  const posts = data.allMarkdownRemark.edges.map(e => e.node)
+  return (
+    <Layout>
+      <BlogPostList posts={posts} />
+    </Layout>
+  )
 }
 
 export default BlogPage
+
+export const pageQuery = graphql`
+  fragment BlogPostListItem on MarkdownRemark {
+    id
+    fields {
+      slug
+    }
+    timeToRead
+    excerpt
+    frontmatter {
+      comingSoon
+      summary
+      authors {
+        name
+        jsonId
+        avatar {
+          publicURL
+        }
+      }
+      title
+      date(formatString: "MMMM DD, YYYY")
+      tags
+      backgroundImage {
+        publicURL
+      }
+    }
+  }
+
+  query BlogPostList {
+    allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "//blog//" } }
+      sort: { frontmatter: { date: DESC } }
+      limit: 9
+    ) {
+      totalCount
+      edges {
+        node {
+          ...BlogPostListItem
+        }
+      }
+    }
+  }
+`

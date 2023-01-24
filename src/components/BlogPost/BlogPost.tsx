@@ -1,72 +1,26 @@
 import * as React from 'react'
 import { Helmet } from 'react-helmet'
-import styled from 'styled-components'
 import Layout from '../Layout'
-import BlogHero from '../BlogHero'
-import { colors } from '../../theme'
-import {
-  MarkdownRemarkFrontmatter,
-  AuthorJson,
-  Maybe,
-} from '../../graphql-types'
-import BlogLayout from '../BlogLayout'
-
-const StyledPageWrapper = styled.div`
-  margin: 0 auto;
-
-  a {
-    color: ${colors.brand};
-  }
-
-  h1 {
-    font-size: 2rem;
-    text-rendering: optimizeLegibility;
-    letter-spacing: 2px;
-  }
-
-  h2 {
-    font-size: 1.45rem;
-  }
-
-  p {
-    padding: 0;
-  }
-
-  h1,
-  h2,
-  img,
-  p {
-    margin: 0 0 1.45rem;
-  }
-
-  ul {
-    list-style-type: disc;
-  }
-
-  @media only screen and (max-width: 480px) {
-    font-size: 18px;
-  }
-`
 
 interface BlogPostProps {
   excerpt: string
   title: string
   html: string
-  frontmatter: MarkdownRemarkFrontmatter
+  frontmatter: Queries.Maybe<Queries.Frontmatter>
 }
 
 interface BlogPostHelmetProps {
   excerpt: string
-  frontmatter: MarkdownRemarkFrontmatter
+  frontmatter: Queries.Maybe<Queries.Frontmatter>
   html: string
 }
 
-const createAuthorData = (authors?: Maybe<AuthorJson>[]) => {
+const createAuthorData = (authors?: Queries.Maybe<Queries.AuthorJson>[]) => {
   return (
     authors &&
     authors
-      .filter((e): e is AuthorJson => !!e)
-      .map((author: AuthorJson) => {
+      .filter((e): e is Queries.AuthorJson => !!e)
+      .map((author: Queries.AuthorJson) => {
         const githubNick = author.github || ''
         const twitterNick = author.github || ''
 
@@ -86,19 +40,21 @@ const createAuthorData = (authors?: Maybe<AuthorJson>[]) => {
 
 const BlogPostHelmet: React.FunctionComponent<BlogPostHelmetProps> = props => {
   const data = props.frontmatter
-  const authors = data.authors ? data.authors : []
+  const authors = props.frontmatter?.authors ?? []
+  // @ts-ignore
+  const authorData = createAuthorData(authors)
 
   return (
-    <Helmet title={data.title || ''}>
+    <Helmet title={data?.title || ''}>
       <script type="application/ld+json">
         {`
         {
           "@context: "http://schema.org/",
           "@type": "BlogPosting",
-          "name": "${data.title}",
-          "author": [${createAuthorData(authors)}],
-          "date": "${data.date}",
-          "keywords": "${data.tags}",
+          "name": "${data?.title}",
+          "author": [${authorData}],
+          "date": "${data?.date}",
+          "keywords": "${data?.tags}",
           "text": "${props.excerpt}",
           "articleBody": "${props.html}",
         }
@@ -115,15 +71,23 @@ const BlogPost: React.FunctionComponent<BlogPostProps> = ({
 }) => {
   return (
     <Layout>
-      <StyledPageWrapper>
-        <BlogPostHelmet
-          frontmatter={frontmatter}
-          excerpt={excerpt}
-          html={html}
-        />
-        <BlogHero frontmatter={frontmatter} />
-        <BlogLayout html={html} />
-      </StyledPageWrapper>
+      <BlogPostHelmet frontmatter={frontmatter} excerpt={excerpt} html={html} />
+      <article>
+        <div tw="mx-auto max-w-7xl pt-16 px-6 sm:pt-24 sm:pb-14 lg:px-8">
+          <div tw="text-center">
+            <h1 tw="mt-1 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
+              {frontmatter?.title}
+            </h1>
+            <div tw="py-5">{frontmatter?.date}</div>
+          </div>
+        </div>
+        <div tw="relative px-6 lg:px-8 pb-10">
+          <div
+            tw="mx-auto max-w-prose text-lg prose"
+            dangerouslySetInnerHTML={{ __html: html }}
+          ></div>
+        </div>
+      </article>
     </Layout>
   )
 }

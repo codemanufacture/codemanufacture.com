@@ -1,205 +1,130 @@
 import * as React from 'react'
-import styled from 'styled-components'
-import {
-  colors,
-  sizes,
-  typography,
-  transitions,
-  displayDimensions,
-} from '../../theme'
-import addToMailchimp from 'gatsby-plugin-mailchimp'
-import NewsletterInput from '../NewsletterInput'
-import Button from '../Button'
+import { Link, Script } from 'gatsby'
 
-interface StyledProps {
-  isMailchimpMessageVisible: boolean
+const newsletterOptions = {
+  settings: {
+    after_subscribe: {
+      action: 'message',
+      success_message:
+        'Success! Now check your email to confirm your subscription.',
+      redirect_url: '',
+    },
+    analytics: {
+      google: null,
+      fathom: null,
+      facebook: null,
+      segment: null,
+      pinterest: null,
+      sparkloop: null,
+      googletagmanager: null,
+    },
+    modal: {
+      trigger: 'timer',
+      scroll_percentage: null,
+      timer: 5,
+      devices: 'all',
+      show_once_every: 15,
+    },
+    powered_by: {
+      show: false,
+      url: 'https://convertkit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic',
+    },
+    recaptcha: { enabled: true },
+    return_visitor: { action: 'show', custom_content: '' },
+    slide_in: {
+      display_in: 'bottom_right',
+      trigger: 'timer',
+      scroll_percentage: null,
+      timer: 5,
+      devices: 'all',
+      show_once_every: 15,
+    },
+    sticky_bar: {
+      display_in: 'top',
+      trigger: 'timer',
+      scroll_percentage: null,
+      timer: 5,
+      devices: 'all',
+      show_once_every: 15,
+    },
+  },
+  version: '5',
 }
 
-const StyledFormWrapper = styled('div')<StyledProps>`
-  min-height: 40px;
-  width: 66%;
-  margin: auto;
-  position: relative;
-
-  @media (max-width: ${displayDimensions.tabletSize}) {
-    width: 100%;
-  }
-
-  .message-wrapper {
-    opacity: ${props => (props.isMailchimpMessageVisible ? 1 : 0)};
-    width: calc(100% - 60px);
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: ${colors.white};
-    transition: opacity ${transitions.basicTransition};
-    font-size: ${typography.paragraphSize};
-    pointer-events: none;
-  }
-
-  .form-wrapper {
-    opacity: ${props => (props.isMailchimpMessageVisible ? 0 : 1)};
-    pointer-events: ${props =>
-      props.isMailchimpMessageVisible ? 'none' : 'initial'};
-    transition: opacity ${transitions.basicTransition};
-
-    h3 {
-      color: #ddd;
-      font-size: ${typography.subtitleSize};
-      font-weight: 500;
-      margin: 0 0 15px 0;
-      text-transform: uppercase;
-    }
-
-    .disclaimer {
-      color: #ccc;
-      font-size: ${typography.paragraphSize};
-    }
-
-    @media (max-width: ${displayDimensions.tabletSize}) {
-      padding: 0 ${sizes.defaultSpacing}px;
-    }
-  }
-
-  form {
-    display: flex;
-    align-items: flex-start;
-
-    input {
-      + button,
-      + input {
-        margin-left: 15px;
-      }
-    }
-
-    @media (max-width: ${displayDimensions.tabletSize}) {
-      flex-direction: column;
-      align-items: initial;
-
-      input {
-        + input {
-          margin-left: initial;
-          margin-top: 15px;
-        }
-
-        + button {
-          margin: 15px 0 0;
-        }
-      }
-    }
-  }
-`
-
-interface NewsletterState {
-  isMailchimpMessageVisible: boolean
-  mailchimpMessage: string
-  userEmail: string
-  userName: string
-}
-
-interface MailchimpCallData {
-  msg: string
-  result: string
-}
-
-class Newsletter extends React.PureComponent<{}, NewsletterState> {
-  constructor(props: object) {
-    super(props)
-
-    this.state = {
-      isMailchimpMessageVisible: false,
-      mailchimpMessage: ``,
-      userEmail: ``,
-      userName: ``,
-    }
-  }
-
-  handleEmailInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    this.setState({ userEmail: e.target.value })
-  }
-
-  resetFormStates = () => {
-    window.setTimeout(() => {
-      this.setState({
-        isMailchimpMessageVisible: false,
-      })
-    }, 2500)
-  }
-
-  handleNameInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    this.setState({ userName: e.target.value })
-  }
-
-  handleSubmit = (e: React.SyntheticEvent) => {
-    e.preventDefault()
-    addToMailchimp(this.state.userEmail, { ['FNAME']: this.state.userName })
-      .then((data: MailchimpCallData) => {
-        console.log(data)
-        this.setState(
-          {
-            isMailchimpMessageVisible: true,
-            mailchimpMessage: data.msg,
-          },
-          () => this.resetFormStates()
-        )
-      })
-      .catch((error: object) => {
-        console.log(error)
-      })
-  }
-
-  render() {
-    const { isMailchimpMessageVisible, mailchimpMessage, userEmail, userName } =
-      this.state
-
-    return (
-      <StyledFormWrapper isMailchimpMessageVisible={isMailchimpMessageVisible}>
-        <div className="form-wrapper">
-          <h3>Subscribe to Our Newsletter</h3>
-          <form onSubmit={e => this.handleSubmit(e)}>
-            <NewsletterInput
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                this.handleNameInputChange(e)
-              }
-              type="text"
-              value={userName}
-              name="FNAME"
-              className="required"
-              id="mce-FNAME"
-              placeholder="Enter your name"
-              required
-            />
-            <NewsletterInput
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                this.handleEmailInputChange(e)
-              }
-              type="email"
-              value={userEmail}
-              name="EMAIL"
-              className="required email"
-              id="mce-EMAIL"
-              placeholder="Enter your email"
-              required
-            />
-            <Button
-              type="submit"
-              label="Subscribe"
-              className="btn-submit"
-              onClick={(e: React.SyntheticEvent) => e}
-            />
-          </form>
-          <p className="disclaimer">
-            Get Important Offers and Deals directly to your Email Inbox.
-            <em>We never send spam!</em>
+export default function Newsletter() {
+  return (
+    <div tw="bg-sky-800">
+      <div tw="mx-auto max-w-7xl py-12 px-6 lg:flex lg:items-center lg:py-16 lg:px-8">
+        <div tw="lg:w-0 lg:flex-1">
+          <h2
+            tw="text-3xl font-bold tracking-tight text-white sm:text-4xl"
+            id="newsletter-headline"
+          >
+            Subscribe to our newsletter
+          </h2>
+          <p tw="mt-3 max-w-3xl text-lg leading-6 text-gray-300">
+            The latest news, articles, and resources, sent to your inbox
+            monthly.
           </p>
         </div>
-        <p className="message-wrapper">{mailchimpMessage}</p>
-      </StyledFormWrapper>
-    )
-  }
+        <div tw="mt-8 lg:mt-0 lg:ml-8">
+          <Script src="https://f.convertkit.com/ckjs/ck.5.js" strategy="idle" />
+          <form
+            tw="flex flex-1 w-full"
+            method="post"
+            className="formkit-form seva-form"
+            action="https://app.convertkit.com/forms/4007854/subscriptions"
+            data-sv-form="4007854"
+            data-uid="a7732813ca"
+            data-format="inline"
+            data-version="5"
+            data-options={JSON.stringify(newsletterOptions)}
+          >
+            <ul
+              className="formkit-alert formkit-alert-error"
+              data-element="errors"
+              data-group="alert"
+            ></ul>
+            <label htmlFor="email-address" tw="sr-only">
+              Email address
+            </label>
+            <div
+              data-element="fields"
+              data-stacked="false"
+              tw="flex mt-6 sm:max-w-md w-full"
+              className="seva-fields formkit-fields"
+            >
+              <input
+                id="email-address"
+                name="email_address"
+                type="email"
+                autoComplete="email"
+                aria-label="Email address"
+                required
+                tw="w-full rounded-md border border-transparent px-5 py-3 placeholder-gray-500 focus:border-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 sm:max-w-xs"
+                placeholder="Enter your email"
+              />
+              <div tw="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
+                <button
+                  data-element="submit"
+                  className="formkit-submit"
+                  type="submit"
+                  tw="flex w-full items-center justify-center rounded-md border border-transparent bg-sky-100 text-base px-5 py-3 font-medium text-sky-700 hover:bg-sky-200 focus:outline-none focus:ring-2 focus:ring-sky-200 focus:ring-offset-2 focus:ring-offset-gray-800"
+                >
+                  <div className="formkit-spinner"></div>
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </form>
+          <p tw="mt-3 text-sm text-gray-300">
+            We care about the protection of your data. Read our{' '}
+            <Link to="/privacy" tw="font-medium text-white underline">
+              Privacy Policy.
+            </Link>
+          </p>
+        </div>
+      </div>
+    </div>
+  )
 }
-
-export default Newsletter
