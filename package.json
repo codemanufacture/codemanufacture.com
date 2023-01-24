@@ -53,7 +53,6 @@
     "format:source": "prettier --config .prettierrc --parser typescript --write 'src/**/*.{ts,tsx}'",
     "graphql-types": "gql-gen",
     "lint-staged": "lint-staged",
-    "lint:css": "stylelint 'src/**/*.{ts,tsx}'",
     "lint:source": "tslint 'src/**/*.{ts,tsx}'",
     "nit:markdown": "prettier --config .prettierrc --parser markdown --list-different '{content/**/*.md,README.md}'",
     "nit:source": "prettier --config .prettierrc --parser typescript --list-different 'src/**/*.{ts,tsx}'",
