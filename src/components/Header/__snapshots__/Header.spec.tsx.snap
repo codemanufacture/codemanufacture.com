@@ -1,216 +1,111 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header component renders correctly 1`] = `
-.c1 {
-  margin: auto auto auto 0;
-}
-
-.c4 {
-  display: none;
-  padding: 24px 22px;
-  position: absolute;
-  right: 0;
-  color: #333;
-  font-size: 12px;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-transform: uppercase;
-  -webkit-letter-spacing: 3px;
-  -moz-letter-spacing: 3px;
-  -ms-letter-spacing: 3px;
-  letter-spacing: 3px;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0;
-  padding: 0;
-  will-change: auto;
-}
-
-.c3 li {
-  list-style: none;
-}
-
-.c3 a {
-  display: block;
-  padding: 24px 22px;
-  font-size: 12px;
-  color: #333;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-transform: uppercase;
-  -webkit-letter-spacing: 3px;
-  -moz-letter-spacing: 3px;
-  -ms-letter-spacing: 3px;
-  letter-spacing: 3px;
-  -webkit-transition: color 0.25s ease-out;
-  transition: color 0.25s ease-out;
-}
-
-.c3:hover,
-.c3.active {
-  color: #208bc3;
-}
-
-.c2 {
-  margin: auto 0 auto auto;
-  padding: 0;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  height: 70px;
-  margin: 0 auto;
-  padding: 0 30px;
-  border-bottom: 1px solid #eee;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  background: #fff;
-}
-
-@media (max-width:768px) {
-  .c1 {
-    width: 210px;
-    padding: 15px;
-  }
-}
-
-@media (max-width:768px) {
-  .c4 {
-    display: block;
-  }
-}
-
-@media (max-width:768px) {
-  .c3 {
-    width: 100%;
-    top: 70px;
-    position: absolute;
-    -webkit-transform: translateX(100%);
-    -ms-transform: translateX(100%);
-    transform: translateX(100%);
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    background: #fff;
-    -webkit-transition: -webkit-transform 0.25s ease-out;
-    -webkit-transition: transform 0.25s ease-out;
-    transition: transform 0.25s ease-out;
-    border-bottom: 1px solid #eee;
-  }
-
-  .c3.active {
-    right: 0;
-    -webkit-transform: translateX(0);
-    -ms-transform: translateX(0);
-    transform: translateX(0);
-  }
-
-  .c3 li {
-    text-align: center;
-  }
-}
-
-@media (max-width:768px) {
-  .c2 {
-    position: fixed;
-    width: 100%;
-    margin: auto;
-    top: 0;
-    right: 0;
-    left: 0;
-    will-change: transform;
-    z-index: 1;
-  }
-}
-
-@media (max-width:768px) {
-  .c0 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    padding: 0;
-  }
-}
-
 <div
-  className="c0"
+  data-headlessui-state=""
+  tw="relative bg-white sticky top-0 z-30 w-full border-b-2 border-gray-100"
 >
-  <a
-    aria-current="page"
-    className="c1"
-    href="/"
-    onClick={[Function]}
-    onMouseEnter={[Function]}
-    style={{}}
-    title="Back to homepage"
+  <div
+    tw="mx-auto max-w-7xl px-6"
   >
-    <img
-      alt="Codemanufacture - Logo"
-      height={40}
-      src="test-file-stub"
-      width={260}
-    />
-  </a>
-  <menu
-    className="c2"
-  >
-    <ul
-      className="c3"
-      onClick={[Function]}
+    <div
+      tw="flex items-center justify-between p-6 md:justify-center md:space-x-10"
     >
-      <li>
+      <div
+        tw="flex justify-start md:w-0 md:flex-1"
+      >
         <a
-          href="/homepage#home"
+          aria-current="page"
+          className=""
+          href="/"
           onClick={[Function]}
           onMouseEnter={[Function]}
-          title="Home"
+          style={{}}
         >
-          Home
+          <span
+            tw="sr-only"
+          >
+            Codemanufacture
+          </span>
+          <img
+            alt="Codemanufacture"
+            src="test-file-stub"
+            tw="h-4 w-auto sm:h-6"
+          />
         </a>
-      </li>
-      <li>
-        <a
-          href="/homepage#services"
+      </div>
+      <div
+        tw="-my-2 -mr-2 md:hidden"
+      >
+        <button
+          aria-expanded={false}
+          data-headlessui-state=""
+          id="headlessui-popover-button-:r0:"
           onClick={[Function]}
-          onMouseEnter={[Function]}
-          title="Services"
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          tw="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+          type="button"
         >
-          Services
-        </a>
-      </li>
-      <li>
-        <a
-          href="/homepage/#contact"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          title="Contact"
+          <span
+            tw="sr-only"
+          >
+            Open menu
+          </span>
+          <svg
+            aria-hidden="true"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={1.5}
+            tw="h-6 w-6"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        tw="hidden md:flex md:items-start md:justify-center"
+      >
+        <nav
+          tw="hidden space-x-10 md:flex"
         >
-          Contact
-        </a>
-      </li>
-    </ul>
-    <a
-      className="c4"
-      href="#trigger-mobile-menu"
-      onClick={[Function]}
-    >
-      Menu
-    </a>
-  </menu>
+          <a
+            aria-current="page"
+            className=""
+            href="/"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            style={{}}
+            tw="text-base font-medium text-gray-500 hover:text-gray-900"
+          >
+            Home
+          </a>
+          <a
+            href="/#services"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            tw="text-base font-medium text-gray-500 hover:text-gray-900"
+          >
+            Services
+          </a>
+          <a
+            href="/#blog"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            tw="text-base font-medium text-gray-500 hover:text-gray-900"
+          >
+            Blog
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
 </div>
 `;

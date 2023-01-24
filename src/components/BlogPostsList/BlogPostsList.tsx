@@ -1,54 +1,34 @@
 import * as React from 'react'
-import styled from 'styled-components'
-import uniqid from 'uniqid'
-import Layout from '../Layout'
-import { displayDimensions, sizes } from '../../theme'
-import { MarkdownRemarkEdge } from '../../graphql-types'
 import BlogPostsListItem from '../BlogPostsListItem'
 
-const StyledBlogPostsList = styled.ul`
-  max-width: 100%;
-  width: 66%;
-  display: grid;
-  margin: ${sizes.defaultSpacing * 2}px auto;
-  padding: 0;
-  list-style: none;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 30px;
-  grid-row-gap: 30px;
-
-  @media (max-width: ${displayDimensions.smallScreenSize}) {
-    width: calc(100% - ${sizes.defaultSpacing * 2}px);
-  }
-
-  @media (max-width: ${displayDimensions.tabletSize}) {
-    display: flex;
-    flex-direction: column;
-  }
-`
-
 interface BlogPostListProps {
-  elements?: MarkdownRemarkEdge[] | any // TODO - check types
+  posts?: Queries.BlogPostListItemFragment[]
 }
 
-const BlogPostsList: React.FunctionComponent<BlogPostListProps> = ({
-  elements,
-}) => {
-  const listItems = elements || []
-
+export default function BlogPostsList({ posts }: BlogPostListProps) {
   return (
-    <Layout>
-      {/* <BlogHero frontmatter={frontmatter} /> the hero will come here*/}
-      <StyledBlogPostsList>
-        {listItems.map((item: MarkdownRemarkEdge) => {
-          const node = (item && item.node) || { id: uniqid() }
-          return (
-            <BlogPostsListItem item={node} key={`post-list-item-${uniqid()}`} />
-          )
-        })}
-      </StyledBlogPostsList>
-    </Layout>
+    <div tw="relative bg-gray-50 px-6 pt-10 pb-16 lg:px-8 lg:pt-14 lg:pb-28">
+      <div tw="absolute inset-0">
+        <div tw="h-1/3 bg-white sm:h-2/3" />
+      </div>
+      <div tw="relative mx-auto max-w-7xl">
+        <div tw="text-center">
+          <h2
+            tw="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+            id="blog"
+          >
+            From the blog
+          </h2>
+        </div>
+        <div tw="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
+          {posts?.map((post: Queries.BlogPostListItemFragment) => (
+            <BlogPostsListItem
+              post={post}
+              key={`blog-list-${post.fields?.slug}`}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
   )
 }
-
-export default BlogPostsList

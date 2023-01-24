@@ -2,11 +2,11 @@
 title: Privacy Policy
 ---
 
-At Codemanufacture Ltd. we are committed to safeguard the privacy of our Website visitors and our customers.
+At Codemanufacture SRLS. we are committed to safeguard the privacy of our Website visitors and our customers.
 
 This policy applies where we are acting as a data controller with respect to the personal data (in accordance with Article 4 (1) GDPR) collected of our Website visitors and customers whenever and where we determine the purposes and means of the storing and/ or processing of that personal data to be collected.
 
-In this policy "we", "us" and "our/s" refer to Codemanufacture Ltd.
+In this policy "we", "us" and "our/s" refer to Codemanufacture SRLS.
 
 ## 1. HOW WE USE YOUR PERSONAL DATA
 
@@ -28,9 +28,7 @@ We do not store and or process any other person's personal data and thus ask you
 
 We may disclose your personal data to external third-parties such as payment providers or other administrative service providers.
 
-We may disclose your data to MailChimp, our Mail Automation system, in order to send you newsletters if you consent to our newsletter. Please verify that you consent with Mailchimp's [Privacy Policy](https://mailchimp.com/legal/privacy/).
-
-We may also disclose your personal data to our comment plug-in provider Disqus. We encourage you to verify whether you comply with their [Privacy Policy](https://help.disqus.com/terms-and-policies/disqus-privacy-policy) as well.
+We may disclose your data to ConvertKit, our Mail Automation system, in order to send you newsletters if you consent to our newsletter. Please verify that you consent with ConvertKit's [Privacy Policy](https://convertkit.com/privacy).
 
 Your personal data may also be disclosed to our Accounting Software provider FreeAgent. You can find their [Privacy Policy](https://www.freeagent.com/website/privacy/).
 
@@ -52,7 +50,7 @@ Irrespectively of the period of the periods mentioned above, we recognize that i
 
 ## 4. INTERNATIONAL DATA TRANSFERS, STORING AND/ OR PROCESSING
 
-Here at Codemanufacture Ltd. we do not share or sell your data with other countries however, it is possible that your data may spill over to another country due to our external service providers mentioned under section two (2) of this policy.
+Here at Codemanufacture SRLS. we do not share or sell your data with other countries however, it is possible that your data may spill over to another country due to our external service providers mentioned under section two (2) of this policy.
 
 The European Economic Area has made a so-called "adequacy decision" for data being transferred to certain countries outside of the EEA.
 
@@ -110,12 +108,12 @@ We may share web links to relevant web pages through our social media accounts. 
 
 ## 10. CONTACT AND COMMUNICATION
 
-This website is powered by Codemanufacture Ltd. registered in 1 Cedar Office Park, Cobham Road, Wimborne BH21 7SB under business registration number 11110064.
+This website is powered by Codemanufacture SRLS. registered in Viale Piave n. 21 Milan 20129, Italy under business registration number MI-2672334.
 
-You can contact us either via Email at privacy@codemanufacture.com via Phone on +44 7951608683. If you wish to contact us, please keep in mind that you do so at your own discretion and that you provide any personal details requested at your own risk. Your personal information is kept private and stored securely until it is no longer required by law or due to ceasing of purpose. We use any information submitted to provide you with further information about the products/ services we offer or to assist you in answering any questions or queries you may have.
+You can contact us either via Email at privacy@codemanufacture.com via Phone on +39 3455235101. If you wish to contact us, please keep in mind that you do so at your own discretion and that you provide any personal details requested at your own risk. Your personal information is kept private and stored securely until it is no longer required by law or due to ceasing of purpose. We use any information submitted to provide you with further information about the products/ services we offer or to assist you in answering any questions or queries you may have.
 
 ## 11. AMENDMENTS
 
 We may update this policy from time to time whenever legal alterations are coming into effect. We therefore encourage you to check this page occasionally to ensure you are happy with any changes to this policy. However, we may notify you of changes to this policy either by means of email or through the private messaging system on our website.
 
-This Privacy Policy was last modified on **December 12, 2022**.
+This Privacy Policy was last modified on **January 20, 2023**.

@@ -11,3 +11,5 @@ yarn-error.log
 # Tests
 /coverage
 /.log
+
+/src/gatsby-types.d.ts

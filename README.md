@@ -60,7 +60,7 @@ The code base for the [Codemanufacture](https://codemanufacture.com/)
      │   ├── blog                      // markdown blog posts
      │   └── pages                     // markdown pages
      ├── gatsby                        // gatsby node api hooks
-     ├── gatsby-config.js              // gatsby configuration
+     ├── gatsby-config.ts              // gatsby configuration
      ├── gatsby-node.js                // gatsby node hooks
      ├── gatsby-ssr.js                 // gatsby server-side rendering api
      ├── package.json                  // node.js application manifest
