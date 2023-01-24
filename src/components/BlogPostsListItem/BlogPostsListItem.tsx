@@ -20,16 +20,21 @@ const BlogPostListItem: React.FunctionComponent<BlogPostItemProps> = ({
     >
       <div tw="flex flex-1 flex-col justify-between bg-white p-6">
         <div tw="flex-1">
-          {comingSoon ?
-            (<div tw="mt-2 block">
+          {comingSoon ? (
+            <div tw="mt-2 block">
               <p tw="text-xl font-semibold text-gray-900">{title}</p>
-              <p tw="mt-3 text-base text-gray-500">{post.frontmatter?.summary ?? post.excerpt}</p>
-            </div>)
-            :
-            (<a href={slug} tw="mt-2 block">
-            <p tw="text-xl font-semibold text-gray-900">{title}</p>
-            <p tw="mt-3 text-base text-gray-500">{post.frontmatter?.summary ?? post.excerpt}</p>
-          </a>)}
+              <p tw="mt-3 text-base text-gray-500">
+                {post.frontmatter?.summary ?? post.excerpt}
+              </p>
+            </div>
+          ) : (
+            <a href={slug} tw="mt-2 block">
+              <p tw="text-xl font-semibold text-gray-900">{title}</p>
+              <p tw="mt-3 text-base text-gray-500">
+                {post.frontmatter?.summary ?? post.excerpt}
+              </p>
+            </a>
+          )}
         </div>
         <div tw="mt-6 flex items-center">
           <div tw="flex-shrink-0">
