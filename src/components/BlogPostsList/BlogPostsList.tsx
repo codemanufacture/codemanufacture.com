@@ -7,16 +7,16 @@ interface BlogPostListProps {
 
 export default function BlogPostsList({ posts }: BlogPostListProps) {
   return (
-    <div tw="relative bg-gray-50 px-6 pt-10 pb-16 lg:px-8 lg:pt-14 lg:pb-28">
+    <div
+      tw="relative bg-gray-50 px-6 pt-10 pb-16 lg:px-8 lg:pt-14 lg:pb-28"
+      id="blog"
+    >
       <div tw="absolute inset-0">
         <div tw="h-1/3 bg-white sm:h-2/3" />
       </div>
       <div tw="relative mx-auto max-w-7xl">
         <div tw="text-center">
-          <h2
-            tw="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
-            id="blog"
-          >
+          <h2 tw="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             From the blog
           </h2>
         </div>

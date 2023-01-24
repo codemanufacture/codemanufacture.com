@@ -72,7 +72,6 @@ export default function Newsletter() {
           <form
             tw="flex flex-1 w-full"
             method="post"
-            className="formkit-form seva-form"
             action="https://app.convertkit.com/forms/4007854/subscriptions"
             data-sv-form="4007854"
             data-uid="a7732813ca"
@@ -91,8 +90,7 @@ export default function Newsletter() {
             <div
               data-element="fields"
               data-stacked="false"
-              tw="flex mt-6 sm:max-w-md w-full"
-              className="seva-fields formkit-fields"
+              tw="flex flex-col md:flex-row w-full"
             >
               <input
                 id="email-address"
@@ -101,20 +99,19 @@ export default function Newsletter() {
                 autoComplete="email"
                 aria-label="Email address"
                 required
-                tw="w-full rounded-md border border-transparent px-5 py-3 placeholder-gray-500 focus:border-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 sm:max-w-xs"
+                tw="w-full rounded-md border border-transparent px-5 py-3 placeholder-gray-500 focus:border-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                 placeholder="Enter your email"
               />
-              <div tw="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-                <button
-                  data-element="submit"
-                  className="formkit-submit"
-                  type="submit"
-                  tw="flex w-full items-center justify-center rounded-md border border-transparent bg-sky-100 text-base px-5 py-3 font-medium text-sky-700 hover:bg-sky-200 focus:outline-none focus:ring-2 focus:ring-sky-200 focus:ring-offset-2 focus:ring-offset-gray-800"
-                >
-                  <div className="formkit-spinner"></div>
-                  Subscribe
-                </button>
-              </div>
+              {/*<div tw="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">*/}
+              <button
+                data-element="submit"
+                type="submit"
+                tw="mt-3 md:mt-0 sm:mt-0 sm:ml-3 sm:w-auto sm:flex-shrink-0 flex w-full items-center justify-center rounded-md border border-transparent bg-sky-100 text-base px-5 py-3 font-medium text-sky-700 hover:bg-sky-200 focus:outline-none focus:ring-2 focus:ring-sky-200 focus:ring-offset-2 focus:ring-offset-gray-800"
+              >
+                <div className="formkit-spinner"></div>
+                Subscribe
+              </button>
+              {/*</div>*/}
             </div>
           </form>
           <p tw="mt-3 text-sm text-gray-300">

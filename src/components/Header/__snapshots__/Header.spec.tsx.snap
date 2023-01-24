@@ -103,6 +103,14 @@ exports[`Header component renders correctly 1`] = `
           >
             Blog
           </a>
+          <a
+            href="/#contact"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            tw="text-base font-medium text-gray-500 hover:text-gray-900"
+          >
+            Contact
+          </a>
         </nav>
       </div>
     </div>

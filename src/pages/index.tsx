@@ -2,9 +2,11 @@ import * as React from 'react'
 import Layout from '../components/Layout'
 import { graphql } from 'gatsby'
 import {
+  CodeBracketIcon,
+  EnvelopeIcon,
+  PhoneIcon,
   ShoppingCartIcon,
   WrenchScrewdriverIcon,
-  CodeBracketIcon,
   // tslint:disable-next-line:no-submodule-imports
 } from '@heroicons/react/24/outline'
 import BlogPostList from '../components/BlogPostsList'
@@ -36,18 +38,12 @@ const IndexPage = ({ data }: { data: Queries.HomepageQueryQuery }) => {
 
   return (
     <Layout>
-      <div tw="relative bg-white py-14 sm:py-20 lg:py-10">
-        <div
-          id="services"
-          tw="mx-auto max-w-md px-6 text-center sm:max-w-3xl lg:max-w-7xl lg:px-8"
-        >
+      <div tw="relative bg-white py-14 sm:py-20 lg:py-10" id="services">
+        <div tw="mx-auto max-w-md px-6 text-center sm:max-w-3xl lg:max-w-7xl lg:px-8">
           <h2 tw="text-lg font-semibold text-sky-600">Services</h2>
           <p tw="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Manufacturing your success
           </p>
-          {/*<p tw="mx-auto mt-5 max-w-prose text-xl text-gray-500">*/}
-          {/*  We are here to support your Magento store.*/}
-          {/*</p>*/}
           <div tw="mt-20">
             <div tw="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
               {features.map(feature => (
@@ -77,15 +73,18 @@ const IndexPage = ({ data }: { data: Queries.HomepageQueryQuery }) => {
       </div>
       <BlogPostList posts={posts} />
       <div tw="bg-gray-50">
-        <div tw="mx-auto max-w-7xl py-12 px-6 lg:px-8 lg:py-24">
+        <div tw="mx-auto max-w-7xl pt-10 pb-20 px-6 lg:px-8 lg:pt-12 lg:pb-24">
           <div tw="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8">
             <div tw="space-y-5 sm:space-y-4">
               <h2 tw="text-3xl font-bold tracking-tight sm:text-4xl">
                 Meet our team
               </h2>
-              <p tw="text-xl text-gray-500"></p>
+              <p tw="text-xl text-gray-500">
+                A small team of seasoned Magento developers with over a decade
+                of experience.
+              </p>
             </div>
-            <div tw="lg:col-span-2">
+            <div tw="lg:col-span-2 md:mt-12">
               <ul
                 role="list"
                 tw="space-y-12 sm:grid sm:grid-cols-2 sm:gap-12 sm:space-y-0 lg:gap-x-8"
@@ -150,6 +149,58 @@ const IndexPage = ({ data }: { data: Queries.HomepageQueryQuery }) => {
                   </li>
                 ))}
               </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div tw="bg-white">
+        <div id="contact" tw="mx-auto max-w-7xl py-16 px-6 lg:py-24 lg:px-8">
+          <div tw="divide-y-2 divide-gray-200">
+            <div tw="lg:grid lg:grid-cols-3 lg:gap-8">
+              <div>
+                <h2 tw="text-2xl font-bold text-gray-900 sm:text-3xl sm:tracking-tight">
+                  Let's work together
+                </h2>
+                <p tw="mt-3 text-lg leading-6 text-gray-500">
+                  Contact us today.
+                </p>
+              </div>
+              <div tw="mt-8 grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12 lg:col-span-2 lg:mt-10">
+                <div>
+                  <dl tw="mt-2 text-base text-gray-500">
+                    <div tw="flex">
+                      <div tw="flex-shrink-0">
+                        <EnvelopeIcon
+                          tw="h-6 w-6 text-gray-400"
+                          aria-hidden="true"
+                        />
+                      </div>
+                      <dt tw="sr-only">Email</dt>
+                      <dd tw="ml-3">
+                        <a href="mailto:contact@codemanufacture.com">
+                          contact@codemanufacture.com
+                        </a>
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
+                <div>
+                  <dl tw="mt-2 text-base text-gray-500">
+                    <div tw="mt-2 flex">
+                      <div tw="flex-shrink-0">
+                        <PhoneIcon
+                          tw="h-6 w-6 text-gray-400"
+                          aria-hidden="true"
+                        />
+                      </div>
+                      <dt tw="sr-only">Phone number</dt>
+                      <dd tw="ml-3">
+                        <a href="tel:+39 345 523 5101">+39 345 523 5101</a>
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
             </div>
           </div>
         </div>

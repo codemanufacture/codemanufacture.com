@@ -27,7 +27,6 @@ exports[`Newsletter component renders correctly 1`] = `
     >
       <form
         action="https://app.convertkit.com/forms/4007854/subscriptions"
-        className="formkit-form seva-form"
         data-format="inline"
         data-options="{"settings":{"after_subscribe":{"action":"message","success_message":"Success! Now check your email to confirm your subscription.","redirect_url":""},"analytics":{"google":null,"fathom":null,"facebook":null,"segment":null,"pinterest":null,"sparkloop":null,"googletagmanager":null},"modal":{"trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"powered_by":{"show":false,"url":"https://convertkit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic"},"recaptcha":{"enabled":true},"return_visitor":{"action":"show","custom_content":""},"slide_in":{"display_in":"bottom_right","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"sticky_bar":{"display_in":"top","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15}},"version":"5"}"
         data-sv-form="4007854"
@@ -48,10 +47,9 @@ exports[`Newsletter component renders correctly 1`] = `
           Email address
         </label>
         <div
-          className="seva-fields formkit-fields"
           data-element="fields"
           data-stacked="false"
-          tw="flex mt-6 sm:max-w-md w-full"
+          tw="flex flex-col md:flex-row w-full"
         >
           <input
             aria-label="Email address"
@@ -60,24 +58,19 @@ exports[`Newsletter component renders correctly 1`] = `
             name="email_address"
             placeholder="Enter your email"
             required={true}
-            tw="w-full rounded-md border border-transparent px-5 py-3 placeholder-gray-500 focus:border-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 sm:max-w-xs"
+            tw="w-full rounded-md border border-transparent px-5 py-3 placeholder-gray-500 focus:border-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
             type="email"
           />
-          <div
-            tw="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0"
+          <button
+            data-element="submit"
+            tw="mt-3 md:mt-0 sm:mt-0 sm:ml-3 sm:w-auto sm:flex-shrink-0 flex w-full items-center justify-center rounded-md border border-transparent bg-sky-100 text-base px-5 py-3 font-medium text-sky-700 hover:bg-sky-200 focus:outline-none focus:ring-2 focus:ring-sky-200 focus:ring-offset-2 focus:ring-offset-gray-800"
+            type="submit"
           >
-            <button
-              className="formkit-submit"
-              data-element="submit"
-              tw="flex w-full items-center justify-center rounded-md border border-transparent bg-sky-100 text-base px-5 py-3 font-medium text-sky-700 hover:bg-sky-200 focus:outline-none focus:ring-2 focus:ring-sky-200 focus:ring-offset-2 focus:ring-offset-gray-800"
-              type="submit"
-            >
-              <div
-                className="formkit-spinner"
-              />
-              Subscribe
-            </button>
-          </div>
+            <div
+              className="formkit-spinner"
+            />
+            Subscribe
+          </button>
         </div>
       </form>
       <p
