@@ -5,13 +5,13 @@ const navigation = {
     { name: 'Home', path: '/' },
     { name: 'Services', path: '/#services' },
     { name: 'Blog', path: '/#blog' },
-    { name: 'Contact', path: '/#contact' },
+    { name: 'Contact', path: '/contact' },
   ],
   footer: [
     { name: 'Home', path: '/' },
     { name: 'Service', path: '/#service' },
     { name: 'Blog', path: '/#blog' },
-    { name: 'Contact', path: '/#contact' },
+    { name: 'Contact', path: '/contact' },
     { name: 'Privacy', path: '/privacy-policy' },
   ],
   social: [

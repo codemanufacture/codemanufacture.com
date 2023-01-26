@@ -3,13 +3,12 @@ import Layout from '../components/Layout'
 import { graphql } from 'gatsby'
 import {
   CodeBracketIcon,
-  EnvelopeIcon,
-  PhoneIcon,
   ShoppingCartIcon,
   WrenchScrewdriverIcon,
   // tslint:disable-next-line:no-submodule-imports
 } from '@heroicons/react/24/outline'
 import BlogPostList from '../components/BlogPostsList'
+import Contact from '../components/Contact'
 
 const features = [
   {
@@ -153,58 +152,7 @@ const IndexPage = ({ data }: { data: Queries.HomepageQueryQuery }) => {
           </div>
         </div>
       </div>
-      <div tw="bg-white">
-        <div id="contact" tw="mx-auto max-w-7xl py-16 px-6 lg:py-24 lg:px-8">
-          <div tw="divide-y-2 divide-gray-200">
-            <div tw="lg:grid lg:grid-cols-3 lg:gap-8">
-              <div>
-                <h2 tw="text-2xl font-bold text-gray-900 sm:text-3xl sm:tracking-tight">
-                  Let's work together
-                </h2>
-                <p tw="mt-3 text-lg leading-6 text-gray-500">
-                  Contact us today.
-                </p>
-              </div>
-              <div tw="mt-8 grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12 lg:col-span-2 lg:mt-10">
-                <div>
-                  <dl tw="mt-2 text-base text-gray-500">
-                    <div tw="flex">
-                      <div tw="flex-shrink-0">
-                        <EnvelopeIcon
-                          tw="h-6 w-6 text-gray-400"
-                          aria-hidden="true"
-                        />
-                      </div>
-                      <dt tw="sr-only">Email</dt>
-                      <dd tw="ml-3">
-                        <a href="mailto:contact@codemanufacture.com">
-                          contact@codemanufacture.com
-                        </a>
-                      </dd>
-                    </div>
-                  </dl>
-                </div>
-                <div>
-                  <dl tw="mt-2 text-base text-gray-500">
-                    <div tw="mt-2 flex">
-                      <div tw="flex-shrink-0">
-                        <PhoneIcon
-                          tw="h-6 w-6 text-gray-400"
-                          aria-hidden="true"
-                        />
-                      </div>
-                      <dt tw="sr-only">Phone number</dt>
-                      <dd tw="ml-3">
-                        <a href="tel:+39 345 523 5101">+39 345 523 5101</a>
-                      </dd>
-                    </div>
-                  </dl>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Contact />
     </Layout>
   )
 }

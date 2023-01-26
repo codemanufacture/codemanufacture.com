@@ -1,21 +1,13 @@
 import * as React from 'react'
 import Layout from '../components/Layout'
+import Contact from '../components/Contact'
 
-const Contact = () => (
-  <Layout>
-    <div>
-      <h1>Contact</h1>
-      <p>
-        Email:
-        {` `}
-        <a href="mailto:contact@codemanufacture.com">
-          contact@codemanufacture.com
-        </a>
-        <br />
-        Call: +44 7951608683
-      </p>
-    </div>
-  </Layout>
-)
+const ContactPage = () => {
+  return (
+    <Layout>
+      <Contact />
+    </Layout>
+  )
+}
 
-export default Contact
+export default ContactPage
