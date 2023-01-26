@@ -55,7 +55,7 @@ exports[`Footer component renders correctly 1`] = `
         tw="pb-6"
       >
         <a
-          href="/#contact"
+          href="/contact"
           onClick={[Function]}
           onMouseEnter={[Function]}
           tw="text-sm leading-6 text-gray-600 hover:text-gray-200"
