@@ -1,7 +1,6 @@
 # Codemanufacture Website
 
-[![node >= 12.x](https://img.shields.io/badge/node-%3E%3D%2012.x-brightgreen.svg?style=flat-square)](https://nodejs.org/)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c767699be8c84f3291e3cecb526a92d1)](https://www.codacy.com/app/Codemanufacture/codemanufacture.com?utm_source=github.com&utm_medium=referral&utm_content=codemanufacture/codemanufacture.com&utm_campaign=Badge_Grade)
+[![node >= 18.x](https://img.shields.io/badge/node-%3E%3D%2012.x-brightgreen.svg?style=flat-square)](https://nodejs.org/)
 [![CircleCI](https://circleci.com/gh/codemanufacture/codemanufacture.com.svg?style=svg)](https://circleci.com/gh/codemanufacture/codemanufacture.com)
 
 The code base for the [Codemanufacture](https://codemanufacture.com/)
@@ -18,13 +17,15 @@ The code base for the [Codemanufacture](https://codemanufacture.com/)
 
 ## Features
 
-- [Gatsby 2.0](https://www.gatsbyjs.org/) - a static site generator with following plugins:
+- [Gatsby](https://www.gatsbyjs.org/) - a static site generator with following plugins:
   - [Canonical urls](https://www.gatsbyjs.org/packages/gatsby-plugin-canonical-urls)
   - [Copy linked files](https://www.gatsbyjs.org/packages/gatsby-remark-copy-linked-files/)
   - [Google Tag Manager](https://www.gatsbyjs.org/packages/gatsby-plugin-google-tagmanager)
   - [Robots.txt](https://www.gatsbyjs.org/packages/gatsby-plugin-robots-txt)
   - [Sitemap](https://www.gatsbyjs.org/packages/gatsby-plugin-sitemap)
-  - [Styled Components](https://www.gatsbyjs.org/packages/gatsby-plugin-styled-components/)
+  - [Styled Components](https://www.gatsbyjs.org/packages/gatsby-plugin-styled-components/) - CSS in JS
+  - [Tailwindcss](https://tailwindcss.com/) - Utility first css framework
+  - [Twin.macro](https://github.com/ben-rogerson/twin.macro) - Bridge between Styled components and Tailwindcss
   - [Typescript](https://www.gatsbyjs.org/packages/gatsby-plugin-typescript)
 - Development, QA Tools and automation
   - [CircleCI](https://circleci.com/) - a deployment pipeline
@@ -64,16 +65,16 @@ The code base for the [Codemanufacture](https://codemanufacture.com/)
      ├── gatsby-node.js                // gatsby node hooks
      ├── gatsby-ssr.js                 // gatsby server-side rendering api
      ├── package.json                  // node.js application manifest
-     ├── plop-templates                // templates for plop generator
      ├── public                        // output folder (in .gitignore)
      ├── README.md                     // this file
      ├── src                           // sources
      │   ├── components                // all react components
      │   ├── declarations.d.ts         // declarations for no typescript modules/files
-     │   ├── graphql-types.d.ts        // graphql types (`yarn graphql-types`)
+     │   ├── gatsby-types.d.ts         // gatsby types
      │   └── pages                     // pages
      ├── static                        // static files automatically copied to output folder
      ├── renovate.json                 // renovate configuration
+     ├── tailwind.config.js            // tailwind configuration
      ├── tsconfig.json                 // typescript configuration
      ├── tslint.json                   // tslint configuration
      └── yarn.lock                     // yarn lock file
@@ -150,13 +151,6 @@ Runs prettier on markdown files to print differences from formatting standards
 
 Runs prettier on source files to print differences from formatting standards
 
-#### `yarn plop`
-
-Code generator for common tasks:
-
-- Creation of new page
-- Creation of new pure component
-
 #### `yarn serve`
 
 Runs previously [built](#yarn-build) site in the production mode.
@@ -167,7 +161,7 @@ Runs tests
 
 #### `yarn test:coverage`
 
-Shows tests coverage
+Shows test coverage
 
 #### `yarn test:update`
 

@@ -7,7 +7,6 @@
 'use strict'
 
 exports.onCreateNode = require('./gatsby/onCreateNode')
-// exports.createPages = require('./gatsby/createPages')
 
 exports.createSchemaCustomization = ({ actions, schema }) => {
   const { createTypes } = actions
