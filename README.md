@@ -62,8 +62,8 @@ The code base for the [Codemanufacture](https://codemanufacture.com/)
      │   └── pages                     // markdown pages
      ├── gatsby                        // gatsby node api hooks
      ├── gatsby-config.ts              // gatsby configuration
-     ├── gatsby-node.js                // gatsby node hooks
-     ├── gatsby-ssr.js                 // gatsby server-side rendering api
+     ├── gatsby-node.ts                // gatsby node hooks
+     ├── gatsby-ssr.tsx                 // gatsby server-side rendering api
      ├── package.json                  // node.js application manifest
      ├── public                        // output folder (in .gitignore)
      ├── README.md                     // this file

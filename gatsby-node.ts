@@ -3,12 +3,11 @@
  *
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
+import type { GatsbyNode } from 'gatsby'
 
-'use strict'
+export const onCreateNode: GatsbyNode['onCreateNode'] = require('./gatsby/onCreateNode')
 
-exports.onCreateNode = require('./gatsby/onCreateNode')
-
-exports.createSchemaCustomization = ({ actions, schema }) => {
+export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] = ({ actions, schema }) => {
   const { createTypes } = actions
   const typeDefs = [
     `type MarkdownRemark implements Node { frontmatter: Frontmatter! }`,
@@ -23,9 +22,9 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
       fields: {
         comingSoon: {
           type: `Boolean`,
-          resolve(source, args, context, info) {
+          resolve(source) {
             const {comingSoon} = source
-            return comingSoon == null ? false : comingSoon;
+            return comingSoon == null ? false : comingSoon
           }
         },
         summary: {
@@ -33,13 +32,13 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
         },
         authors: {
           type: `[AuthorJson]!`,
-          resolve(source, args, context, info) {
+          resolve(source) {
             const {authors} = source
-            return authors == null ? [] : authors;
+            return authors == null ? [] : authors
           },
           extensions: {
             link: {
-              by: "jsonId"
+              by: 'jsonId'
             }
           }
         }

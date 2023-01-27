@@ -17,7 +17,10 @@
   },
   "include": [
     "./src/**/*",
-    "./gatsby-config.ts"
+    "./gatsby-browser.tsx",
+    "./gatsby-config.ts",
+    "./gatsby-node.ts",
+    "./gatsby-ssr.tsx",
   ],
   "exclude": [
     "**/*.spec.ts",

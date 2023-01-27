@@ -4,9 +4,10 @@
  * See: https://www.gatsbyjs.org/docs/ssr-apis/
  */
 
-const React = require('react')
+import * as React from 'react'
+import type { GatsbySSR } from 'gatsby'
 
-exports.onRenderBody = ({ setHeadComponents, setPreBodyComponents }) => {
+export const onRenderBody: GatsbySSR['onRenderBody'] = ({ setHeadComponents, setPreBodyComponents }) => {
   setHeadComponents([
     <link
       rel="dns-prefetch"
