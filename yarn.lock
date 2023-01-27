@@ -1825,10 +1825,10 @@
   dependencies:
     "@hapi/hoek" "^9.0.0"
 
-"@headlessui/react@^0.0.0-insiders.676de16":
-  version "0.0.0-insiders.676de16"
-  resolved "https://registry.yarnpkg.com/@headlessui/react/-/react-0.0.0-insiders.676de16.tgz#a18ed67d457a1b5e7d11a4ff2a8063c87fd6daf7"
-  integrity sha512-BYhcfGBllkmgtJ7MMCwzwSyC156boK01IsxrtGPrL8UZXb09v7wUAeXAOFScHucxbOJ8zY8ScI8DheqIx0fNTw==
+"@headlessui/react@^1.7.8":
+  version "1.7.8"
+  resolved "https://registry.yarnpkg.com/@headlessui/react/-/react-1.7.8.tgz#d7b4a95d50f9a386f7d1259d5ff8a6d7eb552ef0"
+  integrity sha512-zcwb0kd7L05hxmoAMIioEaOn235Dg0fUO+iGbLPgLVSjzl/l39V6DTpC2Df49PE5aG5/f5q0PZ9ZHZ78ENNV+A==
   dependencies:
     client-only "^0.0.1"
 
