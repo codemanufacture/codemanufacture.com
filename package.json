@@ -69,7 +69,7 @@
     "@commitlint/cli": "^17.4.4",
     "@commitlint/config-conventional": "^17.4.4",
     "@graphql-codegen/add": "^4.0.1",
-    "@graphql-codegen/cli": "^3.1.0",
+    "@graphql-codegen/cli": "^3.2.0",
     "@graphql-codegen/typescript": "^3.0.1",
     "@graphql-codegen/typescript-operations": "^3.0.1",
     "@headlessui/react": "^1.7.11",
