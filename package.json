@@ -73,7 +73,7 @@
     "@graphql-codegen/cli": "^3.2.1",
     "@graphql-codegen/typescript": "^3.0.1",
     "@graphql-codegen/typescript-operations": "^3.0.1",
-    "@headlessui/react": "^1.7.12",
+    "@headlessui/react": "^1.7.13",
     "@heroicons/react": "^2.0.16",
     "@mdx-js/react": "^2.3.0",
     "@stylelint/postcss-css-in-js": "^0.38.0",
