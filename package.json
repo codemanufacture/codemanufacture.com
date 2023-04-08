@@ -34,7 +34,7 @@
     "throttle-debounce": "^5.0.0",
     "ts-loader": "^9.4.2",
     "twin.macro": "^3.3.0",
-    "typescript": "^5.0.3",
+    "typescript": "^5.0.4",
     "validator": "^13.9.0"
   },
   "homepage": "https://codemanufacture.com/",
