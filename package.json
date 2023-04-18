@@ -100,7 +100,7 @@
     "jest": ">=24.0.0 <30.0.0",
     "jest-environment-jsdom": "^29.5.0",
     "jest-haste-map": "^29.5.0",
-    "jest-junit": "^15.0.0",
+    "jest-junit": "^16.0.0",
     "jest-resolve": "^29.5.0",
     "jest-styled-components": "^7.1.1",
     "lint-staged": "^13.2.1",
