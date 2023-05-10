@@ -2,6 +2,7 @@ import * as React from 'react'
 
 interface BlogPostItemProps {
   post: Queries.BlogPostListItemFragment
+  key: React.Key | null | undefined
 }
 
 const BlogPostListItem: React.FunctionComponent<BlogPostItemProps> = ({
