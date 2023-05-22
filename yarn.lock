@@ -1329,10 +1329,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@fontsource/montserrat@^5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@fontsource/montserrat/-/montserrat-5.0.0.tgz#5fe10ab825257746bbdbc4fdb097cd667231253a"
-  integrity sha512-iYvj+/WThVNBFKew8dqfwx3pHpJswJWwFy46gE6S+dlyd1XR9BhKRXVer4Jvjar/tOwZ3I5kK9Hko0+s3GlBuA==
+"@fontsource/montserrat@^5.0.1":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@fontsource/montserrat/-/montserrat-5.0.1.tgz#d0b0717d6c9d07fc7745e931611d358490a87222"
+  integrity sha512-Yv4V06evMh9ido3wsA9Z89pbINPXaWBAYTuOsNAuWLcKuy78b4WYIW3U3/WAcRSb0USP8dhQyy8DkSYVlHEeuw==
 
 "@gatsbyjs/parcel-namer-relative-to-cwd@^2.10.0":
   version "2.10.0"
