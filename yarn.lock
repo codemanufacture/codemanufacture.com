@@ -14579,10 +14579,10 @@ tunnel-agent@^0.6.0:
   dependencies:
     safe-buffer "^5.0.1"
 
-twin.macro@^3.3.1:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/twin.macro/-/twin.macro-3.3.1.tgz#293db55f325250331a56522fd37248c5b4bb18e6"
-  integrity sha512-V6Y1D2em218nvOp+a0iWBCe7kAOx8AEVh5F2NnEQbfyId29S9zjIAUo9gW2qTL6Fn03JAbGgrCZNHqp7alcsFQ==
+twin.macro@^3.4.0:
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/twin.macro/-/twin.macro-3.4.0.tgz#810db7ec59cc3b252f7791c4939c586deb5c82cd"
+  integrity sha512-sOZN3PAlUpA/5ZITFkK1UjYhAKqKUGLrAbqviVagmd/B18Es6faozVdUceJTpMklD/dAjxhHCMPP2gwpJLCbyg==
   dependencies:
     "@babel/template" "^7.18.10"
     babel-plugin-macros "^3.1.0"
