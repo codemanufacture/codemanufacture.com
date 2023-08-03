@@ -1409,10 +1409,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@fontsource/montserrat@^5.0.5":
-  version "5.0.5"
-  resolved "https://registry.yarnpkg.com/@fontsource/montserrat/-/montserrat-5.0.5.tgz#90b5420ab23076a9e76a98516200afcb6ba7de8d"
-  integrity sha512-kR4hwC44p0GZQsy1oA2X8EdFMg/lC7qwVX9jNgNBQ+uSZXKoV4Vyc1VepcRAcGRKPIgcc/3OC1j7FNQDYpFLJA==
+"@fontsource/montserrat@^5.0.6":
+  version "5.0.6"
+  resolved "https://registry.yarnpkg.com/@fontsource/montserrat/-/montserrat-5.0.6.tgz#256f15248a37f11719aef5558b325fde81b8af0a"
+  integrity sha512-D/x0fburyts2fBoQN0KCGpjMSmM5mDSI7U3/SEo8cSOEv4TLYLvOyOgdAMh5IIwmQ5r8N+5MV+85SBcZPRPouw==
 
 "@gatsbyjs/parcel-namer-relative-to-cwd@^2.11.0":
   version "2.11.0"
