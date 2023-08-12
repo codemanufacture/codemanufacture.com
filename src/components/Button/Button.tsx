@@ -19,7 +19,8 @@ const StyledButton = styled.button`
   color: ${colors.buttonTextColor};
   font-size: ${typography.ctaSize};
   line-height: 1.5;
-  transition: background-color ${transitions.basicTransition},
+  transition:
+    background-color ${transitions.basicTransition},
     color ${transitions.basicTransition};
   cursor: pointer;
   outline: none;
