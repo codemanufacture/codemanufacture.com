@@ -16,7 +16,8 @@ const StyledGoToTop = styled.a`
   right: 30px;
   bottom: 30px;
   background: rgba(0, 0, 0, 0.3);
-  transition: background ${transitions.basicTransition},
+  transition:
+    background ${transitions.basicTransition},
     opacity ${transitions.basicTransition};
   pointer-events: none;
 
