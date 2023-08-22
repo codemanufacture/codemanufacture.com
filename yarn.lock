@@ -9365,6 +9365,11 @@ jest-get-type@^29.4.3:
   resolved "https://registry.yarnpkg.com/jest-get-type/-/jest-get-type-29.4.3.tgz#1ab7a5207c995161100b5187159ca82dd48b3dd5"
   integrity sha512-J5Xez4nRRMjk8emnTpWrlkyb9pfRQQanDrvWHhsR1+VUfbwxi30eVcZFlcdGInRibU4G5LwHXpI7IRHU0CY+gg==
 
+jest-get-type@^29.6.3:
+  version "29.6.3"
+  resolved "https://registry.yarnpkg.com/jest-get-type/-/jest-get-type-29.6.3.tgz#36f499fdcea197c1045a127319c0481723908fd1"
+  integrity sha512-zrteXnqYxfQh7l5FHyL38jL39di8H8rHoecLH3JNxH3BwOrBsNeabdap5e0I23lD4HHI8W5VFBZqG4Eaq5LNcw==
+
 jest-haste-map@^29.6.2:
   version "29.6.2"
   resolved "https://registry.yarnpkg.com/jest-haste-map/-/jest-haste-map-29.6.2.tgz#298c25ea5255cfad8b723179d4295cf3a50a70d1"
@@ -9517,6 +9522,21 @@ jest-resolve@^29.6.2:
     resolve.exports "^2.0.0"
     slash "^3.0.0"
 
+jest-resolve@^29.6.3:
+  version "29.6.3"
+  resolved "https://registry.yarnpkg.com/jest-resolve/-/jest-resolve-29.6.3.tgz#e3114e1514973c8f1607387c3042f4d2926f2d60"
+  integrity sha512-WMXwxhvzDeA/J+9jz1i8ZKGmbw/n+s988EiUvRI4egM+eTn31Hb5v10Re3slG3/qxntkBt2/6GkQVDGu6Bwyhw==
+  dependencies:
+    chalk "^4.0.0"
+    graceful-fs "^4.2.9"
+    jest-haste-map "^29.6.3"
+    jest-pnp-resolver "^1.2.2"
+    jest-util "^29.6.3"
+    jest-validate "^29.6.3"
+    resolve "^1.20.0"
+    resolve.exports "^2.0.0"
+    slash "^3.0.0"
+
 jest-runner@^29.6.2:
   version "29.6.2"
   resolved "https://registry.yarnpkg.com/jest-runner/-/jest-runner-29.6.2.tgz#89e8e32a8fef24781a7c4c49cd1cb6358ac7fc01"
@@ -9640,6 +9660,18 @@ jest-validate@^29.6.2:
     jest-get-type "^29.4.3"
     leven "^3.1.0"
     pretty-format "^29.6.2"
+
+jest-validate@^29.6.3:
+  version "29.6.3"
+  resolved "https://registry.yarnpkg.com/jest-validate/-/jest-validate-29.6.3.tgz#a75fca774cfb1c5758c70d035d30a1f9c2784b4d"
+  integrity sha512-e7KWZcAIX+2W1o3cHfnqpGajdCs1jSM3DkXjGeLSNmCazv1EeI1ggTeK5wdZhF+7N+g44JI2Od3veojoaumlfg==
+  dependencies:
+    "@jest/types" "^29.6.3"
+    camelcase "^6.2.0"
+    chalk "^4.0.0"
+    jest-get-type "^29.6.3"
+    leven "^3.1.0"
+    pretty-format "^29.6.3"
 
 jest-watcher@^29.6.2:
   version "29.6.2"
