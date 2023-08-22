@@ -113,6 +113,24 @@ exports[`Header component renders correctly 1`] = `
               Contact
             </a>
           </nav>
+          <div
+            style={
+              {
+                "borderWidth": "0",
+                "clip": "rect(0, 0, 0, 0)",
+                "display": "none",
+                "height": 0,
+                "left": 1,
+                "margin": -1,
+                "overflow": "hidden",
+                "padding": 0,
+                "position": "fixed",
+                "top": 1,
+                "whiteSpace": "nowrap",
+                "width": 1,
+              }
+            }
+          />
         </div>
       </div>
     </div>
