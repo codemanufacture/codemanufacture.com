@@ -9623,6 +9623,21 @@ jest-resolve@^29.6.3:
     resolve.exports "^2.0.0"
     slash "^3.0.0"
 
+jest-resolve@^29.6.4:
+  version "29.6.4"
+  resolved "https://registry.yarnpkg.com/jest-resolve/-/jest-resolve-29.6.4.tgz#e34cb06f2178b429c38455d98d1a07572ac9faa3"
+  integrity sha512-fPRq+0vcxsuGlG0O3gyoqGTAxasagOxEuyoxHeyxaZbc9QNek0AmJWSkhjlMG+mTsj+8knc/mWb3fXlRNVih7Q==
+  dependencies:
+    chalk "^4.0.0"
+    graceful-fs "^4.2.9"
+    jest-haste-map "^29.6.4"
+    jest-pnp-resolver "^1.2.2"
+    jest-util "^29.6.3"
+    jest-validate "^29.6.3"
+    resolve "^1.20.0"
+    resolve.exports "^2.0.0"
+    slash "^3.0.0"
+
 jest-runner@^29.6.3:
   version "29.6.3"
   resolved "https://registry.yarnpkg.com/jest-runner/-/jest-runner-29.6.3.tgz#162b1a549c4728265e716d75533b65b4c77e6b22"
