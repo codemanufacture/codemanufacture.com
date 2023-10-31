@@ -3,7 +3,7 @@ executors:
     parameters:
       image:
         type: string
-        default: "18.18"
+        default: "20.8"
     docker:
     - image: cimg/node:<< parameters.image >>
 
