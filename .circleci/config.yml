@@ -102,7 +102,7 @@ jobs:
           at: ~/project
       - run:
           name: Deploy to S3
-          command: aws s3 sync project/public s3://codemanufacture.com/ --delete
+          command: aws s3 sync project/public s3://${S3_BUCKET_NAME}/ --delete
 
 workflows:
   version: 2
