@@ -4075,10 +4075,10 @@
   resolved "https://registry.yarnpkg.com/@types/tough-cookie/-/tough-cookie-4.0.4.tgz#cf2f0c7c51b985b6afecea73eb2cd65421ecb717"
   integrity sha512-95Sfz4nvMAb0Nl9DTxN3j64adfwfbBPEYq14VN7zT5J5O2M9V6iZMIIQU1U+pJyl9agHYHNCqhCXgyEtIRRa5A==
 
-"@types/uniqid@^5.3.3":
-  version "5.3.3"
-  resolved "https://registry.yarnpkg.com/@types/uniqid/-/uniqid-5.3.3.tgz#58fc9135e670a5cd55e6b2a160ecd5c5b451b3f0"
-  integrity sha512-K0ZC3LPd8hy2CC26KfUkXEBmJt4hTQokroqcygADKgsgar8SyYuPOzGehmaRrhMrB/KDZKWzdQyoTqRX7eCuZg==
+"@types/uniqid@^5.3.4":
+  version "5.3.4"
+  resolved "https://registry.yarnpkg.com/@types/uniqid/-/uniqid-5.3.4.tgz#e5deca439a1db381e4692f7679ecf3d7f1264eb2"
+  integrity sha512-AgC+o3/8/QEHuU3w5w2jZ8auQtjSJ/s8G8RfEk9CYLogK1RGXqxhHH0wOEAu8uHXjvj8oh/dRtfgok4IHKxh/Q==
 
 "@types/unist@^2", "@types/unist@^2.0.0", "@types/unist@^2.0.2", "@types/unist@^2.0.3":
   version "2.0.9"
