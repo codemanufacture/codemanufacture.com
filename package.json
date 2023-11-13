@@ -88,7 +88,7 @@
     "@types/react-share": "^4.0.0",
     "@types/react-test-renderer": "^18.0.6",
     "@types/styled-components": "^5.1.30",
-    "@types/throttle-debounce": "^5.0.1",
+    "@types/throttle-debounce": "^5.0.2",
     "@types/uniqid": "^5.3.3",
     "@types/validator": "^13.11.5",
     "babel-core": "^7.0.0-bridge.0",
