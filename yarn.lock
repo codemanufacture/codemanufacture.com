@@ -12460,7 +12460,7 @@ postcss-selector-parser@6.0.10:
     cssesc "^3.0.0"
     util-deprecate "^1.0.2"
 
-postcss-selector-parser@^6.0.10, postcss-selector-parser@^6.0.11, postcss-selector-parser@^6.0.13, postcss-selector-parser@^6.0.2, postcss-selector-parser@^6.0.4, postcss-selector-parser@^6.0.5, postcss-selector-parser@^6.0.9:
+postcss-selector-parser@^6.0.11, postcss-selector-parser@^6.0.13, postcss-selector-parser@^6.0.2, postcss-selector-parser@^6.0.4, postcss-selector-parser@^6.0.5, postcss-selector-parser@^6.0.9:
   version "6.0.15"
   resolved "https://registry.yarnpkg.com/postcss-selector-parser/-/postcss-selector-parser-6.0.15.tgz#11cc2b21eebc0b99ea374ffb9887174855a01535"
   integrity sha512-rEYkQOMUCEMhsKbK66tbEU9QVIxbhN18YiniAwA7XQYTVBqrBy+P2p5JcdqsHgKM2zWylp8d7J6eszocfds5Sw==
@@ -14820,17 +14820,17 @@ tunnel-agent@^0.6.0:
   dependencies:
     safe-buffer "^5.0.1"
 
-twin.macro@^3.4.0:
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/twin.macro/-/twin.macro-3.4.0.tgz#810db7ec59cc3b252f7791c4939c586deb5c82cd"
-  integrity sha512-sOZN3PAlUpA/5ZITFkK1UjYhAKqKUGLrAbqviVagmd/B18Es6faozVdUceJTpMklD/dAjxhHCMPP2gwpJLCbyg==
+twin.macro@^3.4.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/twin.macro/-/twin.macro-3.4.1.tgz#1b1919d4c539e4d83481ed29682bcc6adc0cf87e"
+  integrity sha512-bxGKTV4u/iGcQqHIugPaW5YSLJ5rIr56ay4Pjcr2Mbb037k341bQ+eWT8z3F7r8ZGTXjTD3uiuxos+qQRy4VjQ==
   dependencies:
-    "@babel/template" "^7.18.10"
+    "@babel/template" "^7.22.15"
     babel-plugin-macros "^3.1.0"
     chalk "4.1.2"
     lodash.get "^4.4.2"
     lodash.merge "^4.6.2"
-    postcss-selector-parser "^6.0.10"
+    postcss-selector-parser "^6.0.13"
 
 type-check@^0.4.0, type-check@~0.4.0:
   version "0.4.0"
