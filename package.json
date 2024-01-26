@@ -9,7 +9,7 @@
     "babel-plugin-styled-components": "^2.1.4",
     "babel-preset-gatsby": "^3.13.1",
     "classnames": "^2.5.1",
-    "gatsby": "^5.13.2",
+    "gatsby": "^5.13.3",
     "gatsby-plugin-canonical-urls": "^5.13.1",
     "gatsby-plugin-catch-links": "^5.13.1",
     "gatsby-plugin-feed": "^5.13.1",
