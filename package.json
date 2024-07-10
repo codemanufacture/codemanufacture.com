@@ -74,7 +74,7 @@
     "@graphql-codegen/typescript": "^4.0.9",
     "@graphql-codegen/typescript-operations": "^4.2.3",
     "@headlessui/react": "^2.1.1",
-    "@heroicons/react": "^2.1.4",
+    "@heroicons/react": "^2.1.5",
     "@mdx-js/react": "^3.0.1",
     "@stylelint/postcss-css-in-js": "^0.38.0",
     "@tailwindcss/forms": "^0.5.7",
