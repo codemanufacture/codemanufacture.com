@@ -122,7 +122,7 @@ exports[`Header component renders correctly 1`] = `
               Contact
             </a>
           </nav>
-          <div
+          <span
             hidden={true}
             style={
               {
@@ -145,7 +145,7 @@ exports[`Header component renders correctly 1`] = `
       </div>
     </div>
   </div>,
-  <div
+  <span
     hidden={true}
     style={
       {
