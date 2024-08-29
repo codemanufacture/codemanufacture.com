@@ -78,7 +78,7 @@
     "@mdx-js/react": "^3.0.1",
     "@stylelint/postcss-css-in-js": "^0.38.0",
     "@tailwindcss/forms": "^0.5.8",
-    "@tailwindcss/typography": "^0.5.14",
+    "@tailwindcss/typography": "^0.5.15",
     "@types/classnames": "^2.3.1",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.16.2",
