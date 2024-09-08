@@ -1425,10 +1425,10 @@
   resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.2.7.tgz#d0ece53ce99ab5a8e37ebdfe5e32452a2bfc073e"
   integrity sha512-X8R8Oj771YRl/w+c1HqAC1szL8zWQRwFvgDwT129k9ACdBoud/+/rX9V0qiMl6LWUdP9voC2nDVZYPMQQsb6eA==
 
-"@fontsource/montserrat@^5.0.19":
-  version "5.0.19"
-  resolved "https://registry.yarnpkg.com/@fontsource/montserrat/-/montserrat-5.0.19.tgz#e062bf93b6c244b92a9d798a71c5bba5ee5178d0"
-  integrity sha512-d2JyNIE0i2FOqLFkaSrfsyDzFzkzdER7d3xeHqFOTK5OFE+yiFyvlIBMXg5q+nNpMmVoW+2Q182Csn28o+kijQ==
+"@fontsource/montserrat@^5.0.20":
+  version "5.0.20"
+  resolved "https://registry.yarnpkg.com/@fontsource/montserrat/-/montserrat-5.0.20.tgz#17d317b27aa9f432b2a3e2ae38d53ea24fe527d3"
+  integrity sha512-9woBFkQBhhuEyeHyy6s9IKokjyC8NKuwv+yUw7dqOw2E0zRzD6pxk/KYt+SzKHz5B77AkGKu7swp4dI6mptQkw==
 
 "@gatsbyjs/parcel-namer-relative-to-cwd@^2.13.1":
   version "2.13.1"
