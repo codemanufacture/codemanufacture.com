@@ -5,7 +5,7 @@
   "author": "Piotr Kwiecinski <piotr.kwiecinski@codemanufacure.com>",
   "private": true,
   "dependencies": {
-    "@fontsource/montserrat": "^5.1.0",
+    "@fontsource/montserrat": "^5.1.1",
     "babel-plugin-styled-components": "^2.1.4",
     "babel-preset-gatsby": "^3.14.0",
     "classnames": "^2.5.1",
