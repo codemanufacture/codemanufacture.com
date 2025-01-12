@@ -22,9 +22,12 @@ exports[`Footer component renders correctly 1`] = `
           onClick={[Function]}
           onMouseEnter={[Function]}
           style={{}}
-          tw="text-sm leading-6 text-gray-600 hover:text-gray-200"
         >
-          Home
+          <span
+            tw="text-sm leading-6 text-gray-600 hover:text-gray-200"
+          >
+            Home
+          </span>
         </a>
       </div>
       <div
@@ -34,9 +37,12 @@ exports[`Footer component renders correctly 1`] = `
           href="/#service"
           onClick={[Function]}
           onMouseEnter={[Function]}
-          tw="text-sm leading-6 text-gray-600 hover:text-gray-200"
         >
-          Service
+          <span
+            tw="text-sm leading-6 text-gray-600 hover:text-gray-200"
+          >
+            Service
+          </span>
         </a>
       </div>
       <div
@@ -46,9 +52,12 @@ exports[`Footer component renders correctly 1`] = `
           href="/#blog"
           onClick={[Function]}
           onMouseEnter={[Function]}
-          tw="text-sm leading-6 text-gray-600 hover:text-gray-200"
         >
-          Blog
+          <span
+            tw="text-sm leading-6 text-gray-600 hover:text-gray-200"
+          >
+            Blog
+          </span>
         </a>
       </div>
       <div
@@ -58,9 +67,12 @@ exports[`Footer component renders correctly 1`] = `
           href="/contact"
           onClick={[Function]}
           onMouseEnter={[Function]}
-          tw="text-sm leading-6 text-gray-600 hover:text-gray-200"
         >
-          Contact
+          <span
+            tw="text-sm leading-6 text-gray-600 hover:text-gray-200"
+          >
+            Contact
+          </span>
         </a>
       </div>
       <div
@@ -70,9 +82,12 @@ exports[`Footer component renders correctly 1`] = `
           href="/privacy-policy"
           onClick={[Function]}
           onMouseEnter={[Function]}
-          tw="text-sm leading-6 text-gray-600 hover:text-gray-200"
         >
-          Privacy
+          <span
+            tw="text-sm leading-6 text-gray-600 hover:text-gray-200"
+          >
+            Privacy
+          </span>
         </a>
       </div>
     </nav>

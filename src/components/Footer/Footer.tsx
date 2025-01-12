@@ -14,9 +14,10 @@ export default function Footer() {
             <div key={item.name} tw="pb-6">
               <Link
                 to={item.path}
-                tw="text-sm leading-6 text-gray-600 hover:text-gray-200"
               >
+                <span tw="text-sm leading-6 text-gray-600 hover:text-gray-200">
                 {item.name}
+                </span>
               </Link>
             </div>
           ))}

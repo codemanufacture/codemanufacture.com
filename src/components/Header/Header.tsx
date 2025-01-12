@@ -32,9 +32,10 @@ export default function Header() {
                 <Link
                   key={`desktop-nav-${item.name}`}
                   to={item.path}
-                  tw="text-base font-medium text-gray-500 hover:text-gray-900"
                 >
-                  {item.name}
+                   <span tw="text-base font-medium text-gray-500 hover:text-gray-900">
+                   {item.name}
+                   </span>
                 </Link>
               ))}
             </Popover.Group>
@@ -61,9 +62,10 @@ export default function Header() {
                   <Link
                     key={`mobile-nav-${item.name}`}
                     to={item.path}
-                    tw="text-base font-medium text-gray-500 hover:text-gray-900"
                   >
+                    <span tw="text-base font-medium text-gray-500 hover:text-gray-900">
                     {item.name}
+                    </span>
                   </Link>
                 ))}
               </nav>

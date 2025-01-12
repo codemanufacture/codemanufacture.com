@@ -82,9 +82,12 @@ exports[`Newsletter component renders correctly 1`] = `
           href="/privacy"
           onClick={[Function]}
           onMouseEnter={[Function]}
-          tw="font-medium text-white underline"
         >
-          Privacy Policy.
+          <span
+            tw="font-medium text-white underline"
+          >
+            Privacy Policy.
+          </span>
         </a>
       </p>
     </div>
