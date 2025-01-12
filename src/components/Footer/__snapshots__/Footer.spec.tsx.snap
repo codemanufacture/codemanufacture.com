@@ -155,7 +155,7 @@ exports[`Footer component renders correctly 1`] = `
       tw="mt-10 text-center text-xs leading-5 text-gray-500"
     >
       © 
-      2024
+      2025
        Codemanufacture SRLS. All rights reserved. Partita iva: 12607110967
     </p>
   </div>
