@@ -29,12 +29,10 @@ export default function Header() {
           <div tw="hidden md:flex md:items-start md:justify-center">
             <Popover.Group as="nav" tw="hidden space-x-10 md:flex">
               {navigation.main.map(item => (
-                <Link
-                  key={`desktop-nav-${item.name}`}
-                  to={item.path}
-                  tw="text-base font-medium text-gray-500 hover:text-gray-900"
-                >
-                  {item.name}
+                <Link key={`desktop-nav-${item.name}`} to={item.path}>
+                  <span tw="text-base font-medium text-gray-500 hover:text-gray-900">
+                    {item.name}
+                  </span>
                 </Link>
               ))}
             </Popover.Group>
@@ -58,12 +56,10 @@ export default function Header() {
             <div tw="mt-6">
               <nav tw="grid gap-y-8">
                 {navigation.main.map(item => (
-                  <Link
-                    key={`mobile-nav-${item.name}`}
-                    to={item.path}
-                    tw="text-base font-medium text-gray-500 hover:text-gray-900"
-                  >
-                    {item.name}
+                  <Link key={`mobile-nav-${item.name}`} to={item.path}>
+                    <span tw="text-base font-medium text-gray-500 hover:text-gray-900">
+                      {item.name}
+                    </span>
                   </Link>
                 ))}
               </nav>

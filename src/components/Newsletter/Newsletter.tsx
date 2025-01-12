@@ -116,8 +116,8 @@ export default function Newsletter() {
           </form>
           <p tw="mt-3 text-sm text-gray-300">
             We care about the protection of your data. Read our{' '}
-            <Link to="/privacy" tw="font-medium text-white underline">
-              Privacy Policy.
+            <Link to="/privacy">
+              <span tw="font-medium text-white underline">Privacy Policy.</span>
             </Link>
           </p>
         </div>

@@ -20,17 +20,15 @@ const NotFoundPage = () => (
               </p>
             </div>
             <div tw="mt-10 flex space-x-3 sm:border-l sm:border-transparent sm:pl-6">
-              <Link
-                to="/"
-                tw="inline-flex items-center rounded-md border border-transparent bg-sky-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2"
-              >
-                Go back home
+              <Link to="/">
+                <span tw="inline-flex items-center rounded-md border border-transparent bg-sky-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2">
+                  Go back home
+                </span>
               </Link>
-              <Link
-                to="/contact"
-                tw="inline-flex items-center rounded-md border border-transparent bg-sky-100 px-4 py-2 text-sm font-medium text-sky-700 hover:bg-sky-200 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2"
-              >
-                Contact support
+              <Link to="/contact">
+                <span tw="inline-flex items-center rounded-md border border-transparent bg-sky-100 px-4 py-2 text-sm font-medium text-sky-700 hover:bg-sky-200 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2">
+                  Contact support
+                </span>
               </Link>
             </div>
           </div>

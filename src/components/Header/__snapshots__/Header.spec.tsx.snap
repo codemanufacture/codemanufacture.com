@@ -93,33 +93,45 @@ exports[`Header component renders correctly 1`] = `
               onClick={[Function]}
               onMouseEnter={[Function]}
               style={{}}
-              tw="text-base font-medium text-gray-500 hover:text-gray-900"
             >
-              Home
+              <span
+                tw="text-base font-medium text-gray-500 hover:text-gray-900"
+              >
+                Home
+              </span>
             </a>
             <a
               href="/#services"
               onClick={[Function]}
               onMouseEnter={[Function]}
-              tw="text-base font-medium text-gray-500 hover:text-gray-900"
             >
-              Services
+              <span
+                tw="text-base font-medium text-gray-500 hover:text-gray-900"
+              >
+                Services
+              </span>
             </a>
             <a
               href="/#blog"
               onClick={[Function]}
               onMouseEnter={[Function]}
-              tw="text-base font-medium text-gray-500 hover:text-gray-900"
             >
-              Blog
+              <span
+                tw="text-base font-medium text-gray-500 hover:text-gray-900"
+              >
+                Blog
+              </span>
             </a>
             <a
               href="/contact"
               onClick={[Function]}
               onMouseEnter={[Function]}
-              tw="text-base font-medium text-gray-500 hover:text-gray-900"
             >
-              Contact
+              <span
+                tw="text-base font-medium text-gray-500 hover:text-gray-900"
+              >
+                Contact
+              </span>
             </a>
           </nav>
           <span

@@ -12,11 +12,10 @@ export default function Footer() {
         >
           {navigation.footer.map(item => (
             <div key={item.name} tw="pb-6">
-              <Link
-                to={item.path}
-                tw="text-sm leading-6 text-gray-600 hover:text-gray-200"
-              >
-                {item.name}
+              <Link to={item.path}>
+                <span tw="text-sm leading-6 text-gray-600 hover:text-gray-200">
+                  {item.name}
+                </span>
               </Link>
             </div>
           ))}

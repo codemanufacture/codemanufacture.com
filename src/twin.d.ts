@@ -1,5 +1,5 @@
+import type styledImport, { CSSProp, css as cssImport } from 'styled-components'
 import 'twin.macro'
-import styledImport, { CSSProp, css as cssImport } from 'styled-components'
 
 declare module 'twin.macro' {
   // The styled and css imports
@@ -24,7 +24,7 @@ declare module 'react' {
 declare global {
   namespace JSX {
     interface IntrinsicAttributes<T> extends DOMAttributes<T> {
-      as?: string
+      as?: string | Element
     }
   }
 }
