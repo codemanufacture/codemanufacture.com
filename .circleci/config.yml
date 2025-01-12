@@ -21,17 +21,17 @@ aliases:
     restore_cache:
       name: Restore node_modules cache
       keys:
-        - yarn-codemanufacturecom-{{ checksum "yarn.lock" }}
+        - codemanufacturecom-{{ checksum "package-lock.json" }}
 
   install_node_modules: &install_node_modules
     run:
       name: Install node.js dependencies
-      command: yarn --frozen-lockfile
+      command: npm install
 
   persist_cache: &persist_cache
     save_cache:
       name: Save node modules cache
-      key: yarn-codemanufacturecom-{{ checksum "yarn.lock" }}
+      key: codemanufacturecom-{{ checksum "package-lock.json" }}
       paths:
         - ~/.cache
 
@@ -54,14 +54,14 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/project
-      - run: yarn ci-check
+      - run: npm run ci-check
 
   type_check:
     executor: node
     steps:
       - attach_workspace:
           at: ~/project
-      - run: yarn type-check
+      - run: npm run type-check
 
   unit_tests:
     parallelism: 2
@@ -71,7 +71,7 @@ jobs:
           at: ~/project
       - run:
           name: Run tests
-          command: yarn jest --ci --runInBand --reporters=default --reporters=jest-junit
+          command: npm run test:ci
           environment:
             NODE_OPTIONS: --max-old-space-size=2048
             JEST_JUNIT_OUTPUT_DIR: ./test-results/jest-node/
@@ -85,7 +85,7 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/project
-      - run: yarn build
+      - run: npm run build
       - store_artifacts:
           path: public
           destination: codemanufacturecom-website
