@@ -62,7 +62,7 @@
     "type-check": "tsc"
   },
   "devDependencies": {
-    "@babel/core": "^7.26.9",
+    "@babel/core": "^7.26.10",
     "@babel/plugin-transform-class-properties": "^7.25.9",
     "@babel/plugin-transform-optional-chaining": "^7.25.9",
     "@babel/preset-env": "^7.26.9",
