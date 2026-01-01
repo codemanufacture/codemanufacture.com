@@ -15,3 +15,18 @@
 }
 
 @plugin "@tailwindcss/typography";
+
+/* Prevent code blocks from overflowing */
+.prose pre {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.prose code {
+  word-break: break-word;
+}
+
+.prose pre code {
+  word-break: normal;
+  white-space: pre;
+}
