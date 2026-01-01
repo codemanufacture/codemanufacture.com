@@ -1,6 +1,20 @@
-<footer class="bg-white border-t border-gray-200">
-  <div class="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
-    <div class="flex justify-center space-x-6 md:order-2">
+<footer class="bg-neutral-900" aria-labelledby="footer-heading">
+  <div class="mx-auto max-w-7xl overflow-hidden py-20 px-6 sm:py-24 lg:px-8">
+    <nav class="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
+      <div class="pb-6">
+        <a href="/" class="text-sm leading-6 text-gray-600 hover:text-gray-200">Home</a>
+      </div>
+      <div class="pb-6">
+        <a href="/#services" class="text-sm leading-6 text-gray-600 hover:text-gray-200">Services</a>
+      </div>
+      <div class="pb-6">
+        <a href="/blog/" class="text-sm leading-6 text-gray-600 hover:text-gray-200">Blog</a>
+      </div>
+      <div class="pb-6">
+        <a href="/privacy-policy/" class="text-sm leading-6 text-gray-600 hover:text-gray-200">Privacy</a>
+      </div>
+    </nav>
+    <div class="mt-10 flex justify-center space-x-10">
       <!-- LinkedIn -->
       <a href="https://www.linkedin.com/company/codemanufacture" class="text-gray-400 hover:text-gray-500" target="_blank" rel="noopener noreferrer">
         <span class="sr-only">LinkedIn</span>
@@ -23,16 +37,8 @@
         </svg>
       </a>
     </div>
-    <div class="mt-8 md:order-1 md:mt-0">
-      <nav class="flex justify-center space-x-6 mb-4 md:mb-2">
-        <a href="/" class="text-sm text-gray-500 hover:text-gray-600">Home</a>
-        <a href="/#services" class="text-sm text-gray-500 hover:text-gray-600">Services</a>
-        <a href="/blog/" class="text-sm text-gray-500 hover:text-gray-600">Blog</a>
-        <a href="/privacy-policy/" class="text-sm text-gray-500 hover:text-gray-600">Privacy</a>
-      </nav>
-      <p class="text-center text-xs leading-5 text-gray-500">
-        &copy; {{ now.Year }} Codemanufacture. All rights reserved.
-      </p>
-    </div>
+    <p class="mt-10 text-center text-xs leading-5 text-gray-500">
+      &copy; {{ now.Year }} Codemanufacture SRLS. All rights reserved. Partita iva: 12607110967
+    </p>
   </div>
 </footer>
