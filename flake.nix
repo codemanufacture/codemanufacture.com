@@ -1,5 +1,5 @@
 {
-  description = "Nix configuration for codemanufacture.com";
+  description = "Nix configuration for codemanufacture.com (Hugo)";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -28,35 +28,27 @@
         }:
         {
 
-          packages.default = pkgs.buildNpmPackage {
+          packages.default = pkgs.stdenv.mkDerivation {
             name = "codemanufacture-website";
             src = gitignore.lib.gitignoreSource ./.;
 
-            nativeBuildInputs = [pkgs.pkg-config];
-
-            buildInputs = with pkgs; [
+            nativeBuildInputs = with pkgs; [
+              hugo
               nodejs_22
-              vips
+              nodePackages.npm
             ];
 
-            npmDeps = pkgs.importNpmLock {
-              npmRoot = ./.;
-            };
-
-            npmFlags = [ "--legacy-peer-deps" ];
-
-            npmConfigHook = pkgs.importNpmLock.npmConfigHook;
-
-            npmBuild = "npm run build";
-
-            makeCacheWritable = true;
+            buildPhase = ''
+              export HOME=$(mktemp -d)
+              npm ci
+              npm run build:css
+              hugo --minify
+            '';
 
             installPhase = ''
               runHook preInstall
-
-              mkdir $out
-              cp -r public $out
-
+              mkdir -p $out
+              cp -r public/* $out/
               runHook postInstall
             '';
           };
@@ -67,7 +59,6 @@
               "*.gitignore"
               ".envrc"
               "LICENSE"
-              "*.snap"
             ];
 
             programs.nixfmt.enable = true;
@@ -76,6 +67,7 @@
 
           devShells.default = pkgs.mkShellNoCC {
             nativeBuildInputs = [
+              pkgs.hugo
               pkgs.nodejs_22
               pkgs.awscli2
             ];

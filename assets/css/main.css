@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand Colors */
+  --color-brand-blue: #208bc3;
+  --color-brand-light-blue: #abe0f7;
+  --color-brand-dark-green: #0d313a;
+
+  /* Override sky colors to match brand */
+  --color-sky-500: #208bc3;
+  --color-sky-600: #1a7aad;
+
+  /* Typography */
+  --font-family-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+}
+
+@plugin "@tailwindcss/typography";

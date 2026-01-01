@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Magento Development",
+    "description": "We build stores from scratch, create bespoke features and integrations with 3rd parties.",
+    "icon": "shopping-cart"
+  },
+  {
+    "name": "Magento Support",
+    "description": "We provide a day-to-day support, software updates, implementation of new features.",
+    "icon": "wrench"
+  },
+  {
+    "name": "Code audit",
+    "description": "Our code audit finds bottlenecks, bad practices causing performance and maintainability issues.",
+    "icon": "code"
+  }
+]

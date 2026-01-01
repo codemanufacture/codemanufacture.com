@@ -1,0 +1,31 @@
+baseURL = "https://codemanufacture.com/"
+languageCode = "en-gb"
+title = "Codemanufacture - Magento experts"
+
+[params]
+description = "Magento experts"
+keywords = "magento, ecommerce development"
+
+[markup]
+[markup.highlight]
+style = "monokai"
+lineNos = true
+
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
+
+[outputs]
+home = ["HTML", "RSS"]
+
+[outputFormats]
+[outputFormats.RSS]
+mediaType = "application/rss+xml"
+baseName = "rss"
+
+[sitemap]
+changefreq = "weekly"
+filename = "sitemap.xml"
+priority = 0.5
+
+disableKinds = ["taxonomy", "term"]

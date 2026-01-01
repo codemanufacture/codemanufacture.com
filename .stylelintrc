@@ -1,9 +1,0 @@
-{
-  "extends": [
-    "stylelint-config-recommended",
-  ],
-  "customSyntax": "@stylelint/postcss-css-in-js",
-  "rules": {
-    "function-no-unknown": null
-  }
-}
