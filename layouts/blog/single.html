@@ -1,73 +1,78 @@
 {{ define "main" }}
 <!-- JSON-LD Schema -->
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": {{ .Title | jsonify }},
-  "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
-  {{ with .Lastmod }}"dateModified": "{{ .Format "2006-01-02T15:04:05Z07:00" }}",{{ end }}
-  "url": "{{ .Permalink }}",
-  {{ with .Params.authors }}
-  {{ $authorId := index . 0 }}
-  {{ $authors := $.Site.Data.authors }}
-  {{ $author := index $authors $authorId }}
-  {{ if $author }}
-  "author": {
-    "@type": "Person",
-    "name": {{ $author.name | jsonify }}
-  },
-  {{ end }}
-  {{ end }}
-  "publisher": {
-    "@type": "Organization",
-    "name": "Codemanufacture",
-    "url": "{{ .Site.BaseURL }}"
-  },
-  {{ with .Params.tags }}"keywords": {{ . | jsonify }},{{ end }}
-  "articleBody": {{ .Plain | jsonify }}
-}
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": {{ .Title | jsonify }},
+    "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+    {{ with .Lastmod }}"dateModified": "{{ .Format "2006-01-02T15:04:05Z07:00" }}",{{ end }}
+    "url": "{{ .Permalink }}",
+    {{ with .Params.authors }}
+    {{ $authorId := index . 0 }}
+    {{ $authors := $.Site.Data.authors }}
+    {{ $author := index $authors $authorId }}
+    {{ if $author }}
+    "author": {
+      "@type": "Person",
+      "name": {{ $author.name | jsonify }}
+    },
+    {{ end }}
+    {{ end }}
+    "publisher": {
+      "@type": "Organization",
+      "name": "Codemanufacture",
+      "url": "{{ .Site.BaseURL }}"
+    },
+    {{ with .Params.tags }}"keywords": {{ . | jsonify }},{{ end }}
+    "articleBody": {{ .Plain | jsonify }}
+  }
 </script>
 
 <article class="py-16 lg:py-24">
   <div class="mx-auto max-w-3xl px-6 lg:px-8">
     <header class="mb-10">
       <div class="flex items-center gap-x-4 text-xs mb-4">
-        <time datetime="{{ .Date.Format "2006-01-02" }}" class="text-gray-500">
+        <time datetime='{{ .Date.Format "2006-01-02" }}' class="text-gray-500">
           {{ .Date.Format "January 2, 2006" }}
         </time>
         {{ range .Params.tags }}
-        <span class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600">
+        <span
+          class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600"
+        >
           {{ . }}
         </span>
         {{ end }}
       </div>
-      <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{{ .Title }}</h1>
+      <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        {{ .Title }}
+      </h1>
       {{ with .Params.summary }}
       <p class="mt-4 text-xl text-gray-600">{{ . }}</p>
-      {{ end }}
-      {{ with .Params.authors }}
-      {{ $authorId := index . 0 }}
-      {{ $authors := $.Site.Data.authors }}
-      {{ $author := index $authors $authorId }}
-      {{ if $author }}
+      {{ end }} {{ with .Params.authors }} {{ $authorId := index . 0 }} {{
+      $authors := $.Site.Data.authors }} {{ $author := index $authors $authorId
+      }} {{ if $author }}
       <div class="mt-8 flex items-center gap-x-4 border-t border-gray-200 pt-8">
         {{ if $author.showAvatar }}
-        <img src="{{ $author.avatar }}" alt="{{ $author.name }}" class="h-12 w-12 rounded-full bg-gray-100">
+        <img
+          src="{{ $author.avatar }}"
+          alt="{{ $author.name }}"
+          class="h-12 w-12 rounded-full bg-gray-100"
+        />
         {{ end }}
         <div class="text-sm leading-6">
           <p class="font-semibold text-gray-900">{{ $author.name }}</p>
           <p class="text-gray-600">{{ $author.role }}</p>
         </div>
       </div>
-      {{ end }}
-      {{ end }}
+      {{ end }} {{ end }}
     </header>
-    <div class="prose prose-lg prose-sky max-w-none">
-      {{ .Content }}
-    </div>
+    <div class="prose prose-lg prose-sky max-w-none">{{ .Content }}</div>
     <footer class="mt-16 border-t border-gray-200 pt-8">
-      <a href="/blog/" class="text-sm font-semibold text-sky-600 hover:text-sky-500">
+      <a
+        href="/blog/"
+        class="text-sm font-semibold text-sky-600 hover:text-sky-500"
+      >
         <span aria-hidden="true">&larr;</span> Back to all posts
       </a>
     </footer>

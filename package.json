@@ -8,14 +8,11 @@
   "license": "Apache-2.0",
   "scripts": {
     "build:css": "tailwindcss -i ./assets/css/main.css -o ./assets/css/output.css --minify",
-    "watch:css": "tailwindcss -i ./assets/css/main.css -o ./assets/css/output.css --watch",
-    "format:markdown": "prettier --config .prettierrc --parser markdown --write '{content/**/*.md,README.md}'",
-    "nit:markdown": "prettier --config .prettierrc --parser markdown --list-different '{content/**/*.md,README.md}'"
+    "watch:css": "tailwindcss -i ./assets/css/main.css -o ./assets/css/output.css --watch"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.0.0",
     "@tailwindcss/typography": "^0.5.19",
-    "prettier": "3.7.4",
     "tailwindcss": "^4.0.0"
   }
 }

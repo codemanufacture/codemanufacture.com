@@ -59,10 +59,31 @@
               "*.gitignore"
               ".envrc"
               "LICENSE"
+              "public/*"
+              "resources/*"
+              "package.json"
+              "package-lock.json"
             ];
 
             programs.nixfmt.enable = true;
-            programs.prettier.enable = true;
+            programs.prettier = {
+              enable = true;
+              settings = {
+                semi = false;
+                singleQuote = true;
+                trailingComma = "es5";
+                arrowParens = "avoid";
+                plugins = [
+                  "${pkgs.prettier-plugin-go-template}/lib/node_modules/prettier-plugin-go-template/lib/index.js"
+                ];
+                overrides = [
+                  {
+                    files = [ "layouts/**/*.html" ];
+                    options.parser = "go-template";
+                  }
+                ];
+              };
+            };
           };
 
           devShells.default = pkgs.mkShellNoCC {

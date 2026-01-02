@@ -1,31 +1,49 @@
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
-<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-<meta name="keywords" content="{{ .Site.Params.keywords }}">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+  {{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{
+  end }}
+</title>
+<meta
+  name="description"
+  content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}"
+/>
+<meta name="keywords" content="{{ .Site.Params.keywords }}" />
 
 <!-- Open Graph -->
-<meta property="og:title" content="{{ .Title }}">
-<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-<meta property="og:url" content="{{ .Permalink }}">
-<meta property="og:locale" content="en_GB">
-<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
-<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:title" content="{{ .Title }}" />
+<meta
+  property="og:description"
+  content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}"
+/>
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:locale" content="en_GB" />
+<meta
+  property="og:type"
+  content="{{ if .IsPage }}article{{ else }}website{{ end }}"
+/>
+<meta property="og:site_name" content="{{ .Site.Title }}" />
 
 <!-- Canonical URL -->
-<link rel="canonical" href="{{ .Permalink }}">
+<link rel="canonical" href="{{ .Permalink }}" />
 
 <!-- Favicon -->
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
 <!-- Montserrat Font -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+  rel="stylesheet"
+/>
 
 <!-- Tailwind CSS (pre-built by npm run build:css) -->
-{{ $css := resources.Get "css/output.css" }}
-{{ if $css }}
-  {{ $css = $css | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}">
+{{ $css := resources.Get "css/output.css" }} {{ if $css }} {{ $css = $css |
+minify | fingerprint }}
+<link
+  rel="stylesheet"
+  href="{{ $css.Permalink }}"
+  integrity="{{ $css.Data.Integrity }}"
+/>
 {{ end }}

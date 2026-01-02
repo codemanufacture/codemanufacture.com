@@ -1,9 +1,5 @@
 {
-  "extends": [
-    "config:base",
-    "docker:disable",
-    "schedule:nonOfficeHours"
-  ],
+  "extends": ["config:base", "docker:disable", "schedule:nonOfficeHours"],
   "automerge": true,
   "major": {
     "automerge": false

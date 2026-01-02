@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   /* Brand Colors */
@@ -11,7 +11,7 @@
   --color-sky-600: #1a7aad;
 
   /* Typography */
-  --font-family-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-family-sans: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
 }
 
 @plugin "@tailwindcss/typography";

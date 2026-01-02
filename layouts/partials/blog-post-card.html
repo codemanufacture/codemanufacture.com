@@ -1,4 +1,6 @@
-<article class="flex flex-col overflow-hidden rounded-lg shadow-lg border-t-4 border-sky-500">
+<article
+  class="flex flex-col overflow-hidden rounded-lg shadow-lg border-t-4 border-sky-500"
+>
   <div class="flex flex-1 flex-col justify-between bg-white p-6">
     <div class="flex-1">
       {{ if .Draft }}
@@ -18,31 +20,36 @@
       {{ end }}
     </div>
     <div class="mt-6 flex items-center">
-      {{ with .Params.authors }}
-      {{ $authorId := index . 0 }}
-      {{ $authors := $.Site.Data.authors }}
-      {{ $author := index $authors $authorId }}
-      {{ if $author }}
+      {{ with .Params.authors }} {{ $authorId := index . 0 }} {{ $authors :=
+      $.Site.Data.authors }} {{ $author := index $authors $authorId }} {{ if
+      $author }}
       <div class="flex-shrink-0">
         {{ if $author.showAvatar }}
         <span class="sr-only">{{ $author.name }}</span>
-        <img class="h-10 w-10 rounded-full" src="{{ $author.avatar }}" alt="{{ $author.name }}">
+        <img
+          class="h-10 w-10 rounded-full"
+          src="{{ $author.avatar }}"
+          alt="{{ $author.name }}"
+        />
         {{ end }}
       </div>
       <div class="ml-3">
         <p class="text-sm font-medium text-gray-900">{{ $author.name }}</p>
         <div class="flex space-x-1 text-sm text-gray-500">
           {{ if not $.Draft }}
-          <time datetime="{{ $.Date.Format "2006-01-02" }}">{{ $.Date.Format "Jan 2, 2006" }}</time>
+          <time datetime='{{ $.Date.Format "2006-01-02" }}'
+            >{{ $.Date.Format "Jan 2, 2006" }}</time
+          >
           <span aria-hidden="true">&middot;</span>
-          <span>{{ math.Round (div (countwords $.Plain) 200.0) }} min read</span>
+          <span
+            >{{ math.Round (div (countwords $.Plain) 200.0) }} min read</span
+          >
           {{ else }}
           <span>Coming soon</span>
           {{ end }}
         </div>
       </div>
-      {{ end }}
-      {{ end }}
+      {{ end }} {{ end }}
     </div>
   </div>
 </article>
