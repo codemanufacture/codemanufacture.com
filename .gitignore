@@ -1,15 +1,19 @@
-# Project dependencies
-.cache
-node_modules
-yarn-error.log
+# Dependencies
+node_modules/
 
-# Build directory
-/public
-/dist
+# Hugo build output
+/public/
+/resources/
+
+# Tailwind output
+assets/css/output.css
+
+# OS files
 .DS_Store
 
-# Tests
-/coverage
-/.log
+# Nix
+result
 
-/src/gatsby-types.d.ts
+# IDE
+.idea/
+.vscode/

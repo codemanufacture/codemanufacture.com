@@ -1,0 +1,19 @@
+{
+  "piotr-kwiecinski": {
+    "name": "Piotr Kwiecinski",
+    "role": "Founder / Magento Expert",
+    "bio": "Founder and Magento Expert at Codemanufacture.",
+    "github": "https://github.com/piotrkwiecinski",
+    "twitter": "https://twitter.com/piokwiecinski",
+    "linkedin": "https://www.linkedin.com/in/pkwiecin/",
+    "avatar": "/images/avatars/piotrkwiecinski.webp",
+    "showAvatar": true
+  },
+  "malgorzata-kwiecinska": {
+    "name": "Malgorzata Kwiecinska",
+    "role": "Senior Magento Developer",
+    "linkedin": "https://www.linkedin.com/in/ma%C5%82gorzata-kwieci%C5%84ska-5492212a/",
+    "avatar": "/images/avatars/malgorzata.webp",
+    "showAvatar": false
+  }
+}

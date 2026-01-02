@@ -1,0 +1,65 @@
+<header class="relative bg-white sticky top-0 z-30 w-full border-b-2 border-gray-100">
+  <div class="mx-auto max-w-7xl px-6">
+    <div class="flex items-center justify-between p-6 md:justify-center md:space-x-10">
+      <!-- Logo -->
+      <div class="flex justify-start md:w-0 md:flex-1">
+        <a href="/">
+          <span class="sr-only">Codemanufacture</span>
+          <img class="h-4 w-auto sm:h-6" src="/images/logo.svg" alt="Codemanufacture">
+        </a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <div class="-my-2 -mr-2 md:hidden">
+        <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
+          <span class="sr-only">Open menu</span>
+          <svg class="h-6 w-6" id="menu-icon-open" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+          <svg class="hidden h-6 w-6" id="menu-icon-close" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex md:items-start md:justify-center">
+        <nav class="hidden space-x-10 md:flex">
+          <a href="/" class="text-base font-medium text-gray-500 hover:text-gray-900">Home</a>
+          <a href="/#services" class="text-base font-medium text-gray-500 hover:text-gray-900">Services</a>
+          <a href="/#blog" class="text-base font-medium text-gray-500 hover:text-gray-900">Blog</a>
+          <a href="/#contact" class="text-base font-medium text-gray-500 hover:text-gray-900">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu panel -->
+  <div class="absolute inset-x-0 top-0 origin-top-right transform p-2 transition md:hidden z-20 hidden" id="mobile-menu">
+    <div class="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+      <div class="px-5 pt-5 pb-6">
+        <div class="flex items-center justify-between">
+          <div>
+            <img class="h-6 w-auto" src="/images/logo.svg" alt="Codemanufacture">
+          </div>
+          <div class="-mr-2">
+            <button type="button" id="mobile-menu-close" class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+              <span class="sr-only">Close menu</span>
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="mt-6">
+          <nav class="grid gap-y-8">
+            <a href="/" class="text-base font-medium text-gray-500 hover:text-gray-900">Home</a>
+            <a href="/#services" class="text-base font-medium text-gray-500 hover:text-gray-900">Services</a>
+            <a href="/#blog" class="text-base font-medium text-gray-500 hover:text-gray-900">Blog</a>
+            <a href="/#contact" class="text-base font-medium text-gray-500 hover:text-gray-900">Contact</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

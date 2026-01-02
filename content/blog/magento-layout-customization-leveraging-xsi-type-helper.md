@@ -1,8 +1,11 @@
 ---
 title: "Magento layout customization: leveraging xsi:type='helper' to pass dynamic data to blocks"
 date: 2023-01-26
-authors: [piotr-kwiecinski]
-comingSoon: true
+authors:
+  - piotr-kwiecinski
+tags:
+  - magento
+draft: false
 summary: Exploring lesser-known yet very powerful method of passing dynamic data to a block.
 ---
 
