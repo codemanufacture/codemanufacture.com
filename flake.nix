@@ -34,7 +34,7 @@
 
             nativeBuildInputs = with pkgs; [
               hugo
-              nodejs_22
+              nodejs_24
               nodePackages.npm
             ];
 
@@ -68,7 +68,7 @@
           devShells.default = pkgs.mkShellNoCC {
             nativeBuildInputs = [
               pkgs.hugo
-              pkgs.nodejs_22
+              pkgs.nodejs_24
               pkgs.awscli2
             ];
 
