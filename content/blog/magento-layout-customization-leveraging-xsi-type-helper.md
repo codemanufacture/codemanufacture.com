@@ -5,7 +5,7 @@ authors:
   - piotr-kwiecinski
 tags:
   - magento
-draft: false
+draft: true
 summary: Exploring lesser-known yet very powerful method of passing dynamic data to a block.
 ---
 
