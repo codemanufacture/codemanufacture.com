@@ -46,6 +46,9 @@
   </div>
 </section>
 
+{{ $posts := where .Site.RegularPages "Section" "blog" }}
+{{ $publishedPosts := where $posts ".Draft" false }}
+{{ if gt (len $publishedPosts) 0 }}
 <!-- Blog Preview Section -->
 <section id="blog" class="relative bg-gray-50 px-6 pt-10 pb-16 lg:px-8 lg:pt-14 lg:pb-28">
   <div class="absolute inset-0">
@@ -56,13 +59,13 @@
       <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">From the blog</h2>
     </div>
     <div class="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
-      {{ $posts := where .Site.RegularPages "Section" "blog" }}
-      {{ range first 3 $posts }}
+      {{ range first 3 $publishedPosts }}
         {{ partial "blog-post-card.html" . }}
       {{ end }}
     </div>
   </div>
 </section>
+{{ end }}
 
 <!-- Contact Section -->
 <section id="contact" class="relative bg-white">
