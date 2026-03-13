@@ -9,13 +9,8 @@
   "telephone": "+39 345 523 5101",
   "logo": "{{ .Site.BaseURL }}images/logo.svg",
   "sameAs": [
-    {{- $socials := slice -}}
-    {{- range $id, $person := .Site.Data.authors -}}
-      {{- with $person.linkedin }}{{ $socials = $socials | append . }}{{ end -}}
-      {{- with $person.twitter }}{{ $socials = $socials | append . }}{{ end -}}
-      {{- with $person.github }}{{ $socials = $socials | append . }}{{ end -}}
-    {{- end -}}
-    {{- delimit $socials ", " -}}
+    "https://github.com/codemanufacture/",
+    "https://www.linkedin.com/company/28184389"
   ],
   "founder": {
     "@type": "Person",
