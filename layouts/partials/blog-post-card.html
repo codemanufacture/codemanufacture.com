@@ -3,14 +3,14 @@
     <div class="post-card__content">
       {{ if .Draft }}
       <div>
-        <p class="post-card__title">{{ .Title }}</p>
+        <h3 class="post-card__title">{{ .Title }}</h3>
         <p class="post-card__summary">
           {{ with .Params.summary }}{{ . }}{{ else }}{{ .Summary }}{{ end }}
         </p>
       </div>
       {{ else }}
       <a href="{{ .RelPermalink }}">
-        <p class="post-card__title">{{ .Title }}</p>
+        <h3 class="post-card__title">{{ .Title }}</h3>
         <p class="post-card__summary">
           {{ with .Params.summary }}{{ . }}{{ else }}{{ .Summary }}{{ end }}
         </p>
