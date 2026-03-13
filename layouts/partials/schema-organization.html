@@ -1,0 +1,43 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Codemanufacture",
+  "url": {{ .Site.BaseURL | jsonify }},
+  "description": {{ .Site.Params.description | jsonify }},
+  "email": "contact@codemanufacture.com",
+  "telephone": "+39 345 523 5101",
+  "logo": "{{ .Site.BaseURL }}images/logo.svg",
+  "sameAs": [
+    {{- $socials := slice -}}
+    {{- range $id, $person := .Site.Data.authors -}}
+      {{- with $person.linkedin }}{{ $socials = $socials | append . }}{{ end -}}
+      {{- with $person.twitter }}{{ $socials = $socials | append . }}{{ end -}}
+      {{- with $person.github }}{{ $socials = $socials | append . }}{{ end -}}
+    {{- end -}}
+    {{- delimit $socials ", " -}}
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "Piotr Kwiecinski"
+  },
+  "knowsAbout": ["Magento", "E-commerce Development", "Adobe Commerce"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "E-commerce Services",
+    "itemListElement": [
+      {{- range $i, $service := .Site.Data.services -}}
+      {{ if $i }},{{ end }}
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": {{ $service.name | jsonify }},
+          "description": {{ $service.description | jsonify }}
+        }
+      }
+      {{- end -}}
+    ]
+  }
+}
+</script>

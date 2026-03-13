@@ -4,10 +4,16 @@
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ .Permalink }}"
+    },
     "headline": {{ .Title | jsonify }},
+    {{ with .Params.summary }}"description": {{ . | jsonify }},{{ end }}
     "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
     {{ with .Lastmod }}"dateModified": "{{ .Format "2006-01-02T15:04:05Z07:00" }}",{{ end }}
     "url": "{{ .Permalink }}",
+    {{ with .Params.image }}"image": "{{ . | absURL }}",{{ end }}
     {{ with .Params.authors }}
     {{ $authorId := index . 0 }}
     {{ $authors := $.Site.Data.authors }}
@@ -16,15 +22,24 @@
     "author": {
       "@type": "Person",
       "name": {{ $author.name | jsonify }}
+      {{- with $author.linkedin -}},
+      "url": {{ . | jsonify }}
+      {{- end }}
     },
     {{ end }}
     {{ end }}
     "publisher": {
       "@type": "Organization",
       "name": "Codemanufacture",
-      "url": "{{ .Site.BaseURL }}"
+      "url": "{{ .Site.BaseURL }}",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ .Site.BaseURL }}images/logo.svg"
+      }
     },
+    "inLanguage": "en-GB",
     {{ with .Params.tags }}"keywords": {{ . | jsonify }},{{ end }}
+    "wordCount": {{ .WordCount }},
     "articleBody": {{ .Plain | jsonify }}
   }
 </script>
