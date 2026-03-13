@@ -1,24 +1,18 @@
 {{ define "main" }}
 <!-- Services Section -->
-<section id="services" class="relative bg-white py-14 sm:py-20 lg:py-24">
-  <div
-    class="mx-auto max-w-md px-6 text-center sm:max-w-3xl lg:max-w-7xl lg:px-8"
-  >
-    <h2 class="text-lg font-semibold text-sky-600">Services</h2>
-    <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-      Manufacturing your success
-    </p>
-    <div class="mt-20">
-      <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
+<section id="services" class="section-services">
+  <div class="section-services__inner">
+    <h2 class="section-services__label">Services</h2>
+    <p class="section-services__title">Manufacturing your success</p>
+    <div class="section-services__grid">
+      <div>
         {{ range .Site.Data.services }}
-        <div class="pt-6">
-          <div class="flow-root rounded-lg bg-gray-50 px-6 pb-8">
-            <div class="-mt-6">
+        <div class="service-card">
+          <div class="service-card__inner">
+            <div class="service-card__content">
               <div>
-                <span
-                  class="inline-flex items-center justify-center rounded-xl bg-sky-500 p-3 shadow-lg"
-                >
-                  <div class="h-8 w-8 text-white">
+                <span class="service-card__icon-wrapper">
+                  <div class="service-card__icon">
                     {{ if eq .icon "shopping-cart" }}
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -65,14 +59,8 @@
                   </div>
                 </span>
               </div>
-              <h3
-                class="mt-8 text-lg font-semibold leading-8 tracking-tight text-gray-900"
-              >
-                {{ .name }}
-              </h3>
-              <p class="mt-5 text-base leading-7 text-gray-600">
-                {{ .description }}
-              </p>
+              <h3 class="service-card__title">{{ .name }}</h3>
+              <p class="service-card__description">{{ .description }}</p>
             </div>
           </div>
         </div>
@@ -85,20 +73,15 @@
 {{ $posts := where .Site.RegularPages "Section" "blog" }} {{ $publishedPosts :=
 where $posts ".Draft" false }} {{ if gt (len $publishedPosts) 0 }}
 <!-- Blog Preview Section -->
-<section
-  id="blog"
-  class="relative bg-gray-50 px-6 pt-10 pb-16 lg:px-8 lg:pt-14 lg:pb-28"
->
-  <div class="absolute inset-0">
-    <div class="h-1/3 bg-white sm:h-2/3"></div>
+<section id="blog" class="section-blog">
+  <div class="section-blog__bg">
+    <div></div>
   </div>
-  <div class="relative mx-auto max-w-7xl">
-    <div class="text-center">
-      <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-        From the blog
-      </h2>
+  <div class="section-blog__inner">
+    <div>
+      <h2 class="section-blog__title">From the blog</h2>
     </div>
-    <div class="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
+    <div class="section-blog__grid">
       {{ range first 3 $publishedPosts }} {{ partial "blog-post-card.html" . }}
       {{ end }}
     </div>
@@ -107,23 +90,20 @@ where $posts ".Draft" false }} {{ if gt (len $publishedPosts) 0 }}
 {{ end }}
 
 <!-- Contact Section -->
-<section id="contact" class="relative bg-white">
-  <div class="relative mx-auto max-w-7xl lg:grid lg:grid-cols-5">
-    <div class="py-16 px-6 lg:col-span-2 lg:px-8 lg:py-24 xl:pr-12">
-      <div class="mx-auto max-w-lg">
-        <h2 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
-          Let's work together
-        </h2>
-        <p class="mt-3 text-lg leading-6 text-gray-500">
+<section id="contact" class="section-contact">
+  <div class="section-contact__inner">
+    <div class="section-contact__content">
+      <div class="section-contact__body">
+        <h2 class="section-contact__title">Let's work together</h2>
+        <p class="section-contact__subtitle">
           We'd love to hear from you! Send us a message using email or give us a
           call.
         </p>
-        <dl class="mt-8 text-base text-gray-500">
-          <div class="mt-6">
+        <dl class="section-contact__details">
+          <div class="section-contact__detail-row">
             <dt class="sr-only">Phone number</dt>
-            <dd class="flex">
+            <dd>
               <svg
-                class="h-6 w-6 flex-shrink-0 text-gray-400"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
@@ -136,14 +116,13 @@ where $posts ".Draft" false }} {{ if gt (len $publishedPosts) 0 }}
                   d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
                 />
               </svg>
-              <span class="ml-3">+39 345 523 5101</span>
+              <span>+39 345 523 5101</span>
             </dd>
           </div>
-          <div class="mt-3">
+          <div class="section-contact__detail-row">
             <dt class="sr-only">Email</dt>
-            <dd class="flex">
+            <dd>
               <svg
-                class="h-6 w-6 flex-shrink-0 text-gray-400"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
@@ -156,11 +135,8 @@ where $posts ".Draft" false }} {{ if gt (len $publishedPosts) 0 }}
                   d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
                 />
               </svg>
-              <span class="ml-3">
-                <a
-                  href="mailto:contact@codemanufacture.com"
-                  class="text-sky-600 hover:text-sky-500"
-                >
+              <span>
+                <a href="mailto:contact@codemanufacture.com">
                   contact@codemanufacture.com
                 </a>
               </span>
@@ -173,48 +149,41 @@ where $posts ".Draft" false }} {{ if gt (len $publishedPosts) 0 }}
 </section>
 
 <!-- Team Section -->
-<section class="bg-gray-50">
-  <div class="mx-auto max-w-7xl pt-10 pb-20 px-6 lg:px-8 lg:pt-12 lg:pb-24">
-    <div class="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8">
-      <div class="space-y-5 sm:space-y-4">
-        <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">
-          Meet our team
-        </h2>
-        <p class="text-xl text-gray-500">
+<section class="section-team">
+  <div class="section-team__inner">
+    <div class="section-team__grid">
+      <div class="section-team__intro">
+        <h2 class="section-team__title">Meet our team</h2>
+        <p class="section-team__subtitle">
           A small team of seasoned Magento developers with over a decade of
           experience.
         </p>
       </div>
-      <div class="lg:col-span-2 md:mt-12">
-        <ul
-          role="list"
-          class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-12 sm:space-y-0 lg:gap-x-8"
-        >
+      <div class="section-team__members">
+        <ul role="list" class="section-team__list">
           {{ range $id, $person := .Site.Data.authors }}
           <li>
-            <div class="flex items-center space-x-4 lg:space-x-6">
+            <div class="team-member">
               {{ if $person.showAvatar }}
               <img
-                class="h-16 w-16 rounded-full lg:h-20 lg:w-20"
+                class="team-member__avatar"
                 src="{{ $person.avatar }}"
                 alt="{{ $person.name }}"
               />
               {{ end }}
-              <div class="space-y-1 text-lg font-medium leading-6">
+              <div class="team-member__info">
                 <h3>{{ $person.name }}</h3>
-                <p class="text-sky-600">{{ $person.role }}</p>
-                <ul role="list" class="flex space-x-5">
+                <p class="team-member__role">{{ $person.role }}</p>
+                <ul role="list" class="team-member__social">
                   {{ with $person.twitter }}
                   <li>
                     <a
                       href="{{ . }}"
-                      class="text-gray-400 hover:text-gray-500"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       <span class="sr-only">Twitter</span>
                       <svg
-                        class="h-5 w-5"
                         aria-hidden="true"
                         fill="currentColor"
                         viewBox="0 0 20 20"
@@ -229,13 +198,11 @@ where $posts ".Draft" false }} {{ if gt (len $publishedPosts) 0 }}
                   <li>
                     <a
                       href="{{ . }}"
-                      class="text-gray-400 hover:text-gray-500"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       <span class="sr-only">LinkedIn</span>
                       <svg
-                        class="h-5 w-5"
                         aria-hidden="true"
                         fill="currentColor"
                         viewBox="0 0 20 20"

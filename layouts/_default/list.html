@@ -1,17 +1,13 @@
 {{ define "main" }}
-<section class="py-16 lg:py-24">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <header class="mx-auto max-w-2xl text-center mb-16">
-      <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-        {{ .Title }}
-      </h1>
+<section class="default-list">
+  <div class="default-list__inner">
+    <header class="default-list__header">
+      <h1 class="default-list__title">{{ .Title }}</h1>
       {{ with .Description }}
-      <p class="mt-2 text-lg leading-8 text-gray-600">{{ . }}</p>
+      <p class="default-list__description">{{ . }}</p>
       {{ end }}
     </header>
-    <div
-      class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3"
-    >
+    <div class="default-list__grid">
       {{ range .Pages }} {{ partial "blog-post-card.html" . }} {{ end }}
     </div>
   </div>

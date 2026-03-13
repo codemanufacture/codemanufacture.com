@@ -34,14 +34,9 @@
 
             nativeBuildInputs = with pkgs; [
               hugo
-              nodejs_24
-              nodePackages.npm
             ];
 
             buildPhase = ''
-              export HOME=$(mktemp -d)
-              npm ci
-              npm run build:css
               hugo --minify
             '';
 
@@ -61,8 +56,6 @@
               "LICENSE"
               "public/*"
               "resources/*"
-              "package.json"
-              "package-lock.json"
             ];
 
             programs.nixfmt.enable = true;
@@ -89,7 +82,6 @@
           devShells.default = pkgs.mkShellNoCC {
             nativeBuildInputs = [
               pkgs.hugo
-              pkgs.nodejs_24
               pkgs.awscli2
             ];
 

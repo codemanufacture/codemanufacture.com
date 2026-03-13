@@ -1,12 +1,10 @@
 {{ define "main" }}
-<article class="py-16 lg:py-24">
-  <div class="mx-auto max-w-3xl px-6 lg:px-8">
-    <header class="mb-10">
-      <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-        {{ .Title }}
-      </h1>
+<article class="default-single">
+  <div class="default-single__inner">
+    <header class="default-single__header">
+      <h1 class="default-single__title">{{ .Title }}</h1>
     </header>
-    <div class="prose prose-lg prose-sky max-w-none">{{ .Content }}</div>
+    <div class="prose">{{ .Content }}</div>
   </div>
 </article>
 {{ end }}

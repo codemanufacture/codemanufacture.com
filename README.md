@@ -2,14 +2,14 @@
 
 The official website for [Codemanufacture](https://codemanufacture.com) - Magento experts.
 
-Built with [Hugo](https://gohugo.io/) and [Tailwind CSS v4](https://tailwindcss.com/).
+Built with [Hugo](https://gohugo.io/) and modern CSS (nesting, `@layer`, custom properties, `oklch()`).
 
 ## Development
 
 ### Prerequisites
 
 - [Nix](https://nixos.org/) with flakes enabled (recommended)
-- Or: Hugo extended and Node.js 22+
+- Or: Hugo extended
 
 ### Using Nix (recommended)
 
@@ -17,23 +17,13 @@ Built with [Hugo](https://gohugo.io/) and [Tailwind CSS v4](https://tailwindcss.
 # Enter the development shell
 nix develop
 
-# Install npm dependencies
-npm install
-
 # Start development server
-npm run watch:css &
 hugo server
 ```
 
 ### Manual Setup
 
 ```bash
-# Install dependencies
-npm install
-
-# Build CSS
-npm run build:css
-
 # Start Hugo development server
 hugo server
 ```
@@ -43,10 +33,6 @@ The site will be available at `http://localhost:1313`.
 ## Build
 
 ```bash
-# Build CSS
-npm run build:css
-
-# Build the site
 hugo --minify
 ```
 
@@ -69,7 +55,7 @@ Required GitHub Secrets:
 .
 ├── archetypes/          # Content templates
 ├── assets/
-│   ├── css/             # Tailwind CSS
+│   ├── css/             # Stylesheets (modern CSS)
 │   └── js/              # JavaScript
 ├── content/
 │   ├── blog/            # Blog posts
@@ -84,7 +70,6 @@ Required GitHub Secrets:
 ├── static/
 │   └── images/          # Static images
 ├── hugo.toml            # Hugo configuration
-├── package.json         # Node dependencies
 └── flake.nix            # Nix configuration
 ```
 

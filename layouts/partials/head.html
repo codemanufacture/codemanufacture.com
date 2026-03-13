@@ -38,12 +38,10 @@
   rel="stylesheet"
 />
 
-<!-- Tailwind CSS (pre-built by npm run build:css) -->
-{{ $css := resources.Get "css/output.css" }} {{ if $css }} {{ $css = $css |
-minify | fingerprint }}
+<!-- CSS -->
+{{ $css := resources.Get "css/main.css" | minify | fingerprint }}
 <link
   rel="stylesheet"
   href="{{ $css.Permalink }}"
   integrity="{{ $css.Data.Integrity }}"
 />
-{{ end }}

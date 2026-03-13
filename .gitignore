@@ -1,12 +1,6 @@
-# Dependencies
-node_modules/
-
 # Hugo build output
 /public/
 /resources/
-
-# Tailwind output
-assets/css/output.css
 
 # OS files
 .DS_Store
