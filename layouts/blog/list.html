@@ -1,4 +1,29 @@
 {{ define "main" }}
+<!-- JSON-LD Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": {{ .Title | jsonify }},
+  "description": "Insights and best practices for Magento development.",
+  "url": "{{ .Permalink }}",
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {{- range $i, $page := .Pages -}}
+      {{ if $i }},{{ end }}
+      {
+        "@type": "ListItem",
+        "position": {{ add $i 1 }},
+        "url": "{{ $page.Permalink }}",
+        "name": {{ $page.Title | jsonify }}
+      }
+      {{- end -}}
+    ]
+  }
+}
+</script>
+
 <section class="blog-listing">
   <div class="split-bg">
     <div></div>

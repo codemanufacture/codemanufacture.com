@@ -1,38 +1,36 @@
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "Codemanufacture",
-  "url": {{ .Site.BaseURL | jsonify }},
-  "description": {{ .Site.Params.description | jsonify }},
-  "email": "contact@codemanufacture.com",
-  "telephone": "+39 345 523 5101",
-  "logo": "{{ .Site.BaseURL }}images/logo.svg",
-  "sameAs": [
-    "https://github.com/codemanufacture/",
-    "https://www.linkedin.com/company/28184389"
-  ],
-  "founder": {
-    "@type": "Person",
-    "name": "Piotr Kwiecinski"
-  },
-  "knowsAbout": ["Magento", "E-commerce Development", "Adobe Commerce"],
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "E-commerce Services",
-    "itemListElement": [
-      {{- range $i, $service := .Site.Data.services -}}
-      {{ if $i }},{{ end }}
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": {{ $service.name | jsonify }},
-          "description": {{ $service.description | jsonify }}
-        }
-      }
-      {{- end -}}
-    ]
-  }
-}
+{{ $org := dict
+  "@context" "https://schema.org"
+  "@type" "Organization"
+  "name" "Codemanufacture"
+  "url" .Site.BaseURL
+  "description" .Site.Params.description
+  "email" "contact@codemanufacture.com"
+  "telephone" "+39 345 523 5101"
+  "logo" (printf "%simages/logo.svg" .Site.BaseURL)
+  "sameAs" (slice "https://github.com/codemanufacture/" "https://www.linkedin.com/company/28184389")
+  "founder" (dict "@type" "Person" "name" "Piotr Kwiecinski")
+  "knowsAbout" (slice "Magento" "E-commerce Development" "Adobe Commerce")
+}}
+
+{{- $employees := slice -}}
+{{- range $id, $person := .Site.Data.authors -}}
+  {{- $emp := dict "@type" "Person" "name" $person.name "jobTitle" $person.role -}}
+  {{- with $person.linkedin -}}
+    {{- $emp = merge $emp (dict "sameAs" (slice .)) -}}
+  {{- end -}}
+  {{- with $person.avatar -}}
+    {{- $emp = merge $emp (dict "image" (printf "%s%s" $.Site.BaseURL (strings.TrimPrefix "/" .))) -}}
+  {{- end -}}
+  {{- $employees = $employees | append $emp -}}
+{{- end -}}
+{{- $org = merge $org (dict "employee" $employees) -}}
+
+{{- $services := slice -}}
+{{- range .Site.Data.services -}}
+  {{- $services = $services | append (dict "@type" "Offer" "itemOffered" (dict "@type" "Service" "name" .name "description" .description)) -}}
+{{- end -}}
+{{- $org = merge $org (dict "hasOfferCatalog" (dict "@type" "OfferCatalog" "name" "E-commerce Services" "itemListElement" $services)) -}}
+
+{{- $org | jsonify (dict "indent" "  ") | safeJS -}}
 </script>
