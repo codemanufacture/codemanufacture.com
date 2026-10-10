@@ -48,7 +48,10 @@
   <div class="blog-post__inner">
     <header class="blog-post__header">
       <div class="blog-post__tags">
-        <time datetime='{{ .Date.Format "2006-01-02" }}' class="blog-post__date">
+        <time
+          datetime='{{ .Date.Format "2006-01-02" }}'
+          class="blog-post__date"
+        >
           {{ .Date.Format "January 2, 2006" }}
         </time>
         {{ range .Params.tags }}
@@ -63,10 +66,7 @@
       }} {{ if $author }}
       <div class="blog-post__author">
         {{ if $author.showAvatar }}
-        <img
-          src="{{ $author.avatar }}"
-          alt="{{ $author.name }}"
-        />
+        <img src="{{ $author.avatar }}" alt="{{ $author.name }}" />
         {{ end }}
         <div class="blog-post__author-info">
           <p class="blog-post__author-name">{{ $author.name }}</p>

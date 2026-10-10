@@ -31,12 +31,10 @@
               <div>
                 <span class="service-card__icon-wrapper">
                   <div class="service-card__icon">
-                    {{ if eq .icon "shopping-cart" }}
-                    {{- partial "icons/icon-shopping-cart.html" -}}
-                    {{ else if eq .icon "wrench" }}
-                    {{- partial "icons/icon-wrench.html" -}}
-                    {{ else if eq .icon "code" }}
-                    {{- partial "icons/icon-code.html" -}}
+                    {{ if eq .icon "shopping-cart" }} {{- partial
+                    "icons/icon-shopping-cart.html" -}} {{ else if eq .icon
+                    "wrench" }} {{- partial "icons/icon-wrench.html" -}} {{ else
+                    if eq .icon "code" }} {{- partial "icons/icon-code.html" -}}
                     {{ end }}
                   </div>
                 </span>
@@ -135,22 +133,14 @@ where $posts ".Draft" false }} {{ if gt (len $publishedPosts) 0 }}
                 <ul role="list" class="team-member__social">
                   {{ with $person.twitter }}
                   <li>
-                    <a
-                      href="{{ . }}"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
+                    <a href="{{ . }}" target="_blank" rel="noopener noreferrer">
                       <span class="sr-only">Twitter</span>
                       {{- partial "icons/social-twitter-20.html" -}}
                     </a>
                   </li>
                   {{ end }} {{ with $person.linkedin }}
                   <li>
-                    <a
-                      href="{{ . }}"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
+                    <a href="{{ . }}" target="_blank" rel="noopener noreferrer">
                       <span class="sr-only">LinkedIn</span>
                       {{- partial "icons/social-linkedin-20.html" -}}
                     </a>

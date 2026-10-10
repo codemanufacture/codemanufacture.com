@@ -7,7 +7,10 @@
   font-weight: 400 700;
   font-display: swap;
   src: url('/fonts/montserrat-latin-ext.woff2') format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+    U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 @font-face {
   font-family: 'Montserrat';
@@ -15,7 +18,10 @@
   font-weight: 400 700;
   font-display: swap;
   src: url('/fonts/montserrat-latin.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
   font-family: 'Outfit';
@@ -23,7 +29,10 @@
   font-weight: 600 800;
   font-display: swap;
   src: url('/fonts/outfit-latin-ext.woff2') format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+    U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 @font-face {
   font-family: 'Outfit';
@@ -31,7 +40,10 @@
   font-weight: 600 800;
   font-display: swap;
   src: url('/fonts/outfit-latin.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
 }
 
 @layer reset, base, components, utilities;
@@ -57,7 +69,9 @@
   /* Typography */
   --font-display: 'Outfit', ui-sans-serif, system-ui, sans-serif;
   --font-sans: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
-  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --font-mono:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+    'Courier New', monospace;
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;
   --text-base: 1rem;
@@ -102,8 +116,10 @@
   --radius-lg: 0.5rem;
   --radius-xl: 0.75rem;
   --radius-full: 9999px;
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-lg:
+    0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl:
+    0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --transition-duration: 0.15s;
   --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
   --color-focus-ring: oklch(58.5% 0.233 277.117);
@@ -132,7 +148,9 @@
    Reset
    ============================================================ */
 @layer reset {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     box-sizing: border-box;
     border: 0 solid;
     margin: 0;
@@ -161,7 +179,12 @@
     text-decoration: underline dotted;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-size: inherit;
     font-weight: inherit;
   }
@@ -171,11 +194,15 @@
     text-decoration: inherit;
   }
 
-  b, strong {
+  b,
+  strong {
     font-weight: bolder;
   }
 
-  code, kbd, samp, pre {
+  code,
+  kbd,
+  samp,
+  pre {
     font-family: var(--font-mono);
     font-size: 1em;
   }
@@ -184,15 +211,20 @@
     font-size: 80%;
   }
 
-  sub, sup {
+  sub,
+  sup {
     font-size: 75%;
     line-height: 0;
     position: relative;
     vertical-align: baseline;
   }
 
-  sub { bottom: -0.25em; }
-  sup { top: -0.5em; }
+  sub {
+    bottom: -0.25em;
+  }
+  sup {
+    top: -0.5em;
+  }
 
   table {
     text-indent: 0;
@@ -200,7 +232,11 @@
     border-collapse: collapse;
   }
 
-  button, input, select, optgroup, textarea {
+  button,
+  input,
+  select,
+  optgroup,
+  textarea {
     font: inherit;
     letter-spacing: inherit;
     color: inherit;
@@ -213,23 +249,36 @@
     color: color-mix(in oklab, currentcolor 50%, transparent);
   }
 
-  textarea { resize: vertical; }
+  textarea {
+    resize: vertical;
+  }
 
-  ol, ul, menu {
+  ol,
+  ul,
+  menu {
     list-style: none;
   }
 
-  img, svg, video, canvas, audio, iframe, embed, object {
+  img,
+  svg,
+  video,
+  canvas,
+  audio,
+  iframe,
+  embed,
+  object {
     display: block;
     vertical-align: middle;
   }
 
-  img, video {
+  img,
+  video {
     max-width: 100%;
     height: auto;
   }
 
-  button, input:where([type='button'], [type='reset'], [type='submit']) {
+  button,
+  input:where([type='button'], [type='reset'], [type='submit']) {
     appearance: button;
   }
 
@@ -249,7 +298,8 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  h1, h2 {
+  h1,
+  h2 {
     font-family: var(--font-display);
   }
 }
@@ -258,7 +308,6 @@
    Components
    ============================================================ */
 @layer components {
-
   /* --- Shared: Section Title --- */
   .section-services__title,
   .section-blog__title,
@@ -289,7 +338,9 @@
       height: 33.3333%;
       background-color: var(--color-white);
 
-      @media (min-width: 40rem) { height: 66.6667%; }
+      @media (min-width: 40rem) {
+        height: 66.6667%;
+      }
     }
   }
 
@@ -406,7 +457,9 @@
         color: var(--color-gray-500);
 
         @media (hover: hover) {
-          &:hover { color: var(--color-gray-900); }
+          &:hover {
+            color: var(--color-gray-900);
+          }
         }
       }
     }
@@ -498,7 +551,9 @@
         color: var(--color-gray-500);
 
         @media (hover: hover) {
-          &:hover { color: var(--color-gray-900); }
+          &:hover {
+            color: var(--color-gray-900);
+          }
         }
       }
     }
@@ -525,7 +580,11 @@
         linear-gradient(var(--color-gray-200) 1px, transparent 1px),
         linear-gradient(90deg, var(--color-gray-200) 1px, transparent 1px);
       background-size: 4rem 4rem;
-      mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 20%, transparent 70%);
+      mask-image: radial-gradient(
+        ellipse 70% 60% at 50% 50%,
+        black 20%,
+        transparent 70%
+      );
     }
 
     & .hero__inner {
@@ -584,8 +643,9 @@
       font-weight: var(--font-semibold);
       color: var(--color-white);
       box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
-      transition: background-color var(--transition-duration) var(--transition-timing),
-                  box-shadow var(--transition-duration) var(--transition-timing);
+      transition:
+        background-color var(--transition-duration) var(--transition-timing),
+        box-shadow var(--transition-duration) var(--transition-timing);
 
       @media (hover: hover) {
         &:hover {
@@ -607,7 +667,8 @@
 
       & span {
         display: inline-block;
-        transition: transform var(--transition-duration) var(--transition-timing);
+        transition: transform var(--transition-duration)
+          var(--transition-timing);
       }
 
       @media (hover: hover) {
@@ -658,7 +719,9 @@
         color: var(--color-gray-600);
 
         @media (hover: hover) {
-          &:hover { color: var(--color-gray-200); }
+          &:hover {
+            color: var(--color-gray-200);
+          }
         }
       }
     }
@@ -673,7 +736,9 @@
         color: var(--color-gray-400);
 
         @media (hover: hover) {
-          &:hover { color: var(--color-gray-500); }
+          &:hover {
+            color: var(--color-gray-500);
+          }
         }
       }
 
@@ -700,7 +765,9 @@
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
     border-top: 4px solid var(--color-brand);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
 
     @media (hover: hover) {
       &:hover {
@@ -721,7 +788,8 @@
     & .post-card__content {
       flex: 1;
 
-      & a, & > div {
+      & a,
+      & > div {
         display: block;
         margin-top: var(--space-2);
       }
@@ -783,8 +851,12 @@
     background-color: var(--color-white);
     padding-block: var(--space-14);
 
-    @media (min-width: 40rem) { padding-block: var(--space-20); }
-    @media (min-width: 64rem) { padding-block: var(--space-24); }
+    @media (min-width: 40rem) {
+      padding-block: var(--space-20);
+    }
+    @media (min-width: 64rem) {
+      padding-block: var(--space-24);
+    }
 
     & .section-services__inner {
       max-width: var(--max-w-md);
@@ -792,7 +864,9 @@
       padding-inline: var(--space-6);
       text-align: center;
 
-      @media (min-width: 40rem) { max-width: var(--max-w-3xl); }
+      @media (min-width: 40rem) {
+        max-width: var(--max-w-3xl);
+      }
       @media (min-width: 64rem) {
         max-width: var(--max-w-7xl);
         padding-inline: var(--space-8);
@@ -818,8 +892,12 @@
         grid-template-columns: repeat(1, minmax(0, 1fr));
         gap: var(--space-12);
 
-        @media (min-width: 40rem) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-        @media (min-width: 64rem) { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        @media (min-width: 40rem) {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        @media (min-width: 64rem) {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
       }
     }
   }
@@ -833,7 +911,9 @@
       background-color: var(--color-gray-50);
       padding-inline: var(--space-6);
       padding-bottom: var(--space-8);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 
       @media (hover: hover) {
         &:hover {
@@ -989,7 +1069,9 @@
         color: var(--color-brand-hover);
 
         @media (hover: hover) {
-          &:hover { color: var(--color-brand); }
+          &:hover {
+            color: var(--color-brand);
+          }
         }
       }
     }
@@ -1024,7 +1106,9 @@
       & > :not(:last-child) {
         margin-bottom: var(--space-5);
 
-        @media (min-width: 40rem) { margin-bottom: var(--space-4); }
+        @media (min-width: 40rem) {
+          margin-bottom: var(--space-4);
+        }
       }
     }
 
@@ -1054,7 +1138,9 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: var(--space-12);
 
-        & > :not(:last-child) { margin-bottom: 0; }
+        & > :not(:last-child) {
+          margin-bottom: 0;
+        }
       }
 
       @media (min-width: 64rem) {
@@ -1068,7 +1154,9 @@
     align-items: center;
     gap: var(--space-4);
 
-    @media (min-width: 64rem) { gap: var(--space-6); }
+    @media (min-width: 64rem) {
+      gap: var(--space-6);
+    }
 
     & .team-member__avatar {
       height: var(--space-16);
@@ -1086,7 +1174,9 @@
       line-height: var(--space-6);
       font-weight: var(--font-medium);
 
-      & > :not(:last-child) { margin-bottom: var(--space-1); }
+      & > :not(:last-child) {
+        margin-bottom: var(--space-1);
+      }
     }
 
     & .team-member__role {
@@ -1101,7 +1191,9 @@
         color: var(--color-gray-400);
 
         @media (hover: hover) {
-          &:hover { color: var(--color-gray-500); }
+          &:hover {
+            color: var(--color-gray-500);
+          }
         }
       }
 
@@ -1157,14 +1249,18 @@
   .blog-post {
     padding-block: var(--space-16);
 
-    @media (min-width: 64rem) { padding-block: var(--space-24); }
+    @media (min-width: 64rem) {
+      padding-block: var(--space-24);
+    }
 
     & .blog-post__inner {
       max-width: var(--max-w-3xl);
       margin-inline: auto;
       padding-inline: var(--space-6);
 
-      @media (min-width: 64rem) { padding-inline: var(--space-8); }
+      @media (min-width: 64rem) {
+        padding-inline: var(--space-8);
+      }
     }
 
     & .blog-post__header {
@@ -1244,7 +1340,9 @@
         color: var(--color-brand-hover);
 
         @media (hover: hover) {
-          &:hover { color: var(--color-brand); }
+          &:hover {
+            color: var(--color-brand);
+          }
         }
       }
     }
@@ -1254,14 +1352,18 @@
   .default-list {
     padding-block: var(--space-16);
 
-    @media (min-width: 64rem) { padding-block: var(--space-24); }
+    @media (min-width: 64rem) {
+      padding-block: var(--space-24);
+    }
 
     & .default-list__inner {
       max-width: var(--max-w-7xl);
       margin-inline: auto;
       padding-inline: var(--space-6);
 
-      @media (min-width: 64rem) { padding-inline: var(--space-8); }
+      @media (min-width: 64rem) {
+        padding-inline: var(--space-8);
+      }
     }
 
     & .default-list__header {
@@ -1298,20 +1400,23 @@
   .default-single {
     padding-block: var(--space-16);
 
-    @media (min-width: 64rem) { padding-block: var(--space-24); }
+    @media (min-width: 64rem) {
+      padding-block: var(--space-24);
+    }
 
     & .default-single__inner {
       max-width: var(--max-w-3xl);
       margin-inline: auto;
       padding-inline: var(--space-6);
 
-      @media (min-width: 64rem) { padding-inline: var(--space-8); }
+      @media (min-width: 64rem) {
+        padding-inline: var(--space-8);
+      }
     }
 
     & .default-single__header {
       margin-bottom: var(--space-10);
     }
-
   }
 
   /* --- Error Page (404) --- */
@@ -1327,8 +1432,12 @@
       padding: var(--space-32) var(--space-6);
       text-align: center;
 
-      @media (min-width: 40rem) { padding-block: var(--space-40); }
-      @media (min-width: 64rem) { padding-inline: var(--space-8); }
+      @media (min-width: 40rem) {
+        padding-block: var(--space-40);
+      }
+      @media (min-width: 64rem) {
+        padding-inline: var(--space-8);
+      }
     }
 
     & .error-page__code {
@@ -1359,7 +1468,9 @@
       line-height: 1.5;
       color: var(--color-gray-600);
 
-      @media (min-width: 40rem) { margin-top: var(--space-6); }
+      @media (min-width: 40rem) {
+        margin-top: var(--space-6);
+      }
     }
 
     & .error-page__actions {
@@ -1375,7 +1486,9 @@
       color: var(--color-brand-hover);
 
       @media (hover: hover) {
-        &:hover { color: var(--color-brand); }
+        &:hover {
+          color: var(--color-brand);
+        }
       }
     }
   }
@@ -1395,12 +1508,16 @@
     cursor: pointer;
 
     @media (hover: hover) {
-      &:hover { background-color: var(--color-brand-hover); }
+      &:hover {
+        background-color: var(--color-brand-hover);
+      }
     }
 
     &:focus {
       outline: none;
-      box-shadow: 0 0 0 2px var(--color-brand), 0 0 0 4px var(--color-white);
+      box-shadow:
+        0 0 0 2px var(--color-brand),
+        0 0 0 4px var(--color-white);
     }
 
     & svg {
@@ -1446,11 +1563,21 @@
       list-style-type: decimal;
     }
 
-    & :where(ol[type='A']) { list-style-type: upper-alpha; }
-    & :where(ol[type='a']) { list-style-type: lower-alpha; }
-    & :where(ol[type='I']) { list-style-type: upper-roman; }
-    & :where(ol[type='i']) { list-style-type: lower-roman; }
-    & :where(ol[type='1']) { list-style-type: decimal; }
+    & :where(ol[type='A']) {
+      list-style-type: upper-alpha;
+    }
+    & :where(ol[type='a']) {
+      list-style-type: lower-alpha;
+    }
+    & :where(ol[type='I']) {
+      list-style-type: upper-roman;
+    }
+    & :where(ol[type='i']) {
+      list-style-type: lower-roman;
+    }
+    & :where(ol[type='1']) {
+      list-style-type: decimal;
+    }
 
     & :where(ul) {
       margin-top: 1.33333em;
@@ -1485,7 +1612,7 @@
       color: var(--prose-quotes);
       border-inline-start-width: 0.25rem;
       border-inline-start-color: var(--prose-quote-borders);
-      quotes: "\201C" "\201D" "\2018" "\2019";
+      quotes: '\201C' '\201D' '\2018' '\2019';
       margin-top: 1.66667em;
       margin-bottom: 1.66667em;
       padding-inline-start: 1em;
@@ -1493,8 +1620,12 @@
       font-weight: var(--font-medium);
     }
 
-    & :where(blockquote p:first-of-type)::before { content: open-quote; }
-    & :where(blockquote p:last-of-type)::after { content: close-quote; }
+    & :where(blockquote p:first-of-type)::before {
+      content: open-quote;
+    }
+    & :where(blockquote p:last-of-type)::after {
+      content: close-quote;
+    }
 
     & :where(h1) {
       color: var(--prose-headings);
@@ -1506,7 +1637,10 @@
       text-wrap: balance;
     }
 
-    & :where(h1 strong) { color: inherit; font-weight: 900; }
+    & :where(h1 strong) {
+      color: inherit;
+      font-weight: 900;
+    }
 
     & :where(h2) {
       color: var(--prose-headings);
@@ -1518,7 +1652,10 @@
       text-wrap: balance;
     }
 
-    & :where(h2 strong) { color: inherit; font-weight: 800; }
+    & :where(h2 strong) {
+      color: inherit;
+      font-weight: 800;
+    }
 
     & :where(h3) {
       color: var(--prose-headings);
@@ -1530,7 +1667,10 @@
       text-wrap: balance;
     }
 
-    & :where(h3 strong) { color: inherit; font-weight: var(--font-bold); }
+    & :where(h3 strong) {
+      color: inherit;
+      font-weight: var(--font-bold);
+    }
 
     & :where(h4) {
       color: var(--prose-headings);
@@ -1541,7 +1681,10 @@
       text-wrap: balance;
     }
 
-    & :where(h4 strong) { color: inherit; font-weight: var(--font-bold); }
+    & :where(h4 strong) {
+      color: inherit;
+      font-weight: var(--font-bold);
+    }
 
     & :where(img),
     & :where(video) {
@@ -1577,16 +1720,26 @@
 
     & :where(code)::before,
     & :where(code)::after {
-      content: "`";
+      content: '`';
     }
 
     & :where(a code),
-    & :where(h1 code) { color: inherit; }
-    & :where(h2 code) { color: inherit; font-size: 0.866667em; }
-    & :where(h3 code) { color: inherit; font-size: 0.875em; }
+    & :where(h1 code) {
+      color: inherit;
+    }
+    & :where(h2 code) {
+      color: inherit;
+      font-size: 0.866667em;
+    }
+    & :where(h3 code) {
+      color: inherit;
+      font-size: 0.875em;
+    }
     & :where(h4 code),
     & :where(blockquote code),
-    & :where(thead th code) { color: inherit; }
+    & :where(thead th code) {
+      color: inherit;
+    }
 
     & :where(pre) {
       color: var(--prose-pre-code);
@@ -1639,32 +1792,48 @@
       font-weight: var(--font-semibold);
     }
 
-    & :where(thead th:first-child) { padding-inline-start: 0; }
-    & :where(thead th:last-child) { padding-inline-end: 0; }
+    & :where(thead th:first-child) {
+      padding-inline-start: 0;
+    }
+    & :where(thead th:last-child) {
+      padding-inline-end: 0;
+    }
 
     & :where(tbody tr) {
       border-bottom-width: 1px;
       border-bottom-color: var(--prose-td-borders);
     }
 
-    & :where(tbody tr:last-child) { border-bottom-width: 0; }
-    & :where(tbody td) { vertical-align: baseline; }
+    & :where(tbody tr:last-child) {
+      border-bottom-width: 0;
+    }
+    & :where(tbody td) {
+      vertical-align: baseline;
+    }
 
     & :where(tfoot) {
       border-top-width: 1px;
       border-top-color: var(--prose-th-borders);
     }
 
-    & :where(tfoot td) { vertical-align: top; }
+    & :where(tfoot td) {
+      vertical-align: top;
+    }
 
-    & :where(th, td) { text-align: start; }
+    & :where(th, td) {
+      text-align: start;
+    }
 
     & :where(tbody td, tfoot td) {
       padding: 0.75em;
     }
 
-    & :where(tbody td:first-child, tfoot td:first-child) { padding-inline-start: 0; }
-    & :where(tbody td:last-child, tfoot td:last-child) { padding-inline-end: 0; }
+    & :where(tbody td:first-child, tfoot td:first-child) {
+      padding-inline-start: 0;
+    }
+    & :where(tbody td:last-child, tfoot td:last-child) {
+      padding-inline-end: 0;
+    }
 
     & :where(figure) {
       margin-top: 1.77778em;
@@ -1712,8 +1881,12 @@
       margin-top: 0;
     }
 
-    & :where(.prose > :first-child) { margin-top: 0; }
-    & :where(.prose > :last-child) { margin-bottom: 0; }
+    & :where(.prose > :first-child) {
+      margin-top: 0;
+    }
+    & :where(.prose > :last-child) {
+      margin-bottom: 0;
+    }
 
     /* Hugo highlight overrides */
     & .highlight {
