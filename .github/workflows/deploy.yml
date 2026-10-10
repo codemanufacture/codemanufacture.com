@@ -10,18 +10,32 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: write # cache-nix-action purges stale caches
     steps:
       - name: Checkout
         uses: actions/checkout@v6
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: 'latest'
-          extended: true
+      - name: Install Nix
+        uses: cachix/install-nix-action@v31
 
-      - name: Build Hugo
-        run: hugo --minify
+      - name: Cache Nix store
+        uses: nix-community/cache-nix-action@v7
+        with:
+          primary-key: nix-${{ github.job }}-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('**/*.nix', '**/flake.lock') }}
+          restore-prefixes-first-match: nix-${{ github.job }}-${{ runner.os }}-${{ runner.arch }}-
+          gc-max-store-size-linux: 1G
+          purge: true
+          purge-prefixes: nix-${{ github.job }}-${{ runner.os }}-${{ runner.arch }}-
+          purge-created: 0
+          purge-primary-key: never
+
+      # Same derivation (and Hugo from the flake's nixpkgs) as a local `nix build`.
+      - name: Build site
+        run: |
+          nix build --print-build-logs
+          cp -rL result public
 
       - name: Upload artifact
         uses: actions/upload-artifact@v6
