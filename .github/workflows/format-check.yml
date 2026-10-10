@@ -7,15 +7,26 @@ on:
 jobs:
   format-check:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: write # cache-nix-action purges stale caches
     steps:
       - name: Checkout
         uses: actions/checkout@v6
 
       - name: Install Nix
-        uses: DeterminateSystems/nix-installer-action@main
+        uses: cachix/install-nix-action@v31
 
       - name: Setup Nix cache
-        uses: DeterminateSystems/magic-nix-cache-action@main
+        uses: nix-community/cache-nix-action@v7
+        with:
+          primary-key: nix-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('**/*.nix', '**/flake.lock') }}
+          restore-prefixes-first-match: nix-${{ runner.os }}-${{ runner.arch }}-
+          gc-max-store-size-linux: 1G
+          purge: true
+          purge-prefixes: nix-${{ runner.os }}-${{ runner.arch }}-
+          purge-created: 0
+          purge-primary-key: never
 
       - name: Check formatting
         run: nix fmt -- --fail-on-change
