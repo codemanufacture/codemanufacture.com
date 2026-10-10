@@ -1,47 +1,47 @@
 {{ define "main" }}
 <!-- JSON-LD Schema -->
 <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "{{ .Permalink }}"
-    },
-    "headline": {{ .Title | jsonify }},
-    {{ with .Params.summary }}"description": {{ . | jsonify }},{{ end }}
-    "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
-    {{ with .Lastmod }}"dateModified": "{{ .Format "2006-01-02T15:04:05Z07:00" }}",{{ end }}
-    "url": "{{ .Permalink }}",
-    {{ with .Params.image }}"image": "{{ . | absURL }}",{{ end }}
-    {{ with .Params.authors }}
-    {{ $authorId := index . 0 }}
-    {{ $authors := $.Site.Data.authors }}
-    {{ $author := index $authors $authorId }}
-    {{ if $author }}
-    "author": {
-      "@type": "Person",
-      "name": {{ $author.name | jsonify }}
-      {{- with $author.linkedin -}},
-      "url": {{ . | jsonify }}
-      {{- end }}
-    },
-    {{ end }}
-    {{ end }}
-    "publisher": {
-      "@type": "Organization",
-      "name": "Codemanufacture",
-      "url": "{{ .Site.BaseURL }}",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "{{ .Site.BaseURL }}images/logo.svg"
-      }
-    },
-    "inLanguage": "en-GB",
-    {{ with .Params.tags }}"keywords": {{ . | jsonify }},{{ end }}
-    "wordCount": {{ .WordCount }},
-    "articleBody": {{ .Plain | jsonify }}
-  }
+  {{ $post := dict
+    "@context" "https://schema.org"
+    "@type" "BlogPosting"
+    "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink)
+    "headline" .Title
+    "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00")
+    "url" .Permalink
+    "publisher" (dict
+      "@type" "Organization"
+      "name" "Codemanufacture"
+      "url" .Site.BaseURL
+      "logo" (dict "@type" "ImageObject" "url" (printf "%simages/logo.svg" .Site.BaseURL))
+    )
+    "inLanguage" "en-GB"
+    "wordCount" .WordCount
+    "articleBody" .Plain
+  }}
+
+  {{- with .Params.summary -}}
+    {{- $post = merge $post (dict "description" .) -}}
+  {{- end -}}
+  {{- with .Lastmod -}}
+    {{- $post = merge $post (dict "dateModified" (.Format "2006-01-02T15:04:05Z07:00")) -}}
+  {{- end -}}
+  {{- with .Params.image -}}
+    {{- $post = merge $post (dict "image" (. | absURL)) -}}
+  {{- end -}}
+  {{- with .Params.tags -}}
+    {{- $post = merge $post (dict "keywords" .) -}}
+  {{- end -}}
+  {{- with .Params.authors -}}
+    {{- with index hugo.Data.authors (index . 0) -}}
+      {{- $author := dict "@type" "Person" "name" .name -}}
+      {{- with .linkedin -}}
+        {{- $author = merge $author (dict "url" .) -}}
+      {{- end -}}
+      {{- $post = merge $post (dict "author" $author) -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- $post | jsonify (dict "indent" "  ") | safeJS -}}
 </script>
 
 <article class="blog-post">
@@ -62,8 +62,8 @@
       {{ with .Params.summary }}
       <p class="blog-post__summary">{{ . }}</p>
       {{ end }} {{ with .Params.authors }} {{ $authorId := index . 0 }} {{
-      $authors := $.Site.Data.authors }} {{ $author := index $authors $authorId
-      }} {{ if $author }}
+      $authors := hugo.Data.authors }} {{ $author := index $authors $authorId }}
+      {{ if $author }}
       <div class="blog-post__author">
         {{ if $author.showAvatar }}
         <img src="{{ $author.avatar }}" alt="{{ $author.name }}" />
