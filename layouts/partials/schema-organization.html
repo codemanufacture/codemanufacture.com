@@ -14,7 +14,7 @@
   }}
 
   {{- $employees := slice -}}
-  {{- range $id, $person := .Site.Data.authors -}}
+  {{- range $id, $person := hugo.Data.authors -}}
     {{- $emp := dict "@type" "Person" "name" $person.name "jobTitle" $person.role -}}
     {{- with $person.linkedin -}}
       {{- $emp = merge $emp (dict "sameAs" (slice .)) -}}
@@ -27,7 +27,7 @@
   {{- $org = merge $org (dict "employee" $employees) -}}
 
   {{- $services := slice -}}
-  {{- range .Site.Data.services -}}
+  {{- range hugo.Data.services -}}
     {{- $services = $services | append (dict "@type" "Offer" "itemOffered" (dict "@type" "Service" "name" .name "description" .description)) -}}
   {{- end -}}
   {{- $org = merge $org (dict "hasOfferCatalog" (dict "@type" "OfferCatalog" "name" "E-commerce Services" "itemListElement" $services)) -}}

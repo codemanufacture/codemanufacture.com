@@ -19,7 +19,7 @@
     </div>
     <div class="post-card__meta">
       {{ with .Params.authors }} {{ $authorId := index . 0 }} {{ $authors :=
-      $.Site.Data.authors }} {{ $author := index $authors $authorId }} {{ if
+      hugo.Data.authors }} {{ $author := index $authors $authorId }} {{ if
       $author }}
       <div class="post-card__avatar">
         {{ if $author.showAvatar }}

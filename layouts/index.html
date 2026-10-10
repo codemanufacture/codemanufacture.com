@@ -24,7 +24,7 @@
     <p class="section-services__title">Manufacturing your success</p>
     <div class="section-services__grid">
       <div>
-        {{ range .Site.Data.services }}
+        {{ range hugo.Data.services }}
         <div class="service-card">
           <div class="service-card__inner">
             <div class="service-card__content">
@@ -117,7 +117,7 @@ where $posts ".Draft" false }} {{ if gt (len $publishedPosts) 0 }}
       </div>
       <div class="section-team__members">
         <ul role="list" class="section-team__list">
-          {{ range $id, $person := .Site.Data.authors }}
+          {{ range $id, $person := hugo.Data.authors }}
           <li>
             <div class="team-member">
               {{ if $person.showAvatar }}

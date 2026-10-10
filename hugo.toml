@@ -1,5 +1,5 @@
 baseURL = "https://codemanufacture.com/"
-languageCode = "en-gb"
+locale = "en-GB"
 title = "Codemanufacture - Magento experts"
 
 [params]
