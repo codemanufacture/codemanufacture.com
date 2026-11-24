@@ -26,26 +26,58 @@
           system,
           ...
         }:
+        let
+          mkSite =
+            {
+              name,
+              baseURL ? null,
+            }:
+            pkgs.stdenv.mkDerivation {
+              inherit name;
+              src = gitignore.lib.gitignoreSource ./.;
+
+              nativeBuildInputs = with pkgs; [
+                hugo
+              ];
+
+              buildPhase = ''
+                hugo --minify ${pkgs.lib.optionalString (baseURL != null) "--baseURL ${baseURL}"}
+              '';
+
+              installPhase = ''
+                runHook preInstall
+                mkdir -p $out
+                cp -r public/* $out/
+                runHook postInstall
+              '';
+            };
+        in
         {
 
-          packages.default = pkgs.stdenv.mkDerivation {
-            name = "codemanufacture-website";
-            src = gitignore.lib.gitignoreSource ./.;
+          packages.default = mkSite { name = "codemanufacture-website"; };
 
-            nativeBuildInputs = with pkgs; [
-              hugo
-            ];
+          # Production build served locally at https://codemanufacture.test:
+          # nix build .#preview -o result-preview
+          packages.preview = mkSite {
+            name = "codemanufacture-website-preview";
+            baseURL = "https://codemanufacture.test/";
+          };
 
-            buildPhase = ''
-              hugo --minify
-            '';
-
-            installPhase = ''
-              runHook preInstall
-              mkdir -p $out
-              cp -r public/* $out/
-              runHook postInstall
-            '';
+          # Live server behind https://dev.codemanufacture.test (fixed port so
+          # it can run next to piotrkwiecinski.com on 1314): nix run .#dev
+          apps.dev = {
+            type = "app";
+            program = pkgs.lib.getExe (
+              pkgs.writeShellApplication {
+                name = "hugo-dev";
+                runtimeInputs = [ pkgs.hugo ];
+                text = ''
+                  exec hugo server --bind 127.0.0.1 --port 1313 \
+                    --baseURL https://dev.codemanufacture.test/ \
+                    --appendPort=false --liveReloadPort 443 "$@"
+                '';
+              }
+            );
           };
 
           treefmt = {
